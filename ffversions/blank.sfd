@@ -1,0 +1,52 @@
+SplineFontDB: 3.2
+FontName: blank
+FullName: blank
+FamilyName: blank
+Weight: Regular
+Copyright: Copyright (c) 2021, etbcor
+UComments: "2021-12-31: Created with FontForge (http://fontforge.org)"
+Version: 001.000
+ItalicAngle: 0
+UnderlinePosition: -102
+UnderlineWidth: 51
+Ascent: 819
+Descent: 205
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 591 260700686 4720]
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1640950552
+ModificationTime: 1640950608
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 0
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+OS2Vendor: 'PfEd'
+MarkAttachClasses: 1
+DEI: 91125
+Encoding: Custom
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -36
+AntiAlias: 0
+FitToEm: 0
+WinInfo: 0 16 4
+OnlyBitmaps: 1
+BeginPrivate: 0
+EndPrivate
+BeginChars: 0 0
+EndChars
+EndSplineFont

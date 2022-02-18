@@ -1,0 +1,2434 @@
+SplineFontDB: 3.2
+FontName: linja-nanpa
+FullName: blank
+FamilyName: blank
+Weight: Regular
+Copyright: Copyright (c) 2021, etbcor
+UComments: "2021-12-31: Created with FontForge (http://fontforge.org)"
+Version: 001.000
+ItalicAngle: 0
+UnderlinePosition: -102
+UnderlineWidth: 51
+Ascent: 960
+Descent: 64
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 591 260700686 4720]
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1640950552
+ModificationTime: 1641164534
+OS2TypoAscent: 0
+OS2TypoAOffset: 1
+OS2TypoDescent: 0
+OS2TypoDOffset: 1
+OS2TypoLinegap: 0
+OS2WinAscent: 0
+OS2WinAOffset: 1
+OS2WinDescent: 0
+OS2WinDOffset: 1
+HheadAscent: 0
+HheadAOffset: 1
+HheadDescent: 0
+HheadDOffset: 1
+OS2Vendor: 'PfEd'
+Lookup: 4 0 0 "liga" { "liga-latin"  } ['liga' ('DFLT' <'dflt' > ) ]
+MarkAttachClasses: 1
+DEI: 91125
+Encoding: Custom
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -72
+AntiAlias: 0
+FitToEm: 1
+WinInfo: 192 16 4
+BeginPrivate: 0
+EndPrivate
+Grid
+1024 1472 m 4
+ 1024 -576 l 1028
+  Named: "m"
+EndSplineSet
+BeginChars: 385 258
+
+StartChar: za
+Encoding: 0 989440 0
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Ligature2: "liga-latin" a a
+LCarets2: 1 0
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: akesi
+Encoding: 1 989441 1
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Ligature2: "liga-latin" akesi
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ala
+Encoding: 2 989442 2
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: alasa
+Encoding: 3 989443 3
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ale
+Encoding: 4 989444 4
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: anpa
+Encoding: 5 989445 5
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ante
+Encoding: 6 989446 6
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: anu
+Encoding: 7 989447 7
+Width: 1024
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: awen
+Encoding: 8 989448 8
+Width: 0
+VWidth: 3072
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ze
+Encoding: 9 989449 9
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: en
+Encoding: 10 989450 10
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: esun
+Encoding: 11 989451 11
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ijo
+Encoding: 12 989452 12
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ike
+Encoding: 13 989453 13
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ilo
+Encoding: 14 989454 14
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: insa
+Encoding: 15 989455 15
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: jaki
+Encoding: 16 989456 16
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: jan
+Encoding: 17 989457 17
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: jelo
+Encoding: 18 989458 18
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: jo
+Encoding: 19 989459 19
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kala
+Encoding: 20 989460 20
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kalama
+Encoding: 21 989461 21
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kama
+Encoding: 22 989462 22
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kasi
+Encoding: 23 989463 23
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ken
+Encoding: 24 989464 24
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kepeken
+Encoding: 25 989465 25
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kili
+Encoding: 26 989466 26
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kiwen
+Encoding: 27 989467 27
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ko
+Encoding: 28 989468 28
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kon
+Encoding: 29 989469 29
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kule
+Encoding: 30 989470 30
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kulupu
+Encoding: 31 989471 31
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kute
+Encoding: 32 989472 32
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: la
+Encoding: 33 989473 33
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lape
+Encoding: 34 989474 34
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: laso
+Encoding: 35 989475 35
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lawa
+Encoding: 36 989476 36
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: len
+Encoding: 37 989477 37
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lete
+Encoding: 38 989478 38
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: li
+Encoding: 39 989479 39
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lili
+Encoding: 40 989480 40
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: linja
+Encoding: 41 989481 41
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lipu
+Encoding: 42 989482 42
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: loje
+Encoding: 43 989483 43
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lon
+Encoding: 44 989484 44
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: luka
+Encoding: 45 989485 45
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lukin
+Encoding: 46 989486 46
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lupa
+Encoding: 47 989487 47
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ma
+Encoding: 48 989488 48
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mama
+Encoding: 49 989489 49
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mani
+Encoding: 50 989490 50
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: meli
+Encoding: 51 989491 51
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mi
+Encoding: 52 989492 52
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mije
+Encoding: 53 989493 53
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: moku
+Encoding: 54 989494 54
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: moli
+Encoding: 55 989495 55
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: monsi
+Encoding: 56 989496 56
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mu
+Encoding: 57 989497 57
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mun
+Encoding: 58 989498 58
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: musi
+Encoding: 59 989499 59
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: mute
+Encoding: 60 989500 60
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: nanpa
+Encoding: 61 989501 61
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: nasa
+Encoding: 62 989502 62
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: nasin
+Encoding: 63 989503 63
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: nena
+Encoding: 64 989504 64
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ni
+Encoding: 65 989505 65
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: nimi
+Encoding: 66 989506 66
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: noka
+Encoding: 67 989507 67
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: zo
+Encoding: 68 989508 68
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: olin
+Encoding: 69 989509 69
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ona
+Encoding: 70 989510 70
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: open
+Encoding: 71 989511 71
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pakala
+Encoding: 72 989512 72
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pali
+Encoding: 73 989513 73
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: palisa
+Encoding: 74 989514 74
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pan
+Encoding: 75 989515 75
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pana
+Encoding: 76 989516 76
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pi
+Encoding: 77 989517 77
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pilin
+Encoding: 78 989518 78
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pimeja
+Encoding: 79 989519 79
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pini
+Encoding: 80 989520 80
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pipi
+Encoding: 81 989521 81
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: poka
+Encoding: 82 989522 82
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: poki
+Encoding: 83 989523 83
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pona
+Encoding: 84 989524 84
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: pu
+Encoding: 85 989525 85
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sama
+Encoding: 86 989526 86
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: seli
+Encoding: 87 989527 87
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: selo
+Encoding: 88 989528 88
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: seme
+Encoding: 89 989529 89
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sewi
+Encoding: 90 989530 90
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sijelo
+Encoding: 91 989531 91
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sike
+Encoding: 92 989532 92
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sin
+Encoding: 93 989533 93
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sina
+Encoding: 94 989534 94
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sinpin
+Encoding: 95 989535 95
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sitelen
+Encoding: 96 989536 96
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: sona
+Encoding: 97 989537 97
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: soweli
+Encoding: 98 989538 98
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: suli
+Encoding: 99 989539 99
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: suno
+Encoding: 100 989540 100
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: supa
+Encoding: 101 989541 101
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: suwi
+Encoding: 102 989542 102
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tan
+Encoding: 103 989543 103
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: taso
+Encoding: 104 989544 104
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tawa
+Encoding: 105 989545 105
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: telo
+Encoding: 106 989546 106
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tenpo
+Encoding: 107 989547 107
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: toki
+Encoding: 108 989548 108
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tomo
+Encoding: 109 989549 109
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tu
+Encoding: 110 989550 110
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: unpa
+Encoding: 111 989551 111
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: uta
+Encoding: 112 989552 112
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: utala
+Encoding: 113 989553 113
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: walo
+Encoding: 114 989554 114
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: wan
+Encoding: 115 989555 115
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: waso
+Encoding: 116 989556 116
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: wawa
+Encoding: 117 989557 117
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: weka
+Encoding: 118 989558 118
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: wile
+Encoding: 119 989559 119
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: namako
+Encoding: 120 989560 120
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kin
+Encoding: 121 989561 121
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: oko
+Encoding: 122 989562 122
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kipisi
+Encoding: 123 989563 123
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: leko
+Encoding: 124 989564 124
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: monsuta
+Encoding: 125 989565 125
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: tonsi
+Encoding: 126 989566 126
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: jasima
+Encoding: 127 989567 127
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kijetesantakalu
+Encoding: 128 989568 128
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: soko
+Encoding: 129 989569 129
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: meso
+Encoding: 130 989570 130
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: epiku
+Encoding: 131 989571 131
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: kokosila
+Encoding: 132 989572 132
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: lanpan
+Encoding: 133 989573 133
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: zn
+Encoding: 134 989574 134
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: misikeke
+Encoding: 135 989575 135
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: ku
+Encoding: 136 989576 136
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Comment: "."
+Colour: ff00ff
+EndChar
+
+StartChar: NameMe.137
+Encoding: 137 989577 137
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ff0000
+EndChar
+
+StartChar: NameMe.138
+Encoding: 138 989578 138
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.139
+Encoding: 139 989579 139
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.140
+Encoding: 140 989580 140
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.141
+Encoding: 141 989581 141
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.142
+Encoding: 142 989582 142
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.143
+Encoding: 143 989583 143
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.144
+Encoding: 144 989584 144
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.145
+Encoding: 145 989585 145
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.146
+Encoding: 146 989586 146
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.147
+Encoding: 147 989587 147
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.148
+Encoding: 148 989588 148
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.149
+Encoding: 149 989589 149
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.150
+Encoding: 150 989590 150
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.151
+Encoding: 151 989591 151
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.152
+Encoding: 152 989592 152
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.153
+Encoding: 153 989593 153
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.154
+Encoding: 154 989594 154
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.155
+Encoding: 155 989595 155
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.156
+Encoding: 156 989596 156
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.157
+Encoding: 157 989597 157
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.158
+Encoding: 158 989598 158
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.159
+Encoding: 159 989599 159
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.160
+Encoding: 160 989600 160
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.161
+Encoding: 161 989601 161
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.162
+Encoding: 162 989602 162
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.163
+Encoding: 163 989603 163
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.164
+Encoding: 164 989604 164
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.165
+Encoding: 165 989605 165
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.166
+Encoding: 166 989606 166
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.167
+Encoding: 167 989607 167
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.168
+Encoding: 168 989608 168
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.169
+Encoding: 169 989609 169
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.170
+Encoding: 170 989610 170
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.171
+Encoding: 171 989611 171
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.172
+Encoding: 172 989612 172
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.173
+Encoding: 173 989613 173
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.174
+Encoding: 174 989614 174
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.175
+Encoding: 175 989615 175
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.176
+Encoding: 176 989616 176
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.177
+Encoding: 177 989617 177
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.178
+Encoding: 178 989618 178
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.179
+Encoding: 179 989619 179
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.180
+Encoding: 180 989620 180
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.181
+Encoding: 181 989621 181
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.182
+Encoding: 182 989622 182
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.183
+Encoding: 183 989623 183
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.184
+Encoding: 184 989624 184
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.185
+Encoding: 185 989625 185
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.186
+Encoding: 186 989626 186
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.187
+Encoding: 187 989627 187
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.188
+Encoding: 188 989628 188
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.189
+Encoding: 189 989629 189
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.190
+Encoding: 190 989630 190
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.191
+Encoding: 191 989631 191
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.192
+Encoding: 192 989632 192
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.193
+Encoding: 193 989633 193
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.194
+Encoding: 194 989634 194
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.195
+Encoding: 195 989635 195
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.196
+Encoding: 196 989636 196
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.197
+Encoding: 197 989637 197
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.198
+Encoding: 198 989638 198
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.199
+Encoding: 199 989639 199
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.200
+Encoding: 200 989640 200
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.201
+Encoding: 201 989641 201
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.202
+Encoding: 202 989642 202
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.203
+Encoding: 203 989643 203
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.204
+Encoding: 204 989644 204
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.205
+Encoding: 205 989645 205
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.206
+Encoding: 206 989646 206
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.207
+Encoding: 207 989647 207
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.208
+Encoding: 208 989648 208
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.209
+Encoding: 209 989649 209
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.210
+Encoding: 210 989650 210
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.211
+Encoding: 211 989651 211
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.212
+Encoding: 212 989652 212
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.213
+Encoding: 213 989653 213
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.214
+Encoding: 214 989654 214
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.215
+Encoding: 215 989655 215
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.216
+Encoding: 216 989656 216
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.217
+Encoding: 217 989657 217
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.218
+Encoding: 218 989658 218
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.219
+Encoding: 219 989659 219
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.220
+Encoding: 220 989660 220
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.221
+Encoding: 221 989661 221
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.222
+Encoding: 222 989662 222
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.223
+Encoding: 223 989663 223
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ff0000
+EndChar
+
+StartChar: START_CARTOUCHE
+Encoding: 224 989664 224
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+987 114 m 0
+ 988.240885417 109.777777778 982.685329861 112.666666667 981 112 c 0
+ 724.204613573 112 526.943050117 409.743597259 347 528 c 0
+ 333 564 l 1025
+392 496 m 0
+ 528.020463159 453.312365216 617.840978322 305.803922432 752 288 c 0
+ 844.672110096 288 900 450.050795349 900 516 c 0
+ 900 678.896865768 652.677128044 698 548 698 c 0
+ 526.870488686 698 428 668.714719316 428 622 c 0
+ 428 539.194392894 479.733494897 528 556 528 c 0
+ 556 528 625.246572605 614 394 614 c 0
+ 260.906090259 614 274 580.163640996 274 500 c 0
+ 274 403.349313323 686 394 686 394 c 0
+ 613.646339548 367.787907623 455.90237983 423.614578234 436 316 c 1024
+EndSplineSet
+Comment: "F19E0 SITELEN PONA START OF CARTOUCHE"
+Colour: ffff00
+EndChar
+
+StartChar: END_CARTOUCHE
+Encoding: 225 989665 225
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: COMBINING_CARTOUCHE_EXTENSION
+Encoding: 226 989666 226
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: START_OF_LONG_GLYPH
+Encoding: 227 989667 227
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: COMBINIG_LONG_GLYPH_EXTENSION
+Encoding: 228 989668 228
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: STACKING_JOINER
+Encoding: 229 989669 229
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: SCALING_JOINER
+Encoding: 230 989670 230
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ffff00
+EndChar
+
+StartChar: PLACEHOLDER
+Encoding: -1 128 231
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+352 56 m 5
+ 694 56 l 5
+ 694 -62 l 5
+ 352 -62 l 5
+ 352 56 l 5
+EndSplineSet
+EndChar
+
+StartChar: uni0000
+Encoding: -1 -1 232
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.231
+Encoding: 231 989671 233
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ff0000
+EndChar
+
+StartChar: NameMe.232
+Encoding: 232 989672 234
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.233
+Encoding: 233 989673 235
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.234
+Encoding: 234 989674 236
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.235
+Encoding: 235 989675 237
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.236
+Encoding: 236 989676 238
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.237
+Encoding: 237 989677 239
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.238
+Encoding: 238 989678 240
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.239
+Encoding: 239 989679 241
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.240
+Encoding: 240 -1 242
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.241
+Encoding: 241 -1 243
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.242
+Encoding: 242 -1 244
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.243
+Encoding: 243 -1 245
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.244
+Encoding: 244 -1 246
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.245
+Encoding: 245 -1 247
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.246
+Encoding: 246 -1 248
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.247
+Encoding: 247 -1 249
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.248
+Encoding: 248 -1 250
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.249
+Encoding: 249 -1 251
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.250
+Encoding: 250 -1 252
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.251
+Encoding: 251 -1 253
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.252
+Encoding: 252 -1 254
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.253
+Encoding: 253 -1 255
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.254
+Encoding: 254 -1 256
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+EndChar
+
+StartChar: NameMe.255
+Encoding: 255 -1 257
+Width: 1024
+VWidth: 2048
+Flags: HW
+LayerCount: 2
+Colour: ff0000
+EndChar
+EndChars
+EndSplineFont
