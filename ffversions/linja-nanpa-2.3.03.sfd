@@ -23,7 +23,7 @@ OS2Version: 3
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1645217081
-ModificationTime: 1645274271
+ModificationTime: 1645274313
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000004.00000000.00000000.00000000
 MarkAttachClasses: 1
 DEI: 91125
-LangName: 1033 "" "" "Regular" "+ACIAIgAA:linja-nanpa" "" "2.2" "" "+ACIA-jan Itan 2022+ACIA" "+ACIAIgAA" "+ACIA-jan Itan+ACIA" "+ACIAIgAA" "+ACIAIgAA" "+ACIA-https://itan.surge.sh/+ACIA" "+ACIAIgAA" "+ACIAIgAA" "" "linja-nanpa" "Regular"
+LangName: 1033 "" "" "Regular" "+ACIAIgAA:linja-nanpa" "" "2.3" "" "+ACIA-jan Itan 2022+ACIA" "+ACIAIgAA" "+ACIA-jan Itan+ACIA" "+ACIAIgAA" "+ACIAIgAA" "+ACIA-https://itan.surge.sh/+ACIA" "+ACIAIgAA" "+ACIAIgAA" "" "linja-nanpa" "Regular"
 Encoding: Custom
 UnicodeInterp: none
 NameList: AGL For New Fonts
