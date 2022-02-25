@@ -142,8 +142,7 @@
 :*:\:`::{U+ff1a} ; fullwidth colon
 :*:<`::{U+300C} ; 「 start quote
 :*:>`::{U+300D} ; 」 end quote
-:*:  `::{U+3000} ; logograph fullwidth space (two spaces for input)
-:*: `::{U+3000} ; logograph fullwidth space (one space input version)
+:*:  `::{U+3000} ; logograph fullwidth space
 
 :*:[`::{U+F1990} ; cartouche start
 :*:]`::{U+F1991} ; cartouche end
