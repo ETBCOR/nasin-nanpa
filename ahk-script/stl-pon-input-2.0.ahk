@@ -138,7 +138,6 @@
 :*:a`::{U+F1900} ; 󱤀
 :*:e`::{U+F1909} ; 󱤉
 :*:0`::{U+F190C} ; 󱤌
-:*:>`::{U+F1927} ; 󱤧
 :*:v`::{U+F1928} ; 󱤨
 :*:~`::{U+F1929} ; 󱤩
 :*:p`::{U+F1934} ; 󱤴
@@ -152,22 +151,27 @@
 :*:!`::{U+F1979} ; 󱥹
 :*:n`::{U+F1986} ; 󱦆
 
-:*:.`::{U+3002} ; 
-:*:\:`::{U+ff1a} ; 
+:*:.`::{U+3002} ; fullwidth period
+:*:\:`::{U+ff1a} ; fullwidth colon
+:*:<`::{U+300C} ; 「 start quote
+:*:>`::{U+300D} ; 」 end quote
+:*:  `::{U+3000} ; logograph fullwidth space (two spaces for input)
+:*: `::{U+3000} ; logograph fullwidth space (one space input version)
 
-:*:[`::{U+F1990} ;
-:*:]`::{U+F1991} ;
-:*:(`::{U+F1992} ;
-:*:)`::{U+F1993} ;
-:*:{`::{U+F199A} ;
-:*:}`::{U+F199B} ;
+:*:[`::{U+F1990} ; cartouche start
+:*:]`::{U+F1991} ; cartouche end
 
-:*:-`::{U+200D} ; default zero width joiner
+:*:(`::{U+F1992} ; start left-combining (normal) long glyph
+:*:)`::{U+F1993} ; end left-combining (normal) long glyph
+
+:*:{`::{U+F199A} ; start right-combining (reversed) long glyph
+:*:}`::{U+F199B} ; end right-combining (reversed) long glyph
+
+; :*:-`::{U+200D} ; default zero width joiner (not working in ~# yet!)
 :*:^`::{U+F1994} ; stacking joiner
 :*:*`::{U+F1995} ; scaling joiner
-:*:+`::{U+F1996} ; special joiner
 
-:*:=`::{U+F1998} ; catouche extender
-:*:_`::{U+F1999} ; container extender
 
-:*:  `::{U+3000} ; (logograph fullwidth space)
+; These are no longer needed! Instead just use th
+; :*:=`::{U+F1998} ; catouche extender
+; :*:_`::{U+F1999} ; container extender
