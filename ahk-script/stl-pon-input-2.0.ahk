@@ -151,19 +151,21 @@
 :*:!`::{U+F1979} ; 󱥹
 :*:n`::{U+F1986} ; 󱦆
 
-:*:.`::{U+3002} ; fullwidth period
+:*:.`::{U+F198C} ; sitelen pona interpunct
 :*:\:`::{U+ff1a} ; fullwidth colon
 :*:<`::{U+300C} ; 「 start quote
 :*:>`::{U+300D} ; 」 end quote
 :*:  `::{U+3000} ; logograph fullwidth space
+
 :*:[`::{U+F1990} ; cartouche start
 :*:]`::{U+F1991} ; cartouche end
+:*:_`::{U+F1992} ; cartouche extender
 
-:*:(`::{U+F1992} ; start left-combining (normal) long glyph
-:*:)`::{U+F1993} ; end left-combining (normal) long glyph
+:*:(`::{U+F1996} ; start left-combining (normal) long glyph
+:*:)`::{U+F1997} ; end left-combining (normal) long glyph
 
-:*:{`::{U+F199A} ; start right-combining (reversed) long glyph
-:*:}`::{U+F199B} ; end right-combining (reversed) long glyph
+:*:{`::{U+F1999} ; start right-combining (reversed) long glyph
+:*:}`::{U+F199A} ; end right-combining (reversed) long glyph
 
 ; :*:-`::{U+200D} ; default zero width joiner (not working in ~# yet!)
 :*:^`::{U+F1994} ; stacking joiner
