@@ -1,2 +1,2 @@
-# linja-nanpa
- linja sitelen tan anpa nanpa
+# nasin-nanpa
+ nasin sitelen tan anpa nanpa
