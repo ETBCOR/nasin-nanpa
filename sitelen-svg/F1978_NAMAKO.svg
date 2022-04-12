@@ -1,11 +1,7 @@
-<svg width="1000" height="500" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="F1978&#9;NAMAKO">
-<rect width="1000" height="500" fill="white"/>
-<g id="Vector">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M530 250C530 229.289 546.789 212.5 567.5 212.5H680C700.711 212.5 717.5 229.289 717.5 250C717.5 270.711 700.711 287.5 680 287.5H567.5C546.789 287.5 530 270.711 530 250Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M500 32.5C520.711 32.5 537.5 49.2893 537.5 70V182.5C537.5 203.211 520.711 220 500 220C479.289 220 462.5 203.211 462.5 182.5V70C462.5 49.2893 479.289 32.5 500 32.5Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M500 280C520.711 280 537.5 296.789 537.5 317.5V430C537.5 450.711 520.711 467.5 500 467.5C479.289 467.5 462.5 450.711 462.5 430V317.5C462.5 296.789 479.289 280 500 280Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M282.5 250C282.5 229.289 299.289 212.5 320 212.5H432.5C453.211 212.5 470 229.289 470 250C470 270.711 453.211 287.5 432.5 287.5H320C299.289 287.5 282.5 270.711 282.5 250Z" fill="black"/>
-</g>
-</g>
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1000" height="1000" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M600 500C600 472.386 622.386 450 650 450H900C927.614 450 950 472.386 950 500C950 527.614 927.614 550 900 550H650C622.386 550 600 527.614 600 500Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M500 50C527.614 50 550 72.3858 550 100V350C550 377.614 527.614 400 500 400C472.386 400 450 377.614 450 350V100C450 72.3858 472.386 50 500 50Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M500 600C527.614 600 550 622.386 550 650V900C550 927.614 527.614 950 500 950C472.386 950 450 927.614 450 900V650C450 622.386 472.386 600 500 600Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 500C50 472.386 72.3858 450 100 450H350C377.614 450 400 472.386 400 500C400 527.614 377.614 550 350 550H100C72.3858 550 50 527.614 50 500Z" fill="black"/>
 </svg>

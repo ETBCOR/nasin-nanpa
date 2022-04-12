@@ -131,15 +131,15 @@
 :*:ni`::{U+F1941} ; 󱥁
 :*:pi`::{U+F194D} ; 󱥍
 :*:pu`::{U+F1955} ; 󱥕
-:*:te`::{U+300C} ; 
-:*:to`::{U+300D} ; 
+:*:te`::{U+300C} ; 「
+:*:to`::{U+300D} ; 」
 :*:tu`::{U+F196E} ; 󱥮
 :*:ku`::{U+F1988} ; 󱦈
 :*:a`::{U+F1900} ; 󱤀
 :*:e`::{U+F1909} ; 󱤉
 :*:0`::{U+F190C} ; 󱤌
 :*:v`::{U+F1928} ; 󱤨
-:*:~`::{U+F1929} ; 󱤩
+; :*:~`::{U+F1929} ; 󱤩
 :*:p`::{U+F1934} ; 󱤴
 :*:#`::{U+F193D} ; 󱤽
 :*:o`::{U+F1944} ; 󱥄
@@ -151,7 +151,6 @@
 :*:!`::{U+F1979} ; 󱥹
 :*:n`::{U+F1986} ; 󱦆
 
-:*:.`::{U+F198C} ; sitelen pona interpunct
 :*:\:`::{U+ff1a} ; fullwidth colon
 :*:<`::{U+300C} ; 「 start quote
 :*:>`::{U+300D} ; 」 end quote
@@ -159,19 +158,20 @@
 
 :*:[`::{U+F1990} ; cartouche start
 :*:]`::{U+F1991} ; cartouche end
-:*:_`::{U+F1992} ; cartouche extender
+:*:=`::{U+F1992} ; cartouche extender
 
-:*:(`::{U+F1996} ; start left-combining (normal) long glyph
-:*:)`::{U+F1997} ; end left-combining (normal) long glyph
+:*:-`::{U+200D} ; default zero width joiner
+:*:^`::{U+F1995} ; stacking joiner
+:*:*`::{U+F1996} ; scaling joiner
 
-:*:{`::{U+F1999} ; start right-combining (reversed) long glyph
-:*:}`::{U+F199A} ; end right-combining (reversed) long glyph
+:*:(`::{U+F1997} ; start left-combining (normal) long glyph
+:*:)`::{U+F1998} ; end left-combining (normal) long glyph
+:*:_`::{U+F1999} ; container extender
 
-; :*:-`::{U+200D} ; default zero width joiner (not working in ~# yet!)
-:*:^`::{U+F1994} ; stacking joiner
-:*:*`::{U+F1995} ; scaling joiner
+:*:{`::{U+F199A} ; start right-combining (reversed) long glyph
+:*:}`::{U+F199B} ; end right-combining (reversed) long glyph
+
+:*:.`::{U+0F199C} ; interpunct
 
 
-; These are no longer needed! Instead just use th
-; :*:=`::{U+F1998} ; catouche extender
-; :*:_`::{U+F1999} ; container extender
+:*:~`::{U+FE00} ; variation selector

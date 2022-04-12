@@ -138,7 +138,7 @@
 :*:a`::{U+F1900} ; 󱤀
 :*:e`::{U+F1909} ; 󱤉
 
-:*:.`::{U+3002} ; fullwidth period
+:*:.`::{U+3002} ; ideograph fullstop
 :*:\:`::{U+ff1a} ; fullwidth colon
 :*:<`::{U+300C} ; 「 start quote
 :*:>`::{U+300D} ; 」 end quote
@@ -146,18 +146,16 @@
 
 :*:[`::{U+F1990} ; cartouche start
 :*:]`::{U+F1991} ; cartouche end
+:*:=`::{U+F1992} ; cartouche extender
 
-:*:(`::{U+F1992} ; start left-combining (normal) long glyph
-:*:)`::{U+F1993} ; end left-combining (normal) long glyph
+; :*:-`::{U+200D} ; default zero width joiner (not working in ~# yet!)
+:*:^`::{U+F1995} ; stacking joiner
+:*:*`::{U+F1996} ; scaling joiner
+
+:*:(`::{U+F1997} ; start left-combining (normal) long glyph
+:*:)`::{U+F1998} ; end left-combining (normal) long glyph
+:*:_`::{U+F1999} ; container extender
 
 :*:{`::{U+F199A} ; start right-combining (reversed) long glyph
 :*:}`::{U+F199B} ; end right-combining (reversed) long glyph
 
-; :*:-`::{U+200D} ; default zero width joiner (not working in ~# yet!)
-:*:^`::{U+F1994} ; stacking joiner
-:*:*`::{U+F1995} ; scaling joiner
-
-
-; These are no longer needed! Instead just use th
-; :*:=`::{U+F1998} ; catouche extender
-; :*:_`::{U+F1999} ; container extender
