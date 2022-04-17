@@ -24,7 +24,7 @@ OS2Version: 3
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1645217081
-ModificationTime: 1649752309
+ModificationTime: 1650177433
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -17724,41 +17724,53 @@ EndChar
 StartChar: namakoTok_joinStackTok
 Encoding: 888 -1 886
 Width: 1000
-HStem: 112 76<285.745 466.255 533.745 714.255>
-VStem: 462 76<-64.255 116.255 183.745 364.255>
+Flags: H
+HStem: -488 76<285.745 466.255 533.745 714.255>
+VStem: 462 76<-664.255 -483.745 -416.255 -235.745>
 LayerCount: 3
 Fore
 SplineSet
-282 150 m 0
- 282 171 299 188 320 188 c 2
- 432 188 l 2
- 453 188 470 171 470 150 c 0
- 470 129 453 112 432 112 c 2
- 320 112 l 2
- 299 112 282 129 282 150 c 0
-500 120 m 0
- 521 120 538 103 538 82 c 2
- 538 -30 l 2
- 538 -51 521 -68 500 -68 c 0
- 479 -68 462 -51 462 -30 c 2
- 462 82 l 2
- 462 103 479 120 500 120 c 0
-500 368 m 0
- 521 368 538 351 538 330 c 2
- 538 218 l 2
- 538 197 521 180 500 180 c 0
- 479 180 462 197 462 218 c 2
- 462 330 l 2
- 462 351 479 368 500 368 c 0
-530 150 m 0
- 530 171 547 188 568 188 c 2
- 680 188 l 2
- 701 188 718 171 718 150 c 0
- 718 129 701 112 680 112 c 2
- 568 112 l 2
- 547 112 530 129 530 150 c 0
+458 213 m 0
+ 479 213 496 197 496 176 c 0
+ 496 109 487 56 455 16 c 1
+ 498 24 524 37 540 53 c 0
+ 566 78 575 116 575 176 c 0
+ 575 197 591 213 612 213 c 0
+ 633 213 650 197 650 176 c 0
+ 650 112 641 46 592 -1 c 0
+ 544 -47 466 -68 353 -68 c 0
+ 331 -68 316 -48 316 -29 c 0
+ 316 -19 320 -9 329 -1 c 0
+ 376 38 397 59 407 80 c 0
+ 417 100 421 124 421 176 c 0
+ 421 197 437 213 458 213 c 0
+535 368 m 0
+ 556 368 573 351 573 330 c 2
+ 573 279 l 2
+ 573 258 556 241 535 241 c 0
+ 514 241 498 258 498 279 c 2
+ 498 330 l 2
+ 498 351 514 368 535 368 c 0
+648 340 m 0
+ 671 340 685 321 685 302 c 0
+ 685 297 684 293 682 288 c 2
+ 663 240 l 2
+ 657 226 643 217 628 217 c 0
+ 605 217 591 236 591 255 c 0
+ 591 260 591 264 593 269 c 2
+ 613 317 l 2
+ 619 331 633 340 648 340 c 0
+385 302 m 0
+ 385 321 399 340 422 340 c 0
+ 437 340 451 331 457 317 c 2
+ 477 269 l 2
+ 479 264 480 260 480 255 c 0
+ 480 236 465 217 442 217 c 0
+ 427 217 413 226 407 240 c 2
+ 388 288 l 2
+ 386 293 385 297 385 302 c 0
 EndSplineSet
-Validated: 1
+LCarets2: 1 0
 MultipleSubs2: "'ccmp' Step 2-1" namakoTok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" namakoTok joinStackTok
 EndChar
@@ -21135,12 +21147,12 @@ EndChar
 StartChar: joinStackTok_namakoTok
 Encoding: 1144 -1 1142
 Width: 1000
+Flags: H
 HStem: 612 76<285.745 466.255 533.745 714.255>
 VStem: 462 76<435.745 616.255 683.745 864.255>
 LayerCount: 3
 Fore
 Refer: 886 -1 N 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok namakoTok
 EndChar
 
@@ -27110,13 +27122,12 @@ StartChar: joinScaleTok_namakoTok
 Encoding: 1656 -1 1655
 Width: 1000
 VWidth: 950
-Flags: W
+Flags: HW
 HStem: 362 76<285.745 466.255 533.745 714.255>
 VStem: 462 76<185.745 366.255 433.745 614.255>
 LayerCount: 3
 Fore
 Refer: 886 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok namakoTok
 EndChar
 
@@ -29101,8 +29112,36 @@ EndChar
 StartChar: meli1Tok_joinStackTok
 Encoding: 1835 -1 1835
 Width: 1000
+VWidth: -200
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+500 292 m 0
+ 468 292 442 266 442 234 c 0
+ 442 202 468 176 500 176 c 0
+ 532 176 558 202 558 234 c 0
+ 558 266 532 292 500 292 c 0
+634 234 m 0
+ 634 173 593 122 538 106 c 1
+ 538 92 l 1
+ 584 92 l 2
+ 605 92 622 75 622 54 c 0
+ 622 33 605 16 584 16 c 2
+ 538 16 l 1
+ 538 -30 l 2
+ 538 -51 521 -68 500 -68 c 0
+ 479 -68 462 -51 462 -30 c 2
+ 462 16 l 1
+ 416 16 l 2
+ 395 16 378 33 378 54 c 0
+ 378 75 395 92 416 92 c 2
+ 462 92 l 1
+ 462 106 l 1
+ 407 122 366 173 366 234 c 0
+ 366 308 426 368 500 368 c 0
+ 574 368 634 308 634 234 c 0
+EndSplineSet
 EndChar
 
 StartChar: meli1Tok_joinScaleTok
@@ -29119,6 +29158,8 @@ Encoding: 1837 -1 1837
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1835 -1 S 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_meli1Tok
@@ -29126,6 +29167,8 @@ Encoding: 1838 -1 1838
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1835 -1 S 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1839
@@ -29190,8 +29233,88 @@ EndChar
 StartChar: mije1Tok_joinStackTok
 Encoding: 1843 -1 1843
 Width: 1000
+VWidth: 400
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+549 146 m 1
+ 561 125 568 101 568 75 c 0
+ 568 -4 504 -68 425 -68 c 0
+ 346 -68 282 -4 282 75 c 0
+ 282 154 346 218 425 218 c 0
+ 451 218 475 211 496 199 c 1
+ 540 243 l 1
+ 531 243 l 2
+ 510 243 493 259 493 280 c 0
+ 493 301 510 318 531 318 c 2
+ 630 318 l 2
+ 651 318 668 301 668 280 c 2
+ 668 181 l 2
+ 668 160 651 143 630 143 c 0
+ 609 143 593 160 593 181 c 2
+ 593 190 l 1
+ 549 146 l 1
+  Spiro
+    549 146 v
+    559.251 124.06 o
+    565.745 100.272 o
+    568 75 o
+    548.519 2.87838 o
+    497.122 -48.5187 o
+    425 -68 o
+    352.878 -48.5187 o
+    301.481 2.87838 o
+    282 75 o
+    301.481 147.122 o
+    352.878 198.519 o
+    425 218 o
+    450.272 215.745 o
+    474.06 209.251 o
+    496 199 v
+    540 243 v
+    531 243 ]
+    511.832 247.916 o
+    498.175 261.091 o
+    493 280 o
+    498.175 299.168 o
+    511.832 312.825 o
+    531 318 [
+    630 318 ]
+    649.168 312.825 o
+    662.825 299.168 o
+    668 280 [
+    668 181 ]
+    662.825 161.832 o
+    649.168 148.175 o
+    630 143 o
+    611.091 148.175 o
+    597.916 161.832 o
+    593 181 [
+    593 190 v
+    0 0 z
+  EndSpiro
+358 75 m 0
+ 358 38 388 8 425 8 c 0
+ 462 8 493 38 493 75 c 0
+ 493 112 462 143 425 143 c 0
+ 388 143 358 112 358 75 c 0
+  Spiro
+    358 75 o
+    367.131 41.215 o
+    391.215 17.1307 o
+    425 8 o
+    459.044 17.1307 o
+    483.61 41.215 o
+    493 75 o
+    483.61 109.044 o
+    459.044 133.61 o
+    425 143 o
+    391.215 133.61 o
+    367.131 109.044 o
+    0 0 z
+  EndSpiro
+EndSplineSet
 EndChar
 
 StartChar: mije1Tok_joinScaleTok
@@ -29206,15 +29329,21 @@ EndChar
 StartChar: joinStackTok_mije1Tok
 Encoding: 1845 -1 1845
 Width: 1000
+VWidth: 1500
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1843 -1 N 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_mije1Tok
 Encoding: 1846 -1 1846
 Width: 1000
+VWidth: 1250
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1843 -1 N 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1847
@@ -29227,8 +29356,59 @@ EndChar
 StartChar: olin1Tok
 Encoding: 1848 -1 1848
 Width: 1000
+VWidth: 900
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+500 478 m 5
+ 531 514 576 550 643 550 c 4
+ 750 550 836 464 836 357 c 4
+ 836 306 811 256 783 213 c 4
+ 719 116 617 24 530 -40 c 4
+ 521 -47 511.54725197 -49.6054673607 502.580266274 -49.6054673607 c 0
+ 485.392249027 -49.6054673607 469 -40 457 -30 c 4
+ 377 32 278 122 217 213 c 4
+ 189 256 164 306 164 357 c 4
+ 164 464 250 550 357 550 c 4
+ 424 550 469 514 500 478 c 5
+357 450 m 4
+ 306 450 264 408 264 357 c 4
+ 264 336 275 307 300 269 c 4
+ 348 197 437 116 500 64 c 5
+ 563 115 652 197 700 269 c 4
+ 725 307 736 336 736 357 c 4
+ 736 408 694 450 643 450 c 4
+ 591 450 563 398 541 365 c 4
+ 532 351 517 343 500 343 c 4
+ 483 343 468 351 459 365 c 4
+ 437 398 409 450 357 450 c 4
+500 850 m 4
+ 528 850 550 828 550 800 c 6
+ 550 700 l 6
+ 550 672 528 650 500 650 c 4
+ 472 650 450 672 450 700 c 6
+ 450 800 l 6
+ 450 828 472 850 500 850 c 4
+199.991705574 732.966459157 m 0
+ 199.991705574 758.072009272 220.471358003 783.021071396 249.952680215 783.021071396 c 0
+ 267.233048812 783.021071396 284 774 293 758 c 6
+ 343 671 l 6
+ 348 663 350.008294426 654.939215927 350.008294426 646.456427267 c 0
+ 350.008294426 621.350452398 329.527382825 596.402074863 300.046468015 596.402074863 c 0
+ 282.766398902 596.402074863 266 605 257 621 c 6
+ 207 708 l 6
+ 202 716 199.991705574 724.483635636 199.991705574 732.966459157 c 0
+750.047319785 783.021071396 m 0
+ 779.500078599 783.021071396 800.008294426 758.070573475 800.008294426 732.966459157 c 0
+ 800.008294426 724.483635636 798 716 793 708 c 6
+ 743 621 l 6
+ 734 605 717.233601098 596.402074863 699.953531985 596.402074863 c 0
+ 670.501181836 596.402074863 649.991705574 621.351888174 649.991705574 646.456427267 c 0
+ 649.991705574 654.939215927 652 663 657 671 c 6
+ 707 758 l 6
+ 716 774 732.766951188 783.021071396 750.047319785 783.021071396 c 0
+EndSplineSet
 EndChar
 
 StartChar: olin1Tok.cart
@@ -29236,6 +29416,9 @@ Encoding: 1849 -1 1849
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 144 989586 S 1 0 0 1 1000 0 2
+Refer: 1848 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: olin1Tok.cont
@@ -29243,13 +29426,67 @@ Encoding: 1850 -1 1850
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 151 989593 N 1 0 0 1 1000 0 2
+Refer: 1848 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: olin1Tok_joinStackTok
 Encoding: 1851 -1 1851
 Width: 1000
+VWidth: 400
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+544 -43 m 0
+ 532 -53 516 -67 498 -67 c 0
+ 491 -67 483 -65 475 -59 c 0
+ 436 -29 390 13 360 58 c 0
+ 347 78 334 104 334 131 c 0
+ 334 187 379 232 435 232 c 0
+ 463 232 485 220 500 207 c 1
+ 515 220 536 232 564 232 c 0
+ 620 232 666 187 666 131 c 0
+ 666 104 652 78 639 58 c 0
+ 614 21 575 -17 544 -43 c 0
+435 158 m 0
+ 420 158 408 146 408 131 c 0
+ 408 126 411 115 422 99 c 0
+ 440 72 475 39 500 18 c 1
+ 525 39 559 72 577 99 c 0
+ 588 115 591 126 591 131 c 0
+ 591 146 579 158 564 158 c 0
+ 548 158 538 137 531 126 c 0
+ 524 116 512 109 500 109 c 0
+ 473 109 465 136 451 150 c 0
+ 445 156 440 158 435 158 c 0
+500 368 m 0
+ 521 368 538 351 538 330 c 2
+ 538 308 l 2
+ 538 287 521 270 500 270 c 0
+ 479 270 463 287 463 308 c 2
+ 463 330 l 2
+ 463 351 479 368 500 368 c 0
+593 346 m 0
+ 616 346 631 325 631 306 c 0
+ 631 301 631 297 629 292 c 2
+ 620 270 l 2
+ 615 256 601 247 587 247 c 0
+ 564 247 549 268 549 287 c 0
+ 549 292 550 295 552 300 c 2
+ 560 323 l 2
+ 565 337 579 346 593 346 c 0
+369 306 m 0
+ 369 325 384 346 407 346 c 0
+ 421 346 435 337 440 323 c 2
+ 449 300 l 2
+ 451 295 451 292 451 287 c 0
+ 451 268 436 247 413 247 c 0
+ 399 247 385 256 380 270 c 2
+ 372 292 l 2
+ 370 297 369 301 369 306 c 0
+EndSplineSet
 EndChar
 
 StartChar: olin1Tok_joinScaleTok
@@ -29257,6 +29494,8 @@ Encoding: 1852 -1 1852
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1848 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: joinStackTok_olin1Tok
@@ -29264,13 +29503,18 @@ Encoding: 1853 -1 1853
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1851 -1 S 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_olin1Tok
 Encoding: 1854 -1 1854
 Width: 1000
+VWidth: 1250
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1851 -1 N 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1855
@@ -29331,8 +29575,30 @@ EndChar
 StartChar: sewi1Tok_joinStackTok
 Encoding: 1859 -1 1859
 Width: 1000
+VWidth: 900
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+300 -58 m 4
+ 279 -58 262 -42 262 -21 c 6
+ 262 179 l 6
+ 262 200 279 216 300 216 c 6
+ 700 216 l 6
+ 721 216 738 200 738 179 c 6
+ 738 -21 l 6
+ 738 -42 721 -58 700 -58 c 4
+ 679 -58 662 -42 662 -21 c 6
+ 662 142 l 5
+ 338 142 l 5
+ 338 -21 l 6
+ 338 -42 321 -58 300 -58 c 4
+550 299 m 4
+ 550 271 528 249 500 249 c 4
+ 472 249 450 271 450 299 c 4
+ 450 327 472 349 500 349 c 4
+ 528 349 550 327 550 299 c 4
+EndSplineSet
 EndChar
 
 StartChar: sewi1Tok_joinScaleTok
@@ -29349,6 +29615,8 @@ Encoding: 1861 -1 1861
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1859 -1 S 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_sewi1Tok
@@ -29356,6 +29624,8 @@ Encoding: 1862 -1 1862
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1859 -1 S 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1863
@@ -29368,8 +29638,22 @@ EndChar
 StartChar: uta1Tok
 Encoding: 1864 -1 1864
 Width: 1000
+VWidth: 900
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+50 600 m 0
+ 50 628 72 650 100 650 c 2
+ 900 650 l 2
+ 928 650 950 628 950 600 c 0
+ 950 351 749 150 500 150 c 0
+ 251 150 50 351 50 600 c 0
+154 550 m 1
+ 178 380 324 250 500 250 c 0
+ 676 250 822 380 846 550 c 1
+ 154 550 l 1
+EndSplineSet
 EndChar
 
 StartChar: uta1Tok.cart
@@ -29377,6 +29661,9 @@ Encoding: 1865 -1 1865
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 144 989586 S 1 0 0 1 1000 0 2
+Refer: 1864 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: uta1Tok.cont
@@ -29384,13 +29671,30 @@ Encoding: 1866 -1 1866
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 151 989593 S 1 0 0 1 1000 0 2
+Refer: 1864 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: uta1Tok_joinStackTok
 Encoding: 1867 -1 1867
 Width: 1000
+VWidth: 400
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+262 250 m 0
+ 262 271 279 287 300 287 c 2
+ 700 287 l 2
+ 721 287 738 271 738 250 c 0
+ 738 119 631 12 500 12 c 0
+ 369 12 262 119 262 250 c 0
+342 212 m 1
+ 359 140 423 87 500 87 c 0
+ 577 87 641 140 658 212 c 1
+ 342 212 l 1
+EndSplineSet
 EndChar
 
 StartChar: uta1Tok_joinScaleTok
@@ -29398,6 +29702,8 @@ Encoding: 1868 -1 1868
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1864 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: joinStackTok_uta1Tok
@@ -29405,6 +29711,8 @@ Encoding: 1869 -1 1869
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1134 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: joinScaleTok_uta1Tok
@@ -29412,6 +29720,8 @@ Encoding: 1870 -1 1870
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1867 -1 S 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1871
@@ -29426,6 +29736,8 @@ Encoding: 1872 -1 1872
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 78 989518 S 1 0 0 -1 0 800 2
 EndChar
 
 StartChar: wile1Tok.cart
@@ -29433,6 +29745,9 @@ Encoding: 1873 -1 1873
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 144 989586 S 1 0 0 1 1000 0 2
+Refer: 1872 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: wile1Tok.cont
@@ -29440,6 +29755,9 @@ Encoding: 1874 -1 1874
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 151 989593 S 1 0 0 1 1000 0 2
+Refer: 1872 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: wile1Tok_joinStackTok
@@ -29447,6 +29765,8 @@ Encoding: 1875 -1 1875
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 844 -1 S 1 0 0 -1 0 301 2
 EndChar
 
 StartChar: wile1Tok_joinScaleTok
@@ -29454,6 +29774,8 @@ Encoding: 1876 -1 1876
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1872 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: joinStackTok_wile1Tok
@@ -29461,6 +29783,8 @@ Encoding: 1877 -1 1877
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1875 -1 S 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_wile1Tok
@@ -29468,6 +29792,8 @@ Encoding: 1878 -1 1878
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1875 -1 S 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1879
@@ -29540,6 +29866,37 @@ Encoding: 1883 -1 1883
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+SplineSet
+530 150 m 0
+ 530 171 547 188 568 188 c 2
+ 680 188 l 2
+ 701 188 718 171 718 150 c 0
+ 718 129 701 112 680 112 c 2
+ 568 112 l 2
+ 547 112 530 129 530 150 c 0
+500 368 m 0
+ 521 368 538 351 538 330 c 2
+ 538 218 l 2
+ 538 197 521 180 500 180 c 0
+ 479 180 462 197 462 218 c 2
+ 462 330 l 2
+ 462 351 479 368 500 368 c 0
+500 120 m 0
+ 521 120 538 103 538 82 c 2
+ 538 -30 l 2
+ 538 -51 521 -68 500 -68 c 0
+ 479 -68 462 -51 462 -30 c 2
+ 462 82 l 2
+ 462 103 479 120 500 120 c 0
+282 150 m 0
+ 282 171 299 188 320 188 c 2
+ 432 188 l 2
+ 453 188 470 171 470 150 c 0
+ 470 129 453 112 432 112 c 2
+ 320 112 l 2
+ 299 112 282 129 282 150 c 0
+EndSplineSet
 EndChar
 
 StartChar: namako1Tok_joinScaleTok
@@ -29547,6 +29904,8 @@ Encoding: 1884 -1 1884
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1880 -1 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: joinStackTok_namako1Tok
@@ -29554,6 +29913,8 @@ Encoding: 1885 -1 1885
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1883 -1 S 1 0 0 1 0 500 2
 EndChar
 
 StartChar: joinScaleTok_namako1Tok
@@ -29561,12 +29922,14 @@ Encoding: 1886 -1 1886
 Width: 1000
 Flags: HW
 LayerCount: 3
+Fore
+Refer: 1883 -1 S 1 0 0 1 0 250 2
 EndChar
 
 StartChar: NameMe.1887
 Encoding: 1887 -1 1887
 Width: 1000
-Flags: HW
+Flags: HWO
 LayerCount: 3
 EndChar
 EndChars

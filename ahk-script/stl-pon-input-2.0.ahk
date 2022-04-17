@@ -174,4 +174,5 @@
 :*:.`::{U+0F199C} ; interpunct
 
 
-:*:~`::{U+FE00} ; variation selector
+:*:~~`::{U+F198D} ; variation selector 2
+:*:~`::{U+F198C} ; variation selector 1
