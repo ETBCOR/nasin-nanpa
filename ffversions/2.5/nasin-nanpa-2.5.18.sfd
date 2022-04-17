@@ -4,7 +4,7 @@ FullName: nasin nanpa
 FamilyName: nasin-nanpa
 Weight: Regular
 Copyright: ""
-FontLog: "#### toki tan ijo ni: ijo li tan anpa nanpa ####+AAoACgAA### tenpo sike ku nanpa tu la+AAoACgAKAAoA## tenpo mun nanpa tu la+AAoACgAK# tenpo suno nanpa luka luka luka tu tu la+AAoACgAA-wa. ni li ijo anu seme?? ken la mi kepeken ni.+AAoA-tenpo poka la ni li kama lon: linja nanpa!+AAoA-open la ona li sona ala e nasin pi nimi jan (cartouches) li ike lukin.+AAoA-tenpo suno wan pini la mi pali e ni: linja nanpa li pona lukin li sona e nasin pi nimi jan.+AAoA-tenpo lon la nanpa pi linja nanpa li: n2.2.+AAoACgAA---+AAoACgAA-tenpo ilo suli nanpa tu tu pi tenpo pimeja li kama. taso mi awen pali.+AAoA-tenpo lon la nasin pi nimi jan en te pi to suli li pona lukin. pona.+AAoACgAA## tenpo mun nanpa tu wan la+AAoACgAK# tenpo suno nanpa luka tu wan la+AAoACgAA-a. ni li ijo. mi pali e ijo mute lon linja nanpa. mi ante e nimi pi sitelen ale. kin la mi kama sin e +ACIA-Lookup Table+ACIA ale.+AAoACgAA---+AAoACgAA# suno nanpa luka luka tu tu la+AAoACgAA-mi sin e sitelen mute. kulupu kasi li toki e pona e ike pi sitelen sin. mi sin sin e sitelen tan toki ona. +AAoACgAA-SULI LA mi ante e nimi tawa +ACIA-nasin nanpa+ACIA tan +ACIA-linja nanpa+ACIA. ni li tan ni: jan li kepeken nimi +ACIA-linja+ACIA tawa nimi +ACIA-font+ACIA tan ijo ike Linja Pona. ni li linja ala... ni li nasin sitelen tan anpa nanpa. ni la nimi ona li nasin nanpa."
+FontLog: "#### toki tan ijo ni: ijo li tan anpa nanpa ####+AAoACgAA### tenpo sike ku nanpa tu la+AAoACgAKAAoACgAK## tenpo mun nanpa tu la+AAoACgAKAAoA# tenpo suno nanpa luka luka luka tu tu la+AAoACgAA-wa. ni li ijo anu seme?? ken la mi kepeken ni.+AAoA-tenpo poka la ni li kama lon: linja nanpa!+AAoA-open la ona li sona ala e nasin pi nimi jan (cartouches) li ike lukin.+AAoA-tenpo suno wan pini la mi pali e ni: linja nanpa li pona lukin li sona e nasin pi nimi jan.+AAoA-tenpo lon la nanpa pi linja nanpa li: n2.2.+AAoACgAA---+AAoACgAA-tenpo ilo suli nanpa tu tu pi tenpo pimeja li kama. taso mi awen pali.+AAoA-tenpo lon la nasin pi nimi jan en te pi to suli li pona lukin. pona.+AAoACgAK## tenpo mun nanpa tu wan la+AAoACgAKAAoA# tenpo suno nanpa luka tu wan la+AAoACgAA-a. ni li ijo. mi pali e ijo mute lon linja nanpa. mi ante e nimi pi sitelen ale. kin la mi kama sin e +ACIA-Lookup Table+ACIA ale.+AAoACgAK# suno nanpa luka luka tu tu la+AAoACgAA-mi sin e sitelen mute. kulupu kasi li toki e pona e ike pi sitelen sin. mi sin sin e sitelen tan toki ona. +AAoACgAA-SULI LA mi ante e nimi tawa +ACIA-nasin nanpa+ACIA tan +ACIA-linja nanpa+ACIA. ni li tan ni: jan li kepeken nimi +ACIA-linja+ACIA tawa nimi +ACIA-font+ACIA tan ijo ike Linja Pona. ni li linja ala... ni li nasin sitelen tan anpa nanpa. ni la nimi ona li nasin nanpa.+AAoACgAK## tenpo mun nanpa tu tu+AAoACgAK# tenpo suno nanpa luka luka luka tu+AAoACgAA-tenpo poka la mi pali lili e nasin nanpa. mi pana e sitelen ante tawa nimi sama, tawa nimi ni: kala, meli, mije, olin, sewi, uta, wile, namako. mi pali mute.+AAoACgAA"
 Version: 2.5.0
 ItalicAngle: 0
 UnderlinePosition: 0
@@ -18,13 +18,13 @@ Layer: 0 0 "Back" 1
 Layer: 1 0 "Fore" 0
 Layer: 2 0 "Back 2" 1
 XUID: [1021 511 -2811647 21693]
-StyleMap: 0x0000
+StyleMap: 0x0040
 FSType: 0
 OS2Version: 3
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1645217081
-ModificationTime: 1650181849
+ModificationTime: 1650186618
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -100,7 +100,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 544 16 14
+WinInfo: 1664 16 14
 BeginPrivate: 1
 BlueValues 5 [0 0]
 EndPrivate
