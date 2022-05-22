@@ -24,7 +24,7 @@ OS2Version: 3
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1645217081
-ModificationTime: 1653186189
+ModificationTime: 1653191856
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -100,7 +100,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 1856 16 5
+WinInfo: 480 16 5
 BeginPrivate: 1
 BlueValues 5 [0 0]
 EndPrivate
@@ -129,7 +129,7 @@ Grid
   Named: "soto"
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-BeginChars: 2008 2009
+BeginChars: 1904 1904
 
 StartChar: aTok
 Encoding: 0 989440 0
@@ -4423,51 +4423,58 @@ EndChar
 StartChar: soweliTok
 Encoding: 98 989538 98
 Width: 1000
-VWidth: 950
+VWidth: 850
 Flags: W
-HStem: -50 300<158.438 241.562 358.438 441.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
-VStem: 150 100<-41.5625 241.562> 350 150<448.417 551.583> 350 100<-41.5625 241.562> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
+HStem: -50 300<108.438 191.562 258.438 341.562 408.438 491.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
+VStem: 100 100<-41.5625 241.562> 250 100<-41.5625 241.562> 350 150<448.417 551.583> 400 100<-41.5625 241.562> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
 LayerCount: 3
 Fore
 SplineSet
-425 425 m 0xf880
- 384 425 350 459 350 500 c 0
- 350 541 384 575 425 575 c 0
- 466 575 500 541 500 500 c 0
- 500 459 466 425 425 425 c 0xf880
-750 500 m 0xf180
+450 250 m 0xf240
+ 478 250 500 228 500 200 c 2
+ 500 0 l 2
+ 500 -28 478 -50 450 -50 c 0
+ 422 -50 400 -28 400 0 c 2
+ 400 200 l 2
+ 400 228 422 250 450 250 c 0xf240
+150 250 m 0
+ 178 250 200 228 200 200 c 2
+ 200 0 l 2
+ 200 -28 178 -50 150 -50 c 0
+ 122 -50 100 -28 100 0 c 2
+ 100 200 l 2
+ 100 228 122 250 150 250 c 0
+300 250 m 0
+ 328 250 350 228 350 200 c 2
+ 350 0 l 2
+ 350 -28 328 -50 300 -50 c 0
+ 272 -50 250 -28 250 0 c 2
+ 250 200 l 2xf840
+ 250 228 272 250 300 250 c 0
+750 500 m 0xf0c0
  750 459 716 425 675 425 c 0
  634 425 600 459 600 500 c 0
  600 541 634 575 675 575 c 0
- 716 575 750 541 750 500 c 0xf180
-200 250 m 0
- 228 250 250 228 250 200 c 2
- 250 0 l 2
- 250 -28 228 -50 200 -50 c 0
- 172 -50 150 -28 150 0 c 2
- 150 200 l 2
- 150 228 172 250 200 250 c 0
-450 200 m 2xf480
- 450 0 l 2
- 450 -28 428 -50 400 -50 c 0
- 372 -50 350 -28 350 0 c 2
- 350 200 l 2
- 350 228 372 250 400 250 c 0
- 428 250 450 228 450 200 c 2xf480
-50 800 m 0
- 50 828 72 850 100 850 c 2
- 600 850 l 2xf180
+ 716 575 750 541 750 500 c 0xf0c0
+500 500 m 0xf440
+ 500 459 466 425 425 425 c 0
+ 384 425 350 459 350 500 c 0
+ 350 541 384 575 425 575 c 0
+ 466 575 500 541 500 500 c 0xf440
+100 850 m 2
+ 600 850 l 2xf0c0
  793 850 950 693 950 500 c 0
  950 324 820 178 650 154 c 1
- 650 0 l 2xf280
- 650 -28 628 -50 600 -50 c 0xf180
+ 650 0 l 2xf140
+ 650 -28 628 -50 600 -50 c 0xf0c0
  572 -50 550 -28 550 0 c 2
- 550 200 l 2xf280
+ 550 200 l 2xf140
  550 228 572 250 600 250 c 0
  738 250 850 362 850 500 c 0
- 850 638 738 750 600 750 c 2xf180
+ 850 638 738 750 600 750 c 2xf0c0
  100 750 l 2
  72 750 50 772 50 800 c 0
+ 50 828 72 850 100 850 c 2
 EndSplineSet
 Validated: 1
 Substitution2: "'ss02' Container Lines-1" soweliTok.cont
@@ -6275,7 +6282,7 @@ EndChar
 
 StartChar: spaceTok
 Encoding: 141 32 139
-AltUni2: 003000.ffffffff.0 002003.ffffffff.0
+AltUni2: 002003.ffffffff.0 003000.ffffffff.0
 Width: 1000
 VWidth: 950
 Flags: W
@@ -8112,8 +8119,8 @@ StartChar: soweliTok.cart
 Encoding: 354 -1 261
 Width: 1000
 Flags: W
-HStem: -200 100<-41.5625 1041.56> -50 300<158.438 241.562 358.438 441.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711> 900 100<-41.5625 1041.56>
-VStem: 150 100<-41.5625 241.562> 350 100<-41.5625 241.562> 350 150<448.417 551.583> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
+HStem: -200 100<-41.5625 1041.56> -50 300<108.438 191.562 258.438 341.562 408.438 491.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711> 900 100<-41.5625 1041.56>
+VStem: 100 100<-41.5625 241.562> 250 100<-41.5625 241.562> 350 150<448.417 551.583> 400 100<-41.5625 241.562> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
 LayerCount: 3
 Fore
 Refer: 98 989538 N 1 0 0 1 0 0 2
@@ -11830,8 +11837,8 @@ StartChar: soweliTok.cont
 Encoding: 610 -1 609
 Width: 1000
 Flags: W
-HStem: -200 100<-41.5625 1041.56> -50 300<158.438 241.562 358.438 441.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
-VStem: 150 100<-41.5625 241.562> 350 100<-41.5625 241.562> 350 150<448.417 551.583> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
+HStem: -200 100<-41.5625 1041.56> -50 300<108.438 191.562 258.438 341.562 408.438 491.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
+VStem: 100 100<-41.5625 241.562> 250 100<-41.5625 241.562> 350 150<448.417 551.583> 400 100<-41.5625 241.562> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
 LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
@@ -17233,44 +17240,60 @@ EndChar
 StartChar: soweliTok_joinStackTok
 Encoding: 866 -1 864
 Width: 1000
-HStem: -68 166<421.552 488.448 511.552 578.448> 159 70<434.953 499.359 547.797 612.203> 292 76<285.745 604.265>
-VStem: 418 74<-64.6453 94.6453> 432 70<162.143 225.857> 508 74<-64.6453 33.1202> 545 70<161.797 226.203> 642 76<134.036 254.666>
+VWidth: 400
+HStem: -68 165<273.745 341.448 359.552 427.255 449.552 517.255 539.552 606.523> 159 70<462.953 527.359 575.797 640.203> 292 75<259.552 632.142>
+VStem: 270 75<-64.255 93.4478> 356 75<-64.255 93.4478> 446 75<-64.255 93.4478> 460 70<162.143 225.857> 536 75<-64.255 33.1202> 573 70<161.797 226.203> 670 75<133.844 254.605>
 LayerCount: 3
 Fore
 SplineSet
-320 368 m 2xe3
- 545 368 l 2xe3
- 640 368 718 290 718 195 c 0
- 718 113 659 44 582 27 c 1
- 582 -30 l 2xe5
- 582 -51 566 -68 545 -68 c 0xe3
- 524 -68 508 -51 508 -30 c 2
- 508 60 l 2xe5
- 508 81 524 98 545 98 c 0
- 599 98 642 141 642 195 c 0
- 642 249 599 292 545 292 c 2
- 320 292 l 2
- 299 292 282 309 282 330 c 0
- 282 351 299 368 320 368 c 2xe3
-502 194 m 0xe9
- 502 175 487 159 468 159 c 0
- 449 159 432 175 432 194 c 0
- 432 213 449 229 468 229 c 0
- 487 229 502 213 502 194 c 0xe9
-615 194 m 0xe3
- 615 175 599 159 580 159 c 0
- 561 159 545 175 545 194 c 0
- 545 213 561 229 580 229 c 0
- 599 229 615 213 615 194 c 0xe3
-455 98 m 0
- 476 98 492 81 492 60 c 2
- 492 -30 l 2
- 492 -51 476 -68 455 -68 c 0
- 434 -68 418 -51 418 -30 c 2
- 418 60 l 2xf1
- 418 81 434 98 455 98 c 0
+483 97 m 0xfc40
+ 504 97 521 81 521 60 c 2
+ 521 -30 l 2
+ 521 -51 504 -68 483 -68 c 0
+ 462 -68 446 -51 446 -30 c 2
+ 446 60 l 2
+ 446 81 462 97 483 97 c 0xfc40
+393 97 m 0
+ 414 97 431 81 431 60 c 2
+ 431 -30 l 2
+ 431 -51 414 -68 393 -68 c 0
+ 372 -68 356 -51 356 -30 c 2
+ 356 60 l 2
+ 356 81 372 97 393 97 c 0
+308 97 m 0
+ 329 97 345 81 345 60 c 2
+ 345 -30 l 2
+ 345 -51 329 -68 308 -68 c 0
+ 287 -68 270 -51 270 -30 c 2
+ 270 60 l 2
+ 270 81 287 97 308 97 c 0
+643 194 m 0xf8c0
+ 643 175 627 159 608 159 c 0
+ 589 159 573 175 573 194 c 0
+ 573 213 589 229 608 229 c 0
+ 627 229 643 213 643 194 c 0xf8c0
+530 194 m 0xfa40
+ 530 175 515 159 496 159 c 0
+ 477 159 460 175 460 194 c 0
+ 460 213 477 229 496 229 c 0
+ 515 229 530 213 530 194 c 0xfa40
+293 367 m 2
+ 573 367 l 2xf8c0
+ 668 367 745 290 745 195 c 0
+ 745 113 688 44 611 27 c 1
+ 611 -30 l 2xf940
+ 611 -51 594 -68 573 -68 c 0xf8c0
+ 552 -68 536 -51 536 -30 c 2
+ 536 60 l 2xf940
+ 536 81 552 97 573 97 c 0
+ 627 97 670 141 670 195 c 0
+ 670 249 627 292 573 292 c 2xf8c0
+ 293 292 l 2
+ 272 292 256 309 256 330 c 0
+ 256 351 272 367 293 367 c 2
 EndSplineSet
 Validated: 1
+LCarets2: 1 0
 MultipleSubs2: "'ccmp' Step 2-1" soweliTok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" soweliTok joinStackTok
 EndChar
@@ -21245,8 +21268,8 @@ EndChar
 StartChar: joinStackTok_soweliTok
 Encoding: 1122 -1 1120
 Width: 1000
-HStem: 432 166<421.552 488.448 511.552 578.448> 659 70<434.953 499.359 547.797 612.203> 792 76<285.745 604.265>
-VStem: 418 74<435.355 594.645> 432 70<662.143 725.857> 508 74<435.355 533.12> 545 70<661.797 726.203> 642 76<634.036 754.666>
+HStem: 432 165<273.745 341.448 359.552 427.255 449.552 517.255 539.552 606.523> 659 70<462.953 527.359 575.797 640.203> 792 75<259.552 632.142>
+VStem: 270 75<435.745 593.448> 356 75<435.745 593.448> 446 75<435.745 593.448> 460 70<662.143 725.857> 536 75<435.745 533.12> 573 70<661.797 726.203> 670 75<633.844 754.605>
 LayerCount: 3
 Fore
 Refer: 864 -1 N 1 0 0 1 0 500 2
@@ -24169,8 +24192,8 @@ StartChar: soweliTok_joinScaleTok
 Encoding: 1378 -1 1376
 Width: 1000
 Flags: W
-HStem: -50 300<158.438 241.562 358.438 441.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
-VStem: 150 100<-41.5625 241.562> 350 100<-41.5625 241.562> 350 150<448.417 551.583> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
+HStem: -50 300<108.438 191.562 258.438 341.562 408.438 491.562 558.438 638.056> 425 150<373.417 476.583 623.417 726.583> 750 100<58.4375 695.711>
+VStem: 100 100<-41.5625 241.562> 250 100<-41.5625 241.562> 350 150<448.417 551.583> 400 100<-41.5625 241.562> 550 100<-41.5625 156.605> 600 150<448.417 551.583> 850 100<403.745 596.496>
 LayerCount: 3
 Fore
 Refer: 98 989538 N 1 0 0 1 0 0 2
@@ -25502,8 +25525,6 @@ Encoding: 1502 -1 1500
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1503
@@ -25511,8 +25532,6 @@ Encoding: 1503 -1 1501
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1504
@@ -25520,8 +25539,6 @@ Encoding: 1504 -1 1502
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1505
@@ -25529,8 +25546,6 @@ Encoding: 1505 -1 1503
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1506
@@ -25538,8 +25553,6 @@ Encoding: 1506 -1 1504
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1507
@@ -25547,8 +25560,6 @@ Encoding: 1507 -1 1505
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1508
@@ -25556,8 +25567,6 @@ Encoding: 1508 -1 1506
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1509
@@ -25565,8 +25574,6 @@ Encoding: 1509 -1 1507
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1510
@@ -25574,8 +25581,6 @@ Encoding: 1510 -1 1508
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1511
@@ -25583,8 +25588,6 @@ Encoding: 1511 -1 1509
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1512
@@ -25592,8 +25595,6 @@ Encoding: 1512 -1 1510
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1513
@@ -25601,8 +25602,6 @@ Encoding: 1513 -1 1511
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1514
@@ -25610,8 +25609,6 @@ Encoding: 1514 -1 1512
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1515
@@ -25619,8 +25616,6 @@ Encoding: 1515 -1 1513
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1516
@@ -25628,8 +25623,6 @@ Encoding: 1516 -1 1514
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1517
@@ -25637,8 +25630,6 @@ Encoding: 1517 -1 1515
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1518
@@ -25646,8 +25637,6 @@ Encoding: 1518 -1 1516
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1519
@@ -25655,8 +25644,6 @@ Encoding: 1519 -1 1517
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1520
@@ -25664,8 +25651,6 @@ Encoding: 1520 -1 1518
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1521
@@ -25673,8 +25658,6 @@ Encoding: 1521 -1 1519
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1522
@@ -25682,8 +25665,6 @@ Encoding: 1522 -1 1520
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1523
@@ -25691,8 +25672,6 @@ Encoding: 1523 -1 1521
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1524
@@ -25700,8 +25679,6 @@ Encoding: 1524 -1 1522
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1525
@@ -25709,8 +25686,6 @@ Encoding: 1525 -1 1523
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1526
@@ -25718,8 +25693,6 @@ Encoding: 1526 -1 1524
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1527
@@ -25727,8 +25700,6 @@ Encoding: 1527 -1 1525
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1528
@@ -25736,8 +25707,6 @@ Encoding: 1528 -1 1526
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1529
@@ -25745,8 +25714,6 @@ Encoding: 1529 -1 1527
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1530
@@ -25754,8 +25721,6 @@ Encoding: 1530 -1 1528
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1531
@@ -25763,8 +25728,6 @@ Encoding: 1531 -1 1529
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1532
@@ -25772,8 +25735,6 @@ Encoding: 1532 -1 1530
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1533
@@ -25781,8 +25742,6 @@ Encoding: 1533 -1 1531
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1534
@@ -25790,8 +25749,6 @@ Encoding: 1534 -1 1532
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1535
@@ -25799,8 +25756,6 @@ Encoding: 1535 -1 1533
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: joinScaleTok_kuTok
@@ -25813,7 +25768,6 @@ VStem: 328 74<257 542> 522 70<288.143 351.857> 598 74<257 353 435 511>
 LayerCount: 3
 Fore
 Refer: 902 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kuTok
 EndChar
 
@@ -25827,7 +25781,6 @@ VStem: 400 75<276.343 323.657> 462 76<415.745 604.255> 525 118<227.5 307>
 LayerCount: 3
 Fore
 Refer: 766 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok aTok
 LCarets2: 1 0
 EndChar
@@ -25842,7 +25795,6 @@ VStem: 397 70<548.797 613.203> 532 70<548.797 613.203>
 LayerCount: 3
 Fore
 Refer: 767 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok akesiTok
 EndChar
 
@@ -25854,7 +25806,6 @@ Flags: W
 LayerCount: 3
 Fore
 Refer: 768 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok alaTok
 EndChar
 
@@ -25868,7 +25819,6 @@ VStem: 338 74<260 362 436 540> 523 75<303.056 362 436 495.871>
 LayerCount: 3
 Fore
 Refer: 769 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok alasaTok
 EndChar
 
@@ -25882,7 +25832,6 @@ VStem: 162 76<315.681 484.319> 762 76<315.681 484.319>
 LayerCount: 3
 Fore
 Refer: 770 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok aleTok
 EndChar
 
@@ -25897,7 +25846,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 771 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok anpaTok
 EndChar
 
@@ -25909,7 +25857,6 @@ Flags: W
 LayerCount: 3
 Fore
 Refer: 772 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok anteTok
 EndChar
 
@@ -25922,7 +25869,6 @@ VStem: 462 76<185.745 404>
 LayerCount: 3
 Fore
 Refer: 773 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok anuTok
 EndChar
 
@@ -25935,7 +25881,6 @@ HStem: 204 95<303.993 361.719 638.281 696.031>
 LayerCount: 3
 Fore
 Refer: 774 -1 N 1 0 0 1 0 250 2
-Validated: 1
 LCarets2: 1 0
 Ligature2: "'liga' Step 3-1" joinScaleTok awenTok
 EndChar
@@ -25948,7 +25893,6 @@ Flags: W
 LayerCount: 3
 Fore
 Refer: 775 -1 N 1 0 0 1 0 250 2
-Validated: 1
 LCarets2: 1 0
 Ligature2: "'liga' Step 3-1" joinScaleTok eTok
 EndChar
@@ -25963,7 +25907,6 @@ VStem: 462 76<185.745 362 438 614.255>
 LayerCount: 3
 Fore
 Refer: 776 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok enTok
 EndChar
 
@@ -25977,7 +25920,6 @@ VStem: 282 76<260.099 313.943> 642 76<186.133 249.085 488.744 539.901>
 LayerCount: 3
 Fore
 Refer: 777 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok esunTok
 EndChar
 
@@ -25991,7 +25933,6 @@ VStem: 282 76<325.658 474.342> 642 76<325.658 474.342>
 LayerCount: 3
 Fore
 Refer: 778 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok ijoTok
 EndChar
 
@@ -26005,7 +25946,6 @@ VStem: 730 74<265.696 340.25>
 LayerCount: 3
 Fore
 Refer: 779 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok ikeTok
 EndChar
 
@@ -26020,7 +25960,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 780 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok iloTok
 EndChar
 
@@ -26035,7 +25974,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 781 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok insaTok
 EndChar
 
@@ -26049,7 +25987,6 @@ VStem: 308 75<293.119 431.205> 642 75<283.651 349.344 458.669 488.702>
 LayerCount: 3
 Fore
 Refer: 782 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok jakiTok
 EndChar
 
@@ -26063,7 +26000,6 @@ VStem: 305 75<354.389 489.132> 620 75<354.389 489.132>
 LayerCount: 3
 Fore
 Refer: 783 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok janTok
 EndChar
 
@@ -26077,7 +26013,6 @@ VStem: 462 75<532.4 614.255>
 LayerCount: 3
 Fore
 Refer: 784 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok jeloTok
 EndChar
 
@@ -26091,7 +26026,6 @@ VStem: 338 74<288.321 402.415> 392 76<479.703 539.844> 483 179<312.156 379.255> 
 LayerCount: 3
 Fore
 Refer: 785 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok joTok
 EndChar
 
@@ -26105,7 +26039,6 @@ VStem: 762 76<335.709 464.291>
 LayerCount: 3
 Fore
 Refer: 786 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kalaTok
 EndChar
 
@@ -26119,7 +26052,6 @@ VStem: 458 84<469.169 607.831>
 LayerCount: 3
 Fore
 Refer: 787 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kalamaTok
 EndChar
 
@@ -26132,7 +26064,6 @@ HStem: 194 76<525.745 634.336>
 LayerCount: 3
 Fore
 Refer: 788 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kamaTok
 EndChar
 
@@ -26145,7 +26076,6 @@ VStem: 463 75<185.745 390.463>
 LayerCount: 3
 Fore
 Refer: 789 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kasiTok
 EndChar
 
@@ -26158,7 +26088,6 @@ VStem: 350 76<185.745 360 440 614.255> 575 75<185.355 287.332 511.087 614.255>
 LayerCount: 3
 Fore
 Refer: 790 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kenTok
 EndChar
 
@@ -26172,7 +26101,6 @@ VStem: 316 75<482 542> 474 74<482 542> 608 76<185.745 309.84> 631 75<482 542>
 LayerCount: 3
 Fore
 Refer: 791 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kepekenTok
 EndChar
 
@@ -26186,7 +26114,6 @@ VStem: 286 75<313.315 461.619> 453 81<518.751 610.016> 640 75<313.315 458.438>
 LayerCount: 3
 Fore
 Refer: 792 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kiliTok
 EndChar
 
@@ -26199,7 +26126,6 @@ HStem: 506 76<421 579>
 LayerCount: 3
 Fore
 Refer: 793 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kiwenTok
 EndChar
 
@@ -26213,7 +26139,6 @@ VStem: 281 75<386.954 460.075> 320 75<266.517 339.891> 605 75<266.324 339.891> 6
 LayerCount: 3
 Fore
 Refer: 794 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok koTok
 EndChar
 
@@ -26227,7 +26152,6 @@ VStem: 327 76<442.282 531.781> 417 76<267.975 359.641> 507 76<442.282 531.781> 5
 LayerCount: 3
 Fore
 Refer: 795 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok konTok
 EndChar
 
@@ -26240,7 +26164,6 @@ HStem: 183 75<358 642> 343 75<279.745 320 450 550 680 720.255>
 LayerCount: 3
 Fore
 Refer: 796 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kuleTok
 EndChar
 
@@ -26254,7 +26177,6 @@ VStem: 269 75<264.474 335.526> 385 75<464.159 535.297> 425 75<265.529 300 301 33
 LayerCount: 3
 Fore
 Refer: 797 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kulupuTok
 EndChar
 
@@ -26268,7 +26190,6 @@ VStem: 481 71<451.002 501.517> 582 76<408.318 509.14>
 LayerCount: 3
 Fore
 Refer: 798 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kuteTok
 EndChar
 
@@ -26282,7 +26203,6 @@ VStem: 530 76<322.318 477.682>
 LayerCount: 3
 Fore
 Refer: 799 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok laTok
 EndChar
 
@@ -26297,7 +26217,6 @@ CounterMasks: 1 e0
 LayerCount: 3
 Fore
 Refer: 800 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lapeTok
 LCarets2: 1 0
 EndChar
@@ -26311,7 +26230,6 @@ HStem: 184 75<410 589>
 LayerCount: 3
 Fore
 Refer: 801 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lasoTok
 EndChar
 
@@ -26325,7 +26243,6 @@ VStem: 256 76<320.237 438.44> 574 75<320.237 440>
 LayerCount: 3
 Fore
 Refer: 802 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lawaTok
 EndChar
 
@@ -26340,7 +26257,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 803 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lenTok
 EndChar
 
@@ -26353,7 +26269,6 @@ HStem: 363 75<257.745 435 565 741.448>
 LayerCount: 3
 Fore
 Refer: 804 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok leteTok
 EndChar
 
@@ -26366,7 +26281,6 @@ VStem: 372 256
 LayerCount: 3
 Fore
 Refer: 805 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok liTok
 EndChar
 
@@ -26379,7 +26293,6 @@ HStem: 262 276
 LayerCount: 3
 Fore
 Refer: 806 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok liliTok
 EndChar
 
@@ -26393,7 +26306,6 @@ VStem: 730 74<291.491 395.811>
 LayerCount: 3
 Fore
 Refer: 807 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok linjaTok
 EndChar
 
@@ -26407,7 +26319,6 @@ VStem: 328 74<258 542> 598 74<258 542>
 LayerCount: 3
 Fore
 Refer: 808 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lipuTok
 EndChar
 
@@ -26420,7 +26331,6 @@ HStem: 185 75<406 594> 380 75<470.228 530.272> 540 76<383 617>
 LayerCount: 3
 Fore
 Refer: 809 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lojeTok
 EndChar
 
@@ -26434,7 +26344,6 @@ VStem: 450 100<408.438 491.562>
 LayerCount: 3
 Fore
 Refer: 810 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lonTok
 EndChar
 
@@ -26448,7 +26357,6 @@ VStem: 367 75<360 498.371> 654 75<185.745 498.371>
 LayerCount: 3
 Fore
 Refer: 811 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lukaTok
 EndChar
 
@@ -26462,7 +26370,6 @@ VStem: 440 120<353.745 446.255>
 LayerCount: 3
 Fore
 Refer: 812 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lukinTok
 EndChar
 
@@ -26476,7 +26383,6 @@ VStem: 282 76<326.112 614.255> 642 76<326.112 614.255>
 LayerCount: 3
 Fore
 Refer: 813 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lupaTok
 EndChar
 
@@ -26490,7 +26396,6 @@ VStem: 462 76<262 362 438 538>
 LayerCount: 3
 Fore
 Refer: 814 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok maTok
 EndChar
 
@@ -26504,7 +26409,6 @@ VStem: 335 75<394.678 510.635> 378 244<235.516 337.484> 590 75<394.678 510.635>
 LayerCount: 3
 Fore
 Refer: 815 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mamaTok
 EndChar
 
@@ -26518,7 +26422,6 @@ VStem: 282 74<554.274 614.334> 305 75<309.929 444.144> 620 75<309.929 444.144>
 LayerCount: 3
 Fore
 Refer: 816 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok maniTok
 EndChar
 
@@ -26532,7 +26435,6 @@ VStem: 282 76<185.745 473.888> 388 74<366.193 433.807> 538 74<366.193 433.807> 6
 LayerCount: 3
 Fore
 Refer: 817 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok meliTok
 EndChar
 
@@ -26546,7 +26448,6 @@ VStem: 366 76<385.952 527.86> 558 76<440.14 527.86>
 LayerCount: 3
 Fore
 Refer: 818 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok miTok
 EndChar
 
@@ -26560,7 +26461,6 @@ VStem: 282 75<185.745 250> 305 75<354.062 489.132> 620 75<354.062 489.132> 642 7
 LayerCount: 3
 Fore
 Refer: 819 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mijeTok
 EndChar
 
@@ -26574,7 +26474,6 @@ VStem: 357 73<186.441 230.854> 598 76<185.745 307.063>
 LayerCount: 3
 Fore
 Refer: 820 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mokuTok
 EndChar
 
@@ -26588,7 +26487,6 @@ VStem: 250 75<334.46 465.54> 354 126<346 391.75 403.938 449> 520 126<346 391.75 
 LayerCount: 3
 Fore
 Refer: 821 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok moliTok
 EndChar
 
@@ -26603,7 +26501,6 @@ CounterMasks: 1 e0
 LayerCount: 3
 Fore
 Refer: 822 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok monsiTok
 EndChar
 
@@ -26617,7 +26514,6 @@ VStem: 284 75<498.037 539.167> 308 75<309.269 424.563> 464 72<270.812 337.188> 6
 LayerCount: 3
 Fore
 Refer: 823 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok muTok
 EndChar
 
@@ -26631,7 +26527,6 @@ VStem: 473 75<332.869 467.131> 599 75<325.322 474.678>
 LayerCount: 3
 Fore
 Refer: 824 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok munTok
 EndChar
 
@@ -26645,7 +26540,6 @@ VStem: 284 75<499.036 540.168> 308 75<309.052 425.466> 401 75<499.65 540.168> 52
 LayerCount: 3
 Fore
 Refer: 825 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok musiTok
 EndChar
 
@@ -26658,7 +26552,6 @@ VStem: 312 76<185.745 614.255> 463 75<190.552 609.448> 612 76<185.745 614.255>
 LayerCount: 3
 Fore
 Refer: 826 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok muteTok
 EndChar
 
@@ -26672,7 +26565,6 @@ VStem: 395 75<185.745 295 370 430 505 614.255> 530 75<185.745 295 370 430 505 60
 LayerCount: 3
 Fore
 Refer: 827 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nanpaTok
 EndChar
 
@@ -26686,7 +26578,6 @@ VStem: 286 49<306.703 468.05> 508 48<334.304 371.838> 602 48<287.578 418.45>
 LayerCount: 3
 Fore
 Refer: 828 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nasaTok
 EndChar
 
@@ -26699,7 +26590,6 @@ VStem: 450 100<178.438 347 488 621.562>
 LayerCount: 3
 Fore
 Refer: 829 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nasinTok
 EndChar
 
@@ -26713,7 +26603,6 @@ VStem: 282 76<185.745 473.888> 642 76<185.745 473.888>
 LayerCount: 3
 Fore
 Refer: 830 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nenaTok
 EndChar
 
@@ -26726,7 +26615,6 @@ VStem: 463 75<311 613.47>
 LayerCount: 3
 Fore
 Refer: 831 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok niTok
 EndChar
 
@@ -26740,7 +26628,6 @@ VStem: 162 76<335.196 464.804> 762 76<335.196 464.804>
 LayerCount: 3
 Fore
 Refer: 832 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nimiTok
 EndChar
 
@@ -26754,7 +26641,6 @@ VStem: 306 74<258 614.645> 440 76<392 614.255> 620 76<259.14 316.782>
 LayerCount: 3
 Fore
 Refer: 833 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nokaTok
 EndChar
 
@@ -26768,7 +26654,6 @@ VStem: 400 75<276.343 323.657> 462 76<415.745 604.255> 525 75<276.343 323.657>
 LayerCount: 3
 Fore
 Refer: 834 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok oTok
 EndChar
 
@@ -26782,7 +26667,6 @@ VStem: 138 76<408.184 480.537> 412 76<408.184 480.537> 513 75<408.184 480.428> 7
 LayerCount: 3
 Fore
 Refer: 835 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok olinTok
 EndChar
 
@@ -26796,7 +26680,6 @@ VStem: 496 75<352.861 447.25> 696 75<352.75 447.25>
 LayerCount: 3
 Fore
 Refer: 836 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok onaTok
 EndChar
 
@@ -26810,7 +26693,6 @@ VStem: 282 76<258 285 360 614.255> 642 76<258 285 360 614.255>
 LayerCount: 3
 Fore
 Refer: 837 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok openTok
 EndChar
 
@@ -26825,7 +26707,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 838 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pakalaTok
 EndChar
 
@@ -26839,7 +26720,6 @@ VStem: 363 73<186.48 232.049> 381 75<431.591 524.689> 584 75<431.591 524.689> 60
 LayerCount: 3
 Fore
 Refer: 839 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok paliTok
 EndChar
 
@@ -26853,7 +26733,6 @@ VStem: 396 74<260.755 539.245> 530 75<260.755 539.245>
 LayerCount: 3
 Fore
 Refer: 840 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok palisaTok
 EndChar
 
@@ -26866,7 +26745,6 @@ VStem: 350 300<322 352 446 476 570 600>
 LayerCount: 3
 Fore
 Refer: 841 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok panTok
 EndChar
 
@@ -26880,7 +26758,6 @@ VStem: 392 96<501.3 559.7> 500 75<501.552 614.255> 588 96<501.3 561.078> 613 75<
 LayerCount: 3
 Fore
 Refer: 842 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok panaTok
 EndChar
 
@@ -26894,7 +26771,6 @@ VStem: 312 76<288 584.255>
 LayerCount: 3
 Fore
 Refer: 843 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok piTok
 EndChar
 
@@ -26908,7 +26784,6 @@ VStem: 256 76<419.24 525.341> 668 75<420.673 525.341>
 LayerCount: 3
 Fore
 Refer: 844 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pilinTok
 EndChar
 
@@ -26921,7 +26796,6 @@ HStem: 182 76<357 398 485 515 602 643>
 LayerCount: 3
 Fore
 Refer: 845 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pimejaTok
 EndChar
 
@@ -26935,7 +26809,6 @@ VStem: 462 76<258 542>
 LayerCount: 3
 Fore
 Refer: 846 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok piniTok
 EndChar
 
@@ -26949,7 +26822,6 @@ VStem: 397 70<548.797 613.203> 462 76<185.745 262 338 382 458 534.255> 532 70<54
 LayerCount: 3
 Fore
 Refer: 847 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pipiTok
 EndChar
 
@@ -26963,7 +26835,6 @@ VStem: 168 74<338 534.645> 568 74<338 534.645> 695 100<358.438 441.562>
 LayerCount: 3
 Fore
 Refer: 848 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pokaTok
 EndChar
 
@@ -26977,7 +26848,6 @@ VStem: 282 76<258 614.255> 642 76<258 614.255>
 LayerCount: 3
 Fore
 Refer: 849 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pokiTok
 EndChar
 
@@ -26991,7 +26861,6 @@ VStem: 196 74<459.75 534.304>
 LayerCount: 3
 Fore
 Refer: 850 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok ponaTok
 EndChar
 
@@ -27005,7 +26874,6 @@ VStem: 292 76<238 544> 372 64<464.25 499.75> 384 40<306.636 407.687> 439 40<333.
 LayerCount: 3
 Fore
 Refer: 851 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok puTok
 EndChar
 
@@ -27018,7 +26886,6 @@ HStem: 250 74<265.355 734.645> 474 76<265.745 734.255>
 LayerCount: 3
 Fore
 Refer: 852 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok samaTok
 EndChar
 
@@ -27032,7 +26899,6 @@ VStem: 314 74<556.741 604.509> 374 74<335.666 384.138> 450 100<208.438 291.562> 
 LayerCount: 3
 Fore
 Refer: 853 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok seliTok
 EndChar
 
@@ -27046,7 +26912,6 @@ VStem: 242 76<235.745 492> 342 76<268.552 492> 582 76<268.552 492> 682 76<235.74
 LayerCount: 3
 Fore
 Refer: 854 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok seloTok
 EndChar
 
@@ -27060,7 +26925,6 @@ VStem: 336 74<461.181 528.096> 450 100<198.438 281.562> 463 75<313.552 387.637> 
 LayerCount: 3
 Fore
 Refer: 855 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok semeTok
 EndChar
 
@@ -27073,7 +26937,6 @@ VStem: 343 76<296.734 439.222> 445 75<304.949 514.255> 548 74<316.267 588.819> 6
 LayerCount: 3
 Fore
 Refer: 856 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sewiTok
 EndChar
 
@@ -27088,7 +26951,6 @@ CounterMasks: 1 70
 LayerCount: 3
 Fore
 Refer: 857 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sijeloTok
 EndChar
 
@@ -27102,7 +26964,6 @@ VStem: 282 76<325.658 474.342> 382 76<364.29 435.71> 542 76<364.29 435.71> 642 7
 LayerCount: 3
 Fore
 Refer: 858 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sikeTok
 EndChar
 
@@ -27116,7 +26977,6 @@ VStem: 462 76<328.552 584.255>
 LayerCount: 3
 Fore
 Refer: 859 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sinTok
 EndChar
 
@@ -27130,7 +26990,6 @@ VStem: 366 76<272.14 414.048> 558 76<272.14 359.86>
 LayerCount: 3
 Fore
 Refer: 860 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sinaTok
 EndChar
 
@@ -27145,7 +27004,6 @@ CounterMasks: 1 e0
 LayerCount: 3
 Fore
 Refer: 861 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sinpinTok
 EndChar
 
@@ -27159,7 +27017,6 @@ VStem: 292 76<258 542> 375 75<365.745 433.448> 462 76<365.745 433.448> 550 75<36
 LayerCount: 3
 Fore
 Refer: 862 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sitelenTok
 EndChar
 
@@ -27174,7 +27031,6 @@ CounterMasks: 1 0e
 LayerCount: 3
 Fore
 Refer: 863 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sonaTok
 EndChar
 
@@ -27183,12 +27039,11 @@ Encoding: 1634 -1 1633
 Width: 1000
 VWidth: 950
 Flags: W
-HStem: 182 166<421.552 488.448 511.552 578.448> 409 70<434.953 499.359 547.797 612.203> 542 76<285.745 604.265>
-VStem: 418 74<185.355 344.645> 432 70<412.143 475.857> 508 74<185.355 283.12> 545 70<411.797 476.203> 642 76<384.036 504.666>
+HStem: 182 165<273.745 341.448 359.552 427.255 449.552 517.255 539.552 606.523> 409 70<462.953 527.359 575.797 640.203> 542 75<259.552 632.142>
+VStem: 270 75<185.745 343.448> 356 75<185.745 343.448> 446 75<185.745 343.448> 460 70<412.143 475.857> 536 75<185.745 283.12> 573 70<411.797 476.203> 670 75<383.844 504.605>
 LayerCount: 3
 Fore
 Refer: 864 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok soweliTok
 EndChar
 
@@ -27201,7 +27056,6 @@ VStem: 464 73<185.228 291.323>
 LayerCount: 3
 Fore
 Refer: 865 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok suliTok
 EndChar
 
@@ -27216,7 +27070,6 @@ CounterMasks: 1 fc
 LayerCount: 3
 Fore
 Refer: 866 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sunoTok
 EndChar
 
@@ -27230,7 +27083,6 @@ VStem: 369 75<272.552 456> 556 75<272.552 456>
 LayerCount: 3
 Fore
 Refer: 867 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok supaTok
 EndChar
 
@@ -27244,7 +27096,6 @@ VStem: 450 100<238.438 321.562>
 LayerCount: 3
 Fore
 Refer: 868 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok suwiTok
 EndChar
 
@@ -27258,7 +27109,6 @@ VStem: 661 79<274.025 417.147>
 LayerCount: 3
 Fore
 Refer: 869 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tanTok
 EndChar
 
@@ -27272,7 +27122,6 @@ VStem: 527 75<195.745 381 454.31 604.255>
 LayerCount: 3
 Fore
 Refer: 870 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tasoTok
 EndChar
 
@@ -27285,7 +27134,6 @@ HStem: 194 76<365.696 473.448>
 LayerCount: 3
 Fore
 Refer: 871 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tawaTok
 EndChar
 
@@ -27299,7 +27147,6 @@ VStem: 283 73<241.302 299.67 421.302 479.67> 644 73<320.33 378.334 500.33 558.33
 LayerCount: 3
 Fore
 Refer: 872 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok teloTok
 EndChar
 
@@ -27313,7 +27160,6 @@ VStem: 284 75<326.34 473.66> 462 76<438 534.255> 462 148<365.745 434.255> 641 75
 LayerCount: 3
 Fore
 Refer: 873 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tenpoTok
 EndChar
 
@@ -27327,7 +27173,6 @@ VStem: 342 76<285.181 394.819> 342 96<497.938 559.219> 462 76<505.745 614.255> 5
 LayerCount: 3
 Fore
 Refer: 874 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tokiTok
 EndChar
 
@@ -27341,7 +27186,6 @@ VStem: 282 76<258 408> 642 76<258 408>
 LayerCount: 3
 Fore
 Refer: 875 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tomoTok
 EndChar
 
@@ -27354,7 +27198,6 @@ VStem: 350 76<185.745 614.255> 576 74<185.355 614.645>
 LayerCount: 3
 Fore
 Refer: 876 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tuTok
 EndChar
 
@@ -27368,7 +27211,6 @@ VStem: 283 75<446.219 517.52> 369 75<287.379 333> 556 75<287.379 333> 642 75<446
 LayerCount: 3
 Fore
 Refer: 877 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok unpaTok
 EndChar
 
@@ -27382,7 +27224,6 @@ VStem: 450 100<198.438 281.562>
 LayerCount: 3
 Fore
 Refer: 878 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok utaTok
 EndChar
 
@@ -27395,7 +27236,6 @@ VStem: 282 74<345.682 389.311> 644 74<345.682 389.311>
 LayerCount: 3
 Fore
 Refer: 879 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok utalaTok
 EndChar
 
@@ -27408,7 +27248,6 @@ HStem: 182 76<357 643>
 LayerCount: 3
 Fore
 Refer: 880 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok waloTok
 EndChar
 
@@ -27421,7 +27260,6 @@ VStem: 520 74<185.355 489>
 LayerCount: 3
 Fore
 Refer: 881 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wanTok
 EndChar
 
@@ -27435,7 +27273,6 @@ VStem: 343 75<186.552 273 359.064 416.936> 462 70<356.143 419.857>
 LayerCount: 3
 Fore
 Refer: 882 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wasoTok
 EndChar
 
@@ -27449,7 +27286,6 @@ VStem: 216 74<507 614.277> 243 75<241.723 351.074> 324 75<296.812 419.441> 600 7
 LayerCount: 3
 Fore
 Refer: 883 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wawaTok
 EndChar
 
@@ -27461,7 +27297,6 @@ Flags: W
 LayerCount: 3
 Fore
 Refer: 884 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wekaTok
 EndChar
 
@@ -27475,7 +27310,6 @@ VStem: 256 76<284.424 502.752> 462 75<274.303 356.448> 668 75<284.308 502.752>
 LayerCount: 3
 Fore
 Refer: 885 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wileTok
 EndChar
 
@@ -27489,7 +27323,6 @@ VStem: 385 95<490.215 564> 421 75<317.052 459.448> 498 75<494.745 614.255> 575 7
 LayerCount: 3
 Fore
 Refer: 886 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok namakoTok
 EndChar
 
@@ -27503,7 +27336,6 @@ VStem: 462 75<185.745 240 370 424.448 445.745 614.255>
 LayerCount: 3
 Fore
 Refer: 887 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kinTok
 EndChar
 
@@ -27517,7 +27349,6 @@ VStem: 440 120<353.745 446.255>
 LayerCount: 3
 Fore
 Refer: 888 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok okoTok
 EndChar
 
@@ -27531,7 +27362,6 @@ VStem: 320 120<473.745 566.255> 560 120<233.745 326.255>
 LayerCount: 3
 Fore
 Refer: 889 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kipisiTok
 EndChar
 
@@ -27545,7 +27375,6 @@ VStem: 282 76<258 542> 385 75<360 440> 540 75<360 440> 642 76<258 542>
 LayerCount: 3
 Fore
 Refer: 890 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lekoTok
 EndChar
 
@@ -27557,7 +27386,6 @@ Flags: W
 LayerCount: 3
 Fore
 Refer: 891 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok monsutaTok
 EndChar
 
@@ -27571,7 +27399,6 @@ VStem: 336 75<397.151 506.045> 463 75<186.552 300.018> 589 75<397.151 506.045>
 LayerCount: 3
 Fore
 Refer: 892 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok tonsiTok
 EndChar
 
@@ -27585,7 +27412,6 @@ VStem: 282 74<225.491 316.208 405.491 496.208> 644 74<303.792 394.509 483.792 57
 LayerCount: 3
 Fore
 Refer: 893 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok jasimaTok
 EndChar
 
@@ -27599,7 +27425,6 @@ VStem: 297 50<258.535 313.881> 353 50<258 315> 408 50<249 341 391 484.818> 471 5
 LayerCount: 3
 Fore
 Refer: 894 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kijetesantakaluTok
 EndChar
 
@@ -27613,7 +27438,6 @@ VStem: 462 75<185.745 388>
 LayerCount: 3
 Fore
 Refer: 895 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sokoTok
 EndChar
 
@@ -27628,7 +27452,6 @@ CounterMasks: 1 70
 LayerCount: 3
 Fore
 Refer: 896 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mesoTok
 EndChar
 
@@ -27642,7 +27465,6 @@ VStem: 294 74<318.104 423.645> 349 105<476 522> 463 75<445.552 591.255> 547 105<
 LayerCount: 3
 Fore
 Refer: 897 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok epikuTok
 EndChar
 
@@ -27656,7 +27478,6 @@ VStem: 342 76<330.292 394.221> 342 100<507.232 557.5> 462 76<505.745 614.255> 55
 LayerCount: 3
 Fore
 Refer: 898 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kokosilaTok
 EndChar
 
@@ -27671,7 +27492,6 @@ CounterMasks: 1 1c
 LayerCount: 3
 Fore
 Refer: 899 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok lanpanTok
 EndChar
 
@@ -27685,7 +27505,6 @@ VStem: 396 74<185.355 316.67> 464 74<405.355 614.645> 530 76<185.745 316.67>
 LayerCount: 3
 Fore
 Refer: 900 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok nTok
 EndChar
 
@@ -27700,7 +27519,6 @@ CounterMasks: 1 e0
 LayerCount: 3
 Fore
 Refer: 901 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok misikekeTok
 EndChar
 
@@ -27709,8 +27527,6 @@ Encoding: 1673 -1 1671
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1674
@@ -27718,8 +27534,6 @@ Encoding: 1674 -1 1672
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1675
@@ -27727,8 +27541,6 @@ Encoding: 1675 -1 1673
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1676
@@ -27736,8 +27548,6 @@ Encoding: 1676 -1 1674
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1677
@@ -27745,8 +27555,6 @@ Encoding: 1677 -1 1675
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1678
@@ -27754,8 +27562,6 @@ Encoding: 1678 -1 1676
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1679
@@ -27763,8 +27569,6 @@ Encoding: 1679 -1 1677
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1680
@@ -27772,8 +27576,6 @@ Encoding: 1680 -1 1678
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1681
@@ -27781,8 +27583,6 @@ Encoding: 1681 -1 1679
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1682
@@ -27790,8 +27590,6 @@ Encoding: 1682 -1 1680
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1683
@@ -27799,8 +27597,6 @@ Encoding: 1683 -1 1681
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1684
@@ -27808,8 +27604,6 @@ Encoding: 1684 -1 1682
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1685
@@ -27817,8 +27611,6 @@ Encoding: 1685 -1 1683
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1686
@@ -27826,8 +27618,6 @@ Encoding: 1686 -1 1684
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1687
@@ -27835,8 +27625,6 @@ Encoding: 1687 -1 1685
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1688
@@ -27844,8 +27632,6 @@ Encoding: 1688 -1 1686
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1689
@@ -27853,8 +27639,6 @@ Encoding: 1689 -1 1687
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1690
@@ -27862,8 +27646,6 @@ Encoding: 1690 -1 1688
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1691
@@ -27871,8 +27653,6 @@ Encoding: 1691 -1 1689
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1692
@@ -27880,8 +27660,6 @@ Encoding: 1692 -1 1690
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1693
@@ -27889,8 +27667,6 @@ Encoding: 1693 -1 1691
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1694
@@ -27898,8 +27674,6 @@ Encoding: 1694 -1 1692
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1695
@@ -27907,8 +27681,6 @@ Encoding: 1695 -1 1693
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: joinScaleTok_pakeTok
@@ -27921,7 +27693,6 @@ VStem: 462 76<185.745 542>
 LayerCount: 3
 Fore
 Refer: 903 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok pakeTok
 LCarets2: 1 0
 EndChar
@@ -27937,7 +27708,6 @@ CounterMasks: 1 0e
 LayerCount: 3
 Fore
 Refer: 927 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok apejaTok
 EndChar
 
@@ -27952,7 +27722,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 928 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok majunaTok
 EndChar
 
@@ -27965,7 +27734,6 @@ HStem: 212 76<165.745 834.255>
 LayerCount: 3
 Fore
 Refer: 929 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok poweTok
 EndChar
 
@@ -27974,8 +27742,6 @@ Encoding: 1700 -1 1698
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1701
@@ -27983,8 +27749,6 @@ Encoding: 1701 -1 1699
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1702
@@ -27992,8 +27756,6 @@ Encoding: 1702 -1 1700
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1703
@@ -28001,8 +27763,6 @@ Encoding: 1703 -1 1701
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1704
@@ -28010,8 +27770,6 @@ Encoding: 1704 -1 1702
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1705
@@ -28019,8 +27777,6 @@ Encoding: 1705 -1 1703
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1706
@@ -28028,8 +27784,6 @@ Encoding: 1706 -1 1704
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1707
@@ -28037,8 +27791,6 @@ Encoding: 1707 -1 1705
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1708
@@ -28046,8 +27798,6 @@ Encoding: 1708 -1 1706
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1709
@@ -28055,8 +27805,6 @@ Encoding: 1709 -1 1707
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1710
@@ -28064,8 +27812,6 @@ Encoding: 1710 -1 1708
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1711
@@ -28073,8 +27819,6 @@ Encoding: 1711 -1 1709
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1712
@@ -28082,8 +27826,6 @@ Encoding: 1712 -1 1710
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1713
@@ -28091,8 +27833,6 @@ Encoding: 1713 -1 1711
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1714
@@ -28100,8 +27840,6 @@ Encoding: 1714 -1 1712
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1715
@@ -28109,8 +27847,6 @@ Encoding: 1715 -1 1713
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1716
@@ -28118,8 +27854,6 @@ Encoding: 1716 -1 1714
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1717
@@ -28127,8 +27861,6 @@ Encoding: 1717 -1 1715
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1718
@@ -28136,8 +27868,6 @@ Encoding: 1718 -1 1716
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1719
@@ -28145,8 +27875,6 @@ Encoding: 1719 -1 1717
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1720
@@ -28154,8 +27882,6 @@ Encoding: 1720 -1 1718
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1721
@@ -28163,8 +27889,6 @@ Encoding: 1721 -1 1719
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1722
@@ -28172,8 +27896,6 @@ Encoding: 1722 -1 1720
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1723
@@ -28181,8 +27903,6 @@ Encoding: 1723 -1 1721
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1724
@@ -28190,8 +27910,6 @@ Encoding: 1724 -1 1722
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1725
@@ -28199,8 +27917,6 @@ Encoding: 1725 -1 1723
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1726
@@ -28208,8 +27924,6 @@ Encoding: 1726 -1 1724
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1727
@@ -28217,8 +27931,6 @@ Encoding: 1727 -1 1725
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1728
@@ -28226,8 +27938,6 @@ Encoding: 1728 -1 1726
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1729
@@ -28235,8 +27945,6 @@ Encoding: 1729 -1 1727
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1730
@@ -28244,8 +27952,6 @@ Encoding: 1730 -1 1728
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1731
@@ -28253,8 +27959,6 @@ Encoding: 1731 -1 1729
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1732
@@ -28262,8 +27966,6 @@ Encoding: 1732 -1 1730
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1733
@@ -28271,8 +27973,6 @@ Encoding: 1733 -1 1731
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1734
@@ -28280,8 +27980,6 @@ Encoding: 1734 -1 1732
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1735
@@ -28289,8 +27987,6 @@ Encoding: 1735 -1 1733
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1736
@@ -28298,8 +27994,6 @@ Encoding: 1736 -1 1734
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1737
@@ -28307,8 +28001,6 @@ Encoding: 1737 -1 1735
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1738
@@ -28316,8 +28008,6 @@ Encoding: 1738 -1 1736
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1739
@@ -28325,8 +28015,6 @@ Encoding: 1739 -1 1737
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1740
@@ -28334,8 +28022,6 @@ Encoding: 1740 -1 1738
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1741
@@ -28343,8 +28029,6 @@ Encoding: 1741 -1 1739
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1742
@@ -28352,8 +28036,6 @@ Encoding: 1742 -1 1740
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1743
@@ -28361,8 +28043,6 @@ Encoding: 1743 -1 1741
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1744
@@ -28370,8 +28050,6 @@ Encoding: 1744 -1 1742
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1745
@@ -28379,8 +28057,6 @@ Encoding: 1745 -1 1743
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1746
@@ -28388,8 +28064,6 @@ Encoding: 1746 -1 1744
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1747
@@ -28397,8 +28071,6 @@ Encoding: 1747 -1 1745
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1748
@@ -28406,8 +28078,6 @@ Encoding: 1748 -1 1746
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1749
@@ -28415,8 +28085,6 @@ Encoding: 1749 -1 1747
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1750
@@ -28424,8 +28092,6 @@ Encoding: 1750 -1 1748
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1751
@@ -28433,8 +28099,6 @@ Encoding: 1751 -1 1749
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1752
@@ -28442,8 +28106,6 @@ Encoding: 1752 -1 1750
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1753
@@ -28451,8 +28113,6 @@ Encoding: 1753 -1 1751
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1754
@@ -28460,8 +28120,6 @@ Encoding: 1754 -1 1752
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1755
@@ -28469,8 +28127,6 @@ Encoding: 1755 -1 1753
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1756
@@ -28478,8 +28134,6 @@ Encoding: 1756 -1 1754
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1757
@@ -28487,8 +28141,6 @@ Encoding: 1757 -1 1755
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1758
@@ -28496,8 +28148,6 @@ Encoding: 1758 -1 1756
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1759
@@ -28505,8 +28155,6 @@ Encoding: 1759 -1 1757
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1760
@@ -28514,8 +28162,6 @@ Encoding: 1760 -1 1758
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1761
@@ -28523,8 +28169,6 @@ Encoding: 1761 -1 1759
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1762
@@ -28532,8 +28176,6 @@ Encoding: 1762 -1 1760
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1763
@@ -28541,8 +28183,6 @@ Encoding: 1763 -1 1761
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1764
@@ -28550,8 +28190,6 @@ Encoding: 1764 -1 1762
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1765
@@ -28559,8 +28197,6 @@ Encoding: 1765 -1 1763
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1766
@@ -28568,8 +28204,6 @@ Encoding: 1766 -1 1764
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1767
@@ -28577,8 +28211,6 @@ Encoding: 1767 -1 1765
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1768
@@ -28586,8 +28218,6 @@ Encoding: 1768 -1 1766
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1769
@@ -28595,8 +28225,6 @@ Encoding: 1769 -1 1767
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1770
@@ -28604,8 +28232,6 @@ Encoding: 1770 -1 1768
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1771
@@ -28613,8 +28239,6 @@ Encoding: 1771 -1 1769
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1772
@@ -28622,8 +28246,6 @@ Encoding: 1772 -1 1770
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1773
@@ -28631,8 +28253,6 @@ Encoding: 1773 -1 1771
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1774
@@ -28640,8 +28260,6 @@ Encoding: 1774 -1 1772
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1775
@@ -28649,8 +28267,6 @@ Encoding: 1775 -1 1773
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1776
@@ -28658,8 +28274,6 @@ Encoding: 1776 -1 1774
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1777
@@ -28667,8 +28281,6 @@ Encoding: 1777 -1 1775
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1778
@@ -28676,8 +28288,6 @@ Encoding: 1778 -1 1776
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1779
@@ -28685,8 +28295,6 @@ Encoding: 1779 -1 1777
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1780
@@ -28694,8 +28302,6 @@ Encoding: 1780 -1 1778
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1781
@@ -28703,8 +28309,6 @@ Encoding: 1781 -1 1779
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1782
@@ -28712,8 +28316,6 @@ Encoding: 1782 -1 1780
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1783
@@ -28721,8 +28323,6 @@ Encoding: 1783 -1 1781
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1784
@@ -28730,8 +28330,6 @@ Encoding: 1784 -1 1782
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1785
@@ -28739,8 +28337,6 @@ Encoding: 1785 -1 1783
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1786
@@ -28748,8 +28344,6 @@ Encoding: 1786 -1 1784
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1787
@@ -28757,8 +28351,6 @@ Encoding: 1787 -1 1785
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1788
@@ -28766,8 +28358,6 @@ Encoding: 1788 -1 1786
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1789
@@ -28775,8 +28365,6 @@ Encoding: 1789 -1 1787
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1790
@@ -28784,8 +28372,6 @@ Encoding: 1790 -1 1788
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1791
@@ -28793,8 +28379,6 @@ Encoding: 1791 -1 1789
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.138
@@ -28802,8 +28386,6 @@ Encoding: 138 -1 1790
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.137
@@ -28811,8 +28393,6 @@ Encoding: 137 -1 1791
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1792
@@ -28821,8 +28401,6 @@ Width: 0
 VWidth: 900
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1793
@@ -28830,8 +28408,6 @@ Encoding: 1793 -1 1793
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1794
@@ -28839,8 +28415,6 @@ Encoding: 1794 -1 1794
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1795
@@ -28848,8 +28422,6 @@ Encoding: 1795 -1 1795
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1796
@@ -28857,8 +28429,6 @@ Encoding: 1796 -1 1796
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1797
@@ -28866,8 +28436,6 @@ Encoding: 1797 -1 1797
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1798
@@ -28875,8 +28443,6 @@ Encoding: 1798 -1 1798
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1799
@@ -28884,8 +28450,6 @@ Encoding: 1799 -1 1799
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1800
@@ -28893,8 +28457,6 @@ Encoding: 1800 -1 1800
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1801
@@ -28902,8 +28464,6 @@ Encoding: 1801 -1 1801
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1802
@@ -28911,8 +28471,6 @@ Encoding: 1802 -1 1802
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1803
@@ -28920,8 +28478,6 @@ Encoding: 1803 -1 1803
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: var1Tok
@@ -28929,8 +28485,6 @@ Encoding: 1804 65024 1804
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: var2Tok
@@ -28938,8 +28492,6 @@ Encoding: 1805 65025 1805
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: var3Tok
@@ -28947,8 +28499,6 @@ Encoding: 1806 65027 1806
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: var4Tok
@@ -28956,8 +28506,6 @@ Encoding: 1807 65028 1807
 Width: 0
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: itanTok
@@ -29038,7 +28586,6 @@ SplineSet
  571 210 605 176 605 135 c 4
  605 94 571 60 530 60 c 4x1ff8
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" ijoTok tanTok anpaTok nanpaTok var1Tok
 Substitution2: "'ss02' Container Lines-1" itanTok.cont
 Substitution2: "'ss01' Cartouche Lines-1" itanTok.cart
@@ -29054,7 +28601,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 N 1 0 0 1 1000 0 2
 Refer: 1808 -1 S 0.95 0 0 0.95 25 20 2
-Validated: 1
 EndChar
 
 StartChar: itanTok.cont
@@ -29067,7 +28613,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 N 1 0 0 1 1000 0 2
 Refer: 1808 -1 N 0.95 0 0 0.95 25 20 2
-Validated: 1
 EndChar
 
 StartChar: kulupuKasiTok
@@ -29173,7 +28718,6 @@ SplineSet
  660 107 680 168 680 207 c 0
  680 252 649 289 621 321 c 1
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" kulupuTok kasiTok var1Tok
 Substitution2: "'ss01' Cartouche Lines-1" kulupuKasiTok.cart
 Substitution2: "'ss02' Container Lines-1" kulupuKasiTok.cont
@@ -29190,7 +28734,6 @@ LayerCount: 3
 Fore
 Refer: 1811 -1 N 1 0 0 1 0 0 2
 Refer: 144 989586 N 1 0 0 1 1000 0 2
-Validated: 1
 EndChar
 
 StartChar: kulupuKasiTok.cont
@@ -29203,7 +28746,6 @@ LayerCount: 3
 Fore
 Refer: 1811 -1 N 1 0 0 1 0 0 2
 Refer: 151 989593 N 1 0 0 1 1000 0 2
-Validated: 1
 EndChar
 
 StartChar: lepekaTok
@@ -29355,7 +28897,6 @@ SplineSet
  774 642 743 673 707 698 c 5
  701 692 693 688 685 688 c 4
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" meliTok kuleTok kuleTok var1Tok
 LCarets2: 1 0
 EndChar
@@ -29364,26 +28905,24 @@ StartChar: lepekaTok.cart
 Encoding: 1815 -1 1815
 Width: 1000
 Flags: W
-HStem: -200 100<-41.56 1041.56> 32 76<398.815 601.185> 180 50<362.157 457.935 542.065 637.843> 365 50<337 423 577 663> 425 50<371 389 611 629> 632 76<398.815 601.185> 762 76<376.52 623.48> 817 51<85.0498 164.182 835.818 914.95> 900 100<-41.56 1041.56>
+HStem: -200 100<-41.5625 1041.56> 32 76<398.815 601.185> 180 50<362.157 457.935 542.065 637.843> 365 50<337 423 577 663> 425 50<371 389 611 629> 632 76<398.815 601.185> 762 76<376.52 623.48> 817 51<85.0498 164.182 835.818 914.95> 900 100<-41.5625 1041.56>
 VStem: 31 51<734.818 813.95> 62 76<-34.255 525.016> 162 76<268.815 471.185> 295 50<247.464 319.802> 475 50<246.85 319.802> 655 50<247.464 319.802> 762 76<268.815 471.185> 862 76<-34.255 525.016> 918 51<735.511 813.95>
 LayerCount: 3
 Fore
 Refer: 1814 -1 N 1 0 0 1 0 0 2
 Refer: 144 989586 N 1 0 0 1 1000 0 2
-Validated: 1
 EndChar
 
 StartChar: lepekaTok.cont
 Encoding: 1816 -1 1816
 Width: 1000
 Flags: W
-HStem: -200 100<-41.56 1041.56> 32 76<398.815 601.185> 180 50<362.157 457.935 542.065 637.843> 365 50<337 423 577 663> 425 50<371 389 611 629> 632 76<398.815 601.185> 762 76<376.52 623.48> 817 51<85.0498 164.182 835.818 914.95>
+HStem: -200 100<-41.5625 1041.56> 32 76<398.815 601.185> 180 50<362.157 457.935 542.065 637.843> 365 50<337 423 577 663> 425 50<371 389 611 629> 632 76<398.815 601.185> 762 76<376.52 623.48> 817 51<85.0498 164.182 835.818 914.95>
 VStem: 31 51<734.818 813.95> 62 76<-34.255 525.016> 162 76<268.815 471.185> 295 50<247.464 319.802> 475 50<246.85 319.802> 655 50<247.464 319.802> 762 76<268.815 471.185> 862 76<-34.255 525.016> 918 51<735.511 813.95>
 LayerCount: 3
 Fore
 Refer: 1814 -1 N 1 0 0 1 0 0 2
 Refer: 151 989593 N 1 0 0 1 1000 0 2
-Validated: 1
 EndChar
 
 StartChar: NameMe.1817
@@ -29391,8 +28930,6 @@ Encoding: 1817 -1 1817
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1818
@@ -29400,8 +28937,6 @@ Encoding: 1818 -1 1818
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1819
@@ -29409,8 +28944,6 @@ Encoding: 1819 -1 1819
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1820
@@ -29418,8 +28951,6 @@ Encoding: 1820 -1 1820
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1821
@@ -29427,8 +28958,6 @@ Encoding: 1821 -1 1821
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1822
@@ -29436,8 +28965,6 @@ Encoding: 1822 -1 1822
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1823
@@ -29445,8 +28972,6 @@ Encoding: 1823 -1 1823
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: kala1Tok
@@ -29494,7 +29019,6 @@ SplineSet
  550 428 572 450 600 450 c 0
  628 450 650 428 650 400 c 0
 EndSplineSet
-Validated: 1
 Substitution2: "'ss02' Container Lines-1" kala1Tok.cont
 LCarets2: 1 0
 Ligature2: "'liga' Alternatives-1" kalaTok var1Tok
@@ -29512,7 +29036,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1824 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: kala1Tok.cont
@@ -29526,7 +29049,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1824 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: kala1Tok_joinStackTok
@@ -29571,7 +29093,6 @@ SplineSet
  550 171 567 187 588 187 c 0
  609 187 625 171 625 150 c 0
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" kala1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" kala1Tok joinStackTok
 EndChar
@@ -29586,7 +29107,6 @@ CounterMasks: 1 fc
 LayerCount: 3
 Fore
 Refer: 1824 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" kala1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" kala1Tok joinScaleTok
 EndChar
@@ -29600,7 +29120,6 @@ VStem: 550 75<615.745 683.448> 662 76<615.745 683.448> 762 76<585.709 714.291>
 LayerCount: 3
 Fore
 Refer: 1827 -1 N 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok kala1Tok
 EndChar
 
@@ -29613,7 +29132,6 @@ VStem: 550 75<365.745 433.448> 662 76<365.745 433.448> 762 76<335.709 464.291>
 LayerCount: 3
 Fore
 Refer: 1827 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok kala1Tok
 EndChar
 
@@ -29622,8 +29140,6 @@ Encoding: 1831 -1 1831
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: meli1Tok
@@ -29661,7 +29177,6 @@ SplineSet
  583 450 650 517 650 600 c 0
  650 683 583 750 500 750 c 0
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" meliTok var1Tok
 Substitution2: "'ss02' Container Lines-1" meli1Tok.cont
 Substitution2: "'ss01' Cartouche Lines-1" meli1Tok.cart
@@ -29678,7 +29193,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1832 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: meli1Tok.cont
@@ -29692,7 +29206,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1832 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: meli1Tok_joinStackTok
@@ -29731,7 +29244,6 @@ SplineSet
  366 308 426 368 500 368 c 0
  574 368 634 308 634 234 c 0
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" meli1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" meli1Tok joinStackTok
 EndChar
@@ -29746,7 +29258,6 @@ CounterMasks: 1 1c
 LayerCount: 3
 Fore
 Refer: 1832 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" meli1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" meli1Tok joinScaleTok
 EndChar
@@ -29761,7 +29272,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1835 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok meli1Tok
 EndChar
 
@@ -29775,7 +29285,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1835 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok meli1Tok
 EndChar
 
@@ -29784,8 +29293,6 @@ Encoding: 1839 -1 1839
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: mije1Tok
@@ -29820,7 +29327,6 @@ SplineSet
  508 342 441 409 358 409 c 0xaa
  275 409 208 342 208 259 c 0
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" mijeTok var1Tok
 Substitution2: "'ss02' Container Lines-1" mije1Tok.cont
 Substitution2: "'ss01' Cartouche Lines-1" mije1Tok.cart
@@ -29836,7 +29342,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1840 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: mije1Tok.cont
@@ -29849,7 +29354,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1840 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: mije1Tok_joinStackTok
@@ -29879,67 +29383,12 @@ SplineSet
  609 143 593 160 593 181 c 2
  593 190 l 1
  549 146 l 1xc9
-  Spiro
-    549 146 v
-    559.251 124.06 o
-    565.745 100.272 o
-    568 75 o
-    548.519 2.87838 o
-    497.122 -48.5187 o
-    425 -68 o
-    352.878 -48.5187 o
-    301.481 2.87838 o
-    282 75 o
-    301.481 147.122 o
-    352.878 198.519 o
-    425 218 o
-    450.272 215.745 o
-    474.06 209.251 o
-    496 199 v
-    540 243 v
-    531 243 ]
-    511.832 247.916 o
-    498.175 261.091 o
-    493 280 o
-    498.175 299.168 o
-    511.832 312.825 o
-    531 318 [
-    630 318 ]
-    649.168 312.825 o
-    662.825 299.168 o
-    668 280 [
-    668 181 ]
-    662.825 161.832 o
-    649.168 148.175 o
-    630 143 o
-    611.091 148.175 o
-    597.916 161.832 o
-    593 181 [
-    593 190 v
-    0 0 z
-  EndSpiro
 358 75 m 0
  358 38 388 8 425 8 c 0
  462 8 493 38 493 75 c 0
  493 112 462 143 425 143 c 0xaa
  388 143 358 112 358 75 c 0
-  Spiro
-    358 75 o
-    367.131 41.215 o
-    391.215 17.1307 o
-    425 8 o
-    459.044 17.1307 o
-    483.61 41.215 o
-    493 75 o
-    483.61 109.044 o
-    459.044 133.61 o
-    425 143 o
-    391.215 133.61 o
-    367.131 109.044 o
-    0 0 z
-  EndSpiro
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" mije1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" mije1Tok joinStackTok
 EndChar
@@ -29953,7 +29402,6 @@ VStem: 108 100<182.917 335.083> 508 100<182.917 336.648> 508 289<606.438 688.604
 LayerCount: 3
 Fore
 Refer: 1840 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" mije1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" mije1Tok joinScaleTok
 EndChar
@@ -29968,7 +29416,6 @@ VStem: 282 76<525.614 624.659> 493 75<527.814 624.208> 493 175<746.552 814.255> 
 LayerCount: 3
 Fore
 Refer: 1843 -1 N 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok mije1Tok
 EndChar
 
@@ -29982,7 +29429,6 @@ VStem: 282 76<275.614 374.659> 493 75<277.814 374.208> 493 175<496.552 564.255> 
 LayerCount: 3
 Fore
 Refer: 1843 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mije1Tok
 EndChar
 
@@ -29991,8 +29437,6 @@ Encoding: 1847 -1 1847
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: olin1Tok
@@ -30054,7 +29498,6 @@ SplineSet
  707 758 l 2
  716 774 733 783 750 783 c 0
 EndSplineSet
-Validated: 1
 LCarets2: 1 0
 Ligature2: "'liga' Alternatives-1" olinTok var1Tok
 Substitution2: "'ss02' Container Lines-1" olin1Tok.cont
@@ -30072,7 +29515,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1848 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: olin1Tok.cont
@@ -30086,7 +29528,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 N 1 0 0 1 1000 0 2
 Refer: 1848 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: olin1Tok_joinStackTok
@@ -30147,7 +29588,6 @@ SplineSet
  372 292 l 2
  370 297 369 301 369 306 c 0
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" olin1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" olin1Tok joinStackTok
 EndChar
@@ -30162,7 +29602,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1848 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" olin1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" olin1Tok joinScaleTok
 EndChar
@@ -30176,7 +29615,6 @@ VStem: 334 74<588.524 656.885> 463 75<773.745 864.255> 591 75<588.524 656.885>
 LayerCount: 3
 Fore
 Refer: 1851 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok olin1Tok
 EndChar
 
@@ -30190,7 +29628,6 @@ VStem: 334 74<338.524 406.885> 463 75<523.745 614.255> 591 75<338.524 406.885>
 LayerCount: 3
 Fore
 Refer: 1851 -1 N 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok olin1Tok
 EndChar
 
@@ -30199,8 +29636,6 @@ Encoding: 1855 -1 1855
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: sewi1Tok
@@ -30232,7 +29667,6 @@ SplineSet
  425 641 459 675 500 675 c 0
  541 675 575 641 575 600 c 0
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" sewiTok var1Tok
 Substitution2: "'ss02' Container Lines-1" sewi1Tok.cont
 Substitution2: "'ss01' Cartouche Lines-1" sewi1Tok.cart
@@ -30249,7 +29683,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1856 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: sewi1Tok.cont
@@ -30263,7 +29696,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1856 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: sewi1Tok_joinStackTok
@@ -30296,7 +29728,6 @@ SplineSet
  450 327 472 349 500 349 c 4
  528 349 550 327 550 299 c 4
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" sewi1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" sewi1Tok joinStackTok
 EndChar
@@ -30311,7 +29742,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1856 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" sewi1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" sewi1Tok joinScaleTok
 EndChar
@@ -30326,7 +29756,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1859 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok sewi1Tok
 EndChar
 
@@ -30340,7 +29769,6 @@ CounterMasks: 1 38
 LayerCount: 3
 Fore
 Refer: 1859 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok sewi1Tok
 EndChar
 
@@ -30349,8 +29777,6 @@ Encoding: 1863 -1 1863
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: uta1Tok
@@ -30373,7 +29799,6 @@ SplineSet
  676 250 822 380 846 550 c 1
  154 550 l 1
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" utaTok var1Tok
 Substitution2: "'ss02' Container Lines-1" uta1Tok.cont
 Substitution2: "'ss01' Cartouche Lines-1" uta1Tok.cart
@@ -30388,7 +29813,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1864 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: uta1Tok.cont
@@ -30400,7 +29824,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1864 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: uta1Tok_joinStackTok
@@ -30423,7 +29846,6 @@ SplineSet
  577 87 641 140 658 212 c 1
  342 212 l 1
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" uta1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" uta1Tok joinStackTok
 EndChar
@@ -30436,7 +29858,6 @@ HStem: 150 100<384.879 615.121> 550 100<154 846>
 LayerCount: 3
 Fore
 Refer: 1864 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" uta1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" uta1Tok joinScaleTok
 EndChar
@@ -30450,7 +29871,6 @@ VStem: 450 100<448.438 531.562>
 LayerCount: 3
 Fore
 Refer: 1134 -1 N 1 0 0 1 0 0 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok uta1Tok
 EndChar
 
@@ -30462,7 +29882,6 @@ HStem: 262 75<419.499 580.501> 462 75<342 658>
 LayerCount: 3
 Fore
 Refer: 1867 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok uta1Tok
 EndChar
 
@@ -30471,8 +29890,6 @@ Encoding: 1871 -1 1871
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: wile1Tok
@@ -30522,7 +29939,6 @@ SplineSet
  168 331 150 285 150 250 c 0
  150 167 217 100 300 100 c 0
 EndSplineSet
-Validated: 1
 LCarets2: 1 0
 Ligature2: "'liga' Alternatives-1" wileTok var1Tok
 Substitution2: "'ss02' Container Lines-1" wile1Tok.cont
@@ -30539,7 +29955,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1872 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: wile1Tok.cont
@@ -30552,7 +29967,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1872 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: wile1Tok_joinStackTok
@@ -30587,7 +30001,6 @@ SplineSet
  743 -4 681 -67 603 -67 c 0
  559 -67 523 -45 500 -21 c 1
 EndSplineSet
-Validated: 1
 LCarets2: 1 0
 MultipleSubs2: "'ccmp' Step 2-1" wile1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" wile1Tok joinStackTok
@@ -30602,7 +30015,6 @@ VStem: 50 100<173.917 328.48> 850 100<173.917 328.48>
 LayerCount: 3
 Fore
 Refer: 1872 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" wile1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" wile1Tok joinScaleTok
 EndChar
@@ -30616,7 +30028,6 @@ VStem: 256 76<525.659 631.76> 668 75<525.659 630.327>
 LayerCount: 3
 Fore
 Refer: 1875 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok wile1Tok
 EndChar
 
@@ -30629,7 +30040,6 @@ VStem: 256 76<275.659 381.76> 668 75<275.659 380.327>
 LayerCount: 3
 Fore
 Refer: 1875 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok wile1Tok
 EndChar
 
@@ -30638,8 +30048,6 @@ Encoding: 1879 -1 1879
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: namako1Tok
@@ -30680,7 +30088,6 @@ SplineSet
  100 350 l 2
  72 350 50 372 50 400 c 0
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" namakoTok var1Tok
 Substitution2: "'ss02' Container Lines-1" namako1Tok.cont
 Substitution2: "'ss01' Cartouche Lines-1" namako1Tok.cart
@@ -30697,7 +30104,6 @@ LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1880 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: namako1Tok.cont
@@ -30710,7 +30116,6 @@ LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1880 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: namako1Tok_joinStackTok
@@ -30751,7 +30156,6 @@ SplineSet
  320 112 l 2
  299 112 282 129 282 150 c 0
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" namako1Tok_joinStackTok joinStackTok
 Ligature2: "'liga' Step 1-1" namako1Tok joinStackTok
 EndChar
@@ -30765,7 +30169,6 @@ VStem: 450 100<-41.5625 291.562 508.438 841.562>
 LayerCount: 3
 Fore
 Refer: 1880 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" namako1Tok_joinScaleTok joinScaleTok
 Ligature2: "'liga' Step 1-1" namako1Tok joinScaleTok
 EndChar
@@ -30779,7 +30182,6 @@ VStem: 462 76<435.745 616.255 683.745 864.255>
 LayerCount: 3
 Fore
 Refer: 1883 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok namako1Tok
 EndChar
 
@@ -30792,7 +30194,6 @@ VStem: 462 76<185.745 366.255 433.745 614.255>
 LayerCount: 3
 Fore
 Refer: 1883 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok namako1Tok
 EndChar
 
@@ -30801,8 +30202,6 @@ Encoding: 1887 -1 1887
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: mu1Tok
@@ -30842,7 +30241,6 @@ SplineSet
  84 174 l 6
  65 182 53 201 53 220 c 4
 EndSplineSet
-Validated: 1
 Ligature2: "'liga' Alternatives-1" muTok var1Tok
 Substitution2: "'ss01' Cartouche Lines-1" mu1Tok.cart
 Substitution2: "'ss02' Container Lines-1" mu1Tok.cont
@@ -30853,26 +30251,24 @@ Encoding: 1889 -1 1889
 Width: 1000
 VWidth: 0
 Flags: W
-HStem: -200 100<-41.56 1041.56> 350 100<99.7012 366.562> 900 100<-41.56 1041.56>
+HStem: -200 100<-41.5625 1041.56> 350 100<99.7012 366.562> 900 100<-41.5625 1041.56>
 VStem: 91 284<359.117 440.883>
 CounterMasks: 1 e0
 LayerCount: 3
 Fore
 Refer: 144 989586 S 1 0 0 1 1000 0 2
 Refer: 1888 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: mu1Tok.cont
 Encoding: 1890 -1 1890
 Width: 1000
-HStem: -200 100<-41.56 1041.56> 350 100<99.7012 366.562>
+HStem: -200 100<-41.5625 1041.56> 350 100<99.7012 366.562>
 VStem: 91 284<359.117 440.883>
 LayerCount: 3
 Fore
 Refer: 151 989593 S 1 0 0 1 1000 0 2
 Refer: 1888 -1 N 1 0 0 1 0 0 2
-Validated: 1
 EndChar
 
 StartChar: mu1Tok_joinStackTok
@@ -30880,38 +30276,37 @@ Encoding: 1891 -1 1891
 Width: 1000
 VWidth: 0
 Flags: W
-HStem: 112.5 75<125.134 331.482>
-VStem: 121.75 213<116.149 183.851>
+HStem: 112 75<125.723 331.255>
+VStem: 122 213<115.745 183.448>
 LayerCount: 3
 Fore
 SplineSet
-334.75 150 m 4
- 334.75 129 318.25 112.5 297.25 112.5 c 6
- 159.25 112.5 l 6
- 139 112.5 121.75 129 121.75 150 c 4
- 121.75 171 139 187.5 159.25 187.5 c 6
- 297.25 187.5 l 6
- 318.25 187.5 334.75 171 334.75 150 c 4
-258.25 375 m 4
- 277 375 295.75 360 295.75 337.5 c 4
- 295.75 323.25 286.75 309 272.5 303 c 6
- 145 250.5 l 6
- 140.5 248.25 136 247.5 130.75 247.5 c 4
- 112 247.5 93.25 262.5 93.25 285 c 4
- 93.25 299.25 102.25 313.5 116.5 319.5 c 6
+335 150 m 4
+ 335 129 318 112 297 112 c 6
+ 159 112 l 6
+ 139 112 122 129 122 150 c 4
+ 122 171 139 187 159 187 c 6
+ 297 187 l 6
+ 318 187 335 171 335 150 c 4
+258 375 m 4
+ 277 375 296 360 296 338 c 4
+ 296 324 286 309 272 303 c 6
+ 145 250 l 6
+ 141 248 136 248 131 248 c 4
+ 112 248 93 263 93 285 c 4
+ 93 299 102 314 116 320 c 6
  244 372 l 6
- 248.5 374.25 253 375 258.25 375 c 4
-93.25 15 m 4
- 93.25 37.5 112 52.5 130.75 52.5 c 4
- 136 52.5 140.5 51.75 145 49.5 c 6
- 272.5 -3 l 6
- 286.75 -9 295.75 -23.25 295.75 -37.5 c 4
- 295.75 -60 277 -75 258.25 -75 c 4
- 253 -75 248.5 -74.25 244 -72 c 6
- 116.5 -19.5 l 6
- 102.25 -13.5 93.25 0.75 93.25 15 c 4
+ 248 374 253 375 258 375 c 4
+93 15 m 4
+ 93 37 112 52 131 52 c 4
+ 136 52 141 52 145 50 c 6
+ 272 -3 l 6
+ 286 -9 296 -24 296 -38 c 4
+ 296 -60 277 -75 258 -75 c 4
+ 253 -75 248 -74 244 -72 c 6
+ 116 -20 l 6
+ 102 -14 93 1 93 15 c 4
 EndSplineSet
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" mu1Tok joinStackTok
 Ligature2: "'liga' Step 1-1" mu1Tok joinStackTok
 EndChar
@@ -30924,7 +30319,6 @@ VStem: 91 284<359.117 440.883>
 LayerCount: 3
 Fore
 Refer: 1888 -1 N 1 0 0 1 0 0 2
-Validated: 1
 MultipleSubs2: "'ccmp' Step 2-1" mu1Tok joinScaleTok
 Ligature2: "'liga' Step 1-1" mu1Tok joinScaleTok
 EndChar
@@ -30932,24 +30326,22 @@ EndChar
 StartChar: joinStackTok_mu1Tok
 Encoding: 1893 -1 1893
 Width: 1000
-HStem: 612.5 75<125.134 331.482>
-VStem: 121.75 213<616.149 683.851>
+HStem: 612 75<125.723 331.255>
+VStem: 122 213<615.745 683.448>
 LayerCount: 3
 Fore
 Refer: 1891 -1 S 1 0 0 1 0 500 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinStackTok mu1Tok
 EndChar
 
 StartChar: joinScaleTok_mu1Tok
 Encoding: 1894 -1 1894
 Width: 1000
-HStem: 362.5 75<125.134 331.482>
-VStem: 121.75 213<366.149 433.851>
+HStem: 362 75<125.723 331.255>
+VStem: 122 213<365.745 433.448>
 LayerCount: 3
 Fore
 Refer: 1891 -1 S 1 0 0 1 0 250 2
-Validated: 1
 Ligature2: "'liga' Step 3-1" joinScaleTok mu1Tok
 EndChar
 
@@ -30958,8 +30350,6 @@ Encoding: 1895 -1 1895
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1896
@@ -30967,8 +30357,6 @@ Encoding: 1896 -1 1896
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1897
@@ -30976,8 +30364,6 @@ Encoding: 1897 -1 1897
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1898
@@ -30985,8 +30371,6 @@ Encoding: 1898 -1 1898
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1899
@@ -30994,8 +30378,6 @@ Encoding: 1899 -1 1899
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1900
@@ -31003,8 +30385,6 @@ Encoding: 1900 -1 1900
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1901
@@ -31012,8 +30392,6 @@ Encoding: 1901 -1 1901
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1902
@@ -31021,8 +30399,6 @@ Encoding: 1902 -1 1902
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
 EndChar
 
 StartChar: NameMe.1903
@@ -31030,3446 +30406,6 @@ Encoding: 1903 -1 1903
 Width: 1000
 Flags: W
 LayerCount: 3
-Fore
-Validated: 1
-EndChar
-
-StartChar: uni0000
-Encoding: 143 -1 1904
-Width: 1000
-Flags: W
-HStem: -1 42<263.067 736.933> 751 42<263.067 736.933>
-VStem: 207.5 41<54.6315 737.369> 750.5 42<54.567 737.433>
-LayerCount: 3
-Fore
-SplineSet
-305.5 793 m 2
- 694.5 793 l 2
- 748.5 793 792.5 749 792.5 695 c 2
- 792.5 97 l 2
- 792.5 43 748.5 -1 694.5 -1 c 2
- 305.5 -1 l 2
- 251.5 -1 207.5 43 207.5 97 c 2
- 207.5 695 l 2
- 207.5 749 251.5 793 305.5 793 c 2
-694.5 751 m 2
- 305.5 751 l 2
- 274.5 751 248.5 726 248.5 695 c 2
- 248.5 97 l 2
- 248.5 66 274.5 41 305.5 41 c 2
- 694.5 41 l 2
- 725.5 41 750.5 66 750.5 97 c 2
- 750.5 695 l 2
- 750.5 726 725.5 751 694.5 751 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: exclam
-Encoding: 1904 33 1905
-Width: 1000
-Flags: W
-HStem: -32 62<486.272 513.728> 58 62<486.272 513.728>
-VStem: 424 62<30.2721 57.7279> 456 89<184.44 787.56> 514 62<30.2721 57.7279>
-LayerCount: 3
-Fore
-SplineSet
-500 794 m 0xd0
- 525 794 545 774 545 750 c 2
- 545 222 l 2
- 545 198 525 178 500 178 c 0
- 475 178 456 198 456 222 c 2
- 456 750 l 2
- 456 774 475 794 500 794 c 0xd0
-500 120 m 0
- 542 120 576 86 576 44 c 0
- 576 2 542 -32 500 -32 c 0
- 458 -32 424 2 424 44 c 0xe8
- 424 86 458 120 500 120 c 0
-500 58 m 0
- 492 58 486 52 486 44 c 0
- 486 36 492 30 500 30 c 0
- 508 30 514 36 514 44 c 0
- 514 52 508 58 500 58 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: quotedbl
-Encoding: 1905 34 1906
-Width: 1000
-Flags: W
-HStem: 549 244<386.207 462.519 537.207 613.519>
-VStem: 380 89<555.44 786.56> 531 89<555.44 786.56>
-LayerCount: 3
-Fore
-SplineSet
-424 793 m 0
- 449 793 469 773 469 749 c 2
- 469 593 l 2
- 469 569 449 549 424 549 c 0
- 399 549 380 569 380 593 c 2
- 380 749 l 2
- 380 773 399 793 424 793 c 0
-575 793 m 0
- 600 793 620 773 620 749 c 2
- 620 593 l 2
- 620 569 600 549 575 549 c 0
- 550 549 531 569 531 593 c 2
- 531 749 l 2
- 531 773 550 793 575 793 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: numbersign
-Encoding: 1906 35 1907
-Width: 1000
-Flags: W
-HStem: -1 21G<386.5 411.5 588.5 613.5> 162 88<197.895 352.277 444.83 555.17 646.83 802.105> 360 88<197.895 352.277 444.83 555.17 646.83 802.105>
-VStem: 354 89<5.43994 160.17 251.83 358.17 449.83 604.56> 557 88<4.89471 160.17 251.83 358.17 449.83 605.105>
-LayerCount: 3
-Fore
-SplineSet
-399 611 m 0
- 424 611 443 591 443 567 c 2
- 443 478 l 2
- 443 464 459 448 473 448 c 2
- 527 448 l 2
- 541 448 557 464 557 478 c 2
- 557 567 l 2
- 557 591 576 611 601 611 c 0
- 626 611 645 591 645 567 c 2
- 645 478 l 2
- 645 464 661 448 675 448 c 2
- 764 448 l 2
- 788 448 808 429 808 404 c 0
- 808 379 788 360 764 360 c 2
- 675 360 l 2
- 661 360 645 344 645 330 c 2
- 645 280 l 2
- 645 266 661 250 675 250 c 2
- 764 250 l 2
- 788 250 808 231 808 206 c 0
- 808 181 788 162 764 162 c 2
- 675 162 l 2
- 661 162 645 146 645 132 c 2
- 645 43 l 2
- 645 19 626 -1 601 -1 c 0
- 576 -1 557 19 557 43 c 2
- 557 132 l 2
- 557 146 541 162 527 162 c 2
- 473 162 l 2
- 459 162 443 146 443 132 c 2
- 443 43 l 2
- 443 19 424 -1 399 -1 c 0
- 374 -1 354 19 354 43 c 2
- 354 132 l 2
- 354 146 339 162 325 162 c 2
- 236 162 l 2
- 212 162 192 181 192 206 c 0
- 192 231 212 250 236 250 c 2
- 325 250 l 2
- 339 250 354 266 354 280 c 2
- 354 330 l 2
- 354 344 339 360 325 360 c 2
- 236 360 l 2
- 212 360 192 379 192 404 c 0
- 192 429 212 448 236 448 c 2
- 325 448 l 2
- 339 448 354 464 354 478 c 2
- 354 567 l 2
- 354 591 374 611 399 611 c 0
-473 360 m 2
- 459 360 443 344 443 330 c 2
- 443 280 l 2
- 443 266 459 250 473 250 c 2
- 527 250 l 2
- 541 250 557 266 557 280 c 2
- 557 330 l 2
- 557 344 541 360 527 360 c 2
- 473 360 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: dollar
-Encoding: 1907 36 1908
-Width: 1000
-Flags: W
-HStem: -1 89<480.5 522.5> 709 89<480.5 522.5>
-VStem: 251.5 89<539.296 667.204> 271.5 89<139.406 243.56> 392.5 88<-42.1053 -1 125 359 512 694 798 840.105> 522.5 88<-42.1053 -1 105 283 437 669 798 840.105> 640.5 88<552.895 657.655> 659.5 89<130.668 257.655>
-LayerCount: 3
-Fore
-SplineSet
-436.5 846 m 0xec
- 461.5 846 480.5 826 480.5 802 c 2
- 480.5 798 l 1
- 522.5 798 l 1
- 522.5 802 l 2
- 522.5 826 541.5 846 566.5 846 c 0
- 591.5 846 610.5 826 610.5 802 c 2
- 610.5 779 l 1
- 679.5 747 728.5 677 728.5 597 c 2
- 728.5 591 l 2
- 728.5 567 709.5 547 684.5 547 c 0
- 659.5 547 640.5 567 640.5 591 c 0xee
- 640.5 621 628.5 648 610.5 669 c 1
- 610.5 386 l 1
- 653.5 361 l 1
- 709.5 327 748.5 266 748.5 194 c 0
- 748.5 106 690.5 30 610.5 7 c 1
- 610.5 -4 l 2
- 610.5 -28 591.5 -48 566.5 -48 c 0
- 541.5 -48 522.5 -28 522.5 -4 c 2
- 522.5 -1 l 1
- 480.5 -1 l 1
- 480.5 -4 l 2
- 480.5 -28 461.5 -48 436.5 -48 c 0
- 411.5 -48 392.5 -28 392.5 -4 c 2
- 392.5 17 l 1
- 347.5 37 271.5 92 271.5 206 c 0
- 271.5 230 290.5 250 315.5 250 c 0
- 340.5 250 360.5 230 360.5 206 c 0xdd
- 360.5 175 372.5 146 392.5 125 c 1
- 392.5 410 l 1
- 346.5 436 l 1
- 290.5 470 251.5 531 251.5 603 c 0
- 251.5 692 311.5 769 392.5 791 c 1
- 392.5 802 l 2
- 392.5 826 411.5 846 436.5 846 c 0xec
-522.5 709 m 1
- 480.5 709 l 1
- 480.5 461 l 1
- 522.5 437 l 1
- 522.5 709 l 1
-392.5 694 m 1
- 361.5 676 340.5 642 340.5 603 c 0
- 340.5 584 345.5 542 392.5 512 c 1
- 392.5 694 l 1
-480.5 359 m 1
- 480.5 88 l 1
- 494.5 88 508.5 88 522.5 88 c 1
- 522.5 335 l 1
- 480.5 359 l 1
-610.5 283 m 1
- 610.5 105 l 1
- 639.5 124 659.5 157 659.5 194 c 0xcd
- 659.5 210 655.5 254 610.5 283 c 1
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: percent
-Encoding: 1908 37 1909
-Width: 1000
-Flags: W
-HStem: -2 89<617.032 712.241> 219 88<617.032 712.241> 487 88<288.032 382.968> 707 89<288.032 382.968>
-VStem: 180.5 89<593.578 688.468> 401.5 89<593.578 688.468> 509.5 89<105.532 200.422> 731.5 88<106.075 199.879>
-LayerCount: 3
-Fore
-SplineSet
-335.5 796 m 0
- 421.5 796 490.5 727 490.5 641 c 0
- 490.5 555 421.5 487 335.5 487 c 0
- 249.5 487 180.5 555 180.5 641 c 0
- 180.5 727 249.5 796 335.5 796 c 0
-295.5 -2 m 0
- 269.5 -2 250.5 19 250.5 41 c 0
- 250.5 49 252.5 57 256.5 64 c 2
- 666.5 774 l 2
- 675.5 790 689.5 797 702.5 797 c 0
- 726.5 797 749.5 776 749.5 751 c 0
- 749.5 744 747.5 737 743.5 730 c 2
- 333.5 19 l 2
- 325.5 5 310.5 -2 295.5 -2 c 0
-335.5 707 m 0
- 299.5 707 269.5 677 269.5 641 c 0
- 269.5 605 299.5 575 335.5 575 c 0
- 371.5 575 401.5 605 401.5 641 c 0
- 401.5 677 371.5 707 335.5 707 c 0
-664.5 307 m 0
- 750.5 307 819.5 239 819.5 153 c 0
- 819.5 67 750.5 -2 664.5 -2 c 0
- 578.5 -2 509.5 67 509.5 153 c 0
- 509.5 239 578.5 307 664.5 307 c 0
-664.5 219 m 0
- 628.5 219 598.5 189 598.5 153 c 0
- 598.5 117 628.5 87 664.5 87 c 0
- 700.5 87 731.5 117 731.5 153 c 0
- 731.5 189 700.5 219 664.5 219 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: ampersand
-Encoding: 1909 38 1910
-Width: 1000
-Flags: W
-HStem: -3 88<406.842 552.248> 709 88<396.497 518.311>
-VStem: 254.5 89<149.195 295.157> 269.5 88<548.926 670.003> 556.5 89<547.693 670.003>
-LayerCount: 3
-Fore
-SplineSet
-745.5 41 m 0xd8
- 745.5 18 725.5 -3 700.5 -3 c 0
- 687.5 -3 674.5 3 665.5 14 c 2
- 633.5 57 l 1
- 593.5 19 538.5 -3 479.5 -3 c 0
- 355.5 -3 254.5 98 254.5 222 c 0
- 254.5 291 286.5 358 343.5 401 c 2xe8
- 365.5 418 l 1
- 307.5 495 l 2
- 283.5 526 269.5 567 269.5 609 c 0
- 269.5 713 353.5 797 457.5 797 c 0
- 561.5 797 645.5 713 645.5 609 c 0
- 645.5 586 641.5 512 567.5 457 c 2
- 489.5 399 l 1
- 615.5 230 l 1
- 613.5 264 599.5 295 576.5 318 c 0
- 568.5 327 563.5 338 563.5 349 c 0
- 563.5 373 584.5 393 608.5 393 c 0
- 619.5 393 630.5 389 638.5 381 c 0
- 679.5 340 704.5 284 704.5 222 c 0
- 704.5 191 697.5 161 686.5 134 c 1
- 736.5 67 l 2
- 742.5 59 745.5 50 745.5 41 c 0xd8
-457.5 709 m 0
- 402.5 709 357.5 664 357.5 609 c 0xd8
- 357.5 603 357.5 581 376.5 552 c 1
- 436.5 470 l 1
- 514.5 528 l 2
- 542.5 550 556.5 577 556.5 609 c 0
- 556.5 664 512.5 709 457.5 709 c 0
-418.5 346 m 1
- 399.5 332 l 2
- 363.5 306 343.5 266 343.5 222 c 0xe8
- 343.5 147 404.5 85 479.5 85 c 0
- 519.5 85 554.5 102 579.5 129 c 1
- 418.5 346 l 1
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: quotesingle
-Encoding: 1910 39 1911
-Width: 1000
-Flags: W
-HStem: 551 244<461.707 538.019>
-VStem: 455.5 89<557.44 788.56>
-LayerCount: 3
-Fore
-SplineSet
-544.5 595 m 2
- 544.5 571 524.5 551 499.5 551 c 0
- 474.5 551 455.5 571 455.5 595 c 2
- 455.5 751 l 2
- 455.5 775 474.5 795 499.5 795 c 0
- 524.5 795 544.5 775 544.5 751 c 2
- 544.5 595 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: parenleft
-Encoding: 1911 40 1912
-Width: 1000
-Flags: W
-VStem: 379.5 89<145.337 635.663>
-LayerCount: 3
-Fore
-SplineSet
-576.5 872 m 0
- 594.5 872 620.5 858 620.5 829 c 0
- 620.5 812 610.5 797 594.5 787 c 0
- 515.5 737 468.5 620 468.5 501 c 2
- 468.5 280 l 2
- 468.5 161 515.5 44 594.5 -6 c 0
- 613.5 -18 620.5 -33 620.5 -48 c 0
- 620.5 -71 602.5 -91 577.5 -91 c 0
- 536.5 -91 379.5 34 379.5 280 c 2
- 379.5 501 l 2
- 379.5 648 442.5 801 560.5 869 c 0
- 563.5 871 569.5 872 576.5 872 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: parenright
-Encoding: 1912 41 1913
-Width: 1000
-Flags: W
-VStem: 531.5 89<146.265 635.663>
-LayerCount: 3
-Fore
-SplineSet
-379.5 829 m 0
- 379.5 858 406.5 872 424.5 872 c 0
- 431.5 872 437.5 871 440.5 869 c 0
- 558.5 801 620.5 648 620.5 501 c 2
- 620.5 280 l 2
- 620.5 37 465.5 -91 423.5 -91 c 0
- 398.5 -91 379.5 -71 379.5 -48 c 0
- 379.5 -33 387.5 -18 405.5 -6 c 0
- 484.5 44 531.5 161 531.5 280 c 2
- 531.5 501 l 2
- 531.5 620 484.5 737 405.5 787 c 0
- 389.5 797 379.5 812 379.5 829 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: asterisk
-Encoding: 1913 42 1914
-Width: 1000
-Flags: W
-HStem: 390 88<346.642 422.105 578.053 653.242> 505 88<299.44 456 545 700.56> 621 88<347.207 422.793 577.895 654.105>
-VStem: 341 87<396.207 471.793 626.895 703.105> 456 89<348.44 505 593 749.56> 571 89<396.167 470.56 627.053 702.242>
-LayerCount: 3
-Fore
-SplineSet
-501 756 m 0
- 526 756 545 736 545 712 c 2
- 545 608 l 2
- 545 601 552 593 559 593 c 2
- 663 593 l 2
- 687 593 707 575 707 550 c 0
- 707 525 687 505 663 505 c 2
- 559 505 l 2
- 552 505 545 497 545 490 c 2
- 545 386 l 2
- 545 362 526 342 501 342 c 0
- 476 342 456 362 456 386 c 2
- 456 490 l 2
- 456 497 448 505 441 505 c 2
- 337 505 l 2
- 313 505 293 525 293 550 c 0
- 293 575 313 593 337 593 c 2
- 441 593 l 2
- 448 593 456 601 456 608 c 2
- 456 712 l 2
- 456 736 476 756 501 756 c 0
-385 709 m 0
- 410 709 429 689 429 665 c 0
- 429 641 410 621 385 621 c 0
- 360 621 341 641 341 665 c 0
- 341 689 360 709 385 709 c 0
-616 709 m 0
- 640 709 660 690 660 665 c 0
- 660 640 640 620 616 620 c 0
- 592 620 572 640 572 665 c 0
- 572 690 592 709 616 709 c 0
-384 478 m 0
- 408 478 428 459 428 434 c 0
- 428 409 408 390 384 390 c 0
- 360 390 341 409 341 434 c 0
- 341 459 360 478 384 478 c 0
-616 477 m 0
- 641 477 660 457 660 433 c 0
- 660 409 641 390 616 390 c 0
- 591 390 571 409 571 433 c 0
- 571 457 591 477 616 477 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: plus
-Encoding: 1914 43 1915
-Width: 1000
-Flags: W
-HStem: 245 88<299.44 456 545 700.56>
-VStem: 456 89<88.4399 245 333 489.56>
-LayerCount: 3
-Fore
-SplineSet
-501 496 m 0
- 526 496 545 476 545 452 c 2
- 545 348 l 2
- 545 341 552 333 559 333 c 2
- 663 333 l 2
- 687 333 707 315 707 290 c 0
- 707 265 687 245 663 245 c 2
- 559 245 l 2
- 552 245 545 237 545 230 c 2
- 545 126 l 2
- 545 102 526 82 501 82 c 0
- 476 82 456 102 456 126 c 2
- 456 230 l 2
- 456 237 448 245 441 245 c 2
- 337 245 l 2
- 313 245 293 265 293 290 c 0
- 293 315 313 333 337 333 c 2
- 441 333 l 2
- 448 333 456 341 456 348 c 2
- 456 452 l 2
- 456 476 476 496 501 496 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: comma
-Encoding: 1915 44 1916
-Width: 1000
-Flags: W
-HStem: -107 141<432 526.871> -107 93<408.781 467.696> 62 62<509.272 535.288>
-VStem: 447 62<34.1422 61.7279> 536 63<35.014 61.7279>
-LayerCount: 3
-Fore
-SplineSet
-444 -107 m 0xb8
- 420 -106 401 -86 401 -62 c 0
- 401 -14 449 -21 467 -14 c 0x78
- 469 -13 470 -12 470 -11 c 0
- 470 -4 447 13 447 48 c 0
- 447 90 481 124 523 124 c 0
- 565 124 599 90 599 48 c 0
- 599 -38 530 -107 444 -107 c 0xb8
-523 62 m 0
- 515 62 509 56 509 48 c 0
- 509 40 515 34 523 34 c 0xb8
- 531 34 536 40 536 48 c 0
- 536 56 531 62 523 62 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: hyphen
-Encoding: 1916 45 1917
-Width: 1000
-Flags: W
-HStem: 245 88<299.44 700.56>
-LayerCount: 3
-Fore
-SplineSet
-707 290 m 0
- 707 265 687 245 663 245 c 2
- 337 245 l 2
- 313 245 293 265 293 290 c 0
- 293 315 313 333 337 333 c 2
- 663 333 l 2
- 687 333 707 315 707 290 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: period
-Encoding: 1917 46 1918
-Width: 1000
-Flags: W
-HStem: -28 62<486.272 513.728> 62 62<486.272 513.728>
-VStem: 424 62<34.2721 61.7279> 514 62<34.2721 61.7279>
-LayerCount: 3
-Fore
-SplineSet
-500 124 m 0
- 542 124 576 90 576 48 c 0
- 576 6 542 -28 500 -28 c 0
- 458 -28 424 6 424 48 c 0
- 424 90 458 124 500 124 c 0
-500 62 m 0
- 492 62 486 56 486 48 c 0
- 486 40 492 34 500 34 c 0
- 508 34 514 40 514 48 c 0
- 514 56 508 62 500 62 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: slash
-Encoding: 1918 47 1919
-Width: 1000
-Flags: W
-LayerCount: 3
-Fore
-SplineSet
-704.5 796 m 0
- 730.5 796 749.5 774 749.5 752 c 0
- 749.5 745 747.5 737 743.5 730 c 2
- 333.5 19 l 2
- 325.5 5 310.5 -2 295.5 -2 c 0
- 269.5 -2 250.5 20 250.5 42 c 0
- 250.5 50 252.5 57 256.5 64 c 2
- 666.5 774 l 2
- 674.5 788 689.5 796 704.5 796 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: zero
-Encoding: 1919 48 1920
-Width: 1000
-Flags: W
-HStem: -3 88<433.966 567.25> 707 88<432.943 567.25>
-VStem: 293 89<137.228 655.665> 618 89<137.734 654.266>
-LayerCount: 3
-Fore
-SplineSet
-500 795 m 0
- 614 795 707 702 707 588 c 2
- 707 204 l 2
- 707 90 614 -3 500 -3 c 0
- 386 -3 294 90 293 203 c 1
- 293 590 l 2
- 293 703 387 795 500 795 c 0
-500 707 m 0
- 435 707 382 654 382 589 c 2
- 382 204 l 2
- 382 139 435 85 500 85 c 0
- 565 85 618 138 618 203 c 2
- 618 589 l 2
- 618 654 565 707 500 707 c 0
-451 295 m 0
- 427 295 406 316 406 340 c 0
- 406 351 410 362 419 371 c 2
- 527 478 l 2
- 536 487 547 491 558 491 c 0
- 582 491 602 470 602 446 c 0
- 602 435 597 423 589 415 c 2
- 482 308 l 2
- 474 300 462 295 451 295 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: one
-Encoding: 1920 49 1921
-Width: 1000
-Flags: W
-HStem: -2 89<338.94 455.5 544.5 661.06>
-VStem: 333.5 89<567.249 683.745> 455.5 89<87 694>
-LayerCount: 3
-Fore
-SplineSet
-422.5 631 m 0
- 422.5 613 432.5 598 432.5 582 c 0
- 432.5 556 409.5 536 386.5 536 c 0
- 371.5 536 355.5 545 346.5 566 c 0
- 338.5 586 333.5 607 333.5 630 c 0
- 333.5 721 408.5 797 499.5 797 c 0
- 523.5 797 544.5 777 544.5 753 c 2
- 544.5 87 l 1
- 623.5 87 l 2
- 647.5 87 667.5 68 667.5 43 c 0
- 667.5 18 647.5 -2 623.5 -2 c 2
- 376.5 -2 l 2
- 352.5 -2 332.5 18 332.5 43 c 0
- 332.5 68 352.5 87 376.5 87 c 2
- 455.5 87 l 1
- 455.5 694 l 1
- 435.5 680 422.5 657 422.5 631 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: two
-Encoding: 1921 50 1922
-Width: 1000
-Flags: W
-HStem: -3 88<388.307 700.56> 709 89<432.75 567.25>
-VStem: 293 89<89.1098 163.287 565.015 657.266> 618 89<522.807 658.25>
-LayerCount: 3
-Fore
-SplineSet
-420 85 m 2
- 663 85 l 2
- 687 85 707 67 707 42 c 0
- 707 17 687 -3 663 -3 c 2
- 420 -3 l 2
- 350 -3 293 54 293 124 c 0
- 293 156 305 185 324 207 c 2
- 591 516 l 2
- 617 546 618 575 618 591 c 0
- 618 656 565 709 500 709 c 0
- 435 709 382 656 382 591 c 0
- 382 573 354 557 329 557 c 0
- 310 557 293 566 293 591 c 0
- 293 705 386 798 500 798 c 0
- 614 798 707 705 707 591 c 0
- 707 538 689 494 661 461 c 0
- 571 357 480 252 390 148 c 0
- 384 141 382 134 382 124 c 0
- 382 103 399 85 420 85 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: three
-Encoding: 1922 51 1923
-Width: 1000
-Flags: W
-HStem: -2 89<432.75 567.25> 708 89<432.75 567.25>
-VStem: 293 89<137.75 280.359 514.641 657.25> 525 89<361.543 434.496> 618 89<137.75 271.888 523.515 657.25>
-LayerCount: 3
-Fore
-SplineSet
-350 312 m 0
- 377 312 395 290 395 268 c 0
- 395 262 393 257 391 251 c 0
- 385 237 382 221 382 205 c 0
- 382 140 435 87 500 87 c 0
- 565 87 618 140 618 205 c 0
- 618 304 525 293 525 397 c 0
- 525 500 618 491 618 590 c 0
- 618 655 565 708 500 708 c 0
- 435 708 382 655 382 590 c 0
- 382 574 385 558 391 544 c 0
- 393 538 395 533 395 527 c 0
- 395 505 377 483 350 483 c 0
- 304 483 293 546 293 590 c 0
- 293 704 386 797 500 797 c 0
- 614 797 707 704 707 590 c 0
- 707 485 634 434 625 425 c 0
- 618 418 614 408 614 397 c 0
- 614 373 629 368 646 351 c 0
- 683 314 707 262 707 205 c 0
- 707 91 614 -2 500 -2 c 0
- 386 -2 293 91 293 205 c 0
- 293 249 304 312 350 312 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: four
-Encoding: 1923 52 1924
-Width: 1000
-Flags: W
-HStem: -1 21G<595 620> 324 89<372.261 563.5 651.5 730.06>
-VStem: 263.5 89<431.532 528.327> 563.5 88<4.89471 324 413 705.848>
-LayerCount: 3
-Fore
-SplineSet
-493.5 770 m 2
- 507.5 783 531.5 796 557.5 796 c 0
- 609.5 796 651.5 753 651.5 701 c 2
- 651.5 413 l 1
- 692.5 413 l 2
- 716.5 413 736.5 394 736.5 369 c 0
- 736.5 344 716.5 324 692.5 324 c 2
- 651.5 324 l 1
- 651.5 43 l 2
- 651.5 19 632.5 -1 607.5 -1 c 0
- 582.5 -1 563.5 19 563.5 43 c 2
- 563.5 324 l 1
- 418.5 324 l 2
- 332.5 324 263.5 393 263.5 479 c 0
- 263.5 523 282.5 562 309.5 589 c 2
- 493.5 770 l 2
-553.5 705 m 2
- 371.5 526 l 2
- 359.5 514 352.5 497 352.5 479 c 0
- 352.5 443 382.5 413 418.5 413 c 2
- 563.5 413 l 1
- 563.5 701 l 2
- 563.5 704 560.5 707 557.5 707 c 0
- 555.5 707 554.5 706 553.5 705 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: five
-Encoding: 1924 53 1925
-Width: 1000
-Flags: W
-HStem: 0 89<436.58 571.25> 326 88<385.309 569.217> 709 88<384.307 690.105>
-VStem: 289 89<419.98 702.627> 297 88<140.917 283.106> 622 89<139.75 273.241>
-LayerCount: 3
-Fore
-SplineSet
-354 315 m 0xec
- 381 315 398 293 398 271 c 0
- 398 265 397 260 395 254 c 0
- 389 240 385 223 385 207 c 0xec
- 385 142 439 89 504 89 c 0
- 569 89 622 142 622 207 c 0
- 622 272 568 326 503 326 c 2
- 416 326 l 2
- 349 326 289 378 289 444 c 2
- 289 671 l 2
- 289 741 346 797 416 797 c 2
- 652 797 l 2
- 676 797 696 778 696 753 c 0
- 696 728 676 709 652 709 c 2
- 416 709 l 2
- 395 709 378 690 378 669 c 2
- 378 454 l 2xf4
- 378 433 396 414 417 414 c 2
- 504 414 l 2
- 618 414 711 321 711 207 c 0
- 711 93 618 0 504 0 c 0
- 390 0 297 93 297 207 c 0
- 297 250 308 315 354 315 c 0xec
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: six
-Encoding: 1925 54 1926
-Width: 1000
-Flags: W
-HStem: -2 89<432.75 567.637> 323 89<432.217 565.744> 708 89<433.33 567.548>
-VStem: 293 89<138.734 271.779 375 658.12> 618 89<138.702 272.734 552.44 655.395>
-LayerCount: 3
-Fore
-SplineSet
-500 412 m 0
- 624 412 707 307 707 208 c 0
- 707 92 616 -2 500 -2 c 0
- 386 -2 293 91 293 205 c 2
- 293 599 l 2
- 293 709 389 797 500 797 c 0
- 593 797 705 729 707 590 c 0
- 707 566 688 546 663 546 c 0
- 638 546 618 566 618 590 c 0
- 618 655 565 708 500 708 c 0
- 435 708 382 655 382 590 c 0
- 382 518 382 447 382 375 c 1
- 417 398 455 412 500 412 c 0
-618 205 m 0
- 618 269 566 323 500 323 c 0
- 437 323 382 272 382 205 c 0
- 382 140 435 87 500 87 c 0
- 565 87 618 140 618 205 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: seven
-Encoding: 1926 55 1927
-Width: 1000
-Flags: W
-HStem: 386 89<433.94 477.5 631.5 671.06> 708 89<256.94 659.348>
-VStem: 321.5 88<3.89471 129.531> 427.5 250<392.481 468.793>
-LayerCount: 3
-Fore
-SplineSet
-294.5 797 m 2
- 654.5 797 l 2
- 706.5 797 749.5 754 749.5 702 c 0
- 749.5 684 743.5 667 734.5 653 c 2
- 631.5 475 l 1
- 633.5 475 l 2
- 657.5 475 677.5 456 677.5 431 c 0
- 677.5 406 657.5 386 633.5 386 c 2
- 579.5 386 l 1
- 415.5 103 l 2
- 412.5 98 409.5 92 409.5 84 c 2
- 409.5 42 l 2
- 409.5 18 390.5 -2 365.5 -2 c 0
- 340.5 -2 321.5 18 321.5 42 c 2
- 321.5 84 l 2
- 321.5 106 326.5 126 336.5 144 c 2
- 477.5 386 l 1
- 471.5 386 l 2
- 447.5 386 427.5 406 427.5 431 c 0
- 427.5 456 447.5 475 471.5 475 c 2
- 528.5 475 l 1
- 659.5 699 l 2
- 659.5 700 660.5 701 660.5 702 c 0
- 660.5 705 658.5 708 655.5 708 c 2
- 294.5 708 l 2
- 270.5 708 250.5 728 250.5 753 c 0
- 250.5 778 270.5 797 294.5 797 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: eight
-Encoding: 1927 56 1928
-Width: 1000
-Flags: W
-HStem: -7 89<422.529 578.417> 353 89<420.614 580.386> 713 89<422.529 578.417>
-VStem: 263.5 89<149.359 287.849 507.631 645.641> 648.5 88<149.359 287.369 507.151 645.641>
-CounterMasks: 1 e0
-LayerCount: 3
-Fore
-SplineSet
-500.5 802 m 0
- 631.5 802 736.5 701 736.5 577 c 0
- 736.5 556 733.5 470 652.5 405 c 0
- 650.5 403 649.5 402 649.5 400 c 0
- 649.5 380 736.5 339 736.5 218 c 0
- 736.5 94 631.5 -7 500.5 -7 c 0
- 369.5 -7 263.5 94 263.5 218 c 0
- 263.5 239 267.5 325 348.5 390 c 0
- 350.5 392 351.5 393 351.5 395 c 0
- 351.5 415 263.5 456 263.5 577 c 0
- 263.5 701 369.5 802 500.5 802 c 0
-500.5 713 m 0
- 418.5 713 352.5 652 352.5 577 c 0
- 352.5 502 418.5 442 500.5 442 c 0
- 582.5 442 648.5 502 648.5 577 c 0
- 648.5 652 582.5 713 500.5 713 c 0
-500.5 353 m 0
- 418.5 353 352.5 293 352.5 218 c 0
- 352.5 143 418.5 82 500.5 82 c 0
- 582.5 82 648.5 143 648.5 218 c 0
- 648.5 293 582.5 353 500.5 353 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: nine
-Encoding: 1928 57 1929
-Width: 1000
-Flags: W
-HStem: 381 89<434.234 493.25> 706 89<433.08 567.75>
-VStem: 293.5 88<521.917 654.083> 618.5 89<520.386 655.25>
-LayerCount: 3
-Fore
-SplineSet
-337.5 -3 m 0
- 311.5 -3 292.5 19 292.5 41 c 0
- 292.5 49 294.5 57 299.5 65 c 2
- 499.5 371 l 2
- 501.5 374 505.5 381 500.5 381 c 0
- 386.5 381 293.5 474 293.5 588 c 0
- 293.5 702 386.5 795 500.5 795 c 0
- 614.5 795 707.5 702 707.5 588 c 0
- 707.5 547 694.5 507 673.5 475 c 2
- 373.5 17 l 2
- 365.5 4 351.5 -3 337.5 -3 c 0
-500.5 706 m 0
- 435.5 706 381.5 653 381.5 588 c 0
- 381.5 523 435.5 470 500.5 470 c 0
- 565.5 470 618.5 523 618.5 588 c 0
- 618.5 653 565.5 706 500.5 706 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: colon
-Encoding: 1929 58 1930
-Width: 1000
-Flags: W
-HStem: -1 63<486.272 513.728> 89 63<486.272 513.728> 352 62<486.272 513.728> 441 63<486.272 513.728>
-VStem: 424 62<62.7118 88.7445 414.272 440.288> 514 62<62.7118 88.7445 414.272 440.288>
-LayerCount: 3
-Fore
-SplineSet
-500 504 m 0
- 542 504 576 470 576 428 c 0
- 576 386 542 352 500 352 c 0
- 458 352 424 386 424 428 c 0
- 424 470 458 504 500 504 c 0
-500 441 m 0
- 492 441 486 436 486 428 c 0
- 486 420 492 414 500 414 c 0
- 508 414 514 420 514 428 c 0
- 514 436 508 441 500 441 c 0
-500 152 m 0
- 542 152 576 117 576 75 c 0
- 576 33 542 -1 500 -1 c 0
- 458 -1 424 33 424 75 c 0
- 424 117 458 152 500 152 c 0
-500 89 m 0
- 492 89 486 83 486 75 c 0
- 486 67 492 62 500 62 c 0
- 508 62 514 67 514 75 c 0
- 514 83 508 89 500 89 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: semicolon
-Encoding: 1930 59 1931
-Width: 1000
-Flags: W
-HStem: -80 141<432 527.053> -80 93<408.863 467.696> 88 63<509.272 535.288> 350 63<509.272 535.288> 440 62<509.272 535.288>
-VStem: 447 62<61.7102 87.2882 413.712 439.728> 536 63<61.5172 87.7449 413.712 439.728>
-LayerCount: 3
-Fore
-SplineSet
-523 502 m 0x3e
- 565 502 599 468 599 426 c 0
- 599 384 565 350 523 350 c 0
- 481 350 447 384 447 426 c 0
- 447 468 481 502 523 502 c 0x3e
-523 440 m 0
- 515 440 509 434 509 426 c 0
- 509 418 515 413 523 413 c 0
- 531 413 536 418 536 426 c 0
- 536 434 531 440 523 440 c 0
-523 151 m 0
- 565 151 599 116 599 74 c 0
- 599 -12 530 -80 444 -80 c 0xbe
- 420 -79 401 -60 401 -36 c 0
- 401 13 449 6 467 13 c 0x7e
- 469 14 470 15 470 16 c 0
- 470 23 447 39 447 75 c 0
- 447 117 481 151 523 151 c 0
-523 88 m 0
- 515 88 509 83 509 75 c 0
- 509 67 515 61 523 61 c 0
- 531 61 536 67 536 75 c 0
- 536 83 531 88 523 88 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: less
-Encoding: 1931 60 1932
-Width: 1000
-Flags: W
-VStem: 294 89<359.932 434.727>
-LayerCount: 3
-Fore
-SplineSet
-706 41 m 0
- 706 17 685 -4 661 -4 c 0
- 650 -4 639 0 630 9 c 2
- 332 307 l 2
- 309 330 294 362 294 397 c 0
- 294 432 309 465 332 488 c 2
- 630 786 l 2
- 639 795 650 799 661 799 c 0
- 685 799 706 778 706 754 c 0
- 706 743 701 732 693 724 c 2
- 394 425 l 2
- 387 418 383 408 383 397 c 0
- 383 386 387 377 394 370 c 2
- 693 71 l 2
- 701 63 706 52 706 41 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: equal
-Encoding: 1932 61 1933
-Width: 1000
-Flags: W
-HStem: 142 88<299.44 700.56> 323 88<299.44 700.56>
-LayerCount: 3
-Fore
-SplineSet
-337 411 m 2
- 663 411 l 2
- 687 411 707 393 707 368 c 0
- 707 343 687 323 663 323 c 2
- 337 323 l 2
- 313 323 293 343 293 368 c 0
- 293 393 313 411 337 411 c 2
-337 230 m 2
- 663 230 l 2
- 687 230 707 212 707 187 c 0
- 707 162 687 142 663 142 c 2
- 337 142 l 2
- 313 142 293 162 293 187 c 0
- 293 212 313 230 337 230 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: greater
-Encoding: 1933 62 1934
-Width: 1000
-Flags: W
-VStem: 617 89<359.932 434.727>
-LayerCount: 3
-Fore
-SplineSet
-338 -4 m 0
- 314 -4 294 17 294 41 c 0
- 294 52 299 63 307 71 c 2
- 606 370 l 2
- 613 377 617 386 617 397 c 0
- 617 408 613 418 606 425 c 2
- 307 724 l 2
- 298 733 294 743 294 754 c 0
- 294 777 312 799 338 799 c 0
- 349 799 360 795 369 786 c 2
- 668 488 l 2
- 691 465 706 432 706 397 c 0
- 706 362 691 330 668 307 c 2
- 369 9 l 2
- 360 0 349 -4 338 -4 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: question
-Encoding: 1934 63 1935
-Width: 1000
-Flags: W
-HStem: -34 63<485.272 512.728> 56 62<485.272 512.728> 707 89<432.75 567.25>
-VStem: 293 89<513.142 656.25> 423 62<29.7118 55.7279> 455 89<183.44 387.272> 513 62<29.7118 55.7279> 618 89<520.557 656.25>
-LayerCount: 3
-Fore
-SplineSet
-350 482 m 0xf5
- 304 482 293 545 293 589 c 0
- 293 703 386 796 500 796 c 0
- 614 796 707 703 707 589 c 0
- 707 503 654 431 585 400 c 0
- 563 391 544 366 544 338 c 2
- 544 220 l 2
- 544 196 524 177 499 177 c 0
- 474 177 455 197 455 221 c 2
- 455 339 l 2
- 455 403 493 456 546 480 c 0
- 588 498 618 539 618 589 c 0
- 618 654 565 707 500 707 c 0
- 435 707 382 654 382 589 c 0
- 382 573 385 557 391 543 c 0
- 393 537 395 531 395 525 c 0
- 395 503 377 482 350 482 c 0xf5
-499 118 m 0
- 541 118 575 84 575 42 c 0
- 575 0 541 -34 499 -34 c 0
- 457 -34 423 0 423 42 c 0xfb
- 423 84 457 118 499 118 c 0
-499 56 m 0
- 491 56 485 50 485 42 c 0
- 485 34 491 29 499 29 c 0
- 507 29 513 34 513 42 c 0
- 513 50 507 56 499 56 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: at
-Encoding: 1935 64 1936
-Width: 1000
-Flags: W
-HStem: -2 88<425.208 574.923> 241 89<464.022 534.054> 490 89<464.022 534.967> 708 88<425.208 574.792>
-VStem: 204 89<261.228 532.772> 359 88<346.491 473.509> 551 88<344.811 475.468> 707 89<298.283 532.772>
-LayerCount: 3
-Fore
-SplineSet
-796 397 m 0
- 796 178 664 -2 500 -2 c 0
- 337 -2 204 177 204 397 c 0
- 204 617 337 796 500 796 c 0
- 663 796 796 617 796 397 c 0
-615 558 m 0
- 639 558 660 538 660 514 c 0
- 660 503 656 492 647 483 c 0
- 640 476 636 466 636 456 c 0
- 636 447 639 419 639 410 c 2
- 639 307 l 2
- 639 291 652 278 668 278 c 0
- 684 278 697 291 697 307 c 1
- 698 307 l 1
- 704 335 707 366 707 397 c 0
- 707 568 614 708 500 708 c 0
- 386 708 293 568 293 397 c 0
- 293 226 386 86 500 86 c 0
- 561 86 616 126 654 190 c 1
- 612 195 578 222 561 259 c 1
- 542 248 521 241 499 241 c 0
- 422 241 359 317 359 410 c 0
- 359 503 422 579 499 579 c 0
- 531 579 560 566 583 545 c 1
- 591 554 603 558 615 558 c 0
-551 410 m 0
- 551 455 528 490 499 490 c 0
- 470 490 447 454 447 410 c 0
- 447 366 470 330 499 330 c 0
- 528 330 551 366 551 410 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: A
-Encoding: 1936 65 1937
-Width: 1000
-Flags: W
-HStem: 1 21G<235.5 260.5 738.5 763.5> 326 88<293 707> 708 89<426.204 573.796>
-VStem: 204 89<7.43994 326 414 535.045> 707 89<7.43994 326 414 535.045>
-LayerCount: 3
-Fore
-SplineSet
-204 398 m 2
- 204 618 337 797 500 797 c 0
- 663 797 796 618 796 398 c 2
- 796 45 l 2
- 796 21 776 1 751 1 c 0
- 726 1 707 21 707 45 c 2
- 707 326 l 1
- 293 326 l 1
- 293 45 l 2
- 293 21 273 1 248 1 c 0
- 223 1 204 21 204 45 c 2
- 204 398 l 2
-500 708 m 0
- 389 708 299 578 293 414 c 1
- 707 414 l 1
- 701 578 611 708 500 708 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: B
-Encoding: 1937 66 1938
-Width: 1000
-Flags: W
-HStem: -2 89<299.807 653.731> 323 89<293.5 505.5> 708 89<297.693 583.659>
-VStem: 204.5 89<92.3731 323 412 701.43> 634.5 89<520.855 657.25> 707.5 88<138.735 272.979>
-LayerCount: 3
-Fore
-SplineSet
-204.5 669 m 2xf4
- 204.5 751 270.5 797 327.5 797 c 2
- 517.5 797 l 2
- 631.5 797 723.5 704 723.5 590 c 0xf8
- 723.5 501 668.5 449 660.5 441 c 2
- 627.5 409 l 1
- 723.5 391 795.5 306 795.5 205 c 0
- 795.5 92 705.5 -2 593.5 -2 c 2
- 331.5 -2 l 2
- 261.5 -2 204.5 54 204.5 124 c 2
- 204.5 669 l 2xf4
-331.5 708 m 2
- 313.5 708 293.5 694 293.5 668 c 2
- 293.5 412 l 1
- 505.5 412 l 1
- 600.5 506 l 2
- 621.5 527 634.5 557 634.5 590 c 0
- 634.5 655 581.5 708 516.5 708 c 2
- 331.5 708 l 2
-587.5 87 m 1
- 658.5 88 707.5 143 707.5 205 c 0xf4
- 707.5 270 654.5 323 589.5 323 c 0
- 490.5 323 392.5 323 293.5 323 c 1
- 293.5 125 l 2
- 293.5 107 306.5 87 332.5 87 c 2
- 587.5 87 l 1
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: C
-Encoding: 1938 67 1939
-Width: 1000
-Flags: W
-HStem: -2 89<464.208 614.23> 708 89<464.208 613.747>
-VStem: 243 89<261.324 532.834>
-LayerCount: 3
-Fore
-SplineSet
-757 653 m 0
- 757 631 739 609 714 609 c 0
- 700 609 686 616 677 628 c 2
- 671 637 l 1
- 619 701 564 708 539 708 c 0
- 425 708 332 568 332 397 c 0
- 332 226 425 87 539 87 c 0
- 595 87 640 118 677 167 c 0
- 687 181 701 186 713 186 c 0
- 736 186 757 166 757 142 c 0
- 757 133 754 124 748 115 c 0
- 696 41 621 -2 539 -2 c 0
- 376 -2 243 177 243 397 c 0
- 243 617 376 797 539 797 c 0
- 644 797 721 722 750 677 c 0
- 755 670 757 661 757 653 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: D
-Encoding: 1939 68 1940
-Width: 1000
-Flags: W
-HStem: -2 89<350.641 523.75> 708 89<348.696 520.754>
-VStem: 255 89<93.8352 704.072> 657 88<261.324 532.433>
-LayerCount: 3
-Fore
-SplineSet
-382 797 m 2
- 455 797 l 2
- 616 797 745 615 745 397 c 0
- 745 177 613 -2 450 -2 c 0
- 427 -2 405 -2 382 -2 c 0
- 313 -2 255 53 255 122 c 2
- 255 681 l 2
- 255 744 316 797 382 797 c 2
-344 127 m 2
- 344 111 353 87 387 87 c 2
- 450 87 l 2
- 564 87 657 226 657 397 c 0
- 657 568 564 708 450 708 c 0
- 427 708 405 708 382 708 c 0
- 361 708 344 691 344 670 c 2
- 344 127 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: E
-Encoding: 1940 69 1941
-Width: 1000
-Flags: W
-HStem: 0 89<375.135 673.309 673.5 711.06> 327 88<371.5 603.605> 710 88<376.196 711.605>
-VStem: 282.5 89<94.889 327 415 706.029>
-LayerCount: 3
-Fore
-SplineSet
-409.5 798 m 2
- 673.5 798 l 2
- 697.5 798 717.5 779 717.5 754 c 0
- 717.5 729 697.5 710 673.5 710 c 2
- 409.5 710 l 2
- 387.5 710 370.5 692 371.5 670 c 1
- 371.5 415 l 1
- 565.5 415 l 2
- 589.5 415 609.5 396 609.5 371 c 0
- 609.5 346 589.5 327 565.5 327 c 2
- 371.5 327 l 1
- 371.5 128 l 2
- 371.5 101 391.5 89 409.5 89 c 0
- 410.5 89 673.5 88 673.5 88 c 2
- 697.5 88 717.5 69 717.5 44 c 0
- 717.5 19 697.5 0 673.5 0 c 2
- 409.5 0 l 2
- 340.5 0 282.5 54 282.5 123 c 2
- 282.5 683 l 2
- 282.5 746 343.5 798 409.5 798 c 2
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: F
-Encoding: 1941 70 1942
-Width: 1000
-Flags: W
-HStem: 324 88<371.5 603.06> 707 88<376.196 711.605>
-VStem: 282.5 89<3.43994 324 412 703.029>
-LayerCount: 3
-Fore
-SplineSet
-409.5 795 m 2
- 673.5 795 l 2
- 697.5 795 717.5 776 717.5 751 c 0
- 717.5 726 697.5 707 673.5 707 c 2
- 409.5 707 l 2
- 387.5 707 370.5 689 371.5 667 c 1
- 371.5 412 l 1
- 565.5 412 l 2
- 589.5 412 609.5 394 609.5 369 c 0
- 609.5 344 589.5 324 565.5 324 c 2
- 371.5 324 l 1
- 371.5 41 l 2
- 371.5 17 351.5 -3 326.5 -3 c 0
- 301.5 -3 282.5 17 282.5 41 c 2
- 282.5 680 l 2
- 282.5 743 343.5 795 409.5 795 c 2
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: G
-Encoding: 1942 71 1943
-Width: 1000
-Flags: W
-HStem: -2 89<433.208 582.554> 325 89<381.44 693.627> 708 89<433.208 584.096>
-VStem: 212 89<261.324 532.834> 700 88<222.385 319.974>
-LayerCount: 3
-Fore
-SplineSet
-726 653 m 0
- 726 631 706 608 682 608 c 0
- 656 608 641 638 624 655 c 0
- 574 706 525 708 508 708 c 0
- 394 708 301 568 301 397 c 0
- 301 226 394 87 508 87 c 0
- 640 87 700 262 700 287 c 0
- 700 308 683 325 662 325 c 2
- 419 325 l 2
- 395 325 375 345 375 370 c 0
- 375 395 395 414 419 414 c 2
- 662 414 l 2
- 732 414 788 357 788 287 c 0
- 788 217 693 -2 508 -2 c 0
- 345 -2 212 177 212 397 c 0
- 212 617 345 797 508 797 c 0
- 591 797 667 749 719 676 c 0
- 724 669 726 661 726 653 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: H
-Encoding: 1943 72 1944
-Width: 1000
-Flags: W
-HStem: -1 21G<235.5 260.5 738.5 763.5> 324 89<293 707>
-VStem: 204 89<5.43994 324 413 789.56> 707 89<5.43994 324 413 789.56>
-LayerCount: 3
-Fore
-SplineSet
-248 796 m 0
- 273 796 293 776 293 752 c 2
- 293 432 l 2
- 293 422 304 413 314 413 c 2
- 686 413 l 2
- 696 413 707 424 707 434 c 2
- 707 752 l 2
- 707 776 726 796 751 796 c 0
- 776 796 796 776 796 752 c 2
- 796 43 l 2
- 796 19 776 -1 751 -1 c 0
- 726 -1 707 19 707 43 c 2
- 707 303 l 2
- 707 313 696 324 686 324 c 2
- 314 324 l 2
- 304 324 293 315 293 305 c 2
- 293 43 l 2
- 293 19 273 -1 248 -1 c 0
- 223 -1 204 19 204 43 c 2
- 204 752 l 2
- 204 776 223 796 248 796 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: I
-Encoding: 1944 73 1945
-Width: 1000
-Flags: W
-HStem: -2 88<374.395 455.244 544.781 625.605> 708 88<374.395 455.429 544.578 625.605>
-VStem: 455.5 89<86 708>
-LayerCount: 3
-Fore
-SplineSet
-412.5 796 m 2
- 587.5 796 l 2
- 611.5 796 631.5 777 631.5 752 c 0
- 631.5 727 611.5 708 587.5 708 c 2
- 566.5 708 l 2
- 556.5 708 544.5 695 544.5 685 c 2
- 544.5 111 l 2
- 544.5 100 555.5 86 566.5 86 c 2
- 587.5 86 l 2
- 611.5 86 631.5 67 631.5 42 c 0
- 631.5 17 611.5 -2 587.5 -2 c 2
- 412.5 -2 l 2
- 388.5 -2 368.5 17 368.5 42 c 0
- 368.5 67 388.5 86 412.5 86 c 2
- 434.5 86 l 2
- 445.5 86 455.5 100 455.5 111 c 2
- 455.5 685 l 2
- 455.5 695 444.5 708 434.5 708 c 2
- 412.5 708 l 2
- 388.5 708 368.5 727 368.5 752 c 0
- 368.5 777 388.5 796 412.5 796 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: J
-Encoding: 1945 74 1946
-Width: 1000
-Flags: W
-HStem: -1 89<385.75 519.863> 706 89<431.44 571 660 747.56>
-VStem: 246 89<139.734 243.56> 571 89<140.975 706>
-LayerCount: 3
-Fore
-SplineSet
-335 206 m 0
- 335 141 388 88 453 88 c 0
- 518 88 571 141 571 206 c 2
- 571 706 l 1
- 469 706 l 2
- 445 706 425 726 425 751 c 0
- 425 776 445 795 469 795 c 2
- 710 795 l 2
- 734 795 754 776 754 751 c 0
- 754 726 734 706 710 706 c 2
- 660 706 l 1
- 660 200 l 2
- 660 91 565 -1 453 -1 c 0
- 339 -1 246 92 246 206 c 0
- 246 230 265 250 290 250 c 0
- 315 250 335 230 335 206 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: K
-Encoding: 1946 75 1947
-Width: 1000
-Flags: W
-HStem: -1 21G<261.5 286.5 720.5 738>
-VStem: 230 89<5.43994 324 419.724 788.56>
-LayerCount: 3
-Fore
-SplineSet
-770 44 m 0
- 770 20 750 -1 726 -1 c 0
- 715 -1 704 3 695 12 c 2
- 399 308 l 2
- 390 317 376 324 363 324 c 2
- 341 324 l 2
- 331 324 319 312 319 302 c 2
- 319 43 l 2
- 319 19 299 -1 274 -1 c 0
- 249 -1 230 19 230 43 c 2
- 230 751 l 2
- 230 775 249 795 274 795 c 0
- 299 795 319 775 319 751 c 2
- 319 431 l 2
- 319 415 326 414 332 420 c 2
- 695 782 l 2
- 704 791 715 795 726 795 c 0
- 750 795 770 775 770 751 c 0
- 770 740 765 728 757 720 c 2
- 453 415 l 2
- 449 411 447 404 447 397 c 0
- 447 390 449 383 453 379 c 2
- 757 75 l 2
- 765 67 770 55 770 44 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: L
-Encoding: 1947 76 1948
-Width: 1000
-Flags: W
-HStem: -4 88<379.807 709.605>
-VStem: 284.5 89<87.9281 787.56>
-LayerCount: 3
-Fore
-SplineSet
-411.5 -4 m 2
- 341.5 -4 284.5 52 284.5 123 c 2
- 284.5 750 l 2
- 284.5 774 303.5 794 328.5 794 c 0
- 353.5 794 373.5 774 373.5 750 c 2
- 373.5 124 l 2
- 373.5 97 394.5 84 411.5 84 c 2
- 671.5 84 l 2
- 695.5 84 715.5 65 715.5 40 c 0
- 715.5 15 695.5 -4 671.5 -4 c 2
- 411.5 -4 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: M
-Encoding: 1948 77 1949
-Width: 1000
-Flags: W
-HStem: -1 21G<236 261 739 764> 349 89<464.72 532.504>
-VStem: 204.5 89<5.43994 638.185> 707.5 88<4.89471 639.184>
-LayerCount: 3
-Fore
-SplineSet
-750.5 795 m 0
- 775.5 795 795.5 775 795.5 751 c 2
- 795.5 43 l 2
- 795.5 19 776.5 -1 751.5 -1 c 0
- 726.5 -1 707.5 19 707.5 43 c 2
- 707.5 638 l 2
- 707.5 642 697.5 643 696.5 639 c 2
- 624.5 449 l 2
- 622.5 445 621.5 441 620.5 437 c 0
- 603.5 386 555.5 349 498.5 349 c 0
- 441.5 349 393.5 386 377.5 438 c 1
- 300.5 638 l 2
- 298.5 642 293.5 642 293.5 638 c 2
- 293.5 43 l 2
- 293.5 19 273.5 -1 248.5 -1 c 0
- 223.5 -1 204.5 19 204.5 43 c 2
- 204.5 751 l 2
- 204.5 775 223.5 795 248.5 795 c 0
- 302.5 795 346.5 762 365.5 717 c 0
- 398.5 632 429.5 546 463.5 461 c 1
- 472.5 442 489.5 438 498.5 438 c 0
- 507.5 438 524.5 441 533.5 460 c 1
- 632.5 717 l 1
- 651.5 763 696.5 795 750.5 795 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: N
-Encoding: 1949 78 1950
-Width: 1000
-Flags: W
-HStem: -1 21G<324.5 349.5 634 675.5>
-VStem: 293 89<5.43994 614.322> 618 89<176.588 788.56>
-LayerCount: 3
-Fore
-SplineSet
-337 795 m 0
- 397 795 446 754 460 698 c 1
- 609 177 l 2
- 611 168 618 172 618 179 c 2
- 618 751 l 2
- 618 775 638 795 663 795 c 0
- 688 795 707 775 707 751 c 2
- 707 43 l 2
- 707 19 688 -1 663 -1 c 0
- 605 -1 558 36 541 90 c 0
- 491 265 442 440 392 614 c 0
- 390 621 382 619 382 612 c 2
- 382 43 l 2
- 382 19 362 -1 337 -1 c 0
- 312 -1 293 19 293 43 c 2
- 293 751 l 2
- 293 775 312 795 337 795 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: O
-Encoding: 1950 79 1951
-Width: 1000
-Flags: W
-HStem: -2 88<425.208 574.792> 708 88<425.208 574.792>
-VStem: 204 89<261.228 532.772> 707 89<261.228 532.772>
-LayerCount: 3
-Fore
-SplineSet
-500 796 m 0
- 663 796 796 617 796 397 c 0
- 796 177 663 -2 500 -2 c 0
- 337 -2 204 177 204 397 c 0
- 204 617 337 796 500 796 c 0
-500 708 m 0
- 386 708 293 568 293 397 c 0
- 293 226 386 86 500 86 c 0
- 614 86 707 226 707 397 c 0
- 707 568 614 708 500 708 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: P
-Encoding: 1951 80 1952
-Width: 1000
-Flags: W
-HStem: -1 21G<324.5 349.5> 381 89<382 567.583> 706 89<385.905 565.52>
-VStem: 293 89<5.43994 381 470 699.775> 618 89<521.137 655.725>
-LayerCount: 3
-Fore
-SplineSet
-500 795 m 1
- 625 793 707 693 707 588 c 0
- 707 476 619 381 508 381 c 2
- 382 381 l 1
- 382 43 l 2
- 382 19 362 -1 337 -1 c 0
- 312 -1 293 19 293 43 c 2
- 293 676 l 2
- 293 741 350 795 416 795 c 2
- 500 795 l 1
-420 706 m 2
- 399 706 382 689 382 668 c 0
- 382 607 382 547 382 486 c 0
- 382 479 389 470 396 470 c 2
- 500 470 l 2
- 565 470 618 523 618 588 c 0
- 618 653 565 706 500 706 c 2
- 420 706 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: Q
-Encoding: 1952 81 1953
-Width: 1000
-Flags: W
-HStem: -2 89<425.208 575.751 715.756 787.56> 164 88<546.988 618.714> 708 89<425.208 574.792>
-VStem: 204 89<261.324 532.834> 707 89<258.867 532.834>
-LayerCount: 3
-Fore
-SplineSet
-541 208 m 0
- 541 238 563 252 592 252 c 0
- 617 252 646 242 670 220 c 1
- 693 270 707 331 707 397 c 0
- 707 568 614 708 500 708 c 0
- 386 708 293 568 293 397 c 0
- 293 226 386 87 500 87 c 0
- 544 87 585 108 619 143 c 1
- 613 155 600 164 585 164 c 0
- 561 164 541 183 541 208 c 0
-500 797 m 0
- 663 797 796 617 796 397 c 0
- 796 289 764 192 712 120 c 1
- 715 101 731 87 750 87 c 0
- 774 87 794 68 794 43 c 0
- 794 18 774 -2 750 -2 c 0
- 708 -2 670 19 647 51 c 1
- 604 17 554 -2 500 -2 c 0
- 337 -2 204 177 204 397 c 0
- 204 617 337 797 500 797 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: R
-Encoding: 1953 82 1954
-Width: 1000
-Flags: W
-HStem: -1 21G<324 349 656.5 676> 381 89<381.5 413.5 502.5 567.083> 706 89<385.405 565.02>
-VStem: 292.5 89<5.43994 381 470 699.775> 413.5 89<316.984 381> 617.5 89<521.137 655.725>
-LayerCount: 3
-Fore
-SplineSet
-707.5 44 m 0
- 707.5 21 688.5 -1 663.5 -1 c 0
- 649.5 -1 636.5 6 627.5 18 c 2
- 440.5 281 l 1
- 423.5 303 413.5 330 413.5 359 c 2
- 413.5 381 l 1
- 381.5 381 l 1
- 381.5 43 l 2
- 381.5 19 361.5 -1 336.5 -1 c 0
- 311.5 -1 292.5 19 292.5 43 c 2
- 292.5 676 l 2
- 292.5 741 349.5 795 415.5 795 c 2
- 499.5 795 l 1
- 624.5 793 706.5 693 706.5 588 c 0
- 706.5 476 618.5 381 507.5 381 c 2
- 502.5 381 l 1
- 502.5 357 l 2
- 502.5 353 504.5 344 508.5 338 c 2
- 699.5 69 l 2
- 704.5 61 707.5 53 707.5 44 c 0
-419.5 706 m 2
- 398.5 706 381.5 689 381.5 668 c 2
- 381.5 486 l 2
- 381.5 479 388.5 470 395.5 470 c 2
- 499.5 470 l 2
- 564.5 470 617.5 523 617.5 588 c 0
- 617.5 653 564.5 706 499.5 706 c 2
- 419.5 706 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: S
-Encoding: 1954 83 1955
-Width: 1000
-Flags: W
-HStem: 0 88<412.283 615.932> 710 88<384.068 587.717>
-VStem: 251.5 89<540.013 666.484> 271.5 88<141.181 245.105> 640.5 88<552.895 656.396> 659.5 89<131.516 257.987>
-LayerCount: 3
-Fore
-SplineSet
-478.5 0 m 2xe4
- 351.5 0 271.5 102 271.5 201 c 2
- 271.5 207 l 2
- 271.5 231 290.5 251 315.5 251 c 0
- 340.5 251 359.5 231 359.5 207 c 0
- 359.5 142 413.5 89 478.5 89 c 0
- 503.5 89 528.5 88 553.5 88 c 0
- 611.5 88 659.5 136 659.5 194 c 0xd4
- 659.5 235 637.5 269 604.5 288 c 2
- 346.5 436 l 1
- 290.5 470 251.5 532 251.5 604 c 0
- 251.5 710 335.5 798 440.5 798 c 2
- 525.5 798 l 2
- 634.5 798 728.5 707 728.5 597 c 2
- 728.5 591 l 2
- 728.5 567 709.5 547 684.5 547 c 0
- 659.5 547 640.5 567 640.5 591 c 0xe8
- 640.5 656 586.5 710 521.5 710 c 0
- 496.5 710 471.5 710 446.5 710 c 0
- 388.5 710 340.5 662 340.5 604 c 0
- 340.5 563 362.5 529 395.5 510 c 2
- 653.5 362 l 1
- 709.5 328 748.5 266 748.5 194 c 0
- 748.5 88 664.5 0 559.5 0 c 2
- 478.5 0 l 2xe4
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: T
-Encoding: 1955 84 1956
-Width: 1000
-Flags: W
-HStem: -1 21G<487.5 512.5> 707 88<298.895 456 545 701.105>
-VStem: 456 89<5.43994 707>
-LayerCount: 3
-Fore
-SplineSet
-337 795 m 2
- 663 795 l 2
- 687 795 707 776 707 751 c 0
- 707 726 687 707 663 707 c 2
- 559 707 l 2
- 552 707 545 699 545 692 c 2
- 545 43 l 2
- 545 19 525 -1 500 -1 c 0
- 475 -1 456 19 456 43 c 2
- 456 692 l 2
- 456 699 448 707 441 707 c 2
- 337 707 l 2
- 313 707 293 726 293 751 c 0
- 293 776 313 795 337 795 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: U
-Encoding: 1956 85 1957
-Width: 1000
-Flags: W
-HStem: -2 88<425.041 574.761>
-VStem: 204 89<262.5 789.56> 707 89<262.5 789.56>
-LayerCount: 3
-Fore
-SplineSet
-500 -2 m 0
- 336 -2 204 179 204 395 c 2
- 204 752 l 2
- 204 776 223 796 248 796 c 0
- 273 796 293 776 293 752 c 2
- 293 397 l 2
- 293 226 386 86 500 86 c 0
- 614 86 707 226 707 397 c 2
- 707 752 l 2
- 707 776 727 796 752 796 c 0
- 777 796 796 776 796 752 c 2
- 796 395 l 1
- 795 175 663 -2 500 -2 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: V
-Encoding: 1957 86 1958
-Width: 1000
-Flags: W
-HStem: -3 89<467.27 532.945>
-VStem: 711.5 87<737.971 790.966>
-LayerCount: 3
-Fore
-SplineSet
-754.5 797 m 0
- 781.5 797 798.5 775 798.5 753 c 0
- 798.5 749 797.5 745 796.5 741 c 2
- 623.5 92 l 2
- 609.5 38 559.5 -3 500.5 -3 c 0
- 441.5 -3 390.5 38 376.5 92 c 2
- 203.5 741 l 2
- 202.5 745 201.5 749 201.5 753 c 0
- 201.5 776 219.5 797 245.5 797 c 0
- 265.5 797 283.5 784 288.5 764 c 2
- 462.5 117 l 2
- 468.5 94 487.5 86 500.5 86 c 0
- 515.5 86 529.5 94 537.5 117 c 1
- 711.5 764 l 2
- 716.5 784 734.5 797 754.5 797 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: W
-Encoding: 1958 87 1959
-Width: 1000
-Flags: W
-HStem: -2 88<327.311 435.985 563.207 671.946>
-VStem: 205 89<121.738 789.56> 455 89<105.206 433.56> 706 89<121.738 789.56>
-LayerCount: 3
-Fore
-SplineSet
-385 -2 m 0
- 287 -2 205 77 205 174 c 2
- 205 752 l 2
- 205 776 224 796 249 796 c 0
- 274 796 294 776 294 752 c 2
- 294 180 l 2
- 294 129 334 86 385 86 c 0
- 424 86 455 117 455 156 c 2
- 455 396 l 2
- 455 420 474 440 499 440 c 0
- 524 440 544 420 544 396 c 0
- 544 316 544 236 544 156 c 0
- 544 117 575 86 614 86 c 0
- 665 86 706 129 706 180 c 2
- 706 752 l 2
- 706 776 726 796 751 796 c 0
- 776 796 795 776 795 752 c 2
- 795 174 l 2
- 795 77 712 -2 614 -2 c 0
- 574 -2 532 13 500 46 c 1
- 468 13 425 -2 385 -2 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: X
-Encoding: 1959 88 1960
-Width: 1000
-Flags: W
-VStem: 289 84<3.17981 23 772 790.53> 446 108<341.438 452.562> 627 84<3.17981 23 772 791.226>
-CounterMasks: 1 e0
-LayerCount: 3
-Fore
-SplineSet
-289 753 m 4
- 289 775 307 797 334 797 c 4
- 351 797 366 787 373 772 c 6
- 492 518 l 6
- 494 513 506 513 508 518 c 6
- 627 772 l 6
- 634 788 650 797 667 797 c 4
- 694 797 711 775 711 753 c 4
- 711 747 710 740 707 734 c 6
- 559 418 l 6
- 556 412 554 404 554 397 c 4
- 554 390 556 382 559 376 c 6
- 707 60 l 6
- 710 54 711 48 711 42 c 4
- 711 20 694 -3 667 -3 c 4
- 650 -3 634 7 627 23 c 6
- 508 276 l 6
- 506 281 494 281 492 276 c 6
- 373 23 l 6
- 366 7 350 -3 333 -3 c 4
- 306 -3 289 20 289 42 c 4
- 289 48 290 54 293 60 c 6
- 441 376 l 6
- 444 382 446 390 446 397 c 4
- 446 404 444 412 441 418 c 6
- 293 734 l 6
- 290 740 289 747 289 753 c 4
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: Y
-Encoding: 1960 89 1961
-Width: 1000
-Flags: W
-VStem: 204 89<577.284 789.56> 455 88<3.89471 318.902> 707 89<576.5 789.56>
-LayerCount: 3
-Fore
-SplineSet
-707 752 m 2
- 707 776 727 796 752 796 c 0
- 777 796 796 776 796 752 c 2
- 796 711 l 2
- 796 541 712 360 557 319 c 0
- 551 317 543 309 543 303 c 2
- 543 42 l 2
- 543 18 524 -2 499 -2 c 0
- 474 -2 455 18 455 42 c 2
- 455 303 l 2
- 455 326 422 312 356 362 c 0
- 266 430 204 561 204 711 c 2
- 204 752 l 2
- 204 776 223 796 248 796 c 0
- 273 796 293 776 293 752 c 2
- 293 711 l 2
- 293 540 386 400 500 400 c 0
- 614 400 707 540 707 711 c 2
- 707 752 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: Z
-Encoding: 1961 90 1962
-Width: 1000
-Flags: W
-HStem: -2 88<380 711.105> 368 89<364.44 431> 708 88<288.895 623.999>
-VStem: 286 89<86.8913 129.125> 358 263<374.481 450.793>
-LayerCount: 3
-Fore
-SplineSet
-286 92 m 0xf0
- 286 109 290 124 298 138 c 2
- 431 368 l 1
- 402 368 l 2
- 378 368 358 388 358 413 c 0
- 358 438 378 457 402 457 c 2
- 483 457 l 1
- 623 699 l 2
- 623 700 624 701 624 702 c 0
- 624 705 622 708 619 708 c 2
- 327 708 l 2
- 303 708 283 727 283 752 c 0
- 283 777 303 796 327 796 c 2
- 624 796 l 2
- 674 796 712 752 712 702 c 0
- 712 682 707 666 699 653 c 2
- 585 456 l 1
- 606 453 621 435 621 413 c 0xe8
- 621 388 601 368 577 368 c 2
- 534 368 l 1
- 375 95 l 2
- 374 94 375 93 375 92 c 0
- 375 89 377 86 380 86 c 2
- 673 86 l 2
- 697 86 717 67 717 42 c 0
- 717 17 697 -2 673 -2 c 2
- 380 -2 l 2
- 332 -2 286 37 286 92 c 0xf0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: bracketleft
-Encoding: 1962 91 1963
-Width: 1000
-Flags: W
-HStem: -128 89<500.307 588.56> 833 89<500.307 588.56>
-VStem: 405 89<-32.6925 826.693>
-LayerCount: 3
-Fore
-SplineSet
-532 922 m 2
- 551 922 l 2
- 575 922 595 902 595 877 c 0
- 595 852 575 833 551 833 c 2
- 532 833 l 2
- 511 833 494 816 494 795 c 2
- 494 -1 l 2
- 494 -22 511 -39 532 -39 c 2
- 551 -39 l 2
- 575 -39 595 -58 595 -83 c 0
- 595 -108 575 -128 551 -128 c 2
- 532 -128 l 2
- 462 -128 405 -71 405 -1 c 2
- 405 795 l 2
- 405 865 462 922 532 922 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: backslash
-Encoding: 1963 92 1964
-Width: 1000
-Flags: W
-HStem: 0 21G<697 717.5>
-LayerCount: 3
-Fore
-SplineSet
-749.5 44 m 0
- 749.5 22 730.5 0 704.5 0 c 0
- 689.5 0 674.5 7 666.5 21 c 2
- 256.5 732 l 2
- 252.5 739 250.5 747 250.5 754 c 0
- 250.5 776 269.5 798 295.5 798 c 0
- 310.5 798 325.5 790 333.5 776 c 2
- 743.5 66 l 2
- 747.5 59 749.5 52 749.5 44 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: bracketright
-Encoding: 1964 93 1965
-Width: 1000
-Flags: W
-HStem: -128 89<411.44 502.718> 833 89<411.44 502.718>
-VStem: 507 88<-32.6925 826.693>
-LayerCount: 3
-Fore
-SplineSet
-468 922 m 2
- 538 922 595 865 595 795 c 2
- 595 -1 l 2
- 595 -71 538 -128 468 -128 c 2
- 449 -128 l 2
- 425 -128 405 -108 405 -83 c 0
- 405 -58 425 -39 449 -39 c 2
- 468 -39 l 2
- 489 -39 507 -22 507 -1 c 2
- 507 795 l 2
- 507 816 489 833 468 833 c 2
- 449 833 l 2
- 425 833 405 852 405 877 c 0
- 405 902 425 922 449 922 c 2
- 468 922 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: asciicircum
-Encoding: 1965 94 1966
-Width: 1000
-Flags: W
-HStem: 706 89<466.411 533.803>
-LayerCount: 3
-Fore
-SplineSet
-760.5 423 m 0
- 760.5 401 741.5 379 715.5 379 c 0
- 699.5 379 684.5 388 676.5 403 c 2
- 534.5 685 l 2
- 524.5 703 509.5 706 500.5 706 c 0
- 483.5 706 471.5 696 464.5 682 c 2
- 323.5 403 l 2
- 315.5 388 300.5 379 284.5 379 c 0
- 258.5 379 239.5 401 239.5 423 c 0
- 239.5 430 241.5 437 244.5 443 c 2
- 384.5 721 l 1
- 406.5 769 451.5 795 500.5 795 c 0
- 545.5 795 585.5 771 607.5 735 c 1
- 755.5 443 l 2
- 758.5 437 760.5 430 760.5 423 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: underscore
-Encoding: 1966 95 1967
-Width: 1000
-Flags: W
-HStem: -213 89<209.44 790.56>
-LayerCount: 3
-Fore
-SplineSet
-797 -168 m 0
- 797 -193 777 -213 753 -213 c 2
- 247 -213 l 2
- 223 -213 203 -193 203 -168 c 0
- 203 -143 223 -124 247 -124 c 2
- 753 -124 l 2
- 777 -124 797 -143 797 -168 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: grave
-Encoding: 1967 96 1968
-Width: 1000
-Flags: W
-HStem: 551 244<461.707 538.019>
-VStem: 455.5 89<557.44 788.56>
-LayerCount: 3
-Fore
-SplineSet
-544.5 595 m 2
- 544.5 571 524.5 551 499.5 551 c 0
- 474.5 551 455.5 571 455.5 595 c 2
- 455.5 751 l 2
- 455.5 775 474.5 795 499.5 795 c 0
- 524.5 795 544.5 775 544.5 751 c 2
- 544.5 595 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: a
-Encoding: 1968 97 1969
-Width: 1000
-Flags: W
-HStem: -1 89<432.75 567.61> 325 88<433.917 566.443>
-VStem: 293 89<138.75 273.42> 618 89<137.765 274.573>
-LayerCount: 3
-Fore
-SplineSet
-662 414 m 0
- 687 414 707 394 707 370 c 2
- 707 43 l 2
- 707 19 687 -1 662 -1 c 0
- 639 -1 622 16 619 37 c 1
- 585 13 544 -1 500 -1 c 0
- 386 -1 293 92 293 206 c 0
- 293 320 386 413 500 413 c 0
- 544 413 585 400 619 376 c 1
- 622 397 639 414 662 414 c 0
-500 325 m 0
- 435 325 382 271 382 206 c 0
- 382 141 435 88 500 88 c 0
- 565 88 618 141 618 206 c 0
- 618 271 565 325 500 325 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: b
-Encoding: 1969 98 1970
-Width: 1000
-Flags: W
-HStem: 1 89<432.39 567.25> 326 89<431.747 567.25>
-VStem: 293 89<139.765 276.235 378 790.56> 618 89<140.75 275.25>
-LayerCount: 3
-Fore
-SplineSet
-337 797 m 0
- 362 797 382 777 382 753 c 2
- 382 378 l 1
- 416 401 456 415 500 415 c 0
- 614 415 707 322 707 208 c 0
- 707 94 614 1 500 1 c 0
- 456 1 415 15 381 39 c 1
- 378 18 360 1 337 1 c 0
- 312 1 293 21 293 45 c 2
- 293 753 l 2
- 293 777 312 797 337 797 c 0
-500 326 m 0
- 435 326 382 273 382 208 c 0
- 382 143 435 90 500 90 c 0
- 565 90 618 143 618 208 c 0
- 618 273 565 326 500 326 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: c
-Encoding: 1970 99 1971
-Width: 1000
-Flags: W
-HStem: 0 88<459.417 594.355> 325 89<458.25 592.37>
-VStem: 318.5 89<139.58 274.25>
-LayerCount: 3
-Fore
-SplineSet
-681.5 328 m 0
- 681.5 300 660.5 281 632.5 281 c 0
- 624.5 281 616.5 284 609.5 290 c 0
- 587.5 311 558.5 325 525.5 325 c 0
- 460.5 325 407.5 272 407.5 207 c 0
- 407.5 142 460.5 88 525.5 88 c 0
- 558.5 88 588.5 101 609.5 123 c 0
- 614.5 129 623.5 131 632.5 131 c 0
- 659.5 131 680.5 109 680.5 83 c 0
- 680.5 74 677.5 66 671.5 60 c 0
- 634.5 22 582.5 0 525.5 0 c 0
- 411.5 0 318.5 93 318.5 207 c 0
- 318.5 321 411.5 414 525.5 414 c 0
- 582.5 414 634.5 391 671.5 353 c 0
- 678.5 346 681.5 336 681.5 328 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: d
-Encoding: 1971 100 1972
-Width: 1000
-Flags: W
-HStem: 1 89<432.75 567.61> 326 89<432.75 568.253>
-VStem: 293 89<140.75 275.25> 618 89<139.765 276.235 378 790.56>
-LayerCount: 3
-Fore
-SplineSet
-662 797 m 0
- 687 797 707 777 707 753 c 2
- 707 45 l 2
- 707 21 687 1 662 1 c 0
- 639 1 622 17 619 38 c 1
- 585 14 544 1 500 1 c 0
- 386 1 293 94 293 208 c 0
- 293 322 386 415 500 415 c 0
- 544 415 584 401 618 378 c 1
- 618 753 l 2
- 618 777 637 797 662 797 c 0
-500 326 m 0
- 435 326 382 273 382 208 c 0
- 382 143 435 90 500 90 c 0
- 565 90 618 143 618 208 c 0
- 618 273 565 326 500 326 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: e
-Encoding: 1972 101 1973
-Width: 1000
-Flags: W
-HStem: 0 89<433.25 568.471> 180 89<404.94 584.958> 325 89<433.25 567.78>
-VStem: 293.5 89<139.75 274.25>
-LayerCount: 3
-Fore
-SplineSet
-629.5 154 m 0
- 657.5 154 676.5 124 676.5 107 c 0
- 676.5 100 675.5 95 672.5 91 c 0
- 635.5 37 572.5 0 500.5 0 c 0
- 386.5 0 293.5 93 293.5 207 c 0
- 293.5 321 386.5 414 500.5 414 c 0
- 643.5 414 706.5 283 706.5 225 c 0
- 706.5 200 686.5 180 662.5 180 c 2
- 442.5 180 l 2
- 418.5 180 398.5 200 398.5 225 c 0
- 398.5 250 418.5 269 442.5 269 c 2
- 576.5 269 l 2
- 589.5 269 594.5 281 584.5 290 c 0
- 563.5 311 533.5 325 500.5 325 c 0
- 435.5 325 382.5 272 382.5 207 c 0
- 382.5 142 435.5 89 500.5 89 c 0
- 541.5 89 577.5 109 598.5 140 c 0
- 601.5 144 613.5 154 629.5 154 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: f
-Encoding: 1973 102 1974
-Width: 1000
-Flags: W
-HStem: 323 88<245.94 346.5 434.5 657.06> 708 89<486.661 620.68>
-VStem: 346.5 88<4.43994 323 411 653.434> 671.5 89<552.44 656.634>
-LayerCount: 3
-Fore
-SplineSet
-553.5 797 m 0
- 655.5 797 759.5 718 760.5 590 c 0
- 760.5 566 741.5 546 716.5 546 c 0
- 691.5 546 671.5 566 671.5 590 c 0
- 671.5 655 618.5 708 553.5 708 c 0
- 488.5 708 434.5 655 434.5 590 c 2
- 434.5 411 l 1
- 619.5 411 l 2
- 643.5 411 663.5 393 663.5 368 c 0
- 663.5 343 643.5 323 619.5 323 c 2
- 434.5 323 l 1
- 434.5 42 l 2
- 434.5 18 414.5 -2 389.5 -2 c 0
- 364.5 -2 346.5 18 346.5 42 c 2
- 346.5 323 l 1
- 283.5 323 l 2
- 259.5 323 239.5 343 239.5 368 c 0
- 239.5 393 259.5 411 283.5 411 c 2
- 346.5 411 l 1
- 346.5 599 l 2
- 346.5 709 442.5 797 553.5 797 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: g
-Encoding: 1974 103 1975
-Width: 1000
-Flags: W
-HStem: -385 88<433.207 565.503> 0 88<433.917 566.169> 325 89<432.75 567.61>
-VStem: 293 89<-243.041 -140.44 139.58 274.25> 618 89<-246.12 37 138.427 275.235>
-LayerCount: 3
-Fore
-SplineSet
-500 -385 m 0
- 405 -385 295 -316 293 -178 c 0
- 293 -154 312 -134 337 -134 c 0
- 362 -134 382 -154 382 -178 c 0
- 382 -243 435 -297 500 -297 c 0
- 565 -297 618 -243 618 -178 c 0
- 618 -106 618 -35 618 37 c 1
- 584 14 544 0 500 0 c 0
- 386 0 293 93 293 207 c 0
- 293 321 386 414 500 414 c 0
- 544 414 585 400 619 376 c 1
- 622 397 640 414 663 414 c 0
- 688 414 707 394 707 370 c 2
- 707 -187 l 2
- 707 -297 611 -385 500 -385 c 0
-500 325 m 0
- 435 325 382 272 382 207 c 0
- 382 142 435 88 500 88 c 0
- 565 88 618 142 618 207 c 0
- 618 272 565 325 500 325 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: h
-Encoding: 1975 104 1976
-Width: 1000
-Flags: W
-HStem: -1 21G<324.5 349.5 649.5 674.5> 325 89<431.747 567.25>
-VStem: 293 89<5.43994 275.235 376 789.56> 618 89<5.43994 274.159>
-LayerCount: 3
-Fore
-SplineSet
-337 796 m 0
- 362 796 382 776 382 752 c 2
- 382 376 l 1
- 416 399 456 414 500 414 c 0
- 614 414 707 322 707 208 c 2
- 707 43 l 2
- 707 19 687 -1 662 -1 c 0
- 637 -1 618 19 618 43 c 2
- 618 207 l 2
- 618 272 565 325 500 325 c 0
- 435 325 382 272 382 207 c 2
- 382 43 l 2
- 382 19 362 -1 337 -1 c 0
- 312 -1 293 19 293 43 c 2
- 293 752 l 2
- 293 776 312 796 337 796 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: i
-Encoding: 1976 105 1977
-Width: 1000
-Flags: W
-HStem: -1 89<387.94 454.5 543.5 612.06> 325 89<387.94 454.5> 486 117<429.94 537.06>
-VStem: 381.5 237<5.48056 81.7927> 423.5 120<492.481 596.793> 454.5 89<88 325>
-LayerCount: 3
-Fore
-SplineSet
-467.5 603 m 2xe8
- 499.5 603 l 2
- 523.5 603 543.5 584 543.5 559 c 2
- 543.5 531 l 2
- 543.5 506 523.5 486 499.5 486 c 2
- 467.5 486 l 2
- 443.5 486 423.5 506 423.5 531 c 2
- 423.5 559 l 2
- 423.5 584 443.5 603 467.5 603 c 2xe8
-425.5 414 m 2
- 501.5 414 l 2
- 523.5 414 543.5 397 543.5 375 c 2
- 543.5 98 l 2xe4
- 543.5 92 546.5 88 554.5 88 c 2
- 574.5 88 l 2
- 598.5 88 618.5 69 618.5 44 c 0
- 618.5 19 598.5 -1 574.5 -1 c 2
- 425.5 -1 l 2
- 401.5 -1 381.5 19 381.5 44 c 0xf0
- 381.5 69 401.5 88 425.5 88 c 2
- 445.5 88 l 2
- 451.5 88 454.5 92 454.5 98 c 2
- 454.5 317 l 2xe4
- 454.5 321 450.5 325 446.5 325 c 2
- 425.5 325 l 2
- 401.5 325 381.5 345 381.5 370 c 0xf0
- 381.5 395 401.5 414 425.5 414 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: j
-Encoding: 1977 106 1978
-Width: 1000
-Flags: W
-HStem: -385 89<433.482 567.25> 326 88<550.895 618> 487 117<592.895 701.105>
-VStem: 293 89<-245.163 -140.44> 545 162<332.207 407.793> 587 120<493.207 597.793> 618 89<-244.266 326>
-LayerCount: 3
-Fore
-SplineSet
-631 604 m 2xf4
- 663 604 l 2
- 687 604 707 585 707 560 c 2
- 707 531 l 2
- 707 506 687 487 663 487 c 2
- 631 487 l 2
- 607 487 587 506 587 531 c 2
- 587 560 l 2
- 587 585 607 604 631 604 c 2xf4
-500 -385 m 0
- 412 -385 295 -322 293 -178 c 0
- 293 -154 312 -134 337 -134 c 0
- 362 -134 382 -154 382 -178 c 0
- 382 -243 435 -296 500 -296 c 0
- 565 -296 618 -243 618 -178 c 0
- 618 -13 618 152 618 317 c 0xf2
- 618 321 614 326 610 326 c 2
- 589 326 l 2
- 565 326 545 345 545 370 c 0
- 545 395 565 414 589 414 c 2
- 664 414 l 2
- 686 414 707 397 707 375 c 0xf8
- 707 191 707 6 707 -178 c 0xf2
- 707 -292 614 -385 500 -385 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: k
-Encoding: 1978 107 1979
-Width: 1000
-Flags: W
-HStem: 1 21G<322.5 347.5>
-VStem: 291 89<7.43994 209.092 405 790.56>
-LayerCount: 3
-Fore
-SplineSet
-709 46 m 0
- 709 21 687 2 664 2 c 0
- 655 2 645 5 637 11 c 2
- 385 209 l 2
- 382 211 380 210 380 207 c 2
- 380 45 l 2
- 380 21 360 1 335 1 c 0
- 310 1 291 21 291 45 c 2
- 291 753 l 2
- 291 777 310 797 335 797 c 0
- 360 797 380 777 380 753 c 2
- 380 405 l 2
- 380 397 391 408 391 408 c 1
- 555 555 l 2
- 563 563 575 567 585 567 c 0
- 608 567 629 546 629 522 c 0
- 629 510 624 498 614 489 c 2
- 411 307 l 2
- 409 305 410 302 412 300 c 2
- 692 81 l 2
- 703 72 709 59 709 46 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: l
-Encoding: 1979 108 1980
-Width: 1000
-Flags: W
-HStem: -3 89<548.282 620.56> 709 89<379.44 451.718>
-VStem: 456 88<89.2818 705.718>
-LayerCount: 3
-Fore
-SplineSet
-456 667 m 2
- 456 700 434 709 422 709 c 2
- 417 709 l 2
- 393 709 373 728 373 753 c 0
- 373 778 393 798 417 798 c 0
- 487 798 544 741 544 671 c 2
- 544 124 l 2
- 544 104 560 86 578 86 c 2
- 583 86 l 2
- 607 86 627 67 627 42 c 0
- 627 17 607 -3 583 -3 c 0
- 513 -3 456 54 456 124 c 2
- 456 667 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: m
-Encoding: 1980 109 1981
-Width: 1000
-Flags: W
-HStem: 1 21G<235.481 260.481 487.481 512.481 738.481 763.481> 326 88<316.876 429.711 567.704 683.58>
-VStem: 203.981 89<7.43994 302.032> 455.981 89<7.43994 300.074> 706.981 89<7.43994 302.761>
-LayerCount: 3
-Fore
-SplineSet
-247.981445312 415 m 0
- 265.981445312 415 280.981445312 406 287.981445312 391 c 1
- 312.981445312 406 342.981445312 414 373.981445312 414 c 0
- 423.981445312 414 468.981445312 392 499.981445312 358 c 1
- 530.981445312 392 575.981445312 414 625.981445312 414 c 0
- 717.981445312 414 797.981445312 353 795.981445312 249 c 2
- 795.981445312 45 l 2
- 795.981445312 21 775.981445312 1 750.981445312 1 c 0
- 725.981445312 1 706.981445312 21 706.981445312 45 c 2
- 706.981445312 256 l 2
- 706.981445312 297 666.981445312 326 625.981445312 326 c 0
- 585.981445312 326 543.981445312 296 544.981445312 259 c 1
- 544.981445312 45 l 2
- 544.981445312 21 524.981445312 1 499.981445312 1 c 0
- 474.981445312 1 455.981445312 21 455.981445312 45 c 2
- 455.981445312 252 l 2
- 455.981445312 292 416.981445312 326 373.981445312 326 c 0
- 333.981445312 326 292.981445312 294 292.981445312 259 c 2
- 292.981445312 45 l 2
- 292.981445312 21 272.981445312 1 247.981445312 1 c 0
- 222.981445312 1 203.981445312 21 203.981445312 45 c 2
- 203.981445312 371 l 2
- 203.981445312 395 222.981445312 415 247.981445312 415 c 0
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: n
-Encoding: 1981 110 1982
-Width: 1000
-Flags: W
-HStem: -1 21G<324.496 349.496 649.496 674.496> 325 88<432.386 566.715>
-VStem: 292.996 89<5.43994 275.235> 617.996 89<5.43994 274.45>
-LayerCount: 3
-Fore
-SplineSet
-336.99609375 414 m 0
- 359.99609375 414 377.99609375 397 380.99609375 376 c 1
- 414.99609375 400 455.99609375 413 499.99609375 413 c 0
- 610.99609375 413 707.99609375 323 706.99609375 217 c 1
- 706.99609375 43 l 2
- 706.99609375 19 686.99609375 -1 661.99609375 -1 c 0
- 636.99609375 -1 617.99609375 19 617.99609375 43 c 2
- 617.99609375 207 l 2
- 617.99609375 272 564.99609375 325 499.99609375 325 c 0
- 434.99609375 325 381.99609375 272 381.99609375 207 c 2
- 381.99609375 43 l 2
- 381.99609375 19 361.99609375 -1 336.99609375 -1 c 0
- 311.99609375 -1 292.99609375 19 292.99609375 43 c 2
- 292.99609375 370 l 2
- 292.99609375 394 311.99609375 414 336.99609375 414 c 0
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: o
-Encoding: 1982 111 1983
-Width: 1000
-Flags: W
-HStem: 1 89<432.75 567.25> 326 89<432.75 567.25>
-VStem: 293 89<140.75 275.25> 618 89<140.75 275.25>
-LayerCount: 3
-Fore
-SplineSet
-500 415 m 0
- 614 415 707 322 707 208 c 0
- 707 94 614 1 500 1 c 0
- 386 1 293 94 293 208 c 0
- 293 322 386 415 500 415 c 0
-500 326 m 0
- 435 326 382 273 382 208 c 0
- 382 143 435 90 500 90 c 0
- 565 90 618 143 618 208 c 0
- 618 273 565 326 500 326 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: p
-Encoding: 1983 112 1984
-Width: 1000
-Flags: W
-HStem: 0 89<432.243 567.25> 325 89<431.958 567.25>
-VStem: 293 89<-379.56 37 139.244 275.439> 618 89<139.75 274.25>
-LayerCount: 3
-Fore
-SplineSet
-500 414 m 0
- 614 414 707 321 707 207 c 0
- 707 93 614 0 500 0 c 0
- 456 0 416 14 382 37 c 1
- 382 -342 l 2
- 382 -366 362 -386 337 -386 c 0
- 312 -386 293 -366 293 -342 c 2
- 293 369 l 2
- 293 393 312 413 337 413 c 0
- 359 413 377 398 381 377 c 1
- 415 401 456 414 500 414 c 0
-500 325 m 0
- 436 325 384 275 382 212 c 1
- 382 203 l 1
- 384 140 436 89 500 89 c 0
- 565 89 618 142 618 207 c 0
- 618 272 565 325 500 325 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: q
-Encoding: 1984 113 1985
-Width: 1000
-Flags: W
-HStem: -384 89<675.607 784.56> 1 89<348.75 483.757> 326 89<348.75 484.042>
-VStem: 209 89<140.75 275.25> 534 89<-242.768 38 140.244 276.439>
-LayerCount: 3
-Fore
-SplineSet
-741 -384 m 2
- 629 -384 535 -294 534 -183 c 1
- 534 38 l 1
- 500 15 460 1 416 1 c 0
- 302 1 209 94 209 208 c 0
- 209 322 302 415 416 415 c 0
- 460 415 501 402 535 378 c 1
- 539 399 557 414 579 414 c 0
- 604 414 623 394 623 370 c 2
- 623 -177 l 2
- 623 -242 676 -295 741 -295 c 2
- 747 -295 l 2
- 771 -295 791 -314 791 -339 c 0
- 791 -364 771 -384 747 -384 c 2
- 741 -384 l 2
-416 326 m 0
- 351 326 298 273 298 208 c 0
- 298 143 351 90 416 90 c 0
- 480 90 532 141 534 204 c 1
- 534 213 l 1
- 532 276 480 326 416 326 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: r
-Encoding: 1985 114 1986
-Width: 1000
-Flags: W
-HStem: 323 89<446.89 583.009>
-VStem: 307.5 89<4.43994 273.235>
-LayerCount: 3
-Fore
-SplineSet
-692.5 300 m 0
- 692.5 277 672.5 254 647.5 254 c 0
- 620.5 254 602.5 284 597.5 289 c 0
- 576.5 310 547.5 323 514.5 323 c 0
- 449.5 323 396.5 270 396.5 205 c 2
- 396.5 42 l 2
- 396.5 18 376.5 -2 351.5 -2 c 0
- 326.5 -2 307.5 18 307.5 42 c 2
- 307.5 368 l 2
- 307.5 392 326.5 412 351.5 412 c 0
- 374.5 412 392.5 396 395.5 375 c 1
- 429.5 399 470.5 412 514.5 412 c 0
- 617.5 412 676.5 338 685.5 324 c 0
- 690.5 317 692.5 308 692.5 300 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: s
-Encoding: 1986 115 1987
-Width: 1000
-Flags: W
-HStem: 0 88<430.209 574.222> 162 89<426.749 574.058> 325 88<426.682 571.671>
-VStem: 330.5 89<263.035 312.944> 581.5 88<100.056 148.428>
-CounterMasks: 1 e0
-LayerCount: 3
-Fore
-SplineSet
-661.5 317 m 0
- 661.5 294 641.5 273 616.5 273 c 0
- 602.5 273 590.5 279 581.5 291 c 0
- 571.5 306 556.5 325 500.5 325 c 0
- 455.5 325 419.5 308 419.5 288 c 0
- 419.5 268 455.5 251 500.5 251 c 0
- 594.5 251 669.5 194 669.5 125 c 0
- 669.5 56 594.5 0 500.5 0 c 0
- 437.5 0 372.5 26 343.5 76 c 0
- 338.5 84 336.5 94 336.5 103 c 0
- 336.5 126 355.5 146 380.5 146 c 0
- 394.5 146 406.5 140 415.5 128 c 0
- 427.5 111 438.5 88 500.5 88 c 0
- 545.5 88 581.5 105 581.5 125 c 0
- 581.5 145 544.5 162 500.5 162 c 0
- 406.5 162 330.5 219 330.5 288 c 0
- 330.5 357 406.5 413 500.5 413 c 0
- 558.5 413 622.5 390 653.5 342 c 0
- 659.5 334 661.5 326 661.5 317 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: t
-Encoding: 1987 116 1988
-Width: 1000
-Flags: W
-HStem: -2 89<592.008 701.06> 397 88<298.94 450.5 538.5 700.333>
-VStem: 450.5 88<139.232 397 485 617.888>
-LayerCount: 3
-Fore
-SplineSet
-538.5 205 m 2
- 538.5 154 576.5 87 662.5 87 c 2
- 663.5 87 l 2
- 687.5 87 707.5 68 707.5 43 c 0
- 707.5 18 687.5 -2 663.5 -2 c 2
- 657.5 -2 l 2
- 545.5 -2 450.5 88 450.5 199 c 2
- 450.5 397 l 1
- 336.5 397 l 2
- 312.5 397 292.5 417 292.5 442 c 0
- 292.5 467 312.5 485 336.5 485 c 2
- 450.5 485 l 1
- 450.5 580 l 2
- 450.5 604 469.5 624 494.5 624 c 0
- 520.5 624 538.5 603 538.5 580 c 2
- 538.5 485 l 1
- 663.5 485 l 2
- 687.5 485 706.5 467 706.5 442 c 0
- 706.5 417 687.5 397 663.5 397 c 2
- 538.5 397 l 1
- 538.5 205 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: u
-Encoding: 1988 117 1989
-Width: 1000
-Flags: W
-HStem: 1 89<433.285 567.614>
-VStem: 293.004 89<140.458 408.56> 618.004 89<139.765 408.56>
-LayerCount: 3
-Fore
-SplineSet
-663.00390625 1 m 0
- 640.00390625 1 622.00390625 18 619.00390625 39 c 1
- 585.00390625 15 544.00390625 1 500.00390625 1 c 0
- 389.00390625 1 292.00390625 92 293.00390625 198 c 1
- 293.00390625 371 l 2
- 293.00390625 395 313.00390625 415 338.00390625 415 c 0
- 363.00390625 415 382.00390625 395 382.00390625 371 c 2
- 382.00390625 208 l 2
- 382.00390625 143 435.00390625 90 500.00390625 90 c 0
- 565.00390625 90 618.00390625 143 618.00390625 208 c 0
- 618.00390625 262 618.00390625 317 618.00390625 371 c 0
- 618.00390625 395 638.00390625 415 663.00390625 415 c 0
- 688.00390625 415 707.00390625 395 707.00390625 371 c 2
- 707.00390625 45 l 2
- 707.00390625 21 688.00390625 1 663.00390625 1 c 0
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: v
-Encoding: 1989 118 1990
-Width: 1000
-Flags: W
-HStem: 0 89<465.73 533.803>
-LayerCount: 3
-Fore
-SplineSet
-239.5 372 m 0
- 239.5 395 257.5 416 284.5 416 c 0
- 300.5 416 315.5 407 323.5 392 c 2
- 464.5 113 l 2
- 471.5 99 483.5 89 500.5 89 c 0
- 509.5 89 524.5 92 534.5 110 c 2
- 676.5 392 l 2
- 684.5 407 699.5 416 715.5 416 c 0
- 741.5 416 760.5 394 760.5 372 c 0
- 760.5 365 758.5 358 755.5 352 c 2
- 607.5 59 l 1
- 585.5 23 545.5 0 500.5 0 c 0
- 448.5 0 405.5 28 384.5 74 c 1
- 244.5 352 l 2
- 241.5 358 239.5 365 239.5 372 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: w
-Encoding: 1990 119 1991
-Width: 1000
-Flags: W
-HStem: 0 89<331.737 441.824 558.3 668.263>
-VStem: 201 89<130.941 409.56> 456 88<102.818 232.105> 710 89<130.941 409.56>
-CounterMasks: 1 70
-LayerCount: 3
-Fore
-SplineSet
-500 43 m 1
- 479 22 442 0 394 0 c 0
- 287 0 201 86 201 193 c 2
- 201 372 l 2
- 201 396 220 416 245 416 c 0
- 270 416 290 396 290 372 c 2
- 290 193 l 2
- 290 135 336 89 394 89 c 0
- 427 89 456 114 456 147 c 2
- 456 194 l 2
- 456 218 475 238 500 238 c 0
- 525 238 544 218 544 194 c 2
- 544 147 l 2
- 544 114 573 89 606 89 c 0
- 664 89 710 135 710 193 c 0
- 710 253 710 312 710 372 c 0
- 710 396 730 416 755 416 c 0
- 780 416 799 396 799 372 c 2
- 799 193 l 2
- 799 86 713 0 606 0 c 0
- 558 0 522 22 500 43 c 1
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: x
-Encoding: 1991 120 1992
-Width: 1000
-Flags: W
-HStem: -1 21G<324 341.5 658.5 676>
-LayerCount: 3
-Fore
-SplineSet
-291 372 m 0
- 291 396 311 417 335 417 c 0
- 346 417 357 413 366 404 c 2
- 491 279 l 2
- 495 275 504 275 508 279 c 2
- 633 404 l 2
- 642 413 653 417 664 417 c 0
- 688 417 709 396 709 372 c 0
- 709 361 704 349 696 341 c 2
- 570 215 l 2
- 566 211 567 203 571 199 c 2
- 696 75 l 2
- 705 66 709 54 709 43 c 0
- 709 19 688 -1 664 -1 c 0
- 653 -1 641 4 633 12 c 2
- 507 138 l 2
- 504 141 495 141 492 138 c 2
- 367 12 l 2
- 359 4 347 -1 336 -1 c 0
- 312 -1 291 19 291 43 c 0
- 291 54 295 66 304 75 c 2
- 429 199 l 2
- 433 203 434 211 430 215 c 2
- 304 341 l 2
- 296 349 291 361 291 372 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: y
-Encoding: 1992 121 1993
-Width: 1000
-Flags: W
-HStem: -384 89<432.456 566.674> 1 89<433.285 568.095>
-VStem: 293.004 89<-242.395 -139.44 140.458 408.56> 618.004 89<-245.12 38 139.765 408.56>
-LayerCount: 3
-Fore
-SplineSet
-619.00390625 38 m 1
- 580.00390625 10 536.00390625 1 500.00390625 1 c 0
- 389.00390625 1 292.00390625 92 293.00390625 198 c 1
- 293.00390625 371 l 2
- 293.00390625 395 313.00390625 415 338.00390625 415 c 0
- 363.00390625 415 382.00390625 395 382.00390625 371 c 2
- 382.00390625 208 l 2
- 382.00390625 143 435.00390625 90 500.00390625 90 c 0
- 565.00390625 90 618.00390625 143 618.00390625 208 c 0
- 618.00390625 262 618.00390625 317 618.00390625 371 c 0
- 618.00390625 395 638.00390625 415 663.00390625 415 c 0
- 688.00390625 415 707.00390625 395 707.00390625 371 c 2
- 707.00390625 -186 l 2
- 707.00390625 -296 611.00390625 -384 500.00390625 -384 c 0
- 407.00390625 -384 295.00390625 -316 293.00390625 -177 c 0
- 293.00390625 -153 312.00390625 -133 337.00390625 -133 c 0
- 362.00390625 -133 382.00390625 -153 382.00390625 -177 c 0
- 382.00390625 -242 435.00390625 -295 500.00390625 -295 c 0
- 565.00390625 -295 618.00390625 -242 618.00390625 -177 c 2
- 618.00390625 -173 l 1
- 619.00390625 38 l 1
-EndSplineSet
-Validated: 33
-EndChar
-
-StartChar: z
-Encoding: 1993 122 1994
-Width: 1000
-Flags: W
-HStem: 0 88<443.5 701.605> 325 88<298.395 556.5>
-VStem: 372.5 249<173.481 246.622>
-LayerCount: 3
-Fore
-SplineSet
-336.5 413 m 2
- 663.5 413 l 2
- 687.5 413 707.5 394 707.5 369 c 0
- 707.5 344 688.5 332 685.5 329 c 2
- 603.5 247 l 1
- 614.5 239 621.5 227 621.5 212 c 0
- 621.5 187 601.5 167 577.5 167 c 2
- 523.5 167 l 1
- 443.5 88 l 1
- 663.5 88 l 2
- 687.5 88 707.5 69 707.5 44 c 0
- 707.5 19 687.5 0 663.5 0 c 2
- 336.5 0 l 2
- 312.5 0 292.5 19 292.5 44 c 0
- 292.5 56 297.5 67 305.5 75 c 2
- 400.5 170 l 1
- 384.5 177 372.5 193 372.5 212 c 0
- 372.5 237 392.5 256 416.5 256 c 2
- 486.5 256 l 1
- 556.5 325 l 1
- 336.5 325 l 2
- 312.5 325 292.5 344 292.5 369 c 0
- 292.5 394 312.5 413 336.5 413 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: braceleft
-Encoding: 1994 123 1995
-Width: 1000
-Flags: W
-HStem: -133 89<560.807 676.06> 294 89<408.137 459.193> 407 89<408.137 459.193> 834 89<560.807 676.06>
-VStem: 465.5 89<-37.6925 289.797 500.203 827.693>
-LayerCount: 3
-Fore
-SplineSet
-418.5 383 m 2
- 427.5 383 l 2
- 497.5 383 554.5 325 554.5 255 c 2
- 554.5 -6 l 2
- 554.5 -27 571.5 -44 592.5 -44 c 2
- 638.5 -44 l 2
- 662.5 -44 682.5 -63 682.5 -88 c 0
- 682.5 -113 662.5 -133 638.5 -133 c 2
- 592.5 -133 l 2
- 522.5 -133 465.5 -76 465.5 -6 c 2
- 465.5 256 l 2
- 465.5 277 447.5 294 426.5 294 c 2
- 418.5 294 l 2
- 362.5 294 317.5 339 317.5 395 c 0
- 317.5 451 362.5 496 418.5 496 c 2
- 426.5 496 l 2
- 447.5 496 465.5 513 465.5 534 c 2
- 465.5 796 l 2
- 465.5 866 522.5 923 592.5 923 c 2
- 638.5 923 l 2
- 662.5 923 682.5 903 682.5 878 c 0
- 682.5 853 662.5 834 638.5 834 c 2
- 592.5 834 l 2
- 571.5 834 554.5 817 554.5 796 c 2
- 554.5 535 l 2
- 554.5 465 497.5 407 427.5 407 c 2
- 418.5 407 l 2
- 411.5 407 406.5 402 406.5 395 c 0
- 406.5 388 411.5 383 418.5 383 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: bar
-Encoding: 1995 124 1996
-Width: 1000
-Flags: W
-HStem: -1 21G<487 512>
-VStem: 455.5 89<5.43994 789.56>
-LayerCount: 3
-Fore
-SplineSet
-499.5 796 m 0
- 524.5 796 544.5 776 544.5 752 c 2
- 544.5 43 l 2
- 544.5 19 524.5 -1 499.5 -1 c 0
- 474.5 -1 455.5 19 455.5 43 c 2
- 455.5 752 l 2
- 455.5 776 474.5 796 499.5 796 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: braceright
-Encoding: 1996 125 1997
-Width: 1000
-Flags: W
-HStem: -133 89<323.94 442.218> 294 89<538.782 591.863> 407 89<538.782 591.863> 834 89<323.94 442.218>
-VStem: 446.5 88<-37.6925 289.797 500.203 827.693>
-LayerCount: 3
-Fore
-SplineSet
-581.5 407 m 2
- 573.5 407 l 2
- 503.5 407 446.5 465 446.5 535 c 2
- 446.5 796 l 2
- 446.5 817 428.5 834 407.5 834 c 2
- 361.5 834 l 2
- 337.5 834 317.5 853 317.5 878 c 0
- 317.5 903 337.5 923 361.5 923 c 2
- 407.5 923 l 2
- 477.5 923 534.5 866 534.5 796 c 2
- 534.5 534 l 2
- 534.5 513 552.5 496 573.5 496 c 2
- 581.5 496 l 2
- 637.5 496 682.5 451 682.5 395 c 0
- 682.5 339 637.5 294 581.5 294 c 2
- 573.5 294 l 2
- 552.5 294 534.5 277 534.5 256 c 2
- 534.5 -6 l 2
- 534.5 -76 477.5 -133 407.5 -133 c 2
- 361.5 -133 l 2
- 337.5 -133 317.5 -113 317.5 -88 c 0
- 317.5 -63 337.5 -44 361.5 -44 c 2
- 407.5 -44 l 2
- 428.5 -44 446.5 -27 446.5 -6 c 2
- 446.5 255 l 2
- 446.5 325 503.5 383 573.5 383 c 2
- 581.5 383 l 2
- 588.5 383 593.5 388 593.5 395 c 0
- 593.5 402 588.5 407 581.5 407 c 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: asciitilde
-Encoding: 1997 126 1998
-Width: 1000
-Flags: W
-HStem: 448 89<545.284 613.55> 568 89<386.076 453.716>
-VStem: 293 89<471.421 561.675> 618 89<542.403 633.241>
-LayerCount: 3
-Fore
-SplineSet
-293 529 m 0
- 293 593 343 657 420 657 c 0
- 475 657 526 621 542 565 c 0
- 547 548 562 537 579 537 c 0
- 602 537 618 556 618 575 c 0
- 618 583 615 590 615 598 c 0
- 615 620 632 642 659 642 c 0
- 693 642 707 611 707 575 c 0
- 707 511 656 448 579 448 c 0
- 524 448 473 484 457 540 c 0
- 452 557 437 568 420 568 c 0
- 397 568 382 548 382 529 c 0
- 382 521 385 514 385 506 c 0
- 385 484 368 463 341 463 c 0
- 307 463 293 493 293 529 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: exclamdown
-Encoding: 1998 161 1999
-Width: 1000
-Flags: W
-HStem: 676 62<486.272 513.728> 766 62<486.272 513.728>
-VStem: 424 62<738.272 765.728> 456 89<8.43994 611.56> 514 62<738.272 765.728>
-LayerCount: 3
-Fore
-SplineSet
-500 2 m 0xd0
- 475 2 456 22 456 46 c 2
- 456 574 l 2
- 456 598 475 618 500 618 c 0
- 525 618 545 598 545 574 c 2
- 545 46 l 2
- 545 22 525 2 500 2 c 0xd0
-500 676 m 0
- 458 676 424 710 424 752 c 0
- 424 794 458 828 500 828 c 0
- 542 828 576 794 576 752 c 0xe8
- 576 710 542 676 500 676 c 0
-500 738 m 0
- 508 738 514 744 514 752 c 0
- 514 760 508 766 500 766 c 0
- 492 766 486 760 486 752 c 0
- 486 744 492 738 500 738 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: cent
-Encoding: 1999 162 2000
-Width: 1000
-Flags: W
-VStem: 318.5 89<140.959 277.291> 485.5 89<-71.5601 11.3094 101 317 406.615 489.56>
-LayerCount: 3
-Fore
-SplineSet
-632.5 134 m 0
- 659.5 134 680.5 112 680.5 86 c 0
- 680.5 77 677.5 69 671.5 63 c 0
- 645.5 36 612.5 17 574.5 8 c 1
- 574.5 -34 l 2
- 574.5 -58 554.5 -78 529.5 -78 c 0
- 504.5 -78 485.5 -58 485.5 -34 c 2
- 485.5 6 l 1
- 390.5 25 318.5 108 318.5 209 c 0
- 318.5 310 390.5 393 485.5 412 c 1
- 485.5 452 l 2
- 485.5 476 504.5 496 529.5 496 c 0
- 554.5 496 574.5 476 574.5 452 c 2
- 574.5 411 l 1
- 612.5 402 645.5 383 671.5 356 c 0
- 678.5 349 681.5 339 681.5 331 c 0
- 681.5 303 660.5 284 632.5 284 c 0
- 624.5 284 616.5 287 609.5 293 c 0
- 599.5 303 587.5 311 574.5 317 c 1
- 574.5 101 l 1
- 587.5 107 599.5 116 609.5 126 c 0
- 614.5 132 623.5 134 632.5 134 c 0
-485.5 321 m 1
- 439.5 305 407.5 260 407.5 209 c 0
- 407.5 158 439.5 114 485.5 98 c 1
- 485.5 321 l 1
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: brokenbar
-Encoding: 2000 166 2001
-Width: 1000
-Flags: W
-VStem: 455.5 89<-19.5601 354.56 462.44 808.56>
-LayerCount: 3
-Fore
-SplineSet
-499.5 815 m 0
- 524.5 815 544.5 795 544.5 771 c 2
- 544.5 500 l 2
- 544.5 476 524.5 456 499.5 456 c 0
- 474.5 456 455.5 476 455.5 500 c 2
- 455.5 771 l 2
- 455.5 795 474.5 815 499.5 815 c 0
-499.5 361 m 0
- 524.5 361 544.5 341 544.5 317 c 2
- 544.5 18 l 2
- 544.5 -6 524.5 -26 499.5 -26 c 0
- 474.5 -26 455.5 -6 455.5 18 c 2
- 455.5 317 l 2
- 455.5 341 474.5 361 499.5 361 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: section
-Encoding: 2001 167 2002
-Width: 1000
-Flags: W
-HStem: -384 88<434.65 565.503> 1 88<433.161 567.202> 326 89<432.268 567.009> 711 88<434.497 565.144>
-VStem: 293 89<-244.163 -139.44 141.347 275.8 377 660.12> 618 89<-245.12 38 140.297 274.266 555.167 659.517>
-LayerCount: 3
-Fore
-SplineSet
-500 1 m 0
- 387 1 293 93 293 208 c 2
- 293 601 l 2
- 293 711 389 799 500 799 c 0
- 587 799 705 737 707 592 c 0
- 707 568 688 549 663 549 c 0
- 638 549 618 568 618 592 c 0
- 618 657 565 711 500 711 c 0
- 435 711 382 657 382 592 c 0
- 382 520 382 449 382 377 c 1
- 412 397 449 415 500 415 c 0
- 615 415 707 322 707 208 c 2
- 707 -186 l 2
- 707 -296 611 -384 500 -384 c 0
- 412 -384 295 -321 293 -177 c 0
- 293 -153 312 -133 337 -133 c 0
- 362 -133 382 -153 382 -177 c 0
- 382 -242 435 -296 500 -296 c 0
- 565 -296 618 -242 618 -177 c 0
- 618 -105 618 -34 618 38 c 1
- 590 19 551 1 500 1 c 0
-618 208 m 0
- 618 275 563 326 500 326 c 0
- 433 326 382 272 382 208 c 0
- 382 141 436 89 500 89 c 0
- 567 89 618 145 618 208 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: copyright
-Encoding: 2002 169 2003
-Width: 1000
-Flags: W
-HStem: 141 88<397.75 603.203> 283 89<434.25 570.355> 609 88<435.417 568.37> 751 89<397.75 603.203>
-VStem: 150.5 89<387.297 592.75> 294.5 89<422.75 557.42> 761.5 88<387.297 592.75>
-LayerCount: 3
-Fore
-SplineSet
-500.5 840 m 0
- 693.5 840 849.5 683 849.5 490 c 0
- 849.5 297 693.5 141 500.5 141 c 0
- 307.5 141 150.5 297 150.5 490 c 0
- 150.5 683 307.5 840 500.5 840 c 0
-500.5 751 m 0
- 356.5 751 239.5 634 239.5 490 c 0
- 239.5 346 356.5 229 500.5 229 c 0
- 644.5 229 761.5 346 761.5 490 c 0
- 761.5 634 644.5 751 500.5 751 c 0
-608.5 415 m 0
- 635.5 415 656.5 393 656.5 367 c 0
- 656.5 358 653.5 350 647.5 344 c 0
- 610.5 306 558.5 283 501.5 283 c 0
- 387.5 283 294.5 376 294.5 490 c 0
- 294.5 604 387.5 697 501.5 697 c 0
- 558.5 697 610.5 675 647.5 637 c 0
- 654.5 630 657.5 620 657.5 612 c 0
- 657.5 584 636.5 565 608.5 565 c 0
- 600.5 565 592.5 568 585.5 574 c 0
- 563.5 595 534.5 609 501.5 609 c 0
- 436.5 609 383.5 555 383.5 490 c 0
- 383.5 425 436.5 372 501.5 372 c 0
- 534.5 372 564.5 385 585.5 407 c 0
- 590.5 413 599.5 415 608.5 415 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: registered
-Encoding: 2003 174 2004
-Width: 1000
-Flags: W
-HStem: 141 89<397.75 603.203> 474 89<516.362 551.796> 640 88<476.655 550.641> 752 89<397.75 603.203>
-VStem: 150.5 89<388.25 593.75> 387.5 89<279.44 381 563 638.845> 556.5 89<567.397 635.006> 761.5 88<388.25 593.75>
-LayerCount: 3
-Fore
-SplineSet
-500.5 841 m 0
- 693.5 841 849.5 684 849.5 491 c 0
- 849.5 298 693.5 141 500.5 141 c 0
- 307.5 141 150.5 298 150.5 491 c 0
- 150.5 684 307.5 841 500.5 841 c 0
-500.5 752 m 0
- 356.5 752 239.5 635 239.5 491 c 0
- 239.5 347 356.5 230 500.5 230 c 0
- 644.5 230 761.5 347 761.5 491 c 0
- 761.5 635 644.5 752 500.5 752 c 0
-647.5 317 m 0
- 647.5 293 627.5 272 603.5 272 c 0
- 592.5 272 581.5 276 572.5 285 c 2
- 476.5 381 l 1
- 476.5 317 l 2
- 476.5 293 456.5 273 431.5 273 c 0
- 406.5 273 387.5 293 387.5 317 c 2
- 387.5 634 l 2
- 387.5 686 429.5 728 481.5 728 c 0
- 499.5 728 516.5 728 534.5 728 c 0
- 592.5 728 645.5 666 645.5 601 c 0
- 645.5 536 597.5 474 534.5 474 c 0
- 529.5 474 523.5 474 518.5 474 c 0
- 514.5 474 513.5 469 516.5 466 c 2
- 634.5 348 l 2
- 642.5 340 647.5 328 647.5 317 c 0
-481.5 640 m 2
- 478.5 640 476.5 637 476.5 634 c 2
- 476.5 563 l 1
- 518.5 563 l 2
- 539.5 563 556.5 580 556.5 601 c 0
- 556.5 622 539.5 640 518.5 640 c 2
- 481.5 640 l 2
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: degree
-Encoding: 2004 176 2005
-Width: 1000
-Flags: W
-HStem: 486 88<452.532 547.468> 707 89<453.075 546.925>
-VStem: 345 89<592.578 687.787> 566 89<592.578 687.787>
-LayerCount: 3
-Fore
-SplineSet
-500 796 m 0
- 586 796 655 726 655 640 c 0
- 655 554 586 486 500 486 c 0
- 414 486 345 554 345 640 c 0
- 345 726 414 796 500 796 c 0
-500 707 m 0
- 464 707 434 676 434 640 c 0
- 434 604 464 574 500 574 c 0
- 536 574 566 604 566 640 c 0
- 566 676 536 707 500 707 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: plusminus
-Encoding: 2005 177 2006
-Width: 1000
-Flags: W
-HStem: 51 88<299.395 455.5 544.5 700.333> 247 88<299.395 453.777 546.33 700.333>
-VStem: 455.5 89<139 245.17 336.83 491.56>
-LayerCount: 3
-Fore
-SplineSet
-500.5 498 m 0
- 525.5 498 544.5 478 544.5 454 c 2
- 544.5 365 l 2
- 544.5 351 560.5 335 574.5 335 c 2
- 662.5 335 l 2
- 686.5 335 706.5 316 706.5 291 c 0
- 706.5 266 687.5 247 663.5 247 c 2
- 574.5 247 l 2
- 560.5 247 544.5 231 544.5 217 c 2
- 544.5 159 l 2
- 544.5 150 555.5 139 564.5 139 c 2
- 662.5 139 l 2
- 686.5 139 706.5 120 706.5 95 c 0
- 706.5 70 687.5 51 663.5 51 c 2
- 337.5 51 l 2
- 313.5 51 293.5 70 293.5 95 c 0
- 293.5 120 313.5 139 337.5 139 c 2
- 436.5 139 l 2
- 445.5 139 455.5 150 455.5 159 c 2
- 455.5 217 l 2
- 455.5 231 440.5 247 426.5 247 c 2
- 337.5 247 l 2
- 313.5 247 293.5 266 293.5 291 c 0
- 293.5 316 313.5 335 337.5 335 c 2
- 426.5 335 l 2
- 440.5 335 455.5 351 455.5 365 c 2
- 455.5 454 l 2
- 455.5 478 475.5 498 500.5 498 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: questiondown
-Encoding: 2006 191 2007
-Width: 1000
-Flags: W
-HStem: -3 89<432.75 567.25> 674 62<487.272 514.728> 764 62<487.272 514.728>
-VStem: 293 89<136.75 272.443> 425 62<736.272 763.728> 456 89<405.666 609.56> 515 62<736.272 763.728> 618 89<136.75 279.359>
-LayerCount: 3
-Fore
-SplineSet
-649 311 m 0xf5
- 695 311 707 248 707 204 c 0
- 707 90 614 -3 500 -3 c 0
- 386 -3 293 90 293 204 c 0
- 293 290 346 362 415 393 c 0
- 437 402 456 426 456 454 c 2
- 456 572 l 2
- 456 596 476 616 501 616 c 0
- 526 616 545 596 545 572 c 2
- 545 454 l 2
- 545 390 507 337 454 313 c 0
- 412 295 382 254 382 204 c 0
- 382 139 435 86 500 86 c 0
- 565 86 618 139 618 204 c 0
- 618 220 615 236 609 250 c 0
- 607 256 605 261 605 267 c 0
- 605 289 622 311 649 311 c 0xf5
-501 674 m 0
- 459 674 425 708 425 750 c 0
- 425 792 459 826 501 826 c 0
- 543 826 577 792 577 750 c 0xfb
- 577 708 543 674 501 674 c 0
-501 736 m 0
- 509 736 515 742 515 750 c 0
- 515 758 509 764 501 764 c 0
- 493 764 487 758 487 750 c 0
- 487 742 493 736 501 736 c 0
-EndSplineSet
-Validated: 1
-EndChar
-
-StartChar: trademark
-Encoding: 2007 8482 2008
-Width: 1000
-Flags: W
-HStem: 561 88<42.4214 193.981 281.981 371.981 486.243 597.711 737.447 851.842>
-VStem: 193.981 88<373.14 561 649 789.888> 371.981 89<324 536.032> 623.981 89<237.44 534.074> 874.981 89<237.44 536.846>
-LayerCount: 3
-Fore
-SplineSet
-237.981445312 796 m 0
- 263.981445312 796 281.981445312 775 281.981445312 752 c 2
- 281.981445312 649 l 1
- 415.981445312 649 l 2
- 433.981445312 649 448.981445312 640 455.981445312 625 c 1
- 480.981445312 640 510.981445312 648 541.981445312 648 c 0
- 591.981445312 648 636.981445312 626 667.981445312 592 c 1
- 698.981445312 626 743.981445312 648 793.981445312 648 c 0
- 885.981445312 648 965.981445312 587 963.981445312 483 c 2
- 963.981445312 275 l 2
- 963.981445312 251 943.981445312 231 918.981445312 231 c 0
- 893.981445312 231 874.981445312 251 874.981445312 275 c 2
- 875.981445312 490 l 2
- 875.981445312 531 834.981445312 560 793.981445312 560 c 0
- 753.981445312 560 711.981445312 530 712.981445312 493 c 1
- 712.981445312 275 l 2
- 712.981445312 251 692.981445312 231 667.981445312 231 c 0
- 642.981445312 231 623.981445312 251 623.981445312 275 c 2
- 623.981445312 486 l 2
- 623.981445312 526 584.981445312 560 541.981445312 560 c 0
- 501.981445312 560 460.981445312 528 460.981445312 493 c 2
- 460.981445312 275 l 2
- 460.981445312 251 440.981445312 231 415.981445312 231 c 2
- 400.981445312 231 l 2
- 288.981445312 231 193.981445312 322 193.981445312 433 c 2
- 193.981445312 561 l 1
- 79.9814453125 561 l 2
- 55.9814453125 561 35.9814453125 581 35.9814453125 606 c 0
- 35.9814453125 631 55.9814453125 649 79.9814453125 649 c 2
- 193.981445312 649 l 1
- 193.981445312 752 l 2
- 193.981445312 776 212.981445312 796 237.981445312 796 c 0
-281.981445312 561 m 1
- 281.981445312 438 l 2
- 281.981445312 383 319.981445312 337 371.981445312 324 c 1
- 371.981445312 561 l 1
- 281.981445312 561 l 1
-EndSplineSet
-Validated: 33
 EndChar
 EndChars
 EndSplineFont
