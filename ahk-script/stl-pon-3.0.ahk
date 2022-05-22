@@ -162,7 +162,7 @@
 
 :*?:-`::{U+200D} ; default zero width joiner
 :*?:^`::{U+F1995} ; stacking joiner
-:*?:*?`::{U+F1996} ; scaling joiner
+:*?:*`::{U+F1996} ; scaling joiner
 
 :*?:(`::{U+F1997} ; start left-combining (normal) long glyph
 :*?:)`::{U+F1998} ; end left-combining (normal) long glyph
@@ -179,6 +179,4 @@
 :*?:<`::{U+300C} ; 「 start quote
 :*?:>`::{U+300D} ; 」 end quote
 
-
-:*?:~~`::{U+FE01} ; variation selector 2
 :*?:~`::{U+FE00} ; variation selector 1
