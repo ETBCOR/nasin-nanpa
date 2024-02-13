@@ -16,4 +16,4 @@ Guide for ligatures:
 - scaled glyph combinations are done with `+`
 - stacked glyph combinations are done with `-`
 - directional ni can be done by adding `>` `^` `<` `v` and combinations thereof to `ni`
-- variants are done by adding `1` `2` `3` or `4` after a glyph
+- if a glyph has variants, put a number after the word to access it
