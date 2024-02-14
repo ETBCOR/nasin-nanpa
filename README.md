@@ -26,7 +26,7 @@ Ligatures are a font feature that allow nasin nanpa (and other many sitelen pona
 | Version | Format of file name | Source text example | Note |
 | ------- | ------------------- | ------------------- | ---- |
 | Main version | `sitelen-pona-X.Y.ahk` | ``akesi`​`` | ``​`​`` ≈ confirm.
-| Shorthand version | `stl-pon-X.Y.ahk` | ``aks`​`` | ``​`​`` ≈ confirm. All the words have 3 letter codes (you can view them by right-clicking the script and clicking 'Edit in Notepad'
+| Shorthand version | `stl-pon-X.Y.ahk` | ``aks`​`` | ``​`​`` ≈ confirm. All the words have 3 letter codes (you can view them by right-clicking the script and selecting 'Edit in Notepad')
 | Toggle version | `sitelen-pona-toggle-X.Y.ahk` | `akesi ` | ` ` ≈ confirm. Script can be toggled on/off with `Alt+Space`
 
 All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ above in their respective formats.
