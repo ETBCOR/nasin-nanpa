@@ -1,12 +1,13 @@
 # nasin sitelen tan anpa nanpa
 
-o lukin e [lipu Releases](https://github.com/ETBCOR/nasin-nanpa/releases) a!
+## o lukin e [lipu Releases](https://github.com/ETBCOR/nasin-nanpa/releases) a!
 
 ![nasin nanpa 3.1.0](/renders/nasin-nanpa-3.1.0.png)
 
-nasin sitelen ni li kepeken [nasin ni](https://www.kreativekorp.com/ucsur/charts/sitelen.html).
+nasin sitelen tan anpa nanpa li kepeken nasin pi [lipu ni](https://www.kreativekorp.com/ucsur/charts/sitelen.html).
 
-Guide for ligatures:
+## Ligatures Guide
+Ligatures are a font feature that allow nasin nanpa (and other many sitelen pona fonts) to display strings of existing Unicode characters as sitelen pona glyphs. However, not every text rendering context supports this font feature by default, and some may not at all! 
 - type the name of any glyph in latin characters (with or without a trailing space) and it will turn into the correct sitelen pona
 - ideographic space can be done with `  ` (double space) or `zz`
 - cartouches get opened with `[` and closed with `]`
@@ -18,3 +19,18 @@ Guide for ligatures:
 - stacked glyph combinations are done with `-`
 - directional ni can be done by adding `>` `^` `<` `v` and combinations thereof to `ni`
 - if a glyph has variants, put a number after the word to access it
+
+## AHK Scripts Guide
+
+[The AutoHotKey scripts](/ahk-script/) maintained in this repository can be used to input [the appropriate UCSUR character or control character](https://www.kreativekorp.com/ucsur/charts/sitelen.html) by replacing specific strings of (Latin) characters you type. There are 3 versions, all of which work in a very similar way:
+| Version | Format of file name | Source text example | Note |
+| ------- | ------------------- | ------------------- | ---- |
+| Main version | `sitelen-pona-X.Y.ahk` | ``akesi`​`` (including the ``​`​``)
+| Shorthand version | `stl-pon-X.Y.ahk` | ``aks`​`` (including the ``​`​``)
+| Toggle version | `sitelen-pona-toggle-X.Y.ahk` | `akesi ` (including the ` `) | Can be toggled on/off with `Alt+Space`
+
+All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ above in their respective formats.
+Hopefully, soon, this will say *all* instead of most, but there's some work to be done before I can claim that.
+
+There is also an [old](/ahk-script/old/) folder that contains older versions of the scripts.
+Note: the script version numbering is independent of nasin nanpa's main version numbering.
