@@ -7,7 +7,7 @@
 | Shorthand version | `stl-pon-X.Y.ahk` | ``aks`​`` | ``​`​`` ≈ confirm. All the words have 3 letter codes (you can view them by right-clicking the script and selecting 'Edit in Notepad')
 | Toggle version | `sitelen-pona-toggle-X.Y.ahk` | `akesi ` | ` ` ≈ confirm. Script can be toggled on/off with `Alt+Space`
 
-All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ above in their respective formats.
+All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ in their respective formats.
 Hopefully, soon, this will say *all* instead of most, but there's some work to be done before I can claim that.
 
 There is also an [old](/ahk-script/old/) folder that contains older versions of the scripts.

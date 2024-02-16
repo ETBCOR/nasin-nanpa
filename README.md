@@ -4,24 +4,37 @@
 
 ![nasin nanpa 3.1.0](/renders/nasin-nanpa-3.1.0.png)
 
+This font currently follows the the standard described in [this document](https://www.kreativekorp.com/ucsur/charts/sitelen.html).<br>
 nasin sitelen tan anpa nanpa li kepeken nasin pi [lipu ni](https://www.kreativekorp.com/ucsur/charts/sitelen.html).
 
 ## Ligatures Guide
-Ligatures are a font feature that allow nasin nanpa (and other many sitelen pona fonts) to display strings of existing Unicode characters as sitelen pona glyphs. However, not every text rendering context supports this font feature by default, and some may not at all! 
-- type the name of any glyph in latin characters (with or without a trailing space) and it will turn into the correct sitelen pona
-- ideographic space can be done with `  ` (double space) or `zz`
-- cartouches get opened with `[` and closed with `]`
-- cartouche colon is `:`
-- cartouche interpunct is `.`
-- manual lines are `_` for character extensions and `__` for cartouches (unless you want to do some fancy editing or opentype autocartouching isn't available, these shouldn't be necessary)
-- containers (character extensions) get opened with `(` and closed with `)`
-- scaled glyph combinations are done with `+`
-- stacked glyph combinations are done with `-`
-- directional ni can be done by adding `>` `^` `<` `v` and combinations thereof to `ni`
-- if a glyph has variants, put a number after the word to access it
+Ligatures are a font feature that allow nasin nanpa (and many other sitelen pona fonts) to display strings of existing Unicode characters as sitelen pona glyphs. However, not every text rendering context (web browser, text editing program, etc.) supports this font feature by default, and some may not at all (so see the **AHK Script Guide Section** at the end of this README)!
+
+This table describes both the ligatures in nasin nanpa and the AutoHotKey scripts:
+| Codepoint | Latin Text | Resulting Codepoint / Glyph |
+| --------- | ---------- | --------------------------- |
+| **U+F1900** -<br>**U+F1988** | `a`, `akesi` ... `wile` \| `namako` ... `ku` | _A_, _AKESI_ ... _WILE_ \| _NAMAKO_ ... _KU_ |
+| **U+3000** | `  ` / `zz`| _IDEOGRAPHIC SPACE_ |
+| **U+F1990** | `[` | _START OF CARTOUCHE_ |
+| **U+F1991** | `]` | _END OF CARTOUCHE_ |
+| **U+F1992** | `__` | _COMBINING CARTOUCHE EXTENSION_ |
+| **U+F1993** | (none) | _START OF LONG PI_ |
+| **U+F1994** | (none) | _COMBINING LONG PI EXTENSION_ |
+| **U+F1995** | `-` | _STACKING JOINER_ |
+| **U+F1996** | `+` | _SCALING JOINER_ |
+| **U+F1997** | `(` | _START OF LONG GLYPH_ |
+| **U+F1998** | `)` | _END OF LONG GLYPH_ |
+| **U+F1999** | `_` | _COMBINING LONG GLYPH EXTENSION_ |
+| **U+F199A** | (none) | _START OF REVERSE LONG GLYPH_ |
+| **U+F199B** | (none) | _END OF REVERSE LONG GLYPH_ |
+| **U+F199C** | `.` | _MIDDLE DOT_ |
+| **U+F199D** | `:` | _COLON_ |
+| **U+FE00** -<br>**U+FE03** | `1` - `4` | _VARIATION SELECTOR 1_ - _VARIATION SELECTOR 4_ |
+| (none) | `itan` | jan Itan's personal glyph |
+| (none) | `lepeka` | jan Lepeka's personal glyph |
+| (none) | `lipamanka` | lipamanka's personal glyph |
 
 ## AHK Scripts Guide
-
 [The AutoHotKey scripts](/ahk-script/) maintained in this repository can be used to input [the appropriate UCSUR character or control character](https://www.kreativekorp.com/ucsur/charts/sitelen.html) by replacing specific strings of (Latin) characters you type. There are 3 versions, all of which work in a very similar way:
 | Version | Format of file name | Source text example | Note |
 | ------- | ------------------- | ------------------- | ---- |
@@ -29,8 +42,4 @@ Ligatures are a font feature that allow nasin nanpa (and other many sitelen pona
 | Shorthand version | `stl-pon-X.Y.ahk` | ``aks`​`` | ``​`​`` ≈ confirm. All the words have 3 letter codes (you can view them by right-clicking the script and selecting 'Edit in Notepad')
 | Toggle version | `sitelen-pona-toggle-X.Y.ahk` | `akesi ` | ` ` ≈ confirm. Script can be toggled on/off with `Alt+Space`
 
-All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ above in their respective formats.
-Hopefully, soon, this will say *all* instead of most, but there's some work to be done before I can claim that.
-
-There is also an [old](/ahk-script/old/) folder that contains older versions of the scripts.
 Note: the script version numbering is independent of nasin nanpa's main version numbering.
