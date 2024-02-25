@@ -5,7 +5,10 @@
 
 
 #Hotstring EndChars -()[]{};'"/\,.?!`n`t
+
+#SuspendExempt
 !Space::Suspend
+#SuspendExempt False
 
 :*?:kijetesantakalu ::{U+F1980} ; 󱦀
 :*?:misikeke ::{U+F1987} ; 󱦇
@@ -165,8 +168,7 @@
 
 :*:.::{U+F199C} ; sitelen pona full stop
 
-; TODO: this doesn't work and i'm not 100% sure how to fix it!
-;:::Send {U+F199D} ; sitelen pona colon
+:::Send "{U+F199D}" ; sitelen pona colon
 
 
 :*:  ::{U+3000} ; logograph fullwidth space
