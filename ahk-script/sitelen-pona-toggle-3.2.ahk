@@ -1,3 +1,6 @@
+#Requires AutoHotkey v2.0+
+#SingleInstance force
+
 ; ---- USE ALT + SPACE TO TOGGLE SCRIPT ---- ;
 
 
@@ -149,9 +152,9 @@
 :*:[::{U+F1990} ; cartouche start
 :*:]::{U+F1991} ; cartouche end
 
-:*:=`::{U+200D} ; default zero width joiner
-:*:+`::{U+F1996} ; scaling joiner
-:*:-`::{U+F1995} ; stacking joiner
+:*:=``::{U+200D} ; default zero width joiner
+:*:+``::{U+F1996} ; scaling joiner
+:*:-``::{U+F1995} ; stacking joiner
 
 :*:(::{U+F1997} ; start left-combining (normal) long glyph
 :*:)::{U+F1998} ; end left-combining (normal) long glyph
@@ -161,7 +164,9 @@
 :*:}::{U+F199B} ; end right-combining (reversed) long glyph
 
 :*:.::{U+F199C} ; sitelen pona full stop
-:::Send {U+F199D} ; sitelen pona colon
+
+; TODO: this doesn't work and i'm not 100% sure how to fix it!
+;:::Send {U+F199D} ; sitelen pona colon
 
 
 :*:  ::{U+3000} ; logograph fullwidth space
