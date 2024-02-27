@@ -10,5 +10,4 @@
 All 3 scripts also support *most* of the control characters described in the __Ligatures Guide__ in their respective formats.
 Hopefully, soon, this will say *all* instead of most, but there's some work to be done before I can claim that.
 
-There is also an [old](/ahk-script/old/) folder that contains older versions of the scripts.
 Note: the script version numbering is independent of nasin nanpa's main version numbering.
