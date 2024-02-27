@@ -1,0 +1,4923 @@
+
+StartChar: glyph128_joinScale
+Encoding: 352 -1 352
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+940 100 m 0
+ 940 80 924 60 900 60 c 0
+ 883 60 867 71 862 88 c 2
+ 804 271 l 1
+ 754 153 636 70 500 70 c 0
+ 318 70 170 218 170 400 c 0
+ 170 565 291 702 450 726 c 1
+ 450 830 l 2
+ 450 858 472 880 500 880 c 0
+ 528 880 550 858 550 830 c 2
+ 550 726 l 1
+ 675 707 777 617 815 499 c 2
+ 938 112 l 2
+ 939 108 940 104 940 100 c 0
+500 650 m 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph128_joinScale joinScale
+LCarets2: 1 0
+Ligature2: "'liga' GLYPH THEN SCALE" glyph128 joinScale
+Substitution2: "'ss02' CONT SUB" glyph352.cont
+Substitution2: "'ss01' CART SUB" glyph352.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph129_joinScale
+Encoding: 353 -1 353
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+407 820 m 0
+ 407 781 376 750 337 750 c 0
+ 298 750 267 781 267 820 c 0
+ 267 859 298 890 337 890 c 0
+ 376 890 407 859 407 820 c 0
+733 820 m 0
+ 733 781 702 750 663 750 c 0
+ 624 750 593 781 593 820 c 0
+ 593 859 624 890 663 890 c 0
+ 702 890 733 859 733 820 c 0
+381 740 m 2
+ 619 740 l 2
+ 729 740 819 650 819 540 c 2
+ 819 530 l 1
+ 932 530 l 2
+ 960 530 982 508 982 480 c 0
+ 982 452 960 430 932 430 c 2
+ 819 430 l 1
+ 819 310 l 1
+ 932 310 l 2
+ 960 310 982 288 982 260 c 0
+ 982 232 960 210 932 210 c 2
+ 819 210 l 1
+ 819 200 l 2
+ 819 90 729 0 619 0 c 2
+ 381 0 l 2
+ 271 0 181 90 181 200 c 2
+ 181 210 l 1
+ 68 210 l 2
+ 40 210 18 232 18 260 c 0
+ 18 288 40 310 68 310 c 2
+ 181 310 l 1
+ 181 430 l 1
+ 68 430 l 2
+ 40 430 18 452 18 480 c 0
+ 18 508 40 530 68 530 c 2
+ 181 530 l 1
+ 181 540 l 2
+ 181 650 271 740 381 740 c 2
+281 540 m 2
+ 281 200 l 2
+ 281 145 326 100 381 100 c 2
+ 619 100 l 2
+ 674 100 719 145 719 200 c 2
+ 719 540 l 2
+ 719 595 674 640 619 640 c 2
+ 381 640 l 2
+ 326 640 281 595 281 540 c 2
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph129_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph129 joinScale
+Substitution2: "'ss02' CONT SUB" glyph353.cont
+Substitution2: "'ss01' CART SUB" glyph353.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph130_joinScale
+Encoding: 354 -1 354
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph354.cont
+Substitution2: "'ss01' CART SUB" glyph354.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph131_joinScale
+Encoding: 355 -1 355
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+880 200 m 0
+ 850 200 830 225 830 250 c 0
+ 830 255 831 261 833 266 c 2
+ 861 350 l 1
+ 834 350 l 1
+ 826 173 776 64 667 6 c 0
+ 611 -24 544 -38 471 -44 c 0
+ 398 -50 314 -50 222 -50 c 2
+ 220 -50 l 2
+ 192 -50 170 -28 170 0 c 2
+ 170 350 l 1
+ 70 350 l 2
+ 42 350 20 372 20 400 c 0
+ 20 428 42 450 70 450 c 2
+ 170 450 l 1
+ 170 800 l 2
+ 170 828 192 850 220 850 c 2
+ 222 850 l 2
+ 314 850 398 850 471 844 c 0
+ 544 838 611 824 667 794 c 0
+ 776 736 826 627 834 450 c 1
+ 861 450 l 1
+ 833 534 l 2
+ 831 539 830 545 830 550 c 0
+ 830 575 850 600 880 600 c 0
+ 901 600 920 587 927 566 c 2
+ 977 417 l 2
+ 979 412 980 406 980 400 c 0
+ 980 394 979 388 977 383 c 2
+ 927 234 l 2
+ 920 213 901 200 880 200 c 0
+270 50 m 1
+ 405 50 539 51 620 94 c 0
+ 689 131 735 206 735 400 c 0
+ 735 594 689 669 620 706 c 0
+ 539 749 405 750 270 750 c 1
+ 270 50 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph131_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph131 joinScale
+Substitution2: "'ss02' CONT SUB" glyph355.cont
+Substitution2: "'ss01' CART SUB" glyph355.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph132_joinScale
+Encoding: 356 -1 356
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+426 300 m 0
+ 456 300 476 275 476 250 c 0
+ 476 242 474 233 470 226 c 0
+ 441 172 412 125 379 91 c 0
+ 346 56 305 30 254 30 c 0
+ 181 30 128 81 97 146 c 0
+ 66 211 50 300 50 400 c 0
+ 50 500 66 589 97 654 c 0
+ 128 719 181 770 254 770 c 0
+ 305 770 346 744 379 709 c 0
+ 412 675 441 628 470 574 c 0
+ 474 567 476 558 476 550 c 0
+ 476 525 456 500 426 500 c 0
+ 408 500 390 510 381 527 c 0
+ 353 579 330 616 307 640 c 0
+ 285 663 268 670 254 670 c 0
+ 235 670 210 657 187 610 c 0
+ 164 563 150 492 150 400 c 0
+ 150 308 164 237 187 190 c 0
+ 210 143 235 130 254 130 c 0
+ 268 130 285 137 307 160 c 0
+ 330 184 353 222 381 274 c 0
+ 390 291 408 300 426 300 c 0
+574 500 m 0
+ 544 500 524 525 524 550 c 0
+ 524 558 526 567 530 574 c 0
+ 559 628 588 675 621 709 c 0
+ 654 744 695 770 746 770 c 0
+ 819 770 872 719 903 654 c 0
+ 934 589 950 500 950 400 c 0
+ 950 300 934 211 903 146 c 0
+ 872 81 819 30 746 30 c 0
+ 695 30 654 56 621 91 c 0
+ 588 125 559 172 530 226 c 0
+ 526 233 524 242 524 250 c 0
+ 524 275 544 300 574 300 c 0
+ 592 300 610 291 619 274 c 0
+ 647 222 670 184 693 160 c 0
+ 715 137 732 130 746 130 c 0
+ 765 130 790 143 813 190 c 0
+ 836 237 850 308 850 400 c 0
+ 850 492 836 563 813 610 c 0
+ 790 657 765 670 746 670 c 0
+ 732 670 715 663 693 640 c 0
+ 670 616 647 579 619 527 c 0
+ 610 510 592 500 574 500 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph132_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph132 joinScale
+Substitution2: "'ss02' CONT SUB" glyph356.cont
+Substitution2: "'ss01' CART SUB" glyph356.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph133_joinScale
+Encoding: 357 -1 357
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 480 m 0
+ 128 480 150 458 150 430 c 2
+ 150 180 l 1
+ 850 180 l 1
+ 850 430 l 2
+ 850 458 872 480 900 480 c 0
+ 928 480 950 458 950 430 c 2
+ 950 130 l 2
+ 950 102 928 80 900 80 c 2
+ 100 80 l 2
+ 72 80 50 102 50 130 c 2
+ 50 430 l 2
+ 50 458 72 480 100 480 c 0
+575 -15 m 0
+ 575 -56 541 -90 500 -90 c 0
+ 459 -90 425 -56 425 -15 c 0
+ 425 26 459 60 500 60 c 0
+ 541 60 575 26 575 -15 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph133_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph133 joinScale
+Substitution2: "'ss02' CONT SUB" glyph357.cont
+Substitution2: "'ss01' CART SUB" glyph357.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph134_joinScale
+Encoding: 358 -1 358
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+850 882 m 0
+ 875 882 900 861 900 832 c 0
+ 900 815 891 798 875 789 c 2
+ 525 587 l 2
+ 517 583 509 580 500 580 c 0
+ 491 580 483 583 475 587 c 2
+ 125 789 l 2
+ 109 798 100 815 100 832 c 0
+ 100 861 125 882 150 882 c 0
+ 158 882 167 880 175 875 c 2
+ 500 688 l 1
+ 825 875 l 2
+ 833 880 842 882 850 882 c 0
+150 -80 m 0
+ 125 -80 100 -60 100 -30 c 0
+ 100 -13 109 4 125 13 c 2
+ 475 213 l 2
+ 483 217 491 220 500 220 c 0
+ 509 220 517 217 525 213 c 2
+ 875 13 l 2
+ 891 4 900 -13 900 -30 c 0
+ 900 -59 875 -80 850 -80 c 0
+ 842 -80 833 -77 825 -73 c 2
+ 500 112 l 1
+ 175 -73 l 2
+ 167 -77 158 -80 150 -80 c 0
+EndSplineSet
+Validated: 1
+Ligature2: "'liga' GLYPH THEN SCALE" glyph134 joinScale
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph134_joinScale joinScale
+Substitution2: "'ss01' CART SUB" glyph358.cart
+Substitution2: "'ss02' CONT SUB" glyph358.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph135_joinScale
+Encoding: 359 -1 359
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph359.cont
+Substitution2: "'ss01' CART SUB" glyph359.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph136_joinScale
+Encoding: 360 -1 360
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+433 778 m 0
+ 457 792 473 799 501 799 c 0
+ 526 799 546 789 567 778 c 0
+ 599 761 641 730 680 678 c 0
+ 755 579 822 405 829 100 c 1
+ 930 100 l 2
+ 958 100 980 78 980 50 c 0
+ 980 22 958 0 930 0 c 2
+ 780 0 l 2
+ 752 0 730 22 730 50 c 0
+ 730 374 661 536 600 617 c 0
+ 569 657 540 678 520 689 c 0
+ 512 693 505 696 500 698 c 0
+ 495 696 488 693 480 689 c 0
+ 460 678 431 657 400 617 c 0
+ 339 536 270 374 270 50 c 0
+ 270 22 248 0 220 0 c 2
+ 70 0 l 2
+ 42 0 20 22 20 50 c 0
+ 20 78 42 100 70 100 c 2
+ 171 100 l 1
+ 178 405 245 579 320 678 c 0
+ 359 730 401 761 433 778 c 0
+EndSplineSet
+Validated: 1
+Ligature2: "'liga' GLYPH THEN SCALE" glyph136 joinScale
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph136_joinScale joinScale
+Substitution2: "'ss01' CART SUB" glyph360.cart
+Substitution2: "'ss02' CONT SUB" glyph360.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph137_joinScale
+Encoding: 361 -1 361
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph361.cont
+Substitution2: "'ss01' CART SUB" glyph361.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph138_joinScale
+Encoding: 362 -1 362
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph362.cart
+Substitution2: "'ss02' CONT SUB" glyph362.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph139_joinScale
+Encoding: 363 -1 363
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+975 -27 m 0
+ 975 -57 951 -77 925 -77 c 0
+ 922 -77 919 -77 916 -76 c 0
+ 700 -38 577 -12 484 17 c 0
+ 444 29 410 42 377 57 c 1
+ 355 -22 268 -77 182 -77 c 0
+ 127 -77 78 -63 46 -23 c 0
+ 16 15 9 65 9 115 c 0
+ 9 198 78 249 164 249 c 0
+ 173 249 183 248 192 247 c 1
+ 169 294 156 339 151 382 c 0
+ 149 395 149 408 149 421 c 0
+ 149 569 252 665 345 722 c 1
+ 268 745 182 764 87 776 c 0
+ 62 779 43 801 43 826 c 0
+ 43 855 67 876 93 876 c 0
+ 95 876 97 876 99 876 c 0
+ 242 858 369 822 474 785 c 1
+ 525 806 578 828 627 844 c 0
+ 682 862 738 876 793 876 c 0
+ 848 876 900 862 937 827 c 0
+ 975 791 991 741 991 684 c 0
+ 991 627 972 572 917 548 c 0
+ 898 540 877 536 856 536 c 0
+ 790 536 720 571 668 595 c 0
+ 618 618 555 649 477 678 c 1
+ 388 639 249 562 249 420 c 0
+ 249 411 250 403 251 394 c 0
+ 258 338 285 268 350 182 c 1
+ 406 153 452 133 514 113 c 0
+ 600 86 718 61 934 22 c 0
+ 958 18 975 -3 975 -27 c 0
+280 106 m 1
+ 267 113 252 121 238 129 c 0
+ 211 144 185 149 164 149 c 0
+ 154 149 145 148 137 146 c 0
+ 115 139 109 127 109 115 c 0
+ 109 70 116 50 124 40 c 0
+ 130 33 142 23 182 23 c 0
+ 215 23 250 40 269 62 c 0
+ 278 72 283 82 283 92 c 0
+ 283 96 282 101 280 106 c 1
+610 732 m 1
+ 654 713 691 695 721 681 c 0
+ 765 660 816 636 857 636 c 0
+ 866 636 872 637 876 639 c 0
+ 879 640 891 646 891 684 c 0
+ 891 722 880 743 868 754 c 0
+ 855 766 833 776 793 776 c 0
+ 740 776 662 752 610 732 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph139_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph139 joinScale
+Substitution2: "'ss02' CONT SUB" glyph363.cont
+Substitution2: "'ss01' CART SUB" glyph363.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph140_joinScale
+Encoding: 364 -1 364
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 50 m 0
+ 693 50 850 207 850 400 c 0
+ 850 593 693 750 500 750 c 0
+ 307 750 150 593 150 400 c 0
+ 150 207 307 50 500 50 c 0
+500 -50 m 0
+ 251 -50 50 151 50 400 c 0
+ 50 649 251 850 500 850 c 0
+ 749 850 950 649 950 400 c 0
+ 950 151 749 -50 500 -50 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph140_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph140 joinScale
+Substitution2: "'ss02' CONT SUB" glyph364.cont
+Substitution2: "'ss01' CART SUB" glyph364.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph141_joinScale
+Encoding: 365 -1 365
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+950 320 m 0
+ 950 295 930 270 900 270 c 0
+ 877 270 856 286 851 309 c 0
+ 809 492 665 620 500 620 c 0
+ 335 620 191 492 149 309 c 0
+ 144 286 123 270 100 270 c 0
+ 70 270 50 295 50 320 c 0
+ 50 324 50 327 51 331 c 0
+ 101 551 280 720 500 720 c 0
+ 720 720 899 551 949 331 c 0
+ 950 327 950 324 950 320 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph141_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph141 joinScale
+Substitution2: "'ss02' CONT SUB" glyph365.cont
+Substitution2: "'ss01' CART SUB" glyph365.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph142_joinScale
+Encoding: 366 -1 366
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 700 m 2
+ 50 728 72 750 100 750 c 2
+ 900 750 l 2
+ 928 750 950 728 950 700 c 2
+ 950 150 l 2
+ 950 122 928 100 900 100 c 2
+ 550 100 l 1
+ 550 -30 l 2
+ 550 -58 528 -80 500 -80 c 0
+ 472 -80 450 -58 450 -30 c 2
+ 450 100 l 1
+ 100 100 l 2
+ 72 100 50 122 50 150 c 2
+ 50 700 l 2
+550 200 m 1
+ 850 200 l 1
+ 850 650 l 1
+ 550 650 l 1
+ 550 600 l 2
+ 550 572 528 550 500 550 c 0
+ 472 550 450 572 450 600 c 2
+ 450 650 l 1
+ 150 650 l 1
+ 150 200 l 1
+ 450 200 l 1
+ 450 250 l 2
+ 450 278 472 300 500 300 c 0
+ 528 300 550 278 550 250 c 2
+ 550 200 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph142_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph142 joinScale
+Substitution2: "'ss02' CONT SUB" glyph366.cont
+Substitution2: "'ss01' CART SUB" glyph366.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph143_joinScale
+Encoding: 367 -1 367
+Width: 1000
+VWidth: 700
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+575 96 m 0
+ 575 55 541 21 500 21 c 0
+ 459 21 425 55 425 96 c 0
+ 425 137 459 171 500 171 c 0
+ 541 171 575 137 575 96 c 0
+200 600 m 0
+ 228 600 250 578 250 550 c 2
+ 250 10 l 1
+ 750 10 l 1
+ 750 550 l 2
+ 750 578 772 600 800 600 c 0
+ 828 600 850 578 850 550 c 2
+ 850 -40 l 2
+ 850 -68 828 -90 800 -90 c 2
+ 200 -90 l 2
+ 172 -90 150 -68 150 -40 c 2
+ 150 550 l 2
+ 150 578 172 600 200 600 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph143_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph143 joinScale
+Substitution2: "'ss02' CONT SUB" glyph367.cont
+Substitution2: "'ss01' CART SUB" glyph367.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph144_joinScale
+Encoding: 368 -1 368
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+349 887 m 0
+ 374 887 399 866 399 837 c 0
+ 399 820 390 803 374 794 c 0
+ 328 767 308 753 284 729 c 1
+ 412 808 548 837 641 837 c 0
+ 713 837 774 830 823 818 c 0
+ 872 805 915 787 937 746 c 0
+ 944 732 948 718 948 705 c 0
+ 948 668 924 635 902 615 c 0
+ 865 580 792 540 713 508 c 1
+ 720 505 739 501 744 501 c 0
+ 794 524 822 526 871 550 c 0
+ 878 554 885 555 892 555 c 0
+ 919 555 942 531 942 504 c 0
+ 942 499 942 494 940 489 c 0
+ 883 318 825 194 713 78 c 1
+ 706 70 l 1
+ 687 62 675 57 651 50 c 1
+ 644 33 633 17 621 3 c 0
+ 570 -55 475 -97 349 -97 c 0
+ 262 -97 150 -47 98 6 c 0
+ 78 26 58 56 58 92 c 0
+ 58 122 69 148 93 167 c 0
+ 116 185 142 190 167 190 c 0
+ 208 190 254 175 289 156 c 0
+ 342 128 399 119 454 119 c 0
+ 466 119 478 119 490 120 c 1
+ 469 122 447 123 426 126 c 0
+ 366 134 298 155 229 225 c 0
+ 182 273 169 332 169 389 c 0
+ 169 474 195 543 213 609 c 0
+ 216 621 218 629 219 635 c 1
+ 202 657 179 686 179 723 c 0
+ 179 768 206 796 234 819 c 0
+ 256 838 286 858 324 880 c 0
+ 332 885 340 887 349 887 c 0
+808 420 m 1
+ 790 413 767 401 743 401 c 0
+ 728 401 714 404 703 407 c 0
+ 657 419 611 443 584 474 c 0
+ 578 480 564 498 564 520 c 0
+ 564 531 568 543 576 554 c 0
+ 585 566 596 571 604 574 c 0
+ 638 586 668 597 695 609 c 0
+ 767 640 811 667 833 688 c 0
+ 840 694 844 699 846 702 c 0
+ 835 711 822 715 799 721 c 0
+ 761 731 708 737 641 737 c 0
+ 561 737 435 710 319 633 c 1
+ 317 603 307 573 299 546 c 0
+ 287 504 269 439 269 389 c 0
+ 269 350 278 317 301 294 c 0
+ 350 244 395 231 439 225 c 0
+ 497 217 543 223 592 199 c 0
+ 614 188 632 172 644 153 c 0
+ 646 154 647 155 648 155 c 0
+ 719 231 766 313 808 420 c 1
+461 19 m 1
+ 454 19 l 2
+ 387 19 312 31 242 68 c 0
+ 218 81 191 90 169 90 c 0
+ 166 90 162 89 159 89 c 1
+ 160 86 163 82 169 76 c 0
+ 180 65 198 53 220 41 c 0
+ 265 17 317 3 349 3 c 0
+ 394 3 431 10 461 19 c 1
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph144_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph144 joinScale
+Substitution2: "'ss02' CONT SUB" glyph368.cont
+Substitution2: "'ss01' CART SUB" glyph368.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph145_joinScale
+Encoding: 369 -1 369
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+101 -100 m 0
+ 75 -100 51 -78 51 -50 c 0
+ 51 -36 56 -22 68 -12 c 2
+ 218 116 l 1
+ 145 188 100 289 100 400 c 0
+ 100 621 279 800 500 800 c 0
+ 721 800 900 621 900 400 c 0
+ 900 289 855 188 782 116 c 1
+ 932 -12 l 2
+ 944 -22 950 -36 950 -50 c 0
+ 950 -78 926 -100 900 -100 c 0
+ 889 -100 877 -96 868 -88 c 2
+ 701 54 l 1
+ 642 20 573 0 500 0 c 0
+ 427 0 358 20 299 54 c 1
+ 134 -88 l 2
+ 125 -96 113 -100 101 -100 c 0
+200 400 m 0
+ 200 234 334 100 500 100 c 0
+ 666 100 800 234 800 400 c 0
+ 800 566 666 700 500 700 c 0
+ 334 700 200 566 200 400 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph145_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph145 joinScale
+Substitution2: "'ss02' CONT SUB" glyph369.cont
+Substitution2: "'ss01' CART SUB" glyph369.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph146_joinScale
+Encoding: 370 -1 370
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 870 m 0
+ 528 870 550 848 550 820 c 2
+ 550 746 l 1
+ 703 724 824 603 846 450 c 1
+ 920 450 l 2
+ 948 450 970 428 970 400 c 0
+ 970 372 948 350 920 350 c 2
+ 846 350 l 1
+ 840 305 826 264 804 226 c 1
+ 943 -15 l 2
+ 948 -24 950 -32 950 -40 c 0
+ 950 -68 923 -90 899 -90 c 2
+ 103 -90 l 2
+ 79 -90 52 -68 52 -40 c 0
+ 52 -32 54 -24 59 -15 c 2
+ 197 224 l 1
+ 175 262 160 305 154 350 c 1
+ 80 350 l 2
+ 52 350 30 372 30 400 c 0
+ 30 428 52 450 80 450 c 2
+ 154 450 l 1
+ 176 603 297 724 450 746 c 1
+ 450 820 l 2
+ 450 848 472 870 500 870 c 0
+265 141 m 1
+ 189 10 l 1
+ 813 10 l 1
+ 737 142 l 1
+ 675 85 591 50 500 50 c 0
+ 409 50 327 85 265 141 c 1
+500 130 m 0
+ 649 130 770 251 770 400 c 0
+ 770 549 649 670 500 670 c 0
+ 351 670 230 549 230 400 c 0
+ 230 251 351 130 500 130 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph146_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph146 joinScale
+Substitution2: "'ss02' CONT SUB" glyph370.cont
+Substitution2: "'ss01' CART SUB" glyph370.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph147_joinScale
+Encoding: 371 -1 371
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+675 715 m 0
+ 675 618 597 540 500 540 c 0
+ 460 540 423 554 393 577 c 1
+ 352 556 l 1
+ 265 505 207 411 207 303 c 0
+ 207 141 338 10 500 10 c 0
+ 645 10 765 115 789 253 c 1
+ 727 253 l 2
+ 699 253 677 275 677 303 c 0
+ 677 331 699 353 727 353 c 2
+ 843 353 l 2
+ 871 353 893 331 893 303 c 0
+ 893 86 717 -90 500 -90 c 0
+ 283 -90 107 86 107 303 c 0
+ 107 449 186 575 303 643 c 0
+ 304 643 305 645 306 645 c 2
+ 334 659 l 1
+ 328 677 325 695 325 715 c 0
+ 325 812 403 890 500 890 c 0
+ 597 890 675 812 675 715 c 0
+575 715 m 0
+ 575 756 541 790 500 790 c 0
+ 459 790 425 756 425 715 c 0
+ 425 674 459 640 500 640 c 0
+ 541 640 575 674 575 715 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph147_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph147 joinScale
+Substitution2: "'ss02' CONT SUB" glyph371.cont
+Substitution2: "'ss01' CART SUB" glyph371.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph148_joinScale
+Encoding: 372 -1 372
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+70 41 m 0
+ 38 41 20 65 20 95 c 0
+ 20 97 21 100 21 102 c 0
+ 24 133 27 155 35 195 c 0
+ 46 251 64 324 97 400 c 1
+ 64 476 46 549 35 605 c 0
+ 26 649 20 672 20 710 c 0
+ 20 737 42 759 71 759 c 0
+ 100 759 117 736 120 707 c 0
+ 126 642 140 582 160 518 c 1
+ 245 647 383 760 604 760 c 0
+ 693 760 771 730 828 670 c 0
+ 889 605 920 512 920 400 c 0
+ 920 288 889 195 828 130 c 0
+ 771 70 693 40 604 40 c 0
+ 383 40 245 153 160 282 c 1
+ 139 215 125 157 120 87 c 0
+ 118 61 96 41 70 41 c 0
+207 400 m 1
+ 275 265 393 140 598 140 c 0
+ 667 140 718 160 755 199 c 0
+ 794 240 820 306 820 400 c 0
+ 820 494 794 560 755 601 c 0
+ 718 640 667 660 598 660 c 0
+ 392 660 275 535 207 400 c 1
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph148_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph148 joinScale
+Substitution2: "'ss02' CONT SUB" glyph372.cont
+Substitution2: "'ss01' CART SUB" glyph372.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph149_joinScale
+Encoding: 373 -1 373
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+680 562 m 0
+ 653 562 630 585 630 612 c 0
+ 630 625 635 637 645 647 c 2
+ 755 757 l 2
+ 765 767 777 772 790 772 c 0
+ 817 772 840 749 840 722 c 0
+ 840 709 835 697 825 687 c 2
+ 715 577 l 2
+ 705 567 693 562 680 562 c 0
+160 722 m 0
+ 160 749 183 772 210 772 c 0
+ 223 772 235 767 245 757 c 2
+ 355 647 l 2
+ 365 637 370 625 370 612 c 0
+ 370 585 347 562 320 562 c 0
+ 307 562 295 567 285 577 c 2
+ 175 687 l 2
+ 165 697 160 709 160 722 c 0
+500 888 m 0
+ 528 888 550 866 550 838 c 2
+ 550 674 l 2
+ 550 646 528 624 500 624 c 0
+ 472 624 450 646 450 674 c 2
+ 450 838 l 2
+ 450 866 472 888 500 888 c 0
+900 450 m 1
+ 928 450 950 428 950 400 c 0
+ 950 151 749 -50 500 -50 c 0
+ 251 -50 50 151 50 400 c 0
+ 50 428 72 450 100 450 c 2
+ 250 450 l 2
+ 278 450 300 428 300 400 c 0
+ 300 372 278 350 250 350 c 2
+ 154 350 l 1
+ 178 180 324 50 500 50 c 0
+ 676 50 822 180 846 350 c 1
+ 750 350 l 2
+ 722 350 700 372 700 400 c 0
+ 700 428 722 450 750 450 c 2
+ 900 450 l 1
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph149_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph149 joinScale
+Substitution2: "'ss02' CONT SUB" glyph373.cont
+Substitution2: "'ss01' CART SUB" glyph373.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph150_joinScale
+Encoding: 374 -1 374
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+10 78 m 0
+ 10 108 35 128 60 128 c 0
+ 66 128 73 127 79 124 c 0
+ 123 105 160 101 200 100 c 1
+ 206 422 266 597 334 692 c 0
+ 370 742 408 769 440 784 c 0
+ 463 795 476 800 500 800 c 0
+ 523 800 538 795 560 785 c 0
+ 591 771 629 745 665 696 c 0
+ 737 599 800 419 800 78 c 0
+ 800 32 751 23 707 15 c 0
+ 666 7 603 0 510 0 c 0
+ 482 0 460 22 460 50 c 0
+ 460 78 482 100 510 100 c 0
+ 606 100 658 106 700 115 c 1
+ 696 421 636 567 585 636 c 0
+ 559 671 534 687 519 694 c 0
+ 510 698 505 699 500 700 c 0
+ 496 699 491 698 482 694 c 0
+ 467 687 442 670 416 633 c 0
+ 362 558 300 396 300 50 c 0
+ 300 23 277 0 250 0 c 0
+ 239 0 228 0 217 -0 c 0
+ 163 0 110 2 41 31 c 0
+ 22 39 10 58 10 78 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph150_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph150 joinScale
+Substitution2: "'ss02' CONT SUB" glyph374.cont
+Substitution2: "'ss01' CART SUB" glyph374.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph151_joinScale
+Encoding: 375 -1 375
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph375.cart
+Substitution2: "'ss02' CONT SUB" glyph375.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph152_joinScale
+Encoding: 376 -1 376
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+750 850 m 0
+ 783 850 799 825 799 800 c 0
+ 799 776 790 761 779 741 c 0
+ 764 715 740 683 700 651 c 0
+ 626 592 503 539 300 531 c 1
+ 300 269 l 1
+ 503 261 626 208 700 149 c 0
+ 740 117 764 85 779 59 c 0
+ 791 38 800 25 800 -0 c 0
+ 800 -26 780 -50 750 -50 c 0
+ 727 -50 708 -35 701 -12 c 0
+ 699 -5 698 0 692 10 c 0
+ 683 26 667 48 638 71 c 0
+ 585 113 485 162 300 169 c 1
+ 300 0 l 2
+ 300 -28 278 -50 250 -50 c 0
+ 222 -50 200 -28 200 0 c 2
+ 200 800 l 2
+ 200 828 222 850 250 850 c 0
+ 278 850 300 828 300 800 c 2
+ 300 631 l 1
+ 485 638 585 687 638 729 c 0
+ 667 752 683 774 692 790 c 0
+ 698 800 699 805 701 812 c 0
+ 707 835 727 850 750 850 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph152_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph152 joinScale
+Substitution2: "'ss02' CONT SUB" glyph376.cont
+Substitution2: "'ss01' CART SUB" glyph376.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph153_joinScale
+Encoding: 377 -1 377
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 123 m 0
+ 50 148 71 173 100 173 c 0
+ 117 173 134 164 143 149 c 2
+ 179 89 l 1
+ 201 116 233 138 265 153 c 0
+ 315 177 379 193 450 198 c 1
+ 450 210 l 2
+ 450 238 472 260 500 260 c 0
+ 528 260 550 238 550 210 c 2
+ 550 198 l 1
+ 621 193 685 177 735 153 c 0
+ 793 125 850 77 850 9 c 2
+ 850 -40 l 2
+ 850 -68 828 -90 800 -90 c 0
+ 772 -90 750 -68 750 -40 c 2
+ 750 9 l 2
+ 750 17 741 39 692 63 c 0
+ 646 85 579 100 500 100 c 0
+ 421 100 354 85 308 63 c 0
+ 259 39 250 17 250 9 c 2
+ 250 -40 l 2
+ 250 -70 225 -89 199 -89 c 0
+ 183 -89 167 -82 157 -66 c 2
+ 57 97 l 2
+ 52 105 50 114 50 123 c 0
+100 840 m 2
+ 100 868 122 890 150 890 c 2
+ 850 890 l 2
+ 878 890 900 868 900 840 c 2
+ 900 650 l 2
+ 900 622 878 600 850 600 c 2
+ 550 600 l 1
+ 550 592 l 2
+ 550 564 528 542 500 542 c 0
+ 472 542 450 564 450 592 c 2
+ 450 600 l 1
+ 150 600 l 2
+ 122 600 100 622 100 650 c 2
+ 100 840 l 2
+200 790 m 1
+ 200 700 l 1
+ 800 700 l 1
+ 800 790 l 1
+ 200 790 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph153_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph153 joinScale
+Substitution2: "'ss02' CONT SUB" glyph377.cont
+Substitution2: "'ss01' CART SUB" glyph377.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph154_joinScale
+Encoding: 378 -1 378
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+430 840 m 0
+ 430 865 449 890 480 890 c 0
+ 503 890 522 874 529 851 c 0
+ 541 813 554 766 559 717 c 1
+ 606 727 662 740 717 740 c 0
+ 836 740 950 680 950 398 c 0
+ 950 148 750 -52 500 -52 c 0
+ 250 -52 50 148 50 398 c 0
+ 50 682 163 743 279 743 c 0
+ 344 743 404 725 458 713 c 1
+ 454 749 442 794 432 824 c 0
+ 430 829 430 835 430 840 c 0
+714 640 m 0
+ 641 640 576 608 500 608 c 0
+ 427 608 353 643 281 643 c 0
+ 237 643 211 634 190 602 c 0
+ 171 572 150 514 150 398 c 0
+ 150 203 305 48 500 48 c 0
+ 695 48 850 203 850 398 c 0
+ 850 511 829 569 810 598 c 0
+ 789 630 754 640 714 640 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph154_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph154 joinScale
+Substitution2: "'ss02' CONT SUB" glyph378.cont
+Substitution2: "'ss01' CART SUB" glyph378.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph155_joinScale
+Encoding: 379 -1 379
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+539 -72 m 2
+ 529 -84 514 -90 500 -90 c 0
+ 486 -90 471 -84 461 -72 c 2
+ 41 438 l 2
+ 33 447 30 459 30 470 c 0
+ 30 481 33 491 40 500 c 2
+ 213 730 l 2
+ 222 743 237 750 253 750 c 2
+ 747 750 l 2
+ 763 750 778 743 787 730 c 2
+ 960 500 l 2
+ 967 491 970 481 970 470 c 0
+ 970 459 967 447 959 438 c 2
+ 539 -72 l 2
+856 472 m 1
+ 722 650 l 1
+ 278 650 l 1
+ 144 472 l 1
+ 500 39 l 1
+ 856 472 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph155_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph155 joinScale
+Substitution2: "'ss02' CONT SUB" glyph379.cont
+Substitution2: "'ss01' CART SUB" glyph379.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph156_joinScale
+Encoding: 380 -1 380
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+749 97 m 0
+ 749 125 726 171 726 208 c 0
+ 726 215 726 222 727 229 c 0
+ 733 262 752 291 780 319 c 0
+ 807 347 835 361 863 383 c 0
+ 880 397 887 407 887 426 c 0
+ 887 434 854 447 838 454 c 0
+ 796 472 755 487 730 529 c 0
+ 712 559 706 585 706 611 c 0
+ 706 652 720 691 723 743 c 0
+ 724 756 721 762 718 765 c 0
+ 710 774 687 780 666 780 c 0
+ 645 780 620 775 596 766 c 0
+ 521 736 506 659 414 638 c 0
+ 406 636 398 636 391 636 c 0
+ 365 636 342 646 325 655 c 0
+ 284 677 218 736 172 736 c 0
+ 167 736 161 736 156 735 c 0
+ 146 733 127 716 120 669 c 0
+ 119 660 118 651 118 642 c 0
+ 118 607 127 573 143 551 c 0
+ 170 512 180 471 180 430 c 0
+ 180 364 154 300 136 246 c 0
+ 122 204 111 167 111 134 c 0
+ 111 96 126 64 171 35 c 0
+ 186 26 200 21 215 21 c 0
+ 262 21 309 63 339 89 c 0
+ 369 115 404 147 454 147 c 0
+ 491 147 526 131 553 120 c 0
+ 591 105 653 81 710 81 c 0
+ 722 81 747 85 748 88 c 2
+ 748 88 749 93 749 97 c 0
+18 642 m 0
+ 18 739 61 837 176 837 c 0
+ 260 837 316 774 372 743 c 0
+ 386 735 391 736 391 736 c 1
+ 410 740 425 754 450 780 c 0
+ 474 805 506 838 559 859 c 0
+ 593 872 629 879 663 879 c 0
+ 749 879 823 836 823 746 c 0
+ 823 697 813 662 808 627 c 0
+ 807 621 806 617 806 612 c 0
+ 806 589 816 575 838 563 c 0
+ 896 532 987 517 987 426 c 0
+ 987 342 932 308 884 274 c 0
+ 871 265 860 258 851 249 c 0
+ 829 226 826 218 826 208 c 0
+ 826 203 827 195 832 181 c 0
+ 842 154 849 125 849 97 c 0
+ 849 66 841 37 816 14 c 0
+ 790 -10 753 -19 714 -19 c 0
+ 635 -19 545 17 497 35 c 0
+ 472 45 460 47 453 47 c 0
+ 449 47 447 46 446 45 c 0
+ 438 41 427 31 407 15 c 0
+ 362 -23 294 -80 215 -80 c 0
+ 184 -80 152 -71 118 -49 c 0
+ 41 0 11 60 11 138 c 0
+ 11 238 62 307 77 395 c 0
+ 79 407 80 418 80 429 c 0
+ 80 454 74 475 61 493 c 0
+ 31 535 18 590 18 642 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph156_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph156 joinScale
+Substitution2: "'ss02' CONT SUB" glyph380.cont
+Substitution2: "'ss01' CART SUB" glyph380.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph157_joinScale
+Encoding: 381 -1 381
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+236 850 m 0
+ 261 850 286 830 286 800 c 0
+ 286 778 271 757 248 751 c 0
+ 210 741 184 734 163 719 c 0
+ 145 706 127 685 116 642 c 0
+ 112 628 110 615 110 602 c 0
+ 110 544 148 496 204 425 c 0
+ 254 362 310 292 310 198 c 0
+ 310 107 265 36 215 1 c 0
+ 178 -25 135 -37 98 -48 c 0
+ 93 -49 89 -50 84 -50 c 0
+ 59 -50 34 -30 34 0 c 0
+ 34 22 48 42 70 48 c 0
+ 110 59 137 68 158 83 c 0
+ 176 96 193 116 204 158 c 0
+ 208 172 210 184 210 197 c 0
+ 210 256 171 305 116 375 c 0
+ 65 439 10 508 10 601 c 0
+ 10 692 55 764 105 800 c 0
+ 143 827 186 840 224 849 c 0
+ 228 850 232 850 236 850 c 0
+916 850 m 0
+ 941 850 966 830 966 800 c 0
+ 966 778 951 757 928 751 c 0
+ 890 741 864 734 843 719 c 0
+ 825 706 807 685 796 642 c 0
+ 792 628 790 615 790 602 c 0
+ 790 544 828 496 884 425 c 0
+ 934 362 990 292 990 198 c 0
+ 990 107 945 36 895 1 c 0
+ 858 -25 815 -37 778 -48 c 0
+ 773 -49 769 -50 764 -50 c 0
+ 739 -50 714 -30 714 0 c 0
+ 714 22 728 42 750 48 c 0
+ 790 59 817 68 838 83 c 0
+ 856 96 873 116 884 158 c 0
+ 888 172 890 184 890 197 c 0
+ 890 256 851 305 796 375 c 0
+ 745 439 690 508 690 601 c 0
+ 690 692 735 764 785 800 c 0
+ 823 827 866 840 904 849 c 0
+ 908 850 912 850 916 850 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph157_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph157 joinScale
+Substitution2: "'ss02' CONT SUB" glyph381.cont
+Substitution2: "'ss01' CART SUB" glyph381.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph158_joinScale
+Encoding: 382 -1 382
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+544 864 m 2
+ 646 680 l 1
+ 850 680 l 2
+ 878 680 900 658 900 630 c 0
+ 900 602 878 580 850 580 c 2
+ 702 580 l 1
+ 984 72 l 2
+ 989 64 990 56 990 48 c 0
+ 990 20 965 -2 940 -2 c 2
+ 60 -2 l 2
+ 35 -2 10 20 10 48 c 0
+ 10 56 11 64 16 72 c 2
+ 298 580 l 1
+ 150 580 l 2
+ 122 580 100 602 100 630 c 0
+ 100 658 122 680 150 680 c 2
+ 354 680 l 1
+ 456 864 l 2
+ 465 880 482 890 500 890 c 0
+ 518 890 535 880 544 864 c 2
+532 680 m 1
+ 500 737 l 1
+ 468 680 l 1
+ 532 680 l 1
+413 580 m 1
+ 145 98 l 1
+ 855 98 l 1
+ 587 580 l 1
+ 413 580 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph158_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph158 joinScale
+Substitution2: "'ss02' CONT SUB" glyph382.cont
+Substitution2: "'ss01' CART SUB" glyph382.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph159_joinScale
+Encoding: 383 -1 383
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+502 701 m 0
+ 527 701 547 721 547 746 c 0
+ 547 771 527 791 502 791 c 0
+ 477 791 457 771 457 746 c 0
+ 457 721 477 701 502 701 c 0
+502 601 m 0
+ 422 601 357 666 357 746 c 0
+ 357 826 422 891 502 891 c 0
+ 582 891 647 826 647 746 c 0
+ 647 666 582 601 502 601 c 0
+759 126 m 0
+ 784 126 804 146 804 171 c 0
+ 804 196 784 216 759 216 c 0
+ 734 216 714 196 714 171 c 0
+ 714 146 734 126 759 126 c 0
+759 26 m 0
+ 679 26 614 91 614 171 c 0
+ 614 251 679 316 759 316 c 0
+ 839 316 904 251 904 171 c 0
+ 904 91 839 26 759 26 c 0
+241 126 m 0
+ 266 126 286 146 286 171 c 0
+ 286 196 266 216 241 216 c 0
+ 216 216 196 196 196 171 c 0
+ 196 146 216 126 241 126 c 0
+241 26 m 0
+ 161 26 96 91 96 171 c 0
+ 96 251 161 316 241 316 c 0
+ 321 316 386 251 386 171 c 0
+ 386 91 321 26 241 26 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph159_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph159 joinScale
+Substitution2: "'ss02' CONT SUB" glyph383.cont
+Substitution2: "'ss01' CART SUB" glyph383.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph160_joinScale
+Encoding: 384 -1 384
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+255 -88 m 0
+ 230 -88 205 -68 205 -38 c 0
+ 205 -20 215 -2 233 7 c 0
+ 468 122 607 196 688 273 c 0
+ 762 343 790 409 790 546 c 0
+ 790 597 760 658 710 708 c 0
+ 660 758 599 788 548 788 c 0
+ 501 788 470 767 433 719 c 0
+ 385 656 348 584 295 515 c 0
+ 285 502 270 496 255 496 c 0
+ 227 496 205 520 205 546 c 0
+ 205 557 208 568 215 577 c 0
+ 267 644 304 714 354 779 c 0
+ 400 839 457 888 548 888 c 0
+ 634 888 719 841 781 779 c 0
+ 843 717 890 632 890 546 c 0
+ 890 383 845 284 756 200 c 0
+ 661 111 507 30 277 -83 c 0
+ 270 -86 262 -88 255 -88 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph160_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph160 joinScale
+Substitution2: "'ss02' CONT SUB" glyph384.cont
+Substitution2: "'ss01' CART SUB" glyph384.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph161_joinScale
+Encoding: 385 -1 385
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph385.cart
+Substitution2: "'ss02' CONT SUB" glyph385.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph162_joinScale
+Encoding: 386 -1 386
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 730 m 0
+ 682 730 830 582 830 400 c 0
+ 830 218 682 70 500 70 c 0
+ 335 70 198 191 174 350 c 1
+ 60 350 l 2
+ 32 350 10 372 10 400 c 0
+ 10 428 32 450 60 450 c 2
+ 174 450 l 1
+ 198 609 335 730 500 730 c 0
+500 630 m 0
+ 373 630 270 527 270 400 c 0
+ 270 273 373 170 500 170 c 0
+ 627 170 730 273 730 400 c 0
+ 730 527 627 630 500 630 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph162_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph162 joinScale
+Substitution2: "'ss02' CONT SUB" glyph386.cont
+Substitution2: "'ss01' CART SUB" glyph386.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph163_joinScale
+Encoding: 387 -1 387
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+201 890 m 2
+ 203 890 l 1
+ 260 888 322 882 375 869 c 0
+ 401 863 429 854 451 841 c 0
+ 472 829 488 813 501 797 c 1
+ 514 813 530 828 550 840 c 0
+ 612 876 709 887 798 890 c 0
+ 799 890 799 890 800 890 c 0
+ 828 890 849 867 849 839 c 0
+ 849 834 849 828 847 822 c 0
+ 842 806 838 794 828 775 c 0
+ 814 748 789 712 750 689 c 0
+ 711 666 662 657 611 650 c 1
+ 969 30 l 2
+ 974 21 976 12 976 4 c 0
+ 976 -24 949 -46 925 -46 c 2
+ 75 -46 l 2
+ 51 -46 24 -24 24 4 c 0
+ 24 12 26 21 31 30 c 2
+ 390 650 l 1
+ 339 657 290 667 251 690 c 0
+ 212 713 187 748 173 775 c 0
+ 163 794 151 818 151 840 c 0
+ 151 868 174 890 201 890 c 2
+161 54 m 1
+ 839 54 l 1
+ 501 640 l 1
+ 499 640 l 1
+ 161 54 l 1
+592 748 m 1
+ 633 753 686 764 709 782 c 1
+ 668 776 615 766 592 748 c 1
+292 782 m 1
+ 315 764 369 754 410 748 c 1
+ 387 767 333 776 292 782 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph163_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph163 joinScale
+Substitution2: "'ss02' CONT SUB" glyph387.cont
+Substitution2: "'ss01' CART SUB" glyph387.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph164_joinScale
+Encoding: 388 -1 388
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+820 576 m 1
+ 828 540 833 503 833 465 c 0
+ 833 238 673 40 461 40 c 0
+ 249 40 90 238 90 465 c 0
+ 90 692 249 890 461 890 c 0
+ 602 890 721 802 784 676 c 1
+ 940 676 l 2
+ 968 676 990 654 990 626 c 0
+ 990 598 968 576 940 576 c 2
+ 820 576 l 1
+255 676 m 1
+ 668 676 l 1
+ 617 747 541 790 461 790 c 0
+ 381 790 306 747 255 676 c 1
+206 577 m 0
+ 195 543 190 505 190 465 c 0
+ 190 278 318 140 461 140 c 0
+ 604 140 733 278 733 465 c 0
+ 733 504 727 542 717 576 c 1
+ 215 576 l 2
+ 212 576 209 577 206 577 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph164_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph164 joinScale
+Substitution2: "'ss02' CONT SUB" glyph388.cont
+Substitution2: "'ss01' CART SUB" glyph388.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph165_joinScale
+Encoding: 389 -1 389
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+200 750 m 2
+ 800 750 l 2
+ 828 750 850 728 850 700 c 2
+ 850 -40 l 2
+ 850 -68 828 -90 800 -90 c 0
+ 772 -90 750 -68 750 -40 c 2
+ 750 50 l 1
+ 550 50 l 1
+ 550 -40 l 2
+ 550 -68 528 -90 500 -90 c 0
+ 472 -90 450 -68 450 -40 c 2
+ 450 50 l 1
+ 250 50 l 1
+ 250 -40 l 2
+ 250 -68 228 -90 200 -90 c 0
+ 172 -90 150 -68 150 -40 c 2
+ 150 700 l 2
+ 150 728 172 750 200 750 c 2
+750 150 m 1
+ 750 650 l 1
+ 250 650 l 1
+ 250 150 l 1
+ 750 150 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph165_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph165 joinScale
+Substitution2: "'ss02' CONT SUB" glyph389.cont
+Substitution2: "'ss01' CART SUB" glyph389.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph166_joinScale
+Encoding: 390 -1 390
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph390.cart
+Substitution2: "'ss02' CONT SUB" glyph390.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph167_joinScale
+Encoding: 391 -1 391
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph391.cart
+Substitution2: "'ss02' CONT SUB" glyph391.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph168_joinScale
+Encoding: 392 -1 392
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph392.cont
+Substitution2: "'ss01' CART SUB" glyph392.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph169_joinScale
+Encoding: 393 -1 393
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph393.cont
+Substitution2: "'ss01' CART SUB" glyph393.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph170_joinScale
+Encoding: 394 -1 394
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+150 800 m 2
+ 150 828 172 850 200 850 c 2
+ 800 850 l 2
+ 828 850 850 828 850 800 c 2
+ 850 0 l 2
+ 850 -28 828 -50 800 -50 c 2
+ 200 -50 l 2
+ 172 -50 150 -28 150 0 c 2
+ 150 800 l 2
+250 750 m 1
+ 250 50 l 1
+ 750 50 l 1
+ 750 750 l 1
+ 250 750 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph170_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph170 joinScale
+Substitution2: "'ss02' CONT SUB" glyph394.cont
+Substitution2: "'ss01' CART SUB" glyph394.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph171_joinScale
+Encoding: 395 -1 395
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+210 840 m 0
+ 210 868 232 890 260 890 c 2
+ 740 890 l 2
+ 768 890 790 868 790 840 c 0
+ 790 680 660 550 500 550 c 0
+ 340 550 210 680 210 840 c 0
+317 790 m 1
+ 339 709 412 650 500 650 c 0
+ 588 650 661 709 683 790 c 1
+ 317 790 l 1
+499 250 m 0
+ 513 250 526 245 535 235 c 2
+ 768 -5 l 2
+ 778 -15 782 -27 782 -39 c 0
+ 782 -65 760 -90 732 -90 c 2
+ 266 -90 l 2
+ 238 -90 216 -65 216 -39 c 0
+ 216 -27 220 -15 230 -5 c 2
+ 463 235 l 2
+ 472 245 485 250 499 250 c 0
+384 10 m 1
+ 614 10 l 1
+ 499 128 l 1
+ 384 10 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph171_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph171 joinScale
+Substitution2: "'ss02' CONT SUB" glyph395.cont
+Substitution2: "'ss01' CART SUB" glyph395.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph172_joinScale
+Encoding: 396 -1 396
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 -40 m 0
+ 50 -12 72 10 100 10 c 2
+ 900 10 l 2
+ 928 10 950 -12 950 -40 c 0
+ 950 -68 928 -90 900 -90 c 2
+ 100 -90 l 2
+ 72 -90 50 -68 50 -40 c 0
+575 115 m 0
+ 575 74 541 40 500 40 c 0
+ 459 40 425 74 425 115 c 0
+ 425 156 459 190 500 190 c 0
+ 541 190 575 156 575 115 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph172_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph172 joinScale
+Substitution2: "'ss02' CONT SUB" glyph396.cont
+Substitution2: "'ss01' CART SUB" glyph396.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph173_joinScale
+Encoding: 397 -1 397
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+9 348 m 0
+ 9 373 29 398 59 398 c 0
+ 79 398 98 386 106 367 c 2
+ 150 257 l 1
+ 150 450 l 2
+ 150 643 307 800 500 800 c 0
+ 693 800 850 643 850 450 c 2
+ 850 -0 l 2
+ 850 -28 828 -50 800 -50 c 0
+ 772 -50 750 -28 750 -0 c 2
+ 750 450 l 2
+ 750 588 638 700 500 700 c 0
+ 362 700 250 588 250 450 c 2
+ 250 -0 l 2
+ 250 -26 230 -51 200 -51 c 0
+ 180 -51 162 -38 154 -19 c 2
+ 13 329 l 2
+ 11 335 9 342 9 348 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph173_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph173 joinScale
+Substitution2: "'ss02' CONT SUB" glyph397.cont
+Substitution2: "'ss01' CART SUB" glyph397.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph174_joinScale
+Encoding: 398 -1 398
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 703 m 0
+ 653 703 789 628 881 509 c 0
+ 907 476 929 439 947 400 c 1
+ 929 361 907 324 881 291 c 0
+ 789 172 653 97 500 97 c 0
+ 347 97 211 172 119 291 c 0
+ 93 324 71 361 53 400 c 1
+ 71 439 93 476 119 509 c 0
+ 211 628 347 703 500 703 c 0
+834 400 m 1
+ 761 525 636 603 500 603 c 0
+ 364 603 239 525 166 400 c 1
+ 239 275 364 197 500 197 c 0
+ 636 197 761 275 834 400 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph174_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph174 joinScale
+Substitution2: "'ss02' CONT SUB" glyph398.cont
+Substitution2: "'ss01' CART SUB" glyph398.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph175_joinScale
+Encoding: 399 -1 399
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 50 m 0
+ 693 50 850 207 850 400 c 2
+ 850 800 l 2
+ 850 828 872 850 900 850 c 0
+ 928 850 950 828 950 800 c 2
+ 950 400 l 2
+ 950 151 749 -50 500 -50 c 0
+ 251 -50 50 151 50 400 c 2
+ 50 800 l 2
+ 50 828 72 850 100 850 c 0
+ 128 850 150 828 150 800 c 2
+ 150 400 l 2
+ 150 207 307 50 500 50 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph175_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph175 joinScale
+Substitution2: "'ss02' CONT SUB" glyph399.cont
+Substitution2: "'ss01' CART SUB" glyph399.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph176_joinScale
+Encoding: 400 -1 400
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph400.cont
+Substitution2: "'ss01' CART SUB" glyph400.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph177_joinScale
+Encoding: 401 -1 401
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 750 m 0
+ 693 750 850 593 850 400 c 0
+ 850 281 791 176 700 113 c 0
+ 700 112 700 111 700 110 c 0
+ 700 0 610 -90 500 -90 c 0
+ 390 -90 300 0 300 110 c 0
+ 300 111 300 112 300 113 c 0
+ 209 176 150 281 150 400 c 0
+ 150 593 307 750 500 750 c 0
+250 400 m 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+ 362 650 250 538 250 400 c 0
+587 61 m 1
+ 559 54 530 50 500 50 c 0
+ 470 50 441 54 413 61 c 1
+ 430 31 463 10 500 10 c 0
+ 537 10 570 31 587 61 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph177_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph177 joinScale
+Substitution2: "'ss02' CONT SUB" glyph401.cont
+Substitution2: "'ss01' CART SUB" glyph401.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph178_joinScale
+Encoding: 402 -1 402
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 800 m 0
+ 50 825 70 850 100 850 c 0
+ 122 850 142 836 148 813 c 0
+ 158 776 172 751 191 733 c 0
+ 210 715 238 699 281 686 c 0
+ 285 685 289 683 292 681 c 0
+ 350 724 422 750 500 750 c 0
+ 578 750 650 724 708 681 c 0
+ 711 683 715 685 719 686 c 0
+ 762 699 790 715 809 733 c 0
+ 828 751 842 776 852 813 c 0
+ 858 836 878 850 900 850 c 0
+ 930 850 950 825 950 800 c 0
+ 950 796 949 791 948 787 c 0
+ 935 737 914 695 879 661 c 0
+ 853 636 821 617 785 603 c 1
+ 826 546 850 476 850 400 c 0
+ 850 207 693 50 500 50 c 0
+ 307 50 150 207 150 400 c 0
+ 150 476 174 546 215 603 c 1
+ 179 617 147 636 121 661 c 0
+ 86 695 65 737 52 787 c 0
+ 51 791 50 796 50 800 c 0
+750 400 m 0
+ 750 538 638 650 500 650 c 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph178_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph178 joinScale
+Substitution2: "'ss02' CONT SUB" glyph402.cont
+Substitution2: "'ss01' CART SUB" glyph402.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph179_joinScale
+Encoding: 403 -1 403
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 790 m 0
+ 285 790 110 615 110 400 c 2
+ 110 -40 l 2
+ 110 -68 88 -90 60 -90 c 0
+ 32 -90 10 -68 10 -40 c 2
+ 10 400 l 2
+ 10 671 229 890 500 890 c 0
+ 771 890 990 671 990 400 c 2
+ 990 -40 l 2
+ 990 -68 968 -90 940 -90 c 0
+ 912 -90 890 -68 890 -40 c 2
+ 890 400 l 2
+ 890 615 715 790 500 790 c 0
+830 400 m 0
+ 830 218 682 70 500 70 c 0
+ 318 70 170 218 170 400 c 0
+ 170 582 318 730 500 730 c 0
+ 682 730 830 582 830 400 c 0
+500 150 m 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph179_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph179 joinScale
+Substitution2: "'ss02' CONT SUB" glyph403.cont
+Substitution2: "'ss01' CART SUB" glyph403.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph180_joinScale
+Encoding: 404 -1 404
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph404.cont
+Substitution2: "'ss01' CART SUB" glyph404.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph181_joinScale
+Encoding: 405 -1 405
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+150 400 m 0
+ 150 593 307 750 500 750 c 0
+ 693 750 850 593 850 400 c 0
+ 850 326 827 257 787 200 c 1
+ 900 200 l 2
+ 928 200 950 178 950 150 c 2
+ 950 0 l 2
+ 950 -28 928 -50 900 -50 c 0
+ 872 -50 850 -28 850 0 c 2
+ 850 100 l 1
+ 694 100 l 2
+ 690 100 687 100 683 101 c 0
+ 630 68 567 50 500 50 c 0
+ 433 50 370 68 317 101 c 0
+ 313 100 310 100 306 100 c 2
+ 150 100 l 1
+ 150 0 l 2
+ 150 -28 128 -50 100 -50 c 0
+ 72 -50 50 -28 50 0 c 2
+ 50 150 l 2
+ 50 178 72 200 100 200 c 2
+ 213 200 l 1
+ 173 257 150 326 150 400 c 0
+500 650 m 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph181_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph181 joinScale
+Substitution2: "'ss02' CONT SUB" glyph405.cont
+Substitution2: "'ss01' CART SUB" glyph405.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph182_joinScale
+Encoding: 406 -1 406
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+110 131 m 0
+ 110 156 130 181 160 181 c 0
+ 178 181 195 172 204 155 c 2
+ 233 101 l 1
+ 289 172 397 210 520 210 c 0
+ 603 210 680 191 737 159 c 0
+ 792 128 840 77 840 11 c 2
+ 840 -40 l 2
+ 840 -68 818 -90 790 -90 c 0
+ 762 -90 740 -68 740 -40 c 2
+ 740 11 l 2
+ 740 25 729 49 688 72 c 0
+ 648 94 590 110 520 110 c 0
+ 450 110 392 94 352 72 c 0
+ 311 49 300 25 300 11 c 2
+ 300 -40 l 2
+ 300 -71 275 -89 249 -89 c 0
+ 232 -89 215 -81 206 -63 c 2
+ 116 108 l 2
+ 112 115 110 123 110 131 c 0
+170 840 m 0
+ 170 868 192 890 220 890 c 2
+ 820 890 l 2
+ 848 890 870 868 870 840 c 0
+ 870 763 823 699 760 657 c 0
+ 696 615 611 590 520 590 c 0
+ 429 590 344 615 280 657 c 0
+ 217 699 170 763 170 840 c 0
+285 790 m 1
+ 324 727 417 690 520 690 c 0
+ 623 690 716 727 755 790 c 1
+ 285 790 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph182_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph182 joinScale
+Substitution2: "'ss02' CONT SUB" glyph406.cont
+Substitution2: "'ss01' CART SUB" glyph406.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph183_joinScale
+Encoding: 407 -1 407
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph407.cont
+Substitution2: "'ss01' CART SUB" glyph407.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph184_joinScale
+Encoding: 408 -1 408
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+610 0 m 0
+ 610 -28 588 -50 560 -50 c 2
+ 260 -50 l 2
+ 232 -50 210 -28 210 0 c 2
+ 210 800 l 2
+ 210 828 232 850 260 850 c 2
+ 560 850 l 2
+ 588 850 610 828 610 800 c 0
+ 610 772 588 750 560 750 c 2
+ 310 750 l 1
+ 310 50 l 1
+ 560 50 l 2
+ 588 50 610 28 610 0 c 0
+85 475 m 0
+ 126 475 160 441 160 400 c 0
+ 160 359 126 325 85 325 c 0
+ 44 325 10 359 10 400 c 0
+ 10 441 44 475 85 475 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph184_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph184 joinScale
+Substitution2: "'ss02' CONT SUB" glyph408.cont
+Substitution2: "'ss01' CART SUB" glyph408.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph185_joinScale
+Encoding: 409 -1 409
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 25 m 0
+ 459 25 425 59 425 100 c 0
+ 425 141 459 175 500 175 c 0
+ 541 175 575 141 575 100 c 0
+ 575 59 541 25 500 25 c 0
+46 715 m 0
+ 46 812 124 890 221 890 c 0
+ 317 890 395 813 396 717 c 1
+ 429 726 464 730 500 730 c 0
+ 536 730 571 726 604 717 c 1
+ 605 813 683 890 779 890 c 0
+ 876 890 954 812 954 715 c 0
+ 954 639 906 576 839 551 c 1
+ 884 485 910 405 910 320 c 0
+ 910 94 726 -90 500 -90 c 0
+ 274 -90 90 94 90 320 c 0
+ 90 405 116 485 161 551 c 1
+ 94 576 46 639 46 715 c 0
+221 640 m 0
+ 232 640 243 643 253 647 c 0
+ 260 652 267 658 275 663 c 0
+ 288 677 296 695 296 715 c 0
+ 296 756 262 790 221 790 c 0
+ 180 790 146 756 146 715 c 0
+ 146 674 180 640 221 640 c 0
+747 647 m 0
+ 757 643 768 640 779 640 c 0
+ 820 640 854 674 854 715 c 0
+ 854 756 820 790 779 790 c 0
+ 738 790 704 756 704 715 c 0
+ 704 695 712 677 725 663 c 0
+ 733 658 740 652 747 647 c 0
+664 583 m 0
+ 616 613 560 630 500 630 c 0
+ 440 630 384 613 336 583 c 0
+ 327 575 317 568 307 562 c 0
+ 236 505 190 418 190 320 c 0
+ 190 149 329 10 500 10 c 0
+ 671 10 810 149 810 320 c 0
+ 810 418 764 505 693 562 c 0
+ 683 568 673 575 664 583 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph185_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph185 joinScale
+Substitution2: "'ss02' CONT SUB" glyph409.cont
+Substitution2: "'ss01' CART SUB" glyph409.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph186_joinScale
+Encoding: 410 -1 410
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+217 611 m 1
+ 268 556 300 482 300 400 c 0
+ 300 318 268 244 217 189 c 1
+ 271 134 347 100 430 100 c 0
+ 596 100 730 234 730 400 c 0
+ 730 566 596 700 430 700 c 0
+ 347 700 271 666 217 611 c 1
+107 636 m 0
+ 180 735 297 800 430 800 c 0
+ 651 800 830 621 830 400 c 0
+ 830 179 651 0 430 0 c 0
+ 297 0 180 65 107 164 c 0
+ 100 173 98 183 98 193 c 0
+ 98 208 104 223 117 233 c 0
+ 167 271 200 332 200 400 c 0
+ 200 468 167 529 117 567 c 0
+ 104 577 98 592 98 607 c 0
+ 98 617 100 627 107 636 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph186_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph186 joinScale
+Substitution2: "'ss02' CONT SUB" glyph410.cont
+Substitution2: "'ss01' CART SUB" glyph410.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph187_joinScale
+Encoding: 411 -1 411
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+260 532 m 1
+ 260 345 l 2
+ 260 232 327 153 408 119 c 0
+ 437 107 469 100 500 100 c 0
+ 573 100 630 132 669 172 c 0
+ 708 212 740 271 740 345 c 2
+ 740 532 l 1
+ 668 554 615 621 615 700 c 0
+ 615 797 693 875 790 875 c 0
+ 887 875 965 797 965 700 c 0
+ 965 621 912 554 840 532 c 1
+ 840 345 l 2
+ 840 241 796 158 741 102 c 0
+ 686 46 603 0 500 0 c 0
+ 397 0 314 46 259 102 c 0
+ 204 158 160 241 160 345 c 2
+ 160 532 l 1
+ 88 554 35 621 35 700 c 0
+ 35 797 113 875 210 875 c 0
+ 307 875 385 797 385 700 c 0
+ 385 621 332 554 260 532 c 1
+210 625 m 0
+ 251 625 285 659 285 700 c 0
+ 285 741 251 775 210 775 c 0
+ 169 775 135 741 135 700 c 0
+ 135 659 169 625 210 625 c 0
+790 625 m 0
+ 831 625 865 659 865 700 c 0
+ 865 741 831 775 790 775 c 0
+ 749 775 715 741 715 700 c 0
+ 715 659 749 625 790 625 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph187_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph187 joinScale
+Substitution2: "'ss02' CONT SUB" glyph411.cont
+Substitution2: "'ss01' CART SUB" glyph411.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph188_joinScale
+Encoding: 412 -1 412
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph412.cont
+Substitution2: "'ss01' CART SUB" glyph412.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph189_joinScale
+Encoding: 413 -1 413
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+200 -40 m 2
+ 200 100 l 1
+ 64 100 l 2
+ 36 100 14 122 14 150 c 0
+ 14 178 36 200 64 200 c 2
+ 200 200 l 1
+ 200 600 l 1
+ 64 600 l 2
+ 36 600 14 622 14 650 c 0
+ 14 678 36 700 64 700 c 2
+ 200 700 l 1
+ 200 840 l 2
+ 200 868 222 890 250 890 c 0
+ 278 890 300 868 300 840 c 2
+ 300 700 l 1
+ 700 700 l 1
+ 700 840 l 2
+ 700 868 722 890 750 890 c 0
+ 778 890 800 868 800 840 c 2
+ 800 700 l 1
+ 940 700 l 2
+ 968 700 990 678 990 650 c 0
+ 990 622 968 600 940 600 c 2
+ 800 600 l 1
+ 800 200 l 1
+ 940 200 l 2
+ 968 200 990 178 990 150 c 0
+ 990 122 968 100 940 100 c 2
+ 800 100 l 1
+ 800 -40 l 2
+ 800 -68 778 -90 750 -90 c 0
+ 722 -90 700 -68 700 -40 c 2
+ 700 100 l 1
+ 300 100 l 1
+ 300 -40 l 2
+ 300 -68 278 -90 250 -90 c 0
+ 222 -90 200 -68 200 -40 c 2
+300 600 m 1
+ 300 200 l 1
+ 700 200 l 1
+ 700 600 l 1
+ 300 600 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph189_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph189 joinScale
+Substitution2: "'ss02' CONT SUB" glyph413.cont
+Substitution2: "'ss01' CART SUB" glyph413.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph190_joinScale
+Encoding: 414 -1 414
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph414.cont
+Substitution2: "'ss01' CART SUB" glyph414.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph191_joinScale
+Encoding: 415 -1 415
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph415.cont
+Substitution2: "'ss01' CART SUB" glyph415.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph192_joinScale
+Encoding: 416 -1 416
+Width: 1000
+VWidth: 950
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 750 m 0
+ 307 750 150 593 150 400 c 2
+ 150 0 l 2
+ 150 -28 128 -50 100 -50 c 0
+ 72 -50 50 -28 50 0 c 2
+ 50 400 l 2
+ 50 649 251 850 500 850 c 0
+ 749 850 950 649 950 400 c 2
+ 950 0 l 2
+ 950 -28 928 -50 900 -50 c 0
+ 872 -50 850 -28 850 0 c 2
+ 850 400 l 2
+ 850 593 693 750 500 750 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph192_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph192 joinScale
+Substitution2: "'ss02' CONT SUB" glyph416.cont
+Substitution2: "'ss01' CART SUB" glyph416.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph193_joinScale
+Encoding: 417 -1 417
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph417.cont
+Substitution2: "'ss01' CART SUB" glyph417.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph194_joinScale
+Encoding: 418 -1 418
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+221 100 m 2
+ 104 100 10 194 10 311 c 2
+ 10 489 l 2
+ 10 606 104 700 221 700 c 2
+ 779 700 l 2
+ 896 700 990 606 990 489 c 2
+ 990 311 l 2
+ 990 194 896 100 779 100 c 2
+ 221 100 l 2
+110 311 m 2
+ 110 250 160 200 221 200 c 2
+ 779 200 l 2
+ 840 200 890 250 890 311 c 2
+ 890 489 l 2
+ 890 550 840 600 779 600 c 2
+ 221 600 l 2
+ 160 600 110 550 110 489 c 2
+ 110 311 l 2
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph194_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph194 joinScale
+Substitution2: "'ss02' CONT SUB" glyph418.cont
+Substitution2: "'ss01' CART SUB" glyph418.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph195_joinScale
+Encoding: 419 -1 419
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+60 810 m 0
+ 88 810 110 788 110 760 c 2
+ 110 10 l 1
+ 610 10 l 2
+ 616 10 617 11 619 14 c 0
+ 623 20 630 35 630 70 c 0
+ 630 93 622 105 609 113 c 0
+ 593 123 567 130 530 130 c 2
+ 280 130 l 2
+ 252 130 230 152 230 180 c 2
+ 230 760 l 2
+ 230 788 252 810 280 810 c 0
+ 308 810 330 788 330 760 c 2
+ 330 230 l 1
+ 530 230 l 2
+ 576 230 624 222 663 197 c 0
+ 705 170 730 127 730 70 c 0
+ 730 25 721 -15 700 -44 c 0
+ 677 -76 644 -90 610 -90 c 2
+ 60 -90 l 2
+ 32 -90 10 -68 10 -40 c 2
+ 10 760 l 2
+ 10 788 32 810 60 810 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph195_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph195 joinScale
+Substitution2: "'ss02' CONT SUB" glyph419.cont
+Substitution2: "'ss01' CART SUB" glyph419.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph196_joinScale
+Encoding: 420 -1 420
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph420.cont
+Substitution2: "'ss01' CART SUB" glyph420.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph197_joinScale
+Encoding: 421 -1 421
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+556 -67 m 0
+ 540 -76 520 -90 499 -90 c 0
+ 491 -90 483 -88 475 -84 c 0
+ 416 -53 344 -10 296 39 c 0
+ 275 60 250 87 250 128 c 0
+ 250 168 274 200 301 218 c 0
+ 328 237 364 246 400 246 c 0
+ 445 246 477 230 500 213 c 1
+ 523 230 555 246 600 246 c 0
+ 636 246 672 237 699 218 c 0
+ 726 200 750 168 750 128 c 0
+ 750 87 725 60 704 39 c 0
+ 665 -1 603 -41 556 -67 c 0
+649 129 m 1
+ 641 140 622 146 600 146 c 0
+ 568 146 554 128 535 110 c 0
+ 525 100 513 95 500 95 c 0
+ 487 95 475 100 465 110 c 0
+ 446 128 432 146 400 146 c 0
+ 378 146 359 140 351 129 c 1
+ 354 123 359 118 367 109 c 0
+ 398 77 460 38 500 16 c 1
+ 540 38 602 77 633 109 c 0
+ 641 118 646 123 649 129 c 1
+556 577 m 0
+ 540 568 520 554 499 554 c 0
+ 491 554 483 556 475 560 c 0
+ 416 591 344 634 296 683 c 0
+ 275 704 250 731 250 772 c 0
+ 250 812 274 844 301 862 c 0
+ 328 881 364 890 400 890 c 0
+ 445 890 477 874 500 857 c 1
+ 523 874 555 890 600 890 c 0
+ 636 890 672 881 699 862 c 0
+ 726 844 750 812 750 772 c 0
+ 750 731 725 704 704 683 c 0
+ 665 643 603 603 556 577 c 0
+649 773 m 1
+ 641 784 622 790 600 790 c 0
+ 568 790 554 772 535 754 c 0
+ 525 744 513 739 500 739 c 0
+ 487 739 475 744 465 754 c 0
+ 446 772 432 790 400 790 c 0
+ 378 790 359 784 351 773 c 1
+ 354 767 359 762 367 753 c 0
+ 398 721 460 682 500 660 c 1
+ 540 682 602 721 633 753 c 0
+ 641 762 646 767 649 773 c 1
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph197_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph197 joinScale
+Substitution2: "'ss02' CONT SUB" glyph421.cont
+Substitution2: "'ss01' CART SUB" glyph421.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph198_joinScale
+Encoding: 422 -1 422
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph422.cont
+Substitution2: "'ss01' CART SUB" glyph422.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph199_joinScale
+Encoding: 423 -1 423
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+250 660 m 2
+ 250 180 l 1
+ 750 180 l 1
+ 750 660 l 2
+ 750 688 772 710 800 710 c 0
+ 828 710 850 688 850 660 c 2
+ 850 -40 l 2
+ 850 -68 828 -90 800 -90 c 2
+ 200 -90 l 2
+ 172 -90 150 -68 150 -40 c 2
+ 150 660 l 2
+ 150 688 172 710 200 710 c 0
+ 228 710 250 688 250 660 c 2
+250 80 m 1
+ 250 10 l 1
+ 750 10 l 1
+ 750 80 l 1
+ 250 80 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph199_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph199 joinScale
+Substitution2: "'ss02' CONT SUB" glyph423.cont
+Substitution2: "'ss01' CART SUB" glyph423.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph200_joinScale
+Encoding: 424 -1 424
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph424.cont
+Substitution2: "'ss01' CART SUB" glyph424.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph201_joinScale
+Encoding: 425 -1 425
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+90 166 m 0
+ 90 191 110 216 140 216 c 0
+ 159 216 178 205 186 186 c 2
+ 238 67 l 1
+ 258 84 280 98 305 110 c 1
+ 212 173 150 279 150 400 c 0
+ 150 593 307 750 500 750 c 0
+ 693 750 850 593 850 400 c 0
+ 850 279 789 172 695 109 c 1
+ 731 92 765 70 788 42 c 0
+ 806 20 820 -8 820 -40 c 0
+ 820 -68 798 -90 770 -90 c 0
+ 742 -90 720 -68 720 -40 c 0
+ 720 -39 720 -32 711 -22 c 0
+ 670 23 591 50 499 50 c 0
+ 430 50 371 33 331 11 c 0
+ 287 -13 280 -35 280 -40 c 0
+ 280 -66 260 -90 230 -90 c 0
+ 210 -90 192 -78 184 -60 c 2
+ 94 146 l 2
+ 91 153 90 159 90 166 c 0
+500 150 m 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph201_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph201 joinScale
+Substitution2: "'ss02' CONT SUB" glyph425.cont
+Substitution2: "'ss01' CART SUB" glyph425.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph202_joinScale
+Encoding: 426 -1 426
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+202 591 m 2
+ 202 756 336 890 501 890 c 0
+ 666 890 800 756 800 591 c 2
+ 800 209 l 2
+ 800 44 666 -90 501 -90 c 0
+ 336 -90 202 44 202 209 c 2
+ 202 591 l 2
+501 790 m 0
+ 391 790 302 701 302 591 c 2
+ 302 209 l 2
+ 302 99 391 10 501 10 c 0
+ 611 10 700 99 700 209 c 2
+ 700 591 l 2
+ 700 701 611 790 501 790 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph202_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph202 joinScale
+Substitution2: "'ss02' CONT SUB" glyph426.cont
+Substitution2: "'ss01' CART SUB" glyph426.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph203_joinScale
+Encoding: 427 -1 427
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+200 840 m 0
+ 200 869 225 890 250 890 c 0
+ 259 890 269 887 277 882 c 2
+ 500 739 l 1
+ 723 882 l 2
+ 731 887 741 890 750 890 c 0
+ 775 890 800 869 800 840 c 0
+ 800 824 792 808 777 798 c 2
+ 527 638 l 2
+ 519 633 509 630 500 630 c 0
+ 491 630 481 633 473 638 c 2
+ 223 798 l 2
+ 208 808 200 824 200 840 c 0
+200 297 m 0
+ 200 326 225 347 250 347 c 0
+ 259 347 269 344 277 339 c 2
+ 500 196 l 1
+ 723 339 l 2
+ 731 344 741 347 750 347 c 0
+ 775 347 800 326 800 297 c 0
+ 800 281 792 265 777 255 c 2
+ 527 95 l 2
+ 519 90 509 87 500 87 c 0
+ 491 87 481 90 473 95 c 2
+ 223 255 l 2
+ 208 265 200 281 200 297 c 0
+200 120 m 0
+ 200 149 225 170 250 170 c 0
+ 259 170 269 167 277 162 c 2
+ 500 20 l 1
+ 723 162 l 2
+ 731 167 741 170 750 170 c 0
+ 775 170 800 149 800 120 c 0
+ 800 104 792 88 777 78 c 2
+ 527 -82 l 2
+ 519 -87 509 -90 500 -90 c 0
+ 491 -90 481 -87 473 -82 c 2
+ 223 78 l 2
+ 208 88 200 104 200 120 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph203_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph203 joinScale
+Substitution2: "'ss02' CONT SUB" glyph427.cont
+Substitution2: "'ss01' CART SUB" glyph427.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph204_joinScale
+Encoding: 428 -1 428
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+31 291 m 0
+ 31 316 52 341 81 341 c 0
+ 98 341 115 332 124 316 c 2
+ 199 187 l 1
+ 199 399 l 2
+ 199 565 334 700 500 700 c 0
+ 666 700 801 565 801 399 c 2
+ 801 0 l 2
+ 801 -28 779 -50 751 -50 c 0
+ 723 -50 701 -28 701 0 c 2
+ 701 399 l 2
+ 701 510 611 600 500 600 c 0
+ 389 600 299 510 299 399 c 2
+ 299 0 l 2
+ 299 -31 274 -49 248 -49 c 0
+ 232 -49 215 -42 205 -25 c 2
+ 38 266 l 2
+ 33 274 31 283 31 291 c 0
+499 890 m 0
+ 527 890 549 868 549 840 c 2
+ 549 769 l 2
+ 549 741 527 719 499 719 c 0
+ 471 719 449 741 449 769 c 2
+ 449 840 l 2
+ 449 868 471 890 499 890 c 0
+207 780 m 0
+ 207 804 228 828 257 828 c 0
+ 276 828 294 818 303 801 c 2
+ 341 732 l 2
+ 345 725 347 717 347 709 c 0
+ 347 685 327 661 298 661 c 0
+ 279 661 260 671 251 688 c 2
+ 213 757 l 2
+ 209 764 207 772 207 780 c 0
+742 828 m 0
+ 771 828 792 804 792 780 c 0
+ 792 772 790 764 786 757 c 2
+ 748 688 l 2
+ 739 671 720 661 701 661 c 0
+ 672 661 652 685 652 709 c 0
+ 652 717 654 725 658 732 c 2
+ 696 801 l 2
+ 705 818 723 828 742 828 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph204_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph204 joinScale
+Substitution2: "'ss02' CONT SUB" glyph428.cont
+Substitution2: "'ss01' CART SUB" glyph428.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph205_joinScale
+Encoding: 429 -1 429
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph429.cart
+Substitution2: "'ss02' CONT SUB" glyph429.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph206_joinScale
+Encoding: 430 -1 430
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 756 m 1
+ 549 807 623 855 720 855 c 0
+ 875 855 990 708 990 565 c 0
+ 990 495 956 423 913 359 c 0
+ 835 242 701 115 601 32 c 0
+ 570 6 555 -6 530 -25 c 0
+ 521 -32 512 -35 503 -35 c 0
+ 483 -35 464 -21 450 -10 c 0
+ 330 84 179 221 87 359 c 0
+ 44 423 10 495 10 565 c 0
+ 10 708 125 855 280 855 c 0
+ 377 855 451 807 500 756 c 1
+280 755 m 0
+ 192 755 110 665 110 565 c 0
+ 110 525 130 473 170 414 c 0
+ 251 293 393 164 500 78 c 1
+ 606 163 749 293 830 414 c 0
+ 870 473 890 525 890 565 c 0
+ 890 665 808 755 720 755 c 0
+ 653 755 593 714 561 674 c 0
+ 552 662 548 656 548 655 c 0
+ 541 634 522 620 500 620 c 0
+ 478 620 459 634 452 655 c 0
+ 444 673 421 696 401 711 c 0
+ 369 736 327 755 280 755 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph206_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph206 joinScale
+Substitution2: "'ss02' CONT SUB" glyph430.cont
+Substitution2: "'ss01' CART SUB" glyph430.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph207_joinScale
+Encoding: 431 -1 431
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph431.cont
+Substitution2: "'ss01' CART SUB" glyph431.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph208_joinScale
+Encoding: 432 -1 432
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph432.cont
+Substitution2: "'ss01' CART SUB" glyph432.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph209_joinScale
+Encoding: 433 -1 433
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+646 200 m 0
+ 646 221 662 238 683 238 c 2
+ 818 238 l 2
+ 839 238 856 221 856 200 c 0
+ 856 179 839 162 818 162 c 2
+ 683 162 l 2
+ 662 162 646 179 646 200 c 0
+720 400 m 0
+ 720 421 736 438 757 438 c 2
+ 900 438 l 2
+ 921 438 938 421 938 400 c 0
+ 938 379 921 362 900 362 c 2
+ 757 362 l 2
+ 736 362 720 379 720 400 c 0
+646 600 m 0
+ 646 621 662 638 683 638 c 2
+ 818 638 l 2
+ 839 638 856 621 856 600 c 0
+ 856 579 839 562 818 562 c 2
+ 683 562 l 2
+ 662 562 646 579 646 600 c 0
+144 200 m 0
+ 144 221 161 238 182 238 c 2
+ 317 238 l 2
+ 338 238 354 221 354 200 c 0
+ 354 179 338 162 317 162 c 2
+ 182 162 l 2
+ 161 162 144 179 144 200 c 0
+62 400 m 0
+ 62 421 79 438 100 438 c 2
+ 243 438 l 2
+ 264 438 280 421 280 400 c 0
+ 280 379 264 362 243 362 c 2
+ 100 362 l 2
+ 79 362 62 379 62 400 c 0
+144 600 m 0
+ 144 621 161 638 182 638 c 2
+ 317 638 l 2
+ 338 638 354 621 354 600 c 0
+ 354 579 338 562 317 562 c 2
+ 182 562 l 2
+ 161 562 144 579 144 600 c 0
+500 200 m 0
+ 528 200 550 178 550 150 c 2
+ 550 0 l 2
+ 550 -28 528 -50 500 -50 c 0
+ 472 -50 450 -28 450 0 c 2
+ 450 150 l 2
+ 450 178 472 200 500 200 c 0
+500 750 m 0
+ 528 750 550 728 550 700 c 2
+ 550 630 l 2
+ 550 602 528 580 500 580 c 0
+ 472 580 450 602 450 630 c 2
+ 450 700 l 2
+ 450 728 472 750 500 750 c 0
+400 815 m 0
+ 400 774 366 740 325 740 c 0
+ 284 740 250 774 250 815 c 0
+ 250 856 284 890 325 890 c 0
+ 366 890 400 856 400 815 c 0
+750 815 m 0
+ 750 774 716 740 675 740 c 0
+ 634 740 600 774 600 815 c 0
+ 600 856 634 890 675 890 c 0
+ 716 890 750 856 750 815 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph209_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph209 joinScale
+Substitution2: "'ss02' CONT SUB" glyph433.cont
+Substitution2: "'ss01' CART SUB" glyph433.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph210_joinScale
+Encoding: 434 -1 434
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+990 250 m 0
+ 990 214 961 185 925 185 c 0
+ 889 185 860 214 860 250 c 0
+ 860 286 889 315 925 315 c 0
+ 961 315 990 286 990 250 c 0
+200 450 m 0
+ 228 450 250 428 250 400 c 2
+ 250 150 l 1
+ 750 150 l 1
+ 750 400 l 2
+ 750 428 772 450 800 450 c 0
+ 828 450 850 428 850 400 c 2
+ 850 100 l 2
+ 850 72 828 50 800 50 c 2
+ 200 50 l 2
+ 172 50 150 72 150 100 c 2
+ 150 400 l 2
+ 150 428 172 450 200 450 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph210_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph210 joinScale
+Substitution2: "'ss02' CONT SUB" glyph434.cont
+Substitution2: "'ss01' CART SUB" glyph434.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph211_joinScale
+Encoding: 435 -1 435
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+200 750 m 0
+ 228 750 250 728 250 700 c 2
+ 250 150 l 1
+ 750 150 l 1
+ 750 700 l 2
+ 750 728 772 750 800 750 c 0
+ 828 750 850 728 850 700 c 2
+ 850 100 l 2
+ 850 72 828 50 800 50 c 2
+ 200 50 l 2
+ 172 50 150 72 150 100 c 2
+ 150 700 l 2
+ 150 728 172 750 200 750 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph211_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph211 joinScale
+Substitution2: "'ss02' CONT SUB" glyph435.cont
+Substitution2: "'ss01' CART SUB" glyph435.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph212_joinScale
+Encoding: 436 -1 436
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+50 480 m 0
+ 50 505 70 530 100 530 c 0
+ 123 530 144 514 149 491 c 0
+ 191 308 335 180 500 180 c 0
+ 665 180 809 308 851 491 c 0
+ 856 514 877 530 900 530 c 0
+ 930 530 950 505 950 480 c 0
+ 950 476 950 473 949 469 c 0
+ 899 249 720 80 500 80 c 0
+ 280 80 101 249 51 469 c 0
+ 50 473 50 476 50 480 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph212_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph212 joinScale
+Substitution2: "'ss02' CONT SUB" glyph436.cont
+Substitution2: "'ss01' CART SUB" glyph436.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph213_joinScale
+Encoding: 437 -1 437
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph437.cont
+Substitution2: "'ss01' CART SUB" glyph437.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph214_joinScale
+Encoding: 438 -1 438
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+950 650 m 0
+ 950 622 928 600 900 600 c 2
+ 100 600 l 2
+ 72 600 50 622 50 650 c 0
+ 50 678 72 700 100 700 c 2
+ 900 700 l 2
+ 928 700 950 678 950 650 c 0
+950 150 m 0
+ 950 122 928 100 900 100 c 2
+ 100 100 l 2
+ 72 100 50 122 50 150 c 0
+ 50 178 72 200 100 200 c 2
+ 900 200 l 2
+ 928 200 950 178 950 150 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph214_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph214 joinScale
+Substitution2: "'ss02' CONT SUB" glyph438.cont
+Substitution2: "'ss01' CART SUB" glyph438.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph215_joinScale
+Encoding: 439 -1 439
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+575 -15 m 0
+ 575 -56 541 -90 500 -90 c 0
+ 459 -90 425 -56 425 -15 c 0
+ 425 26 459 60 500 60 c 0
+ 541 60 575 26 575 -15 c 0
+500 890 m 0
+ 528 890 550 868 550 840 c 2
+ 550 610 l 2
+ 550 582 528 560 500 560 c 0
+ 472 560 450 582 450 610 c 2
+ 450 840 l 2
+ 450 868 472 890 500 890 c 0
+500 240 m 0
+ 528 240 550 218 550 190 c 2
+ 550 150 l 2
+ 550 122 528 100 500 100 c 0
+ 472 100 450 122 450 150 c 2
+ 450 190 l 2
+ 450 218 472 240 500 240 c 0
+940 781 m 0
+ 970 781 990 756 990 731 c 0
+ 990 723 989 715 985 708 c 2
+ 695 128 l 2
+ 686 110 668 100 650 100 c 0
+ 620 100 600 125 600 150 c 0
+ 600 158 601 165 605 172 c 2
+ 896 753 l 2
+ 905 771 922 781 940 781 c 0
+10 731 m 0
+ 10 756 30 781 60 781 c 0
+ 78 781 96 771 105 753 c 2
+ 395 172 l 2
+ 399 165 400 158 400 150 c 0
+ 400 125 380 100 350 100 c 0
+ 332 100 314 110 305 128 c 2
+ 15 708 l 2
+ 11 715 10 723 10 731 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph215_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph215 joinScale
+Substitution2: "'ss02' CONT SUB" glyph439.cont
+Substitution2: "'ss01' CART SUB" glyph439.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph216_joinScale
+Encoding: 440 -1 440
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+169 631 m 1
+ 110 631 l 1
+ 110 179 l 2
+ 110 151 88 129 60 129 c 0
+ 32 129 10 151 10 179 c 2
+ 10 681 l 2
+ 10 709 32 731 60 731 c 2
+ 940 731 l 2
+ 968 731 990 709 990 681 c 2
+ 990 179 l 2
+ 990 151 968 129 940 129 c 0
+ 912 129 890 151 890 179 c 2
+ 890 631 l 1
+ 831 631 l 1
+ 831 241 l 2
+ 831 213 809 191 781 191 c 0
+ 753 191 731 213 731 241 c 2
+ 731 631 l 1
+ 269 631 l 1
+ 269 241 l 2
+ 269 213 247 191 219 191 c 0
+ 191 191 169 213 169 241 c 2
+ 169 631 l 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph216_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph216 joinScale
+Substitution2: "'ss02' CONT SUB" glyph440.cont
+Substitution2: "'ss01' CART SUB" glyph440.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph217_joinScale
+Encoding: 441 -1 441
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+575 -15 m 0
+ 575 -56 541 -90 500 -90 c 0
+ 459 -90 425 -56 425 -15 c 0
+ 425 26 459 60 500 60 c 0
+ 541 60 575 26 575 -15 c 0
+500 750 m 0
+ 679 750 850 677 850 500 c 0
+ 850 401 830 329 795 276 c 0
+ 760 223 713 194 670 175 c 0
+ 636 160 598 151 568 137 c 0
+ 557 132 552 129 551 127 c 2
+ 551 127 550 125 550 120 c 0
+ 550 92 528 70 500 70 c 0
+ 472 70 450 92 450 120 c 0
+ 450 225 557 235 630 267 c 0
+ 662 281 690 299 711 331 c 0
+ 732 363 750 415 750 500 c 0
+ 750 549 727 584 686 609 c 0
+ 642 635 578 650 500 650 c 0
+ 422 650 358 635 314 609 c 0
+ 273 584 250 549 250 500 c 0
+ 250 472 228 450 200 450 c 0
+ 172 450 150 472 150 500 c 0
+ 150 677 321 750 500 750 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph217_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph217 joinScale
+Substitution2: "'ss02' CONT SUB" glyph441.cont
+Substitution2: "'ss01' CART SUB" glyph441.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph218_joinScale
+Encoding: 442 -1 442
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph442.cart
+Substitution2: "'ss02' CONT SUB" glyph442.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph219_joinScale
+Encoding: 443 -1 443
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+150 0 m 2
+ 150 -28 128 -50 100 -50 c 0
+ 72 -50 50 -28 50 0 c 2
+ 50 800 l 2
+ 50 828 72 850 100 850 c 2
+ 900 850 l 2
+ 928 850 950 828 950 800 c 2
+ 950 0 l 2
+ 950 -28 928 -50 900 -50 c 0
+ 872 -50 850 -28 850 0 c 2
+ 850 750 l 1
+ 550 750 l 1
+ 550 650 l 2
+ 550 622 528 600 500 600 c 0
+ 472 600 450 622 450 650 c 2
+ 450 750 l 1
+ 150 750 l 1
+ 150 0 l 2
+500 200 m 0
+ 528 200 550 178 550 150 c 2
+ 550 57 l 2
+ 550 29 528 7 500 7 c 0
+ 472 7 450 29 450 57 c 2
+ 450 150 l 2
+ 450 178 472 200 500 200 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph219_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph219 joinScale
+Substitution2: "'ss02' CONT SUB" glyph443.cont
+Substitution2: "'ss01' CART SUB" glyph443.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph220_joinScale
+Encoding: 444 -1 444
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph444.cart
+Substitution2: "'ss02' CONT SUB" glyph444.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph221_joinScale
+Encoding: 445 -1 445
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+700 400 m 0
+ 700 428 722 450 750 450 c 2
+ 940 450 l 2
+ 968 450 990 428 990 400 c 0
+ 990 372 968 350 940 350 c 2
+ 750 350 l 2
+ 722 350 700 372 700 400 c 0
+500 890 m 0
+ 528 890 550 868 550 840 c 2
+ 550 650 l 2
+ 550 622 528 600 500 600 c 0
+ 472 600 450 622 450 650 c 2
+ 450 840 l 2
+ 450 868 472 890 500 890 c 0
+10 400 m 0
+ 10 428 32 450 60 450 c 2
+ 250 450 l 2
+ 278 450 300 428 300 400 c 0
+ 300 372 278 350 250 350 c 2
+ 60 350 l 2
+ 32 350 10 372 10 400 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph221_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph221 joinScale
+Substitution2: "'ss02' CONT SUB" glyph445.cont
+Substitution2: "'ss01' CART SUB" glyph445.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph222_joinScale
+Encoding: 446 -1 446
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Ligature2: "'liga' GLYPH THEN SCALE" glyph222 joinScale
+Substitution2: "'ss02' CONT SUB" glyph446.cont
+Substitution2: "'ss01' CART SUB" glyph446.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph223_joinScale
+Encoding: 447 -1 447
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+390 0 m 0
+ 390 28 412 50 440 50 c 2
+ 690 50 l 1
+ 690 750 l 1
+ 440 750 l 2
+ 412 750 390 772 390 800 c 0
+ 390 828 412 850 440 850 c 2
+ 740 850 l 2
+ 768 850 790 828 790 800 c 2
+ 790 0 l 2
+ 790 -28 768 -50 740 -50 c 2
+ 440 -50 l 2
+ 412 -50 390 -28 390 0 c 0
+915 475 m 0
+ 956 475 990 441 990 400 c 0
+ 990 359 956 325 915 325 c 0
+ 874 325 840 359 840 400 c 0
+ 840 441 874 475 915 475 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph223_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph223 joinScale
+Substitution2: "'ss02' CONT SUB" glyph447.cont
+Substitution2: "'ss01' CART SUB" glyph447.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph224_joinScale
+Encoding: 448 -1 448
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+150 760 m 2
+ 150 788 172 810 200 810 c 2
+ 800 810 l 2
+ 828 810 850 788 850 760 c 2
+ 850 -40 l 2
+ 850 -68 828 -90 800 -90 c 2
+ 200 -90 l 2
+ 172 -90 150 -68 150 -40 c 2
+ 150 760 l 2
+250 710 m 1
+ 250 10 l 1
+ 750 10 l 1
+ 750 710 l 1
+ 250 710 l 1
+400 150 m 0
+ 400 122 378 100 350 100 c 0
+ 322 100 300 122 300 150 c 0
+ 300 178 322 200 350 200 c 0
+ 378 200 400 178 400 150 c 0
+550 150 m 0
+ 550 122 528 100 500 100 c 0
+ 472 100 450 122 450 150 c 0
+ 450 178 472 200 500 200 c 0
+ 528 200 550 178 550 150 c 0
+700 150 m 0
+ 700 122 678 100 650 100 c 0
+ 622 100 600 122 600 150 c 0
+ 600 178 622 200 650 200 c 0
+ 678 200 700 178 700 150 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph224_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph224 joinScale
+Substitution2: "'ss02' CONT SUB" glyph448.cont
+Substitution2: "'ss01' CART SUB" glyph448.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph225_joinScale
+Encoding: 449 -1 449
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+175 660 m 2
+ 175 687.614257812 197.385742188 710 225 710 c 2
+ 775 710 l 2
+ 802.614257812 710 825 687.614257812 825 660 c 2
+ 825 110 l 2
+ 825 82.3857421875 802.614257812 60 775 60 c 2
+ 225 60 l 2
+ 197.385742188 60 175 82.3857421875 175 110 c 2
+ 175 660 l 2
+275 610 m 1
+ 275 160 l 1
+ 725 160 l 1
+ 725 610 l 1
+ 275 610 l 1
+500 900 m 0
+ 527.614257812 900 550 877.614257812 550 850 c 2
+ 550 778.84765625 l 2
+ 550 751.234375 527.614257812 728.84765625 500 728.84765625 c 0
+ 472.385742188 728.84765625 450 751.234375 450 778.84765625 c 2
+ 450 850 l 2
+ 450 877.614257812 472.385742188 900 500 900 c 0
+221.73046875 881.240234375 m 0
+ 246.564453125 893.31640625 279.3515625 884.641601562 294.965820312 861.865234375 c 2
+ 344.965820312 788.924804688 l 2
+ 360.579101562 766.149414062 353.103515625 737.89453125 328.26953125 725.8203125 c 0
+ 303.435546875 713.744140625 270.6484375 722.41796875 255.034179688 745.1953125 c 2
+ 205.034179688 818.134765625 l 2
+ 189.420898438 840.911132812 196.896484375 869.165039062 221.73046875 881.240234375 c 0
+778.26953125 881.240234375 m 0
+ 803.103515625 869.165039062 810.579101562 840.911132812 794.965820312 818.134765625 c 2
+ 744.965820312 745.1953125 l 2
+ 729.3515625 722.41796875 696.564453125 713.744140625 671.73046875 725.8203125 c 0
+ 646.896484375 737.89453125 639.420898438 766.149414062 655.034179688 788.924804688 c 2
+ 705.034179688 861.865234375 l 2
+ 720.6484375 884.641601562 753.435546875 893.31640625 778.26953125 881.240234375 c 0
+EndSplineSet
+Validated: 33
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph225_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph225 joinScale
+Substitution2: "'ss02' CONT SUB" glyph449.cont
+Substitution2: "'ss01' CART SUB" glyph449.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph226_joinScale
+Encoding: 450 -1 450
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 890 m 2
+ 600 890 l 2
+ 799 890 950 706 950 500 c 0
+ 950 314 825 133 650 104 c 1
+ 650 -40 l 2
+ 650 -68 628 -90 600 -90 c 0
+ 572 -90 550 -68 550 -40 c 2
+ 550 150 l 2
+ 550 178 572 200 600 200 c 0
+ 730 200 850 335 850 500 c 0
+ 850 663 732 790 600 790 c 2
+ 100 790 l 2
+ 72 790 50 812 50 840 c 0
+ 50 868 72 890 100 890 c 2
+450 200 m 0
+ 478 200 500 178 500 150 c 2
+ 500 -40 l 2
+ 500 -68 478 -90 450 -90 c 0
+ 422 -90 400 -68 400 -40 c 2
+ 400 150 l 2
+ 400 178 422 200 450 200 c 0
+150 200 m 0
+ 178 200 200 178 200 150 c 2
+ 200 -40 l 2
+ 200 -68 178 -90 150 -90 c 0
+ 122 -90 100 -68 100 -40 c 2
+ 100 150 l 2
+ 100 178 122 200 150 200 c 0
+300 200 m 0
+ 328 200 350 178 350 150 c 2
+ 350 -40 l 2
+ 350 -68 328 -90 300 -90 c 0
+ 272 -90 250 -68 250 -40 c 2
+ 250 150 l 2
+ 250 178 272 200 300 200 c 0
+750 660 m 0
+ 750 619 716 585 675 585 c 0
+ 634 585 600 619 600 660 c 0
+ 600 701 634 735 675 735 c 0
+ 716 735 750 701 750 660 c 0
+500 660 m 0
+ 500 619 466 585 425 585 c 0
+ 384 585 350 619 350 660 c 0
+ 350 701 384 735 425 735 c 0
+ 466 735 500 701 500 660 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph226_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph226 joinScale
+Substitution2: "'ss02' CONT SUB" glyph450.cont
+Substitution2: "'ss01' CART SUB" glyph450.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph227_joinScale
+Encoding: 451 -1 451
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph451.cont
+Substitution2: "'ss01' CART SUB" glyph451.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph228_joinScale
+Encoding: 452 -1 452
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+450 840 m 2
+ 450 868 472 890 500 890 c 0
+ 528 890 550 868 550 840 c 2
+ 550 746 l 1
+ 703 724 824 603 846 450 c 1
+ 940 450 l 2
+ 968 450 990 428 990 400 c 0
+ 990 372 968 350 940 350 c 2
+ 846 350 l 1
+ 824 197 703 76 550 54 c 1
+ 550 -40 l 2
+ 550 -68 528 -90 500 -90 c 0
+ 472 -90 450 -68 450 -40 c 2
+ 450 54 l 1
+ 297 76 176 197 154 350 c 1
+ 60 350 l 2
+ 32 350 10 372 10 400 c 0
+ 10 428 32 450 60 450 c 2
+ 154 450 l 1
+ 176 603 297 724 450 746 c 1
+ 450 840 l 2
+500 650 m 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph228_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph228 joinScale
+Substitution2: "'ss02' CONT SUB" glyph452.cont
+Substitution2: "'ss01' CART SUB" glyph452.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph229_joinScale
+Encoding: 453 -1 453
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 200 m 2
+ 900 200 l 2
+ 928 200 950 178 950 150 c 0
+ 950 122 928 100 900 100 c 2
+ 780 100 l 1
+ 780 -40 l 2
+ 780 -68 758 -90 730 -90 c 0
+ 702 -90 680 -68 680 -40 c 2
+ 680 100 l 1
+ 320 100 l 1
+ 320 -40 l 2
+ 320 -68 298 -90 270 -90 c 0
+ 242 -90 220 -68 220 -40 c 2
+ 220 100 l 1
+ 100 100 l 2
+ 72 100 50 122 50 150 c 0
+ 50 178 72 200 100 200 c 2
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph229_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph229 joinScale
+Substitution2: "'ss02' CONT SUB" glyph453.cont
+Substitution2: "'ss01' CART SUB" glyph453.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph230_joinScale
+Encoding: 454 -1 454
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 600 m 0
+ 73 600 50 623 50 650 c 0
+ 50 663 55 675 65 685 c 2
+ 215 835 l 2
+ 225 845 237 850 250 850 c 0
+ 263 850 275 845 285 835 c 2
+ 435 685 l 2
+ 445 675 450 663 450 650 c 0
+ 450 623 427 600 400 600 c 0
+ 387 600 375 605 365 615 c 2
+ 250 729 l 1
+ 135 615 l 2
+ 125 605 113 600 100 600 c 0
+600 600 m 0
+ 573 600 550 623 550 650 c 0
+ 550 663 555 675 565 685 c 2
+ 715 835 l 2
+ 725 845 737 850 750 850 c 0
+ 763 850 775 845 785 835 c 2
+ 935 685 l 2
+ 945 675 950 663 950 650 c 0
+ 950 623 927 600 900 600 c 0
+ 887 600 875 605 865 615 c 2
+ 750 729 l 1
+ 635 615 l 2
+ 625 605 613 600 600 600 c 0
+580 105 m 0
+ 580 64 546 30 505 30 c 0
+ 464 30 430 64 430 105 c 0
+ 430 146 464 180 505 180 c 0
+ 546 180 580 146 580 105 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph230_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph230 joinScale
+Substitution2: "'ss02' CONT SUB" glyph454.cont
+Substitution2: "'ss01' CART SUB" glyph454.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph231_joinScale
+Encoding: 455 -1 455
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+844 250 m 0
+ 814 250 794 275 794 300 c 0
+ 794 304 795 307 796 311 c 0
+ 801 331 803 353 803 375 c 0
+ 803 527 680 650 528 650 c 0
+ 390 650 276 548 256 415 c 1
+ 275 432 l 2
+ 284 440 297 444 308 444 c 0
+ 334 444 358 422 358 394 c 0
+ 358 380 352 365 340 355 c 2
+ 229 262 l 2
+ 220 254 207 250 196 250 c 0
+ 182 250 168 256 158 268 c 2
+ 65 379 l 2
+ 57 388 53 400 53 411 c 0
+ 53 437 75 461 103 461 c 0
+ 117 461 131 456 141 444 c 2
+ 156 426 l 1
+ 181 609 338 750 528 750 c 0
+ 735 750 903 582 903 375 c 0
+ 903 345 900 317 893 289 c 0
+ 888 266 867 250 844 250 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph231_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph231 joinScale
+Substitution2: "'ss02' CONT SUB" glyph455.cont
+Substitution2: "'ss01' CART SUB" glyph455.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph232_joinScale
+Encoding: 456 -1 456
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph456.cont
+Substitution2: "'ss01' CART SUB" glyph456.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph233_joinScale
+Encoding: 457 -1 457
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+940 128 m 0
+ 965 128 990 108 990 78 c 0
+ 990 58 978 39 959 31 c 0
+ 890 2 837 0 783 -0 c 0
+ 772 0 761 0 750 0 c 0
+ 723 0 700 23 700 50 c 0
+ 700 396 638 558 584 633 c 0
+ 558 670 533 687 518 694 c 0
+ 509 698 504 699 500 700 c 0
+ 495 699 490 698 481 694 c 0
+ 466 687 441 671 415 636 c 0
+ 364 567 304 421 300 115 c 1
+ 343 106 393 100 490 100 c 0
+ 518 100 540 78 540 50 c 0
+ 540 22 518 0 490 0 c 0
+ 397 0 334 7 293 15 c 0
+ 249 23 200 31 200 78 c 0
+ 200 419 263 599 335 696 c 0
+ 371 745 409 771 440 785 c 0
+ 463 795 476 800 500 800 c 0
+ 524 800 538 794 560 784 c 0
+ 592 769 630 742 666 692 c 0
+ 734 597 794 422 800 100 c 1
+ 840 101 877 105 921 124 c 0
+ 927 127 934 128 940 128 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph233_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph233 joinScale
+Substitution2: "'ss02' CONT SUB" glyph457.cont
+Substitution2: "'ss01' CART SUB" glyph457.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph234_joinScale
+Encoding: 458 -1 458
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+900 186 m 0
+ 932 186 949 161 949 136 c 0
+ 949 130 949 124 947 118 c 0
+ 937 82 924 41 899 5 c 0
+ 864 -45 793 -90 702 -90 c 0
+ 608 -90 538 -34 475 16 c 0
+ 404 72 356 110 298 110 c 0
+ 285 110 272 108 258 104 c 0
+ 215 93 194 75 181 57 c 0
+ 166 36 159 10 149 -28 c 0
+ 143 -51 122 -66 100 -66 c 0
+ 70 -66 50 -41 50 -16 c 0
+ 50 -12 50 -8 51 -4 c 0
+ 60 34 73 77 100 115 c 0
+ 136 165 208 210 299 210 c 0
+ 395 210 466 151 532 99 c 0
+ 601 45 647 10 702 10 c 0
+ 715 10 728 12 742 16 c 0
+ 784 27 804 44 817 62 c 0
+ 832 83 841 110 852 150 c 0
+ 858 172 878 186 900 186 c 0
+900 866 m 0
+ 932 866 949 841 949 816 c 0
+ 949 810 949 804 947 798 c 0
+ 937 762 924 721 899 685 c 0
+ 864 635 793 590 702 590 c 0
+ 608 590 538 646 475 696 c 0
+ 404 752 356 790 298 790 c 0
+ 285 790 272 788 258 784 c 0
+ 215 773 194 755 181 737 c 0
+ 166 716 159 690 149 652 c 0
+ 143 629 122 614 100 614 c 0
+ 70 614 50 639 50 664 c 0
+ 50 668 50 672 51 676 c 0
+ 60 714 73 757 100 795 c 0
+ 136 845 208 890 299 890 c 0
+ 395 890 466 831 532 779 c 0
+ 601 725 647 690 702 690 c 0
+ 715 690 728 692 742 696 c 0
+ 784 707 804 724 817 742 c 0
+ 832 763 841 790 852 830 c 0
+ 858 852 878 866 900 866 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph234_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph234 joinScale
+Substitution2: "'ss02' CONT SUB" glyph458.cont
+Substitution2: "'ss01' CART SUB" glyph458.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph235_joinScale
+Encoding: 459 -1 459
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph459.cont
+Substitution2: "'ss01' CART SUB" glyph459.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph236_joinScale
+Encoding: 460 -1 460
+Width: 1000
+VWidth: 800
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 890 m 0
+ 528 890 550 868 550 840 c 2
+ 550 780 l 2
+ 550 752 528 730 500 730 c 0
+ 472 730 450 752 450 780 c 2
+ 450 840 l 2
+ 450 868 472 890 500 890 c 0
+500 890 m 0
+ 528 890 550 868 550 840 c 2
+ 550 780 l 2
+ 550 752 528 730 500 730 c 0
+ 472 730 450 752 450 780 c 2
+ 450 840 l 2
+ 450 868 472 890 500 890 c 0
+500 890 m 0
+ 528 890 550 868 550 840 c 2
+ 550 780 l 2
+ 550 752 528 730 500 730 c 0
+ 472 730 450 752 450 780 c 2
+ 450 840 l 2
+ 450 868 472 890 500 890 c 0
+227 847 m 0
+ 234 851 242 853 250 853 c 0
+ 268 853 285 843 294 826 c 2
+ 334 750 l 2
+ 338 743 340 734 340 726 c 0
+ 340 708 330 691 313 682 c 0
+ 306 678 298 676 290 676 c 0
+ 272 676 255 686 246 703 c 2
+ 206 780 l 2
+ 202 787 200 795 200 803 c 0
+ 200 821 210 838 227 847 c 0
+773 847 m 0
+ 790 838 800 821 800 803 c 0
+ 800 795 798 787 794 780 c 2
+ 754 703 l 2
+ 745 686 728 676 710 676 c 0
+ 702 676 694 678 687 682 c 0
+ 670 691 660 708 660 726 c 0
+ 660 734 662 743 666 750 c 2
+ 706 826 l 2
+ 715 843 732 853 750 853 c 0
+ 758 853 766 851 773 847 c 0
+850 370 m 0
+ 850 177 693 20 500 20 c 0
+ 307 20 150 177 150 370 c 0
+ 150 563 307 720 500 720 c 0
+ 693 720 850 563 850 370 c 0
+500 120 m 0
+ 638 120 750 232 750 370 c 0
+ 750 508 638 620 500 620 c 0
+ 362 620 250 508 250 370 c 0
+ 250 232 362 120 500 120 c 0
+EndSplineSet
+Validated: 5
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph236_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph236 joinScale
+Substitution2: "'ss02' CONT SUB" glyph460.cont
+Substitution2: "'ss01' CART SUB" glyph460.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph237_joinScale
+Encoding: 461 -1 461
+Width: 1000
+VWidth: 950
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+467 838 m 2
+ 476 846 488 850 500 850 c 0
+ 512 850 524 846 533 838 c 2
+ 883 538 l 2
+ 894 529 900 515 900 500 c 2
+ 900 100 l 2
+ 900 72 878 50 850 50 c 2
+ 150 50 l 2
+ 122 50 100 72 100 100 c 2
+ 100 500 l 2
+ 100 515 106 529 117 538 c 2
+ 467 838 l 2
+200 477 m 1
+ 200 150 l 1
+ 800 150 l 1
+ 800 477 l 1
+ 500 734 l 1
+ 200 477 l 1
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph237_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph237 joinScale
+Substitution2: "'ss02' CONT SUB" glyph461.cont
+Substitution2: "'ss01' CART SUB" glyph461.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph238_joinScale
+Encoding: 462 -1 462
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+750 -50 m 0
+ 722 -50 700 -28 700 0 c 2
+ 700 800 l 2
+ 700 828 722 850 750 850 c 0
+ 778 850 800 828 800 800 c 2
+ 800 0 l 2
+ 800 -28 778 -50 750 -50 c 0
+250 -50 m 0
+ 222 -50 200 -28 200 0 c 2
+ 200 800 l 2
+ 200 828 222 850 250 850 c 0
+ 278 850 300 828 300 800 c 2
+ 300 0 l 2
+ 300 -28 278 -50 250 -50 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph238_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph238 joinScale
+Substitution2: "'ss02' CONT SUB" glyph462.cont
+Substitution2: "'ss01' CART SUB" glyph462.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph239_joinScale
+Encoding: 463 -1 463
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+83 630 m 0
+ 163 768 235 836 315 849 c 0
+ 325 851 336 851 346 851 c 0
+ 408 851 460 821 502 797 c 1
+ 544 821 596 851 657 851 c 0
+ 667 851 676 851 686 849 c 0
+ 765 836 836 770 913 636 c 0
+ 971 536 998 457 998 393 c 0
+ 998 280 919 231 847 189 c 1
+ 847 110 840 53 800 4 c 0
+ 750 -58 656 -86 502 -86 c 0
+ 343 -86 248 -56 197 6 c 0
+ 156 56 148 113 148 194 c 1
+ 78 235 0 283 0 394 c 0
+ 0 457 27 534 83 630 c 0
+264 531 m 0
+ 312 612 363 687 428 746 c 1
+ 405 758 372 771 342 771 c 0
+ 337 771 333 771 328 770 c 0
+ 286 763 230 724 152 590 c 0
+ 98 496 80 436 80 395 c 0
+ 80 379 83 366 87 355 c 0
+ 98 326 128 302 157 283 c 1
+ 163 309 172 337 183 365 c 0
+ 204 419 232 476 264 531 c 0
+231 240 m 1
+ 299 212 400 200 501 200 c 0
+ 597 200 701 210 767 237 c 1
+ 763 263 754 297 740 334 c 0
+ 702 436 634 554 571 632 c 0
+ 546 663 522 687 501 703 c 1
+ 480 687 457 663 431 632 c 0
+ 366 554 297 437 258 336 c 0
+ 244 298 235 266 231 240 c 1
+840 279 m 1
+ 869 298 900 323 911 353 c 0
+ 915 364 918 378 918 394 c 0
+ 918 436 900 499 844 596 c 0
+ 769 726 713 763 673 770 c 0
+ 669 771 664 771 660 771 c 0
+ 631 771 598 757 575 745 c 1
+ 639 685 689 611 736 529 c 0
+ 767 474 795 415 815 361 c 0
+ 825 333 834 305 840 279 c 1
+229 156 m 1
+ 231 115 239 80 258 57 c 0
+ 285 24 347 -6 502 -6 c 0
+ 653 -6 712 23 738 55 c 0
+ 756 78 764 111 766 152 c 1
+ 694 130 601 119 507 119 c 0
+ 406 119 304 132 229 156 c 1
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph239_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph239 joinScale
+Substitution2: "'ss02' CONT SUB" glyph463.cont
+Substitution2: "'ss01' CART SUB" glyph463.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph240_joinScale
+Encoding: 464 -1 464
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+10 700 m 0
+ 10 728 32 750 60 750 c 2
+ 940 750 l 2
+ 968 750 990 728 990 700 c 0
+ 990 380 780 100 500 100 c 0
+ 220 100 10 380 10 700 c 0
+112 650 m 1
+ 132 389 307 200 500 200 c 0
+ 693 200 868 389 888 650 c 1
+ 112 650 l 1
+575 -15 m 0
+ 575 -56 541 -90 500 -90 c 0
+ 459 -90 425 -56 425 -15 c 0
+ 425 26 459 60 500 60 c 0
+ 541 60 575 26 575 -15 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph240_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph240 joinScale
+Substitution2: "'ss02' CONT SUB" glyph464.cont
+Substitution2: "'ss01' CART SUB" glyph464.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph241_joinScale
+Encoding: 465 -1 465
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph465.cont
+Substitution2: "'ss01' CART SUB" glyph465.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph242_joinScale
+Encoding: 466 -1 466
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+-0 583 m 0
+ 0 612 25 633 50 633 c 0
+ 59 633 67 630 75 625 c 2
+ 262 514 l 1
+ 456 864 l 2
+ 465 880 482 890 500 890 c 0
+ 518 890 535 880 544 864 c 2
+ 738 514 l 1
+ 924 625 l 2
+ 932 630 941 633 950 633 c 0
+ 975 633 1000 612 1000 583 c 0
+ 1000 566 992 549 976 540 c 2
+ 787 427 l 1
+ 982 74 l 2
+ 987 66 989 58 989 50 c 0
+ 989 22 964 0 939 0 c 2
+ 61 0 l 2
+ 36 0 11 22 11 50 c 0
+ 11 58 13 66 18 74 c 2
+ 213 426 l 1
+ 24 540 l 2
+ 8 549 0 566 -0 583 c 0
+673 426 m 2
+ 500 737 l 1
+ 326 424 l 2
+ 325 421 324 418 322 416 c 2
+ 146 100 l 1
+ 854 100 l 1
+ 679 414 l 2
+ 676 418 675 422 673 426 c 2
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph242_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph242 joinScale
+Substitution2: "'ss02' CONT SUB" glyph466.cont
+Substitution2: "'ss01' CART SUB" glyph466.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph243_joinScale
+Encoding: 467 -1 467
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph467.cont
+Substitution2: "'ss01' CART SUB" glyph467.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph244_joinScale
+Encoding: 468 -1 468
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph468.cont
+Substitution2: "'ss01' CART SUB" glyph468.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph245_joinScale
+Encoding: 469 -1 469
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 650 m 0
+ 362 650 250 538 250 400 c 0
+ 250 262 362 150 500 150 c 0
+ 638 150 750 262 750 400 c 0
+ 750 538 638 650 500 650 c 0
+150 400 m 0
+ 150 593 307 750 500 750 c 0
+ 693 750 850 593 850 400 c 0
+ 850 207 693 50 500 50 c 0
+ 307 50 150 207 150 400 c 0
+940 840 m 0
+ 969 840 990 816 990 790 c 0
+ 990 788 990 787 990 785 c 2
+ 940 235 l 2
+ 938 209 916 190 890 190 c 0
+ 861 190 840 214 840 240 c 0
+ 840 242 840 243 840 245 c 2
+ 890 795 l 2
+ 892 821 914 840 940 840 c 0
+10 785 m 2
+ 10 787 10 788 10 790 c 0
+ 10 816 31 840 60 840 c 0
+ 86 840 108 821 110 795 c 2
+ 160 245 l 2
+ 160 243 160 242 160 240 c 0
+ 160 214 139 190 110 190 c 0
+ 84 190 62 209 60 235 c 2
+ 10 785 l 2
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph245_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph245 joinScale
+Substitution2: "'ss02' CONT SUB" glyph469.cont
+Substitution2: "'ss01' CART SUB" glyph469.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph246_joinScale
+Encoding: 470 -1 470
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+100 -50 m 0
+ 73 -50 50 -27 50 0 c 0
+ 50 13 55 25 65 35 c 2
+ 285 255 l 2
+ 295 265 307 270 320 270 c 0
+ 347 270 370 247 370 220 c 0
+ 370 207 365 195 355 185 c 2
+ 135 -35 l 2
+ 125 -45 113 -50 100 -50 c 0
+630 220 m 0
+ 630 247 653 270 680 270 c 0
+ 693 270 705 265 715 255 c 2
+ 935 35 l 2
+ 945 25 950 13 950 0 c 0
+ 950 -27 927 -50 900 -50 c 0
+ 887 -50 875 -45 865 -35 c 2
+ 645 185 l 2
+ 635 195 630 207 630 220 c 0
+680 530 m 0
+ 653 530 630 553 630 580 c 0
+ 630 593 635 605 645 615 c 2
+ 865 835 l 2
+ 875 845 887 850 900 850 c 0
+ 927 850 950 827 950 800 c 0
+ 950 787 945 775 935 765 c 2
+ 715 545 l 2
+ 705 535 693 530 680 530 c 0
+50 800 m 0
+ 50 827 73 850 100 850 c 0
+ 113 850 125 845 135 835 c 2
+ 355 615 l 2
+ 365 605 370 593 370 580 c 0
+ 370 553 347 530 320 530 c 0
+ 307 530 295 535 285 545 c 2
+ 65 765 l 2
+ 55 775 50 787 50 800 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph246_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph246 joinScale
+Substitution2: "'ss02' CONT SUB" glyph470.cont
+Substitution2: "'ss01' CART SUB" glyph470.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph247_joinScale
+Encoding: 471 -1 471
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+250 710 m 0
+ 276 710 300 688 300 660 c 0
+ 300 646 294 632 283 622 c 0
+ 232 577 199 533 179 485 c 0
+ 159 436 150 380 150 310 c 0
+ 150 198 167 79 231 31 c 0
+ 248 18 270 10 300 10 c 0
+ 386 10 450 70 450 150 c 0
+ 450 178 472 200 500 200 c 0
+ 528 200 550 178 550 150 c 0
+ 550 70 614 10 700 10 c 0
+ 730 10 752 18 769 31 c 0
+ 833 79 850 198 850 310 c 0
+ 850 380 841 436 821 485 c 0
+ 801 533 768 577 717 622 c 0
+ 706 632 700 646 700 660 c 0
+ 700 688 724 710 750 710 c 0
+ 762 710 774 706 783 698 c 0
+ 890 605 950 494 950 310 c 0
+ 950 224 940 128 906 52 c 0
+ 872 -23 806 -90 700 -90 c 0
+ 620 -90 546 -55 500 3 c 1
+ 454 -55 380 -90 300 -90 c 0
+ 194 -90 128 -23 94 52 c 0
+ 60 128 50 224 50 310 c 0
+ 50 494 110 605 217 698 c 0
+ 226 706 238 710 250 710 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph247_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph247 joinScale
+Substitution2: "'ss02' CONT SUB" glyph471.cont
+Substitution2: "'ss01' CART SUB" glyph471.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph248_joinScale
+Encoding: 472 -1 472
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+288 524 m 2
+ 288 512 l 2
+ 288 382 287 278 264 188 c 0
+ 249 129 223 77 185 29 c 1
+ 411 42 541 92 617 162 c 0
+ 704 243 730 361 730 524 c 0
+ 730 552 752 574 780 574 c 0
+ 808 574 830 552 830 524 c 0
+ 830 355 804 199 685 89 c 0
+ 567 -20 371 -74 60 -74 c 0
+ 31 -74 10 -49 10 -23 c 0
+ 10 -9 16 5 29 15 c 0
+ 111 81 148 140 167 213 c 0
+ 187 290 188 384 188 524 c 0
+ 188 552 210 574 238 574 c 0
+ 266 574 288 552 288 524 c 2
+500 880 m 0
+ 528 880 550 858 550 830 c 2
+ 550 730 l 2
+ 550 702 528 680 500 680 c 0
+ 472 680 450 702 450 730 c 2
+ 450 830 l 2
+ 450 858 472 880 500 880 c 0
+719 826 m 0
+ 749 826 769 801 769 776 c 0
+ 769 770 768 763 765 757 c 2
+ 727 665 l 2
+ 719 646 701 634 681 634 c 0
+ 651 634 631 659 631 684 c 0
+ 631 690 632 697 635 703 c 2
+ 673 795 l 2
+ 681 814 699 826 719 826 c 0
+231 776 m 0
+ 231 801 251 826 281 826 c 0
+ 301 826 319 814 327 795 c 2
+ 365 703 l 2
+ 368 697 369 690 369 684 c 0
+ 369 659 349 634 319 634 c 0
+ 299 634 281 646 273 665 c 2
+ 235 757 l 2
+ 232 763 231 770 231 776 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph248_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph248 joinScale
+Substitution2: "'ss02' CONT SUB" glyph472.cont
+Substitution2: "'ss01' CART SUB" glyph472.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph249_joinScale
+Encoding: 473 -1 473
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph473.cont
+Substitution2: "'ss01' CART SUB" glyph473.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph250_joinScale
+Encoding: 474 -1 474
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 703 m 0
+ 653 703 789 628 881 509 c 0
+ 907 476 929 439 947 400 c 1
+ 929 361 907 324 881 291 c 0
+ 789 172 653 97 500 97 c 0
+ 347 97 211 172 119 291 c 0
+ 93 324 71 361 53 400 c 1
+ 71 439 93 476 119 509 c 0
+ 211 628 347 703 500 703 c 0
+834 400 m 1
+ 761 525 636 603 500 603 c 0
+ 364 603 239 525 166 400 c 1
+ 239 275 364 197 500 197 c 0
+ 636 197 761 275 834 400 c 1
+EndSplineSet
+Validated: 1
+Ligature2: "'liga' GLYPH THEN SCALE" glyph250 joinScale
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph250_joinScale joinScale
+Substitution2: "'ss01' CART SUB" glyph474.cart
+Substitution2: "'ss02' CONT SUB" glyph474.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph251_joinScale
+Encoding: 475 -1 475
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph475.cont
+Substitution2: "'ss01' CART SUB" glyph475.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph252_joinScale
+Encoding: 476 -1 476
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+10 840 m 2
+ 10 868 32 890 60 890 c 2
+ 940 890 l 2
+ 968 890 990 868 990 840 c 2
+ 990 -40 l 2
+ 990 -68 968 -90 940 -90 c 2
+ 60 -90 l 2
+ 32 -90 10 -68 10 -40 c 2
+ 10 840 l 2
+110 790 m 1
+ 110 10 l 1
+ 890 10 l 1
+ 890 790 l 1
+ 110 790 l 1
+160 690 m 2
+ 160 718 182 740 210 740 c 2
+ 790 740 l 2
+ 818 740 840 718 840 690 c 2
+ 840 110 l 2
+ 840 82 818 60 790 60 c 2
+ 210 60 l 2
+ 182 60 160 82 160 110 c 2
+ 160 690 l 2
+260 640 m 1
+ 260 160 l 1
+ 740 160 l 1
+ 740 640 l 1
+ 260 640 l 1
+EndSplineSet
+Validated: 1
+Ligature2: "'liga' GLYPH THEN SCALE" glyph252 joinScale
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph252_joinScale joinScale
+Substitution2: "'ss01' CART SUB" glyph476.cart
+Substitution2: "'ss02' CONT SUB" glyph476.cont
+Colour: eeee
+EndChar
+
+StartChar: glyph253_joinScale
+Encoding: 477 -1 477
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph477.cont
+Substitution2: "'ss01' CART SUB" glyph477.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph254_joinScale
+Encoding: 478 -1 478
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+69 620 m 0
+ 69 649 94 670 119 670 c 0
+ 127 670 136 668 144 663 c 2
+ 269 591 l 1
+ 324 657 407 700 500 700 c 0
+ 593 700 676 657 731 591 c 1
+ 856 663 l 2
+ 864 668 873 670 881 670 c 0
+ 906 670 931 649 931 620 c 0
+ 931 603 922 586 906 577 c 2
+ 781 505 l 1
+ 793 472 800 437 800 400 c 0
+ 800 251 692 128 550 104 c 1
+ 550 -40 l 2
+ 550 -68 528 -90 500 -90 c 0
+ 472 -90 450 -68 450 -40 c 2
+ 450 104 l 1
+ 308 128 200 251 200 400 c 0
+ 200 437 207 472 219 505 c 1
+ 94 577 l 2
+ 78 586 69 603 69 620 c 0
+500 200 m 0
+ 610 200 700 290 700 400 c 0
+ 700 517 606 600 500 600 c 0
+ 394 600 300 517 300 400 c 0
+ 300 290 390 200 500 200 c 0
+EndSplineSet
+Validated: 1
+LCarets2: 1 0
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph254_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph254 joinScale
+Substitution2: "'ss02' CONT SUB" glyph478.cont
+Substitution2: "'ss01' CART SUB" glyph478.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph255_joinScale
+Encoding: 479 -1 479
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph479.cont
+Substitution2: "'ss01' CART SUB" glyph479.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph256_joinScale
+Encoding: 480 -1 480
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph480.cont
+Substitution2: "'ss01' CART SUB" glyph480.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph257_joinScale
+Encoding: 481 -1 481
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph481.cont
+Substitution2: "'ss01' CART SUB" glyph481.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph258_joinScale
+Encoding: 482 -1 482
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+200 850 m 0
+ 228 850 250 828 250 800 c 2
+ 250 0 l 2
+ 250 -28 228 -50 200 -50 c 0
+ 172 -50 150 -28 150 0 c 2
+ 150 800 l 2
+ 150 828 172 850 200 850 c 0
+800 850 m 0
+ 828 850 850 828 850 800 c 2
+ 850 0 l 2
+ 850 -28 828 -50 800 -50 c 0
+ 772 -50 750 -28 750 0 c 2
+ 750 800 l 2
+ 750 828 772 850 800 850 c 0
+575 400 m 0
+ 575 359 541 325 500 325 c 0
+ 459 325 425 359 425 400 c 0
+ 425 441 459 475 500 475 c 0
+ 541 475 575 441 575 400 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph258_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph258 joinScale
+Substitution2: "'ss02' CONT SUB" glyph482.cont
+Substitution2: "'ss01' CART SUB" glyph482.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph259_joinScale
+Encoding: 483 -1 483
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 50 m 0
+ 693 50 850 207 850 400 c 0
+ 850 428 872 450 900 450 c 0
+ 928 450 950 428 950 400 c 0
+ 950 151 749 -50 500 -50 c 0
+ 251 -50 50 151 50 400 c 0
+ 50 428 72 450 100 450 c 0
+ 128 450 150 428 150 400 c 0
+ 150 207 307 50 500 50 c 0
+680 564 m 0
+ 650 564 630 589 630 614 c 0
+ 630 620 631 627 634 633 c 2
+ 704 803 l 2
+ 712 822 730 834 750 834 c 0
+ 780 834 800 809 800 784 c 0
+ 800 778 799 771 796 765 c 2
+ 726 595 l 2
+ 718 576 700 564 680 564 c 0
+200 784 m 0
+ 200 809 220 834 250 834 c 0
+ 270 834 288 822 296 803 c 2
+ 366 633 l 2
+ 369 627 370 620 370 614 c 0
+ 370 589 350 564 320 564 c 0
+ 300 564 282 576 274 595 c 2
+ 204 765 l 2
+ 201 771 200 778 200 784 c 0
+500 886 m 0
+ 528 886 550 864 550 836 c 2
+ 550 652 l 2
+ 550 624 528 602 500 602 c 0
+ 472 602 450 624 450 652 c 2
+ 450 836 l 2
+ 450 864 472 886 500 886 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph259_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph259 joinScale
+Substitution2: "'ss02' CONT SUB" glyph483.cont
+Substitution2: "'ss01' CART SUB" glyph483.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph260_joinScale
+Encoding: 484 -1 484
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss02' CONT SUB" glyph484.cont
+Substitution2: "'ss01' CART SUB" glyph484.cart
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph261_joinScale
+Encoding: 485 -1 485
+Width: 1000
+VWidth: 900
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+SplineSet
+500 610 m 0
+ 476 610 454 616 434 626 c 1
+ 422 619 413 621 399 614 c 0
+ 385 608 364 595 343 570 c 0
+ 301 520 250 416 250 200 c 0
+ 250 139 271 105 297 84 c 0
+ 325 62 364 50 410 50 c 0
+ 580 50 570 197 652 288 c 0
+ 686 326 731 350 796 350 c 0
+ 898 350 950 272 971 192 c 0
+ 990 120 990 40 990 1 c 2
+ 990 0 l 2
+ 990 -28 968 -50 940 -50 c 0
+ 912 -50 890 -28 890 0 c 0
+ 890 40 890 108 874 166 c 0
+ 866 195 856 217 844 231 c 0
+ 833 243 820 250 800 250 c 0
+ 762 250 743 239 727 221 c 0
+ 708 200 690 164 673 129 c 0
+ 654 91 630 45 589 9 c 0
+ 546 -28 488 -50 410 -50 c 0
+ 350 -50 285 -35 234 6 c 0
+ 181 48 150 113 150 200 c 0
+ 150 430 205 561 267 635 c 0
+ 302 676 333 695 366 709 c 1
+ 362 722 360 736 360 750 c 0
+ 360 827 423 890 500 890 c 0
+ 577 890 640 827 640 750 c 0
+ 640 673 577 610 500 610 c 0
+500 710 m 0
+ 522 710 540 728 540 750 c 0
+ 540 772 522 790 500 790 c 0
+ 478 790 460 772 460 750 c 0
+ 460 728 478 710 500 710 c 0
+779 25 m 0
+ 738 25 704 59 704 100 c 0
+ 704 141 738 175 779 175 c 0
+ 820 175 854 141 854 100 c 0
+ 854 59 820 25 779 25 c 0
+EndSplineSet
+Validated: 1
+MultipleSubs2: "'ccmp' RESPAWN SCALE" glyph261_joinScale joinScale
+Ligature2: "'liga' GLYPH THEN SCALE" glyph261 joinScale
+Substitution2: "'ss02' CONT SUB" glyph485.cont
+Substitution2: "'ss01' CART SUB" glyph485.cart
+Colour: eeee
+EndChar
+
+StartChar: glyph262_joinScale
+Encoding: 486 -1 486
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph486.cart
+Substitution2: "'ss02' CONT SUB" glyph486.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph263_joinScale
+Encoding: 487 -1 487
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph487.cart
+Substitution2: "'ss02' CONT SUB" glyph487.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
+
+StartChar: glyph264_joinScale
+Encoding: 488 -1 488
+Width: 1000
+GlyphClass: 2
+Flags: HMW
+LayerCount: 2
+Fore
+Validated: 1
+Substitution2: "'ss01' CART SUB" glyph488.cart
+Substitution2: "'ss02' CONT SUB" glyph488.cont
+LCarets2: 1 0
+Colour: eeee
+EndChar
