@@ -77,11 +77,30 @@ Lookup: 4 0 0 "'liga' GLYPH THEN JOINER" { "'liga' GLYPH THEN JOINER"  } ['liga'
 Lookup: 2 0 0 "'ccmp' RESPAWN JOINER" { "'ccmp' RESPAWN JOINER"  } ['ccmp' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' JOINER THEN GLYPH" { "'liga' JOINER THEN GLYPH"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 6 0 0 "'calt' CART AND CONT" { "'calt' CART AND CONT"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "'ss01' CART" { "'ss01' CART SUB" ("_combCartExtTok") } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "'ss02' CONT" { "'ss02' CONT SUB" ("_combLongGlyphExtTok") } ['ss02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 2 2 0 "'cc01' CART" { "'cc01' CART"  } ['cc01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 2 2 0 "'cc02' CONT" { "'cc02' CONT"  } ['cc02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' COMBOS KERN" { "'kern' COMBOS KERN" [0,0,0] } ['kern' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+MarkAttachClasses: 1
+DEI: 91125
+ChainSub2: class "'calt' CART AND CONT" 4 4 4 2
 "#;
-pub const OTHER: &str = r#"DEI: 91125
+
+pub const OTHER: &str = r#" 1 1 0
+  ClsList: 1
+  BClsList: 2
+  FClsList:
+ 1
+  SeqLookup: 0 "'cc01' CART"
+ 1 1 0
+  ClsList: 1
+  BClsList: 3
+  FClsList:
+ 1
+  SeqLookup: 0 "'cc02' CONT"
+  ClassNames: "other" "base" "cart" "cont"
+  BClassNames: "other" "base" "cart" "cont"
+  FClassNames: "other" "base" "cart" "cont"
+EndFPST
 LangName: 1033 "" "" "" "" "" "3.1.1" "" "+ACIA-jan Itan 2023+ACIA" "+ACIAIgAA" "+ACIA-jan Itan+ACIA" "+ACIAIgAA" "+ACIAIgAA" "+ACIA-https://etbcor.com/+ACIA" "+ACIA-MIT License+ACIA" "+ACIA-https://opensource.org/licenses/MIT+ACIA" "" "nasin-nanpa" "Regular"
 Encoding: Custom
 UnicodeInterp: none
@@ -90,6 +109,8 @@ DisplaySize: -72
 AntiAlias: 1
 FitToEm: 1
 WinInfo: 32 16 8
+BeginPrivate: 0
+EndPrivate
 "#;
 
 // CTRL BLOCK (vec)
