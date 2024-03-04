@@ -174,7 +174,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         true,
         "",
         "Tok_joinScaleTok",
-        "00ffff",
+        "ffff",
         EncPos::None,
         1000,
     );
@@ -185,7 +185,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         true,
         "",
         "Tok_joinScaleTok",
-        "00ffff",
+        "ffff",
         EncPos::None,
         1000,
     );
@@ -220,7 +220,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         true,
         "",
         "Tok_joinStackTok",
-        "00ff00",
+        "ff00",
         EncPos::None,
         1000,
     );
@@ -231,7 +231,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         true,
         "",
         "Tok_joinStackTok",
-        "00ff00",
+        "ff00",
         EncPos::None,
         1000,
     );
@@ -274,58 +274,26 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         tok_ext_upper_block,
     ];
 
-    let mut cart_block = main_block
+    let classes = main_block
         .iter()
         .map(|block| {
-            block.new_from_refs(
-                &mut ff_pos,
-                "S 1 0 0 1 0 0 2".to_string(),
-                Some(Ref::new(
-                    tok_ctrl_block.glyphs[2].encoding.clone(),
-                    "S 1 0 0 1 1000 0 2",
-                )),
-                LookupsMode::None,
-                false,
-                true,
-                "",
-                "_combCartExtTok",
-                "ffff00",
-            )
+            block
+                .glyphs
+                .iter()
+                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                .join(" ")
         })
-        .collect();
-    // let mut cart_block = main_block
-    //     .iter()
-    //     .map(|block| {
-    //         block.new_from_refs(
-    //             &mut ff_pos,
-    //             "S 1 0 0 1 0 0 2".to_string(),
-    //             Some(GlyphRef::new(
-    //                 tok_ctrl_block.glyphs[2].encoding.clone(),
-    //                 "S 1 0 0 1 1000 0 2".to_string(),
-    //             )),
-    //             LigMode::CartCont(
-    //                 block.prefix.clone(),
-    //                 format!("{}_combCartExtTok", block.suffix),
-    //             ),
-    //             SubMode::None,
-    //             block.prefix.clone(),
-    //             format!("{}_combCartExtTok", block.suffix),
-    //             "ffff00".to_string(),
-    //         )
-    //     })
-    //     .collect();
-    // let cont_block = ();
+        .join(" ");
+    let classes = format!("  Class: 15884 {classes}\n  Class: 27 startCartTok combCartExtTok\n  Class: 72 startLongPiTok combLongGlyphExtTok startRevLongGlyphTok\n BClass: 15884 s\n  BClass: 15884 {classes}\n  BClass: 27 startCartTok combCartExtTok\n  BClass: 72 startLongPiTok combLongGlyphExtTok startRevLongGlyphTok\n BClass: 15884 s\n  FClass: 15884 {classes}\n  FClass: 27 startCartTok combCartExtTok\n  FClass: 73 startLongPiTok combLongGlyphExtTok startRevLongGlyphTok\n BClass: 15884 s\n\n");
 
     let mut meta_block = vec![ctrl_block, tok_ctrl_block];
     meta_block.append(&mut main_block);
-    meta_block.append(&mut cart_block);
-    // cont_block,
 
     let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
-    let glyphs_string = meta_block.iter().map(|b| b.gen()).join("");
+    let glyphs_string = meta_block.iter().map(|block| block.gen()).join("");
     writeln!(
         &mut file,
-        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
+        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{classes}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
     )
 }
 

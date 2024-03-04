@@ -127,9 +127,9 @@ impl Rep {
 
 #[derive(Clone)]
 pub struct GlyphBasic {
-    name: String,
-    width: usize,
-    rep: Rep,
+    pub name: String,
+    pub width: usize,
+    pub rep: Rep,
 }
 
 impl GlyphBasic {
@@ -176,7 +176,7 @@ pub enum Lookups {
     WordLigFromLetters,
     WordLigManual(String),
     ComboFirst,
-    ComboSecond,
+    ComboLast,
     None,
 }
 
@@ -194,7 +194,7 @@ impl Lookups {
                 }
             }
             LookupsMode::ComboFirst => Lookups::ComboFirst,
-            LookupsMode::ComboSecond => Lookups::ComboSecond,
+            LookupsMode::ComboSecond => Lookups::ComboLast,
             LookupsMode::None => Lookups::None,
         }
     }
@@ -271,7 +271,7 @@ impl GlyphFull {
                 let joiner = parts[1];
                 format!("Ligature2: \"'liga' GLYPH THEN JOINER\" {glyph} {joiner}\nMultipleSubs2: \"'ccmp' RESPAWN JOINER\" {full_name} {joiner}\n")
             }
-            Lookups::ComboSecond => {
+            Lookups::ComboLast => {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let joiner = parts[0];
                 let glyph = parts[1];
@@ -280,7 +280,7 @@ impl GlyphFull {
             Lookups::None => "".to_string(),
         };
         let cc_subs = if self.cc_subs {
-            format!("Substitution2: \"'ss01' CART SUB\" {full_name}_combCartExtTok\nSubstitution2: \"'ss01' CONT SUB\" {full_name}_combLongGlyphExtTok\n")
+            format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtTok\n")
         } else {
             "".to_string()
         };
