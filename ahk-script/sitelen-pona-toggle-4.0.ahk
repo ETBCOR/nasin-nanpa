@@ -173,6 +173,7 @@ Hotstring("EndChars", " ")
 ::`:::{U+F199D} ; sitelen pona colon
 
 ::`s::{U+3000} ; logograph fullwidth space
+::zz::{U+3000} ; logograph fullwidth space
 ::<::{U+300C} ; 「 start quote
 ::>::{U+300D} ; 」 end quote
 
