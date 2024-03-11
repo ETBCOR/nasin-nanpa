@@ -17,7 +17,7 @@ This table describes both the ligatures in nasin nanpa and the AutoHotKey script
 | **U+3000** | `  ` / `zz`| _IDEOGRAPHIC SPACE_ |
 | **U+F1990** | `[` | _START OF CARTOUCHE_ |
 | **U+F1991** | `]` | _END OF CARTOUCHE_ |
-| **U+F1992** | `__` | _COMBINING CARTOUCHE EXTENSION_ |
+| **U+F1992** | `=` | _COMBINING CARTOUCHE EXTENSION_ |
 | **U+F1993** | (none) | _START OF LONG PI_ |
 | **U+F1994** | (none) | _COMBINING LONG PI EXTENSION_ |
 | **U+F1995** | `-` | _STACKING JOINER_ |
