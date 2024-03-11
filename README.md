@@ -25,11 +25,12 @@ This table describes both the ligatures in nasin nanpa and the AutoHotKey script
 | **U+F1997** | `(` | _START OF LONG GLYPH_ |
 | **U+F1998** | `)` | _END OF LONG GLYPH_ |
 | **U+F1999** | `_` | _COMBINING LONG GLYPH EXTENSION_ |
-| **U+F199A** | (none) | _START OF REVERSE LONG GLYPH_ |
-| **U+F199B** | (none) | _END OF REVERSE LONG GLYPH_ |
+| **U+F199A** | `{` | _START OF REVERSE LONG GLYPH_ |
+| **U+F199B** | `}` | _END OF REVERSE LONG GLYPH_ |
 | **U+F199C** | `.` | _MIDDLE DOT_ |
 | **U+F199D** | `:` | _COLON_ |
-| **U+FE00** -<br>**U+FE03** | `1` - `4` | _VARIATION SELECTOR 1_ - _VARIATION SELECTOR 4_ |
+| **U+FE00** -<br>**U+FE07** | `1` - `8` | _VARIATION SELECTOR 1_ - _VARIATION SELECTOR 8_ |
+| **U+200D** | `&` | _ZERO WIDTH JOINER_ |
 | (none) | `itan` | jan Itan's personal glyph |
 | (none) | `lepeka` | jan Lepeka's personal glyph |
 | (none) | `lipamanka` | lipamanka's personal glyph |
