@@ -1,5 +1,3 @@
-use std::fmt::Display;
-
 use itertools::Itertools;
 
 #[derive(Clone)]
@@ -33,7 +31,7 @@ impl EncPos {
 
 #[derive(Clone)]
 pub struct Encoding {
-    ff_pos: usize,
+    pub ff_pos: usize,
     pub enc_pos: EncPos,
 }
 
@@ -165,6 +163,9 @@ pub enum LookupsMode {
     WordLig,
     WordLigFromLetters,
     WordLigManual(Vec<String>),
+    StartLongGlyph,
+    StartLongGlyphRev,
+    Alt,
     ComboFirst,
     ComboSecond,
     None,
@@ -175,6 +176,9 @@ pub enum Lookups {
     WordLig,
     WordLigFromLetters,
     WordLigManual(String),
+    StartLongGlyph,
+    StartLongGlyphRev,
+    Alt,
     ComboFirst,
     ComboLast,
     None,
@@ -193,9 +197,55 @@ impl Lookups {
                     Lookups::None
                 }
             }
+            LookupsMode::StartLongGlyph => Lookups::StartLongGlyph,
+            LookupsMode::StartLongGlyphRev => Lookups::StartLongGlyphRev,
+            LookupsMode::Alt => Lookups::Alt,
             LookupsMode::ComboFirst => Lookups::ComboFirst,
             LookupsMode::ComboSecond => Lookups::ComboLast,
             LookupsMode::None => Lookups::None,
+        }
+    }
+
+    fn gen(&self, name: String, full_name: String) -> String {
+        match &self {
+            Lookups::WordLig => {
+                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {name} space\nLigature2: \"'liga' WORD\" {name}\n")
+            }
+            Lookups::WordLigFromLetters => {
+                let lig = name.chars().join(" ");
+                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
+            }
+            Lookups::WordLigManual(word) => {
+                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
+            }
+            Lookups::StartLongGlyph => {
+                let parts: Vec<&str> = full_name.split("_").collect();
+                let glyph = parts[0];
+                let joiner = parts[1];
+                format!("Ligature2: \"'liga' START LONG GLYPHS\" {glyph} {joiner}\n")
+            }
+            Lookups::StartLongGlyphRev => {
+                let parts: Vec<&str> = full_name.split("_").collect();
+                let glyph = parts[0];
+                format!("Ligature2: \"'liga' START LONG GLYPHS\" endRevLongGlyphTok {glyph}\n")
+            }
+            Lookups::Alt => {
+                let parts = full_name.replace("_", " ");
+                format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {parts}\n")
+            }
+            Lookups::ComboFirst => {
+                let parts: Vec<&str> = full_name.split("_").collect();
+                let glyph = parts[0];
+                let joiner = parts[1];
+                format!("Ligature2: \"'liga' GLYPH THEN JOINER\" {glyph} {joiner}\nMultipleSubs2: \"'ccmp' RESPAWN JOINER\" {full_name} {joiner}\n")
+            }
+            Lookups::ComboLast => {
+                let parts: Vec<&str> = full_name.split("_").collect();
+                let joiner = parts[0];
+                let glyph = parts[1];
+                format!("Ligature2: \"'liga' JOINER THEN GLYPH\" {joiner} {glyph}\n")
+            }
+            Lookups::None => "".to_string(),
         }
     }
 }
@@ -254,33 +304,10 @@ impl GlyphFull {
         let encoding = self.encoding.gen();
         let width = self.glyph.width;
         let representation = self.glyph.rep.gen();
-        let lookups = match &self.lookups {
-            Lookups::WordLig => {
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {name} space\nLigature2: \"'liga' WORD\" {name}\n")
-            }
-            Lookups::WordLigFromLetters => {
-                let lig = name.chars().join(" ");
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
-            }
-            Lookups::WordLigManual(word) => {
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
-            }
-            Lookups::ComboFirst => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let glyph = parts[0];
-                let joiner = parts[1];
-                format!("Ligature2: \"'liga' GLYPH THEN JOINER\" {glyph} {joiner}\nMultipleSubs2: \"'ccmp' RESPAWN JOINER\" {full_name} {joiner}\n")
-            }
-            Lookups::ComboLast => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let joiner = parts[0];
-                let glyph = parts[1];
-                format!("Ligature2: \"'liga' JOINER THEN GLYPH\" {joiner} {glyph}\n")
-            }
-            Lookups::None => "".to_string(),
-        };
+        let lookups = self.lookups.gen(name.to_string(), full_name.clone());
         let cc_subs = if self.cc_subs {
-            format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtTok\n")
+            let halfwidth = if width == 500 { "Half" } else { "" };
+            format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExt{halfwidth}Tok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExt{halfwidth}Tok\n")
         } else {
             "".to_string()
         };

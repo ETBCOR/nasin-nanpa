@@ -1,7 +1,7 @@
 use ffir::*;
 use glyph_blocks::*;
 use itertools::Itertools;
-use std::{fs::File, io::Write};
+use std::{fmt::format, fs::File, io::Write};
 
 mod ffir;
 mod glyph_blocks;
@@ -333,10 +333,10 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let tok_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_ALT.as_slice(),
-        LookupsMode::WordLigFromLetters,
+        LookupsMode::Alt,
         true,
         "",
-        "Tok",
+        "",
         "ff80e6",
         EncPos::None,
         1000,
@@ -402,6 +402,31 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     //     "80ff80",
     // );
 
+    let combo_first = vec![&tok_outer_block, &tok_lower_block]
+        .iter()
+        .map(|block| {
+            block
+                .glyphs
+                .iter()
+                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                .join(" ")
+        })
+        .join(" ");
+    let combo_first = format!("combCartExtTok {}", combo_first);
+    let combo_first = format!("{} {}", combo_first.len(), combo_first);
+
+    let combo_second = vec![&tok_inner_block, &tok_upper_block]
+        .iter()
+        .map(|block| {
+            block
+                .glyphs
+                .iter()
+                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                .join(" ")
+        })
+        .join(" ");
+    let combo_second = format!("{} {}", combo_second.len(), combo_second);
+
     let mut main_blocks = vec![
         latn_block,
         tok_no_comb_block,
@@ -413,6 +438,8 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         tok_lower_block,
         tok_upper_block,
     ];
+
+    let kern = format!("KernClass2: 2 2 \"'kern' COMBOS KERN\"\n {combo_first}\n {combo_second}\n 0 {{}} 0 {{}} 0 {{}} -1000 {{}}\n");
 
     let ctrl_names = ctrl_block
         .glyphs
@@ -440,23 +467,40 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         })
         .join(" ");
 
-    let base = format!(
-        "Class: 17906 {} joinStackTok joinScaleTok {}",
-        ctrl_names, main_names
-    );
-    let cart = "Class: 46 combCartExtHalfTok startCartTok combCartExtTok";
-    let cont = "Class: 599 combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok aTok_startLongGlyphTok alasaTok_startLongGlyphTok anuTok_startLongGlyphTok awenTok_startLongGlyphTok kamaTok_startLongGlyphTok kenTok_startLongGlyphTok kepekenTok_startLongGlyphTok laTok_startLongGlyphTok lonTok_startLongGlyphTok nanpaTok_startLongGlyphTok openTok_startLongGlyphTok piTok_startLongGlyphTok piniTok_startLongGlyphTok sonaTok_startLongGlyphTok tawaTok_startLongGlyphTok wileTok_startLongGlyphTok wile1Tok_startLongGlyphTok nTok_startLongGlyphTok waTok_startLongGlyphTok";
+    let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
 
-    let classes = format!("  {base}\n  {cart}\n  {cont}\n  B{base}\n  B{cart}\n  B{cont}\n  F{base}\n  F{cart}\n  F{cont}\n");
+    let base = put_in_class(format!(
+        "{} joinStackTok joinScaleTok {}",
+        ctrl_names, main_names
+    ));
+
+    let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok".to_string());
+
+    let cont = start_long_glyph_block
+        .glyphs
+        .iter()
+        .map(|glyph| {
+            format!(
+                "{}{}{}",
+                start_long_glyph_block.prefix, glyph.glyph.name, start_long_glyph_block.suffix
+            )
+        })
+        .join(" ");
+    let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));
+
+    let put_in_sub = |c: &str| format!("  {c}{base}\n  {c}{cart}\n  {c}{cont}\n");
+    let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
+    let subs = format!("ChainSub2: class \"'calt' CART AND CONT\" 4 4 4 2\n{subs}");
 
     let mut meta_block = vec![ctrl_block, tok_ctrl_block, start_long_glyph_block];
     meta_block.append(&mut main_blocks);
 
     let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
     let glyphs_string = meta_block.iter().map(|block| block.gen()).join("");
+
     writeln!(
         &mut file,
-        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{classes}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
+        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{kern}{subs}{OTHER1}{VERSION}{OTHER2}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
     )
 }
 
