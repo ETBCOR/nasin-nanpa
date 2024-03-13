@@ -207,6 +207,14 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
                     vec![],
                 ),
             ),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2190), "arrowW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2191), "arrowN", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2192), "arrowE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2193), "arrowS", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2196), "arrowNW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2197), "arrowNE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2198), "arrowSE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2199), "arrowSW", 0, Rep::default()),
         ],
         LookupsMode::WordLigManual(vec![
             "".to_string(),
@@ -225,6 +233,14 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
             "comma comma".to_string(),
             "comma comma comma".to_string(),
             "comma comma comma comma".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
+            "".to_string(),
         ]),
         true,
         "",
@@ -291,6 +307,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
             "colon".to_string(),
             "period period".to_string(),
             "period period period".to_string(),
+            "space space".to_string(),
             "i t a n".to_string(),
             "l i p a m a n k a".to_string(),
             "l e p e k a ".to_string(),
@@ -412,7 +429,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
                 .join(" ")
         })
         .join(" ");
-    let combo_first = format!("combCartExtTok {}", combo_first);
+    let combo_first = format!("combCartExtHalfTok combLongGlyphExtHalfTok combCartExtTok combLongPiExtTok combLongGlyphExtTok {}", combo_first);
     let combo_first = format!("{} {}", combo_first.len(), combo_first);
 
     let combo_second = vec![&tok_inner_block, &tok_upper_block]
@@ -479,11 +496,15 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let cont = start_long_glyph_block
         .glyphs
         .iter()
-        .map(|glyph| {
-            format!(
-                "{}{}{}",
-                start_long_glyph_block.prefix, glyph.glyph.name, start_long_glyph_block.suffix
-            )
+        .filter_map(|glyph| {
+            if glyph.glyph.name.eq("la") {
+                None
+            } else {
+                Some(format!(
+                    "{}{}{}",
+                    start_long_glyph_block.prefix, glyph.glyph.name, start_long_glyph_block.suffix
+                ))
+            }
         })
         .join(" ");
     let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));

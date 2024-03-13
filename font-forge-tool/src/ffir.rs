@@ -216,7 +216,11 @@ impl Lookups {
                 format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
             }
             Lookups::WordLigManual(word) => {
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
+                if word.eq("space space") {
+                    format!("Ligature2: \"'liga' SPACE\" {word}\nLigature2: \"'liga' SPACE\" z z\n")
+                } else {
+                    format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
+                }
             }
             Lookups::StartLongGlyph => {
                 let parts: Vec<&str> = full_name.split("_").collect();
@@ -230,8 +234,74 @@ impl Lookups {
                 format!("Ligature2: \"'liga' START LONG GLYPHS\" endRevLongGlyphTok {glyph}\n")
             }
             Lookups::Alt => {
-                let parts = full_name.replace("_", " ");
-                format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {parts}\n")
+                let parts: Vec<&str> = full_name.split("_").collect();
+                let glyph = parts[0];
+                match (parts.len(), full_name.contains("niTok")) {
+                    (2, false) => {
+                        // normal variant
+                        let sel = parts[1];
+                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} {sel}\n")
+                    }
+                    // (3, false) => { // what is this }
+                    (2, true) => {
+                        // cardinal ni
+                        let dir = parts[1];
+                        let short = match dir {
+                            "asciicircum" => "N",
+                            "v" => "S",
+                            "less" => "W",
+                            "greater" => "E",
+                            _ => panic!(),
+                        };
+                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir} space\nLigature2: \"'liga' WORD\" {glyph} {dir}\n")
+                    }
+                    (3, true) => {
+                        // diagonal ni
+                        let dir1 = parts[1];
+                        let dir2 = parts[2];
+                        let short = match (dir1, dir2) {
+                            ("asciicircum", "less") => "NW",
+                            ("asciicircum", "greater") => "NE",
+                            ("v", "less") => "SW",
+                            ("v", "greater") => "SE",
+                            (_, _) => panic!(),
+                        };
+                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
+                    }
+                    _ => panic!(),
+                }
+                // if parts.len() == 3 {
+                //     let glyph = parts[0];
+                //     let dir1 = parts[1];
+                //     let dir2 = parts[2];
+                //     if full_name.contains("niTok") {
+                //         let emoji = match (dir1, dir2) {
+                //             ("asciicircum", "less") => "NW",
+                //             ("asciicircum", "greater") => "NE",
+                //             ("v", "less") => "SW",
+                //             ("v", "greater") => "SE",
+                //             (_, _) => panic!(),
+                //         };
+                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{emoji}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
+                //     } else {
+                //         "".to_string()
+                //     }
+                // } else {
+                //     let glyph = parts[0];
+                //     let dir1 = parts[1];
+                //     if full_name.contains("niTok") {
+                //         let emoji = match dir1 {
+                //             "asciicircum" => "N",
+                //             "v" => "S",
+                //             "less" => "W",
+                //             "greater" => "E",
+                //             _ => panic!(),
+                //         };
+                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{emoji}\n")
+                //     } else {
+                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} {dir1}\n")
+                //     }
+                // }
             }
             Lookups::ComboFirst => {
                 let parts: Vec<&str> = full_name.split("_").collect();
@@ -314,7 +384,15 @@ impl GlyphFull {
 
         let color = format!("Colour: {color}");
 
-        format!("\nStartChar: {full_name}\n{encoding}\nWidth: {width}\nLayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
+        let flags = if (name.contains("VAR") && full_name.len() == 5)
+            || name.contains("join")
+            || name.contains("ZWJ")
+        {
+            "Flags: W\n"
+        } else {
+            ""
+        };
+        format!("\nStartChar: {full_name}\n{encoding}\n{flags}Width: {width}\nLayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
     }
 }
 
