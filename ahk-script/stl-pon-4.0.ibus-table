@@ -1,0 +1,304 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under LGPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_0
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+LICENSE = LGPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID = 853cc4da-fc34-4085-ac2b-5bb8a1951b6c
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER = 20240316
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", letter one is recommended
+ICON = ibus-table.svg
+
+### The symbol to be displayed in IM switchers
+SYMBOL = 󱥬
+
+### The default name of this table, this is needed
+NAME = sitelen pona
+
+### The local names of this table, this is optional
+### NAME.zh_CN = 形码
+### NAME.zh_HK = 形碼
+### NAME.zh_TW = 形碼
+
+### Description
+DESCRIPTION = sitelen pona input method for IBus, ported from nasin-nanpa's ahk script.
+
+### Supported languages of this table
+### sigle "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES = en_US
+
+### The author of this table
+AUTHOR = jan Komi
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT = toki
+
+### Valid input chars.
+VALID_INPUT_CHARS = !#()*+-.012:<>L[]_abeijklmnopstuvwz{}~
+
+### Layout
+LAYOUT = us
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH = 20
+
+### Use auto_commit mode as default
+AUTO_COMMIT = TRUE
+
+### Automatically selects the first phrase when typing
+AUTO_SELECT = FALSE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT = FALSE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER = FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE = FALSE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+PINYIN_MODE = FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST = TRUE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS = 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+### RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+
+### The key strokes to page up the lookup table.
+### PAGE_UP_KEYS = Page_Up,KP_Page_Up,minus,comma
+
+### The key strokes to page down.
+### PAGE_DOWN_KEYS = Page_Down,KP_Page_Down,equal,period
+
+### The key strokes to select candidiate phrases.
+### Usually "1,2,3,4,5,6,7,8,9" but if this conflicts with
+### characters one wants to use for input one can also
+### use something like “F1,F2,F3,F4,F5,F6,F7,F8,F9”
+SELECT_KEYS = 1,2,3,4,5,6,7,8,9
+
+### The default orientation of the candidate list
+### TRUE means the candidate list is vertical, FALSE means it is horizontal
+ORIENTATION=TRUE
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+aks	󱤁	1
+ala	󱤂	1
+als	󱤃	1
+ale	󱤄	1
+anp	󱤅	1
+ant	󱤆	1
+anu	󱤇	1
+ape	󱦡	1
+awn	󱤈	1
+esn	󱤋	1
+ijo	󱤌	1
+ike	󱤍	1
+ilo	󱤎	1
+ins	󱤏	1
+jak	󱤐	1
+jan	󱤑	1
+jel	󱤒	1
+kal	󱤔	1
+klm	󱤕	1
+kam	󱤖	1
+kas	󱤗	1
+ken	󱤘	1
+kpk	󱤙	1
+kil	󱤚	1
+kwn	󱤛	1
+kon	󱤝	1
+kul	󱤞	1
+klp	󱤟	1
+kut	󱤠	1
+lap	󱤢	1
+las	󱤣	1
+law	󱤤	1
+len	󱤥	1
+let	󱤦	1
+lil	󱤨	1
+lnj	󱤩	1
+lip	󱤪	1
+loj	󱤫	1
+lon	󱤬	1
+luk	󱤭	1
+lkn	󱤮	1
+lup	󱤯	1
+mam	󱤱	1
+man	󱤲	1
+mel	󱤳	1
+mij	󱤵	1
+mok	󱤶	1
+mol	󱤷	1
+mns	󱤸	1
+mun	󱤺	1
+mus	󱤻	1
+mut	󱤼	1
+nnp	󱤽	1
+nas	󱤾	1
+nsn	󱤿	1
+nen	󱥀	1
+nim	󱥂	1
+nok	󱥃	1
+oln	󱥅	1
+ona	󱥆	1
+opn	󱥇	1
+pak	󱦠	1
+pkl	󱥈	1
+pal	󱥉	1
+pls	󱥊	1
+pan	󱥋	1
+pna	󱥌	1
+pln	󱥎	1
+pmj	󱥏	1
+pin	󱥐	1
+pip	󱥑	1
+pka	󱥒	1
+pki	󱥓	1
+pon	󱥔	1
+pow	󱦣	1
+sam	󱥖	1
+sli	󱥗	1
+slo	󱥘	1
+sem	󱥙	1
+sew	󱥚	1
+sjl	󱥛	1
+sik	󱥜	1
+sin	󱥝	1
+sna	󱥞	1
+snp	󱥟	1
+stl	󱥠	1
+son	󱥡	1
+swl	󱥢	1
+sul	󱥣	1
+sun	󱥤	1
+sup	󱥥	1
+suw	󱥦	1
+tan	󱥧	1
+tas	󱥨	1
+taw	󱥩	1
+tel	󱥪	1
+tnp	󱥫	1
+tok	󱥬	1
+tom	󱥭	1
+unp	󱥯	1
+uta	󱥰	1
+utl	󱥱	1
+wal	󱥲	1
+wan	󱥳	1
+was	󱥴	1
+waw	󱥵	1
+wek	󱥶	1
+wil	󱥷	1
+nmk	󱥸	1
+kin	󱥹	1
+oko	󱥺	1
+kps	󱥻	1
+lek	󱥼	1
+mon	󱥽	1
+maj	󱦢	1
+tns	󱥾	1
+jas	󱥿	1
+kij	󱦀	1
+sok	󱦁	1
+mes	󱦂	1
+epk	󱦃	1
+kks	󱦄	1
+lan	󱦅	1
+msk	󱦇	1
+en	󱤊	1
+jo	󱤓	1
+ko	󱤜	1
+la	󱤡	1
+li	󱤧	1
+ma	󱤰	1
+mi	󱤴	1
+mu	󱤹	1
+ni	󱥁	1
+pi	󱥍	1
+pu	󱥕	1
+te	「	1
+to	」	1
+tu	󱥮	1
+ku	󱦈	1
+a	󱤀	1
+e	󱤉	1
+0	󱤌	1
+v	󱤨	1
+p	󱤴	1
+#	󱤽	1
+o	󱥄	1
+L	󱥍	1
+b	󱥞	1
+2	󱥮	1
+1	󱥳	1
+w	󱥷	1
+!	󱥹	1
+n	󱦆	1
+[	󱦐	1
+]	󱦑	1
+*	‍	1
++	󱦖	1
+-	󱦕	1
+(	󱦗	1
+)	󱦘	1
+_	󱦙	1
+{	󱦚	1
+}	󱦛	1
+.	󱦜	1
+:	󱦝	1
+ss	　	1
+zz	　	1
+<	「	1
+>	」	1
+~~	︁	1
+~	︀	1
+END_TABLE
