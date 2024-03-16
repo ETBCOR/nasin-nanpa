@@ -15,7 +15,7 @@ LICENSE = LGPL
 
 ### An unique id to distinguish this table among others.
 ### Use uuidgen to generate this kind of id.
-UUID = 853cc4da-fc34-4085-ac2b-5bb8a1951b6c
+UUID = a1b794cd-cb6b-4ce3-8595-12d50e6e32ad
 
 ### A unique number indicates the version of this file.
 ### For example the last modified date of this file.
@@ -31,7 +31,7 @@ ICON = ibus-table.svg
 SYMBOL = 󱥬
 
 ### The default name of this table, this is needed
-NAME = sitelen pona
+NAME = sitelen pona 4.0
 
 ### The local names of this table, this is optional
 ### NAME.zh_CN = 形码

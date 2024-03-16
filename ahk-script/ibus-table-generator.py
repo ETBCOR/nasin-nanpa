@@ -7,9 +7,9 @@ UUID = str(uuid.uuid4())
 
 # taken and modified from here: https://github.com/neroist/sitelen-pona-ucsur-guide/blob/main/tokipona.txt
 # created by jan Komi and edited by authors of sitelen pona ucsur guide and kule Piton
-def gen_table(needed_input_chars):
-    s = sorted(needed_input_chars)
-    joined = ''.join(s)
+def gen_table(needed_input_chars, file_name):
+    file_name = file_name.replace('.ahk', '').replace('-', ' ')
+    needed_input_chars = ''.join(sorted(needed_input_chars))
     return f'''### File header must not be modified
 ### This file must be encoded into UTF-8.
 ### This table under LGPL
@@ -43,7 +43,7 @@ ICON = ibus-table.svg
 SYMBOL = 󱥬
 
 ### The default name of this table, this is needed
-NAME = sitelen pona
+NAME = {file_name}
 
 ### The local names of this table, this is optional
 ### NAME.zh_CN = 形码
@@ -67,7 +67,7 @@ AUTHOR = jan Komi
 STATUS_PROMPT = toki
 
 ### Valid input chars.
-VALID_INPUT_CHARS = {joined}
+VALID_INPUT_CHARS = {needed_input_chars}
 
 ### Layout
 LAYOUT = us
@@ -173,7 +173,7 @@ def process(f, filename):
         table.append((key, phrase))
     with open(new_file, 'w') as f:
         print(f'Writing {new_file}')
-        f.write(gen_table(list(needed_input_chars)))
+        f.write(gen_table(needed_input_chars, filename))
         for item in table:
             f.write(f'{item[0]}\t{item[1]}\t1\n')
         f.write('END_TABLE')
