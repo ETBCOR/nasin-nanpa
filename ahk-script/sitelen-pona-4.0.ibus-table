@@ -15,13 +15,13 @@ LICENSE = LGPL
 
 ### An unique id to distinguish this table among others.
 ### Use uuidgen to generate this kind of id.
-UUID = a1b794cd-cb6b-4ce3-8595-12d50e6e32ad
+UUID = 025c0759-76f5-431b-b9df-ed31540e414a
 
 ### A unique number indicates the version of this file.
 ### For example the last modified date of this file.
 ### This number must be less than 2^32.
 ### Just make your table version-able
-SERIAL_NUMBER = 20240316
+SERIAL_NUMBER = 20240317
 
 ### ICON can be any format as long as your pygtk can recognized
 ### the most widely ones are "png" and "svg", letter one is recommended
