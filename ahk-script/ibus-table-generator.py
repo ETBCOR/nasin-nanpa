@@ -3,11 +3,11 @@ import uuid
 import datetime
 
 now = datetime.datetime.now().strftime("%Y%m%d")
-UUID = str(uuid.uuid4())
 
 # taken and modified from here: https://github.com/neroist/sitelen-pona-ucsur-guide/blob/main/tokipona.txt
 # created by jan Komi and edited by authors of sitelen pona ucsur guide and kule Piton
 def gen_table(needed_input_chars, file_name):
+    table_id = str(uuid.uuid4())
     file_name = file_name.replace('.ahk', '').replace('-', ' ')
     needed_input_chars = ''.join(sorted(needed_input_chars))
     return f'''### File header must not be modified
@@ -27,7 +27,7 @@ LICENSE = LGPL
 
 ### An unique id to distinguish this table among others.
 ### Use uuidgen to generate this kind of id.
-UUID = {UUID}
+UUID = {table_id}
 
 ### A unique number indicates the version of this file.
 ### For example the last modified date of this file.
