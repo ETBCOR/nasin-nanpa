@@ -48,7 +48,6 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let mut file = File::create(filename)?;
     let mut ff_pos: usize = 0;
 
-    //
     let ctrl_block = GlyphBlock::new_from_enc_glyphs(
         &mut ff_pos,
         vec![
@@ -286,7 +285,6 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     );
     start_long_glyph_block.glyphs[7].lookups = Lookups::StartLongGlyphRev;
 
-    // start main block
     let latn_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         glyph_blocks::LATN.as_slice(),
@@ -322,7 +320,6 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     tok_no_comb_block.glyphs[0].encoding.enc_pos = EncPos::Pos(0xF199C);
     tok_no_comb_block.glyphs[1].encoding.enc_pos = EncPos::Pos(0xF199D);
 
-    //
     let tok_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK.as_slice(),
@@ -335,7 +332,7 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         1000,
     );
 
-    let tok_ext_block = GlyphBlock::new_from_constants(
+    let mut tok_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_EXT.as_slice(),
         LookupsMode::WordLigFromLetters,
@@ -346,6 +343,8 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         EncPos::Pos(0xF19A0),
         1000,
     );
+    tok_ext_block.glyphs[8].encoding.enc_pos = EncPos::Pos(0xf19ae);
+    tok_ext_block.glyphs[7].encoding.enc_pos = EncPos::Pos(0xf19c0);
 
     let tok_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
@@ -371,6 +370,30 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         1000,
     );
 
+    let tok_ext_outer_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        TOK_EXT_OUTER.as_slice(),
+        LookupsMode::ComboFirst,
+        true,
+        "",
+        "Tok_joinScaleTok",
+        "ffff",
+        EncPos::None,
+        1000,
+    );
+
+    let tok_alt_outer_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        TOK_ALT_OUTER.as_slice(),
+        LookupsMode::ComboFirst,
+        true,
+        "",
+        "_joinScaleTok",
+        "ffff",
+        EncPos::None,
+        1000,
+    );
+
     let tok_inner_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_INNER.as_slice(),
@@ -378,6 +401,30 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         true,
         "joinScaleTok_",
         "Tok",
+        "80ffff",
+        EncPos::None,
+        1000,
+    );
+
+    let tok_ext_inner_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        TOK_EXT_INNER.as_slice(),
+        LookupsMode::ComboFirst,
+        true,
+        "joinScaleTok_",
+        "Tok",
+        "80ffff",
+        EncPos::None,
+        1000,
+    );
+
+    let tok_alt_inner_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        TOK_ALT_INNER.as_slice(),
+        LookupsMode::ComboFirst,
+        true,
+        "joinScaleTok_",
+        "",
         "80ffff",
         EncPos::None,
         1000,
@@ -395,54 +442,93 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         1000,
     );
 
-    let tok_upper_block = GlyphBlock::new_from_constants(
+    let tok_ext_lower_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
-        TOK_UPPER.as_slice(),
-        LookupsMode::ComboSecond,
+        TOK_EXT_LOWER.as_slice(),
+        LookupsMode::ComboFirst,
         true,
-        "joinStackTok_",
-        "Tok",
-        "80ff80",
+        "",
+        "Tok_joinStackTok",
+        "ff00",
         EncPos::None,
         1000,
     );
 
-    // let tok_upper_block = tok_lower_block.new_from_refs(
-    //     &mut ff_pos,
-    //     "S 1 0 0 1 0 500 2".to_string(),
-    //     None,
-    //     LookupsMode::ComboSecond,
-    //     true,
-    //     false,
-    //     "joinStackTok_",
-    //     "Tok",
-    //     "80ff80",
-    // );
+    let tok_alt_lower_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        TOK_ALT_LOWER.as_slice(),
+        LookupsMode::ComboFirst,
+        true,
+        "",
+        "_joinStackTok",
+        "ff00",
+        EncPos::None,
+        1000,
+    );
 
-    let combo_first = vec![&tok_outer_block, &tok_lower_block]
-        .iter()
-        .map(|block| {
-            block
-                .glyphs
-                .iter()
-                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                .join(" ")
-        })
-        .join(" ");
-    let combo_first = format!("combCartExtHalfTok combLongGlyphExtHalfTok combCartExtTok combLongPiExtTok combLongGlyphExtTok {}", combo_first);
-    let combo_first = format!("{} {}", combo_first.len(), combo_first);
+    let tok_upper_block = tok_lower_block.new_from_refs(
+        &mut ff_pos,
+        "S 1 0 0 1 0 500 2".to_string(),
+        None,
+        LookupsMode::ComboSecond,
+        true,
+        false,
+        "joinStackTok_",
+        "Tok",
+        "80ff80",
+    );
 
-    let combo_second = vec![&tok_inner_block, &tok_upper_block]
-        .iter()
-        .map(|block| {
-            block
-                .glyphs
-                .iter()
-                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                .join(" ")
-        })
-        .join(" ");
-    let combo_second = format!("{} {}", combo_second.len(), combo_second);
+    let tok_ext_upper_block = tok_ext_lower_block.new_from_refs(
+        &mut ff_pos,
+        "S 1 0 0 1 0 500 2".to_string(),
+        None,
+        LookupsMode::ComboSecond,
+        true,
+        false,
+        "joinStackTok_",
+        "Tok",
+        "80ff80",
+    );
+
+    let tok_alt_upper_block = tok_alt_lower_block.new_from_refs(
+        &mut ff_pos,
+        "S 1 0 0 1 0 500 2".to_string(),
+        None,
+        LookupsMode::ComboSecond,
+        true,
+        false,
+        "joinStackTok_",
+        "",
+        "80ff80",
+    );
+
+    let kern = {
+        let combo_first = vec![&tok_outer_block, &tok_lower_block]
+            .iter()
+            .map(|block| {
+                block
+                    .glyphs
+                    .iter()
+                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                    .join(" ")
+            })
+            .join(" ");
+        let combo_first = format!("combCartExtHalfTok combLongGlyphExtHalfTok combCartExtTok combLongPiExtTok combLongGlyphExtTok {}", combo_first);
+        let combo_first = format!("{} {}", combo_first.len(), combo_first);
+
+        let combo_second = vec![&tok_inner_block, &tok_upper_block]
+            .iter()
+            .map(|block| {
+                block
+                    .glyphs
+                    .iter()
+                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                    .join(" ")
+            })
+            .join(" ");
+        let combo_second = format!("{} {}", combo_second.len(), combo_second);
+        format!("KernClass2: 2 2 \"'kern' COMBOS KERN\"\n {combo_first}\n {combo_second}\n 0 {{}} 0 {{}} 0 {{}} -1000 {{}}\n")
+    };
 
     let mut main_blocks = vec![
         latn_block,
@@ -451,73 +537,83 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
         tok_ext_block,
         tok_alt_block,
         tok_outer_block,
+        tok_ext_outer_block,
+        tok_alt_outer_block,
         tok_inner_block,
+        tok_ext_inner_block,
+        tok_alt_inner_block,
         tok_lower_block,
+        tok_ext_lower_block,
+        tok_alt_lower_block,
         tok_upper_block,
+        tok_ext_upper_block,
+        tok_alt_upper_block,
     ];
 
-    let kern = format!("KernClass2: 2 2 \"'kern' COMBOS KERN\"\n {combo_first}\n {combo_second}\n 0 {{}} 0 {{}} 0 {{}} -1000 {{}}\n");
+    let subs = {
+        let ctrl_names = ctrl_block
+            .glyphs
+            .iter()
+            .filter_map(|glyph| {
+                if glyph.glyph.name.contains("Half") {
+                    None
+                } else {
+                    Some(format!(
+                        "{}{}{}",
+                        ctrl_block.prefix, glyph.glyph.name, ctrl_block.suffix
+                    ))
+                }
+            })
+            .join(" ");
 
-    let ctrl_names = ctrl_block
-        .glyphs
-        .iter()
-        .filter_map(|glyph| {
-            if glyph.glyph.name.contains("Half") {
-                None
-            } else {
-                Some(format!(
-                    "{}{}{}",
-                    ctrl_block.prefix, glyph.glyph.name, ctrl_block.suffix
-                ))
-            }
-        })
-        .join(" ");
+        let main_names = main_blocks
+            .iter()
+            .map(|block| {
+                block
+                    .glyphs
+                    .iter()
+                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                    .join(" ")
+            })
+            .join(" ");
 
-    let main_names = main_blocks
-        .iter()
-        .map(|block| {
-            block
-                .glyphs
-                .iter()
-                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                .join(" ")
-        })
-        .join(" ");
+        let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
 
-    let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
+        let base = put_in_class(format!(
+            "{} joinStackTok joinScaleTok {}",
+            ctrl_names, main_names
+        ));
 
-    let base = put_in_class(format!(
-        "{} joinStackTok joinScaleTok {}",
-        ctrl_names, main_names
-    ));
+        let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok".to_string());
 
-    let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok".to_string());
+        let cont = start_long_glyph_block
+            .glyphs
+            .iter()
+            .filter_map(|glyph| {
+                if glyph.glyph.name.eq("la") {
+                    None
+                } else {
+                    Some(format!(
+                        "{}{}{}",
+                        start_long_glyph_block.prefix,
+                        glyph.glyph.name,
+                        start_long_glyph_block.suffix
+                    ))
+                }
+            })
+            .join(" ");
+        let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));
 
-    let cont = start_long_glyph_block
-        .glyphs
-        .iter()
-        .filter_map(|glyph| {
-            if glyph.glyph.name.eq("la") {
-                None
-            } else {
-                Some(format!(
-                    "{}{}{}",
-                    start_long_glyph_block.prefix, glyph.glyph.name, start_long_glyph_block.suffix
-                ))
-            }
-        })
-        .join(" ");
-    let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));
-
-    let put_in_sub = |c: &str| format!("  {c}{base}\n  {c}{cart}\n  {c}{cont}\n");
-    let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
-    let subs = format!("ChainSub2: class \"'calt' CART AND CONT\" 4 4 4 2\n{subs}");
+        let put_in_sub = |c: &str| format!("  {c}{base}\n  {c}{cart}\n  {c}{cont}\n");
+        let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
+        format!("ChainSub2: class \"'calt' CART AND CONT\" 4 4 4 2\n{subs}")
+    };
 
     let mut meta_block = vec![ctrl_block, tok_ctrl_block, start_long_glyph_block];
     meta_block.append(&mut main_blocks);
+    let glyphs_string = meta_block.iter().map(|block| block.gen()).join("");
 
     let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
-    let glyphs_string = meta_block.iter().map(|block| block.gen()).join("");
 
     writeln!(
         &mut file,

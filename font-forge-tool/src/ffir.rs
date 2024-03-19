@@ -158,9 +158,7 @@ impl GlyphEnc {
     }
 }
 
-#[derive(Clone)]
 pub enum LookupsMode {
-    WordLig,
     WordLigFromLetters,
     WordLigManual(Vec<String>),
     StartLongGlyph,
@@ -173,7 +171,6 @@ pub enum LookupsMode {
 
 #[derive(Clone)]
 pub enum Lookups {
-    WordLig,
     WordLigFromLetters,
     WordLigManual(String),
     StartLongGlyph,
@@ -187,7 +184,6 @@ pub enum Lookups {
 impl Lookups {
     fn new_from_mode(mode: &LookupsMode, idx: usize) -> Self {
         match mode {
-            LookupsMode::WordLig => Lookups::WordLig,
             LookupsMode::WordLigFromLetters => Lookups::WordLigFromLetters,
             LookupsMode::WordLigManual(vec) => {
                 let s = &vec[idx];
@@ -208,12 +204,16 @@ impl Lookups {
 
     fn gen(&self, name: String, full_name: String) -> String {
         match &self {
-            Lookups::WordLig => {
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {name} space\nLigature2: \"'liga' WORD\" {name}\n")
-            }
             Lookups::WordLigFromLetters => {
                 let lig = name.chars().join(" ");
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
+                let rand = if full_name.eq("jakiTok") {
+                    "AlternateSubs2: \"'rand' RAND VARIATIONS\" jakiTok_VAR01 jakiTok_VAR02 jakiTok_VAR03 jakiTok_VAR04 jakiTok_VAR05 jakiTok_VAR06 jakiTok_VAR07 jakiTok_VAR08\n"
+                } else if full_name.eq("koTok") {
+                    "AlternateSubs2: \"'rand' RAND VARIATIONS\" koTok_VAR01 koTok_VAR02 koTok_VAR03 koTok_VAR04 koTok_VAR05 koTok_VAR06 koTok_VAR07 koTok_VAR08\n"
+                } else {
+                    ""
+                };
+                format!("{rand}Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
             }
             Lookups::WordLigManual(word) => {
                 if word.eq("space space") {
@@ -242,7 +242,6 @@ impl Lookups {
                         let sel = parts[1];
                         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} {sel}\n")
                     }
-                    // (3, false) => { // what is this }
                     (2, true) => {
                         // cardinal ni
                         let dir = parts[1];
@@ -270,38 +269,6 @@ impl Lookups {
                     }
                     _ => panic!(),
                 }
-                // if parts.len() == 3 {
-                //     let glyph = parts[0];
-                //     let dir1 = parts[1];
-                //     let dir2 = parts[2];
-                //     if full_name.contains("niTok") {
-                //         let emoji = match (dir1, dir2) {
-                //             ("asciicircum", "less") => "NW",
-                //             ("asciicircum", "greater") => "NE",
-                //             ("v", "less") => "SW",
-                //             ("v", "greater") => "SE",
-                //             (_, _) => panic!(),
-                //         };
-                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{emoji}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
-                //     } else {
-                //         "".to_string()
-                //     }
-                // } else {
-                //     let glyph = parts[0];
-                //     let dir1 = parts[1];
-                //     if full_name.contains("niTok") {
-                //         let emoji = match dir1 {
-                //             "asciicircum" => "N",
-                //             "v" => "S",
-                //             "less" => "W",
-                //             "greater" => "E",
-                //             _ => panic!(),
-                //         };
-                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{emoji}\n")
-                //     } else {
-                //         format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} {dir1}\n")
-                //     }
-                // }
             }
             Lookups::ComboFirst => {
                 let parts: Vec<&str> = full_name.split("_").collect();
@@ -384,10 +351,7 @@ impl GlyphFull {
 
         let color = format!("Colour: {color}");
 
-        let flags = if (name.contains("VAR") && full_name.len() == 5)
-            || name.contains("join")
-            || name.contains("ZWJ")
-        {
+        let flags = if !name.contains("empty") {
             "Flags: W\n"
         } else {
             ""
