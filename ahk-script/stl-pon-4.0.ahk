@@ -158,18 +158,17 @@ Hotstring("EndChars", "``")
 ::!::{U+F1979} ; 󱥹
 ::n::{U+F1986} ; 󱦆
 
-
-
 ::[::{U+F1990} ; cartouche start
 ::]::{U+F1991} ; cartouche end
+::=::{U+F1992} ; cartouche extender (not usually necessary)
 
-::=::{U+200D} ; default zero width joiner
+::&::{U+200D} ; zero width joiner
 ::+::{U+F1996} ; scaling joiner
 ::-::{U+F1995} ; stacking joiner
 
 ::(::{U+F1997} ; start left-combining (normal) long glyph
 ::)::{U+F1998} ; end left-combining (normal) long glyph
-::_::{U+F1999} ; container extender
+::_::{U+F1999} ; container extender (not usually necessary)
 
 ::{::{U+F199A} ; start right-combining (reversed) long glyph
 ::}::{U+F199B} ; end right-combining (reversed) long glyph
@@ -177,11 +176,16 @@ Hotstring("EndChars", "``")
 ::.::{U+F199C} ; sitelen pona full stop
 ::`:::{U+F199D} ; sitelen pona colon
 
-
 ::`s`s::{U+3000} ; logograph fullwidth space
 ::zz::{U+3000} ; logograph fullwidth space
 ::<::{U+300C} ; 「 start quote
 ::>::{U+300D} ; 」 end quote
 
-::~~::{U+FE01} ; variation selector 2
-::~::{U+FE00} ; variation selector 1
+::1::{U+FE00} ; variation selector 1
+::2::{U+FE01} ; variation selector 2
+::1::{U+FE02} ; variation selector 3
+::2::{U+FE03} ; variation selector 4
+::1::{U+FE04} ; variation selector 5
+::2::{U+FE05} ; variation selector 6
+::1::{U+FE06} ; variation selector 7
+::2::{U+FE07} ; variation selector 8
