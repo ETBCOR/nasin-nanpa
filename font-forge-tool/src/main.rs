@@ -5,47 +5,8 @@ use std::{fmt::format, fs::File, io::Write};
 
 mod ffir;
 mod glyph_blocks;
-/*
-fn gen_template() -> std::io::Result<()> {
-    let filename = format!("nasin-nanpa-import-template.sfd");
-    let mut file = File::create(filename)?;
-    let mut ff_pos: usize = 0;
-
-    let glyphs = TOK
-        .into_iter()
-        .map(|GlyphDescriptor { name, .. }| {
-            NCGlyph::new(
-                name.to_string(),
-                1000,
-                GlyphRep::new(String::default(), vec![]),
-            )
-        })
-        .collect();
-
-    let tok_block = GlyphBlock::new_from_glyph_vec(
-        &mut ff_pos,
-        None,
-        glyphs,
-        LigMode::None,
-        SubMode::None,
-        String::default(),
-        String::default(),
-        "4444ff".to_string(),
-    );
-
-    let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
-    let glyphs_string = tok_block.to_string();
-    writeln!(
-        &mut file,
-        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
-    )?;
-    Ok(())
-}
-*/
 
 fn gen_nasin_nanpa() -> std::io::Result<()> {
-    let filename = format!("nasin-nanpa-{VERSION}.sfd");
-    let mut file = File::create(filename)?;
     let mut ff_pos: usize = 0;
 
     let ctrl_block = GlyphBlock::new_from_enc_glyphs(
@@ -232,14 +193,14 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
             "comma comma".to_string(),
             "comma comma comma".to_string(),
             "comma comma comma comma".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
         ]),
         true,
         "",
@@ -503,29 +464,43 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     );
 
     let kern = {
-        let combo_first = vec![&tok_outer_block, &tok_lower_block]
-            .iter()
-            .map(|block| {
-                block
-                    .glyphs
-                    .iter()
-                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                    .join(" ")
-            })
-            .join(" ");
+        let combo_first = vec![
+            &tok_outer_block,
+            &tok_ext_outer_block,
+            &tok_alt_outer_block,
+            &tok_lower_block,
+            &tok_ext_lower_block,
+            &tok_alt_lower_block,
+        ]
+        .iter()
+        .map(|block| {
+            block
+                .glyphs
+                .iter()
+                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                .join(" ")
+        })
+        .join(" ");
         let combo_first = format!("combCartExtHalfTok combLongGlyphExtHalfTok combCartExtTok combLongPiExtTok combLongGlyphExtTok {}", combo_first);
         let combo_first = format!("{} {}", combo_first.len(), combo_first);
 
-        let combo_second = vec![&tok_inner_block, &tok_upper_block]
-            .iter()
-            .map(|block| {
-                block
-                    .glyphs
-                    .iter()
-                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                    .join(" ")
-            })
-            .join(" ");
+        let combo_second = vec![
+            &tok_inner_block,
+            &tok_ext_inner_block,
+            &tok_alt_inner_block,
+            &tok_upper_block,
+            &tok_ext_upper_block,
+            &tok_alt_upper_block,
+        ]
+        .iter()
+        .map(|block| {
+            block
+                .glyphs
+                .iter()
+                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                .join(" ")
+        })
+        .join(" ");
         let combo_second = format!("{} {}", combo_second.len(), combo_second);
         format!("KernClass2: 2 2 \"'kern' COMBOS KERN\"\n {combo_first}\n {combo_second}\n 0 {{}} 0 {{}} 0 {{}} -1000 {{}}\n")
     };
@@ -615,6 +590,8 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
 
     let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
 
+    let filename = format!("nasin-nanpa-{VERSION}.sfd");
+    let mut file = File::create(filename)?;
     writeln!(
         &mut file,
         "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{kern}{subs}{OTHER1}{VERSION}{OTHER2}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",

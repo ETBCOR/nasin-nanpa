@@ -8999,7 +8999,7 @@ r#"
  582 -37 532 -21 499 -4 c 0
  445 23 428 59 405 87 c 1"#
 ),
-GlyphDescriptor::new("niTok_less",
+GlyphDescriptor::new("niTok_arrowW",
 r#"
 350 700 m 0
  377 700 400 677 400 650 c 0
@@ -9019,7 +9019,7 @@ r#"
  315 685 l 2
  325 695 337 700 350 700 c 0"#
 ),
-GlyphDescriptor::new("niTok_asciicircum",
+GlyphDescriptor::new("niTok_arrowN",
 r#"
 800 550 m 0
  800 523 777 500 750 500 c 0
@@ -9039,7 +9039,7 @@ r#"
  785 585 l 2
  795 575 800 563 800 550 c 0"#
 ),
-GlyphDescriptor::new("niTok_greater",
+GlyphDescriptor::new("niTok_arrowE",
 r#"
 650 100 m 0
  623 100 600 123 600 150 c 0
@@ -9059,7 +9059,7 @@ r#"
  685 115 l 2
  675 105 663 100 650 100 c 0"#
 ),
-GlyphDescriptor::new("niTok_v",
+GlyphDescriptor::new("niTok_arrowS",
 r#"
 200 250 m 0
  200 276 224 300 250 300 c 0
@@ -9079,7 +9079,7 @@ r#"
  215 215 l 2
  205 225 200 238 200 250 c 0"#
 ),
-GlyphDescriptor::new("niTok_asciicircum_less",
+GlyphDescriptor::new("niTok_arrowNW",
 r#"
 833 117 m 0
  833 90 810 67 783 67 c 0
@@ -9097,7 +9097,7 @@ r#"
  818 153 l 2
  828 143 833 130 833 117 c 0"#
 ),
-GlyphDescriptor::new("niTok_asciicircum_greater",
+GlyphDescriptor::new("niTok_arrowNE",
 r#"
 217 67 m 0
  190 67 167 90 167 117 c 0
@@ -9115,7 +9115,7 @@ r#"
  253 82 l 2
  243 72 230 67 217 67 c 0"#
 ),
-GlyphDescriptor::new("niTok_v_greater",
+GlyphDescriptor::new("niTok_arrowSE",
 r#"
 167 683 m 0
  167 710 190 733 217 733 c 0
@@ -9133,7 +9133,7 @@ r#"
  182 647 l 2
  172 657 167 670 167 683 c 0"#
 ),
-GlyphDescriptor::new("niTok_v_less",
+GlyphDescriptor::new("niTok_arrowSW",
 r#"
 783 733 m 0
  810 733 833 710 833 683 c 0
@@ -15095,7 +15095,7 @@ r#"
  323 -59 278 -78 227 -78 c 0
  142 -78 50 -22 50 55 c 0"#,
 ),
-GlyphDescriptor::new("niTok_less",
+GlyphDescriptor::new("niTok_arrowW",
 r#"
 429 320 m 0
  456 320 479 297 479 270 c 0
@@ -15115,7 +15115,7 @@ r#"
  393 305 l 2
  403 315 416 320 429 320 c 0"#,
 ),
-GlyphDescriptor::new("niTok_asciicircum",
+GlyphDescriptor::new("niTok_arrowN",
 r#"
 670 221 m 0
  670 194 647 171 620 171 c 0
@@ -15135,7 +15135,7 @@ r#"
  655 257 l 2
  665 247 670 234 670 221 c 0"#,
 ),
-GlyphDescriptor::new("niTok_greater",
+GlyphDescriptor::new("niTok_arrowE",
 r#"
 571 -20 m 0
  544 -20 521 3 521 30 c 0
@@ -15155,7 +15155,7 @@ r#"
  607 -5 l 2
  597 -15 584 -20 571 -20 c 0"#,
 ),
-GlyphDescriptor::new("niTok_v",
+GlyphDescriptor::new("niTok_arrowS",
 r#"
 330 79 m 0
  330 106 353 129 380 129 c 0
@@ -15175,7 +15175,7 @@ r#"
  345 43 l 2
  335 53 330 66 330 79 c 0"#,
 ),
-GlyphDescriptor::new("niTok_asciicircum_less",
+GlyphDescriptor::new("niTok_arrowNW",
 r#"
 684 16 m 0
  684 -11 661 -34 634 -34 c 0
@@ -15193,7 +15193,7 @@ r#"
  670 51 l 2
  680 41 684 29 684 16 c 0"#,
 ),
-GlyphDescriptor::new("niTok_asciicircum_greater",
+GlyphDescriptor::new("niTok_arrowNE",
 r#"
 366 -34 m 0
  339 -34 316 -11 316 16 c 0
@@ -15211,7 +15211,7 @@ r#"
  401 -20 l 2
  391 -30 379 -34 366 -34 c 0"#,
 ),
-GlyphDescriptor::new("niTok_v_greater",
+GlyphDescriptor::new("niTok_arrowSE",
 r#"
 316 284 m 0
  316 311 339 334 366 334 c 0
@@ -15229,7 +15229,7 @@ r#"
  330 249 l 2
  320 259 316 271 316 284 c 0"#,
 ),
-GlyphDescriptor::new("niTok_v_less",
+GlyphDescriptor::new("niTok_arrowSW",
 r#"
 634 334 m 0
  661 334 684 311 684 284 c 0

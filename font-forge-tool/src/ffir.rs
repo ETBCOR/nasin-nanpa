@@ -218,6 +218,22 @@ impl Lookups {
             Lookups::WordLigManual(word) => {
                 if word.eq("space space") {
                     format!("Ligature2: \"'liga' SPACE\" {word}\nLigature2: \"'liga' SPACE\" z z\n")
+                } else if word.eq("arrow") {
+                    let convert = |c: char| match c {
+                        'W' => "less",
+                        'N' => "asciicircum",
+                        'E' => "greater",
+                        'S' => "v",
+                        _ => panic!(),
+                    };
+
+                    let dir1 = convert(name.chars().nth(5).unwrap());
+                    if let Some(dir2) = name.chars().nth(6) {
+                        let dir2 = convert(dir2);
+                        format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} {dir2} space\nLigature2: \"'liga' WORD PLUS SPACE\" {dir2} {dir1} space\nLigature2: \"'liga' WORD\" {dir1} {dir2}\nLigature2: \"'liga' WORD\" {dir2} {dir1}\n")
+                    } else {
+                        format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} space\nLigature2: \"'liga' WORD\" {dir1}\n")
+                    }
                 } else {
                     format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
                 }
@@ -236,39 +252,20 @@ impl Lookups {
             Lookups::Alt => {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let glyph = parts[0];
-                match (parts.len(), full_name.contains("niTok")) {
-                    (2, false) => {
-                        // normal variant
-                        let sel = parts[1];
-                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n")
-                    }
-                    (2, true) => {
-                        // cardinal ni
-                        let dir = parts[1];
-                        let short = match dir {
-                            "asciicircum" => "N",
-                            "v" => "S",
-                            "less" => "W",
-                            "greater" => "E",
-                            _ => panic!(),
-                        };
-                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir} space\nLigature2: \"'liga' WORD\" {glyph} {dir}\n")
-                    }
-                    (3, true) => {
-                        // diagonal ni
-                        let dir1 = parts[1];
-                        let dir2 = parts[2];
-                        let short = match (dir1, dir2) {
-                            ("asciicircum", "less") => "NW",
-                            ("asciicircum", "greater") => "NE",
-                            ("v", "less") => "SW",
-                            ("v", "greater") => "SE",
-                            (_, _) => panic!(),
-                        };
-                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
-                    }
-                    _ => panic!(),
-                }
+                let sel = parts[1];
+                let zwj = if full_name.contains("niTok_arrow") {
+                    " ZWJ "
+                } else {
+                    " "
+                };
+                let a = if full_name.eq("aTok_VAR01") {
+                    "Ligature2: \"'liga' VARIATIONS\" aTok aTok\n"
+                } else if full_name.eq("aTok_VAR02") {
+                    "Ligature2: \"'liga' VARIATIONS\" aTok aTok aTok\n"
+                } else {
+                    ""
+                };
+                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}\n")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
