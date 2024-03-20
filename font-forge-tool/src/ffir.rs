@@ -226,12 +226,12 @@ impl Lookups {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let glyph = parts[0];
                 let joiner = parts[1];
-                format!("Ligature2: \"'liga' START LONG GLYPHS\" {glyph} {joiner}\n")
+                format!("Ligature2: \"'liga' START CONTAINER\" {glyph} {joiner}\n")
             }
             Lookups::StartLongGlyphRev => {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let glyph = parts[0];
-                format!("Ligature2: \"'liga' START LONG GLYPHS\" endRevLongGlyphTok {glyph}\n")
+                format!("Ligature2: \"'liga' START CONTAINER\" endRevLongGlyphTok {glyph}\n")
             }
             Lookups::Alt => {
                 let parts: Vec<&str> = full_name.split("_").collect();
@@ -240,7 +240,7 @@ impl Lookups {
                     (2, false) => {
                         // normal variant
                         let sel = parts[1];
-                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} {sel}\n")
+                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n")
                     }
                     (2, true) => {
                         // cardinal ni
@@ -252,7 +252,7 @@ impl Lookups {
                             "greater" => "E",
                             _ => panic!(),
                         };
-                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir} space\nLigature2: \"'liga' WORD\" {glyph} {dir}\n")
+                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir} space\nLigature2: \"'liga' WORD\" {glyph} {dir}\n")
                     }
                     (3, true) => {
                         // diagonal ni
@@ -265,21 +265,17 @@ impl Lookups {
                             ("v", "greater") => "SE",
                             (_, _) => panic!(),
                         };
-                        format!("Ligature2: \"'liga' VARIATIONS AND SPECIALS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
+                        format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ arrow{short}\nLigature2: \"'liga' WORD PLUS SPACE\" {glyph} {dir1} {dir2} space\nLigature2: \"'liga' WORD\" {glyph} {dir2} {dir1}\n")
                     }
                     _ => panic!(),
                 }
             }
             Lookups::ComboFirst => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let glyph = parts[0];
-                let joiner = parts[1];
+                let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
                 format!("Ligature2: \"'liga' GLYPH THEN JOINER\" {glyph} {joiner}\nMultipleSubs2: \"'ccmp' RESPAWN JOINER\" {full_name} {joiner}\n")
             }
             Lookups::ComboLast => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let joiner = parts[0];
-                let glyph = parts[1];
+                let (joiner, glyph) = full_name.splitn(2, "_").collect_tuple().unwrap();
                 format!("Ligature2: \"'liga' JOINER THEN GLYPH\" {joiner} {glyph}\n")
             }
             Lookups::None => "".to_string(),
