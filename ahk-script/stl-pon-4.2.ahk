@@ -183,9 +183,9 @@ Hotstring("EndChars", "``")
 
 ::1::{U+FE00} ; variation selector 1
 ::2::{U+FE01} ; variation selector 2
-::1::{U+FE02} ; variation selector 3
-::2::{U+FE03} ; variation selector 4
-::1::{U+FE04} ; variation selector 5
-::2::{U+FE05} ; variation selector 6
-::1::{U+FE06} ; variation selector 7
-::2::{U+FE07} ; variation selector 8
+::3::{U+FE02} ; variation selector 3
+::4::{U+FE03} ; variation selector 4
+::5::{U+FE04} ; variation selector 5
+::6::{U+FE05} ; variation selector 6
+::7::{U+FE06} ; variation selector 7
+::8::{U+FE07} ; variation selector 8
