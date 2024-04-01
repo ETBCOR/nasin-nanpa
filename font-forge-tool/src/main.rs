@@ -1,12 +1,18 @@
 use ffir::*;
 use glyph_blocks::*;
 use itertools::Itertools;
-use std::{fmt::format, fs::File, io::Write};
+use std::{fs::File, io::Write};
 
 mod ffir;
 mod glyph_blocks;
 
-fn gen_nasin_nanpa() -> std::io::Result<()> {
+#[derive(PartialEq, Eq, Clone, Copy)]
+enum NasinNanpaVariation {
+    Main,
+    Ucsur,
+}
+
+fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut ff_pos: usize = 0;
 
     let ctrl_block = GlyphBlock::new_from_enc_glyphs(
@@ -176,32 +182,36 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
             GlyphEnc::new_from_parts(EncPos::Pos(0x2198), "arrowSE", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2199), "arrowSW", 0, Rep::default()),
         ],
-        LookupsMode::WordLigManual(vec![
-            "".to_string(),
-            "ampersand".to_string(),
-            "one".to_string(),
-            "two".to_string(),
-            "three".to_string(),
-            "four".to_string(),
-            "five".to_string(),
-            "six".to_string(),
-            "seven".to_string(),
-            "eight".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "comma".to_string(),
-            "comma comma".to_string(),
-            "comma comma comma".to_string(),
-            "comma comma comma comma".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-            "arrow".to_string(),
-        ]),
+        if variation == NasinNanpaVariation::Main {
+            LookupsMode::WordLigManual(vec![
+                "".to_string(),
+                "ampersand".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "comma".to_string(),
+                "comma comma".to_string(),
+                "comma comma comma".to_string(),
+                "comma comma comma comma".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+            ])
+        } else {
+            LookupsMode::None
+        },
         true,
         "",
         "",
@@ -211,20 +221,24 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let tok_ctrl_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_CTRL.as_slice(),
-        LookupsMode::WordLigManual(vec![
-            "bracketleft".to_string(),
-            "bracketright".to_string(),
-            "equal".to_string(),
-            "".to_string(),
-            "".to_string(),
-            "hyphen".to_string(),
-            "plus".to_string(),
-            "parenleft".to_string(),
-            "parenright".to_string(),
-            "underscore".to_string(),
-            "braceleft".to_string(),
-            "braceright".to_string(),
-        ]),
+        if variation == NasinNanpaVariation::Main {
+            LookupsMode::WordLigManual(vec![
+                "bracketleft".to_string(),
+                "bracketright".to_string(),
+                "equal".to_string(),
+                "".to_string(),
+                "".to_string(),
+                "hyphen".to_string(),
+                "plus".to_string(),
+                "parenleft".to_string(),
+                "parenright".to_string(),
+                "underscore".to_string(),
+                "braceleft".to_string(),
+                "braceright".to_string(),
+            ])
+        } else {
+            LookupsMode::None
+        },
         false,
         "",
         "Tok",
@@ -246,31 +260,39 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     );
     start_long_glyph_block.glyphs[7].lookups = Lookups::StartLongGlyphRev;
 
-    let latn_block = GlyphBlock::new_from_constants(
-        &mut ff_pos,
-        glyph_blocks::LATN.as_slice(),
-        LookupsMode::None,
-        true,
-        "",
-        "",
-        "fffaaa",
-        EncPos::Pos(0x0020),
-        500,
-    );
+    let latn_block = if variation == NasinNanpaVariation::Main {
+        GlyphBlock::new_from_constants(
+            &mut ff_pos,
+            glyph_blocks::LATN.as_slice(),
+            LookupsMode::None,
+            true,
+            "",
+            "",
+            "fffaaa",
+            EncPos::Pos(0x0020),
+            500,
+        )
+    } else {
+        GlyphBlock::new_empty(&mut ff_pos, 0, 0)
+    };
 
     let mut tok_no_comb_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_NO_COMB.as_slice(),
-        LookupsMode::WordLigManual(vec![
-            "period".to_string(),
-            "colon".to_string(),
-            "period period".to_string(),
-            "period period period".to_string(),
-            "space space".to_string(),
-            "i t a n".to_string(),
-            "l i p a m a n k a".to_string(),
-            "l e p e k a ".to_string(),
-        ]),
+        if variation == NasinNanpaVariation::Main {
+            LookupsMode::WordLigManual(vec![
+                "period".to_string(),
+                "colon".to_string(),
+                "period period".to_string(),
+                "period period period".to_string(),
+                "space space".to_string(),
+                "i t a n".to_string(),
+                "l i p a m a n k a".to_string(),
+                "l e p e k a ".to_string(),
+            ])
+        } else {
+            LookupsMode::None
+        },
         true,
         "",
         "Tok",
@@ -284,7 +306,11 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let tok_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK.as_slice(),
-        LookupsMode::WordLigFromLetters,
+        if variation == NasinNanpaVariation::Main {
+            LookupsMode::WordLigFromLetters
+        } else {
+            LookupsMode::None
+        },
         true,
         "",
         "Tok",
@@ -296,7 +322,11 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
     let mut tok_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_EXT.as_slice(),
-        LookupsMode::WordLigFromLetters,
+        if variation == NasinNanpaVariation::Main {
+            LookupsMode::WordLigFromLetters
+        } else {
+            LookupsMode::None
+        },
         true,
         "",
         "Tok",
@@ -586,19 +616,31 @@ fn gen_nasin_nanpa() -> std::io::Result<()> {
 
     let mut meta_block = vec![ctrl_block, tok_ctrl_block, start_long_glyph_block];
     meta_block.append(&mut main_blocks);
-    let glyphs_string = meta_block.iter().map(|block| block.gen()).join("");
+    let glyphs_string = format!(
+        "{}",
+        meta_block.iter().map(|block| block.gen(variation)).join("")
+    );
 
     let time = std::time::UNIX_EPOCH.elapsed().unwrap().as_secs();
 
-    let filename = format!("nasin-nanpa-{VERSION}.sfd");
+    let filename = format!(
+        "nasin-nanpa-{VERSION}{}.sfd",
+        if variation == NasinNanpaVariation::Ucsur {
+            "-UCSUR"
+        } else {
+            ""
+        }
+    );
     let mut file = File::create(filename)?;
+
     writeln!(
         &mut file,
-        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}{kern}{subs}{OTHER1}{VERSION}{OTHER2}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont",
+        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}DEI: 91125\n{kern}{subs}{AFTER_SUBS}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont"
     )
 }
 
 fn main() -> std::io::Result<()> {
-    gen_nasin_nanpa()?;
+    gen_nasin_nanpa(NasinNanpaVariation::Main)?;
+    gen_nasin_nanpa(NasinNanpaVariation::Ucsur)?;
     Ok(())
 }

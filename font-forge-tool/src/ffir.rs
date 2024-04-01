@@ -1,5 +1,7 @@
 use itertools::Itertools;
 
+use crate::NasinNanpaVariation;
+
 #[derive(Clone)]
 pub enum EncPos {
     Pos(usize),
@@ -202,7 +204,7 @@ impl Lookups {
         }
     }
 
-    fn gen(&self, name: String, full_name: String) -> String {
+    fn gen(&self, name: String, full_name: String, variation: NasinNanpaVariation) -> String {
         match &self {
             Lookups::WordLigFromLetters => {
                 let lig = name.chars().join(" ");
@@ -217,7 +219,7 @@ impl Lookups {
             }
             Lookups::WordLigManual(word) => {
                 if word.eq("space space") {
-                    format!("Ligature2: \"'liga' SPACE\" {word}\nLigature2: \"'liga' SPACE\" z z\n")
+                    format!("Ligature2: \"'liga' SPACE\" {word}\nLigature2: \"'liga' SPACE\" z z space\nLigature2: \"'liga' SPACE\" z z\n")
                 } else if word.eq("arrow") {
                     let convert = |c: char| match c {
                         'W' => "less",
@@ -253,19 +255,48 @@ impl Lookups {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let glyph = parts[0];
                 let sel = parts[1];
-                let zwj = if full_name.contains("niTok_arrow") {
-                    " ZWJ "
-                } else {
-                    " "
-                };
+                let mut num = Some(sel.chars().last().unwrap());
+
                 let a = if full_name.eq("aTok_VAR01") {
                     "Ligature2: \"'liga' VARIATIONS\" aTok aTok\n"
                 } else if full_name.eq("aTok_VAR02") {
                     "Ligature2: \"'liga' VARIATIONS\" aTok aTok aTok\n"
+                } else if full_name.eq("aTok_VAR03") {
+                    "Ligature2: \"'liga' VARIATIONS\" semeTok aTok\n"
+                } else if full_name.eq("aTok_VAR04") {
+                    "Ligature2: \"'liga' VARIATIONS\" exclam question\nLigature2: \"'liga' VARIATIONS\" question exclam\n"
                 } else {
                     ""
                 };
-                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}\n")
+
+                let zwj = if full_name.contains("niTok_arrow") {
+                    num = None;
+                    " ZWJ "
+                } else {
+                    " "
+                };
+
+                let num = match num {
+                    Some(num) if variation == NasinNanpaVariation::Main => {
+                        format!(
+                            "\nLigature2: \"'liga' VARIATIONS\" {glyph} {num}",
+                            num = match num {
+                                '1' => "one",
+                                '2' => "two",
+                                '3' => "three",
+                                '4' => "four",
+                                '5' => "five",
+                                '6' => "six",
+                                '7' => "seven",
+                                '8' => "eight",
+                                _ => panic!(),
+                            }
+                        )
+                    }
+                    _ => "".to_string(),
+                };
+
+                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}{num}\n")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
@@ -328,13 +359,21 @@ impl GlyphFull {
         }
     }
 
-    pub fn gen(&self, prefix: String, suffix: String, color: String) -> String {
+    pub fn gen(
+        &self,
+        prefix: String,
+        suffix: String,
+        color: String,
+        variation: NasinNanpaVariation,
+    ) -> String {
         let name = &self.glyph.name;
         let full_name = format!("{}{}{}", prefix, name, suffix);
         let encoding = self.encoding.gen();
         let width = self.glyph.width;
         let representation = self.glyph.rep.gen();
-        let lookups = self.lookups.gen(name.to_string(), full_name.clone());
+        let lookups = self
+            .lookups
+            .gen(name.to_string(), full_name.clone(), variation);
         let cc_subs = if self.cc_subs {
             let halfwidth = if width == 500 { "Half" } else { "" };
             format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExt{halfwidth}Tok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExt{halfwidth}Tok\n")
@@ -349,7 +388,7 @@ impl GlyphFull {
         } else {
             ""
         };
-        format!("\nStartChar: {full_name}\n{encoding}\n{flags}Width: {width}\nLayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
+        format!("\nStartChar: {full_name}\n{encoding}\nWidth: {width}\n{flags}LayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
     }
 }
 
@@ -573,10 +612,15 @@ impl GlyphBlock {
         }
     }
 
-    pub fn gen(&self) -> String {
+    pub fn gen(&self, variation: NasinNanpaVariation) -> String {
         let mut s = String::new();
         for g in &self.glyphs {
-            s += &g.gen(self.prefix.clone(), self.suffix.clone(), self.color.clone())
+            s += &g.gen(
+                self.prefix.clone(),
+                self.suffix.clone(),
+                self.color.clone(),
+                variation,
+            )
         }
         s
     }
