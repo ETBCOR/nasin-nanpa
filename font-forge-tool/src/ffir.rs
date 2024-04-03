@@ -126,18 +126,48 @@ impl Rep {
 }
 
 #[derive(Clone)]
+pub enum AnchorType {
+    Base,
+    Mark,
+}
+
+#[derive(Clone)]
+pub struct Anchor {
+    ty: AnchorType,
+    pos: (isize, isize),
+}
+
+impl Anchor {
+    pub const fn new(ty: AnchorType, pos: (isize, isize)) -> Self {
+        Self { ty, pos }
+    }
+
+    fn gen(&self) -> String {
+        let x = self.pos.0;
+        let y = self.pos.1;
+        let ty = match self.ty {
+            AnchorType::Base => "basemark",
+            AnchorType::Mark => "mark",
+        };
+        format!("AnchorPoint: \"scale\" {x} {y} {ty} 0\n")
+    }
+}
+
+#[derive(Clone)]
 pub struct GlyphBasic {
     pub name: String,
     pub width: usize,
     pub rep: Rep,
+    pub anchor: Option<Anchor>,
 }
 
 impl GlyphBasic {
-    pub fn new(name: impl Into<String>, width: usize, rep: Rep) -> Self {
+    pub fn new(name: impl Into<String>, width: usize, rep: Rep, anchor: Option<Anchor>) -> Self {
         Self {
             name: name.into(),
             width,
             rep,
+            anchor,
         }
     }
 }
@@ -154,7 +184,7 @@ impl GlyphEnc {
 
     pub fn new_from_parts(enc: EncPos, name: impl Into<String>, width: usize, rep: Rep) -> Self {
         Self {
-            glyph: GlyphBasic::new(name, width, rep),
+            glyph: GlyphBasic::new(name, width, rep, None),
             enc,
         }
     }
@@ -347,12 +377,13 @@ impl GlyphFull {
         name: impl Into<String>,
         width: usize,
         rep: Rep,
+        anchor: Option<Anchor>,
         encoding: Encoding,
         lookups: Lookups,
         cc_subs: bool,
     ) -> Self {
         Self {
-            glyph: GlyphBasic::new(name, width, rep),
+            glyph: GlyphBasic::new(name, width, rep, anchor),
             encoding,
             lookups,
             cc_subs,
@@ -380,15 +411,22 @@ impl GlyphFull {
         } else {
             "".to_string()
         };
-
         let color = format!("Colour: {color}");
-
         let flags = if !name.contains("empty") {
             "Flags: W\n"
         } else {
             ""
         };
-        format!("\nStartChar: {full_name}\n{encoding}\nWidth: {width}\n{flags}LayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
+        let anchor = if let Some(anchor) = &self.glyph.anchor {
+            anchor.gen()
+        } else {
+            "".to_string()
+        };
+        let _carets = match self.glyph.anchor {
+            Some(_) => "LCarets2: 1 0\n",
+            None => "",
+        }; // {carets} goes between rep and lookups
+        format!("\nStartChar: {full_name}\n{encoding}\nWidth: {width}\n{flags}{anchor}LayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
     }
 }
 
@@ -396,6 +434,7 @@ pub struct GlyphDescriptor {
     pub name: &'static str,
     pub spline_set: &'static str,
     pub width: Option<usize>,
+    pub anchor: Option<Anchor>,
 }
 
 impl GlyphDescriptor {
@@ -404,6 +443,7 @@ impl GlyphDescriptor {
             name,
             spline_set,
             width: None,
+            anchor: None,
         }
     }
 
@@ -416,6 +456,20 @@ impl GlyphDescriptor {
             name,
             spline_set,
             width: Some(width),
+            anchor: None,
+        }
+    }
+
+    pub const fn new_with_anchor(
+        name: &'static str,
+        anchor: Anchor,
+        spline_set: &'static str,
+    ) -> Self {
+        Self {
+            name,
+            spline_set,
+            width: None,
+            anchor: Some(anchor),
         }
     }
 }
@@ -518,11 +572,13 @@ impl GlyphBlock {
                      name,
                      spline_set,
                      width,
+                     anchor,
                  }| {
                     GlyphBasic::new(
                         name.to_string(),
                         width.unwrap_or(fallback_width),
                         Rep::new(spline_set.to_string(), vec![]),
+                        anchor.clone(),
                     )
                 },
             )
@@ -570,7 +626,12 @@ impl GlyphBlock {
                     } else {
                         glyph.name
                     };
-                    let g = GlyphBasic::new(name, glyph.width, Rep::new(String::default(), refs));
+                    let g = GlyphBasic::new(
+                        name,
+                        glyph.width,
+                        Rep::new(String::default(), refs),
+                        glyph.anchor,
+                    );
                     g
                 },
             )
@@ -597,6 +658,7 @@ impl GlyphBlock {
                 format!("empty{i:04}", i = *ff_pos),
                 width,
                 Rep::default(),
+                None,
                 Encoding::new(*ff_pos, EncPos::None),
                 Lookups::None,
                 false,
