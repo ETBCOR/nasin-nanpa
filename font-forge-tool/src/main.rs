@@ -184,18 +184,18 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         ],
         if variation == NasinNanpaVariation::Main {
             LookupsMode::WordLigManual(vec![
-                "".to_string(),
+                String::new(),
                 "ampersand".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
-                "".to_string(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
                 "comma".to_string(),
                 "comma comma".to_string(),
                 "comma comma comma".to_string(),
@@ -212,7 +212,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        true,
+        Cc::Participant,
         "",
         "",
         "fa6791",
@@ -226,8 +226,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 "bracketleft".to_string(),
                 "bracketright".to_string(),
                 "equal".to_string(),
-                "".to_string(),
-                "".to_string(),
+                String::new(),
+                String::new(),
                 "hyphen".to_string(),
                 "plus".to_string(),
                 "parenleft".to_string(),
@@ -239,7 +239,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        false,
+        Cc::Participant,
         "",
         "Tok",
         "aaafff",
@@ -251,7 +251,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         START_LONG_GLYPH.as_slice(),
         LookupsMode::StartLongGlyph,
-        false,
+        Cc::None,
         "",
         "Tok_startLongGlyphTok",
         "aaafff",
@@ -265,7 +265,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             &mut ff_pos,
             glyph_blocks::LATN.as_slice(),
             LookupsMode::None,
-            true,
+            Cc::Half,
             "",
             "",
             "fffaaa",
@@ -293,7 +293,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        true,
+        Cc::Full,
         "",
         "Tok",
         "cccfff",
@@ -311,7 +311,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        true,
+        Cc::Full,
         "",
         "Tok",
         "bf80ff",
@@ -327,7 +327,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        true,
+        Cc::Full,
         "",
         "Tok",
         "df80ff",
@@ -341,7 +341,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_ALT.as_slice(),
         LookupsMode::Alt,
-        true,
+        Cc::Full,
         "",
         "",
         "ff80e6",
@@ -353,7 +353,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_OUTER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "Tok_joinScaleTok",
         "ffff",
@@ -365,7 +365,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_EXT_OUTER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "Tok_joinScaleTok",
         "ffff",
@@ -377,7 +377,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_ALT_OUTER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "_joinScaleTok",
         "ffff",
@@ -388,8 +388,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_inner_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_INNER.as_slice(),
-        LookupsMode::ComboSecond,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         "joinScaleTok_",
         "Tok",
         "80ffff",
@@ -400,8 +400,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_ext_inner_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_EXT_INNER.as_slice(),
-        LookupsMode::ComboFirst,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         "joinScaleTok_",
         "Tok",
         "80ffff",
@@ -412,8 +412,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_alt_inner_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_ALT_INNER.as_slice(),
-        LookupsMode::ComboFirst,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         "joinScaleTok_",
         "",
         "80ffff",
@@ -425,7 +425,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_LOWER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "Tok_joinStackTok",
         "ff00",
@@ -437,7 +437,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_EXT_LOWER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "Tok_joinStackTok",
         "ff00",
@@ -449,7 +449,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         TOK_ALT_LOWER.as_slice(),
         LookupsMode::ComboFirst,
-        true,
+        Cc::Full,
         "",
         "_joinStackTok",
         "ff00",
@@ -461,36 +461,39 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         &mut ff_pos,
         "S 1 0 0 1 0 500 2".to_string(),
         None,
-        LookupsMode::ComboSecond,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         false,
         "joinStackTok_",
         "Tok",
         "80ff80",
+        Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
     let tok_ext_upper_block = tok_ext_lower_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 0 500 2".to_string(),
         None,
-        LookupsMode::ComboSecond,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         false,
         "joinStackTok_",
         "Tok",
         "80ff80",
+        Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
     let tok_alt_upper_block = tok_alt_lower_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 0 500 2".to_string(),
         None,
-        LookupsMode::ComboSecond,
-        true,
+        LookupsMode::ComboLast,
+        Cc::Full,
         false,
         "joinStackTok_",
         "",
         "80ff80",
+        Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
     let kern = {
@@ -641,6 +644,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
 
 fn main() -> std::io::Result<()> {
     gen_nasin_nanpa(NasinNanpaVariation::Main)?;
-    gen_nasin_nanpa(NasinNanpaVariation::Ucsur)?;
+    // gen_nasin_nanpa(NasinNanpaVariation::Ucsur)?;
     Ok(())
 }

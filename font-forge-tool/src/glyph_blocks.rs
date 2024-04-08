@@ -80,8 +80,9 @@ Lookup: 4 0 0 "'liga' JOINER THEN GLYPH" { "'liga' JOINER THEN GLYPH"  } ['liga'
 Lookup: 6 0 0 "'calt' CART AND CONT" { "'calt' CART AND CONT"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 2 2 0 "'cc01' CART" { "'cc01' CART"  } ['cc01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 2 2 0 "'cc02' CONT" { "'cc02' CONT"  } ['cc02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "'liga' CC CLEANUP" { "'liga' CC CLEANUP"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' COMBOS KERN" { "'kern' COMBOS KERN"  } ['kern' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 262 0 0 "'mkmk' SCALE POSITIONING" { "'mkmk' SCALE POSITIONING"  } ['mkmk' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 262 0 0 "'mkmk' COMBO POSITIONING" { "'mkmk' COMBO POSITIONING"  } ['mkmk' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 "#;
 
@@ -125,7 +126,7 @@ ForceBold 5 false
 LanguageGroup 1 0
 ExpansionFactor 4 0.06
 EndPrivate
-AnchorClass2: "scale" "'mkmk' SCALE POSITIONING"
+AnchorClass2: "stack" "'mkmk' COMBO POSITIONING" "scale" "'mkmk' COMBO POSITIONING"
 "#;
 
 
@@ -477,20 +478,20 @@ r#"
 ),
 GlyphDescriptor::new("la",
 r#"
-387 750 m 0
- 387 780 412 800 437 800 c 0
- 443 800 449 798 455 796 c 0
- 615 732 713 525 713 300 c 0
- 713 127 658 -57 561 -147 c 0
- 527 -178 485 -200 437 -200 c 2
- 50 -200 l 2
- 22 -200 0 -178 0 -150 c 0
- 0 -122 22 -100 50 -100 c 2
- 437 -100 l 2
- 453 -100 472 -92 493 -73 c 0
- 570 -2 613 158 613 300 c 0
- 613 478 538 657 419 704 c 0
- 399 712 387 730 387 750 c 0"#,
+337 750 m 4
+ 337 780 362 800 387 800 c 4
+ 393 800 399 798 405 796 c 4
+ 565 732 663 525 663 300 c 4
+ 663 127 608 -57 511 -147 c 4
+ 477 -178 435 -200 387 -200 c 6
+ 0 -200 l 6
+ -28 -200 -50 -178 -50 -150 c 4
+ -50 -122 -28 -100 0 -100 c 6
+ 387 -100 l 6
+ 403 -100 422 -92 443 -73 c 4
+ 520 -2 563 158 563 300 c 4
+ 563 478 488 657 369 704 c 4
+ 349 712 337 730 337 750 c 4"#,
 ),
 GlyphDescriptor::new("lon",
 r#"
@@ -9977,7 +9978,7 @@ r#"
 
 // OUTER
 pub const TOK_OUTER: [GlyphDescriptor; 59] = [
-GlyphDescriptor::new_with_anchor("akesi", Anchor::new(AnchorType::Base, (500, 310)),
+GlyphDescriptor::new_with_anchor("akesi", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 675 740 m 0
  634 740 600 774 600 815 c 0
@@ -10028,7 +10029,7 @@ r#"
  250 856 284 890 325 890 c 0
  366 890 400 856 400 815 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("anpa", Anchor::new(AnchorType::Base, (500, 550)),
+GlyphDescriptor::new_with_anchor("anpa", Anchor::new_scale(AnchorType::Base, (500, 550)),
 r#"
 575 75 m 0
  575 34 541 0 500 0 c 0
@@ -10049,7 +10050,7 @@ r#"
  100 650 l 2
  100 678 122 700 150 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ante", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("ante", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 150 -90 m 0
  125 -90 100 -70 100 -40 c 0
@@ -10078,7 +10079,7 @@ r#"
  131 794 l 2
  111 802 100 820 100 840 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("awen", Anchor::new(AnchorType::Base, (500, 250)),
+GlyphDescriptor::new_with_anchor("awen", Anchor::new_scale(AnchorType::Base, (500, 250)),
 r#"
 500 800 m 0
  515 800 526 793 537 787 c 0
@@ -10106,7 +10107,7 @@ r#"
  446 779 458 787 481 796 c 0
  487 798 494 800 500 800 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ijo", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("ijo", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 500 -50 m 0
  251 -50 50 151 50 400 c 0
@@ -10119,7 +10120,7 @@ r#"
  307 750 150 593 150 400 c 0
  150 207 307 50 500 50 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jan", Anchor::new(AnchorType::Base, (500, 450)),
+GlyphDescriptor::new_with_anchor("jan", Anchor::new_scale(AnchorType::Base, (500, 450)),
 r#"
 200 450 m 0
  200 284 334 150 500 150 c 0
@@ -10144,7 +10145,7 @@ r#"
  134 -38 l 2
  125 -46 113 -50 101 -50 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jo", Anchor::new(AnchorType::Base, (500, 260)),
+GlyphDescriptor::new_with_anchor("jo", Anchor::new_scale(AnchorType::Base, (500, 260)),
 r#"
 590 700 m 0
  590 750 550 790 500 790 c 0
@@ -10170,7 +10171,7 @@ r#"
  310 805 395 890 500 890 c 0
  605 890 690 805 690 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kala", Anchor::new(AnchorType::Base, (610, 400)),
+GlyphDescriptor::new_with_anchor("kala", Anchor::new_scale(AnchorType::Base, (610, 400)),
 r#"
 309 400 m 1
  395 229 505 156 617 150 c 0
@@ -10201,7 +10202,7 @@ r#"
  137 528 110 584 57 674 c 0
  52 682 50 690 50 699 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kili", Anchor::new(AnchorType::Base, (500, 260)),
+GlyphDescriptor::new_with_anchor("kili", Anchor::new_scale(AnchorType::Base, (500, 260)),
 r#"
 420 562 m 0
  386 608 321 642 237 642 c 0
@@ -10227,7 +10228,7 @@ r#"
  450 730 430 778 404 806 c 0
  395 816 391 828 391 840 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kiwen", Anchor::new(AnchorType::Base, (500, 480)),
+GlyphDescriptor::new_with_anchor("kiwen", Anchor::new_scale(AnchorType::Base, (500, 480)),
 r#"
 860 540 m 1
  733 730 l 1
@@ -10250,7 +10251,7 @@ r#"
  531 -63 516 -70 500 -70 c 0
  484 -70 469 -63 460 -50 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("ko", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("ko", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 673 589 m 0
  648 589 623 609 623 640 c 0
@@ -10297,7 +10298,7 @@ r#"
  136 234 141 261 151 287 c 1
  88 328 50 399 50 474 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kon", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("kon", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 236 830 m 0
  261 830 286 810 286 780 c 0
@@ -10342,7 +10343,7 @@ r#"
  823 847 866 860 904 869 c 0
  908 870 912 870 916 870 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kulupu", Anchor::new(AnchorType::Base, (500, 320)),
+GlyphDescriptor::new_with_anchor("kulupu", Anchor::new_scale(AnchorType::Base, (500, 320)),
 r#"
 170 -90 m 0
  82 -90 10 -18 10 70 c 0
@@ -10375,7 +10376,7 @@ r#"
  467 790 440 763 440 730 c 0
  440 697 467 670 500 670 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("lawa", Anchor::new(AnchorType::Base, (410, 260)),
+GlyphDescriptor::new_with_anchor("lawa", Anchor::new_scale(AnchorType::Base, (410, 260)),
 r#"
 134 515 m 0
  119 472 110 424 110 373 c 0
@@ -10399,7 +10400,7 @@ r#"
  990 537 968 515 940 515 c 2
  796 515 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("len", Anchor::new(AnchorType::Base, (500, 450)),
+GlyphDescriptor::new_with_anchor("len", Anchor::new_scale(AnchorType::Base, (500, 450)),
 r#"
 750 200 m 1
  750 700 l 1
@@ -10425,7 +10426,7 @@ r#"
  150 750 l 2
  150 778 172 800 200 800 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("lipu", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("lipu", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 250 700 m 1
  250 100 l 1
@@ -10442,7 +10443,7 @@ r#"
  172 0 150 22 150 50 c 2
  150 750 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("luka", Anchor::new(AnchorType::Base, (600, 330)),
+GlyphDescriptor::new_with_anchor("luka", Anchor::new_scale(AnchorType::Base, (600, 330)),
 r#"
 50 350 m 0
  50 375 70 400 100 400 c 0
@@ -10467,7 +10468,7 @@ r#"
  57 325 l 2
  53 333 50 342 50 350 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("lupa", Anchor::new(AnchorType::Base, (500, 470)),
+GlyphDescriptor::new_with_anchor("lupa", Anchor::new_scale(AnchorType::Base, (500, 470)),
 r#"
 500 100 m 0
  631 100 750 227 750 400 c 2
@@ -10483,7 +10484,7 @@ r#"
  250 400 l 2
  250 227 369 100 500 100 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mama", Anchor::new(AnchorType::Base, (500, 525)),
+GlyphDescriptor::new_with_anchor("mama", Anchor::new_scale(AnchorType::Base, (500, 525)),
 r#"
 500 160 m 0
  459 160 425 126 425 85 c 0
@@ -10505,7 +10506,7 @@ r#"
  737 890 951 737 951 525 c 0
  951 358 819 228 647 180 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("mani", Anchor::new(AnchorType::Base, (500, 350)),
+GlyphDescriptor::new_with_anchor("mani", Anchor::new_scale(AnchorType::Base, (500, 350)),
 r#"
 800 350 m 0
  800 516 666 650 500 650 c 0
@@ -10534,7 +10535,7 @@ r#"
  86 695 65 737 52 787 c 0
  51 791 50 796 50 800 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meli", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("meli", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 150 400 m 0
  150 593 307 750 500 750 c 0
@@ -10560,7 +10561,7 @@ r#"
  890 400 l 2
  890 615 715 790 500 790 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mije", Anchor::new(AnchorType::Base, (500, 475)),
+GlyphDescriptor::new_with_anchor("mije", Anchor::new_scale(AnchorType::Base, (500, 475)),
 r#"
 250 475 m 0
  250 337 362 225 500 225 c 0
@@ -10586,7 +10587,7 @@ r#"
  693 825 850 668 850 475 c 0
  850 377 810 289 745 225 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("monsi", Anchor::new(AnchorType::Base, (650, 400)),
+GlyphDescriptor::new_with_anchor("monsi", Anchor::new_scale(AnchorType::Base, (650, 400)),
 r#"
 175 325 m 0
  134 325 100 359 100 400 c 0
@@ -10607,7 +10608,7 @@ r#"
  750 800 l 2
  778 800 800 778 800 750 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mu", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("mu", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 890 715 m 0
  890 756 856 790 815 790 c 0
@@ -10643,7 +10644,7 @@ r#"
  536 150 565 121 565 85 c 0
  565 49 536 20 500 20 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mun", Anchor::new(AnchorType::Base, (640, 400)),
+GlyphDescriptor::new_with_anchor("mun", Anchor::new_scale(AnchorType::Base, (640, 400)),
 r#"
 110 697 m 0
  199 814 341 890 500 890 c 0
@@ -10668,7 +10669,7 @@ r#"
  890 615 715 790 500 790 c 0
  396 790 302 750 232 684 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("musi", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("musi", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 799 630 m 0
  840 630 874 664 874 705 c 0
@@ -10702,7 +10703,7 @@ r#"
  298 880 376 802 376 705 c 0
  376 626 323 559 251 537 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("nanpa", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("nanpa", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 250 650 m 1
  250 150 l 1
@@ -10747,7 +10748,7 @@ r#"
  250 -68 228 -90 200 -90 c 0
  172 -90 150 -68 150 -40 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("nasa", Anchor::new(AnchorType::Base, (530, 400)),
+GlyphDescriptor::new_with_anchor("nasa", Anchor::new_scale(AnchorType::Base, (530, 400)),
 r#"
 958 645 m 0
  958 619 936 595 908 595 c 0
@@ -10794,7 +10795,7 @@ r#"
  840 790 900 738 948 675 c 0
  955 666 958 656 958 645 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("nena", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("nena", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 500 700 m 0
  369 700 250 573 250 400 c 2
@@ -10810,7 +10811,7 @@ r#"
  750 400 l 2
  750 573 631 700 500 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("nimi", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("nimi", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 110 350 m 2
  110 240 200 150 310 150 c 2
@@ -10831,7 +10832,7 @@ r#"
  990 184 856 50 690 50 c 2
  310 50 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("noka", Anchor::new(AnchorType::Base, (700, 570)),
+GlyphDescriptor::new_with_anchor("noka", Anchor::new_scale(AnchorType::Base, (700, 570)),
 r#"
 370 790 m 0
  402 790 421 764 420 733 c 0
@@ -10861,7 +10862,7 @@ r#"
  314 501 317 634 320 741 c 0
  321 768 343 790 370 790 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("open", Anchor::new(AnchorType::Base, (500, 580)),
+GlyphDescriptor::new_with_anchor("open", Anchor::new_scale(AnchorType::Base, (500, 580)),
 r#"
 250 225 m 1
  250 75 l 1
@@ -10882,7 +10883,7 @@ r#"
  150 753 172 775 200 775 c 0
  228 775 250 753 250 725 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("pilin", Anchor::new(AnchorType::Base, (500, 380)),
+GlyphDescriptor::new_with_anchor("pilin", Anchor::new_scale(AnchorType::Base, (500, 380)),
 r#"
 280 790 m 0
  192 790 110 707 110 589 c 0
@@ -10910,7 +10911,7 @@ r#"
  10 749 125 890 280 890 c 0
  376 890 453 843 500 787 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("poka", Anchor::new(AnchorType::Base, (400, 450)),
+GlyphDescriptor::new_with_anchor("poka", Anchor::new_scale(AnchorType::Base, (400, 450)),
 r#"
 100 500 m 0
  128 500 150 478 150 450 c 2
@@ -10931,7 +10932,7 @@ r#"
  800 341 834 375 875 375 c 0
  916 375 950 341 950 300 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("poki", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("poki", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 200 750 m 0
  228 750 250 728 250 700 c 2
@@ -10947,7 +10948,7 @@ r#"
  150 700 l 2
  150 728 172 750 200 750 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sama", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("sama", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 990 100 m 0
  990 72 968 50 940 50 c 2
@@ -10964,7 +10965,7 @@ r#"
  940 750 l 2
  968 750 990 728 990 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("selo", Anchor::new(AnchorType::Base, (500, 350)),
+GlyphDescriptor::new_with_anchor("selo", Anchor::new_scale(AnchorType::Base, (500, 350)),
 r#"
 149 600 m 1
  110 600 l 1
@@ -10996,7 +10997,7 @@ r#"
  171 163 149 185 149 213 c 2
  149 600 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("sike", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("sike", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 500 50 m 0
  307 50 150 207 150 400 c 0
@@ -11019,7 +11020,7 @@ r#"
  285 790 110 615 110 400 c 0
  110 185 285 10 500 10 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sin", Anchor::new(AnchorType::Base, (500, 310)),
+GlyphDescriptor::new_with_anchor("sin", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 10 310 m 0
  10 338 32 360 60 360 c 2
@@ -11043,7 +11044,7 @@ r#"
  800 260 l 2
  772 260 750 282 750 310 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sinpin", Anchor::new(AnchorType::Base, (350, 400)),
+GlyphDescriptor::new_with_anchor("sinpin", Anchor::new_scale(AnchorType::Base, (350, 400)),
 r#"
 825 475 m 0
  866 475 900 441 900 400 c 0
@@ -11064,7 +11065,7 @@ r#"
  250 0 l 2
  222 0 200 22 200 50 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sitelen", Anchor::new(AnchorType::Base, (500, 480)),
+GlyphDescriptor::new_with_anchor("sitelen", Anchor::new_scale(AnchorType::Base, (500, 480)),
 r#"
 720 140 m 0
  720 107 693 80 660 80 c 0
@@ -11096,7 +11097,7 @@ r#"
  172 -50 150 -28 150 0 c 2
  150 800 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("sona", Anchor::new(AnchorType::Base, (500, 260)),
+GlyphDescriptor::new_with_anchor("sona", Anchor::new_scale(AnchorType::Base, (500, 260)),
 r#"
 250 510 m 1
  250 10 l 1
@@ -11138,7 +11139,7 @@ r#"
  450 840 l 2
  450 868 472 890 500 890 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("soweli", Anchor::new(AnchorType::Base, (640, 500)),
+GlyphDescriptor::new_with_anchor("soweli", Anchor::new_scale(AnchorType::Base, (640, 500)),
 r#"
 190 850 m 2
  640 850 l 2
@@ -11176,7 +11177,7 @@ r#"
  430 200 l 2
  430 228 452 250 480 250 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("suli", Anchor::new(AnchorType::Base, (500, 650)),
+GlyphDescriptor::new_with_anchor("suli", Anchor::new_scale(AnchorType::Base, (500, 650)),
 r#"
 940 890 m 0
  970 890 990 865 990 840 c 0
@@ -11196,7 +11197,7 @@ r#"
  679 465 776 644 896 864 c 0
  905 881 922 890 940 890 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("suno", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("suno", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 500 650 m 0
  362 650 250 538 250 400 c 0
@@ -11225,7 +11226,7 @@ r#"
  176 603 297 724 450 746 c 1
  450 840 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("telo", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("telo", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 920 866 m 0
  950 866 970 841 970 816 c 0
@@ -11270,7 +11271,7 @@ r#"
  812 83 821 110 832 150 c 0
  838 172 858 186 880 186 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("toki", Anchor::new(AnchorType::Base, (500, 280)),
+GlyphDescriptor::new_with_anchor("toki", Anchor::new_scale(AnchorType::Base, (500, 280)),
 r#"
 149 280 m 0
  149 473 306 630 499 630 c 0
@@ -11308,7 +11309,7 @@ r#"
  450 820 l 2
  450 848 472 870 500 870 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("tomo", Anchor::new(AnchorType::Base, (500, 350)),
+GlyphDescriptor::new_with_anchor("tomo", Anchor::new_scale(AnchorType::Base, (500, 350)),
 r#"
 200 427 m 1
  200 100 l 1
@@ -11329,7 +11330,7 @@ r#"
  100 465 106 479 117 488 c 2
  467 788 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("tu", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("tu", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 200 -90 m 0
  172 -90 150 -68 150 -40 c 2
@@ -11346,7 +11347,7 @@ r#"
  850 -40 l 2
  850 -68 828 -90 800 -90 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("uta", Anchor::new(AnchorType::Base, (500, 480)),
+GlyphDescriptor::new_with_anchor("uta", Anchor::new_scale(AnchorType::Base, (500, 480)),
 r#"
 575 -15 m 0
  575 -56 541 -90 500 -90 c 0
@@ -11368,7 +11369,7 @@ r#"
  359 131 236 209 149 327 c 0
  62 445 10 606 10 781 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("utala", Anchor::new(AnchorType::Base, (500, 650)),
+GlyphDescriptor::new_with_anchor("utala", Anchor::new_scale(AnchorType::Base, (500, 650)),
 r#"
 829 600 m 0
  855 600 879 577 879 550 c 0
@@ -11400,7 +11401,7 @@ r#"
  796 587 l 2
  806 596 817 600 829 600 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("walo", Anchor::new(AnchorType::Base, (500, 230)),
+GlyphDescriptor::new_with_anchor("walo", Anchor::new_scale(AnchorType::Base, (500, 230)),
 r#"
 665 384 m 2
  499 726 l 1
@@ -11433,7 +11434,7 @@ r#"
  30 512 l 2
  16 522 9 537 9 553 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("weka", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("weka", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 10 819 m 0
  10 846 33 869 60 869 c 0
@@ -11472,7 +11473,7 @@ r#"
  676 159 l 2
  665 169 660 183 660 196 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("wile", Anchor::new(AnchorType::Base, (500, 560)),
+GlyphDescriptor::new_with_anchor("wile", Anchor::new_scale(AnchorType::Base, (500, 560)),
 r#"
 210 775 m 0
  238 775 260 751 260 725 c 0
@@ -11500,7 +11501,7 @@ r#"
  50 561 113 679 170 755 c 0
  180 768 195 775 210 775 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("namako", Anchor::new(AnchorType::Base, (640, 440)),
+GlyphDescriptor::new_with_anchor("namako", Anchor::new_scale(AnchorType::Base, (640, 440)),
 r#"
 371 786 m 0
  371 811 391 836 421 836 c 0
@@ -11543,7 +11544,7 @@ r#"
  990 338 957 180 812 70 c 0
  672 -36 438 -90 60 -90 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("leko", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("leko", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 250 650 m 1
  250 150 l 1
@@ -11574,7 +11575,7 @@ r#"
  32 -90 10 -68 10 -40 c 2
  10 840 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("tonsi", Anchor::new(AnchorType::Base, (500, 510)),
+GlyphDescriptor::new_with_anchor("tonsi", Anchor::new_scale(AnchorType::Base, (500, 510)),
 r#"
 500 260 m 0
  638 260 750 372 750 510 c 0
@@ -11603,7 +11604,7 @@ r#"
  915 805 l 2
  923 810 932 812 940 812 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("soko", Anchor::new(AnchorType::Base, (500, 540)),
+GlyphDescriptor::new_with_anchor("soko", Anchor::new_scale(AnchorType::Base, (500, 540)),
 r#"
 770 678 m 0
  701 756 607 788 500 788 c 0
@@ -11625,7 +11626,7 @@ r#"
  938 639 990 475 990 238 c 0
  990 210 968 188 940 188 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("epiku", Anchor::new(AnchorType::Base, (500, 350)),
+GlyphDescriptor::new_with_anchor("epiku", Anchor::new_scale(AnchorType::Base, (500, 350)),
 r#"
 500 886 m 0
  528 886 550 864 550 836 c 2
@@ -11668,7 +11669,7 @@ pub const TOK_EXT_OUTER: [GlyphDescriptor; 0] = [
 ];
 
 pub const TOK_ALT_OUTER: [GlyphDescriptor; 16] = [
-GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new(AnchorType::Base, (500, 430)),
+GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 430)),
 r#"
 71 693 m 0
  71 828 176 890 304 890 c 0
@@ -11729,7 +11730,7 @@ r#"
  802 784 782 790 763 790 c 0
  743 790 721 783 692 771 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR02", Anchor::new(AnchorType::Base, (460, 380)),
+GlyphDescriptor::new_with_anchor("koTok_VAR02", Anchor::new_scale(AnchorType::Base, (460, 380)),
 r#"
 678 152 m 0
  697 152 714 151 732 151 c 0
@@ -11788,7 +11789,7 @@ r#"
  977 324 964 282 951 244 c 0
  921 157 873 51 732 51 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR03", Anchor::new(AnchorType::Base, (540, 400)),
+GlyphDescriptor::new_with_anchor("koTok_VAR03", Anchor::new_scale(AnchorType::Base, (540, 400)),
 r#"
 779 176 m 0
  779 201 778 225 778 250 c 0
@@ -11837,7 +11838,7 @@ r#"
  882 303 879 294 878 272 c 0
  878 265 878 257 878 250 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR04", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("koTok_VAR04", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 181 75 m 0
  44 75 9 198 9 343 c 0
@@ -11883,7 +11884,7 @@ r#"
  626 619 580 649 538 714 c 0
  498 775 474 784 457 784 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR05", Anchor::new(AnchorType::Base, (500, 430)),
+GlyphDescriptor::new_with_anchor("koTok_VAR05", Anchor::new_scale(AnchorType::Base, (500, 430)),
 r#"
 381 832 m 0
  429 863 479 890 559 890 c 0
@@ -11925,7 +11926,7 @@ r#"
  845 715 787 754 674 776 c 0
  624 786 587 790 559 790 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR06", Anchor::new(AnchorType::Base, (500, 460)),
+GlyphDescriptor::new_with_anchor("koTok_VAR06", Anchor::new_scale(AnchorType::Base, (500, 460)),
 r#"
 689 726 m 0
  645 726 605 721 559 721 c 0
@@ -11976,7 +11977,7 @@ r#"
  426 849 476 823 539 821 c 0
  546 821 552 821 559 821 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR07", Anchor::new(AnchorType::Base, (500, 350)),
+GlyphDescriptor::new_with_anchor("koTok_VAR07", Anchor::new_scale(AnchorType::Base, (500, 350)),
 r#"
 819 -13 m 0
  756 -13 705 7 643 7 c 0
@@ -12030,7 +12031,7 @@ r#"
  260 639 247 630 241 620 c 0
  237 613 232 600 232 576 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR08", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("koTok_VAR08", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 775 126 m 0
  775 112 779 79 779 60 c 0
@@ -12096,7 +12097,7 @@ r#"
  886 347 876 360 868 368 c 0
  848 388 810 429 810 485 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new(AnchorType::Base, (500, 310)),
+GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 675 740 m 0
  634 740 600 774 600 815 c 0
@@ -12151,7 +12152,7 @@ r#"
  250 856 284 890 325 890 c 0
  366 890 400 856 400 815 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new(AnchorType::Base, (500, 540)),
+GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 540)),
 r#"
 500 790 m 0
  362 790 250 678 250 540 c 0
@@ -12178,15 +12179,13 @@ r#"
  150 733 307 890 500 890 c 0
  693 890 850 733 850 540 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new(AnchorType::Base, (420, 320)),
+GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_scale(AnchorType::Base, (420, 320)),
 r#"
-585 508 m 1
- 541 547 483 570 420 570 c 0
- 282 570 170 458 170 320 c 0
+170 320 m 0
  170 182 282 70 420 70 c 0
  558 70 670 182 670 320 c 0
- 670 383 647 441 608 485 c 1
- 598 490 590 498 585 508 c 1
+ 670 458 558 570 420 570 c 0
+ 282 570 170 458 170 320 c 0
 689 830 m 2
  880 830 l 2
  908 830 930 808 930 780 c 2
@@ -12205,7 +12204,7 @@ r#"
  661 730 639 752 639 780 c 0
  639 808 661 830 689 830 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new(AnchorType::Base, (500, 250)),
+GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 250)),
 r#"
 425 725 m 0
  425 766 459 800 500 800 c 0
@@ -12226,7 +12225,7 @@ r#"
  900 150 l 2
  900 122 878 100 850 100 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 112 650 m 1
  121 514 164 393 229 305 c 0
@@ -12243,7 +12242,7 @@ r#"
  359 50 236 128 149 246 c 0
  62 364 10 525 10 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new(AnchorType::Base, (500, 420)),
+GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 420)),
 r#"
 280 10 m 0
  327 10 369 28 400 54 c 0
@@ -12271,7 +12270,7 @@ r#"
  990 51 875 -90 720 -90 c 0
  624 -90 547 -43 500 13 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 10 400 m 0
  10 428 32 450 60 450 c 2
@@ -12302,7 +12301,7 @@ r#"
  800 350 l 2
  772 350 750 372 750 400 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new(AnchorType::Base, (500, 270)),
+GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 270)),
 r#"
 271 126 m 0
  328 51 406 23 500 23 c 0
@@ -12342,5234 +12341,5234 @@ r#"
 
 // INNER
 pub const TOK_INNER: [GlyphDescriptor; 136] = [
-GlyphDescriptor::new_with_anchor("a", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("a", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-243 555 m 0
- 243 574 228 590 208 590 c 0
- 189 590 173 574 173 555 c 0
- 173 536 189 520 208 520 c 0
- 227 520 243 536 243 555 c 0
-417 494 m 0
- 417 469 397 444 367 444 c 0
- 349 444 332 453 323 470 c 0
- 322 473 320 475 319 478 c 1
- 295 443 254 420 208 420 c 0
- 133 420 73 480 73 555 c 0
- 73 630 133 690 208 690 c 0
- 243 690 276 676 300 654 c 0
- 337 624 376 581 411 518 c 0
- 415 510 417 502 417 494 c 0
-258 840 m 2
- 258 750 l 2
- 258 722 236 700 208 700 c 0
- 180 700 158 722 158 750 c 2
- 158 840 l 2
- 158 868 180 890 208 890 c 0
- 236 890 258 868 258 840 c 2"#,
+493 305 m 0
+ 493 324 478 340 458 340 c 0
+ 439 340 423 324 423 305 c 0
+ 423 286 439 270 458 270 c 0
+ 477 270 493 286 493 305 c 0
+667 244 m 0
+ 667 219 647 194 617 194 c 0
+ 599 194 582 203 573 220 c 0
+ 572 223 570 225 569 228 c 1
+ 545 193 504 170 458 170 c 0
+ 383 170 323 230 323 305 c 0
+ 323 380 383 440 458 440 c 0
+ 493 440 526 426 550 404 c 0
+ 587 374 626 331 661 268 c 0
+ 665 260 667 252 667 244 c 0
+508 590 m 2
+ 508 500 l 2
+ 508 472 486 450 458 450 c 0
+ 430 450 408 472 408 500 c 2
+ 408 590 l 2
+ 408 618 430 640 458 640 c 0
+ 486 640 508 618 508 590 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("akesi", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("akesi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-109 734 m 0
- 81 734 59 756 59 784 c 0
- 59 812 81 834 109 834 c 0
- 137 834 159 812 159 784 c 0
- 159 756 137 734 109 734 c 0
-441 784 m 0
- 441 756 419 734 391 734 c 0
- 363 734 341 756 341 784 c 0
- 341 812 363 834 391 834 c 0
- 419 834 441 812 441 784 c 0
-239 631 m 1
- 239 617 l 1
- 259 617 l 1
- 259 631 l 1
- 239 631 l 1
-249 844 m 0
- 299 844 327 803 341 768 c 0
- 346 756 349 744 352 731 c 1
- 408 731 l 2
- 436 731 458 709 458 681 c 0
- 458 653 436 631 408 631 c 2
- 359 631 l 1
- 359 617 l 1
- 408 617 l 2
- 436 617 458 595 458 567 c 0
- 458 539 436 517 408 517 c 2
- 352 517 l 1
- 344 483 333 455 311 432 c 0
- 297 417 276 404 249 404 c 0
- 199 404 171 445 157 480 c 0
- 152 492 149 504 146 517 c 1
- 90 517 l 2
- 62 517 40 539 40 567 c 0
- 40 595 62 617 90 617 c 2
- 139 617 l 1
- 139 631 l 1
- 90 631 l 2
- 62 631 40 653 40 681 c 0
- 40 709 62 731 90 731 c 2
- 146 731 l 1
- 154 765 165 793 187 816 c 0
- 201 831 222 844 249 844 c 0"#,
+359 484 m 0
+ 331 484 309 506 309 534 c 0
+ 309 562 331 584 359 584 c 0
+ 387 584 409 562 409 534 c 0
+ 409 506 387 484 359 484 c 0
+691 534 m 0
+ 691 506 669 484 641 484 c 0
+ 613 484 591 506 591 534 c 0
+ 591 562 613 584 641 584 c 0
+ 669 584 691 562 691 534 c 0
+489 381 m 1
+ 489 367 l 1
+ 509 367 l 1
+ 509 381 l 1
+ 489 381 l 1
+499 594 m 0
+ 549 594 577 553 591 518 c 0
+ 596 506 599 494 602 481 c 1
+ 658 481 l 2
+ 686 481 708 459 708 431 c 0
+ 708 403 686 381 658 381 c 2
+ 609 381 l 1
+ 609 367 l 1
+ 658 367 l 2
+ 686 367 708 345 708 317 c 0
+ 708 289 686 267 658 267 c 2
+ 602 267 l 1
+ 594 233 583 205 561 182 c 0
+ 547 167 526 154 499 154 c 0
+ 449 154 421 195 407 230 c 0
+ 402 242 399 254 396 267 c 1
+ 340 267 l 2
+ 312 267 290 289 290 317 c 0
+ 290 345 312 367 340 367 c 2
+ 389 367 l 1
+ 389 381 l 1
+ 340 381 l 2
+ 312 381 290 403 290 431 c 0
+ 290 459 312 481 340 481 c 2
+ 396 481 l 1
+ 404 515 415 543 437 566 c 0
+ 451 581 472 594 499 594 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ala", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ala", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-65 785 m 0
- 65 812 88 835 115 835 c 0
- 128 835 140 830 150 820 c 2
- 250 721 l 1
- 350 820 l 2
- 360 830 372 835 385 835 c 0
- 412 835 435 812 435 785 c 0
- 435 772 430 760 420 750 c 2
- 321 650 l 1
- 420 550 l 2
- 430 540 435 528 435 515 c 0
- 435 488 412 465 385 465 c 0
- 372 465 360 470 350 480 c 2
- 250 579 l 1
- 150 480 l 2
- 140 470 128 465 115 465 c 0
- 88 465 65 488 65 515 c 0
- 65 528 70 540 80 550 c 2
- 179 650 l 1
- 80 750 l 2
- 70 760 65 772 65 785 c 0"#,
+315 535 m 0
+ 315 562 338 585 365 585 c 0
+ 378 585 390 580 400 570 c 2
+ 500 471 l 1
+ 600 570 l 2
+ 610 580 622 585 635 585 c 0
+ 662 585 685 562 685 535 c 0
+ 685 522 680 510 670 500 c 2
+ 571 400 l 1
+ 670 300 l 2
+ 680 290 685 278 685 265 c 0
+ 685 238 662 215 635 215 c 0
+ 622 215 610 220 600 230 c 2
+ 500 329 l 1
+ 400 230 l 2
+ 390 220 378 215 365 215 c 0
+ 338 215 315 238 315 265 c 0
+ 315 278 320 290 330 300 c 2
+ 429 400 l 1
+ 330 500 l 2
+ 320 510 315 522 315 535 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("alasa", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("alasa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-180 560 m 1
- 199 569 209 583 218 600 c 1
- 180 600 l 1
- 180 560 l 1
-218 700 m 1
- 209 717 199 731 180 740 c 1
- 180 700 l 1
- 218 700 l 1
-324 600 m 1
- 304 515 235 450 130 450 c 0
- 102 450 80 472 80 500 c 2
- 80 600 l 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 80 700 l 1
- 80 800 l 2
- 80 828 102 850 130 850 c 0
- 235 850 304 785 324 700 c 1
- 353 700 l 1
- 327 745 l 2
- 322 753 320 761 320 770 c 0
- 320 795 341 820 370 820 c 0
- 387 820 404 811 413 795 c 2
- 483 676 l 2
- 492 661 492 639 483 624 c 2
- 413 505 l 2
- 404 489 387 480 370 480 c 0
- 341 480 320 505 320 530 c 0
- 320 539 322 547 327 555 c 2
- 353 600 l 1
- 324 600 l 1"#,
+430 310 m 1
+ 449 319 459 333 468 350 c 1
+ 430 350 l 1
+ 430 310 l 1
+468 450 m 1
+ 459 467 449 481 430 490 c 1
+ 430 450 l 1
+ 468 450 l 1
+574 350 m 1
+ 554 265 485 200 380 200 c 0
+ 352 200 330 222 330 250 c 2
+ 330 350 l 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 330 450 l 1
+ 330 550 l 2
+ 330 578 352 600 380 600 c 0
+ 485 600 554 535 574 450 c 1
+ 603 450 l 1
+ 577 495 l 2
+ 572 503 570 511 570 520 c 0
+ 570 545 591 570 620 570 c 0
+ 637 570 654 561 663 545 c 2
+ 733 426 l 2
+ 742 411 742 389 733 374 c 2
+ 663 255 l 2
+ 654 239 637 230 620 230 c 0
+ 591 230 570 255 570 280 c 0
+ 570 289 572 297 577 305 c 2
+ 603 350 l 1
+ 574 350 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("ale", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ale", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-310 650 m 1
- 323 630 335 616 345 605 c 0
- 359 591 364 590 367 590 c 0
- 370 590 373 591 378 598 c 0
- 384 607 390 624 390 650 c 0
- 390 676 384 693 378 702 c 0
- 373 709 370 710 367 710 c 0
- 364 710 359 709 345 695 c 0
- 335 684 323 670 310 650 c 1
-190 650 m 1
- 177 670 165 684 155 695 c 0
- 141 709 136 710 133 710 c 0
- 130 710 127 709 122 702 c 0
- 116 693 110 676 110 650 c 0
- 110 624 116 607 122 598 c 0
- 127 591 130 590 133 590 c 0
- 136 590 141 591 155 605 c 0
- 165 616 177 630 190 650 c 1
-10 650 m 0
- 10 732 52 810 133 810 c 0
- 189 810 224 772 250 738 c 1
- 276 772 311 810 367 810 c 0
- 448 810 490 732 490 650 c 0
- 490 568 448 490 367 490 c 0
- 311 490 276 528 250 562 c 1
- 224 528 189 490 133 490 c 0
- 52 490 10 568 10 650 c 0"#,
+560 400 m 1
+ 573 380 585 366 595 355 c 0
+ 609 341 614 340 617 340 c 0
+ 620 340 623 341 628 348 c 0
+ 634 357 640 374 640 400 c 0
+ 640 426 634 443 628 452 c 0
+ 623 459 620 460 617 460 c 0
+ 614 460 609 459 595 445 c 0
+ 585 434 573 420 560 400 c 1
+440 400 m 1
+ 427 420 415 434 405 445 c 0
+ 391 459 386 460 383 460 c 0
+ 380 460 377 459 372 452 c 0
+ 366 443 360 426 360 400 c 0
+ 360 374 366 357 372 348 c 0
+ 377 341 380 340 383 340 c 0
+ 386 340 391 341 405 355 c 0
+ 415 366 427 380 440 400 c 1
+260 400 m 0
+ 260 482 302 560 383 560 c 0
+ 439 560 474 522 500 488 c 1
+ 526 522 561 560 617 560 c 0
+ 698 560 740 482 740 400 c 0
+ 740 318 698 240 617 240 c 0
+ 561 240 526 278 500 312 c 1
+ 474 278 439 240 383 240 c 0
+ 302 240 260 318 260 400 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("anpa", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("anpa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-300 460 m 0
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 0
- 200 488 222 510 250 510 c 0
- 278 510 300 488 300 460 c 0
-80 790 m 0
- 108 790 130 768 130 740 c 2
- 130 640 l 1
- 370 640 l 1
- 370 740 l 2
- 370 768 392 790 420 790 c 0
- 448 790 470 768 470 740 c 2
- 470 590 l 2
- 470 562 448 540 420 540 c 2
- 80 540 l 2
- 52 540 30 562 30 590 c 2
- 30 740 l 2
- 30 768 52 790 80 790 c 0"#,
+550 210 m 0
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 0
+ 450 238 472 260 500 260 c 0
+ 528 260 550 238 550 210 c 0
+330 540 m 0
+ 358 540 380 518 380 490 c 2
+ 380 390 l 1
+ 620 390 l 1
+ 620 490 l 2
+ 620 518 642 540 670 540 c 0
+ 698 540 720 518 720 490 c 2
+ 720 340 l 2
+ 720 312 698 290 670 290 c 2
+ 330 290 l 2
+ 302 290 280 312 280 340 c 2
+ 280 490 l 2
+ 280 518 302 540 330 540 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ante", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ante", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-100 476 m 0
- 75 476 50 496 50 526 c 0
- 50 545 61 563 79 571 c 2
- 229 641 l 2
- 236 644 243 646 250 646 c 0
- 257 646 264 644 271 641 c 2
- 421 571 l 2
- 439 563 450 545 450 526 c 0
- 450 496 425 476 400 476 c 0
- 393 476 386 478 379 481 c 2
- 250 541 l 1
- 121 481 l 2
- 114 478 107 476 100 476 c 0
-400 824 m 0
- 425 824 450 804 450 774 c 0
- 450 755 439 737 421 729 c 2
- 271 659 l 2
- 264 656 257 654 250 654 c 0
- 243 654 236 656 229 659 c 2
- 79 729 l 2
- 61 737 50 755 50 774 c 0
- 50 804 75 824 100 824 c 0
- 107 824 114 822 121 819 c 2
- 250 759 l 1
- 379 819 l 2
- 386 822 393 824 400 824 c 0"#,
+350 226 m 0
+ 325 226 300 246 300 276 c 0
+ 300 295 311 313 329 321 c 2
+ 479 391 l 2
+ 486 394 493 396 500 396 c 0
+ 507 396 514 394 521 391 c 2
+ 671 321 l 2
+ 689 313 700 295 700 276 c 0
+ 700 246 675 226 650 226 c 0
+ 643 226 636 228 629 231 c 2
+ 500 291 l 1
+ 371 231 l 2
+ 364 228 357 226 350 226 c 0
+650 574 m 0
+ 675 574 700 554 700 524 c 0
+ 700 505 689 487 671 479 c 2
+ 521 409 l 2
+ 514 406 507 404 500 404 c 0
+ 493 404 486 406 479 409 c 2
+ 329 479 l 2
+ 311 487 300 505 300 524 c 0
+ 300 554 325 574 350 574 c 0
+ 357 574 364 572 371 569 c 2
+ 500 509 l 1
+ 629 569 l 2
+ 636 572 643 574 650 574 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("anu", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("anu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-62 782 m 0
- 62 809 85 832 112 832 c 0
- 125 832 138 827 148 817 c 2
- 250 712 l 1
- 352 817 l 2
- 362 827 375 832 388 832 c 0
- 415 832 438 809 438 782 c 0
- 438 769 433 757 424 747 c 2
- 300 620 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 620 l 1
- 76 747 l 2
- 67 757 62 769 62 782 c 0"#,
+312 532 m 0
+ 312 559 335 582 362 582 c 0
+ 375 582 388 577 398 567 c 2
+ 500 462 l 1
+ 602 567 l 2
+ 612 577 625 582 638 582 c 0
+ 665 582 688 559 688 532 c 0
+ 688 519 683 507 674 497 c 2
+ 550 370 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 370 l 1
+ 326 497 l 2
+ 317 507 312 519 312 532 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("awen", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("awen", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-297 857 m 2
- 389 600 l 1
- 416 600 l 2
- 444 600 466 578 466 550 c 0
- 466 522 444 500 416 500 c 2
- 354 500 l 2
- 333 500 314 513 307 533 c 2
- 250 692 l 1
- 193 533 l 2
- 186 513 167 500 146 500 c 2
- 84 500 l 2
- 56 500 34 522 34 550 c 0
- 34 578 56 600 84 600 c 2
- 111 600 l 1
- 203 857 l 2
- 210 877 229 890 250 890 c 0
- 271 890 290 877 297 857 c 2"#,
+547 607 m 2
+ 639 350 l 1
+ 666 350 l 2
+ 694 350 716 328 716 300 c 0
+ 716 272 694 250 666 250 c 2
+ 604 250 l 2
+ 583 250 564 263 557 283 c 2
+ 500 442 l 1
+ 443 283 l 2
+ 436 263 417 250 396 250 c 2
+ 334 250 l 2
+ 306 250 284 272 284 300 c 0
+ 284 328 306 350 334 350 c 2
+ 361 350 l 1
+ 453 607 l 2
+ 460 627 479 640 500 640 c 0
+ 521 640 540 627 547 607 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("e", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("e", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 810 m 0
- 250 836 272 860 300 860 c 0
- 314 860 328 854 338 843 c 2
- 478 683 l 2
- 486 674 490 662 490 650 c 0
- 490 638 486 626 478 617 c 2
- 338 457 l 2
- 328 446 314 440 300 440 c 0
- 272 440 250 464 250 490 c 0
- 250 502 254 514 262 523 c 2
- 374 650 l 1
- 262 777 l 2
- 254 786 250 798 250 810 c 0
-80 810 m 0
- 80 836 102 860 130 860 c 0
- 144 860 158 854 168 843 c 2
- 308 683 l 2
- 316 674 320 662 320 650 c 0
- 320 638 316 626 308 617 c 2
- 168 457 l 2
- 158 446 144 440 130 440 c 0
- 102 440 80 464 80 490 c 0
- 80 502 84 514 92 523 c 2
- 204 650 l 1
- 92 777 l 2
- 84 786 80 798 80 810 c 0"#,
+500 560 m 0
+ 500 586 522 610 550 610 c 0
+ 564 610 578 604 588 593 c 2
+ 728 433 l 2
+ 736 424 740 412 740 400 c 0
+ 740 388 736 376 728 367 c 2
+ 588 207 l 2
+ 578 196 564 190 550 190 c 0
+ 522 190 500 214 500 240 c 0
+ 500 252 504 264 512 273 c 2
+ 624 400 l 1
+ 512 527 l 2
+ 504 536 500 548 500 560 c 0
+330 560 m 0
+ 330 586 352 610 380 610 c 0
+ 394 610 408 604 418 593 c 2
+ 558 433 l 2
+ 566 424 570 412 570 400 c 0
+ 570 388 566 376 558 367 c 2
+ 418 207 l 2
+ 408 196 394 190 380 190 c 0
+ 352 190 330 214 330 240 c 0
+ 330 252 334 264 342 273 c 2
+ 454 400 l 1
+ 342 527 l 2
+ 334 536 330 548 330 560 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("en", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("en", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-300 840 m 2
- 300 700 l 1
- 440 700 l 2
- 468 700 490 678 490 650 c 0
- 490 622 468 600 440 600 c 2
- 300 600 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 600 l 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 200 700 l 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2"#,
+550 590 m 2
+ 550 450 l 1
+ 690 450 l 2
+ 718 450 740 428 740 400 c 0
+ 740 372 718 350 690 350 c 2
+ 550 350 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 350 l 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 450 450 l 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("esun", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("esun", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-173 566 m 1
- 172 566 171 566 170 566 c 0
- 154 566 150 567 150 550 c 1
- 158 550 166 559 173 566 c 1
-327 734 m 1
- 342 735 350 736 350 750 c 1
- 342 750 333 741 327 734 c 1
-55 795 m 0
- 55 820 76 845 105 845 c 0
- 122 845 139 836 148 820 c 0
- 155 808 175 777 216 756 c 1
- 223 768 233 780 243 791 c 0
- 268 818 298 850 350 850 c 0
- 374 850 402 844 423 823 c 0
- 444 802 450 774 450 750 c 0
- 450 726 444 694 419 669 c 0
- 396 647 365 636 329 634 c 1
- 342 628 355 621 366 613 c 0
- 410 583 430 546 440 526 c 0
- 443 519 445 512 445 505 c 0
- 445 480 425 455 395 455 c 0
- 376 455 359 465 350 483 c 0
- 345 493 334 513 308 531 c 0
- 301 536 293 541 284 545 c 1
- 277 532 267 520 257 509 c 0
- 232 482 202 450 150 450 c 0
- 126 450 98 456 77 477 c 0
- 56 498 50 526 50 550 c 0
- 50 574 56 605 77 629 c 0
- 99 655 133 666 170 666 c 0
- 171 666 171 666 172 666 c 1
- 108 699 75 748 62 770 c 0
- 57 778 55 787 55 795 c 0"#,
+423 316 m 1
+ 422 316 421 316 420 316 c 0
+ 404 316 400 317 400 300 c 1
+ 408 300 416 309 423 316 c 1
+577 484 m 1
+ 592 485 600 486 600 500 c 1
+ 592 500 583 491 577 484 c 1
+305 545 m 0
+ 305 570 326 595 355 595 c 0
+ 372 595 389 586 398 570 c 0
+ 405 558 425 527 466 506 c 1
+ 473 518 483 530 493 541 c 0
+ 518 568 548 600 600 600 c 0
+ 624 600 652 594 673 573 c 0
+ 694 552 700 524 700 500 c 0
+ 700 476 694 444 669 419 c 0
+ 646 397 615 386 579 384 c 1
+ 592 378 605 371 616 363 c 0
+ 660 333 680 296 690 276 c 0
+ 693 269 695 262 695 255 c 0
+ 695 230 675 205 645 205 c 0
+ 626 205 609 215 600 233 c 0
+ 595 243 584 263 558 281 c 0
+ 551 286 543 291 534 295 c 1
+ 527 282 517 270 507 259 c 0
+ 482 232 452 200 400 200 c 0
+ 376 200 348 206 327 227 c 0
+ 306 248 300 276 300 300 c 0
+ 300 324 306 355 327 379 c 0
+ 349 405 383 416 420 416 c 0
+ 421 416 421 416 422 416 c 1
+ 358 449 325 498 312 520 c 0
+ 307 528 305 537 305 545 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ijo", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ijo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 410 m 0
- 117 410 10 517 10 650 c 0
- 10 783 117 890 250 890 c 0
- 383 890 490 783 490 650 c 0
- 490 517 383 410 250 410 c 0
-250 510 m 0
- 327 510 390 573 390 650 c 0
- 390 727 327 790 250 790 c 0
- 173 790 110 727 110 650 c 0
- 110 573 173 510 250 510 c 0"#,
+500 160 m 0
+ 367 160 260 267 260 400 c 0
+ 260 533 367 640 500 640 c 0
+ 633 640 740 533 740 400 c 0
+ 740 267 633 160 500 160 c 0
+500 260 m 0
+ 577 260 640 323 640 400 c 0
+ 640 477 577 540 500 540 c 0
+ 423 540 360 477 360 400 c 0
+ 360 323 423 260 500 260 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ike", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ike", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-480 585 m 0
- 480 560 460 535 430 535 c 0
- 408 535 388 550 382 572 c 0
- 368 624 316 665 250 665 c 0
- 184 665 132 624 118 572 c 0
- 112 550 92 535 70 535 c 0
- 40 535 20 560 20 585 c 0
- 20 589 21 594 22 598 c 0
- 49 696 142 765 250 765 c 0
- 358 765 451 696 478 598 c 0
- 479 594 480 589 480 585 c 0"#,
+730 335 m 0
+ 730 310 710 285 680 285 c 0
+ 658 285 638 300 632 322 c 0
+ 618 374 566 415 500 415 c 0
+ 434 415 382 374 368 322 c 0
+ 362 300 342 285 320 285 c 0
+ 290 285 270 310 270 335 c 0
+ 270 339 271 344 272 348 c 0
+ 299 446 392 515 500 515 c 0
+ 608 515 701 446 728 348 c 0
+ 729 344 730 339 730 335 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ilo", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ilo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-200 722 m 1
- 155 722 l 1
- 155 676 l 1
- 200 676 l 1
- 200 722 l 1
-300 676 m 1
- 345 676 l 1
- 345 722 l 1
- 300 722 l 1
- 300 676 l 1
-55 772 m 2
- 55 800 77 822 105 822 c 2
- 395 822 l 2
- 423 822 445 800 445 772 c 2
- 445 626 l 2
- 445 598 423 576 395 576 c 2
- 300 576 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 576 l 1
- 105 576 l 2
- 77 576 55 598 55 626 c 2
- 55 772 l 2"#,
+450 472 m 1
+ 405 472 l 1
+ 405 426 l 1
+ 450 426 l 1
+ 450 472 l 1
+550 426 m 1
+ 595 426 l 1
+ 595 472 l 1
+ 550 472 l 1
+ 550 426 l 1
+305 522 m 2
+ 305 550 327 572 355 572 c 2
+ 645 572 l 2
+ 673 572 695 550 695 522 c 2
+ 695 376 l 2
+ 695 348 673 326 645 326 c 2
+ 550 326 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 326 l 1
+ 355 326 l 2
+ 327 326 305 348 305 376 c 2
+ 305 522 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("insa", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("insa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-80 785 m 0
- 108 785 130 763 130 735 c 2
- 130 615 l 1
- 370 615 l 1
- 370 735 l 2
- 370 763 392 785 420 785 c 0
- 448 785 470 763 470 735 c 2
- 470 565 l 2
- 470 537 448 515 420 515 c 2
- 80 515 l 2
- 52 515 30 537 30 565 c 2
- 30 735 l 2
- 30 763 52 785 80 785 c 0
-300 725 m 0
- 300 697 278 675 250 675 c 0
- 222 675 200 697 200 725 c 0
- 200 753 222 775 250 775 c 0
- 278 775 300 753 300 725 c 0"#,
+330 535 m 0
+ 358 535 380 513 380 485 c 2
+ 380 365 l 1
+ 620 365 l 1
+ 620 485 l 2
+ 620 513 642 535 670 535 c 0
+ 698 535 720 513 720 485 c 2
+ 720 315 l 2
+ 720 287 698 265 670 265 c 2
+ 330 265 l 2
+ 302 265 280 287 280 315 c 2
+ 280 485 l 2
+ 280 513 302 535 330 535 c 0
+550 475 m 0
+ 550 447 528 425 500 425 c 0
+ 472 425 450 447 450 475 c 0
+ 450 503 472 525 500 525 c 0
+ 528 525 550 503 550 475 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jaki", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jaki", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-25 588 m 0
- 25 634 67 666 114 666 c 0
- 141 666 164 644 164 615 c 0
- 164 597 153 581 138 572 c 1
- 148 561 161 549 174 539 c 1
- 172 578 169 623 167 665 c 0
- 167 666 167 668 167 669 c 0
- 122 671 90 675 64 701 c 0
- 50 715 44 733 44 750 c 0
- 44 777 59 797 70 809 c 0
- 89 829 115 847 139 859 c 0
- 161 870 191 882 217 882 c 0
- 245 882 267 860 267 832 c 0
- 267 804 245 782 217 782 c 1
- 206 780 195 775 184 769 c 1
- 186 769 l 0
- 203 769 217 764 228 756 c 1
- 257 786 294 822 343 832 c 0
- 349 833 356 834 363 834 c 0
- 405 834 433 808 448 780 c 0
- 462 754 472 726 472 700 c 0
- 472 658 445 632 422 620 c 1
- 433 604 449 580 449 551 c 0
- 449 489 391 470 332 470 c 0
- 304 470 282 492 282 520 c 0
- 282 548 304 570 332 570 c 0
- 333 570 334 571 335 571 c 1
- 329 579 322 587 314 596 c 0
- 308 602 296 618 296 640 c 0
- 296 674 325 691 333 695 c 0
- 347 702 358 703 371 707 c 1
- 370 712 367 721 360 733 c 1
- 328 723 287 674 267 649 c 1
- 268 609 274 564 274 523 c 0
- 274 471 258 419 203 419 c 0
- 184 419 167 427 155 433 c 0
- 119 452 87 479 61 509 c 0
- 44 529 25 552 25 588 c 0"#,
+275 338 m 0
+ 275 384 317 416 364 416 c 0
+ 391 416 414 394 414 365 c 0
+ 414 347 403 331 388 322 c 1
+ 398 311 411 299 424 289 c 1
+ 422 328 419 373 417 415 c 0
+ 417 416 417 418 417 419 c 0
+ 372 421 340 425 314 451 c 0
+ 300 465 294 483 294 500 c 0
+ 294 527 309 547 320 559 c 0
+ 339 579 365 597 389 609 c 0
+ 411 620 441 632 467 632 c 0
+ 495 632 517 610 517 582 c 0
+ 517 554 495 532 467 532 c 1
+ 456 530 445 525 434 519 c 1
+ 436 519 l 0
+ 453 519 467 514 478 506 c 1
+ 507 536 544 572 593 582 c 0
+ 599 583 606 584 613 584 c 0
+ 655 584 683 558 698 530 c 0
+ 712 504 722 476 722 450 c 0
+ 722 408 695 382 672 370 c 1
+ 683 354 699 330 699 301 c 0
+ 699 239 641 220 582 220 c 0
+ 554 220 532 242 532 270 c 0
+ 532 298 554 320 582 320 c 0
+ 583 320 584 321 585 321 c 1
+ 579 329 572 337 564 346 c 0
+ 558 352 546 368 546 390 c 0
+ 546 424 575 441 583 445 c 0
+ 597 452 608 453 621 457 c 1
+ 620 462 617 471 610 483 c 1
+ 578 473 537 424 517 399 c 1
+ 518 359 524 314 524 273 c 0
+ 524 221 508 169 453 169 c 0
+ 434 169 417 177 405 183 c 0
+ 369 202 337 229 311 259 c 0
+ 294 279 275 302 275 338 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jan", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jan", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-167 707 m 0
- 167 661 204 624 250 624 c 0
- 296 624 333 661 333 707 c 0
- 333 753 296 790 250 790 c 0
- 204 790 167 753 167 707 c 0
-98 486 m 0
- 72 486 48 508 48 536 c 0
- 48 550 53 564 65 574 c 2
- 99 603 l 1
- 78 633 67 668 67 707 c 0
- 67 808 149 890 250 890 c 0
- 351 890 433 808 433 707 c 0
- 433 668 421 633 401 603 c 1
- 434 574 l 2
- 446 564 452 550 452 536 c 0
- 452 508 428 486 402 486 c 0
- 391 486 379 490 370 498 c 2
- 322 539 l 1
- 300 530 276 524 250 524 c 0
- 224 524 200 530 178 539 c 1
- 131 498 l 2
- 122 490 110 486 98 486 c 0"#,
+417 457 m 0
+ 417 411 454 374 500 374 c 0
+ 546 374 583 411 583 457 c 0
+ 583 503 546 540 500 540 c 0
+ 454 540 417 503 417 457 c 0
+348 236 m 0
+ 322 236 298 258 298 286 c 0
+ 298 300 303 314 315 324 c 2
+ 349 353 l 1
+ 328 383 317 418 317 457 c 0
+ 317 558 399 640 500 640 c 0
+ 601 640 683 558 683 457 c 0
+ 683 418 671 383 651 353 c 1
+ 684 324 l 2
+ 696 314 702 300 702 286 c 0
+ 702 258 678 236 652 236 c 0
+ 641 236 629 240 620 248 c 2
+ 572 289 l 1
+ 550 280 526 274 500 274 c 0
+ 474 274 450 280 428 289 c 1
+ 381 248 l 2
+ 372 240 360 236 348 236 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jelo", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jelo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-242 539 m 1
- 258 539 l 1
- 250 551 l 1
- 242 539 l 1
-250 729 m 0
- 258 729 264 734 265 742 c 0
- 265 743 265 744 265 745 c 0
- 265 746 l 0
- 264 753 258 759 250 759 c 0
- 242 759 236 753 235 746 c 0
- 235 745 l 0
- 235 744 235 743 235 742 c 0
- 236 734 242 729 250 729 c 0
-153 439 m 2
- 127 439 103 460 103 489 c 0
- 103 498 105 507 110 515 c 2
- 200 661 l 1
- 200 669 l 1
- 190 676 182 685 175 695 c 1
- 155 695 l 2
- 127 695 105 717 105 745 c 0
- 105 773 127 795 155 795 c 2
- 176 795 l 1
- 183 805 190 813 200 819 c 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 819 l 1
- 310 813 317 805 324 795 c 1
- 345 795 l 2
- 373 795 395 773 395 745 c 0
- 395 717 373 695 345 695 c 2
- 325 695 l 1
- 318 685 310 676 300 669 c 1
- 300 661 l 1
- 390 515 l 2
- 395 507 397 498 397 489 c 0
- 397 460 373 439 347 439 c 2
- 153 439 l 2"#,
+492 289 m 1
+ 508 289 l 1
+ 500 301 l 1
+ 492 289 l 1
+500 479 m 0
+ 508 479 514 484 515 492 c 0
+ 515 493 515 494 515 495 c 0
+ 515 496 l 0
+ 514 503 508 509 500 509 c 0
+ 492 509 486 503 485 496 c 0
+ 485 495 l 0
+ 485 494 485 493 485 492 c 0
+ 486 484 492 479 500 479 c 0
+403 189 m 2
+ 377 189 353 210 353 239 c 0
+ 353 248 355 257 360 265 c 2
+ 450 411 l 1
+ 450 419 l 1
+ 440 426 432 435 425 445 c 1
+ 405 445 l 2
+ 377 445 355 467 355 495 c 0
+ 355 523 377 545 405 545 c 2
+ 426 545 l 1
+ 433 555 440 563 450 569 c 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 569 l 1
+ 560 563 567 555 574 545 c 1
+ 595 545 l 2
+ 623 545 645 523 645 495 c 0
+ 645 467 623 445 595 445 c 2
+ 575 445 l 1
+ 568 435 560 426 550 419 c 1
+ 550 411 l 1
+ 640 265 l 2
+ 645 257 647 248 647 239 c 0
+ 647 210 623 189 597 189 c 2
+ 403 189 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("jo", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-276 789 m 0
- 276 803 264 815 250 815 c 0
- 236 815 223 803 223 789 c 0
- 223 775 236 763 250 763 c 0
- 264 763 276 775 276 789 c 0
-351 789 m 0
- 351 733 306 688 250 688 c 0
- 234 688 218 691 204 698 c 1
- 180 681 163 650 163 612 c 0
- 163 551 207 510 250 510 c 0
- 280 510 309 530 325 562 c 1
- 272 562 l 2
- 244 562 222 584 222 612 c 0
- 222 640 244 662 272 662 c 2
- 386 662 l 2
- 414 662 436 640 436 612 c 0
- 436 506 358 410 250 410 c 0
- 142 410 63 506 63 612 c 0
- 63 682 96 745 149 782 c 0
- 149 784 148 787 148 789 c 0
- 148 845 194 890 250 890 c 0
- 306 890 351 845 351 789 c 0"#,
+526 539 m 0
+ 526 553 514 565 500 565 c 0
+ 486 565 473 553 473 539 c 0
+ 473 525 486 513 500 513 c 0
+ 514 513 526 525 526 539 c 0
+601 539 m 0
+ 601 483 556 438 500 438 c 0
+ 484 438 468 441 454 448 c 1
+ 430 431 413 400 413 362 c 0
+ 413 301 457 260 500 260 c 0
+ 530 260 559 280 575 312 c 1
+ 522 312 l 2
+ 494 312 472 334 472 362 c 0
+ 472 390 494 412 522 412 c 2
+ 636 412 l 2
+ 664 412 686 390 686 362 c 0
+ 686 256 608 160 500 160 c 0
+ 392 160 313 256 313 362 c 0
+ 313 432 346 495 399 532 c 0
+ 399 534 398 537 398 539 c 0
+ 398 595 444 640 500 640 c 0
+ 556 640 601 595 601 539 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kala", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kala", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-214 650 m 1
- 239 618 275 575 321 575 c 0
- 345 575 361 582 370 591 c 0
- 380 601 390 619 390 650 c 0
- 390 681 380 699 370 709 c 0
- 361 718 345 725 321 725 c 0
- 275 725 239 682 214 650 c 1
-157 738 m 1
- 195 780 246 825 321 825 c 0
- 366 825 407 811 439 781 c 0
- 473 748 490 702 490 650 c 0
- 490 598 473 552 439 519 c 0
- 407 489 366 475 321 475 c 0
- 246 475 195 520 157 562 c 1
- 140 530 131 490 90 490 c 0
- 60 490 40 515 40 540 c 0
- 40 547 42 554 45 561 c 0
- 54 580 69 613 92 650 c 1
- 69 687 54 720 45 739 c 0
- 42 746 40 753 40 760 c 0
- 40 785 60 810 90 810 c 0
- 131 810 140 770 157 738 c 1"#,
+464 400 m 1
+ 489 368 525 325 571 325 c 0
+ 595 325 611 332 620 341 c 0
+ 630 351 640 369 640 400 c 0
+ 640 431 630 449 620 459 c 0
+ 611 468 595 475 571 475 c 0
+ 525 475 489 432 464 400 c 1
+407 488 m 1
+ 445 530 496 575 571 575 c 0
+ 616 575 657 561 689 531 c 0
+ 723 498 740 452 740 400 c 0
+ 740 348 723 302 689 269 c 0
+ 657 239 616 225 571 225 c 0
+ 496 225 445 270 407 312 c 1
+ 390 280 381 240 340 240 c 0
+ 310 240 290 265 290 290 c 0
+ 290 297 292 304 295 311 c 0
+ 304 330 319 363 342 400 c 1
+ 319 437 304 470 295 489 c 0
+ 292 496 290 503 290 510 c 0
+ 290 535 310 560 340 560 c 0
+ 381 560 390 520 407 488 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("kalama", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kalama", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 891 m 0
- 278 891 300 869 300 841 c 2
- 300 740 l 2
- 300 712 278 690 250 690 c 0
- 222 690 200 712 200 740 c 2
- 200 841 l 2
- 200 869 222 891 250 891 c 0
-69 786 m 0
- 69 811 89 836 119 836 c 0
- 139 836 157 824 165 805 c 2
- 188 749 l 2
- 191 743 192 736 192 730 c 0
- 192 705 172 680 142 680 c 0
- 122 680 104 691 96 710 c 2
- 72 766 l 2
- 69 772 69 780 69 786 c 0
-358 680 m 0
- 328 680 308 705 308 730 c 0
- 308 736 309 743 312 749 c 2
- 335 804 l 2
- 343 823 361 835 381 835 c 0
- 411 835 431 810 431 785 c 0
- 431 779 430 772 427 766 c 2
- 404 710 l 2
- 396 691 378 680 358 680 c 0
-148 575 m 1
- 166 537 205 511 250 511 c 0
- 295 511 334 537 352 575 c 1
- 148 575 l 1
-36 625 m 0
- 36 653 58 675 86 675 c 2
- 413 675 l 2
- 441 675 463 653 463 625 c 0
- 463 507 368 411 250 411 c 0
- 132 411 36 507 36 625 c 0"#,
+500 641 m 0
+ 528 641 550 619 550 591 c 2
+ 550 490 l 2
+ 550 462 528 440 500 440 c 0
+ 472 440 450 462 450 490 c 2
+ 450 591 l 2
+ 450 619 472 641 500 641 c 0
+319 536 m 0
+ 319 561 339 586 369 586 c 0
+ 389 586 407 574 415 555 c 2
+ 438 499 l 2
+ 441 493 442 486 442 480 c 0
+ 442 455 422 430 392 430 c 0
+ 372 430 354 441 346 460 c 2
+ 322 516 l 2
+ 319 522 319 530 319 536 c 0
+608 430 m 0
+ 578 430 558 455 558 480 c 0
+ 558 486 559 493 562 499 c 2
+ 585 554 l 2
+ 593 573 611 585 631 585 c 0
+ 661 585 681 560 681 535 c 0
+ 681 529 680 522 677 516 c 2
+ 654 460 l 2
+ 646 441 628 430 608 430 c 0
+398 325 m 1
+ 416 287 455 261 500 261 c 0
+ 545 261 584 287 602 325 c 1
+ 398 325 l 1
+286 375 m 0
+ 286 403 308 425 336 425 c 2
+ 663 425 l 2
+ 691 425 713 403 713 375 c 0
+ 713 257 618 161 500 161 c 0
+ 382 161 286 257 286 375 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kama", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kama", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-35 559 m 0
- 35 587 59 609 85 609 c 0
- 96 609 108 605 117 597 c 0
- 131 585 145 578 161 574 c 1
- 258 847 l 2
- 265 867 283 880 305 880 c 0
- 325 880 343 868 351 849 c 2
- 461 578 l 2
- 463 572 465 565 465 559 c 0
- 465 540 454 525 442 515 c 0
- 412 488 370 470 305 470 c 0
- 277 470 255 492 255 520 c 0
- 255 548 277 570 305 570 c 0
- 327 570 342 574 353 578 c 1
- 308 689 l 1
- 242 503 l 2
- 235 483 216 470 195 470 c 0
- 140 470 94 485 53 520 c 0
- 41 530 35 545 35 559 c 0"#,
+285 309 m 0
+ 285 337 309 359 335 359 c 0
+ 346 359 358 355 367 347 c 0
+ 381 335 395 328 411 324 c 1
+ 508 597 l 2
+ 515 617 533 630 555 630 c 0
+ 575 630 593 618 601 599 c 2
+ 711 328 l 2
+ 713 322 715 315 715 309 c 0
+ 715 290 704 275 692 265 c 0
+ 662 238 620 220 555 220 c 0
+ 527 220 505 242 505 270 c 0
+ 505 298 527 320 555 320 c 0
+ 577 320 592 324 603 328 c 1
+ 558 439 l 1
+ 492 253 l 2
+ 485 233 466 220 445 220 c 0
+ 390 220 344 235 303 270 c 0
+ 291 280 285 295 285 309 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kasi", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kasi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-165 678 m 0
- 177 674 186 672 193 671 c 1
- 186 684 164 698 142 704 c 1
- 142 703 142 703 142 702 c 0
- 142 695 144 691 146 689 c 0
- 148 686 153 682 165 678 c 0
-356 720 m 1
- 353 720 349 720 345 720 c 0
- 333 720 330 718 326 715 c 0
- 322 712 319 705 313 695 c 1
- 327 697 347 705 351 710 c 0
- 352 711 355 715 356 720 c 1
-99 810 m 0
- 167 810 203 793 239 766 c 1
- 245 774 252 781 259 788 c 0
- 286 813 315 820 345 820 c 2
- 347 820 l 2
- 348 820 347 820 348 820 c 0
- 362 820 374 820 384 819 c 0
- 393 818 409 817 424 809 c 0
- 452 793 457 770 457 737 c 2
- 457 737 l 2
- 457 736 l 0
- 457 705 450 675 431 650 c 0
- 402 612 357 596 299 593 c 1
- 299 460 l 2
- 299 432 277 410 249 410 c 0
- 221 410 199 432 199 460 c 2
- 199 571 l 1
- 176 571 155 576 134 583 c 0
- 86 599 42 640 42 702 c 0
- 42 704 42 707 42 709 c 0
- 42 729 42 754 53 779 c 0
- 61 797 79 810 99 810 c 0"#,
+415 428 m 0
+ 427 424 436 422 443 421 c 1
+ 436 434 414 448 392 454 c 1
+ 392 453 392 453 392 452 c 0
+ 392 445 394 441 396 439 c 0
+ 398 436 403 432 415 428 c 0
+606 470 m 1
+ 603 470 599 470 595 470 c 0
+ 583 470 580 468 576 465 c 0
+ 572 462 569 455 563 445 c 1
+ 577 447 597 455 601 460 c 0
+ 602 461 605 465 606 470 c 1
+349 560 m 0
+ 417 560 453 543 489 516 c 1
+ 495 524 502 531 509 538 c 0
+ 536 563 565 570 595 570 c 2
+ 597 570 l 2
+ 598 570 597 570 598 570 c 0
+ 612 570 624 570 634 569 c 0
+ 643 568 659 567 674 559 c 0
+ 702 543 707 520 707 487 c 2
+ 707 487 l 2
+ 707 486 l 0
+ 707 455 700 425 681 400 c 0
+ 652 362 607 346 549 343 c 1
+ 549 210 l 2
+ 549 182 527 160 499 160 c 0
+ 471 160 449 182 449 210 c 2
+ 449 321 l 1
+ 426 321 405 326 384 333 c 0
+ 336 349 292 390 292 452 c 0
+ 292 454 292 457 292 459 c 0
+ 292 479 292 504 303 529 c 0
+ 311 547 329 560 349 560 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("ken", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("ken", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-319 650 m 1
- 363 616 401 556 401 489 c 2
- 401 489 l 1
- 401 489 l 2
- 401 461 379 439 351 439 c 0
- 320 439 304 462 301 491 c 0
- 299 510 294 525 283 543 c 0
- 271 562 248 586 199 596 c 1
- 199 489 l 2
- 199 461 177 439 149 439 c 0
- 121 439 99 461 99 489 c 2
- 99 811 l 2
- 99 839 121 861 149 861 c 0
- 177 861 199 839 199 811 c 2
- 199 704 l 1
- 248 714 271 738 283 757 c 0
- 295 775 301 790 301 811 c 0
- 301 838 324 861 351 861 c 0
- 379 861 401 839 401 811 c 2
- 401 811 l 1
- 401 811 l 2
- 401 744 363 684 319 650 c 1"#,
+569 400 m 1
+ 613 366 651 306 651 239 c 2
+ 651 239 l 1
+ 651 239 l 2
+ 651 211 629 189 601 189 c 0
+ 570 189 554 212 551 241 c 0
+ 549 260 544 275 533 293 c 0
+ 521 312 498 336 449 346 c 1
+ 449 239 l 2
+ 449 211 427 189 399 189 c 0
+ 371 189 349 211 349 239 c 2
+ 349 561 l 2
+ 349 589 371 611 399 611 c 0
+ 427 611 449 589 449 561 c 2
+ 449 454 l 1
+ 498 464 521 488 533 507 c 0
+ 545 525 551 540 551 561 c 0
+ 551 588 574 611 601 611 c 0
+ 629 611 651 589 651 561 c 2
+ 651 561 l 1
+ 651 561 l 2
+ 651 494 613 434 569 400 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("kepeken", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kepeken", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-204 736 m 1
- 175 736 l 1
- 175 716 l 1
- 204 716 l 1
- 204 736 l 1
-304 716 m 1
- 333 716 l 1
- 333 736 l 1
- 304 736 l 1
- 304 716 l 1
-46 543 m 0
- 46 570 70 593 96 593 c 0
- 105 593 114 590 122 585 c 1
- 131 597 143 608 156 616 c 1
- 125 616 l 2
- 97 616 75 638 75 666 c 2
- 75 786 l 2
- 75 814 97 836 125 836 c 2
- 383 836 l 2
- 411 836 433 814 433 786 c 2
- 433 666 l 2
- 433 638 411 616 383 616 c 2
- 353 616 l 1
- 383 596 409 563 409 520 c 2
- 409 494 l 2
- 409 466 387 444 359 444 c 0
- 331 444 309 466 309 494 c 2
- 309 520 l 2
- 309 524 305 527 300 531 c 0
- 291 538 274 544 254 544 c 0
- 229 544 209 536 201 523 c 0
- 200 521 200 520 200 520 c 2
- 200 494 l 2
- 200 468 180 444 150 444 c 0
- 138 444 125 448 116 457 c 2
- 63 506 l 2
- 52 516 46 529 46 543 c 0"#,
+454 486 m 1
+ 425 486 l 1
+ 425 466 l 1
+ 454 466 l 1
+ 454 486 l 1
+554 466 m 1
+ 583 466 l 1
+ 583 486 l 1
+ 554 486 l 1
+ 554 466 l 1
+296 293 m 0
+ 296 320 320 343 346 343 c 0
+ 355 343 364 340 372 335 c 1
+ 381 347 393 358 406 366 c 1
+ 375 366 l 2
+ 347 366 325 388 325 416 c 2
+ 325 536 l 2
+ 325 564 347 586 375 586 c 2
+ 633 586 l 2
+ 661 586 683 564 683 536 c 2
+ 683 416 l 2
+ 683 388 661 366 633 366 c 2
+ 603 366 l 1
+ 633 346 659 313 659 270 c 2
+ 659 244 l 2
+ 659 216 637 194 609 194 c 0
+ 581 194 559 216 559 244 c 2
+ 559 270 l 2
+ 559 274 555 277 550 281 c 0
+ 541 288 524 294 504 294 c 0
+ 479 294 459 286 451 273 c 0
+ 450 271 450 270 450 270 c 2
+ 450 244 l 2
+ 450 218 430 194 400 194 c 0
+ 388 194 375 198 366 207 c 2
+ 313 256 l 2
+ 302 266 296 279 296 293 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kili", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kili", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-170 679 m 0
- 166 684 155 693 132 694 c 1
- 129 688 122 672 122 636 c 0
- 122 564 178 508 250 508 c 0
- 322 508 379 564 379 636 c 0
- 379 672 371 687 368 692 c 1
- 347 691 338 690 330 679 c 0
- 311 654 281 639 250 639 c 0
- 219 639 189 654 170 679 c 0
-173 840 m 0
- 173 867 196 890 223 890 c 0
- 256 890 274 859 286 832 c 0
- 292 818 298 800 300 779 c 1
- 320 788 345 792 371 792 c 0
- 423 792 479 751 479 636 c 0
- 479 509 377 408 250 408 c 0
- 123 408 22 509 22 636 c 0
- 22 753 78 794 128 794 c 0
- 154 794 178 788 198 779 c 1
- 192 802 173 815 173 840 c 0"#,
+420 429 m 0
+ 416 434 405 443 382 444 c 1
+ 379 438 372 422 372 386 c 0
+ 372 314 428 258 500 258 c 0
+ 572 258 629 314 629 386 c 0
+ 629 422 621 437 618 442 c 1
+ 597 441 588 440 580 429 c 0
+ 561 404 531 389 500 389 c 0
+ 469 389 439 404 420 429 c 0
+423 590 m 0
+ 423 617 446 640 473 640 c 0
+ 506 640 524 609 536 582 c 0
+ 542 568 548 550 550 529 c 1
+ 570 538 595 542 621 542 c 0
+ 673 542 729 501 729 386 c 0
+ 729 259 627 158 500 158 c 0
+ 373 158 272 259 272 386 c 0
+ 272 503 328 544 378 544 c 0
+ 404 544 428 538 448 529 c 1
+ 442 552 423 565 423 590 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kiwen", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kiwen", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-369 700 m 1
- 334 752 l 1
- 166 752 l 1
- 131 700 l 1
- 250 543 l 1
- 369 700 l 1
-210 430 m 2
- 30 668 l 2
- 23 677 20 688 20 699 c 0
- 20 709 22 718 28 726 c 2
- 97 830 l 2
- 106 844 122 852 139 852 c 2
- 361 852 l 2
- 378 852 394 844 403 830 c 2
- 472 726 l 2
- 478 718 480 709 480 699 c 0
- 480 688 477 677 470 668 c 2
+619 450 m 1
+ 584 502 l 1
+ 416 502 l 1
+ 381 450 l 1
+ 500 293 l 1
+ 619 450 l 1
+460 180 m 2
+ 280 418 l 2
+ 273 427 270 438 270 449 c 0
+ 270 459 272 468 278 476 c 2
+ 347 580 l 2
+ 356 594 372 602 389 602 c 2
+ 611 602 l 2
+ 628 602 644 594 653 580 c 2
+ 722 476 l 2
+ 728 468 730 459 730 449 c 0
+ 730 438 727 427 720 418 c 2
+ 540 180 l 2
+ 531 167 516 160 500 160 c 0
+ 484 160 469 167 460 180 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("ko", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+579 459 m 0
+ 554 459 529 478 529 509 c 0
+ 529 526 515 539 500 539 c 0
+ 485 539 473 527 472 511 c 0
+ 473 479 447 459 422 459 c 0
+ 414 459 406 463 398 463 c 0
+ 384 463 368 451 368 433 c 0
+ 368 420 376 409 388 405 c 0
+ 409 398 423 378 423 357 c 0
+ 423 344 418 333 412 325 c 0
+ 409 320 407 315 407 310 c 0
+ 407 295 419 281 436 281 c 0
+ 445 281 454 285 460 293 c 0
+ 470 306 485 314 500 314 c 0
+ 516 314 531 307 541 293 c 0
+ 547 285 555 281 564 281 c 0
+ 581 281 593 295 593 310 c 0
+ 593 323 583 332 580 342 c 0
+ 578 347 578 352 578 357 c 0
+ 578 378 592 398 613 405 c 0
+ 625 409 633 420 633 433 c 0
+ 633 451 617 463 603 463 c 0
+ 595 463 587 459 579 459 c 0
+618 562 m 1
+ 677 555 732 508 732 434 c 0
+ 732 397 717 362 690 337 c 1
+ 692 328 693 320 693 311 c 0
+ 693 271 675 231 640 205 c 0
+ 617 188 590 180 564 180 c 0
+ 542 180 520 186 500 197 c 1
+ 480 186 459 180 437 180 c 0
+ 411 180 384 188 361 205 c 0
+ 326 231 308 271 308 311 c 0
+ 308 320 309 328 311 337 c 1
+ 284 362 269 397 269 434 c 0
+ 269 508 324 555 383 562 c 1
+ 403 607 447 639 500 639 c 0
+ 553 639 598 607 618 562 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("kon", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+442 630 m 0
+ 468 630 492 610 492 580 c 0
+ 492 557 476 536 452 531 c 0
+ 433 527 425 524 419 521 c 0
+ 413 518 405 504 411 492 c 0
+ 416 483 428 469 444 452 c 0
+ 468 426 503 390 503 339 c 0
+ 503 289 474 252 443 234 c 0
+ 421 221 399 215 381 211 c 0
+ 377 210 373 210 369 210 c 0
+ 344 210 319 230 319 260 c 0
+ 319 283 335 303 358 309 c 0
+ 386 316 396 314 402 333 c 0
+ 405 341 404 341 400 348 c 0
+ 395 357 383 371 367 388 c 0
+ 343 414 308 449 308 500 c 0
+ 308 550 336 588 367 607 c 0
+ 389 620 413 625 431 629 c 0
+ 434 630 439 630 442 630 c 0
+632 590 m 0
+ 658 590 682 570 682 540 c 0
+ 682 517 666 496 642 491 c 0
+ 623 487 615 484 609 481 c 0
+ 603 478 595 464 601 452 c 0
+ 606 443 618 429 634 412 c 0
+ 658 386 693 350 693 299 c 0
+ 693 249 664 212 633 194 c 0
+ 611 181 589 175 571 171 c 0
+ 567 170 563 170 559 170 c 0
+ 534 170 509 190 509 220 c 0
+ 509 243 525 263 548 269 c 0
+ 576 276 586 274 592 293 c 0
+ 595 301 594 301 590 308 c 0
+ 585 317 573 331 557 348 c 0
+ 533 374 498 409 498 460 c 0
+ 498 510 526 548 557 567 c 0
+ 579 580 603 585 621 589 c 0
+ 624 590 629 590 632 590 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("kule", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+428 365 m 1
+ 422 355 l 1
+ 578 355 l 1
+ 572 365 l 1
+ 428 365 l 1
+515 465 m 1
+ 500 490 l 1
+ 485 465 l 1
+ 515 465 l 1
+335 255 m 2
+ 309 255 285 276 285 305 c 0
+ 285 314 288 322 292 330 c 2
+ 314 368 l 1
+ 295 375 281 393 281 415 c 0
+ 281 443 303 465 331 465 c 2
+ 370 465 l 1
+ 457 615 l 2
+ 466 630 482 640 500 640 c 0
+ 518 640 534 630 543 615 c 2
+ 630 465 l 1
+ 669 465 l 2
+ 697 465 719 443 719 415 c 0
+ 719 393 705 375 686 368 c 1
+ 708 330 l 2
+ 712 322 715 314 715 305 c 0
+ 715 276 691 255 665 255 c 2
+ 335 255 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("kulupu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+428 342 m 0
+ 428 362 411 379 391 379 c 0
+ 371 379 354 362 354 342 c 0
+ 354 322 371 305 391 305 c 0
+ 411 305 428 322 428 342 c 0
+609 305 m 0
+ 629 305 646 322 646 342 c 0
+ 646 362 629 379 609 379 c 0
+ 589 379 572 362 572 342 c 0
+ 572 322 589 305 609 305 c 0
+500 416 m 0
+ 490 416 481 418 472 420 c 1
+ 486 406 495 388 500 368 c 1
+ 505 388 514 406 528 420 c 1
+ 519 418 510 416 500 416 c 0
+500 491 m 0
+ 520 491 537 508 537 528 c 0
+ 537 548 520 565 500 565 c 0
+ 480 565 463 548 463 528 c 0
+ 463 508 480 491 500 491 c 0
+419 450 m 1
+ 400 470 388 498 388 528 c 0
+ 388 590 438 640 500 640 c 0
+ 562 640 612 590 612 528 c 0
+ 612 498 600 470 581 450 c 1
+ 590 452 599 454 609 454 c 0
+ 671 454 721 404 721 342 c 0
+ 721 280 671 230 609 230 c 0
+ 556 230 512 267 500 316 c 1
+ 488 267 444 230 391 230 c 0
+ 329 230 279 280 279 342 c 0
+ 279 404 329 454 391 454 c 0
+ 401 454 410 452 419 450 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("kute", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+430 174 m 0
+ 405 174 380 194 380 224 c 0
+ 380 243 391 262 410 270 c 0
+ 441 284 486 307 522 340 c 0
+ 558 373 581 412 581 458 c 0
+ 581 499 554 540 500 540 c 0
+ 481 540 460 526 441 497 c 0
+ 429 478 422 463 416 444 c 0
+ 416 444 l 0
+ 409 423 389 408 368 408 c 0
+ 338 408 318 433 318 458 c 0
+ 318 474 324 485 330 499 c 0
+ 336 513 345 532 358 552 c 0
+ 382 589 428 640 500 640 c 0
+ 621 640 681 541 681 458 c 0
+ 681 310 545 220 450 178 c 0
+ 443 175 437 174 430 174 c 0
+507 512 m 0
+ 537 512 557 487 557 462 c 0
+ 557 457 556 452 554 447 c 0
+ 536 391 507 343 454 309 c 0
+ 446 304 436 302 427 302 c 0
+ 402 302 377 322 377 351 c 0
+ 377 367 385 384 400 394 c 0
+ 429 412 446 437 459 477 c 0
+ 466 498 486 512 507 512 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("la", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+492 160 m 0
+ 467 160 442 180 442 210 c 0
+ 442 230 453 248 473 256 c 0
+ 511 271 537 339 537 400 c 0
+ 537 461 511 529 473 544 c 0
+ 453 552 442 570 442 590 c 0
+ 442 620 467 640 492 640 c 0
+ 498 640 505 638 511 636 c 0
+ 591 604 637 508 637 400 c 0
+ 637 292 591 196 511 164 c 0
+ 505 162 498 160 492 160 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lape", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+590 450 m 0
+ 562 450 540 428 540 400 c 0
+ 540 372 562 350 590 350 c 0
+ 618 350 640 372 640 400 c 0
+ 640 428 618 450 590 450 c 0
+590 550 m 0
+ 673 550 740 483 740 400 c 0
+ 740 317 673 250 590 250 c 0
+ 525 250 470 292 449 350 c 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 449 450 l 1
+ 470 508 525 550 590 550 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("laso", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 343 m 1
+ 474 300 l 1
+ 526 300 l 1
+ 500 343 l 1
+308 540 m 0
+ 308 568 331 590 358 590 c 0
+ 359 590 360 590 361 590 c 2
+ 361 590 l 2
+ 379 589 390 587 410 583 c 0
+ 434 578 474 567 500 540 c 1
+ 526 567 566 578 590 583 c 0
+ 610 587 621 589 639 590 c 2
+ 640 590 l 0
+ 641 590 641 590 642 590 c 0
+ 669 590 692 568 692 540 c 0
+ 692 521 687 509 682 491 c 0
+ 676 471 664 439 642 416 c 0
+ 627 401 609 392 591 385 c 1
+ 658 276 l 2
+ 663 268 666 259 666 250 c 0
+ 666 221 642 200 616 200 c 2
+ 384 200 l 2
+ 358 200 334 221 334 250 c 0
+ 334 259 336 268 341 276 c 2
+ 409 385 l 1
+ 391 392 373 402 358 417 c 0
+ 336 440 324 472 318 492 c 0
+ 312 510 308 521 308 540 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lawa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+363 414 m 1
+ 363 409 362 405 362 400 c 0
+ 362 323 414 275 462 275 c 0
+ 510 275 562 323 562 400 c 0
+ 562 405 562 409 562 414 c 1
+ 363 414 l 1
+422 514 m 1
+ 502 514 l 1
+ 489 521 476 525 462 525 c 0
+ 448 525 435 521 422 514 c 1
+662 414 m 1
+ 662 409 662 405 662 400 c 0
+ 662 283 579 175 462 175 c 0
+ 345 175 262 283 262 400 c 0
+ 262 517 345 625 462 625 c 0
+ 539 625 600 579 634 514 c 1
+ 679 514 l 2
+ 707 514 729 492 729 464 c 0
+ 729 436 707 414 679 414 c 2
+ 662 414 l 1"#,
+),
+GlyphDescriptor::new_with_anchor("len", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 381 m 0
+ 500 381 l 2
+ 568 381 l 1
+ 568 498 l 1
+ 432 498 l 1
+ 432 381 l 1
+ 500 381 l 2
+ 500 381 l 0
+ 500 381 l 0
+382 598 m 2
+ 618 598 l 2
+ 646 598 668 576 668 548 c 2
+ 668 253 l 2
+ 668 225 646 203 618 203 c 0
+ 590 203 568 225 568 253 c 2
+ 568 281 l 1
+ 550 281 l 1
+ 550 253 l 2
+ 550 225 528 203 500 203 c 0
+ 472 203 450 225 450 253 c 2
+ 450 281 l 1
+ 432 281 l 1
+ 432 253 l 2
+ 432 225 410 203 382 203 c 0
+ 354 203 332 225 332 253 c 2
+ 332 548 l 2
+ 332 576 354 598 382 598 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("lete", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+595 615 m 0
+ 624 615 645 590 645 565 c 0
+ 645 557 643 548 638 540 c 2
+ 586 450 l 1
+ 690 450 l 2
+ 718 450 740 428 740 400 c 0
+ 740 372 718 350 690 350 c 2
+ 586 350 l 1
+ 638 260 l 2
+ 643 252 645 243 645 235 c 0
+ 645 210 625 185 595 185 c 0
+ 578 185 561 194 552 210 c 2
+ 500 300 l 1
+ 448 210 l 2
+ 439 194 422 185 405 185 c 0
+ 376 185 355 210 355 235 c 0
+ 355 243 357 252 362 260 c 2
+ 414 350 l 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 414 450 l 1
+ 362 540 l 2
+ 357 548 355 557 355 565 c 0
+ 355 590 375 615 405 615 c 0
+ 422 615 439 606 448 590 c 2
+ 500 500 l 1
+ 552 590 l 2
+ 561 606 578 615 595 615 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("li", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+380 575 m 0
+ 380 603 404 625 430 625 c 0
+ 442 625 454 621 463 613 c 2
+ 663 438 l 2
+ 674 429 680 414 680 400 c 0
+ 680 386 674 371 663 362 c 2
+ 463 187 l 2
+ 454 179 442 175 430 175 c 0
+ 404 175 380 197 380 225 c 0
+ 380 239 386 253 397 263 c 2
+ 554 400 l 1
+ 397 537 l 2
+ 386 547 380 561 380 575 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lili", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+590 510 m 0
+ 618 510 640 486 640 460 c 0
+ 640 450 637 439 630 430 c 2
+ 540 310 l 2
+ 531 297 516 290 500 290 c 0
+ 484 290 469 297 460 310 c 2
+ 370 430 l 2
+ 363 439 360 450 360 460 c 0
+ 360 486 382 510 410 510 c 0
+ 425 510 440 503 450 490 c 2
+ 500 423 l 1
+ 550 490 l 2
+ 560 503 575 510 590 510 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("linja", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+735 347 m 0
+ 735 322 715 298 685 298 c 0
+ 663 298 643 313 637 335 c 0
+ 628 368 626 420 588 420 c 0
+ 573 420 556 410 548 385 c 0
+ 529 324 474 280 413 280 c 0
+ 350 280 308 323 290 362 c 0
+ 279 387 274 414 267 440 c 0
+ 266 444 265 449 265 453 c 0
+ 265 478 285 503 315 503 c 0
+ 337 503 357 487 363 465 c 0
+ 372 432 374 380 412 380 c 0
+ 427 380 444 390 452 415 c 0
+ 471 476 526 520 587 520 c 0
+ 650 520 692 478 710 439 c 0
+ 721 414 726 386 733 360 c 0
+ 734 356 735 351 735 347 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lipu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+426 495 m 1
+ 426 305 l 1
+ 574 305 l 1
+ 574 495 l 1
+ 426 495 l 1
+326 545 m 2
+ 326 573 348 595 376 595 c 2
+ 624 595 l 2
+ 652 595 674 573 674 545 c 2
+ 674 255 l 2
+ 674 227 652 205 624 205 c 2
+ 376 205 l 2
+ 348 205 326 227 326 255 c 2
+ 326 545 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("loje", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 329 m 1
+ 479 292 l 1
+ 521 292 l 1
+ 500 329 l 1
+500 482 m 0
+ 516 482 532 490 544 504 c 1
+ 456 504 l 1
+ 468 490 484 482 500 482 c 0
+394 192 m 2
+ 368 192 344 213 344 242 c 0
+ 344 250 346 258 350 266 c 2
+ 426 401 l 1
+ 373 430 339 490 339 554 c 0
+ 339 582 361 604 389 604 c 2
+ 611 604 l 2
+ 639 604 661 582 661 554 c 0
+ 661 490 627 430 574 401 c 1
+ 650 266 l 2
+ 654 258 656 250 656 242 c 0
+ 656 213 632 192 606 192 c 2
+ 394 192 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("lon", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+550 491 m 0
+ 550 463 528 441 500 441 c 0
+ 472 441 450 463 450 491 c 0
+ 450 519 472 541 500 541 c 0
+ 528 541 550 519 550 491 c 0
+267 349 m 0
+ 267 377 289 399 317 399 c 2
+ 683 400 l 2
+ 711 400 733 378 733 350 c 0
+ 733 322 711 300 683 300 c 2
+ 317 299 l 2
+ 289 299 267 321 267 349 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("luka", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+261 422 m 0
+ 261 447 281 472 311 472 c 0
+ 325 472 338 466 348 455 c 1
+ 354 502 368 542 391 573 c 0
+ 424 618 470 638 520 638 c 0
+ 570 638 616 618 649 573 c 0
+ 680 530 695 471 695 397 c 2
+ 695 276 l 2
+ 695 248 673 226 645 226 c 0
+ 617 226 595 248 595 276 c 2
+ 595 397 l 2
+ 595 459 582 495 568 514 c 0
+ 555 531 540 538 520 538 c 0
+ 500 538 485 531 472 514 c 0
+ 458 495 445 459 445 397 c 2
+ 445 276 l 2
+ 445 250 424 226 394 226 c 0
+ 376 226 360 235 351 251 c 2
+ 268 397 l 2
+ 264 405 261 414 261 422 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lukin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 326 m 0
+ 555 326 614 356 640 400 c 1
+ 614 444 555 474 500 474 c 0
+ 445 474 386 444 360 400 c 1
+ 386 356 445 326 500 326 c 0
+274 451 m 0
+ 321 530 415 574 500 574 c 0
+ 585 574 679 530 726 451 c 0
+ 735 435 740 418 740 400 c 0
+ 740 382 735 365 726 349 c 0
+ 679 270 585 226 500 226 c 0
+ 415 226 321 270 274 349 c 0
+ 265 365 260 382 260 400 c 0
+ 260 418 265 435 274 451 c 0
+500 350 m 0
+ 472 350 450 372 450 400 c 0
+ 450 428 472 450 500 450 c 0
+ 528 450 550 428 550 400 c 0
+ 550 372 528 350 500 350 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lupa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 260 m 0
+ 541 260 587 302 587 370 c 2
+ 587 530 l 2
+ 587 558 609 580 637 580 c 0
+ 665 580 687 558 687 530 c 2
+ 687 370 l 2
+ 687 262 610 160 500 160 c 0
+ 390 160 313 262 313 370 c 2
+ 313 530 l 2
+ 313 558 335 580 363 580 c 0
+ 391 580 413 558 413 530 c 2
+ 413 370 l 2
+ 413 302 459 260 500 260 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("ma", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+450 531 m 1
+ 413 517 383 487 369 450 c 1
+ 450 450 l 1
+ 450 531 l 1
+550 450 m 1
+ 631 450 l 1
+ 617 487 587 517 550 531 c 1
+ 550 450 l 1
+450 269 m 1
+ 450 350 l 1
+ 369 350 l 1
+ 383 313 413 283 450 269 c 1
+550 269 m 1
+ 587 283 617 313 631 350 c 1
+ 550 350 l 1
+ 550 269 l 1
+500 160 m 0
+ 367 160 260 267 260 400 c 0
+ 260 533 367 640 500 640 c 0
+ 633 640 740 533 740 400 c 0
+ 740 267 633 160 500 160 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("mama", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 279 m 0
+ 495 279 491 274 491 269 c 0
+ 491 264 495 260 500 260 c 0
+ 505 260 510 264 510 269 c 0
+ 510 274 505 279 500 279 c 0
+384 459 m 0
+ 384 425 424 379 500 379 c 0
+ 576 379 616 425 616 459 c 0
+ 616 493 576 540 500 540 c 0
+ 424 540 384 493 384 459 c 0
+605 301 m 1
+ 608 291 610 280 610 269 c 0
+ 610 209 560 160 500 160 c 0
+ 440 160 391 209 391 269 c 0
+ 391 280 393 291 396 301 c 1
+ 332 330 284 386 284 459 c 0
+ 284 569 392 640 500 640 c 0
+ 608 640 716 569 716 459 c 0
+ 716 386 669 330 605 301 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("mani", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+581 343 m 0
+ 581 388 545 424 500 424 c 0
+ 455 424 419 388 419 343 c 0
+ 419 298 455 262 500 262 c 0
+ 545 262 581 298 581 343 c 0
+300 512 m 0
+ 300 537 320 562 350 562 c 0
+ 372 562 392 548 398 525 c 0
+ 402 509 404 508 415 503 c 1
+ 440 516 469 524 500 524 c 0
+ 531 524 560 516 585 503 c 1
+ 596 508 598 509 602 525 c 0
+ 608 548 628 562 650 562 c 0
+ 680 562 700 537 700 512 c 0
+ 700 508 699 503 698 499 c 0
+ 691 474 679 450 658 432 c 1
+ 673 406 681 375 681 343 c 0
+ 681 243 600 162 500 162 c 0
+ 400 162 319 243 319 343 c 0
+ 319 375 327 406 342 432 c 1
+ 321 450 309 474 302 499 c 0
+ 301 503 300 508 300 512 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("meli", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+412 430 m 0
+ 412 478 452 518 500 518 c 0
+ 548 518 588 478 588 430 c 0
+ 588 382 548 342 500 342 c 0
+ 452 342 412 382 412 430 c 0
+500 442 m 0
+ 493 442 488 437 488 430 c 0
+ 488 423 493 418 500 418 c 0
+ 507 418 512 423 512 430 c 0
+ 512 437 507 442 500 442 c 0
+500 540 m 0
+ 439 540 390 491 390 430 c 2
+ 390 300 l 2
+ 390 272 368 250 340 250 c 0
+ 312 250 290 272 290 300 c 2
  290 430 l 2
- 281 417 266 410 250 410 c 0
- 234 410 219 417 210 430 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("ko", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-329 709 m 0
- 304 709 279 728 279 759 c 0
- 279 776 265 789 250 789 c 0
- 235 789 223 777 222 761 c 0
- 223 729 197 709 172 709 c 0
- 164 709 156 713 148 713 c 0
- 134 713 118 701 118 683 c 0
- 118 670 126 659 138 655 c 0
- 159 648 173 628 173 607 c 0
- 173 594 168 583 162 575 c 0
- 159 570 157 565 157 560 c 0
- 157 545 169 531 186 531 c 0
- 195 531 204 535 210 543 c 0
- 220 556 235 564 250 564 c 0
- 266 564 281 557 291 543 c 0
- 297 535 305 531 314 531 c 0
- 331 531 343 545 343 560 c 0
- 343 573 333 582 330 592 c 0
- 328 597 328 602 328 607 c 0
- 328 628 342 648 363 655 c 0
- 375 659 383 670 383 683 c 0
- 383 701 367 713 353 713 c 0
- 345 713 337 709 329 709 c 0
-368 812 m 1
- 427 805 482 758 482 684 c 0
- 482 647 467 612 440 587 c 1
- 442 578 443 570 443 561 c 0
- 443 521 425 481 390 455 c 0
- 367 438 340 430 314 430 c 0
- 292 430 270 436 250 447 c 1
- 230 436 209 430 187 430 c 0
- 161 430 134 438 111 455 c 0
- 76 481 58 521 58 561 c 0
- 58 570 59 578 61 587 c 1
- 34 612 19 647 19 684 c 0
- 19 758 74 805 133 812 c 1
- 153 857 197 889 250 889 c 0
- 303 889 348 857 368 812 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("kon", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-192 880 m 0
- 218 880 242 860 242 830 c 0
- 242 807 226 786 202 781 c 0
- 183 777 175 774 169 771 c 0
- 163 768 155 754 161 742 c 0
- 166 733 178 719 194 702 c 0
- 218 676 253 640 253 589 c 0
- 253 539 224 502 193 484 c 0
- 171 471 149 465 131 461 c 0
- 127 460 123 460 119 460 c 0
- 94 460 69 480 69 510 c 0
- 69 533 85 553 108 559 c 0
- 136 566 146 564 152 583 c 0
- 155 591 154 591 150 598 c 0
- 145 607 133 621 117 638 c 0
- 93 664 58 699 58 750 c 0
- 58 800 86 838 117 857 c 0
- 139 870 163 875 181 879 c 0
- 184 880 189 880 192 880 c 0
-382 840 m 0
- 408 840 432 820 432 790 c 0
- 432 767 416 746 392 741 c 0
- 373 737 365 734 359 731 c 0
- 353 728 345 714 351 702 c 0
- 356 693 368 679 384 662 c 0
- 408 636 443 600 443 549 c 0
- 443 499 414 462 383 444 c 0
- 361 431 339 425 321 421 c 0
- 317 420 313 420 309 420 c 0
- 284 420 259 440 259 470 c 0
- 259 493 275 513 298 519 c 0
- 326 526 336 524 342 543 c 0
- 345 551 344 551 340 558 c 0
- 335 567 323 581 307 598 c 0
- 283 624 248 659 248 710 c 0
- 248 760 276 798 307 817 c 0
- 329 830 353 835 371 839 c 0
- 374 840 379 840 382 840 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("kule", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-178 615 m 1
- 172 605 l 1
- 328 605 l 1
- 322 615 l 1
- 178 615 l 1
-265 715 m 1
- 250 740 l 1
- 235 715 l 1
- 265 715 l 1
-85 505 m 2
- 59 505 35 526 35 555 c 0
- 35 564 38 572 42 580 c 2
- 64 618 l 1
- 45 625 31 643 31 665 c 0
- 31 693 53 715 81 715 c 2
- 120 715 l 1
- 207 865 l 2
- 216 880 232 890 250 890 c 0
- 268 890 284 880 293 865 c 2
- 380 715 l 1
- 419 715 l 2
- 447 715 469 693 469 665 c 0
- 469 643 455 625 436 618 c 1
- 458 580 l 2
- 462 572 465 564 465 555 c 0
- 465 526 441 505 415 505 c 2
- 85 505 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("kulupu", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-178 592 m 0
- 178 612 161 629 141 629 c 0
- 121 629 104 612 104 592 c 0
- 104 572 121 555 141 555 c 0
- 161 555 178 572 178 592 c 0
-359 555 m 0
- 379 555 396 572 396 592 c 0
- 396 612 379 629 359 629 c 0
- 339 629 322 612 322 592 c 0
- 322 572 339 555 359 555 c 0
-250 666 m 0
- 240 666 231 668 222 670 c 1
- 236 656 245 638 250 618 c 1
- 255 638 264 656 278 670 c 1
- 269 668 260 666 250 666 c 0
-250 741 m 0
- 270 741 287 758 287 778 c 0
- 287 798 270 815 250 815 c 0
- 230 815 213 798 213 778 c 0
- 213 758 230 741 250 741 c 0
-169 700 m 1
- 150 720 138 748 138 778 c 0
- 138 840 188 890 250 890 c 0
- 312 890 362 840 362 778 c 0
- 362 748 350 720 331 700 c 1
- 340 702 349 704 359 704 c 0
- 421 704 471 654 471 592 c 0
- 471 530 421 480 359 480 c 0
- 306 480 262 517 250 566 c 1
- 238 517 194 480 141 480 c 0
- 79 480 29 530 29 592 c 0
- 29 654 79 704 141 704 c 0
- 151 704 160 702 169 700 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("kute", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-180 424 m 0
- 155 424 130 444 130 474 c 0
- 130 493 141 512 160 520 c 0
- 191 534 236 557 272 590 c 0
- 308 623 331 662 331 708 c 0
- 331 749 304 790 250 790 c 0
- 231 790 210 776 191 747 c 0
- 179 728 172 713 166 694 c 0
- 166 694 l 0
- 159 673 139 658 118 658 c 0
- 88 658 68 683 68 708 c 0
- 68 724 74 735 80 749 c 0
- 86 763 95 782 108 802 c 0
- 132 839 178 890 250 890 c 0
- 371 890 431 791 431 708 c 0
- 431 560 295 470 200 428 c 0
- 193 425 187 424 180 424 c 0
-257 762 m 0
- 287 762 307 737 307 712 c 0
- 307 707 306 702 304 697 c 0
- 286 641 257 593 204 559 c 0
- 196 554 186 552 177 552 c 0
- 152 552 127 572 127 601 c 0
- 127 617 135 634 150 644 c 0
- 179 662 196 687 209 727 c 0
- 216 748 236 762 257 762 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("la", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-242 410 m 0
- 217 410 192 430 192 460 c 0
- 192 480 203 498 223 506 c 0
- 261 521 287 589 287 650 c 0
- 287 711 261 779 223 794 c 0
- 203 802 192 820 192 840 c 0
- 192 870 217 890 242 890 c 0
- 248 890 255 888 261 886 c 0
- 341 854 387 758 387 650 c 0
- 387 542 341 446 261 414 c 0
- 255 412 248 410 242 410 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lape", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-340 700 m 0
- 312 700 290 678 290 650 c 0
- 290 622 312 600 340 600 c 0
- 368 600 390 622 390 650 c 0
- 390 678 368 700 340 700 c 0
-340 800 m 0
- 423 800 490 733 490 650 c 0
- 490 567 423 500 340 500 c 0
- 275 500 220 542 199 600 c 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 199 700 l 1
- 220 758 275 800 340 800 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("laso", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 593 m 1
- 224 550 l 1
- 276 550 l 1
- 250 593 l 1
-58 790 m 0
- 58 818 81 840 108 840 c 0
- 109 840 110 840 111 840 c 2
- 111 840 l 2
- 129 839 140 837 160 833 c 0
- 184 828 224 817 250 790 c 1
- 276 817 316 828 340 833 c 0
- 360 837 371 839 389 840 c 2
- 390 840 l 0
- 391 840 391 840 392 840 c 0
- 419 840 442 818 442 790 c 0
- 442 771 437 759 432 741 c 0
- 426 721 414 689 392 666 c 0
- 377 651 359 642 341 635 c 1
- 408 526 l 2
- 413 518 416 509 416 500 c 0
- 416 471 392 450 366 450 c 2
- 134 450 l 2
- 108 450 84 471 84 500 c 0
- 84 509 86 518 91 526 c 2
- 159 635 l 1
- 141 642 123 652 108 667 c 0
- 86 690 74 722 68 742 c 0
- 62 760 58 771 58 790 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lawa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-113 664 m 1
- 113 659 112 655 112 650 c 0
- 112 573 164 525 212 525 c 0
- 260 525 312 573 312 650 c 0
- 312 655 312 659 312 664 c 1
- 113 664 l 1
-172 764 m 1
- 252 764 l 1
- 239 771 226 775 212 775 c 0
- 198 775 185 771 172 764 c 1
-412 664 m 1
- 412 659 412 655 412 650 c 0
- 412 533 329 425 212 425 c 0
- 95 425 12 533 12 650 c 0
- 12 767 95 875 212 875 c 0
- 289 875 350 829 384 764 c 1
- 429 764 l 2
- 457 764 479 742 479 714 c 0
- 479 686 457 664 429 664 c 2
- 412 664 l 1"#,
-),
-GlyphDescriptor::new_with_anchor("len", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 631 m 0
- 250 631 l 2
- 318 631 l 1
- 318 748 l 1
- 182 748 l 1
- 182 631 l 1
- 250 631 l 2
- 250 631 l 0
- 250 631 l 0
-132 848 m 2
- 368 848 l 2
- 396 848 418 826 418 798 c 2
- 418 503 l 2
- 418 475 396 453 368 453 c 0
- 340 453 318 475 318 503 c 2
- 318 531 l 1
- 300 531 l 1
- 300 503 l 2
- 300 475 278 453 250 453 c 0
- 222 453 200 475 200 503 c 2
- 200 531 l 1
- 182 531 l 1
- 182 503 l 2
- 182 475 160 453 132 453 c 0
- 104 453 82 475 82 503 c 2
- 82 798 l 2
- 82 826 104 848 132 848 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("lete", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-345 865 m 0
- 374 865 395 840 395 815 c 0
- 395 807 393 798 388 790 c 2
- 336 700 l 1
- 440 700 l 2
- 468 700 490 678 490 650 c 0
- 490 622 468 600 440 600 c 2
- 336 600 l 1
- 388 510 l 2
- 393 502 395 493 395 485 c 0
- 395 460 375 435 345 435 c 0
- 328 435 311 444 302 460 c 2
- 250 550 l 1
- 198 460 l 2
- 189 444 172 435 155 435 c 0
- 126 435 105 460 105 485 c 0
- 105 493 107 502 112 510 c 2
- 164 600 l 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 164 700 l 1
- 112 790 l 2
- 107 798 105 807 105 815 c 0
- 105 840 125 865 155 865 c 0
- 172 865 189 856 198 840 c 2
- 250 750 l 1
- 302 840 l 2
- 311 856 328 865 345 865 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("li", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-130 825 m 0
- 130 853 154 875 180 875 c 0
- 192 875 204 871 213 863 c 2
- 413 688 l 2
- 424 679 430 664 430 650 c 0
- 430 636 424 621 413 612 c 2
- 213 437 l 2
- 204 429 192 425 180 425 c 0
- 154 425 130 447 130 475 c 0
- 130 489 136 503 147 513 c 2
- 304 650 l 1
- 147 787 l 2
- 136 797 130 811 130 825 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lili", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-340 760 m 0
- 368 760 390 736 390 710 c 0
- 390 700 387 689 380 680 c 2
- 290 560 l 2
- 281 547 266 540 250 540 c 0
- 234 540 219 547 210 560 c 2
- 120 680 l 2
- 113 689 110 700 110 710 c 0
- 110 736 132 760 160 760 c 0
- 175 760 190 753 200 740 c 2
- 250 673 l 1
- 300 740 l 2
- 310 753 325 760 340 760 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("linja", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-485 597 m 0
- 485 572 465 548 435 548 c 0
- 413 548 393 563 387 585 c 0
- 378 618 376 670 338 670 c 0
- 323 670 306 660 298 635 c 0
- 279 574 224 530 163 530 c 0
- 100 530 58 573 40 612 c 0
- 29 637 24 664 17 690 c 0
- 16 694 15 699 15 703 c 0
- 15 728 35 753 65 753 c 0
- 87 753 107 737 113 715 c 0
- 122 682 124 630 162 630 c 0
- 177 630 194 640 202 665 c 0
- 221 726 276 770 337 770 c 0
- 400 770 442 728 460 689 c 0
- 471 664 476 636 483 610 c 0
- 484 606 485 601 485 597 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lipu", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-176 745 m 1
- 176 555 l 1
- 324 555 l 1
- 324 745 l 1
- 176 745 l 1
-76 795 m 2
- 76 823 98 845 126 845 c 2
- 374 845 l 2
- 402 845 424 823 424 795 c 2
- 424 505 l 2
- 424 477 402 455 374 455 c 2
- 126 455 l 2
- 98 455 76 477 76 505 c 2
- 76 795 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("loje", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 579 m 1
- 229 542 l 1
- 271 542 l 1
- 250 579 l 1
-250 732 m 0
- 266 732 282 740 294 754 c 1
- 206 754 l 1
- 218 740 234 732 250 732 c 0
-144 442 m 2
- 118 442 94 463 94 492 c 0
- 94 500 96 508 100 516 c 2
- 176 651 l 1
- 123 680 89 740 89 804 c 0
- 89 832 111 854 139 854 c 2
- 361 854 l 2
- 389 854 411 832 411 804 c 0
- 411 740 377 680 324 651 c 1
- 400 516 l 2
- 404 508 406 500 406 492 c 0
- 406 463 382 442 356 442 c 2
- 144 442 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("lon", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-300 741 m 0
- 300 713 278 691 250 691 c 0
- 222 691 200 713 200 741 c 0
- 200 769 222 791 250 791 c 0
- 278 791 300 769 300 741 c 0
-17 599 m 0
- 17 627 39 649 67 649 c 2
- 433 650 l 2
- 461 650 483 628 483 600 c 0
- 483 572 461 550 433 550 c 2
- 67 549 l 2
- 39 549 17 571 17 599 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("luka", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-11 672 m 0
- 11 697 31 722 61 722 c 0
- 75 722 88 716 98 705 c 1
- 104 752 118 792 141 823 c 0
- 174 868 220 888 270 888 c 0
- 320 888 366 868 399 823 c 0
- 430 780 445 721 445 647 c 2
- 445 526 l 2
- 445 498 423 476 395 476 c 0
- 367 476 345 498 345 526 c 2
- 345 647 l 2
- 345 709 332 745 318 764 c 0
- 305 781 290 788 270 788 c 0
- 250 788 235 781 222 764 c 0
- 208 745 195 709 195 647 c 2
- 195 526 l 2
- 195 500 174 476 144 476 c 0
- 126 476 110 485 101 501 c 2
- 18 647 l 2
- 14 655 11 664 11 672 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lukin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 576 m 0
- 305 576 364 606 390 650 c 1
- 364 694 305 724 250 724 c 0
- 195 724 136 694 110 650 c 1
- 136 606 195 576 250 576 c 0
-24 701 m 0
- 71 780 165 824 250 824 c 0
- 335 824 429 780 476 701 c 0
- 485 685 490 668 490 650 c 0
- 490 632 485 615 476 599 c 0
- 429 520 335 476 250 476 c 0
- 165 476 71 520 24 599 c 0
- 15 615 10 632 10 650 c 0
- 10 668 15 685 24 701 c 0
-250 600 m 0
- 222 600 200 622 200 650 c 0
- 200 678 222 700 250 700 c 0
- 278 700 300 678 300 650 c 0
- 300 622 278 600 250 600 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lupa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 510 m 0
- 291 510 337 552 337 620 c 2
- 337 780 l 2
- 337 808 359 830 387 830 c 0
- 415 830 437 808 437 780 c 2
- 437 620 l 2
- 437 512 360 410 250 410 c 0
- 140 410 63 512 63 620 c 2
- 63 780 l 2
- 63 808 85 830 113 830 c 0
- 141 830 163 808 163 780 c 2
- 163 620 l 2
- 163 552 209 510 250 510 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("ma", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-200 781 m 1
- 163 767 133 737 119 700 c 1
- 200 700 l 1
- 200 781 l 1
-300 700 m 1
- 381 700 l 1
- 367 737 337 767 300 781 c 1
- 300 700 l 1
-200 519 m 1
- 200 600 l 1
- 119 600 l 1
- 133 563 163 533 200 519 c 1
-300 519 m 1
- 337 533 367 563 381 600 c 1
- 300 600 l 1
- 300 519 l 1
-250 410 m 0
- 117 410 10 517 10 650 c 0
- 10 783 117 890 250 890 c 0
- 383 890 490 783 490 650 c 0
- 490 517 383 410 250 410 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("mama", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 529 m 0
- 245 529 241 524 241 519 c 0
- 241 514 245 510 250 510 c 0
- 255 510 260 514 260 519 c 0
- 260 524 255 529 250 529 c 0
-134 709 m 0
- 134 675 174 629 250 629 c 0
- 326 629 366 675 366 709 c 0
- 366 743 326 790 250 790 c 0
- 174 790 134 743 134 709 c 0
-355 551 m 1
- 358 541 360 530 360 519 c 0
- 360 459 310 410 250 410 c 0
- 190 410 141 459 141 519 c 0
- 141 530 143 541 146 551 c 1
- 82 580 34 636 34 709 c 0
- 34 819 142 890 250 890 c 0
- 358 890 466 819 466 709 c 0
- 466 636 419 580 355 551 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("mani", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-331 593 m 0
- 331 638 295 674 250 674 c 0
- 205 674 169 638 169 593 c 0
- 169 548 205 512 250 512 c 0
- 295 512 331 548 331 593 c 0
-50 762 m 0
- 50 787 70 812 100 812 c 0
- 122 812 142 798 148 775 c 0
- 152 759 154 758 165 753 c 1
- 190 766 219 774 250 774 c 0
- 281 774 310 766 335 753 c 1
- 346 758 348 759 352 775 c 0
- 358 798 378 812 400 812 c 0
- 430 812 450 787 450 762 c 0
- 450 758 449 753 448 749 c 0
- 441 724 429 700 408 682 c 1
- 423 656 431 625 431 593 c 0
- 431 493 350 412 250 412 c 0
- 150 412 69 493 69 593 c 0
- 69 625 77 656 92 682 c 1
- 71 700 59 724 52 749 c 0
- 51 753 50 758 50 762 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("meli", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-162 680 m 0
- 162 728 202 768 250 768 c 0
- 298 768 338 728 338 680 c 0
- 338 632 298 592 250 592 c 0
- 202 592 162 632 162 680 c 0
-250 692 m 0
- 243 692 238 687 238 680 c 0
- 238 673 243 668 250 668 c 0
- 257 668 262 673 262 680 c 0
- 262 687 257 692 250 692 c 0
-250 790 m 0
- 189 790 140 741 140 680 c 2
- 140 550 l 2
- 140 522 118 500 90 500 c 0
- 62 500 40 522 40 550 c 2
- 40 680 l 2
- 40 796 134 890 250 890 c 0
- 366 890 460 796 460 680 c 2
- 460 550 l 2
- 460 522 438 500 410 500 c 0
- 382 500 360 522 360 550 c 2
- 360 680 l 2
- 360 741 311 790 250 790 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("mi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-290 750 m 0
- 290 772 272 790 250 790 c 0
- 228 790 210 772 210 750 c 0
- 210 728 228 710 250 710 c 0
- 272 710 290 728 290 750 c 0
-271 460 m 0
- 271 435 251 410 221 410 c 0
- 184 410 174 443 164 475 c 0
- 141 548 110 659 110 750 c 0
- 110 827 173 890 250 890 c 0
- 327 890 390 827 390 750 c 0
- 390 673 327 610 250 610 c 0
- 243 610 237 610 230 611 c 1
- 241 563 255 514 268 476 c 0
- 270 471 271 465 271 460 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("mije", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-176 716 m 0
- 176 675 209 642 250 642 c 0
- 291 642 324 675 324 716 c 0
- 324 757 291 790 250 790 c 0
- 209 790 176 757 176 716 c 0
-407 641 m 1
- 431 637 450 617 450 592 c 2
- 450 532 l 2
- 450 504 428 482 400 482 c 0
- 372 482 350 504 350 532 c 2
- 350 542 l 1
- 150 542 l 1
- 150 532 l 2
- 150 504 128 482 100 482 c 0
- 72 482 50 504 50 532 c 2
- 50 592 l 2
- 50 617 69 637 93 641 c 1
- 82 664 76 689 76 716 c 0
- 76 812 154 890 250 890 c 0
- 346 890 424 812 424 716 c 0
- 424 689 418 664 407 641 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("moku", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-249 739 m 0
- 261 739 275 746 286 760 c 1
- 211 760 l 1
- 222 746 237 739 249 739 c 0
-62 553 m 0
- 62 579 83 603 112 603 c 0
- 118 603 124 602 130 600 c 1
- 143 623 161 642 183 655 c 1
- 129 684 96 746 96 810 c 0
- 96 838 118 860 146 860 c 2
- 352 860 l 2
- 380 860 402 838 402 810 c 0
- 402 748 371 688 319 658 c 1
- 367 632 397 577 397 522 c 2
- 397 486 l 2
- 397 458 375 436 347 436 c 0
- 319 436 297 458 297 486 c 2
- 297 522 l 2
- 297 555 273 574 253 574 c 0
- 233 574 210 555 210 522 c 2
- 210 486 l 2
- 210 460 190 436 160 436 c 0
- 144 436 129 444 119 457 c 2
- 71 524 l 2
- 65 533 62 543 62 553 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("moli", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-390 650 m 0
- 390 727 327 790 250 790 c 0
- 173 790 110 727 110 650 c 0
- 110 573 173 510 250 510 c 0
- 327 510 390 573 390 650 c 0
-490 650 m 0
- 490 517 383 410 250 410 c 0
- 117 410 10 517 10 650 c 0
- 10 783 117 890 250 890 c 0
- 383 890 490 783 490 650 c 0
-270 675 m 0
- 270 688 282 700 295 700 c 0
- 301 700 308 698 313 693 c 2
- 320 685 l 1
- 327 693 l 2
- 332 698 339 700 345 700 c 0
- 358 700 370 688 370 675 c 0
- 370 669 368 662 363 657 c 2
- 355 650 l 1
- 363 643 l 2
- 368 638 370 631 370 625 c 0
- 370 612 358 600 345 600 c 0
- 339 600 332 602 327 607 c 2
- 320 615 l 1
- 313 607 l 2
- 308 602 301 600 295 600 c 0
- 282 600 270 612 270 625 c 0
- 270 631 272 638 277 643 c 2
- 285 650 l 1
- 277 657 l 2
- 272 662 270 669 270 675 c 0
-130 675 m 0
- 130 688 142 700 155 700 c 0
- 161 700 168 698 173 693 c 2
- 180 685 l 1
- 187 693 l 2
- 192 698 199 700 205 700 c 0
- 218 700 230 688 230 675 c 0
- 230 669 228 662 223 657 c 2
- 215 650 l 1
- 223 643 l 2
- 228 638 230 631 230 625 c 0
- 230 612 218 600 205 600 c 0
- 199 600 192 602 187 607 c 2
- 180 615 l 1
- 173 607 l 2
- 168 602 161 600 155 600 c 0
- 142 600 130 612 130 625 c 0
- 130 631 132 638 137 643 c 2
- 145 650 l 1
- 137 657 l 2
- 132 662 130 669 130 675 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("monsi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-60 600 m 0
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 0
- 88 700 110 678 110 650 c 0
- 110 622 88 600 60 600 c 0
-390 820 m 0
- 390 792 368 770 340 770 c 2
- 240 770 l 1
- 240 530 l 1
- 340 530 l 2
- 368 530 390 508 390 480 c 0
- 390 452 368 430 340 430 c 2
- 190 430 l 2
- 162 430 140 452 140 480 c 2
- 140 820 l 2
- 140 848 162 870 190 870 c 2
- 340 870 l 2
- 368 870 390 848 390 820 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("mu", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-325 585 m 0
- 325 626 291 660 250 660 c 0
- 209 660 175 626 175 585 c 0
- 175 544 209 510 250 510 c 0
- 291 510 325 544 325 585 c 0
-370 720 m 0
- 381 720 390 729 390 740 c 0
- 390 751 381 760 370 760 c 0
- 359 760 350 751 350 740 c 0
- 350 729 359 720 370 720 c 0
-150 740 m 0
- 150 751 141 760 130 760 c 0
- 119 760 110 751 110 740 c 0
- 110 729 119 720 130 720 c 0
- 141 720 150 729 150 740 c 0
-223 758 m 1
- 232 759 241 760 250 760 c 0
- 259 760 268 759 277 758 c 1
- 285 802 324 835 370 835 c 0
- 422 835 465 792 465 740 c 0
- 465 702 443 669 411 654 c 1
- 420 633 425 610 425 585 c 0
- 425 488 347 410 250 410 c 0
- 153 410 75 488 75 585 c 0
- 75 610 80 633 89 654 c 1
- 57 669 35 702 35 740 c 0
- 35 792 78 835 130 835 c 0
- 176 835 215 802 223 758 c 1
-250 517 m 0
- 227 517 209 535 209 558 c 0
- 209 581 227 600 250 600 c 0
- 273 600 292 581 292 558 c 0
- 292 535 273 517 250 517 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("mun", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-132 855 m 0
- 168 877 210 890 255 890 c 0
- 387 890 493 782 493 650 c 0
- 493 518 387 410 255 410 c 0
- 210 410 168 423 132 445 c 0
- 117 454 108 470 108 487 c 0
- 108 510 122 529 142 535 c 0
- 191 551 227 575 227 650 c 0
- 227 725 191 749 142 765 c 0
- 122 771 108 790 108 813 c 0
- 108 830 117 846 132 855 c 0
-284 787 m 1
- 310 754 327 709 327 650 c 0
- 327 591 310 546 284 513 c 1
- 346 527 393 582 393 650 c 0
- 393 718 346 773 284 787 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("musi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-363 709 m 0
- 377 709 388 720 388 734 c 0
- 388 748 377 759 363 759 c 0
- 349 759 338 748 338 734 c 0
- 338 720 349 709 363 709 c 0
-137 709 m 0
- 151 709 162 720 162 734 c 0
- 162 748 151 759 137 759 c 0
- 123 759 112 748 112 734 c 0
- 112 720 123 709 137 709 c 0
-187 647 m 1
- 187 594 l 2
- 187 557 205 527 229 515 c 0
- 236 512 243 510 250 510 c 0
- 290 510 313 553 313 594 c 2
- 313 647 l 1
- 283 664 263 697 263 734 c 0
- 263 789 308 834 363 834 c 0
- 418 834 463 789 463 734 c 0
- 463 697 443 664 413 647 c 1
- 413 594 l 2
- 413 513 371 452 315 425 c 0
- 295 415 273 410 250 410 c 0
- 171 410 119 466 98 526 c 0
- 90 548 87 571 87 594 c 2
- 87 647 l 1
- 57 664 37 697 37 734 c 0
- 37 789 82 834 137 834 c 0
- 192 834 237 789 237 734 c 0
- 237 697 217 664 187 647 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("mute", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-390 470 m 0
- 362 470 340 492 340 520 c 2
- 340 780 l 2
- 340 808 362 830 390 830 c 0
- 418 830 440 808 440 780 c 2
- 440 520 l 2
- 440 492 418 470 390 470 c 0
-110 470 m 0
- 82 470 60 492 60 520 c 2
- 60 780 l 2
- 60 808 82 830 110 830 c 0
- 138 830 160 808 160 780 c 2
- 160 520 l 2
- 160 492 138 470 110 470 c 0
-250 473 m 0
- 222 473 200 495 200 523 c 2
- 200 777 l 2
- 200 805 222 827 250 827 c 0
- 278 827 300 805 300 777 c 2
- 300 523 l 2
- 300 495 278 473 250 473 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("nanpa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-232 667 m 1
- 232 633 l 1
- 266 633 l 1
- 266 667 l 1
- 232 667 l 1
-132 472 m 2
- 132 533 l 1
- 72 533 l 2
- 44 533 22 555 22 583 c 0
- 22 611 44 633 72 633 c 2
- 132 633 l 1
- 132 667 l 1
- 72 667 l 2
- 44 667 22 689 22 717 c 0
- 22 745 44 767 72 767 c 2
- 132 767 l 1
- 132 828 l 2
- 132 856 154 878 182 878 c 0
- 210 878 232 856 232 828 c 2
- 232 767 l 1
- 266 767 l 1
- 266 828 l 2
- 266 856 288 878 316 878 c 0
- 344 878 366 856 366 828 c 2
- 366 767 l 1
- 428 767 l 2
- 456 767 478 745 478 717 c 0
- 478 689 456 667 428 667 c 2
- 366 667 l 1
- 366 633 l 1
- 428 633 l 2
- 456 633 478 611 478 583 c 0
- 478 555 456 533 428 533 c 2
- 366 533 l 1
- 366 472 l 2
- 366 444 344 422 316 422 c 0
- 288 422 266 444 266 472 c 2
- 266 533 l 1
- 232 533 l 1
- 232 472 l 2
- 232 444 210 422 182 422 c 0
- 154 422 132 444 132 472 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("nasa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-487 612 m 0
- 487 585 465 562 437 562 c 0
- 410 562 388 583 387 610 c 0
- 384 684 349 739 301 767 c 0
- 272 784 228 791 191 776 c 0
- 133 752 88 669 127 590 c 0
- 144 555 194 510 242 549 c 0
- 265 568 286 638 241 652 c 0
- 237 652 l 0
- 228 651 232 640 238 627 c 0
- 241 620 243 613 243 606 c 0
- 243 581 223 556 193 556 c 0
- 174 556 156 567 148 585 c 0
- 138 607 133 629 133 648 c 0
- 133 669 139 688 149 704 c 0
- 167 731 192 743 198 745 c 0
- 291 781 368 695 368 605 c 0
- 368 528 326 476 274 451 c 0
- 254 441 232 435 205 435 c 0
- 119 435 65 488 37 546 c 0
- 22 576 13 610 13 652 c 0
- 13 742 57 806 109 844 c 0
- 141 867 182 885 234 885 c 0
- 329 885 392 834 432 778 c 0
- 453 748 470 713 479 673 c 0
- 484 650 487 636 487 612 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("nasin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-131 552 m 0
- 104 552 81 575 81 602 c 0
- 81 615 86 628 96 638 c 2
- 200 742 l 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 742 l 1
- 404 638 l 2
- 414 628 419 615 419 602 c 0
- 419 575 395 552 368 552 c 0
- 355 552 343 557 333 567 c 2
- 300 601 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 601 l 1
- 166 567 l 2
- 156 557 144 552 131 552 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("nena", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 790 m 0
- 209 790 163 748 163 680 c 2
- 163 520 l 2
- 163 492 141 470 113 470 c 0
- 85 470 63 492 63 520 c 2
- 63 680 l 2
- 63 788 140 890 250 890 c 0
- 360 890 437 788 437 680 c 2
- 437 520 l 2
- 437 492 415 470 387 470 c 0
- 359 470 337 492 337 520 c 2
- 337 680 l 2
- 337 748 291 790 250 790 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("ni", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-80 579 m 0
- 80 606 103 629 130 629 c 0
- 143 629 155 624 165 614 c 2
- 200 580 l 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 580 l 1
- 335 614 l 2
- 345 624 357 629 370 629 c 0
- 397 629 420 606 420 579 c 0
- 420 566 415 553 405 543 c 2
- 285 424 l 2
- 277 416 265 410 250 410 c 0
- 235 410 223 416 215 424 c 2
- 95 543 l 2
- 85 553 80 566 80 579 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("nimi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-110 650 m 0
- 110 625 130 605 155 605 c 2
- 345 605 l 2
- 370 605 390 625 390 650 c 0
- 390 675 370 695 345 695 c 2
- 155 695 l 2
- 130 695 110 675 110 650 c 0
-155 505 m 2
- 75 505 10 570 10 650 c 0
- 10 730 75 795 155 795 c 2
- 345 795 l 2
- 425 795 490 730 490 650 c 0
- 490 570 425 505 345 505 c 2
- 155 505 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("noka", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-256 855 m 0
- 285 855 307 832 306 804 c 2
- 306 803 l 2
- 305 763 304 713 304 668 c 1
- 306 668 309 668 311 668 c 0
- 383 668 457 641 457 565 c 0
- 457 542 451 508 422 481 c 0
- 394 455 354 445 304 445 c 0
- 201 445 176 437 121 450 c 0
- 98 455 83 476 83 499 c 2
- 83 805 l 2
- 83 833 105 855 133 855 c 0
- 161 855 183 833 183 805 c 2
- 183 546 l 1
- 208 545 246 545 304 545 c 0
- 347 545 356 551 357 560 c 1
- 346 565 327 568 311 568 c 0
- 299 568 279 564 256 564 c 0
- 203 564 204 614 204 664 c 0
- 204 711 205 764 206 806 c 2
- 206 806 l 2
- 207 833 229 855 256 855 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("o", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 410 m 0
- 175 410 115 470 115 545 c 0
- 115 620 175 680 250 680 c 0
- 325 680 385 620 385 545 c 0
- 385 470 325 410 250 410 c 0
-250 510 m 0
- 269 510 285 526 285 545 c 0
- 285 564 269 580 250 580 c 0
- 231 580 215 564 215 545 c 0
- 215 526 231 510 250 510 c 0
-250 890 m 0
- 278 890 300 868 300 840 c 2
- 300 740 l 2
- 300 712 278 690 250 690 c 0
- 222 690 200 712 200 740 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("olin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 639 m 0
- 231 639 217 651 205 661 c 0
- 184 679 158 703 141 729 c 0
- 132 743 120 764 120 789 c 0
- 120 805 122 823 130 839 c 0
- 137 853 156 879 190 879 c 0
- 211 879 225 868 232 862 c 0
- 240 855 245 848 250 841 c 1
- 255 848 260 855 268 862 c 0
- 275 868 289 879 310 879 c 0
- 344 879 363 853 370 839 c 0
- 378 823 380 805 380 789 c 0
- 380 764 368 743 359 729 c 0
- 338 697 308 670 280 649 c 0
- 271 642 261 639 250 639 c 0
-250 410 m 0
- 231 410 217 422 205 432 c 0
- 184 450 158 474 141 500 c 0
- 132 514 120 535 120 560 c 0
- 120 576 122 594 130 610 c 0
- 137 624 156 650 190 650 c 0
- 211 650 225 639 232 633 c 0
- 240 626 245 619 250 612 c 1
- 255 619 260 626 268 633 c 0
- 275 639 289 650 310 650 c 0
- 344 650 363 624 370 610 c 0
- 378 594 380 576 380 560 c 0
- 380 535 368 514 359 500 c 0
- 338 468 308 441 280 420 c 0
- 271 413 261 410 250 410 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("ona", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-350 690 m 0
- 328 690 310 672 310 650 c 0
- 310 628 328 610 350 610 c 0
- 372 610 390 628 390 650 c 0
- 390 672 372 690 350 690 c 0
-10 621 m 0
- 10 651 35 671 60 671 c 0
- 78 671 87 664 104 659 c 0
- 130 651 177 638 211 630 c 1
- 210 637 210 643 210 650 c 0
- 210 727 273 790 350 790 c 0
- 427 790 490 727 490 650 c 0
- 490 573 427 510 350 510 c 0
- 246 510 125 546 44 574 c 0
- 23 581 10 600 10 621 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("open", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-177 597 m 1
- 177 557 l 1
- 323 557 l 1
- 323 597 l 1
- 177 597 l 1
-177 793 m 2
- 177 697 l 1
- 323 697 l 1
- 323 793 l 2
- 323 821 345 843 373 843 c 0
- 401 843 423 821 423 793 c 2
- 423 507 l 2
- 423 479 401 457 373 457 c 2
- 127 457 l 2
- 99 457 77 479 77 507 c 2
- 77 793 l 2
- 77 821 99 843 127 843 c 0
- 155 843 177 821 177 793 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("pakala", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-276 687 m 1
- 294 685 310 670 310 650 c 0
- 310 647 309 643 308 640 c 2
- 285 554 l 1
- 325 554 l 1
- 325 746 l 1
- 292 746 l 1
- 276 687 l 1
-223 613 m 1
- 205 615 189 630 189 650 c 0
- 189 653 190 657 191 660 c 2
- 214 746 l 1
- 175 746 l 1
- 175 554 l 1
- 207 554 l 1
- 223 613 l 1
-125 846 m 2
- 375 846 l 2
- 403 846 425 824 425 796 c 2
- 425 504 l 2
- 425 476 403 454 375 454 c 2
- 125 454 l 2
- 97 454 75 476 75 504 c 2
- 75 796 l 2
- 75 824 97 846 125 846 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("pali", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-248 715 m 0
- 269 715 286 731 286 752 c 0
- 286 773 269 790 248 790 c 0
- 227 790 210 773 210 752 c 0
- 210 731 227 715 248 715 c 0
-50 564 m 0
- 50 589 71 614 100 614 c 0
- 107 614 115 613 121 610 c 1
- 129 626 140 641 153 653 c 1
- 127 678 110 713 110 752 c 0
- 110 828 172 890 248 890 c 0
- 324 890 386 828 386 752 c 0
- 386 714 371 681 346 656 c 1
- 380 624 400 576 400 529 c 2
- 400 490 l 2
- 400 462 378 440 350 440 c 0
- 322 440 300 462 300 490 c 2
- 300 529 l 2
- 300 570 273 593 251 593 c 0
- 229 593 201 570 201 529 c 2
- 201 490 l 2
- 201 464 181 440 151 440 c 0
- 135 440 119 448 110 462 c 2
- 59 536 l 2
- 53 545 50 554 50 564 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("palisa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 790 m 0
- 246 790 244 784 240 775 c 0
- 233 756 229 729 229 703 c 2
- 229 597 l 2
- 229 566 232 525 248 510 c 0
- 248 510 249 510 250 510 c 0
- 254 510 256 516 260 525 c 0
- 267 544 271 571 271 597 c 2
- 271 703 l 2
- 271 734 268 775 252 790 c 0
- 252 790 251 790 250 790 c 0
-146 811 m 0
- 160 846 191 890 250 890 c 0
- 309 890 340 846 354 811 c 0
- 368 775 371 734 371 703 c 2
- 371 597 l 2
- 371 566 368 525 354 489 c 0
- 340 454 309 410 250 410 c 0
- 191 410 160 454 146 489 c 0
- 132 525 129 566 129 597 c 2
- 129 703 l 2
- 129 734 132 775 146 811 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pan", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-81 531 m 0
- 81 560 106 581 131 581 c 0
- 140 581 149 579 157 574 c 2
- 250 518 l 1
- 343 574 l 2
- 351 579 360 581 369 581 c 0
- 394 581 419 560 419 531 c 0
- 419 514 411 497 395 488 c 2
- 276 417 l 2
- 268 412 259 410 250 410 c 0
- 241 410 232 412 224 417 c 2
- 105 488 l 2
- 89 497 81 514 81 531 c 0
-81 665 m 0
- 81 694 106 715 131 715 c 0
- 140 715 149 712 157 707 c 2
- 250 652 l 1
- 343 707 l 2
- 351 712 360 715 369 715 c 0
- 394 715 419 694 419 665 c 0
- 419 648 411 631 395 622 c 2
- 276 551 l 2
- 268 546 259 543 250 543 c 0
- 241 543 232 546 224 551 c 2
- 105 622 l 2
- 89 631 81 648 81 665 c 0
-81 798 m 0
- 81 827 106 848 131 848 c 0
- 140 848 149 846 157 841 c 2
- 250 785 l 1
- 343 841 l 2
- 351 846 360 848 369 848 c 0
- 394 848 419 827 419 798 c 0
- 419 781 411 764 395 755 c 2
- 276 684 l 2
- 268 679 259 677 250 677 c 0
- 241 677 232 679 224 684 c 2
- 105 755 l 2
- 89 764 81 781 81 798 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pana", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-381 847 m 0
- 411 847 431 821 431 796 c 0
- 431 788 428 779 424 771 c 2
- 400 727 l 2
- 391 711 375 702 358 702 c 0
- 328 702 308 729 308 754 c 0
- 308 762 310 770 314 778 c 2
- 339 822 l 2
- 348 838 364 847 381 847 c 0
-71 796 m 0
- 71 821 91 847 121 847 c 0
- 138 847 154 838 163 822 c 2
- 187 778 l 2
- 191 770 194 762 194 754 c 0
- 194 729 174 702 144 702 c 0
- 127 702 110 711 101 727 c 2
- 77 771 l 2
- 73 779 71 788 71 796 c 0
-251 890 m 0
- 279 890 301 868 301 840 c 2
- 301 790 l 2
- 301 762 279 740 251 740 c 0
- 223 740 201 762 201 790 c 2
- 201 840 l 2
- 201 868 223 890 251 890 c 0
-116 622 m 1
- 136 679 182 735 252 735 c 0
- 302 735 341 706 365 670 c 0
- 389 634 402 588 402 540 c 2
- 402 490 l 2
- 402 462 380 440 352 440 c 0
- 324 440 302 462 302 490 c 2
- 302 540 l 2
- 302 579 283 635 252 635 c 0
- 221 635 203 579 203 540 c 2
- 203 490 l 2
- 203 464 183 440 153 440 c 0
- 136 440 119 449 110 464 c 2
- 58 548 l 2
- 53 556 50 565 50 574 c 0
- 50 599 71 624 100 624 c 0
- 105 624 111 624 116 622 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("pi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-116 834 m 0
- 144 834 166 812 166 784 c 2
- 166 566 l 1
- 384 566 l 2
- 412 566 434 544 434 516 c 0
- 434 488 412 466 384 466 c 2
- 116 466 l 2
- 88 466 66 488 66 516 c 2
- 66 784 l 2
- 66 812 88 834 116 834 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pilin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-158 730 m 0
- 135 730 117 712 117 689 c 0
- 117 681 122 665 137 642 c 0
- 164 602 214 554 250 524 c 1
- 285 554 337 602 363 642 c 0
- 378 665 383 681 383 689 c 0
- 383 712 365 730 342 730 c 0
- 326 730 305 714 299 700 c 0
- 294 677 273 661 250 661 c 0
- 227 661 206 677 201 700 c 0
- 195 714 174 730 158 730 c 0
-250 410 m 0
- 234 410 222 419 211 427 c 0
- 158 468 95 526 54 587 c 0
- 35 615 17 651 17 689 c 0
- 17 767 80 830 158 830 c 0
- 196 830 228 814 250 796 c 1
- 272 814 304 830 342 830 c 0
- 420 830 483 767 483 689 c 0
- 483 651 465 615 446 587 c 0
- 403 523 337 463 280 420 c 0
- 271 413 261 410 250 410 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pimeja", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-258 726 m 1
- 250 740 l 1
- 242 726 l 1
- 250 713 l 1
- 258 726 l 1
-318 605 m 1
- 328 605 l 1
- 286 677 l 1
- 280 666 l 1
- 318 605 l 1
-241 605 m 1
- 259 605 l 1
- 250 619 l 1
- 241 605 l 1
-182 605 m 1
- 220 666 l 1
- 214 677 l 1
- 172 605 l 1
- 182 605 l 1
-85 505 m 2
- 59 505 35 526 35 555 c 0
- 35 564 38 572 42 580 c 2
- 207 865 l 2
- 216 880 232 890 250 890 c 0
- 268 890 284 880 293 865 c 2
- 458 580 l 2
- 462 572 465 564 465 555 c 0
- 465 526 441 505 415 505 c 2
- 85 505 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("pini", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-200 765 m 1
- 156 765 l 2
- 128 765 106 787 106 815 c 0
- 106 843 128 865 156 865 c 2
- 344 865 l 2
- 372 865 394 843 394 815 c 0
- 394 787 372 765 344 765 c 2
- 300 765 l 1
- 300 535 l 1
- 344 535 l 2
- 372 535 394 513 394 485 c 0
- 394 457 372 435 344 435 c 2
- 156 435 l 2
- 128 435 106 457 106 485 c 0
- 106 513 128 535 156 535 c 2
- 200 535 l 1
- 200 765 l 1"#,
-),
-GlyphDescriptor::new_with_anchor("pipi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-350 769 m 0
- 322 769 300 791 300 819 c 0
- 300 847 322 869 350 869 c 0
- 378 869 400 847 400 819 c 0
- 400 791 378 769 350 769 c 0
-300 765 m 1
- 344 765 l 2
- 372 765 394 743 394 715 c 0
- 394 687 372 665 344 665 c 2
- 300 665 l 1
- 300 660 l 1
- 351 660 l 2
- 379 660 401 638 401 610 c 0
- 401 582 379 560 351 560 c 2
- 300 560 l 1
- 300 556 l 1
- 344 556 l 2
- 372 556 394 534 394 506 c 0
- 394 478 372 456 344 456 c 2
- 300 456 l 1
- 298 430 276 410 250 410 c 0
- 224 410 202 430 200 456 c 1
- 155 456 l 2
- 127 456 105 478 105 506 c 0
- 105 534 127 556 155 556 c 2
- 200 556 l 1
- 200 560 l 1
- 149 560 l 2
- 121 560 99 582 99 610 c 0
- 99 638 121 660 149 660 c 2
- 200 660 l 1
- 200 665 l 1
- 155 665 l 2
- 127 665 105 687 105 715 c 0
- 105 743 127 765 155 765 c 2
- 200 765 l 1
- 203 790 224 810 250 810 c 0
- 276 810 297 790 300 765 c 1
-200 819 m 0
- 200 791 178 769 150 769 c 0
- 122 769 100 791 100 819 c 0
- 100 847 122 869 150 869 c 0
- 178 869 200 847 200 819 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("poka", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-75 775 m 0
- 103 775 125 753 125 725 c 2
- 125 625 l 1
- 275 625 l 1
- 275 725 l 2
- 275 753 297 775 325 775 c 0
- 353 775 375 753 375 725 c 2
- 375 575 l 2
- 375 547 353 525 325 525 c 2
- 75 525 l 2
- 47 525 25 547 25 575 c 2
- 25 725 l 2
- 25 753 47 775 75 775 c 0
-489 650 m 0
- 489 622 467 600 439 600 c 0
- 411 600 389 622 389 650 c 0
- 389 678 411 700 439 700 c 0
- 467 700 489 678 489 650 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("poki", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-97 811 m 0
- 125 811 147 789 147 761 c 2
- 147 589 l 1
- 353 589 l 1
- 353 761 l 2
- 353 789 375 811 403 811 c 0
- 431 811 453 789 453 761 c 2
- 453 539 l 2
- 453 511 431 489 403 489 c 2
- 97 489 l 2
- 69 489 47 511 47 539 c 2
- 47 761 l 2
- 47 789 69 811 97 811 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pona", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-20 715 m 0
- 20 740 40 765 70 765 c 0
- 92 765 112 750 118 728 c 0
- 132 676 184 635 250 635 c 0
- 316 635 368 676 382 728 c 0
- 388 750 408 765 430 765 c 0
- 460 765 480 740 480 715 c 0
- 480 711 479 706 478 702 c 0
- 451 604 358 535 250 535 c 0
- 142 535 49 604 22 702 c 0
- 21 706 20 711 20 715 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("pu", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 735 m 0
- 257 735 263 729 263 722 c 2
- 263 707 l 2
- 263 691 238 691 238 707 c 2
- 238 722 l 2
- 238 729 243 735 250 735 c 0
-297 687 m 2
- 285 675 267 693 279 705 c 2
- 292 718 l 2
- 304 730 322 712 310 700 c 2
- 297 687 l 2
-190 700 m 2
- 178 712 196 730 208 718 c 2
- 221 705 l 2
- 233 693 215 675 203 687 c 2
- 190 700 l 2
-250 620 m 0
- 254 620 258 622 258 625 c 0
- 258 632 263 638 270 638 c 0
- 277 638 283 632 283 625 c 0
- 283 607 267 595 250 595 c 0
- 233 595 217 607 217 625 c 0
- 217 632 223 638 230 638 c 0
- 237 638 242 632 242 625 c 0
- 242 622 246 620 250 620 c 0
-250 564 m 0
- 215 564 186 593 186 628 c 0
- 186 663 215 692 250 692 c 0
- 285 692 314 663 314 628 c 0
- 314 593 285 564 250 564 c 0
-288 628 m 0
- 288 649 271 666 250 666 c 0
- 229 666 212 649 212 628 c 0
- 212 607 229 590 250 590 c 0
- 271 590 288 607 288 628 c 0
-171 740 m 1
- 171 560 l 1
- 329 560 l 1
- 329 740 l 1
- 171 740 l 1
-71 790 m 2
- 71 818 93 840 121 840 c 2
- 379 840 l 2
- 407 840 429 818 429 790 c 2
- 429 510 l 2
- 429 482 407 460 379 460 c 2
- 121 460 l 2
- 93 460 71 482 71 510 c 2
- 71 790 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("sama", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-470 565 m 0
- 470 537 448 515 420 515 c 2
- 80 515 l 2
- 52 515 30 537 30 565 c 0
- 30 593 52 615 80 615 c 2
- 420 615 l 2
- 448 615 470 593 470 565 c 0
-470 735 m 0
- 470 707 448 685 420 685 c 2
- 80 685 l 2
- 52 685 30 707 30 735 c 0
- 30 763 52 785 80 785 c 2
- 420 785 l 2
- 448 785 470 763 470 735 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("seli", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 891 m 0
- 278 891 300 869 300 841 c 2
- 300 668 l 2
- 300 640 278 618 250 618 c 0
- 222 618 200 640 200 668 c 2
- 200 841 l 2
- 200 869 222 891 250 891 c 0
-43 755 m 0
- 43 780 63 805 93 805 c 0
- 112 805 131 794 139 775 c 2
- 185 670 l 2
- 188 663 189 657 189 650 c 0
- 189 625 169 600 139 600 c 0
- 120 600 101 611 93 630 c 2
- 47 735 l 2
- 44 742 43 748 43 755 c 0
-407 805 m 0
- 437 805 457 780 457 755 c 0
- 457 748 456 741 453 735 c 2
- 408 630 l 2
- 400 611 381 600 362 600 c 0
- 332 600 312 625 312 650 c 0
- 312 657 313 664 316 670 c 2
- 361 775 l 2
- 369 794 388 805 407 805 c 0
-326 485 m 0
- 326 444 292 410 251 410 c 0
- 210 410 176 444 176 485 c 0
- 176 526 210 560 251 560 c 0
- 292 560 326 526 326 485 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("selo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-146 694 m 1
- 136 694 l 1
- 136 556 l 2
- 136 528 114 506 86 506 c 0
- 58 506 36 528 36 556 c 2
- 36 744 l 2
- 36 772 58 794 86 794 c 2
- 196 794 l 2
- 196 794 l 0
- 197 794 l 2
- 304 794 l 2
- 304 794 l 0
- 305 794 l 2
- 415 794 l 2
- 443 794 465 772 465 744 c 2
- 465 556 l 2
- 465 528 443 506 415 506 c 0
- 387 506 365 528 365 556 c 2
- 365 694 l 1
- 354 694 l 1
- 354 579 l 2
- 354 551 332 529 304 529 c 0
- 276 529 254 551 254 579 c 2
- 254 694 l 1
- 246 694 l 1
- 246 579 l 2
- 246 551 224 529 196 529 c 0
- 168 529 146 551 146 579 c 2
- 146 694 l 1"#,
-),
-GlyphDescriptor::new_with_anchor("seme", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 410 m 0
- 222 410 200 432 200 460 c 0
- 200 488 222 510 250 510 c 0
- 278 510 300 488 300 460 c 0
- 300 432 278 410 250 410 c 0
-250 890 m 0
- 339 890 420 849 420 763 c 0
- 420 702 374 674 339 649 c 0
- 310 628 300 616 300 594 c 2
- 300 570 l 2
- 300 542 278 520 250 520 c 0
- 222 520 200 542 200 570 c 2
- 200 594 l 2
- 200 675 255 712 290 737 c 0
- 302 745 310 751 316 757 c 0
- 319 760 320 761 320 763 c 0
- 320 769 318 772 311 777 c 0
- 301 783 282 790 250 790 c 0
- 218 790 198 784 189 778 c 0
- 182 773 180 769 180 763 c 0
- 180 762 l 0
- 184 755 186 747 186 739 c 0
- 186 714 166 689 136 689 c 0
- 100 689 80 726 80 763 c 0
- 80 849 161 890 250 890 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("sewi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-350 533 m 2
- 350 533 l 1
- 340 514 319 486 280 486 c 0
- 261 486 246 492 235 501 c 1
- 224 492 209 486 190 486 c 0
- 172 486 157 493 145 501 c 1
- 133 493 118 486 100 486 c 0
- 72 486 50 508 50 536 c 0
- 50 559 65 578 86 584 c 1
- 92 598 95 622 95 640 c 0
- 95 668 117 690 145 690 c 0
- 161 690 176 682 185 670 c 1
- 185 671 185 672 185 673 c 0
- 185 678 185 683 185 686 c 0
- 185 713 208 735 235 735 c 0
- 251 735 266 727 275 715 c 1
- 275 720 275 725 275 730 c 0
- 275 758 297 780 325 780 c 0
- 334 780 343 777 350 773 c 1
- 353 798 374 817 400 817 c 0
- 428 817 450 795 450 767 c 2
- 450 533 l 2
- 450 505 428 483 400 483 c 0
- 372 483 350 505 350 533 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("sijelo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-163 520 m 2
- 163 492 141 470 113 470 c 0
- 85 470 63 492 63 520 c 2
- 63 780 l 2
- 63 808 85 830 113 830 c 2
- 387 830 l 2
- 415 830 437 808 437 780 c 2
- 437 520 l 2
- 437 492 415 470 387 470 c 0
- 359 470 337 492 337 520 c 2
- 337 730 l 1
- 300 730 l 1
- 300 539 l 2
- 300 511 278 489 250 489 c 0
- 222 489 200 511 200 539 c 2
- 200 730 l 1
- 163 730 l 1
- 163 520 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("sike", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 534 m 0
- 186 534 136 585 136 649 c 0
- 136 713 186 764 250 764 c 0
- 314 764 366 713 366 649 c 0
- 366 585 314 534 250 534 c 0
-266 649 m 0
- 266 657 258 664 250 664 c 0
- 242 664 236 657 236 649 c 0
- 236 641 242 634 250 634 c 0
- 258 634 266 641 266 649 c 0
-250 410 m 0
- 118 410 11 518 11 650 c 0
- 11 782 118 889 250 889 c 0
- 382 889 490 782 490 650 c 0
- 490 518 382 410 250 410 c 0
-250 510 m 0
- 327 510 390 573 390 650 c 0
- 390 727 327 789 250 789 c 0
- 173 789 111 727 111 650 c 0
- 111 573 173 510 250 510 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("sin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-20 590 m 0
- 20 618 42 640 70 640 c 2
- 170 640 l 2
- 198 640 220 618 220 590 c 0
- 220 562 198 540 170 540 c 2
- 70 540 l 2
- 42 540 20 562 20 590 c 0
-250 820 m 0
- 278 820 300 798 300 770 c 2
- 300 670 l 2
- 300 642 278 620 250 620 c 0
- 222 620 200 642 200 670 c 2
- 200 770 l 2
- 200 798 222 820 250 820 c 0
-280 590 m 0
- 280 618 302 640 330 640 c 2
- 430 640 l 2
- 458 640 480 618 480 590 c 0
- 480 562 458 540 430 540 c 2
- 330 540 l 2
- 302 540 280 562 280 590 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("sina", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-210 550 m 0
- 210 528 228 510 250 510 c 0
- 272 510 290 528 290 550 c 0
- 290 572 272 590 250 590 c 0
- 228 590 210 572 210 550 c 0
-221 890 m 0
- 251 890 271 865 271 840 c 0
- 271 822 264 813 259 796 c 0
- 251 770 238 723 230 689 c 1
- 237 690 243 690 250 690 c 0
- 327 690 390 627 390 550 c 0
- 390 473 327 410 250 410 c 0
- 173 410 110 473 110 550 c 0
- 110 654 146 775 174 856 c 0
- 181 877 200 890 221 890 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("sinpin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-440 600 m 0
- 412 600 390 622 390 650 c 0
- 390 678 412 700 440 700 c 0
- 468 700 490 678 490 650 c 0
- 490 622 468 600 440 600 c 0
-110 820 m 0
- 110 848 132 870 160 870 c 2
- 310 870 l 2
- 338 870 360 848 360 820 c 2
- 360 480 l 2
- 360 452 338 430 310 430 c 2
- 160 430 l 2
- 132 430 110 452 110 480 c 0
- 110 508 132 530 160 530 c 2
- 260 530 l 1
- 260 770 l 1
- 160 770 l 2
- 132 770 110 792 110 820 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("sitelen", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-321 650 m 0
- 321 638 311 628 299 628 c 0
- 287 628 277 638 277 650 c 0
- 277 662 287 672 299 672 c 0
- 311 672 321 662 321 650 c 0
-272 650 m 0
- 272 638 262 628 250 628 c 0
- 238 628 228 638 228 650 c 0
- 228 662 238 672 250 672 c 0
- 262 672 272 662 272 650 c 0
-223 650 m 0
- 223 638 213 628 201 628 c 0
- 189 628 179 638 179 650 c 0
- 179 662 189 672 201 672 c 0
- 213 672 223 662 223 650 c 0
-175 744 m 1
- 175 556 l 1
- 325 556 l 1
- 325 744 l 1
- 175 744 l 1
-75 794 m 2
- 75 822 97 844 125 844 c 2
- 375 844 l 2
- 403 844 425 822 425 794 c 2
- 425 506 l 2
- 425 478 403 456 375 456 c 2
- 125 456 l 2
- 97 456 75 478 75 506 c 2
- 75 794 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("sona", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-380 853 m 0
- 410 853 430 827 430 802 c 0
- 430 794 427 785 423 777 c 2
- 399 734 l 2
- 390 718 374 709 357 709 c 0
- 327 709 307 735 307 760 c 0
- 307 768 309 777 313 785 c 2
- 338 828 l 2
- 347 844 363 853 380 853 c 0
-70 801 m 0
- 70 826 90 852 120 852 c 0
- 137 852 153 843 162 827 c 2
- 186 784 l 2
- 190 776 193 767 193 759 c 0
- 193 734 172 708 142 708 c 0
- 125 708 109 717 100 733 c 2
- 76 776 l 2
- 72 784 70 793 70 801 c 0
-250 890 m 0
- 278 890 300 868 300 840 c 2
- 300 790 l 2
- 300 762 278 740 250 740 c 0
- 222 740 200 762 200 790 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
-200 604 m 1
- 200 538 l 1
- 300 538 l 1
- 300 604 l 1
- 200 604 l 1
-100 654 m 2
- 100 682 122 704 150 704 c 2
- 350 704 l 2
- 378 704 400 682 400 654 c 2
- 400 488 l 2
- 400 460 378 438 350 438 c 2
- 150 438 l 2
- 122 438 100 460 100 488 c 2
- 100 654 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("soweli", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-125 842 m 2
- 316 842 l 2
- 410 842 486 766 486 672 c 0
- 486 595 436 531 366 510 c 1
- 366 472 l 2
- 366 444 344 422 316 422 c 0
- 288 422 266 444 266 472 c 2
- 266 552 l 2
- 266 580 288 602 316 602 c 0
- 355 602 386 633 386 672 c 0
- 386 711 355 742 316 742 c 2
- 125 742 l 2
- 97 742 75 764 75 792 c 0
- 75 820 97 842 125 842 c 2
-274 672 m 0
- 274 649 255 630 232 630 c 0
- 209 630 189 649 189 672 c 0
- 189 695 209 714 232 714 c 0
- 255 714 274 695 274 672 c 0
-374 672 m 0
- 374 649 355 630 332 630 c 0
- 309 630 290 649 290 672 c 0
- 290 695 309 714 332 714 c 0
- 355 714 374 695 374 672 c 0
-113 602 m 0
- 141 602 163 580 163 552 c 2
- 163 517 l 2
- 163 489 141 467 113 467 c 0
- 85 467 63 489 63 517 c 2
- 63 552 l 2
- 63 580 85 602 113 602 c 0
-215 602 m 0
- 243 602 265 580 265 552 c 2
- 265 472 l 2
- 265 444 243 422 215 422 c 0
- 187 422 165 444 165 472 c 2
- 165 552 l 2
- 165 580 187 602 215 602 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("suli", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-390 830 m 0
- 418 830 440 806 440 780 c 0
- 440 769 436 758 429 749 c 0
- 387 695 355 625 333 565 c 0
- 311 505 301 458 299 450 c 0
- 294 427 274 410 250 410 c 0
- 226 410 206 427 201 450 c 0
- 199 458 189 505 167 565 c 0
- 145 625 113 695 71 749 c 0
- 64 758 60 769 60 780 c 0
- 60 806 82 830 110 830 c 0
- 125 830 139 824 149 811 c 0
- 193 754 227 686 250 627 c 1
- 273 686 307 754 351 811 c 0
- 361 824 375 830 390 830 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("suno", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 719 m 0
- 212 719 181 688 181 650 c 0
- 181 612 212 581 250 581 c 0
- 288 581 319 612 319 650 c 0
- 319 688 288 719 250 719 c 0
-200 840 m 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 811 l 1
- 353 795 395 753 411 700 c 1
- 440 700 l 2
- 468 700 490 678 490 650 c 0
- 490 622 468 600 440 600 c 2
- 411 600 l 1
- 395 547 353 505 300 489 c 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 489 l 1
- 147 505 105 547 89 600 c 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 89 700 l 1
- 105 753 147 795 200 811 c 1
- 200 840 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("supa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-60 740 m 2
- 440 740 l 2
- 468 740 490 718 490 690 c 0
- 490 662 468 640 440 640 c 2
- 409 640 l 1
- 409 550 l 2
- 409 522 387 500 359 500 c 0
- 331 500 309 522 309 550 c 2
- 309 640 l 1
- 191 640 l 1
- 191 550 l 2
- 191 522 169 500 141 500 c 0
- 113 500 91 522 91 550 c 2
- 91 640 l 1
- 60 640 l 2
- 32 640 10 662 10 690 c 0
- 10 718 32 740 60 740 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("suwi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-66 637 m 0
- 38 637 16 661 16 687 c 0
- 16 699 20 711 28 720 c 2
- 89 790 l 2
- 98 801 112 807 127 807 c 0
- 142 807 155 801 164 790 c 2
- 225 720 l 2
- 233 711 237 699 237 687 c 0
- 237 661 215 637 187 637 c 0
- 173 637 159 643 149 654 c 2
- 127 681 l 1
- 104 654 l 2
- 94 643 80 637 66 637 c 0
-314 637 m 0
- 286 637 264 661 264 687 c 0
- 264 699 268 711 276 720 c 2
- 337 790 l 2
- 346 801 360 807 375 807 c 0
- 390 807 403 801 412 790 c 2
- 473 720 l 2
- 481 711 485 699 485 687 c 0
- 485 661 463 637 435 637 c 0
- 421 637 407 643 397 654 c 2
- 375 681 l 1
- 352 654 l 2
- 342 643 328 637 314 637 c 0
-300 550 m 0
- 300 522 278 500 250 500 c 0
- 222 500 200 522 200 550 c 0
- 200 578 222 600 250 600 c 0
- 278 600 300 578 300 550 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("tan", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-371 561 m 0
- 371 573 375 583 375 595 c 0
- 375 650 331 695 276 695 c 0
- 244 695 216 680 198 657 c 1
- 200 657 201 657 203 657 c 0
- 228 657 253 637 253 607 c 0
- 253 589 243 571 226 562 c 2
- 139 518 l 2
- 132 514 124 513 116 513 c 0
- 94 513 79 525 71 540 c 2
- 27 627 l 2
- 23 634 22 641 22 649 c 0
- 22 674 42 700 72 700 c 0
- 82 700 93 696 101 690 c 1
- 135 752 200 795 276 795 c 0
- 386 795 475 705 475 595 c 0
- 475 579 473 564 470 549 c 0
- 465 526 444 511 421 511 c 0
- 391 511 371 536 371 561 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("taso", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-300 840 m 2
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 600 l 1
- 110 600 l 2
- 82 600 60 622 60 650 c 0
- 60 678 82 700 110 700 c 2
- 200 700 l 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("tawa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-415 609 m 0
- 441 609 465 587 465 559 c 0
- 465 545 459 530 447 520 c 0
- 406 485 360 470 305 470 c 0
- 284 470 265 483 258 503 c 2
- 192 689 l 1
- 147 578 l 1
- 158 574 173 570 195 570 c 0
- 223 570 245 548 245 520 c 0
- 245 492 223 470 195 470 c 0
- 123 470 75 492 46 528 c 0
- 39 537 35 548 35 559 c 0
- 35 565 37 572 39 578 c 2
- 149 849 l 2
- 157 868 175 880 195 880 c 0
- 217 880 235 867 242 847 c 2
- 339 574 l 1
- 355 578 369 585 383 597 c 0
- 392 605 404 609 415 609 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("telo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-110 469 m 0
- 80 469 60 494 60 519 c 0
- 60 524 61 529 62 534 c 0
- 66 550 72 573 84 593 c 0
- 102 624 138 653 189 653 c 0
- 242 653 279 617 305 592 c 0
- 323 575 333 566 342 561 c 0
- 349 557 349 556 357 559 c 0
- 367 562 369 566 371 569 c 0
- 374 575 377 583 381 602 c 0
- 386 626 407 642 430 642 c 0
- 460 642 480 618 480 592 c 0
- 480 589 480 584 479 581 c 0
- 475 563 470 539 457 517 c 0
- 438 486 400 458 350 458 c 0
- 298 458 262 494 235 519 c 0
- 217 536 207 545 198 550 c 0
- 187 556 175 551 170 543 c 0
- 166 537 164 528 159 508 c 0
- 153 485 133 469 110 469 c 0
-70 659 m 0
- 40 659 20 684 20 709 c 0
- 20 714 21 719 22 724 c 0
- 26 740 32 763 44 783 c 0
- 62 814 98 843 149 843 c 0
- 202 843 239 807 265 782 c 0
- 283 765 293 756 302 751 c 0
- 309 747 309 746 317 749 c 0
- 327 752 329 756 331 759 c 0
- 334 765 337 773 341 792 c 0
- 346 816 367 832 390 832 c 0
- 420 832 440 808 440 782 c 0
- 440 779 440 774 439 771 c 0
- 435 753 430 729 417 707 c 0
- 398 676 360 648 310 648 c 0
- 258 648 222 684 195 709 c 0
- 177 726 167 735 158 740 c 0
- 147 746 135 741 130 733 c 0
- 126 727 124 718 119 698 c 0
- 113 675 93 659 70 659 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("tenpo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-390 650 m 0
- 390 727 327 790 250 790 c 0
- 173 790 110 727 110 650 c 0
- 110 573 173 510 250 510 c 0
- 327 510 390 573 390 650 c 0
-490 650 m 0
- 490 517 383 410 250 410 c 0
- 117 410 10 517 10 650 c 0
- 10 783 117 890 250 890 c 0
- 383 890 490 783 490 650 c 0
-300 730 m 2
- 300 700 l 1
- 328 700 350 678 350 650 c 0
- 350 622 328 600 300 600 c 2
- 250 600 l 2
- 222 600 200 622 200 650 c 2
- 200 730 l 2
- 200 758 222 780 250 780 c 0
- 278 780 300 758 300 730 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("toki", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-379 857 m 0
- 409 857 429 831 429 806 c 0
- 429 798 427 789 423 781 c 2
- 399 737 l 2
- 390 721 374 712 357 712 c 0
- 327 712 307 739 307 764 c 0
- 307 772 309 781 313 789 c 2
- 337 832 l 2
- 346 848 362 857 379 857 c 0
-71 806 m 0
- 71 831 91 857 121 857 c 0
- 138 857 154 848 163 832 c 2
- 187 789 l 2
- 191 781 193 772 193 764 c 0
- 193 739 173 712 143 712 c 0
- 126 712 110 721 101 737 c 2
- 77 781 l 2
- 73 789 71 798 71 806 c 0
-250 890 m 0
- 278 890 300 868 300 840 c 2
- 300 790 l 2
- 300 762 278 740 250 740 c 0
- 222 740 200 762 200 790 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
-88 572 m 0
- 88 661 160 734 249 734 c 0
- 338 734 411 661 411 572 c 0
- 411 483 338 410 249 410 c 0
- 160 410 88 483 88 572 c 0
-249 634 m 0
- 215 634 188 607 188 572 c 0
- 188 537 215 510 249 510 c 0
- 283 510 311 537 311 572 c 0
- 311 607 283 634 249 634 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("tomo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-142 688 m 1
- 142 590 l 1
- 358 590 l 1
- 358 688 l 1
- 250 776 l 1
- 142 688 l 1
-218 879 m 2
- 227 886 239 890 250 890 c 0
- 261 890 273 886 282 879 c 2
- 440 750 l 2
- 452 741 458 726 458 711 c 2
- 458 540 l 2
- 458 512 436 490 408 490 c 2
- 92 490 l 2
- 64 490 42 512 42 540 c 2
- 42 711 l 2
- 42 726 48 741 60 750 c 2
- 218 879 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("tu", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-150 439 m 0
- 122 439 100 461 100 489 c 2
- 100 811 l 2
- 100 839 122 861 150 861 c 0
- 178 861 200 839 200 811 c 2
- 200 489 l 2
- 200 461 178 439 150 439 c 0
-350 439 m 0
- 322 439 300 461 300 489 c 2
- 300 811 l 2
- 300 839 322 861 350 861 c 0
- 378 861 400 839 400 811 c 2
- 400 489 l 2
- 400 461 378 439 350 439 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("unpa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-217 547 m 1
- 220 524 227 510 250 510 c 0
- 273 510 280 525 283 547 c 1
- 272 546 261 546 250 546 c 0
- 239 546 228 546 217 547 c 1
-375 706 m 0
- 375 728 360 740 334 740 c 0
- 330 740 325 739 320 738 c 1
- 334 716 347 693 358 668 c 1
- 371 679 375 694 375 706 c 0
-250 661 m 1
- 247 656 244 651 242 646 c 1
- 245 646 247 646 250 646 c 0
- 253 646 255 646 258 646 c 1
- 256 651 253 656 250 661 c 1
-166 740 m 0
- 140 740 125 728 125 706 c 0
- 125 694 129 679 142 668 c 1
- 153 693 166 716 180 738 c 1
- 175 739 170 740 166 740 c 0
-475 706 m 0
- 475 652 443 593 384 568 c 0
- 384 566 384 565 384 563 c 0
- 384 525 374 486 351 457 c 0
- 327 427 291 410 250 410 c 2
- 250 410 l 0
- 209 410 173 427 149 457 c 0
- 126 486 116 525 116 563 c 0
- 116 565 116 566 116 568 c 0
- 57 593 25 652 25 706 c 0
- 25 788 91 840 166 840 c 0
- 194 840 225 831 250 815 c 1
- 275 831 306 840 334 840 c 0
- 409 840 475 788 475 706 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("uta", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-300 460 m 0
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 0
- 200 488 222 510 250 510 c 0
- 278 510 300 488 300 460 c 0
-156 714 m 1
- 173 675 210 650 250 650 c 0
- 290 650 327 675 344 714 c 1
- 156 714 l 1
-45 764 m 0
- 45 792 67 814 95 814 c 2
- 405 814 l 2
- 433 814 455 792 455 764 c 0
- 455 649 366 550 250 550 c 0
- 134 550 45 649 45 764 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("utala", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-364 852 m 0
- 392 852 414 828 414 802 c 0
- 414 792 411 781 404 772 c 2
- 312 650 l 1
- 347 604 l 1
- 355 628 l 2
- 362 649 381 662 402 662 c 0
- 432 662 452 637 452 612 c 0
- 452 607 451 601 449 596 c 2
- 411 482 l 2
- 405 463 388 448 364 448 c 0
- 348 448 334 455 324 468 c 2
- 250 567 l 1
- 176 468 l 2
- 166 455 152 448 136 448 c 0
- 112 448 95 463 89 482 c 2
- 51 596 l 2
- 49 601 48 607 48 612 c 0
- 48 637 68 662 98 662 c 0
- 119 662 138 649 145 628 c 2
- 153 604 l 1
- 188 650 l 1
- 96 772 l 2
- 89 781 86 792 86 802 c 0
- 86 828 108 852 136 852 c 0
- 151 852 166 845 176 832 c 2
- 250 734 l 1
- 324 832 l 2
- 334 845 349 852 364 852 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("walo", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-285 672 m 2
- 250 733 l 1
- 214 670 l 2
- 213 668 213 668 212 666 c 2
- 176 603 l 1
- 324 603 l 1
- 289 664 l 2
- 287 666 286 669 285 672 c 2
-35 742 m 0
- 35 771 60 792 85 792 c 0
- 94 792 102 790 110 785 c 2
- 151 761 l 1
- 207 858 l 2
- 216 874 232 883 250 883 c 0
- 268 883 284 874 293 858 c 2
- 349 761 l 1
- 390 785 l 2
- 398 790 406 792 415 792 c 0
- 440 792 465 771 465 742 c 0
- 465 725 456 707 440 698 c 2
- 399 675 l 1
- 454 578 l 2
- 458 570 461 562 461 553 c 0
- 461 524 437 503 411 503 c 2
- 89 503 l 2
- 63 503 39 524 39 553 c 0
- 39 562 42 570 46 578 c 2
- 101 674 l 1
- 60 698 l 2
- 44 707 35 725 35 742 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("wan", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-249 890 m 0
- 279 890 299 866 299 840 c 2
- 299 460 l 2
- 299 432 277 410 249 410 c 0
- 221 410 199 432 199 460 c 2
- 199 719 l 1
- 166 686 l 2
- 156 676 144 671 131 671 c 0
- 104 671 81 694 81 721 c 0
- 81 734 86 746 96 756 c 2
- 214 875 l 2
- 224 885 236 890 249 890 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("waso", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-155 690 m 0
- 155 662 133 640 105 640 c 0
- 77 640 55 662 55 690 c 0
- 55 718 77 740 105 740 c 0
- 133 740 155 718 155 690 c 0
-265 690 m 0
- 265 662 243 640 215 640 c 0
- 187 640 165 662 165 690 c 0
- 165 718 187 740 215 740 c 0
- 243 740 265 718 265 690 c 0
-185 840 m 0
- 185 866 207 890 235 890 c 0
- 250 890 265 882 275 869 c 2
- 465 608 l 2
- 471 599 475 589 475 579 c 0
- 475 549 451 529 425 529 c 2
- 195 529 l 1
- 195 490 l 2
- 195 462 173 440 145 440 c 0
- 117 440 95 462 95 490 c 2
- 95 579 l 2
- 95 607 117 629 145 629 c 2
- 327 629 l 1
- 195 811 l 2
- 189 820 185 830 185 840 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("wawa", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 612 m 0
- 230 612 214 596 214 576 c 0
- 214 556 230 540 250 540 c 0
- 270 540 286 556 286 576 c 0
- 286 596 270 612 250 612 c 0
-153 480 m 1
- 144 471 133 465 117 465 c 0
- 93 465 71 482 67 507 c 2
- 31 732 l 2
- 31 735 30 737 30 740 c 0
- 30 766 50 790 80 790 c 0
- 104 790 125 773 129 748 c 2
- 144 661 l 1
- 169 692 207 712 250 712 c 0
- 293 712 331 692 356 661 c 1
- 371 748 l 2
- 375 773 396 790 420 790 c 0
- 450 790 470 766 470 740 c 0
- 470 737 469 735 469 732 c 2
- 433 507 l 2
- 429 482 407 465 383 465 c 0
- 367 465 356 471 347 480 c 1
- 322 455 288 440 250 440 c 0
- 212 440 178 455 153 480 c 1"#,
-),
-GlyphDescriptor::new_with_anchor("weka", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-61 779 m 0
- 61 806 85 829 111 829 c 0
- 123 829 135 825 145 816 c 2
- 218 750 l 2
- 229 740 234 727 234 713 c 0
- 234 686 210 663 184 663 c 0
- 172 663 160 667 150 676 c 2
- 78 742 l 2
- 67 752 61 765 61 779 c 0
-389 829 m 0
- 415 829 439 806 439 779 c 0
- 439 765 433 752 422 742 c 2
- 349 675 l 2
- 339 666 327 662 315 662 c 0
- 289 662 265 685 265 712 c 0
- 265 726 271 739 282 749 c 2
- 355 816 l 2
- 365 825 377 829 389 829 c 0
-184 637 m 0
- 210 637 234 614 234 587 c 0
- 234 573 229 560 218 550 c 2
- 145 484 l 2
- 135 475 123 471 111 471 c 0
- 85 471 61 494 61 521 c 0
- 61 535 67 548 78 558 c 2
- 151 624 l 2
- 161 633 172 637 184 637 c 0
-266 587 m 0
- 266 614 290 637 316 637 c 0
- 328 637 340 633 350 624 c 2
- 422 558 l 2
- 433 548 439 535 439 521 c 0
- 439 494 415 471 389 471 c 0
- 377 471 365 475 355 484 c 2
- 282 550 l 2
- 271 560 266 573 266 587 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("wile", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-120 838 m 0
- 148 838 170 813 170 787 c 0
- 170 776 166 766 159 757 c 0
- 140 732 120 695 120 643 c 0
- 120 611 126 586 135 571 c 0
- 142 559 153 553 170 553 c 0
- 182 553 198 568 200 580 c 0
- 202 606 222 626 250 626 c 0
- 278 626 298 606 300 580 c 0
- 302 568 318 553 330 553 c 0
- 347 553 358 559 365 571 c 0
- 374 586 380 611 380 643 c 0
- 380 695 360 732 341 757 c 0
- 334 766 330 776 330 787 c 0
- 330 813 352 838 380 838 c 0
- 395 838 410 831 420 818 c 0
- 448 781 480 723 480 643 c 0
- 480 544 432 453 330 453 c 0
- 301 453 272 464 250 482 c 1
- 228 464 199 453 170 453 c 0
- 68 453 20 544 20 643 c 0
- 20 723 52 781 80 818 c 0
- 90 831 105 838 120 838 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("namako", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-411 857 m 0
- 441 857 461 831 461 806 c 0
- 461 798 458 789 454 781 c 2
- 430 738 l 2
- 421 722 405 713 388 713 c 0
- 358 713 338 739 338 764 c 0
- 338 772 340 781 344 789 c 2
- 369 832 l 2
- 378 848 394 857 411 857 c 0
-101 806 m 0
- 101 831 121 857 151 857 c 0
- 168 857 184 848 193 832 c 2
- 217 789 l 2
- 221 781 224 772 224 764 c 0
- 224 739 203 713 173 713 c 0
- 156 713 140 722 131 738 c 2
- 107 781 l 2
- 103 789 101 798 101 806 c 0
-281 890 m 0
- 309 890 331 868 331 840 c 2
- 331 790 l 2
- 331 762 309 740 281 740 c 0
- 253 740 231 762 231 790 c 2
- 231 840 l 2
- 231 868 253 890 281 890 c 0
-89 410 m 0
- 63 410 39 430 39 460 c 0
- 39 476 47 491 60 501 c 0
- 111 537 130 555 139 571 c 0
- 147 585 150 602 150 650 c 0
- 150 678 172 700 200 700 c 0
- 228 700 250 678 250 650 c 0
- 250 604 248 562 227 524 c 1
- 253 531 271 540 282 550 c 0
- 304 568 313 597 313 650 c 0
- 313 678 335 700 363 700 c 0
- 391 700 413 678 413 650 c 0
- 413 588 403 522 346 474 c 0
- 293 429 208 410 89 410 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("kin", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-170 653 m 0
- 181 653 191 648 200 643 c 1
- 200 650 l 2
- 200 678 222 700 250 700 c 0
- 278 700 300 678 300 650 c 2
- 300 643 l 1
- 309 648 319 653 330 653 c 0
- 355 653 379 632 379 603 c 0
- 379 581 365 566 347 555 c 1
- 365 544 379 529 379 507 c 0
- 379 478 355 457 330 457 c 0
- 319 457 309 462 300 467 c 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 467 l 1
- 191 462 181 457 170 457 c 0
- 145 457 122 478 122 507 c 0
- 122 529 135 544 153 555 c 1
- 135 566 122 581 122 603 c 0
- 122 632 145 653 170 653 c 0
-300 840 m 2
- 300 760 l 2
- 300 732 278 710 250 710 c 0
- 222 710 200 732 200 760 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2"#,
-),
-GlyphDescriptor::new_with_anchor("oko", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-369 659 m 1
- 364 657 357 654 357 650 c 0
- 357 646 364 643 369 641 c 1
- 370 644 370 647 370 650 c 0
- 370 653 370 656 369 659 c 1
-190 650 m 1
- 239 626 283 602 326 577 c 0
- 327 578 l 1
- 299 593 282 618 282 650 c 0
- 282 682 299 707 327 722 c 1
- 326 723 l 0
- 283 698 239 674 190 650 c 1
-364 854 m 0
- 389 854 414 833 414 804 c 0
- 414 796 412 790 409 783 c 1
- 447 745 470 700 470 650 c 0
- 470 600 447 555 409 517 c 1
- 412 510 414 504 414 496 c 0
- 414 467 389 446 364 446 c 0
- 351 446 339 452 329 458 c 0
- 252 506 134 574 45 602 c 0
- 26 608 10 625 10 650 c 0
- 10 675 26 692 45 698 c 0
- 137 727 258 796 337 846 c 0
- 345 851 355 854 364 854 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("kipisi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-400 550 m 0
- 400 522 378 500 350 500 c 0
- 322 500 300 522 300 550 c 0
- 300 578 322 600 350 600 c 0
- 378 600 400 578 400 550 c 0
-200 750 m 0
- 200 722 178 700 150 700 c 0
- 122 700 100 722 100 750 c 0
- 100 778 122 800 150 800 c 0
- 178 800 200 778 200 750 c 0
-384 834 m 0
- 411 834 434 811 434 784 c 0
- 434 771 429 758 419 748 c 2
- 152 481 l 2
- 142 471 129 466 116 466 c 0
- 89 466 66 489 66 516 c 0
- 66 529 71 542 81 552 c 2
- 348 819 l 2
- 358 829 371 834 384 834 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("leko", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-180 670 m 2
- 180 698 202 720 230 720 c 2
- 270 720 l 2
- 298 720 320 698 320 670 c 2
- 320 630 l 2
- 320 602 298 580 270 580 c 2
- 230 580 l 2
- 202 580 180 602 180 630 c 2
- 180 670 l 2
-165 735 m 1
- 165 565 l 1
- 335 565 l 1
- 335 735 l 1
- 165 735 l 1
-65 785 m 2
- 65 813 87 835 115 835 c 2
- 385 835 l 2
- 413 835 435 813 435 785 c 2
- 435 515 l 2
- 435 487 413 465 385 465 c 2
- 115 465 l 2
- 87 465 65 487 65 515 c 2
- 65 785 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("monsuta", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-489 608 m 0
- 489 578 459 547 422 561 c 1
- 415 531 l 2
- 410 508 389 492 366 492 c 0
- 342 492 322 509 317 532 c 2
- 313 551 l 1
- 299 467 l 2
- 295 443 274 425 250 425 c 0
- 226 425 205 443 201 467 c 2
- 187 551 l 1
- 183 532 l 2
- 178 509 158 492 134 492 c 0
- 111 492 90 508 85 531 c 2
- 78 561 l 1
- 41 547 11 578 11 608 c 0
- 11 612 11 615 12 619 c 2
- 41 752 l 2
- 46 775 66 792 90 792 c 0
- 106 792 121 784 130 772 c 1
- 143 835 l 2
- 148 858 168 875 192 875 c 0
- 217 875 237 857 241 833 c 2
- 250 780 l 1
- 259 833 l 2
- 263 857 283 875 308 875 c 0
- 332 875 352 858 357 835 c 2
- 370 772 l 1
- 379 784 394 792 410 792 c 0
- 434 792 454 775 459 752 c 2
- 488 619 l 2
- 489 615 489 612 489 608 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("tonsi", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 710 m 0
- 222 710 197 687 197 655 c 0
- 197 623 222 599 250 599 c 0
- 278 599 303 623 303 655 c 0
- 303 687 278 710 250 710 c 0
-35 753 m 0
- 35 782 60 802 85 802 c 0
- 93 802 102 801 110 796 c 2
- 150 772 l 1
- 177 796 211 810 250 810 c 0
- 289 810 323 796 350 772 c 1
- 390 796 l 2
- 398 801 407 802 415 802 c 0
- 440 802 465 782 465 753 c 0
- 465 735 456 717 440 708 c 2
- 400 685 l 1
- 402 675 403 665 403 655 c 0
- 403 588 360 529 300 508 c 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 508 l 1
- 140 529 97 588 97 655 c 0
- 97 665 98 675 100 685 c 1
- 60 708 l 2
- 44 717 35 735 35 753 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("jasima", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-70 649 m 0
- 40 649 20 673 20 699 c 0
- 20 703 20 706 21 710 c 0
- 25 728 30 752 44 774 c 0
- 63 805 101 833 152 833 c 0
- 169 833 185 829 200 823 c 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 746 l 1
- 312 737 332 736 340 749 c 0
- 344 755 347 764 352 784 c 0
- 358 807 378 822 400 822 c 0
- 430 822 450 797 450 772 c 0
- 450 767 449 762 448 757 c 0
- 444 741 438 717 426 697 c 0
- 407 666 369 638 318 638 c 0
- 312 638 306 638 300 639 c 1
- 300 600 l 1
- 317 584 327 575 337 570 c 0
- 349 563 365 570 370 578 c 0
- 374 584 377 593 382 613 c 0
- 388 636 408 651 430 651 c 0
- 460 651 480 626 480 601 c 0
- 480 596 479 591 478 586 c 0
- 474 570 468 546 456 526 c 0
- 437 495 399 467 348 467 c 0
- 331 467 315 471 300 477 c 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 554 l 1
- 193 559 185 564 174 561 c 0
- 163 558 161 554 159 551 c 0
- 156 545 153 536 149 518 c 0
- 144 495 123 478 100 478 c 0
- 70 478 50 502 50 528 c 0
- 50 532 50 535 51 539 c 0
- 55 557 60 581 74 603 c 0
- 93 634 131 662 182 662 c 0
- 188 662 194 662 200 661 c 1
- 200 700 l 1
- 182 716 171 725 162 730 c 0
- 149 737 133 728 129 722 c 0
- 126 716 123 707 119 689 c 0
- 114 666 93 649 70 649 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("soko", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-391 711 m 1
- 366 760 323 790 250 790 c 0
- 177 790 135 760 110 711 c 1
- 391 711 l 1
-511 661 m 0
- 511 633 488 611 461 611 c 2
- 300 611 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 611 l 1
- 40 611 l 2
- 13 611 -10 633 -10 661 c 0
- -10 664 -10 668 -9 671 c 0
- 5 737 34 793 80 832 c 0
- 126 871 184 890 250 890 c 0
- 316 890 375 871 421 832 c 0
- 467 793 496 737 510 671 c 0
- 511 668 511 664 511 661 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("meso", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-300 650 m 0
- 300 622 278 600 250 600 c 0
- 222 600 200 622 200 650 c 0
- 200 678 222 700 250 700 c 0
- 278 700 300 678 300 650 c 0
-393 825 m 0
- 421 825 443 803 443 775 c 2
- 443 525 l 2
- 443 497 421 475 393 475 c 0
- 365 475 343 497 343 525 c 2
- 343 775 l 2
- 343 803 365 825 393 825 c 0
-108 825 m 0
- 136 825 158 803 158 775 c 2
- 158 525 l 2
- 158 497 136 475 108 475 c 0
- 80 475 58 497 58 525 c 2
- 58 775 l 2
- 58 803 80 825 108 825 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("epiku", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 891 m 0
- 278 891 300 869 300 841 c 2
- 300 740 l 2
- 300 712 278 690 250 690 c 0
- 222 690 200 712 200 740 c 2
- 200 841 l 2
- 200 869 222 891 250 891 c 0
-66 791 m 0
- 66 816 86 841 116 841 c 0
- 136 841 154 830 162 811 c 2
- 188 749 l 2
- 191 743 192 736 192 730 c 0
- 192 705 172 680 142 680 c 0
- 122 680 104 691 96 710 c 2
- 70 772 l 2
- 67 778 66 785 66 791 c 0
-358 680 m 0
- 328 680 308 705 308 730 c 0
- 308 736 309 743 312 749 c 2
- 337 811 l 2
- 345 830 364 842 384 842 c 0
- 414 842 434 816 434 791 c 0
- 434 785 433 778 430 772 c 2
- 404 710 l 2
- 396 691 378 680 358 680 c 0
-250 510 m 0
- 307 510 354 557 354 614 c 0
- 354 642 376 664 404 664 c 0
- 432 664 454 642 454 614 c 0
- 454 501 363 410 250 410 c 0
- 137 410 46 501 46 614 c 0
- 46 642 68 664 96 664 c 0
- 124 664 146 642 146 614 c 0
- 146 557 193 510 250 510 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("kokosila", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-374 852 m 0
- 404 852 424 827 424 802 c 0
- 424 796 423 789 420 783 c 2
- 409 757 l 2
- 401 738 383 726 363 726 c 0
- 333 726 313 751 313 776 c 0
- 313 782 314 789 317 795 c 2
- 328 821 l 2
- 336 840 354 852 374 852 c 0
-75 802 m 0
- 75 827 95 852 125 852 c 0
- 144 852 162 841 170 823 c 2
- 182 797 l 2
- 185 790 187 783 187 776 c 0
- 187 751 167 726 137 726 c 0
- 118 726 100 737 92 755 c 2
- 80 781 l 2
- 77 788 75 795 75 802 c 0
-316 561 m 1
- 232 512 l 1
- 237 511 244 510 250 510 c 0
- 282 510 308 532 316 561 c 1
-183 599 m 1
- 267 648 l 1
- 261 649 256 650 250 650 c 0
- 218 650 191 629 183 599 c 1
-119 455 m 0
- 94 455 69 475 69 504 c 0
- 69 517 75 531 85 541 c 1
- 82 554 80 566 80 580 c 0
- 80 674 156 750 250 750 c 0
- 295 750 336 732 366 703 c 1
- 371 704 376 706 381 706 c 0
- 406 706 431 685 431 656 c 0
- 431 642 425 629 415 619 c 1
- 418 607 419 593 419 580 c 0
- 419 486 344 410 250 410 c 0
- 205 410 163 427 133 456 c 1
- 128 455 124 455 119 455 c 0
-250 890 m 0
- 278 890 300 868 300 840 c 2
- 300 805 l 2
- 300 777 278 755 250 755 c 0
- 222 755 200 777 200 805 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("lanpan", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-322 535 m 0
- 308 535 297 546 297 560 c 0
- 297 574 308 585 322 585 c 0
- 336 585 347 574 347 560 c 0
- 347 546 336 535 322 535 c 0
-226 752 m 0
- 243 752 257 767 257 784 c 0
- 257 801 243 815 226 815 c 0
- 209 815 194 801 194 784 c 0
- 194 767 209 752 226 752 c 0
-30 604 m 2
- 30 677 61 731 121 765 c 1
- 120 771 119 778 119 784 c 0
- 119 843 167 890 226 890 c 0
- 285 890 332 843 332 784 c 0
- 332 725 285 677 226 677 c 0
- 211 677 196 680 183 686 c 1
- 171 679 l 2
- 137 661 130 642 130 604 c 0
- 130 592 134 584 137 581 c 0
- 141 577 148 574 160 574 c 0
- 170 574 174 576 179 581 c 0
- 187 588 194 600 207 621 c 0
- 237 672 284 697 330 697 c 0
- 391 697 436 659 451 610 c 0
- 455 598 456 586 456 573 c 0
- 456 549 449 525 437 501 c 0
- 428 484 411 474 393 474 c 0
- 363 474 343 499 343 524 c 0
- 343 539 356 562 356 573 c 0
- 356 590 340 601 321 595 c 0
- 313 593 302 586 293 570 c 0
- 282 551 268 527 248 509 c 0
- 226 488 197 474 160 474 c 0
- 125 474 91 487 67 511 c 0
- 43 535 30 569 30 604 c 2
- 30 604 l 2"#,
-),
-GlyphDescriptor::new_with_anchor("n", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-250 890 m 0
- 278 890 300 868 300 840 c 2
- 300 740 l 2
- 300 712 278 690 250 690 c 0
- 222 690 200 712 200 740 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
-250 580 m 0
- 231 580 215 564 215 545 c 2
- 215 480 l 2
- 215 452 193 430 165 430 c 0
- 137 430 115 452 115 480 c 2
- 115 545 l 2
- 115 620 175 680 250 680 c 0
- 325 680 385 620 385 545 c 2
- 385 480 l 2
- 385 452 363 430 335 430 c 0
- 307 430 285 452 285 480 c 2
- 285 545 l 2
- 285 564 269 580 250 580 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("misikeke", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-204 602 m 1
- 204 556 l 2
- 204 531 225 510 250 510 c 0
- 275 510 296 531 296 556 c 2
- 296 602 l 1
- 204 602 l 1
-296 702 m 1
- 296 747 l 2
- 296 772 275 793 250 793 c 0
- 225 793 204 772 204 747 c 2
- 204 702 l 1
- 296 702 l 1
-250 893 m 0
- 330 893 396 827 396 747 c 2
- 396 556 l 2
- 396 476 330 410 250 410 c 0
- 170 410 104 476 104 556 c 2
- 104 747 l 2
- 104 827 170 893 250 893 c 0"#,
-),
-GlyphDescriptor::new_with_anchor("ku", Anchor::new(AnchorType::Mark, (250, 650)),
-r#"
-325 677 m 1
- 325 733 l 1
- 271 698 l 1
- 325 677 l 1
-259 554 m 1
- 325 554 l 1
- 325 624 l 1
- 246 653 l 1
- 259 554 l 1
-175 554 m 1
- 209 554 l 1
- 192 688 l 2
- 191 697 195 707 203 712 c 2
- 254 746 l 1
- 175 746 l 1
- 175 554 l 1
-125 846 m 2
- 375 846 l 2
- 403 846 425 824 425 796 c 2
- 425 504 l 2
- 425 476 403 454 375 454 c 2
- 125 454 l 2
- 97 454 75 476 75 504 c 2
- 75 796 l 2
- 75 824 97 846 125 846 c 2
-316 592 m 0
- 316 578 305 567 291 567 c 0
- 277 567 266 578 266 592 c 0
- 266 606 277 617 291 617 c 0
- 305 617 316 606 316 592 c 0"#,
+ 290 546 384 640 500 640 c 0
+ 616 640 710 546 710 430 c 2
+ 710 300 l 2
+ 710 272 688 250 660 250 c 0
+ 632 250 610 272 610 300 c 2
+ 610 430 l 2
+ 610 491 561 540 500 540 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("mi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+540 500 m 0
+ 540 522 522 540 500 540 c 0
+ 478 540 460 522 460 500 c 0
+ 460 478 478 460 500 460 c 0
+ 522 460 540 478 540 500 c 0
+521 210 m 0
+ 521 185 501 160 471 160 c 0
+ 434 160 424 193 414 225 c 0
+ 391 298 360 409 360 500 c 0
+ 360 577 423 640 500 640 c 0
+ 577 640 640 577 640 500 c 0
+ 640 423 577 360 500 360 c 0
+ 493 360 487 360 480 361 c 1
+ 491 313 505 264 518 226 c 0
+ 520 221 521 215 521 210 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("mije", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+426 466 m 0
+ 426 425 459 392 500 392 c 0
+ 541 392 574 425 574 466 c 0
+ 574 507 541 540 500 540 c 0
+ 459 540 426 507 426 466 c 0
+657 391 m 1
+ 681 387 700 367 700 342 c 2
+ 700 282 l 2
+ 700 254 678 232 650 232 c 0
+ 622 232 600 254 600 282 c 2
+ 600 292 l 1
+ 400 292 l 1
+ 400 282 l 2
+ 400 254 378 232 350 232 c 0
+ 322 232 300 254 300 282 c 2
+ 300 342 l 2
+ 300 367 319 387 343 391 c 1
+ 332 414 326 439 326 466 c 0
+ 326 562 404 640 500 640 c 0
+ 596 640 674 562 674 466 c 0
+ 674 439 668 414 657 391 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("moku", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+499 489 m 0
+ 511 489 525 496 536 510 c 1
+ 461 510 l 1
+ 472 496 487 489 499 489 c 0
+312 303 m 0
+ 312 329 333 353 362 353 c 0
+ 368 353 374 352 380 350 c 1
+ 393 373 411 392 433 405 c 1
+ 379 434 346 496 346 560 c 0
+ 346 588 368 610 396 610 c 2
+ 602 610 l 2
+ 630 610 652 588 652 560 c 0
+ 652 498 621 438 569 408 c 1
+ 617 382 647 327 647 272 c 2
+ 647 236 l 2
+ 647 208 625 186 597 186 c 0
+ 569 186 547 208 547 236 c 2
+ 547 272 l 2
+ 547 305 523 324 503 324 c 0
+ 483 324 460 305 460 272 c 2
+ 460 236 l 2
+ 460 210 440 186 410 186 c 0
+ 394 186 379 194 369 207 c 2
+ 321 274 l 2
+ 315 283 312 293 312 303 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("moli", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+640 400 m 0
+ 640 477 577 540 500 540 c 0
+ 423 540 360 477 360 400 c 0
+ 360 323 423 260 500 260 c 0
+ 577 260 640 323 640 400 c 0
+740 400 m 0
+ 740 267 633 160 500 160 c 0
+ 367 160 260 267 260 400 c 0
+ 260 533 367 640 500 640 c 0
+ 633 640 740 533 740 400 c 0
+520 425 m 0
+ 520 438 532 450 545 450 c 0
+ 551 450 558 448 563 443 c 2
+ 570 435 l 1
+ 577 443 l 2
+ 582 448 589 450 595 450 c 0
+ 608 450 620 438 620 425 c 0
+ 620 419 618 412 613 407 c 2
+ 605 400 l 1
+ 613 393 l 2
+ 618 388 620 381 620 375 c 0
+ 620 362 608 350 595 350 c 0
+ 589 350 582 352 577 357 c 2
+ 570 365 l 1
+ 563 357 l 2
+ 558 352 551 350 545 350 c 0
+ 532 350 520 362 520 375 c 0
+ 520 381 522 388 527 393 c 2
+ 535 400 l 1
+ 527 407 l 2
+ 522 412 520 419 520 425 c 0
+380 425 m 0
+ 380 438 392 450 405 450 c 0
+ 411 450 418 448 423 443 c 2
+ 430 435 l 1
+ 437 443 l 2
+ 442 448 449 450 455 450 c 0
+ 468 450 480 438 480 425 c 0
+ 480 419 478 412 473 407 c 2
+ 465 400 l 1
+ 473 393 l 2
+ 478 388 480 381 480 375 c 0
+ 480 362 468 350 455 350 c 0
+ 449 350 442 352 437 357 c 2
+ 430 365 l 1
+ 423 357 l 2
+ 418 352 411 350 405 350 c 0
+ 392 350 380 362 380 375 c 0
+ 380 381 382 388 387 393 c 2
+ 395 400 l 1
+ 387 407 l 2
+ 382 412 380 419 380 425 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("monsi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+310 350 m 0
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 0
+ 338 450 360 428 360 400 c 0
+ 360 372 338 350 310 350 c 0
+640 570 m 0
+ 640 542 618 520 590 520 c 2
+ 490 520 l 1
+ 490 280 l 1
+ 590 280 l 2
+ 618 280 640 258 640 230 c 0
+ 640 202 618 180 590 180 c 2
+ 440 180 l 2
+ 412 180 390 202 390 230 c 2
+ 390 570 l 2
+ 390 598 412 620 440 620 c 2
+ 590 620 l 2
+ 618 620 640 598 640 570 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("mu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+575 335 m 0
+ 575 376 541 410 500 410 c 0
+ 459 410 425 376 425 335 c 0
+ 425 294 459 260 500 260 c 0
+ 541 260 575 294 575 335 c 0
+620 470 m 0
+ 631 470 640 479 640 490 c 0
+ 640 501 631 510 620 510 c 0
+ 609 510 600 501 600 490 c 0
+ 600 479 609 470 620 470 c 0
+400 490 m 0
+ 400 501 391 510 380 510 c 0
+ 369 510 360 501 360 490 c 0
+ 360 479 369 470 380 470 c 0
+ 391 470 400 479 400 490 c 0
+473 508 m 1
+ 482 509 491 510 500 510 c 0
+ 509 510 518 509 527 508 c 1
+ 535 552 574 585 620 585 c 0
+ 672 585 715 542 715 490 c 0
+ 715 452 693 419 661 404 c 1
+ 670 383 675 360 675 335 c 0
+ 675 238 597 160 500 160 c 0
+ 403 160 325 238 325 335 c 0
+ 325 360 330 383 339 404 c 1
+ 307 419 285 452 285 490 c 0
+ 285 542 328 585 380 585 c 0
+ 426 585 465 552 473 508 c 1
+500 267 m 0
+ 477 267 459 285 459 308 c 0
+ 459 331 477 350 500 350 c 0
+ 523 350 542 331 542 308 c 0
+ 542 285 523 267 500 267 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("mun", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+382 605 m 0
+ 418 627 460 640 505 640 c 0
+ 637 640 743 532 743 400 c 0
+ 743 268 637 160 505 160 c 0
+ 460 160 418 173 382 195 c 0
+ 367 204 358 220 358 237 c 0
+ 358 260 372 279 392 285 c 0
+ 441 301 477 325 477 400 c 0
+ 477 475 441 499 392 515 c 0
+ 372 521 358 540 358 563 c 0
+ 358 580 367 596 382 605 c 0
+534 537 m 1
+ 560 504 577 459 577 400 c 0
+ 577 341 560 296 534 263 c 1
+ 596 277 643 332 643 400 c 0
+ 643 468 596 523 534 537 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("musi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+613 459 m 0
+ 627 459 638 470 638 484 c 0
+ 638 498 627 509 613 509 c 0
+ 599 509 588 498 588 484 c 0
+ 588 470 599 459 613 459 c 0
+387 459 m 0
+ 401 459 412 470 412 484 c 0
+ 412 498 401 509 387 509 c 0
+ 373 509 362 498 362 484 c 0
+ 362 470 373 459 387 459 c 0
+437 397 m 1
+ 437 344 l 2
+ 437 307 455 277 479 265 c 0
+ 486 262 493 260 500 260 c 0
+ 540 260 563 303 563 344 c 2
+ 563 397 l 1
+ 533 414 513 447 513 484 c 0
+ 513 539 558 584 613 584 c 0
+ 668 584 713 539 713 484 c 0
+ 713 447 693 414 663 397 c 1
+ 663 344 l 2
+ 663 263 621 202 565 175 c 0
+ 545 165 523 160 500 160 c 0
+ 421 160 369 216 348 276 c 0
+ 340 298 337 321 337 344 c 2
+ 337 397 l 1
+ 307 414 287 447 287 484 c 0
+ 287 539 332 584 387 584 c 0
+ 442 584 487 539 487 484 c 0
+ 487 447 467 414 437 397 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("mute", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+640 220 m 0
+ 612 220 590 242 590 270 c 2
+ 590 530 l 2
+ 590 558 612 580 640 580 c 0
+ 668 580 690 558 690 530 c 2
+ 690 270 l 2
+ 690 242 668 220 640 220 c 0
+360 220 m 0
+ 332 220 310 242 310 270 c 2
+ 310 530 l 2
+ 310 558 332 580 360 580 c 0
+ 388 580 410 558 410 530 c 2
+ 410 270 l 2
+ 410 242 388 220 360 220 c 0
+500 223 m 0
+ 472 223 450 245 450 273 c 2
+ 450 527 l 2
+ 450 555 472 577 500 577 c 0
+ 528 577 550 555 550 527 c 2
+ 550 273 l 2
+ 550 245 528 223 500 223 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("nanpa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+482 417 m 1
+ 482 383 l 1
+ 516 383 l 1
+ 516 417 l 1
+ 482 417 l 1
+382 222 m 2
+ 382 283 l 1
+ 322 283 l 2
+ 294 283 272 305 272 333 c 0
+ 272 361 294 383 322 383 c 2
+ 382 383 l 1
+ 382 417 l 1
+ 322 417 l 2
+ 294 417 272 439 272 467 c 0
+ 272 495 294 517 322 517 c 2
+ 382 517 l 1
+ 382 578 l 2
+ 382 606 404 628 432 628 c 0
+ 460 628 482 606 482 578 c 2
+ 482 517 l 1
+ 516 517 l 1
+ 516 578 l 2
+ 516 606 538 628 566 628 c 0
+ 594 628 616 606 616 578 c 2
+ 616 517 l 1
+ 678 517 l 2
+ 706 517 728 495 728 467 c 0
+ 728 439 706 417 678 417 c 2
+ 616 417 l 1
+ 616 383 l 1
+ 678 383 l 2
+ 706 383 728 361 728 333 c 0
+ 728 305 706 283 678 283 c 2
+ 616 283 l 1
+ 616 222 l 2
+ 616 194 594 172 566 172 c 0
+ 538 172 516 194 516 222 c 2
+ 516 283 l 1
+ 482 283 l 1
+ 482 222 l 2
+ 482 194 460 172 432 172 c 0
+ 404 172 382 194 382 222 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("nasa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+737 362 m 0
+ 737 335 715 312 687 312 c 0
+ 660 312 638 333 637 360 c 0
+ 634 434 599 489 551 517 c 0
+ 522 534 478 541 441 526 c 0
+ 383 502 338 419 377 340 c 0
+ 394 305 444 260 492 299 c 0
+ 515 318 536 388 491 402 c 0
+ 487 402 l 0
+ 478 401 482 390 488 377 c 0
+ 491 370 493 363 493 356 c 0
+ 493 331 473 306 443 306 c 0
+ 424 306 406 317 398 335 c 0
+ 388 357 383 379 383 398 c 0
+ 383 419 389 438 399 454 c 0
+ 417 481 442 493 448 495 c 0
+ 541 531 618 445 618 355 c 0
+ 618 278 576 226 524 201 c 0
+ 504 191 482 185 455 185 c 0
+ 369 185 315 238 287 296 c 0
+ 272 326 263 360 263 402 c 0
+ 263 492 307 556 359 594 c 0
+ 391 617 432 635 484 635 c 0
+ 579 635 642 584 682 528 c 0
+ 703 498 720 463 729 423 c 0
+ 734 400 737 386 737 362 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("nasin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+381 302 m 0
+ 354 302 331 325 331 352 c 0
+ 331 365 336 378 346 388 c 2
+ 450 492 l 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 492 l 1
+ 654 388 l 2
+ 664 378 669 365 669 352 c 0
+ 669 325 645 302 618 302 c 0
+ 605 302 593 307 583 317 c 2
+ 550 351 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 351 l 1
+ 416 317 l 2
+ 406 307 394 302 381 302 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("nena", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 540 m 0
+ 459 540 413 498 413 430 c 2
+ 413 270 l 2
+ 413 242 391 220 363 220 c 0
+ 335 220 313 242 313 270 c 2
+ 313 430 l 2
+ 313 538 390 640 500 640 c 0
+ 610 640 687 538 687 430 c 2
+ 687 270 l 2
+ 687 242 665 220 637 220 c 0
+ 609 220 587 242 587 270 c 2
+ 587 430 l 2
+ 587 498 541 540 500 540 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("ni", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+330 329 m 0
+ 330 356 353 379 380 379 c 0
+ 393 379 405 374 415 364 c 2
+ 450 330 l 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 330 l 1
+ 585 364 l 2
+ 595 374 607 379 620 379 c 0
+ 647 379 670 356 670 329 c 0
+ 670 316 665 303 655 293 c 2
+ 535 174 l 2
+ 527 166 515 160 500 160 c 0
+ 485 160 473 166 465 174 c 2
+ 345 293 l 2
+ 335 303 330 316 330 329 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("nimi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+360 400 m 0
+ 360 375 380 355 405 355 c 2
+ 595 355 l 2
+ 620 355 640 375 640 400 c 0
+ 640 425 620 445 595 445 c 2
+ 405 445 l 2
+ 380 445 360 425 360 400 c 0
+405 255 m 2
+ 325 255 260 320 260 400 c 0
+ 260 480 325 545 405 545 c 2
+ 595 545 l 2
+ 675 545 740 480 740 400 c 0
+ 740 320 675 255 595 255 c 2
+ 405 255 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("noka", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+506 605 m 0
+ 535 605 557 582 556 554 c 2
+ 556 553 l 2
+ 555 513 554 463 554 418 c 1
+ 556 418 559 418 561 418 c 0
+ 633 418 707 391 707 315 c 0
+ 707 292 701 258 672 231 c 0
+ 644 205 604 195 554 195 c 0
+ 451 195 426 187 371 200 c 0
+ 348 205 333 226 333 249 c 2
+ 333 555 l 2
+ 333 583 355 605 383 605 c 0
+ 411 605 433 583 433 555 c 2
+ 433 296 l 1
+ 458 295 496 295 554 295 c 0
+ 597 295 606 301 607 310 c 1
+ 596 315 577 318 561 318 c 0
+ 549 318 529 314 506 314 c 0
+ 453 314 454 364 454 414 c 0
+ 454 461 455 514 456 556 c 2
+ 456 556 l 2
+ 457 583 479 605 506 605 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("o", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 160 m 0
+ 425 160 365 220 365 295 c 0
+ 365 370 425 430 500 430 c 0
+ 575 430 635 370 635 295 c 0
+ 635 220 575 160 500 160 c 0
+500 260 m 0
+ 519 260 535 276 535 295 c 0
+ 535 314 519 330 500 330 c 0
+ 481 330 465 314 465 295 c 0
+ 465 276 481 260 500 260 c 0
+500 640 m 0
+ 528 640 550 618 550 590 c 2
+ 550 490 l 2
+ 550 462 528 440 500 440 c 0
+ 472 440 450 462 450 490 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("olin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 389 m 0
+ 481 389 467 401 455 411 c 0
+ 434 429 408 453 391 479 c 0
+ 382 493 370 514 370 539 c 0
+ 370 555 372 573 380 589 c 0
+ 387 603 406 629 440 629 c 0
+ 461 629 475 618 482 612 c 0
+ 490 605 495 598 500 591 c 1
+ 505 598 510 605 518 612 c 0
+ 525 618 539 629 560 629 c 0
+ 594 629 613 603 620 589 c 0
+ 628 573 630 555 630 539 c 0
+ 630 514 618 493 609 479 c 0
+ 588 447 558 420 530 399 c 0
+ 521 392 511 389 500 389 c 0
+500 160 m 0
+ 481 160 467 172 455 182 c 0
+ 434 200 408 224 391 250 c 0
+ 382 264 370 285 370 310 c 0
+ 370 326 372 344 380 360 c 0
+ 387 374 406 400 440 400 c 0
+ 461 400 475 389 482 383 c 0
+ 490 376 495 369 500 362 c 1
+ 505 369 510 376 518 383 c 0
+ 525 389 539 400 560 400 c 0
+ 594 400 613 374 620 360 c 0
+ 628 344 630 326 630 310 c 0
+ 630 285 618 264 609 250 c 0
+ 588 218 558 191 530 170 c 0
+ 521 163 511 160 500 160 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("ona", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+600 440 m 0
+ 578 440 560 422 560 400 c 0
+ 560 378 578 360 600 360 c 0
+ 622 360 640 378 640 400 c 0
+ 640 422 622 440 600 440 c 0
+260 371 m 0
+ 260 401 285 421 310 421 c 0
+ 328 421 337 414 354 409 c 0
+ 380 401 427 388 461 380 c 1
+ 460 387 460 393 460 400 c 0
+ 460 477 523 540 600 540 c 0
+ 677 540 740 477 740 400 c 0
+ 740 323 677 260 600 260 c 0
+ 496 260 375 296 294 324 c 0
+ 273 331 260 350 260 371 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("open", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+427 347 m 1
+ 427 307 l 1
+ 573 307 l 1
+ 573 347 l 1
+ 427 347 l 1
+427 543 m 2
+ 427 447 l 1
+ 573 447 l 1
+ 573 543 l 2
+ 573 571 595 593 623 593 c 0
+ 651 593 673 571 673 543 c 2
+ 673 257 l 2
+ 673 229 651 207 623 207 c 2
+ 377 207 l 2
+ 349 207 327 229 327 257 c 2
+ 327 543 l 2
+ 327 571 349 593 377 593 c 0
+ 405 593 427 571 427 543 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("pakala", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+526 437 m 1
+ 544 435 560 420 560 400 c 0
+ 560 397 559 393 558 390 c 2
+ 535 304 l 1
+ 575 304 l 1
+ 575 496 l 1
+ 542 496 l 1
+ 526 437 l 1
+473 363 m 1
+ 455 365 439 380 439 400 c 0
+ 439 403 440 407 441 410 c 2
+ 464 496 l 1
+ 425 496 l 1
+ 425 304 l 1
+ 457 304 l 1
+ 473 363 l 1
+375 596 m 2
+ 625 596 l 2
+ 653 596 675 574 675 546 c 2
+ 675 254 l 2
+ 675 226 653 204 625 204 c 2
+ 375 204 l 2
+ 347 204 325 226 325 254 c 2
+ 325 546 l 2
+ 325 574 347 596 375 596 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("pali", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+498 465 m 0
+ 519 465 536 481 536 502 c 0
+ 536 523 519 540 498 540 c 0
+ 477 540 460 523 460 502 c 0
+ 460 481 477 465 498 465 c 0
+300 314 m 0
+ 300 339 321 364 350 364 c 0
+ 357 364 365 363 371 360 c 1
+ 379 376 390 391 403 403 c 1
+ 377 428 360 463 360 502 c 0
+ 360 578 422 640 498 640 c 0
+ 574 640 636 578 636 502 c 0
+ 636 464 621 431 596 406 c 1
+ 630 374 650 326 650 279 c 2
+ 650 240 l 2
+ 650 212 628 190 600 190 c 0
+ 572 190 550 212 550 240 c 2
+ 550 279 l 2
+ 550 320 523 343 501 343 c 0
+ 479 343 451 320 451 279 c 2
+ 451 240 l 2
+ 451 214 431 190 401 190 c 0
+ 385 190 369 198 360 212 c 2
+ 309 286 l 2
+ 303 295 300 304 300 314 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("palisa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 540 m 0
+ 496 540 494 534 490 525 c 0
+ 483 506 479 479 479 453 c 2
+ 479 347 l 2
+ 479 316 482 275 498 260 c 0
+ 498 260 499 260 500 260 c 0
+ 504 260 506 266 510 275 c 0
+ 517 294 521 321 521 347 c 2
+ 521 453 l 2
+ 521 484 518 525 502 540 c 0
+ 502 540 501 540 500 540 c 0
+396 561 m 0
+ 410 596 441 640 500 640 c 0
+ 559 640 590 596 604 561 c 0
+ 618 525 621 484 621 453 c 2
+ 621 347 l 2
+ 621 316 618 275 604 239 c 0
+ 590 204 559 160 500 160 c 0
+ 441 160 410 204 396 239 c 0
+ 382 275 379 316 379 347 c 2
+ 379 453 l 2
+ 379 484 382 525 396 561 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pan", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+331 281 m 0
+ 331 310 356 331 381 331 c 0
+ 390 331 399 329 407 324 c 2
+ 500 268 l 1
+ 593 324 l 2
+ 601 329 610 331 619 331 c 0
+ 644 331 669 310 669 281 c 0
+ 669 264 661 247 645 238 c 2
+ 526 167 l 2
+ 518 162 509 160 500 160 c 0
+ 491 160 482 162 474 167 c 2
+ 355 238 l 2
+ 339 247 331 264 331 281 c 0
+331 415 m 0
+ 331 444 356 465 381 465 c 0
+ 390 465 399 462 407 457 c 2
+ 500 402 l 1
+ 593 457 l 2
+ 601 462 610 465 619 465 c 0
+ 644 465 669 444 669 415 c 0
+ 669 398 661 381 645 372 c 2
+ 526 301 l 2
+ 518 296 509 293 500 293 c 0
+ 491 293 482 296 474 301 c 2
+ 355 372 l 2
+ 339 381 331 398 331 415 c 0
+331 548 m 0
+ 331 577 356 598 381 598 c 0
+ 390 598 399 596 407 591 c 2
+ 500 535 l 1
+ 593 591 l 2
+ 601 596 610 598 619 598 c 0
+ 644 598 669 577 669 548 c 0
+ 669 531 661 514 645 505 c 2
+ 526 434 l 2
+ 518 429 509 427 500 427 c 0
+ 491 427 482 429 474 434 c 2
+ 355 505 l 2
+ 339 514 331 531 331 548 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pana", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+631 597 m 0
+ 661 597 681 571 681 546 c 0
+ 681 538 678 529 674 521 c 2
+ 650 477 l 2
+ 641 461 625 452 608 452 c 0
+ 578 452 558 479 558 504 c 0
+ 558 512 560 520 564 528 c 2
+ 589 572 l 2
+ 598 588 614 597 631 597 c 0
+321 546 m 0
+ 321 571 341 597 371 597 c 0
+ 388 597 404 588 413 572 c 2
+ 437 528 l 2
+ 441 520 444 512 444 504 c 0
+ 444 479 424 452 394 452 c 0
+ 377 452 360 461 351 477 c 2
+ 327 521 l 2
+ 323 529 321 538 321 546 c 0
+501 640 m 0
+ 529 640 551 618 551 590 c 2
+ 551 540 l 2
+ 551 512 529 490 501 490 c 0
+ 473 490 451 512 451 540 c 2
+ 451 590 l 2
+ 451 618 473 640 501 640 c 0
+366 372 m 1
+ 386 429 432 485 502 485 c 0
+ 552 485 591 456 615 420 c 0
+ 639 384 652 338 652 290 c 2
+ 652 240 l 2
+ 652 212 630 190 602 190 c 0
+ 574 190 552 212 552 240 c 2
+ 552 290 l 2
+ 552 329 533 385 502 385 c 0
+ 471 385 453 329 453 290 c 2
+ 453 240 l 2
+ 453 214 433 190 403 190 c 0
+ 386 190 369 199 360 214 c 2
+ 308 298 l 2
+ 303 306 300 315 300 324 c 0
+ 300 349 321 374 350 374 c 0
+ 355 374 361 374 366 372 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("pi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+366 584 m 0
+ 394 584 416 562 416 534 c 2
+ 416 316 l 1
+ 634 316 l 2
+ 662 316 684 294 684 266 c 0
+ 684 238 662 216 634 216 c 2
+ 366 216 l 2
+ 338 216 316 238 316 266 c 2
+ 316 534 l 2
+ 316 562 338 584 366 584 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pilin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+408 480 m 0
+ 385 480 367 462 367 439 c 0
+ 367 431 372 415 387 392 c 0
+ 414 352 464 304 500 274 c 1
+ 535 304 587 352 613 392 c 0
+ 628 415 633 431 633 439 c 0
+ 633 462 615 480 592 480 c 0
+ 576 480 555 464 549 450 c 0
+ 544 427 523 411 500 411 c 0
+ 477 411 456 427 451 450 c 0
+ 445 464 424 480 408 480 c 0
+500 160 m 0
+ 484 160 472 169 461 177 c 0
+ 408 218 345 276 304 337 c 0
+ 285 365 267 401 267 439 c 0
+ 267 517 330 580 408 580 c 0
+ 446 580 478 564 500 546 c 1
+ 522 564 554 580 592 580 c 0
+ 670 580 733 517 733 439 c 0
+ 733 401 715 365 696 337 c 0
+ 653 273 587 213 530 170 c 0
+ 521 163 511 160 500 160 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pimeja", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+508 476 m 1
+ 500 490 l 1
+ 492 476 l 1
+ 500 463 l 1
+ 508 476 l 1
+568 355 m 1
+ 578 355 l 1
+ 536 427 l 1
+ 530 416 l 1
+ 568 355 l 1
+491 355 m 1
+ 509 355 l 1
+ 500 369 l 1
+ 491 355 l 1
+432 355 m 1
+ 470 416 l 1
+ 464 427 l 1
+ 422 355 l 1
+ 432 355 l 1
+335 255 m 2
+ 309 255 285 276 285 305 c 0
+ 285 314 288 322 292 330 c 2
+ 457 615 l 2
+ 466 630 482 640 500 640 c 0
+ 518 640 534 630 543 615 c 2
+ 708 330 l 2
+ 712 322 715 314 715 305 c 0
+ 715 276 691 255 665 255 c 2
+ 335 255 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("pini", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+450 515 m 1
+ 406 515 l 2
+ 378 515 356 537 356 565 c 0
+ 356 593 378 615 406 615 c 2
+ 594 615 l 2
+ 622 615 644 593 644 565 c 0
+ 644 537 622 515 594 515 c 2
+ 550 515 l 1
+ 550 285 l 1
+ 594 285 l 2
+ 622 285 644 263 644 235 c 0
+ 644 207 622 185 594 185 c 2
+ 406 185 l 2
+ 378 185 356 207 356 235 c 0
+ 356 263 378 285 406 285 c 2
+ 450 285 l 1
+ 450 515 l 1"#,
+),
+GlyphDescriptor::new_with_anchor("pipi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+600 519 m 0
+ 572 519 550 541 550 569 c 0
+ 550 597 572 619 600 619 c 0
+ 628 619 650 597 650 569 c 0
+ 650 541 628 519 600 519 c 0
+550 515 m 1
+ 594 515 l 2
+ 622 515 644 493 644 465 c 0
+ 644 437 622 415 594 415 c 2
+ 550 415 l 1
+ 550 410 l 1
+ 601 410 l 2
+ 629 410 651 388 651 360 c 0
+ 651 332 629 310 601 310 c 2
+ 550 310 l 1
+ 550 306 l 1
+ 594 306 l 2
+ 622 306 644 284 644 256 c 0
+ 644 228 622 206 594 206 c 2
+ 550 206 l 1
+ 548 180 526 160 500 160 c 0
+ 474 160 452 180 450 206 c 1
+ 405 206 l 2
+ 377 206 355 228 355 256 c 0
+ 355 284 377 306 405 306 c 2
+ 450 306 l 1
+ 450 310 l 1
+ 399 310 l 2
+ 371 310 349 332 349 360 c 0
+ 349 388 371 410 399 410 c 2
+ 450 410 l 1
+ 450 415 l 1
+ 405 415 l 2
+ 377 415 355 437 355 465 c 0
+ 355 493 377 515 405 515 c 2
+ 450 515 l 1
+ 453 540 474 560 500 560 c 0
+ 526 560 547 540 550 515 c 1
+450 569 m 0
+ 450 541 428 519 400 519 c 0
+ 372 519 350 541 350 569 c 0
+ 350 597 372 619 400 619 c 0
+ 428 619 450 597 450 569 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("poka", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+325 525 m 0
+ 353 525 375 503 375 475 c 2
+ 375 375 l 1
+ 525 375 l 1
+ 525 475 l 2
+ 525 503 547 525 575 525 c 0
+ 603 525 625 503 625 475 c 2
+ 625 325 l 2
+ 625 297 603 275 575 275 c 2
+ 325 275 l 2
+ 297 275 275 297 275 325 c 2
+ 275 475 l 2
+ 275 503 297 525 325 525 c 0
+739 400 m 0
+ 739 372 717 350 689 350 c 0
+ 661 350 639 372 639 400 c 0
+ 639 428 661 450 689 450 c 0
+ 717 450 739 428 739 400 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("poki", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+347 561 m 0
+ 375 561 397 539 397 511 c 2
+ 397 339 l 1
+ 603 339 l 1
+ 603 511 l 2
+ 603 539 625 561 653 561 c 0
+ 681 561 703 539 703 511 c 2
+ 703 289 l 2
+ 703 261 681 239 653 239 c 2
+ 347 239 l 2
+ 319 239 297 261 297 289 c 2
+ 297 511 l 2
+ 297 539 319 561 347 561 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pona", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+270 465 m 0
+ 270 490 290 515 320 515 c 0
+ 342 515 362 500 368 478 c 0
+ 382 426 434 385 500 385 c 0
+ 566 385 618 426 632 478 c 0
+ 638 500 658 515 680 515 c 0
+ 710 515 730 490 730 465 c 0
+ 730 461 729 456 728 452 c 0
+ 701 354 608 285 500 285 c 0
+ 392 285 299 354 272 452 c 0
+ 271 456 270 461 270 465 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("pu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 485 m 0
+ 507 485 513 479 513 472 c 2
+ 513 457 l 2
+ 513 441 488 441 488 457 c 2
+ 488 472 l 2
+ 488 479 493 485 500 485 c 0
+547 437 m 2
+ 535 425 517 443 529 455 c 2
+ 542 468 l 2
+ 554 480 572 462 560 450 c 2
+ 547 437 l 2
+440 450 m 2
+ 428 462 446 480 458 468 c 2
+ 471 455 l 2
+ 483 443 465 425 453 437 c 2
+ 440 450 l 2
+500 370 m 0
+ 504 370 508 372 508 375 c 0
+ 508 382 513 388 520 388 c 0
+ 527 388 533 382 533 375 c 0
+ 533 357 517 345 500 345 c 0
+ 483 345 467 357 467 375 c 0
+ 467 382 473 388 480 388 c 0
+ 487 388 492 382 492 375 c 0
+ 492 372 496 370 500 370 c 0
+500 314 m 0
+ 465 314 436 343 436 378 c 0
+ 436 413 465 442 500 442 c 0
+ 535 442 564 413 564 378 c 0
+ 564 343 535 314 500 314 c 0
+538 378 m 0
+ 538 399 521 416 500 416 c 0
+ 479 416 462 399 462 378 c 0
+ 462 357 479 340 500 340 c 0
+ 521 340 538 357 538 378 c 0
+421 490 m 1
+ 421 310 l 1
+ 579 310 l 1
+ 579 490 l 1
+ 421 490 l 1
+321 540 m 2
+ 321 568 343 590 371 590 c 2
+ 629 590 l 2
+ 657 590 679 568 679 540 c 2
+ 679 260 l 2
+ 679 232 657 210 629 210 c 2
+ 371 210 l 2
+ 343 210 321 232 321 260 c 2
+ 321 540 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("sama", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+720 315 m 0
+ 720 287 698 265 670 265 c 2
+ 330 265 l 2
+ 302 265 280 287 280 315 c 0
+ 280 343 302 365 330 365 c 2
+ 670 365 l 2
+ 698 365 720 343 720 315 c 0
+720 485 m 0
+ 720 457 698 435 670 435 c 2
+ 330 435 l 2
+ 302 435 280 457 280 485 c 0
+ 280 513 302 535 330 535 c 2
+ 670 535 l 2
+ 698 535 720 513 720 485 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("seli", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 641 m 0
+ 528 641 550 619 550 591 c 2
+ 550 418 l 2
+ 550 390 528 368 500 368 c 0
+ 472 368 450 390 450 418 c 2
+ 450 591 l 2
+ 450 619 472 641 500 641 c 0
+293 505 m 0
+ 293 530 313 555 343 555 c 0
+ 362 555 381 544 389 525 c 2
+ 435 420 l 2
+ 438 413 439 407 439 400 c 0
+ 439 375 419 350 389 350 c 0
+ 370 350 351 361 343 380 c 2
+ 297 485 l 2
+ 294 492 293 498 293 505 c 0
+657 555 m 0
+ 687 555 707 530 707 505 c 0
+ 707 498 706 491 703 485 c 2
+ 658 380 l 2
+ 650 361 631 350 612 350 c 0
+ 582 350 562 375 562 400 c 0
+ 562 407 563 414 566 420 c 2
+ 611 525 l 2
+ 619 544 638 555 657 555 c 0
+576 235 m 0
+ 576 194 542 160 501 160 c 0
+ 460 160 426 194 426 235 c 0
+ 426 276 460 310 501 310 c 0
+ 542 310 576 276 576 235 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("selo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+396 444 m 1
+ 386 444 l 1
+ 386 306 l 2
+ 386 278 364 256 336 256 c 0
+ 308 256 286 278 286 306 c 2
+ 286 494 l 2
+ 286 522 308 544 336 544 c 2
+ 446 544 l 2
+ 446 544 l 0
+ 447 544 l 2
+ 554 544 l 2
+ 554 544 l 0
+ 555 544 l 2
+ 665 544 l 2
+ 693 544 715 522 715 494 c 2
+ 715 306 l 2
+ 715 278 693 256 665 256 c 0
+ 637 256 615 278 615 306 c 2
+ 615 444 l 1
+ 604 444 l 1
+ 604 329 l 2
+ 604 301 582 279 554 279 c 0
+ 526 279 504 301 504 329 c 2
+ 504 444 l 1
+ 496 444 l 1
+ 496 329 l 2
+ 496 301 474 279 446 279 c 0
+ 418 279 396 301 396 329 c 2
+ 396 444 l 1"#,
+),
+GlyphDescriptor::new_with_anchor("seme", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 160 m 0
+ 472 160 450 182 450 210 c 0
+ 450 238 472 260 500 260 c 0
+ 528 260 550 238 550 210 c 0
+ 550 182 528 160 500 160 c 0
+500 640 m 0
+ 589 640 670 599 670 513 c 0
+ 670 452 624 424 589 399 c 0
+ 560 378 550 366 550 344 c 2
+ 550 320 l 2
+ 550 292 528 270 500 270 c 0
+ 472 270 450 292 450 320 c 2
+ 450 344 l 2
+ 450 425 505 462 540 487 c 0
+ 552 495 560 501 566 507 c 0
+ 569 510 570 511 570 513 c 0
+ 570 519 568 522 561 527 c 0
+ 551 533 532 540 500 540 c 0
+ 468 540 448 534 439 528 c 0
+ 432 523 430 519 430 513 c 0
+ 430 512 l 0
+ 434 505 436 497 436 489 c 0
+ 436 464 416 439 386 439 c 0
+ 350 439 330 476 330 513 c 0
+ 330 599 411 640 500 640 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sewi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+600 283 m 2
+ 600 283 l 1
+ 590 264 569 236 530 236 c 0
+ 511 236 496 242 485 251 c 1
+ 474 242 459 236 440 236 c 0
+ 422 236 407 243 395 251 c 1
+ 383 243 368 236 350 236 c 0
+ 322 236 300 258 300 286 c 0
+ 300 309 315 328 336 334 c 1
+ 342 348 345 372 345 390 c 0
+ 345 418 367 440 395 440 c 0
+ 411 440 426 432 435 420 c 1
+ 435 421 435 422 435 423 c 0
+ 435 428 435 433 435 436 c 0
+ 435 463 458 485 485 485 c 0
+ 501 485 516 477 525 465 c 1
+ 525 470 525 475 525 480 c 0
+ 525 508 547 530 575 530 c 0
+ 584 530 593 527 600 523 c 1
+ 603 548 624 567 650 567 c 0
+ 678 567 700 545 700 517 c 2
+ 700 283 l 2
+ 700 255 678 233 650 233 c 0
+ 622 233 600 255 600 283 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("sijelo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+413 270 m 2
+ 413 242 391 220 363 220 c 0
+ 335 220 313 242 313 270 c 2
+ 313 530 l 2
+ 313 558 335 580 363 580 c 2
+ 637 580 l 2
+ 665 580 687 558 687 530 c 2
+ 687 270 l 2
+ 687 242 665 220 637 220 c 0
+ 609 220 587 242 587 270 c 2
+ 587 480 l 1
+ 550 480 l 1
+ 550 289 l 2
+ 550 261 528 239 500 239 c 0
+ 472 239 450 261 450 289 c 2
+ 450 480 l 1
+ 413 480 l 1
+ 413 270 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("sike", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 284 m 0
+ 436 284 386 335 386 399 c 0
+ 386 463 436 514 500 514 c 0
+ 564 514 616 463 616 399 c 0
+ 616 335 564 284 500 284 c 0
+516 399 m 0
+ 516 407 508 414 500 414 c 0
+ 492 414 486 407 486 399 c 0
+ 486 391 492 384 500 384 c 0
+ 508 384 516 391 516 399 c 0
+500 160 m 0
+ 368 160 261 268 261 400 c 0
+ 261 532 368 639 500 639 c 0
+ 632 639 740 532 740 400 c 0
+ 740 268 632 160 500 160 c 0
+500 260 m 0
+ 577 260 640 323 640 400 c 0
+ 640 477 577 539 500 539 c 0
+ 423 539 361 477 361 400 c 0
+ 361 323 423 260 500 260 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+270 340 m 0
+ 270 368 292 390 320 390 c 2
+ 420 390 l 2
+ 448 390 470 368 470 340 c 0
+ 470 312 448 290 420 290 c 2
+ 320 290 l 2
+ 292 290 270 312 270 340 c 0
+500 570 m 0
+ 528 570 550 548 550 520 c 2
+ 550 420 l 2
+ 550 392 528 370 500 370 c 0
+ 472 370 450 392 450 420 c 2
+ 450 520 l 2
+ 450 548 472 570 500 570 c 0
+530 340 m 0
+ 530 368 552 390 580 390 c 2
+ 680 390 l 2
+ 708 390 730 368 730 340 c 0
+ 730 312 708 290 680 290 c 2
+ 580 290 l 2
+ 552 290 530 312 530 340 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sina", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+460 300 m 0
+ 460 278 478 260 500 260 c 0
+ 522 260 540 278 540 300 c 0
+ 540 322 522 340 500 340 c 0
+ 478 340 460 322 460 300 c 0
+471 640 m 0
+ 501 640 521 615 521 590 c 0
+ 521 572 514 563 509 546 c 0
+ 501 520 488 473 480 439 c 1
+ 487 440 493 440 500 440 c 0
+ 577 440 640 377 640 300 c 0
+ 640 223 577 160 500 160 c 0
+ 423 160 360 223 360 300 c 0
+ 360 404 396 525 424 606 c 0
+ 431 627 450 640 471 640 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sinpin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+690 350 m 0
+ 662 350 640 372 640 400 c 0
+ 640 428 662 450 690 450 c 0
+ 718 450 740 428 740 400 c 0
+ 740 372 718 350 690 350 c 0
+360 570 m 0
+ 360 598 382 620 410 620 c 2
+ 560 620 l 2
+ 588 620 610 598 610 570 c 2
+ 610 230 l 2
+ 610 202 588 180 560 180 c 2
+ 410 180 l 2
+ 382 180 360 202 360 230 c 0
+ 360 258 382 280 410 280 c 2
+ 510 280 l 1
+ 510 520 l 1
+ 410 520 l 2
+ 382 520 360 542 360 570 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sitelen", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+571 400 m 0
+ 571 388 561 378 549 378 c 0
+ 537 378 527 388 527 400 c 0
+ 527 412 537 422 549 422 c 0
+ 561 422 571 412 571 400 c 0
+522 400 m 0
+ 522 388 512 378 500 378 c 0
+ 488 378 478 388 478 400 c 0
+ 478 412 488 422 500 422 c 0
+ 512 422 522 412 522 400 c 0
+473 400 m 0
+ 473 388 463 378 451 378 c 0
+ 439 378 429 388 429 400 c 0
+ 429 412 439 422 451 422 c 0
+ 463 422 473 412 473 400 c 0
+425 494 m 1
+ 425 306 l 1
+ 575 306 l 1
+ 575 494 l 1
+ 425 494 l 1
+325 544 m 2
+ 325 572 347 594 375 594 c 2
+ 625 594 l 2
+ 653 594 675 572 675 544 c 2
+ 675 256 l 2
+ 675 228 653 206 625 206 c 2
+ 375 206 l 2
+ 347 206 325 228 325 256 c 2
+ 325 544 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("sona", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+630 603 m 0
+ 660 603 680 577 680 552 c 0
+ 680 544 677 535 673 527 c 2
+ 649 484 l 2
+ 640 468 624 459 607 459 c 0
+ 577 459 557 485 557 510 c 0
+ 557 518 559 527 563 535 c 2
+ 588 578 l 2
+ 597 594 613 603 630 603 c 0
+320 551 m 0
+ 320 576 340 602 370 602 c 0
+ 387 602 403 593 412 577 c 2
+ 436 534 l 2
+ 440 526 443 517 443 509 c 0
+ 443 484 422 458 392 458 c 0
+ 375 458 359 467 350 483 c 2
+ 326 526 l 2
+ 322 534 320 543 320 551 c 0
+500 640 m 0
+ 528 640 550 618 550 590 c 2
+ 550 540 l 2
+ 550 512 528 490 500 490 c 0
+ 472 490 450 512 450 540 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+450 354 m 1
+ 450 288 l 1
+ 550 288 l 1
+ 550 354 l 1
+ 450 354 l 1
+350 404 m 2
+ 350 432 372 454 400 454 c 2
+ 600 454 l 2
+ 628 454 650 432 650 404 c 2
+ 650 238 l 2
+ 650 210 628 188 600 188 c 2
+ 400 188 l 2
+ 372 188 350 210 350 238 c 2
+ 350 404 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("soweli", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+375 592 m 2
+ 566 592 l 2
+ 660 592 736 516 736 422 c 0
+ 736 345 686 281 616 260 c 1
+ 616 222 l 2
+ 616 194 594 172 566 172 c 0
+ 538 172 516 194 516 222 c 2
+ 516 302 l 2
+ 516 330 538 352 566 352 c 0
+ 605 352 636 383 636 422 c 0
+ 636 461 605 492 566 492 c 2
+ 375 492 l 2
+ 347 492 325 514 325 542 c 0
+ 325 570 347 592 375 592 c 2
+524 422 m 0
+ 524 399 505 380 482 380 c 0
+ 459 380 439 399 439 422 c 0
+ 439 445 459 464 482 464 c 0
+ 505 464 524 445 524 422 c 0
+624 422 m 0
+ 624 399 605 380 582 380 c 0
+ 559 380 540 399 540 422 c 0
+ 540 445 559 464 582 464 c 0
+ 605 464 624 445 624 422 c 0
+363 352 m 0
+ 391 352 413 330 413 302 c 2
+ 413 267 l 2
+ 413 239 391 217 363 217 c 0
+ 335 217 313 239 313 267 c 2
+ 313 302 l 2
+ 313 330 335 352 363 352 c 0
+465 352 m 0
+ 493 352 515 330 515 302 c 2
+ 515 222 l 2
+ 515 194 493 172 465 172 c 0
+ 437 172 415 194 415 222 c 2
+ 415 302 l 2
+ 415 330 437 352 465 352 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("suli", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+640 580 m 0
+ 668 580 690 556 690 530 c 0
+ 690 519 686 508 679 499 c 0
+ 637 445 605 375 583 315 c 0
+ 561 255 551 208 549 200 c 0
+ 544 177 524 160 500 160 c 0
+ 476 160 456 177 451 200 c 0
+ 449 208 439 255 417 315 c 0
+ 395 375 363 445 321 499 c 0
+ 314 508 310 519 310 530 c 0
+ 310 556 332 580 360 580 c 0
+ 375 580 389 574 399 561 c 0
+ 443 504 477 436 500 377 c 1
+ 523 436 557 504 601 561 c 0
+ 611 574 625 580 640 580 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("suno", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 469 m 0
+ 462 469 431 438 431 400 c 0
+ 431 362 462 331 500 331 c 0
+ 538 331 569 362 569 400 c 0
+ 569 438 538 469 500 469 c 0
+450 590 m 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 561 l 1
+ 603 545 645 503 661 450 c 1
+ 690 450 l 2
+ 718 450 740 428 740 400 c 0
+ 740 372 718 350 690 350 c 2
+ 661 350 l 1
+ 645 297 603 255 550 239 c 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 239 l 1
+ 397 255 355 297 339 350 c 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 339 450 l 1
+ 355 503 397 545 450 561 c 1
+ 450 590 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("supa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+310 490 m 2
+ 690 490 l 2
+ 718 490 740 468 740 440 c 0
+ 740 412 718 390 690 390 c 2
+ 659 390 l 1
+ 659 300 l 2
+ 659 272 637 250 609 250 c 0
+ 581 250 559 272 559 300 c 2
+ 559 390 l 1
+ 441 390 l 1
+ 441 300 l 2
+ 441 272 419 250 391 250 c 0
+ 363 250 341 272 341 300 c 2
+ 341 390 l 1
+ 310 390 l 2
+ 282 390 260 412 260 440 c 0
+ 260 468 282 490 310 490 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("suwi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+316 387 m 0
+ 288 387 266 411 266 437 c 0
+ 266 449 270 461 278 470 c 2
+ 339 540 l 2
+ 348 551 362 557 377 557 c 0
+ 392 557 405 551 414 540 c 2
+ 475 470 l 2
+ 483 461 487 449 487 437 c 0
+ 487 411 465 387 437 387 c 0
+ 423 387 409 393 399 404 c 2
+ 377 431 l 1
+ 354 404 l 2
+ 344 393 330 387 316 387 c 0
+564 387 m 0
+ 536 387 514 411 514 437 c 0
+ 514 449 518 461 526 470 c 2
+ 587 540 l 2
+ 596 551 610 557 625 557 c 0
+ 640 557 653 551 662 540 c 2
+ 723 470 l 2
+ 731 461 735 449 735 437 c 0
+ 735 411 713 387 685 387 c 0
+ 671 387 657 393 647 404 c 2
+ 625 431 l 1
+ 602 404 l 2
+ 592 393 578 387 564 387 c 0
+550 300 m 0
+ 550 272 528 250 500 250 c 0
+ 472 250 450 272 450 300 c 0
+ 450 328 472 350 500 350 c 0
+ 528 350 550 328 550 300 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("tan", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+621 311 m 0
+ 621 323 625 333 625 345 c 0
+ 625 400 581 445 526 445 c 0
+ 494 445 466 430 448 407 c 1
+ 450 407 451 407 453 407 c 0
+ 478 407 503 387 503 357 c 0
+ 503 339 493 321 476 312 c 2
+ 389 268 l 2
+ 382 264 374 263 366 263 c 0
+ 344 263 329 275 321 290 c 2
+ 277 377 l 2
+ 273 384 272 391 272 399 c 0
+ 272 424 292 450 322 450 c 0
+ 332 450 343 446 351 440 c 1
+ 385 502 450 545 526 545 c 0
+ 636 545 725 455 725 345 c 0
+ 725 329 723 314 720 299 c 0
+ 715 276 694 261 671 261 c 0
+ 641 261 621 286 621 311 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("taso", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+550 590 m 2
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 350 l 1
+ 360 350 l 2
+ 332 350 310 372 310 400 c 0
+ 310 428 332 450 360 450 c 2
+ 450 450 l 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("tawa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+665 359 m 0
+ 691 359 715 337 715 309 c 0
+ 715 295 709 280 697 270 c 0
+ 656 235 610 220 555 220 c 0
+ 534 220 515 233 508 253 c 2
+ 442 439 l 1
+ 397 328 l 1
+ 408 324 423 320 445 320 c 0
+ 473 320 495 298 495 270 c 0
+ 495 242 473 220 445 220 c 0
+ 373 220 325 242 296 278 c 0
+ 289 287 285 298 285 309 c 0
+ 285 315 287 322 289 328 c 2
+ 399 599 l 2
+ 407 618 425 630 445 630 c 0
+ 467 630 485 617 492 597 c 2
+ 589 324 l 1
+ 605 328 619 335 633 347 c 0
+ 642 355 654 359 665 359 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("telo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+360 219 m 0
+ 330 219 310 244 310 269 c 0
+ 310 274 311 279 312 284 c 0
+ 316 300 322 323 334 343 c 0
+ 352 374 388 403 439 403 c 0
+ 492 403 529 367 555 342 c 0
+ 573 325 583 316 592 311 c 0
+ 599 307 599 306 607 309 c 0
+ 617 312 619 316 621 319 c 0
+ 624 325 627 333 631 352 c 0
+ 636 376 657 392 680 392 c 0
+ 710 392 730 368 730 342 c 0
+ 730 339 730 334 729 331 c 0
+ 725 313 720 289 707 267 c 0
+ 688 236 650 208 600 208 c 0
+ 548 208 512 244 485 269 c 0
+ 467 286 457 295 448 300 c 0
+ 437 306 425 301 420 293 c 0
+ 416 287 414 278 409 258 c 0
+ 403 235 383 219 360 219 c 0
+320 409 m 0
+ 290 409 270 434 270 459 c 0
+ 270 464 271 469 272 474 c 0
+ 276 490 282 513 294 533 c 0
+ 312 564 348 593 399 593 c 0
+ 452 593 489 557 515 532 c 0
+ 533 515 543 506 552 501 c 0
+ 559 497 559 496 567 499 c 0
+ 577 502 579 506 581 509 c 0
+ 584 515 587 523 591 542 c 0
+ 596 566 617 582 640 582 c 0
+ 670 582 690 558 690 532 c 0
+ 690 529 690 524 689 521 c 0
+ 685 503 680 479 667 457 c 0
+ 648 426 610 398 560 398 c 0
+ 508 398 472 434 445 459 c 0
+ 427 476 417 485 408 490 c 0
+ 397 496 385 491 380 483 c 0
+ 376 477 374 468 369 448 c 0
+ 363 425 343 409 320 409 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("tenpo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+640 400 m 0
+ 640 477 577 540 500 540 c 0
+ 423 540 360 477 360 400 c 0
+ 360 323 423 260 500 260 c 0
+ 577 260 640 323 640 400 c 0
+740 400 m 0
+ 740 267 633 160 500 160 c 0
+ 367 160 260 267 260 400 c 0
+ 260 533 367 640 500 640 c 0
+ 633 640 740 533 740 400 c 0
+550 480 m 2
+ 550 450 l 1
+ 578 450 600 428 600 400 c 0
+ 600 372 578 350 550 350 c 2
+ 500 350 l 2
+ 472 350 450 372 450 400 c 2
+ 450 480 l 2
+ 450 508 472 530 500 530 c 0
+ 528 530 550 508 550 480 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("toki", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+629 607 m 0
+ 659 607 679 581 679 556 c 0
+ 679 548 677 539 673 531 c 2
+ 649 487 l 2
+ 640 471 624 462 607 462 c 0
+ 577 462 557 489 557 514 c 0
+ 557 522 559 531 563 539 c 2
+ 587 582 l 2
+ 596 598 612 607 629 607 c 0
+321 556 m 0
+ 321 581 341 607 371 607 c 0
+ 388 607 404 598 413 582 c 2
+ 437 539 l 2
+ 441 531 443 522 443 514 c 0
+ 443 489 423 462 393 462 c 0
+ 376 462 360 471 351 487 c 2
+ 327 531 l 2
+ 323 539 321 548 321 556 c 0
+500 640 m 0
+ 528 640 550 618 550 590 c 2
+ 550 540 l 2
+ 550 512 528 490 500 490 c 0
+ 472 490 450 512 450 540 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+338 322 m 0
+ 338 411 410 484 499 484 c 0
+ 588 484 661 411 661 322 c 0
+ 661 233 588 160 499 160 c 0
+ 410 160 338 233 338 322 c 0
+499 384 m 0
+ 465 384 438 357 438 322 c 0
+ 438 287 465 260 499 260 c 0
+ 533 260 561 287 561 322 c 0
+ 561 357 533 384 499 384 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("tomo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+392 438 m 1
+ 392 340 l 1
+ 608 340 l 1
+ 608 438 l 1
+ 500 526 l 1
+ 392 438 l 1
+468 629 m 2
+ 477 636 489 640 500 640 c 0
+ 511 640 523 636 532 629 c 2
+ 690 500 l 2
+ 702 491 708 476 708 461 c 2
+ 708 290 l 2
+ 708 262 686 240 658 240 c 2
+ 342 240 l 2
+ 314 240 292 262 292 290 c 2
+ 292 461 l 2
+ 292 476 298 491 310 500 c 2
+ 468 629 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("tu", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+400 189 m 0
+ 372 189 350 211 350 239 c 2
+ 350 561 l 2
+ 350 589 372 611 400 611 c 0
+ 428 611 450 589 450 561 c 2
+ 450 239 l 2
+ 450 211 428 189 400 189 c 0
+600 189 m 0
+ 572 189 550 211 550 239 c 2
+ 550 561 l 2
+ 550 589 572 611 600 611 c 0
+ 628 611 650 589 650 561 c 2
+ 650 239 l 2
+ 650 211 628 189 600 189 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("unpa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+467 297 m 1
+ 470 274 477 260 500 260 c 0
+ 523 260 530 275 533 297 c 1
+ 522 296 511 296 500 296 c 0
+ 489 296 478 296 467 297 c 1
+625 456 m 0
+ 625 478 610 490 584 490 c 0
+ 580 490 575 489 570 488 c 1
+ 584 466 597 443 608 418 c 1
+ 621 429 625 444 625 456 c 0
+500 411 m 1
+ 497 406 494 401 492 396 c 1
+ 495 396 497 396 500 396 c 0
+ 503 396 505 396 508 396 c 1
+ 506 401 503 406 500 411 c 1
+416 490 m 0
+ 390 490 375 478 375 456 c 0
+ 375 444 379 429 392 418 c 1
+ 403 443 416 466 430 488 c 1
+ 425 489 420 490 416 490 c 0
+725 456 m 0
+ 725 402 693 343 634 318 c 0
+ 634 316 634 315 634 313 c 0
+ 634 275 624 236 601 207 c 0
+ 577 177 541 160 500 160 c 2
+ 500 160 l 0
+ 459 160 423 177 399 207 c 0
+ 376 236 366 275 366 313 c 0
+ 366 315 366 316 366 318 c 0
+ 307 343 275 402 275 456 c 0
+ 275 538 341 590 416 590 c 0
+ 444 590 475 581 500 565 c 1
+ 525 581 556 590 584 590 c 0
+ 659 590 725 538 725 456 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("uta", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+550 210 m 0
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 0
+ 450 238 472 260 500 260 c 0
+ 528 260 550 238 550 210 c 0
+406 464 m 1
+ 423 425 460 400 500 400 c 0
+ 540 400 577 425 594 464 c 1
+ 406 464 l 1
+295 514 m 0
+ 295 542 317 564 345 564 c 2
+ 655 564 l 2
+ 683 564 705 542 705 514 c 0
+ 705 399 616 300 500 300 c 0
+ 384 300 295 399 295 514 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("utala", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+614 602 m 0
+ 642 602 664 578 664 552 c 0
+ 664 542 661 531 654 522 c 2
+ 562 400 l 1
+ 597 354 l 1
+ 605 378 l 2
+ 612 399 631 412 652 412 c 0
+ 682 412 702 387 702 362 c 0
+ 702 357 701 351 699 346 c 2
+ 661 232 l 2
+ 655 213 638 198 614 198 c 0
+ 598 198 584 205 574 218 c 2
+ 500 317 l 1
+ 426 218 l 2
+ 416 205 402 198 386 198 c 0
+ 362 198 345 213 339 232 c 2
+ 301 346 l 2
+ 299 351 298 357 298 362 c 0
+ 298 387 318 412 348 412 c 0
+ 369 412 388 399 395 378 c 2
+ 403 354 l 1
+ 438 400 l 1
+ 346 522 l 2
+ 339 531 336 542 336 552 c 0
+ 336 578 358 602 386 602 c 0
+ 401 602 416 595 426 582 c 2
+ 500 484 l 1
+ 574 582 l 2
+ 584 595 599 602 614 602 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("walo", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+535 422 m 2
+ 500 483 l 1
+ 464 420 l 2
+ 463 418 463 418 462 416 c 2
+ 426 353 l 1
+ 574 353 l 1
+ 539 414 l 2
+ 537 416 536 419 535 422 c 2
+285 492 m 0
+ 285 521 310 542 335 542 c 0
+ 344 542 352 540 360 535 c 2
+ 401 511 l 1
+ 457 608 l 2
+ 466 624 482 633 500 633 c 0
+ 518 633 534 624 543 608 c 2
+ 599 511 l 1
+ 640 535 l 2
+ 648 540 656 542 665 542 c 0
+ 690 542 715 521 715 492 c 0
+ 715 475 706 457 690 448 c 2
+ 649 425 l 1
+ 704 328 l 2
+ 708 320 711 312 711 303 c 0
+ 711 274 687 253 661 253 c 2
+ 339 253 l 2
+ 313 253 289 274 289 303 c 0
+ 289 312 292 320 296 328 c 2
+ 351 424 l 1
+ 310 448 l 2
+ 294 457 285 475 285 492 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("wan", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+499 640 m 0
+ 529 640 549 616 549 590 c 2
+ 549 210 l 2
+ 549 182 527 160 499 160 c 0
+ 471 160 449 182 449 210 c 2
+ 449 469 l 1
+ 416 436 l 2
+ 406 426 394 421 381 421 c 0
+ 354 421 331 444 331 471 c 0
+ 331 484 336 496 346 506 c 2
+ 464 625 l 2
+ 474 635 486 640 499 640 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("waso", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+405 440 m 0
+ 405 412 383 390 355 390 c 0
+ 327 390 305 412 305 440 c 0
+ 305 468 327 490 355 490 c 0
+ 383 490 405 468 405 440 c 0
+515 440 m 0
+ 515 412 493 390 465 390 c 0
+ 437 390 415 412 415 440 c 0
+ 415 468 437 490 465 490 c 0
+ 493 490 515 468 515 440 c 0
+435 590 m 0
+ 435 616 457 640 485 640 c 0
+ 500 640 515 632 525 619 c 2
+ 715 358 l 2
+ 721 349 725 339 725 329 c 0
+ 725 299 701 279 675 279 c 2
+ 445 279 l 1
+ 445 240 l 2
+ 445 212 423 190 395 190 c 0
+ 367 190 345 212 345 240 c 2
+ 345 329 l 2
+ 345 357 367 379 395 379 c 2
+ 577 379 l 1
+ 445 561 l 2
+ 439 570 435 580 435 590 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("wawa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 362 m 0
+ 480 362 464 346 464 326 c 0
+ 464 306 480 290 500 290 c 0
+ 520 290 536 306 536 326 c 0
+ 536 346 520 362 500 362 c 0
+403 230 m 1
+ 394 221 383 215 367 215 c 0
+ 343 215 321 232 317 257 c 2
+ 281 482 l 2
+ 281 485 280 487 280 490 c 0
+ 280 516 300 540 330 540 c 0
+ 354 540 375 523 379 498 c 2
+ 394 411 l 1
+ 419 442 457 462 500 462 c 0
+ 543 462 581 442 606 411 c 1
+ 621 498 l 2
+ 625 523 646 540 670 540 c 0
+ 700 540 720 516 720 490 c 0
+ 720 487 719 485 719 482 c 2
+ 683 257 l 2
+ 679 232 657 215 633 215 c 0
+ 617 215 606 221 597 230 c 1
+ 572 205 538 190 500 190 c 0
+ 462 190 428 205 403 230 c 1"#,
+),
+GlyphDescriptor::new_with_anchor("weka", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+311 529 m 0
+ 311 556 335 579 361 579 c 0
+ 373 579 385 575 395 566 c 2
+ 468 500 l 2
+ 479 490 484 477 484 463 c 0
+ 484 436 460 413 434 413 c 0
+ 422 413 410 417 400 426 c 2
+ 328 492 l 2
+ 317 502 311 515 311 529 c 0
+639 579 m 0
+ 665 579 689 556 689 529 c 0
+ 689 515 683 502 672 492 c 2
+ 599 425 l 2
+ 589 416 577 412 565 412 c 0
+ 539 412 515 435 515 462 c 0
+ 515 476 521 489 532 499 c 2
+ 605 566 l 2
+ 615 575 627 579 639 579 c 0
+434 387 m 0
+ 460 387 484 364 484 337 c 0
+ 484 323 479 310 468 300 c 2
+ 395 234 l 2
+ 385 225 373 221 361 221 c 0
+ 335 221 311 244 311 271 c 0
+ 311 285 317 298 328 308 c 2
+ 401 374 l 2
+ 411 383 422 387 434 387 c 0
+516 337 m 0
+ 516 364 540 387 566 387 c 0
+ 578 387 590 383 600 374 c 2
+ 672 308 l 2
+ 683 298 689 285 689 271 c 0
+ 689 244 665 221 639 221 c 0
+ 627 221 615 225 605 234 c 2
+ 532 300 l 2
+ 521 310 516 323 516 337 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("wile", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+370 588 m 0
+ 398 588 420 563 420 537 c 0
+ 420 526 416 516 409 507 c 0
+ 390 482 370 445 370 393 c 0
+ 370 361 376 336 385 321 c 0
+ 392 309 403 303 420 303 c 0
+ 432 303 448 318 450 330 c 0
+ 452 356 472 376 500 376 c 0
+ 528 376 548 356 550 330 c 0
+ 552 318 568 303 580 303 c 0
+ 597 303 608 309 615 321 c 0
+ 624 336 630 361 630 393 c 0
+ 630 445 610 482 591 507 c 0
+ 584 516 580 526 580 537 c 0
+ 580 563 602 588 630 588 c 0
+ 645 588 660 581 670 568 c 0
+ 698 531 730 473 730 393 c 0
+ 730 294 682 203 580 203 c 0
+ 551 203 522 214 500 232 c 1
+ 478 214 449 203 420 203 c 0
+ 318 203 270 294 270 393 c 0
+ 270 473 302 531 330 568 c 0
+ 340 581 355 588 370 588 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("namako", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+661 607 m 0
+ 691 607 711 581 711 556 c 0
+ 711 548 708 539 704 531 c 2
+ 680 488 l 2
+ 671 472 655 463 638 463 c 0
+ 608 463 588 489 588 514 c 0
+ 588 522 590 531 594 539 c 2
+ 619 582 l 2
+ 628 598 644 607 661 607 c 0
+351 556 m 0
+ 351 581 371 607 401 607 c 0
+ 418 607 434 598 443 582 c 2
+ 467 539 l 2
+ 471 531 474 522 474 514 c 0
+ 474 489 453 463 423 463 c 0
+ 406 463 390 472 381 488 c 2
+ 357 531 l 2
+ 353 539 351 548 351 556 c 0
+531 640 m 0
+ 559 640 581 618 581 590 c 2
+ 581 540 l 2
+ 581 512 559 490 531 490 c 0
+ 503 490 481 512 481 540 c 2
+ 481 590 l 2
+ 481 618 503 640 531 640 c 0
+339 160 m 0
+ 313 160 289 180 289 210 c 0
+ 289 226 297 241 310 251 c 0
+ 361 287 380 305 389 321 c 0
+ 397 335 400 352 400 400 c 0
+ 400 428 422 450 450 450 c 0
+ 478 450 500 428 500 400 c 0
+ 500 354 498 312 477 274 c 1
+ 503 281 521 290 532 300 c 0
+ 554 318 563 347 563 400 c 0
+ 563 428 585 450 613 450 c 0
+ 641 450 663 428 663 400 c 0
+ 663 338 653 272 596 224 c 0
+ 543 179 458 160 339 160 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("kin", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+420 403 m 0
+ 431 403 441 398 450 393 c 1
+ 450 400 l 2
+ 450 428 472 450 500 450 c 0
+ 528 450 550 428 550 400 c 2
+ 550 393 l 1
+ 559 398 569 403 580 403 c 0
+ 605 403 629 382 629 353 c 0
+ 629 331 615 316 597 305 c 1
+ 615 294 629 279 629 257 c 0
+ 629 228 605 207 580 207 c 0
+ 569 207 559 212 550 217 c 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 217 l 1
+ 441 212 431 207 420 207 c 0
+ 395 207 372 228 372 257 c 0
+ 372 279 385 294 403 305 c 1
+ 385 316 372 331 372 353 c 0
+ 372 382 395 403 420 403 c 0
+550 590 m 2
+ 550 510 l 2
+ 550 482 528 460 500 460 c 0
+ 472 460 450 482 450 510 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2"#,
+),
+GlyphDescriptor::new_with_anchor("oko", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+619 409 m 1
+ 614 407 607 404 607 400 c 0
+ 607 396 614 393 619 391 c 1
+ 620 394 620 397 620 400 c 0
+ 620 403 620 406 619 409 c 1
+440 400 m 1
+ 489 376 533 352 576 327 c 0
+ 577 328 l 1
+ 549 343 532 368 532 400 c 0
+ 532 432 549 457 577 472 c 1
+ 576 473 l 0
+ 533 448 489 424 440 400 c 1
+614 604 m 0
+ 639 604 664 583 664 554 c 0
+ 664 546 662 540 659 533 c 1
+ 697 495 720 450 720 400 c 0
+ 720 350 697 305 659 267 c 1
+ 662 260 664 254 664 246 c 0
+ 664 217 639 196 614 196 c 0
+ 601 196 589 202 579 208 c 0
+ 502 256 384 324 295 352 c 0
+ 276 358 260 375 260 400 c 0
+ 260 425 276 442 295 448 c 0
+ 387 477 508 546 587 596 c 0
+ 595 601 605 604 614 604 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("kipisi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+650 300 m 0
+ 650 272 628 250 600 250 c 0
+ 572 250 550 272 550 300 c 0
+ 550 328 572 350 600 350 c 0
+ 628 350 650 328 650 300 c 0
+450 500 m 0
+ 450 472 428 450 400 450 c 0
+ 372 450 350 472 350 500 c 0
+ 350 528 372 550 400 550 c 0
+ 428 550 450 528 450 500 c 0
+634 584 m 0
+ 661 584 684 561 684 534 c 0
+ 684 521 679 508 669 498 c 2
+ 402 231 l 2
+ 392 221 379 216 366 216 c 0
+ 339 216 316 239 316 266 c 0
+ 316 279 321 292 331 302 c 2
+ 598 569 l 2
+ 608 579 621 584 634 584 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("leko", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+430 420 m 2
+ 430 448 452 470 480 470 c 2
+ 520 470 l 2
+ 548 470 570 448 570 420 c 2
+ 570 380 l 2
+ 570 352 548 330 520 330 c 2
+ 480 330 l 2
+ 452 330 430 352 430 380 c 2
+ 430 420 l 2
+415 485 m 1
+ 415 315 l 1
+ 585 315 l 1
+ 585 485 l 1
+ 415 485 l 1
+315 535 m 2
+ 315 563 337 585 365 585 c 2
+ 635 585 l 2
+ 663 585 685 563 685 535 c 2
+ 685 265 l 2
+ 685 237 663 215 635 215 c 2
+ 365 215 l 2
+ 337 215 315 237 315 265 c 2
+ 315 535 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("monsuta", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+739 358 m 0
+ 739 328 709 297 672 311 c 1
+ 665 281 l 2
+ 660 258 639 242 616 242 c 0
+ 592 242 572 259 567 282 c 2
+ 563 301 l 1
+ 549 217 l 2
+ 545 193 524 175 500 175 c 0
+ 476 175 455 193 451 217 c 2
+ 437 301 l 1
+ 433 282 l 2
+ 428 259 408 242 384 242 c 0
+ 361 242 340 258 335 281 c 2
+ 328 311 l 1
+ 291 297 261 328 261 358 c 0
+ 261 362 261 365 262 369 c 2
+ 291 502 l 2
+ 296 525 316 542 340 542 c 0
+ 356 542 371 534 380 522 c 1
+ 393 585 l 2
+ 398 608 418 625 442 625 c 0
+ 467 625 487 607 491 583 c 2
+ 500 530 l 1
+ 509 583 l 2
+ 513 607 533 625 558 625 c 0
+ 582 625 602 608 607 585 c 2
+ 620 522 l 1
+ 629 534 644 542 660 542 c 0
+ 684 542 704 525 709 502 c 2
+ 738 369 l 2
+ 739 365 739 362 739 358 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("tonsi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 460 m 0
+ 472 460 447 437 447 405 c 0
+ 447 373 472 349 500 349 c 0
+ 528 349 553 373 553 405 c 0
+ 553 437 528 460 500 460 c 0
+285 503 m 0
+ 285 532 310 552 335 552 c 0
+ 343 552 352 551 360 546 c 2
+ 400 522 l 1
+ 427 546 461 560 500 560 c 0
+ 539 560 573 546 600 522 c 1
+ 640 546 l 2
+ 648 551 657 552 665 552 c 0
+ 690 552 715 532 715 503 c 0
+ 715 485 706 467 690 458 c 2
+ 650 435 l 1
+ 652 425 653 415 653 405 c 0
+ 653 338 610 279 550 258 c 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 258 l 1
+ 390 279 347 338 347 405 c 0
+ 347 415 348 425 350 435 c 1
+ 310 458 l 2
+ 294 467 285 485 285 503 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("jasima", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+320 399 m 0
+ 290 399 270 423 270 449 c 0
+ 270 453 270 456 271 460 c 0
+ 275 478 280 502 294 524 c 0
+ 313 555 351 583 402 583 c 0
+ 419 583 435 579 450 573 c 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 496 l 1
+ 562 487 582 486 590 499 c 0
+ 594 505 597 514 602 534 c 0
+ 608 557 628 572 650 572 c 0
+ 680 572 700 547 700 522 c 0
+ 700 517 699 512 698 507 c 0
+ 694 491 688 467 676 447 c 0
+ 657 416 619 388 568 388 c 0
+ 562 388 556 388 550 389 c 1
+ 550 350 l 1
+ 567 334 577 325 587 320 c 0
+ 599 313 615 320 620 328 c 0
+ 624 334 627 343 632 363 c 0
+ 638 386 658 401 680 401 c 0
+ 710 401 730 376 730 351 c 0
+ 730 346 729 341 728 336 c 0
+ 724 320 718 296 706 276 c 0
+ 687 245 649 217 598 217 c 0
+ 581 217 565 221 550 227 c 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 304 l 1
+ 443 309 435 314 424 311 c 0
+ 413 308 411 304 409 301 c 0
+ 406 295 403 286 399 268 c 0
+ 394 245 373 228 350 228 c 0
+ 320 228 300 252 300 278 c 0
+ 300 282 300 285 301 289 c 0
+ 305 307 310 331 324 353 c 0
+ 343 384 381 412 432 412 c 0
+ 438 412 444 412 450 411 c 1
+ 450 450 l 1
+ 432 466 421 475 412 480 c 0
+ 399 487 383 478 379 472 c 0
+ 376 466 373 457 369 439 c 0
+ 364 416 343 399 320 399 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("soko", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+641 461 m 1
+ 616 510 573 540 500 540 c 0
+ 427 540 385 510 360 461 c 1
+ 641 461 l 1
+761 411 m 0
+ 761 383 738 361 711 361 c 2
+ 550 361 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 361 l 1
+ 290 361 l 2
+ 263 361 240 383 240 411 c 0
+ 240 414 240 418 241 421 c 0
+ 255 487 284 543 330 582 c 0
+ 376 621 434 640 500 640 c 0
+ 566 640 625 621 671 582 c 0
+ 717 543 746 487 760 421 c 0
+ 761 418 761 414 761 411 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("meso", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+550 400 m 0
+ 550 372 528 350 500 350 c 0
+ 472 350 450 372 450 400 c 0
+ 450 428 472 450 500 450 c 0
+ 528 450 550 428 550 400 c 0
+643 575 m 0
+ 671 575 693 553 693 525 c 2
+ 693 275 l 2
+ 693 247 671 225 643 225 c 0
+ 615 225 593 247 593 275 c 2
+ 593 525 l 2
+ 593 553 615 575 643 575 c 0
+358 575 m 0
+ 386 575 408 553 408 525 c 2
+ 408 275 l 2
+ 408 247 386 225 358 225 c 0
+ 330 225 308 247 308 275 c 2
+ 308 525 l 2
+ 308 553 330 575 358 575 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("epiku", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 641 m 0
+ 528 641 550 619 550 591 c 2
+ 550 490 l 2
+ 550 462 528 440 500 440 c 0
+ 472 440 450 462 450 490 c 2
+ 450 591 l 2
+ 450 619 472 641 500 641 c 0
+316 541 m 0
+ 316 566 336 591 366 591 c 0
+ 386 591 404 580 412 561 c 2
+ 438 499 l 2
+ 441 493 442 486 442 480 c 0
+ 442 455 422 430 392 430 c 0
+ 372 430 354 441 346 460 c 2
+ 320 522 l 2
+ 317 528 316 535 316 541 c 0
+608 430 m 0
+ 578 430 558 455 558 480 c 0
+ 558 486 559 493 562 499 c 2
+ 587 561 l 2
+ 595 580 614 592 634 592 c 0
+ 664 592 684 566 684 541 c 0
+ 684 535 683 528 680 522 c 2
+ 654 460 l 2
+ 646 441 628 430 608 430 c 0
+500 260 m 0
+ 557 260 604 307 604 364 c 0
+ 604 392 626 414 654 414 c 0
+ 682 414 704 392 704 364 c 0
+ 704 251 613 160 500 160 c 0
+ 387 160 296 251 296 364 c 0
+ 296 392 318 414 346 414 c 0
+ 374 414 396 392 396 364 c 0
+ 396 307 443 260 500 260 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("kokosila", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+624 602 m 0
+ 654 602 674 577 674 552 c 0
+ 674 546 673 539 670 533 c 2
+ 659 507 l 2
+ 651 488 633 476 613 476 c 0
+ 583 476 563 501 563 526 c 0
+ 563 532 564 539 567 545 c 2
+ 578 571 l 2
+ 586 590 604 602 624 602 c 0
+325 552 m 0
+ 325 577 345 602 375 602 c 0
+ 394 602 412 591 420 573 c 2
+ 432 547 l 2
+ 435 540 437 533 437 526 c 0
+ 437 501 417 476 387 476 c 0
+ 368 476 350 487 342 505 c 2
+ 330 531 l 2
+ 327 538 325 545 325 552 c 0
+566 311 m 1
+ 482 262 l 1
+ 487 261 494 260 500 260 c 0
+ 532 260 558 282 566 311 c 1
+433 349 m 1
+ 517 398 l 1
+ 511 399 506 400 500 400 c 0
+ 468 400 441 379 433 349 c 1
+369 205 m 0
+ 344 205 319 225 319 254 c 0
+ 319 267 325 281 335 291 c 1
+ 332 304 330 316 330 330 c 0
+ 330 424 406 500 500 500 c 0
+ 545 500 586 482 616 453 c 1
+ 621 454 626 456 631 456 c 0
+ 656 456 681 435 681 406 c 0
+ 681 392 675 379 665 369 c 1
+ 668 357 669 343 669 330 c 0
+ 669 236 594 160 500 160 c 0
+ 455 160 413 177 383 206 c 1
+ 378 205 374 205 369 205 c 0
+500 640 m 0
+ 528 640 550 618 550 590 c 2
+ 550 555 l 2
+ 550 527 528 505 500 505 c 0
+ 472 505 450 527 450 555 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("lanpan", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+572 285 m 0
+ 558 285 547 296 547 310 c 0
+ 547 324 558 335 572 335 c 0
+ 586 335 597 324 597 310 c 0
+ 597 296 586 285 572 285 c 0
+476 502 m 0
+ 493 502 507 517 507 534 c 0
+ 507 551 493 565 476 565 c 0
+ 459 565 444 551 444 534 c 0
+ 444 517 459 502 476 502 c 0
+280 354 m 2
+ 280 427 311 481 371 515 c 1
+ 370 521 369 528 369 534 c 0
+ 369 593 417 640 476 640 c 0
+ 535 640 582 593 582 534 c 0
+ 582 475 535 427 476 427 c 0
+ 461 427 446 430 433 436 c 1
+ 421 429 l 2
+ 387 411 380 392 380 354 c 0
+ 380 342 384 334 387 331 c 0
+ 391 327 398 324 410 324 c 0
+ 420 324 424 326 429 331 c 0
+ 437 338 444 350 457 371 c 0
+ 487 422 534 447 580 447 c 0
+ 641 447 686 409 701 360 c 0
+ 705 348 706 336 706 323 c 0
+ 706 299 699 275 687 251 c 0
+ 678 234 661 224 643 224 c 0
+ 613 224 593 249 593 274 c 0
+ 593 289 606 312 606 323 c 0
+ 606 340 590 351 571 345 c 0
+ 563 343 552 336 543 320 c 0
+ 532 301 518 277 498 259 c 0
+ 476 238 447 224 410 224 c 0
+ 375 224 341 237 317 261 c 0
+ 293 285 280 319 280 354 c 2
+ 280 354 l 2"#,
+),
+GlyphDescriptor::new_with_anchor("n", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+500 640 m 0
+ 528 640 550 618 550 590 c 2
+ 550 490 l 2
+ 550 462 528 440 500 440 c 0
+ 472 440 450 462 450 490 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+500 330 m 0
+ 481 330 465 314 465 295 c 2
+ 465 230 l 2
+ 465 202 443 180 415 180 c 0
+ 387 180 365 202 365 230 c 2
+ 365 295 l 2
+ 365 370 425 430 500 430 c 0
+ 575 430 635 370 635 295 c 2
+ 635 230 l 2
+ 635 202 613 180 585 180 c 0
+ 557 180 535 202 535 230 c 2
+ 535 295 l 2
+ 535 314 519 330 500 330 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("misikeke", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+454 352 m 1
+ 454 306 l 2
+ 454 281 475 260 500 260 c 0
+ 525 260 546 281 546 306 c 2
+ 546 352 l 1
+ 454 352 l 1
+546 452 m 1
+ 546 497 l 2
+ 546 522 525 543 500 543 c 0
+ 475 543 454 522 454 497 c 2
+ 454 452 l 1
+ 546 452 l 1
+500 643 m 0
+ 580 643 646 577 646 497 c 2
+ 646 306 l 2
+ 646 226 580 160 500 160 c 0
+ 420 160 354 226 354 306 c 2
+ 354 497 l 2
+ 354 577 420 643 500 643 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("ku", Anchor::new_scale(AnchorType::Mark, (500, 400)),
+r#"
+575 427 m 1
+ 575 483 l 1
+ 521 448 l 1
+ 575 427 l 1
+509 304 m 1
+ 575 304 l 1
+ 575 374 l 1
+ 496 403 l 1
+ 509 304 l 1
+425 304 m 1
+ 459 304 l 1
+ 442 438 l 2
+ 441 447 445 457 453 462 c 2
+ 504 496 l 1
+ 425 496 l 1
+ 425 304 l 1
+375 596 m 2
+ 625 596 l 2
+ 653 596 675 574 675 546 c 2
+ 675 254 l 2
+ 675 226 653 204 625 204 c 2
+ 375 204 l 2
+ 347 204 325 226 325 254 c 2
+ 325 546 l 2
+ 325 574 347 596 375 596 c 2
+566 342 m 0
+ 566 328 555 317 541 317 c 0
+ 527 317 516 328 516 342 c 0
+ 516 356 527 367 541 367 c 0
+ 555 367 566 356 566 342 c 0"#,
 ),
 ];
 
 pub const TOK_EXT_INNER: [GlyphDescriptor; 9] = [
-GlyphDescriptor::new_with_anchor("pake", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("pake", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-98 814 m 2
- 402 814 l 2
- 430 814 452 792 452 764 c 0
- 452 736 430 714 402 714 c 2
- 300 714 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 714 l 1
- 98 714 l 2
- 70 714 48 736 48 764 c 0
- 48 792 70 814 98 814 c 2"#,
+348 564 m 2
+ 652 564 l 2
+ 680 564 702 542 702 514 c 0
+ 702 486 680 464 652 464 c 2
+ 550 464 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 464 l 1
+ 348 464 l 2
+ 320 464 298 486 298 514 c 0
+ 298 542 320 564 348 564 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("apeja", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("apeja", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-76 532 m 0
- 51 532 26 552 26 582 c 0
- 26 602 37 620 57 628 c 2
- 231 698 l 2
- 237 700 244 702 250 702 c 0
- 256 702 263 700 269 698 c 2
- 443 628 l 2
- 463 620 474 602 474 582 c 0
- 474 552 449 532 424 532 c 0
- 418 532 411 534 405 536 c 2
- 250 598 l 1
- 95 536 l 2
- 89 534 82 532 76 532 c 0
-358 850 m 0
- 405 850 443 812 443 765 c 0
- 443 718 405 680 358 680 c 0
- 311 680 273 718 273 765 c 0
- 273 812 311 850 358 850 c 0
-358 775 m 0
- 352 775 348 771 348 765 c 0
- 348 759 352 755 358 755 c 0
- 364 755 368 759 368 765 c 0
- 368 771 364 775 358 775 c 0
-143 850 m 0
- 190 850 228 812 228 765 c 0
- 228 718 190 680 143 680 c 0
- 96 680 58 718 58 765 c 0
- 58 812 96 850 143 850 c 0
-143 775 m 0
- 137 775 133 771 133 765 c 0
- 133 759 137 755 143 755 c 0
- 149 755 153 759 153 765 c 0
- 153 771 149 775 143 775 c 0
-251 580 m 0
- 298 580 336 542 336 495 c 0
- 336 448 298 410 251 410 c 0
- 204 410 166 448 166 495 c 0
- 166 542 204 580 251 580 c 0
-251 505 m 0
- 245 505 241 501 241 495 c 0
- 241 489 245 485 251 485 c 0
- 257 485 261 489 261 495 c 0
- 261 501 257 505 251 505 c 0"#,
+326 282 m 0
+ 301 282 276 302 276 332 c 0
+ 276 352 287 370 307 378 c 2
+ 481 448 l 2
+ 487 450 494 452 500 452 c 0
+ 506 452 513 450 519 448 c 2
+ 693 378 l 2
+ 713 370 724 352 724 332 c 0
+ 724 302 699 282 674 282 c 0
+ 668 282 661 284 655 286 c 2
+ 500 348 l 1
+ 345 286 l 2
+ 339 284 332 282 326 282 c 0
+608 600 m 0
+ 655 600 693 562 693 515 c 0
+ 693 468 655 430 608 430 c 0
+ 561 430 523 468 523 515 c 0
+ 523 562 561 600 608 600 c 0
+608 525 m 0
+ 602 525 598 521 598 515 c 0
+ 598 509 602 505 608 505 c 0
+ 614 505 618 509 618 515 c 0
+ 618 521 614 525 608 525 c 0
+393 600 m 0
+ 440 600 478 562 478 515 c 0
+ 478 468 440 430 393 430 c 0
+ 346 430 308 468 308 515 c 0
+ 308 562 346 600 393 600 c 0
+393 525 m 0
+ 387 525 383 521 383 515 c 0
+ 383 509 387 505 393 505 c 0
+ 399 505 403 509 403 515 c 0
+ 403 521 399 525 393 525 c 0
+501 330 m 0
+ 548 330 586 292 586 245 c 0
+ 586 198 548 160 501 160 c 0
+ 454 160 416 198 416 245 c 0
+ 416 292 454 330 501 330 c 0
+501 255 m 0
+ 495 255 491 251 491 245 c 0
+ 491 239 495 235 501 235 c 0
+ 507 235 511 239 511 245 c 0
+ 511 251 507 255 501 255 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("majuna", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("majuna", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-330 590 m 0
- 330 618 352 640 380 640 c 2
- 430 640 l 2
- 458 640 480 618 480 590 c 0
- 480 562 458 540 430 540 c 2
- 380 540 l 2
- 352 540 330 562 330 590 c 0
-350 640 m 0
- 323 640 300 663 300 690 c 0
- 300 703 305 715 315 725 c 2
- 350 761 l 2
- 360 771 372 775 385 775 c 0
- 412 775 435 752 435 725 c 0
- 435 712 431 700 421 690 c 2
- 385 655 l 2
- 375 645 363 640 350 640 c 0
-250 680 m 0
- 222 680 200 702 200 730 c 2
- 200 780 l 2
- 200 808 222 830 250 830 c 0
- 278 830 300 808 300 780 c 2
- 300 730 l 2
- 300 702 278 680 250 680 c 0
-65 725 m 0
- 65 752 88 775 115 775 c 0
- 128 775 140 770 150 760 c 2
- 186 725 l 2
- 196 715 200 703 200 690 c 0
- 200 663 177 640 150 640 c 0
- 137 640 125 644 115 654 c 2
- 80 690 l 2
- 70 700 65 712 65 725 c 0
-20 590 m 0
- 20 618 42 640 70 640 c 2
- 120 640 l 2
- 148 640 170 618 170 590 c 0
- 170 562 148 540 120 540 c 2
- 70 540 l 2
- 42 540 20 562 20 590 c 0"#,
+580 340 m 0
+ 580 368 602 390 630 390 c 2
+ 680 390 l 2
+ 708 390 730 368 730 340 c 0
+ 730 312 708 290 680 290 c 2
+ 630 290 l 2
+ 602 290 580 312 580 340 c 0
+600 390 m 0
+ 573 390 550 413 550 440 c 0
+ 550 453 555 465 565 475 c 2
+ 600 511 l 2
+ 610 521 622 525 635 525 c 0
+ 662 525 685 502 685 475 c 0
+ 685 462 681 450 671 440 c 2
+ 635 405 l 2
+ 625 395 613 390 600 390 c 0
+500 430 m 0
+ 472 430 450 452 450 480 c 2
+ 450 530 l 2
+ 450 558 472 580 500 580 c 0
+ 528 580 550 558 550 530 c 2
+ 550 480 l 2
+ 550 452 528 430 500 430 c 0
+315 475 m 0
+ 315 502 338 525 365 525 c 0
+ 378 525 390 520 400 510 c 2
+ 436 475 l 2
+ 446 465 450 453 450 440 c 0
+ 450 413 427 390 400 390 c 0
+ 387 390 375 394 365 404 c 2
+ 330 440 l 2
+ 320 450 315 462 315 475 c 0
+270 340 m 0
+ 270 368 292 390 320 390 c 2
+ 370 390 l 2
+ 398 390 420 368 420 340 c 0
+ 420 312 398 290 370 290 c 2
+ 320 290 l 2
+ 292 290 270 312 270 340 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("powe", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("powe", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-17 600 m 0
- 17 628 39 650 67 650 c 2
- 433 650 l 2
- 461 650 483 628 483 600 c 0
- 483 572 461 550 433 550 c 2
- 67 550 l 2
- 39 550 17 572 17 600 c 0
-250 672 m 1
- 239 661 226 653 210 653 c 0
- 183 653 160 676 160 703 c 0
- 160 719 168 732 179 743 c 1
- 168 754 160 767 160 783 c 0
- 160 810 183 833 210 833 c 0
- 226 833 239 825 250 814 c 1
- 261 825 274 833 290 833 c 0
- 317 833 340 810 340 783 c 0
- 340 767 332 754 321 743 c 1
- 332 732 340 719 340 703 c 0
- 340 676 317 653 290 653 c 0
- 274 653 261 661 250 672 c 1"#,
+267 350 m 0
+ 267 378 289 400 317 400 c 2
+ 683 400 l 2
+ 711 400 733 378 733 350 c 0
+ 733 322 711 300 683 300 c 2
+ 317 300 l 2
+ 289 300 267 322 267 350 c 0
+500 422 m 1
+ 489 411 476 403 460 403 c 0
+ 433 403 410 426 410 453 c 0
+ 410 469 418 482 429 493 c 1
+ 418 504 410 517 410 533 c 0
+ 410 560 433 583 460 583 c 0
+ 476 583 489 575 500 564 c 1
+ 511 575 524 583 540 583 c 0
+ 567 583 590 560 590 533 c 0
+ 590 517 582 504 571 493 c 1
+ 582 482 590 469 590 453 c 0
+ 590 426 567 403 540 403 c 0
+ 524 403 511 411 500 422 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("linluwi", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("linluwi", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-165 585 m 0
- 165 603 150 617 132 617 c 0
- 114 617 100 603 100 585 c 0
- 100 567 114 553 132 553 c 0
- 150 553 165 567 165 585 c 0
-368 553 m 0
- 386 553 400 567 400 585 c 0
- 400 603 386 617 368 617 c 0
- 350 617 335 603 335 585 c 0
- 335 567 350 553 368 553 c 0
-261 676 m 1
- 257 676 254 676 250 676 c 0
- 246 676 243 676 239 676 c 1
- 221 646 l 1
- 226 639 230 630 233 622 c 1
- 267 622 l 1
- 270 630 274 639 279 646 c 1
- 261 676 l 1
-282 783 m 0
- 282 801 268 815 250 815 c 0
- 232 815 218 801 218 783 c 0
- 218 765 232 751 250 751 c 0
- 268 751 282 765 282 783 c 0
-219 522 m 1
- 199 495 168 478 132 478 c 0
- 73 478 25 526 25 585 c 0
- 25 644 73 692 132 692 c 1
- 155 732 l 1
- 147 747 143 765 143 783 c 0
- 143 842 191 890 250 890 c 0
- 309 890 357 842 357 783 c 0
- 357 765 353 747 345 732 c 1
- 368 692 l 1
- 427 692 475 644 475 585 c 0
- 475 526 427 478 368 478 c 0
- 332 478 301 495 281 522 c 1
- 219 522 l 1"#,
+415 335 m 0
+ 415 353 400 367 382 367 c 0
+ 364 367 350 353 350 335 c 0
+ 350 317 364 303 382 303 c 0
+ 400 303 415 317 415 335 c 0
+618 303 m 0
+ 636 303 650 317 650 335 c 0
+ 650 353 636 367 618 367 c 0
+ 600 367 585 353 585 335 c 0
+ 585 317 600 303 618 303 c 0
+511 426 m 1
+ 507 426 504 426 500 426 c 0
+ 496 426 493 426 489 426 c 1
+ 471 396 l 1
+ 476 389 480 380 483 372 c 1
+ 517 372 l 1
+ 520 380 524 389 529 396 c 1
+ 511 426 l 1
+532 533 m 0
+ 532 551 518 565 500 565 c 0
+ 482 565 468 551 468 533 c 0
+ 468 515 482 501 500 501 c 0
+ 518 501 532 515 532 533 c 0
+469 272 m 1
+ 449 245 418 228 382 228 c 0
+ 323 228 275 276 275 335 c 0
+ 275 394 323 442 382 442 c 1
+ 405 482 l 1
+ 397 497 393 515 393 533 c 0
+ 393 592 441 640 500 640 c 0
+ 559 640 607 592 607 533 c 0
+ 607 515 603 497 595 482 c 1
+ 618 442 l 1
+ 677 442 725 394 725 335 c 0
+ 725 276 677 228 618 228 c 0
+ 582 228 551 245 531 272 c 1
+ 469 272 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("kiki", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kiki", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 695 m 1
- 288 629 l 1
- 212 629 l 1
- 250 695 l 1
-171 607 m 1
- 330 607 l 1
- 250 741 l 1
- 171 607 l 1
-84 507 m 2
- 58 507 34 528 34 557 c 0
- 34 566 36 574 41 582 c 2
- 207 865 l 2
- 216 880 232 890 250 890 c 0
- 268 890 285 880 294 865 c 2
- 460 582 l 2
- 465 574 467 566 467 557 c 0
- 467 528 443 507 417 507 c 2
- 84 507 l 2"#,
+500 445 m 1
+ 538 379 l 1
+ 462 379 l 1
+ 500 445 l 1
+421 357 m 1
+ 580 357 l 1
+ 500 491 l 1
+ 421 357 l 1
+334 257 m 2
+ 308 257 284 278 284 307 c 0
+ 284 316 286 324 291 332 c 2
+ 457 615 l 2
+ 466 630 482 640 500 640 c 0
+ 518 640 535 630 544 615 c 2
+ 710 332 l 2
+ 715 324 717 316 717 307 c 0
+ 717 278 693 257 667 257 c 2
+ 334 257 l 2"#,
 ),
-GlyphDescriptor::new_with_anchor("su", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("su", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-234 655 m 1
- 274 633 302 599 317 555 c 1
- 324 555 l 1
- 324 645 l 1
- 296 651 269 656 243 656 c 0
- 240 656 237 655 234 655 c 1
-176 599 m 1
- 176 555 l 1
- 235 555 l 1
- 222 578 206 588 176 599 c 1
-176 721 m 1
- 198 728 218 731 243 731 c 0
- 271 731 298 727 324 722 c 1
- 324 745 l 1
- 176 745 l 1
- 176 721 l 1
-126 845 m 2
- 374 845 l 2
- 402 845 424 823 424 795 c 2
- 424 505 l 2
- 424 477 402 455 374 455 c 2
- 126 455 l 2
- 98 455 76 477 76 505 c 2
- 76 795 l 2
- 76 823 98 845 126 845 c 2"#,
+484 405 m 1
+ 524 383 552 349 567 305 c 1
+ 574 305 l 1
+ 574 395 l 1
+ 546 401 519 406 493 406 c 0
+ 490 406 487 405 484 405 c 1
+426 349 m 1
+ 426 305 l 1
+ 485 305 l 1
+ 472 328 456 338 426 349 c 1
+426 471 m 1
+ 448 478 468 481 493 481 c 0
+ 521 481 548 477 574 472 c 1
+ 574 495 l 1
+ 426 495 l 1
+ 426 471 l 1
+376 595 m 2
+ 624 595 l 2
+ 652 595 674 573 674 545 c 2
+ 674 255 l 2
+ 674 227 652 205 624 205 c 2
+ 376 205 l 2
+ 348 205 326 227 326 255 c 2
+ 326 545 l 2
+ 326 573 348 595 376 595 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("wa", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("wa", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-149 750 m 0
- 177 750 199 726 199 700 c 0
- 199 690 196 679 189 670 c 0
- 175 652 161 625 161 587 c 0
- 161 557 165 528 188 528 c 0
- 200 530 200 542 203 552 c 0
- 209 570 226 585 250 585 c 0
- 278 585 298 565 300 540 c 0
- 301 536 307 529 312 528 c 0
- 323 528 325 530 329 537 c 0
- 335 546 339 563 339 587 c 0
- 339 625 325 652 311 670 c 0
- 304 679 301 690 301 700 c 0
- 301 726 323 750 351 750 c 0
- 366 750 381 743 391 730 c 0
- 414 700 439 652 439 587 c 0
- 439 504 397 428 312 428 c 0
- 290 428 268 436 250 448 c 1
- 232 436 210 428 188 428 c 0
- 103 428 61 504 61 587 c 0
- 61 652 86 700 109 730 c 0
- 119 743 134 750 149 750 c 0
-300 840 m 2
- 300 740 l 2
- 300 712 278 690 250 690 c 0
- 222 690 200 712 200 740 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2"#,
+399 500 m 0
+ 427 500 449 476 449 450 c 0
+ 449 440 446 429 439 420 c 0
+ 425 402 411 375 411 337 c 0
+ 411 307 415 278 438 278 c 0
+ 450 280 450 292 453 302 c 0
+ 459 320 476 335 500 335 c 0
+ 528 335 548 315 550 290 c 0
+ 551 286 557 279 562 278 c 0
+ 573 278 575 280 579 287 c 0
+ 585 296 589 313 589 337 c 0
+ 589 375 575 402 561 420 c 0
+ 554 429 551 440 551 450 c 0
+ 551 476 573 500 601 500 c 0
+ 616 500 631 493 641 480 c 0
+ 664 450 689 402 689 337 c 0
+ 689 254 647 178 562 178 c 0
+ 540 178 518 186 500 198 c 1
+ 482 186 460 178 438 178 c 0
+ 353 178 311 254 311 337 c 0
+ 311 402 336 450 359 480 c 0
+ 369 493 384 500 399 500 c 0
+550 590 m 2
+ 550 490 l 2
+ 550 462 528 440 500 440 c 0
+ 472 440 450 462 450 490 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("owe", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("owe", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-374 852 m 0
- 404 852 424 827 424 802 c 0
- 424 796 423 789 420 783 c 2
- 409 757 l 2
- 401 738 383 726 363 726 c 0
- 333 726 313 751 313 776 c 0
- 313 782 314 789 317 795 c 2
- 328 821 l 2
- 336 840 354 852 374 852 c 0
-75 802 m 0
- 75 827 95 852 125 852 c 0
- 144 852 162 841 170 823 c 2
- 182 797 l 2
- 185 790 187 783 187 776 c 0
- 187 751 167 726 137 726 c 0
- 118 726 100 737 92 755 c 2
- 80 781 l 2
- 77 788 75 795 75 802 c 0
-137 570 m 1
- 158 534 205 510 250 510 c 0
- 295 510 343 534 364 570 c 1
- 343 606 295 630 250 630 c 0
- 205 630 158 606 137 570 c 1
-51 519 m 0
- 42 535 37 552 37 570 c 0
- 37 588 42 605 51 621 c 0
- 93 692 176 730 250 730 c 0
- 324 730 408 692 450 621 c 0
- 459 605 464 588 464 570 c 0
- 464 552 459 535 450 519 c 0
- 408 448 324 410 250 410 c 0
- 176 410 93 448 51 519 c 0
-290 570 m 0
- 290 548 272 530 250 530 c 0
- 228 530 210 548 210 570 c 0
- 210 592 228 610 250 610 c 0
- 272 610 290 592 290 570 c 0
-300 840 m 2
- 300 805 l 2
- 300 777 278 755 250 755 c 0
- 222 755 200 777 200 805 c 2
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2"#,
+624 602 m 0
+ 654 602 674 577 674 552 c 0
+ 674 546 673 539 670 533 c 2
+ 659 507 l 2
+ 651 488 633 476 613 476 c 0
+ 583 476 563 501 563 526 c 0
+ 563 532 564 539 567 545 c 2
+ 578 571 l 2
+ 586 590 604 602 624 602 c 0
+325 552 m 0
+ 325 577 345 602 375 602 c 0
+ 394 602 412 591 420 573 c 2
+ 432 547 l 2
+ 435 540 437 533 437 526 c 0
+ 437 501 417 476 387 476 c 0
+ 368 476 350 487 342 505 c 2
+ 330 531 l 2
+ 327 538 325 545 325 552 c 0
+387 320 m 1
+ 408 284 455 260 500 260 c 0
+ 545 260 593 284 614 320 c 1
+ 593 356 545 380 500 380 c 0
+ 455 380 408 356 387 320 c 1
+301 269 m 0
+ 292 285 287 302 287 320 c 0
+ 287 338 292 355 301 371 c 0
+ 343 442 426 480 500 480 c 0
+ 574 480 658 442 700 371 c 0
+ 709 355 714 338 714 320 c 0
+ 714 302 709 285 700 269 c 0
+ 658 198 574 160 500 160 c 0
+ 426 160 343 198 301 269 c 0
+540 320 m 0
+ 540 298 522 280 500 280 c 0
+ 478 280 460 298 460 320 c 0
+ 460 342 478 360 500 360 c 0
+ 522 360 540 342 540 320 c 0
+550 590 m 2
+ 550 555 l 2
+ 550 527 528 505 500 505 c 0
+ 472 505 450 527 450 555 c 2
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2"#,
 ),
 ];
 
 pub const TOK_ALT_INNER: [GlyphDescriptor; 37] = [
-GlyphDescriptor::new_with_anchor("jakiTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-487 649 m 0
- 487 589 472 515 408 515 c 0
- 383 515 365 527 353 538 c 0
- 332 556 320 576 303 594 c 1
- 291 592 279 591 267 591 c 0
- 223 591 183 606 151 623 c 1
- 147 620 143 616 139 613 c 1
- 188 600 252 584 352 534 c 0
- 368 526 380 510 380 487 c 0
- 380 465 368 451 361 445 c 0
- 343 428 322 422 295 417 c 0
- 277 413 256 411 235 411 c 0
- 187 411 148 421 125 455 c 0
- 116 468 111 484 111 500 c 0
- 111 506 112 512 113 517 c 1
- 76 527 43 535 25 570 c 0
- 20 580 18 591 18 601 c 0
- 18 616 23 628 28 638 c 0
- 38 656 51 670 66 683 c 1
- 53 695 46 703 45 704 c 0
- 37 713 32 725 32 738 c 0
- 32 746 34 754 38 762 c 0
- 40 765 58 796 93 828 c 0
- 121 853 161 880 215 886 c 0
- 217 886 219 887 221 887 c 0
- 249 887 271 863 271 836 c 0
- 271 810 252 790 227 787 c 0
- 195 783 168 764 149 744 c 1
- 150 743 151 743 152 742 c 0
- 217 780 297 814 369 834 c 0
- 374 835 378 836 382 836 c 0
- 395 836 407 830 416 822 c 0
- 419 819 439 801 458 765 c 0
- 473 737 487 697 487 649 c 0"#,
+737 399 m 0
+ 737 339 722 265 658 265 c 0
+ 633 265 615 277 603 288 c 0
+ 582 306 570 326 553 344 c 1
+ 541 342 529 341 517 341 c 0
+ 473 341 433 356 401 373 c 1
+ 397 370 393 366 389 363 c 1
+ 438 350 502 334 602 284 c 0
+ 618 276 630 260 630 237 c 0
+ 630 215 618 201 611 195 c 0
+ 593 178 572 172 545 167 c 0
+ 527 163 506 161 485 161 c 0
+ 437 161 398 171 375 205 c 0
+ 366 218 361 234 361 250 c 0
+ 361 256 362 262 363 267 c 1
+ 326 277 293 285 275 320 c 0
+ 270 330 268 341 268 351 c 0
+ 268 366 273 378 278 388 c 0
+ 288 406 301 420 316 433 c 1
+ 303 445 296 453 295 454 c 0
+ 287 463 282 475 282 488 c 0
+ 282 496 284 504 288 512 c 0
+ 290 515 308 546 343 578 c 0
+ 371 603 411 630 465 636 c 0
+ 467 636 469 637 471 637 c 0
+ 499 637 521 613 521 586 c 0
+ 521 560 502 540 477 537 c 0
+ 445 533 418 514 399 494 c 1
+ 400 493 401 493 402 492 c 0
+ 467 530 547 564 619 584 c 0
+ 624 585 628 586 632 586 c 0
+ 645 586 657 580 666 572 c 0
+ 669 569 689 551 708 515 c 0
+ 723 487 737 447 737 399 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR02", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR02", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-255 786 m 0
- 308 766 348 742 370 707 c 0
- 372 708 374 708 376 709 c 1
- 357 748 312 785 255 790 c 1
- 255 788 255 787 255 786 c 0
-184 683 m 1
- 199 685 215 687 230 688 c 1
- 204 698 183 705 165 710 c 1
- 171 702 176 693 184 683 c 1
-28 570 m 0
- 28 609 58 635 84 651 c 1
- 72 668 59 690 52 709 c 0
- 48 721 44 733 44 746 c 0
- 44 792 82 817 125 817 c 0
- 134 817 142 816 151 815 c 1
- 155 864 196 890 248 890 c 0
- 346 890 417 832 456 771 c 0
- 468 752 480 728 480 699 c 0
- 480 645 440 623 399 611 c 1
- 405 610 412 609 421 608 c 0
- 446 605 466 584 466 558 c 0
- 466 531 444 508 416 508 c 0
- 414 508 412 508 410 508 c 0
- 349 515 297 535 288 592 c 1
- 280 591 273 591 266 590 c 1
- 279 577 292 566 304 550 c 0
- 313 538 323 522 323 500 c 0
- 323 466 297 444 274 433 c 0
- 257 425 233 415 208 415 c 0
- 186 415 166 422 149 430 c 0
- 127 440 107 454 91 467 c 0
- 67 487 28 522 28 570 c 0
-196 519 m 1
- 181 534 162 555 147 572 c 1
- 142 570 138 567 134 565 c 1
- 149 545 169 529 196 519 c 1"#,
+505 536 m 0
+ 558 516 598 492 620 457 c 0
+ 622 458 624 458 626 459 c 1
+ 607 498 562 535 505 540 c 1
+ 505 538 505 537 505 536 c 0
+434 433 m 1
+ 449 435 465 437 480 438 c 1
+ 454 448 433 455 415 460 c 1
+ 421 452 426 443 434 433 c 1
+278 320 m 0
+ 278 359 308 385 334 401 c 1
+ 322 418 309 440 302 459 c 0
+ 298 471 294 483 294 496 c 0
+ 294 542 332 567 375 567 c 0
+ 384 567 392 566 401 565 c 1
+ 405 614 446 640 498 640 c 0
+ 596 640 667 582 706 521 c 0
+ 718 502 730 478 730 449 c 0
+ 730 395 690 373 649 361 c 1
+ 655 360 662 359 671 358 c 0
+ 696 355 716 334 716 308 c 0
+ 716 281 694 258 666 258 c 0
+ 664 258 662 258 660 258 c 0
+ 599 265 547 285 538 342 c 1
+ 530 341 523 341 516 340 c 1
+ 529 327 542 316 554 300 c 0
+ 563 288 573 272 573 250 c 0
+ 573 216 547 194 524 183 c 0
+ 507 175 483 165 458 165 c 0
+ 436 165 416 172 399 180 c 0
+ 377 190 357 204 341 217 c 0
+ 317 237 278 272 278 320 c 0
+446 269 m 1
+ 431 284 412 305 397 322 c 1
+ 392 320 388 317 384 315 c 1
+ 399 295 419 279 446 269 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR03", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR03", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-400 575 m 1
- 419 564 440 550 440 522 c 0
- 440 494 418 472 390 472 c 0
- 379 472 368 476 360 482 c 0
- 325 509 262 524 203 534 c 0
- 179 538 161 558 161 583 c 0
- 161 611 183 633 211 633 c 0
- 220 633 227 632 237 632 c 0
- 250 632 264 633 279 636 c 1
- 252 638 222 639 193 639 c 0
- 164 639 136 638 113 632 c 1
- 122 574 172 512 260 512 c 0
- 288 512 310 490 310 462 c 0
- 310 434 288 412 260 412 c 0
- 101 412 11 540 11 652 c 0
- 11 692 42 715 72 725 c 1
- 64 735 57 749 57 766 c 0
- 57 787 66 802 75 813 c 0
- 109 855 176 889 252 889 c 0
- 295 889 342 877 387 846 c 0
- 400 837 409 822 409 805 c 0
- 409 777 387 755 359 755 c 0
- 349 755 339 759 331 764 c 0
- 303 783 277 789 252 789 c 0
- 231 789 210 784 193 777 c 1
- 257 764 353 757 414 741 c 0
- 435 735 452 729 468 715 c 0
- 477 706 489 690 489 669 c 0
- 489 667 489 665 489 662 c 0
- 489 633 474 633 474 633 c 0
- 450 609 425 589 400 575 c 1"#,
+650 325 m 1
+ 669 314 690 300 690 272 c 0
+ 690 244 668 222 640 222 c 0
+ 629 222 618 226 610 232 c 0
+ 575 259 512 274 453 284 c 0
+ 429 288 411 308 411 333 c 0
+ 411 361 433 383 461 383 c 0
+ 470 383 477 382 487 382 c 0
+ 500 382 514 383 529 386 c 1
+ 502 388 472 389 443 389 c 0
+ 414 389 386 388 363 382 c 1
+ 372 324 422 262 510 262 c 0
+ 538 262 560 240 560 212 c 0
+ 560 184 538 162 510 162 c 0
+ 351 162 261 290 261 402 c 0
+ 261 442 292 465 322 475 c 1
+ 314 485 307 499 307 516 c 0
+ 307 537 316 552 325 563 c 0
+ 359 605 426 639 502 639 c 0
+ 545 639 592 627 637 596 c 0
+ 650 587 659 572 659 555 c 0
+ 659 527 637 505 609 505 c 0
+ 599 505 589 509 581 514 c 0
+ 553 533 527 539 502 539 c 0
+ 481 539 460 534 443 527 c 1
+ 507 514 603 507 664 491 c 0
+ 685 485 702 479 718 465 c 0
+ 727 456 739 440 739 419 c 0
+ 739 417 739 415 739 412 c 0
+ 739 383 724 383 724 383 c 0
+ 700 359 675 339 650 325 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR04", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR04", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-210 549 m 0
- 210 516 219 510 251 510 c 0
- 254 510 257 510 260 510 c 1
- 254 532 243 553 243 586 c 0
- 243 621 259 647 281 664 c 0
- 289 671 300 675 312 675 c 0
- 340 675 362 653 362 625 c 0
- 362 609 343 595 343 586 c 0
- 343 563 363 527 363 495 c 0
- 363 433 310 410 250 410 c 0
- 204 410 169 425 146 449 c 1
- 71 487 11 555 11 656 c 0
- 11 718 36 778 84 818 c 0
- 105 836 133 849 159 861 c 0
- 191 875 219 886 220 886 c 0
- 226 888 231 889 237 889 c 0
- 264 889 287 866 287 839 c 0
- 287 817 273 799 254 792 c 0
- 242 788 165 755 148 741 c 0
- 125 722 111 690 111 656 c 0
- 111 642 113 629 118 615 c 1
- 125 644 139 682 144 695 c 0
- 172 765 244 792 307 792 c 0
- 340 792 374 785 405 770 c 0
- 418 764 441 754 462 729 c 0
- 478 709 489 682 489 650 c 0
- 489 616 479 579 457 535 c 0
- 449 519 432 507 412 507 c 0
- 384 507 362 529 362 557 c 0
- 362 565 364 572 367 579 c 0
- 385 614 389 638 389 650 c 0
- 389 670 379 672 364 679 c 0
- 347 687 327 692 307 692 c 0
- 268 692 244 675 237 657 c 0
- 229 636 210 583 210 549 c 0"#,
+460 299 m 0
+ 460 266 469 260 501 260 c 0
+ 504 260 507 260 510 260 c 1
+ 504 282 493 303 493 336 c 0
+ 493 371 509 397 531 414 c 0
+ 539 421 550 425 562 425 c 0
+ 590 425 612 403 612 375 c 0
+ 612 359 593 345 593 336 c 0
+ 593 313 613 277 613 245 c 0
+ 613 183 560 160 500 160 c 0
+ 454 160 419 175 396 199 c 1
+ 321 237 261 305 261 406 c 0
+ 261 468 286 528 334 568 c 0
+ 355 586 383 599 409 611 c 0
+ 441 625 469 636 470 636 c 0
+ 476 638 481 639 487 639 c 0
+ 514 639 537 616 537 589 c 0
+ 537 567 523 549 504 542 c 0
+ 492 538 415 505 398 491 c 0
+ 375 472 361 440 361 406 c 0
+ 361 392 363 379 368 365 c 1
+ 375 394 389 432 394 445 c 0
+ 422 515 494 542 557 542 c 0
+ 590 542 624 535 655 520 c 0
+ 668 514 691 504 712 479 c 0
+ 728 459 739 432 739 400 c 0
+ 739 366 729 329 707 285 c 0
+ 699 269 682 257 662 257 c 0
+ 634 257 612 279 612 307 c 0
+ 612 315 614 322 617 329 c 0
+ 635 364 639 388 639 400 c 0
+ 639 420 629 422 614 429 c 0
+ 597 437 577 442 557 442 c 0
+ 518 442 494 425 487 407 c 0
+ 479 386 460 333 460 299 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR05", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR05", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-251 644 m 0
- 245 644 240 646 233 646 c 0
- 221 646 197 640 177 629 c 0
- 161 621 147 610 143 605 c 0
- 140 602 139 593 139 584 c 0
- 139 578 140 571 141 566 c 1
- 146 571 154 578 162 589 c 0
- 183 618 214 626 248 636 c 0
- 297 650 335 664 359 705 c 1
- 357 727 353 744 343 754 c 1
- 294 669 l 2
- 286 655 270 644 251 644 c 0
-266 518 m 0
- 292 518 351 540 351 560 c 0
- 351 562 351 565 351 567 c 1
- 323 553 296 545 275 539 c 0
- 260 535 250 533 241 528 c 1
- 225 506 208 489 189 477 c 0
- 173 467 155 460 135 460 c 0
- 90 460 61 494 49 527 c 0
- 42 545 39 565 39 584 c 0
- 39 605 42 626 52 647 c 0
- 59 661 68 672 78 681 c 0
- 104 706 141 727 180 738 c 0
- 194 742 208 745 223 746 c 1
- 232 762 l 1
- 211 760 194 755 180 751 c 0
- 152 742 138 731 131 725 c 0
- 122 717 111 713 98 713 c 0
- 70 713 48 735 48 763 c 0
- 48 778 54 791 64 800 c 0
- 106 838 185 864 280 864 c 0
- 325 864 361 860 391 842 c 0
- 436 814 461 758 460 693 c 0
- 460 690 460 687 460 684 c 0
- 460 640 451 597 451 560 c 0
- 451 492 393 453 344 434 c 0
- 317 424 290 418 266 418 c 0
- 238 418 216 440 216 468 c 0
- 216 496 238 518 266 518 c 0"#,
+501 394 m 0
+ 495 394 490 396 483 396 c 0
+ 471 396 447 390 427 379 c 0
+ 411 371 397 360 393 355 c 0
+ 390 352 389 343 389 334 c 0
+ 389 328 390 321 391 316 c 1
+ 396 321 404 328 412 339 c 0
+ 433 368 464 376 498 386 c 0
+ 547 400 585 414 609 455 c 1
+ 607 477 603 494 593 504 c 1
+ 544 419 l 2
+ 536 405 520 394 501 394 c 0
+516 268 m 0
+ 542 268 601 290 601 310 c 0
+ 601 312 601 315 601 317 c 1
+ 573 303 546 295 525 289 c 0
+ 510 285 500 283 491 278 c 1
+ 475 256 458 239 439 227 c 0
+ 423 217 405 210 385 210 c 0
+ 340 210 311 244 299 277 c 0
+ 292 295 289 315 289 334 c 0
+ 289 355 292 376 302 397 c 0
+ 309 411 318 422 328 431 c 0
+ 354 456 391 477 430 488 c 0
+ 444 492 458 495 473 496 c 1
+ 482 512 l 1
+ 461 510 444 505 430 501 c 0
+ 402 492 388 481 381 475 c 0
+ 372 467 361 463 348 463 c 0
+ 320 463 298 485 298 513 c 0
+ 298 528 304 541 314 550 c 0
+ 356 588 435 614 530 614 c 0
+ 575 614 611 610 641 592 c 0
+ 686 564 711 508 710 443 c 0
+ 710 440 710 437 710 434 c 0
+ 710 390 701 347 701 310 c 0
+ 701 242 643 203 594 184 c 0
+ 567 174 540 168 516 168 c 0
+ 488 168 466 190 466 218 c 0
+ 466 246 488 268 516 268 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR06", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR06", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-136 699 m 1
- 103 712 64 734 64 780 c 0
- 64 816 90 838 111 850 c 0
- 146 870 197 883 248 883 c 0
- 262 883 276 881 290 878 c 0
- 411 849 482 765 482 679 c 0
- 482 664 479 654 475 644 c 0
- 465 617 449 591 433 567 c 1
- 441 558 447 546 447 533 c 0
- 447 505 425 483 397 483 c 0
- 388 483 379 485 372 489 c 1
- 354 470 333 452 311 438 c 0
- 290 424 263 413 234 413 c 0
- 223 413 211 415 200 419 c 0
- 151 437 107 473 73 509 c 0
- 57 526 43 544 33 563 c 0
- 25 578 17 595 17 617 c 0
- 17 657 46 684 79 691 c 0
- 97 695 114 697 136 699 c 1
-129 597 m 1
- 153 565 205 525 235 513 c 0
- 237 513 243 515 254 521 c 1
- 239 530 228 546 228 565 c 0
- 228 593 250 615 278 615 c 0
- 295 615 318 613 341 609 c 1
- 354 627 376 665 381 681 c 1
- 380 710 354 760 267 781 c 0
- 261 782 255 783 248 783 c 0
- 236 783 224 781 213 779 c 1
- 248 768 273 759 292 748 c 0
- 312 737 336 720 336 686 c 0
- 336 638 294 624 259 616 c 0
- 218 606 171 602 129 597 c 1"#,
+386 449 m 1
+ 353 462 314 484 314 530 c 0
+ 314 566 340 588 361 600 c 0
+ 396 620 447 633 498 633 c 0
+ 512 633 526 631 540 628 c 0
+ 661 599 732 515 732 429 c 0
+ 732 414 729 404 725 394 c 0
+ 715 367 699 341 683 317 c 1
+ 691 308 697 296 697 283 c 0
+ 697 255 675 233 647 233 c 0
+ 638 233 629 235 622 239 c 1
+ 604 220 583 202 561 188 c 0
+ 540 174 513 163 484 163 c 0
+ 473 163 461 165 450 169 c 0
+ 401 187 357 223 323 259 c 0
+ 307 276 293 294 283 313 c 0
+ 275 328 267 345 267 367 c 0
+ 267 407 296 434 329 441 c 0
+ 347 445 364 447 386 449 c 1
+379 347 m 1
+ 403 315 455 275 485 263 c 0
+ 487 263 493 265 504 271 c 1
+ 489 280 478 296 478 315 c 0
+ 478 343 500 365 528 365 c 0
+ 545 365 568 363 591 359 c 1
+ 604 377 626 415 631 431 c 1
+ 630 460 604 510 517 531 c 0
+ 511 532 505 533 498 533 c 0
+ 486 533 474 531 463 529 c 1
+ 498 518 523 509 542 498 c 0
+ 562 487 586 470 586 436 c 0
+ 586 388 544 374 509 366 c 0
+ 468 356 421 352 379 347 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR07", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR07", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-399 647 m 1
- 422 626 449 599 449 555 c 0
- 449 531 439 509 425 490 c 0
- 388 441 324 416 246 416 c 0
- 225 416 203 418 182 421 c 0
- 158 425 140 445 140 470 c 0
- 140 491 153 510 171 517 c 1
- 139 524 114 533 91 553 c 0
- 74 567 60 590 60 618 c 0
- 60 639 67 656 77 672 c 0
- 90 692 108 709 131 727 c 0
- 139 733 150 737 161 737 c 0
- 175 737 187 732 196 723 c 1
- 195 728 195 732 195 736 c 0
- 195 749 198 761 202 773 c 1
- 188 770 174 764 158 756 c 0
- 151 752 142 750 134 750 c 0
- 106 750 84 772 84 800 c 0
- 84 819 95 836 111 844 c 0
- 155 867 199 878 239 878 c 0
- 319 878 390 838 411 773 c 0
- 416 758 418 743 418 728 c 0
- 418 699 410 671 399 647 c 1
-349 554 m 0
- 348 556 345 559 341 564 c 1
- 320 544 295 526 266 517 c 1
- 301 520 337 530 349 554 c 0
-165 623 m 1
- 178 617 200 610 222 610 c 0
- 232 610 246 616 261 627 c 1
- 242 642 224 659 211 681 c 1
- 209 667 202 656 192 648 c 0
- 179 638 170 629 165 623 c 1
-296 738 m 0
- 294 732 308 719 316 712 c 1
- 321 737 316 749 300 760 c 1
- 301 752 299 745 296 738 c 0"#,
+649 397 m 1
+ 672 376 699 349 699 305 c 0
+ 699 281 689 259 675 240 c 0
+ 638 191 574 166 496 166 c 0
+ 475 166 453 168 432 171 c 0
+ 408 175 390 195 390 220 c 0
+ 390 241 403 260 421 267 c 1
+ 389 274 364 283 341 303 c 0
+ 324 317 310 340 310 368 c 0
+ 310 389 317 406 327 422 c 0
+ 340 442 358 459 381 477 c 0
+ 389 483 400 487 411 487 c 0
+ 425 487 437 482 446 473 c 1
+ 445 478 445 482 445 486 c 0
+ 445 499 448 511 452 523 c 1
+ 438 520 424 514 408 506 c 0
+ 401 502 392 500 384 500 c 0
+ 356 500 334 522 334 550 c 0
+ 334 569 345 586 361 594 c 0
+ 405 617 449 628 489 628 c 0
+ 569 628 640 588 661 523 c 0
+ 666 508 668 493 668 478 c 0
+ 668 449 660 421 649 397 c 1
+599 304 m 0
+ 598 306 595 309 591 314 c 1
+ 570 294 545 276 516 267 c 1
+ 551 270 587 280 599 304 c 0
+415 373 m 1
+ 428 367 450 360 472 360 c 0
+ 482 360 496 366 511 377 c 1
+ 492 392 474 409 461 431 c 1
+ 459 417 452 406 442 398 c 0
+ 429 388 420 379 415 373 c 1
+546 488 m 0
+ 544 482 558 469 566 462 c 1
+ 571 487 566 499 550 510 c 1
+ 551 502 549 495 546 488 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("jakiTok_VAR08", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("jakiTok_VAR08", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-241 890 m 0
- 382 890 482 804 482 668 c 0
- 482 590 445 511 403 473 c 0
- 375 448 342 436 310 436 c 0
- 263 436 224 457 192 474 c 1
- 186 454 166 440 144 440 c 0
- 117 440 94 461 94 489 c 0
- 94 502 96 514 98 526 c 1
- 76 539 58 550 44 563 c 0
- 28 577 11 598 11 628 c 0
- 11 673 48 695 76 707 c 1
- 55 713 39 732 39 755 c 0
- 39 782 61 805 89 805 c 0
- 92 805 94 804 97 804 c 0
- 120 800 141 796 162 791 c 1
- 157 799 150 814 150 828 c 0
- 150 876 192 890 241 890 c 0
-270 547 m 1
- 282 542 301 536 310 536 c 0
- 319 536 325 538 335 547 c 0
- 343 555 355 569 366 594 c 0
- 376 617 382 644 382 668 c 0
- 382 733 348 772 288 785 c 1
- 290 781 291 777 292 773 c 0
- 296 773 301 774 305 774 c 0
- 333 774 355 752 355 724 c 0
- 355 697 333 675 307 674 c 0
- 300 674 293 673 286 673 c 0
- 275 673 264 673 253 674 c 1
- 230 657 206 646 171 635 c 0
- 158 631 144 626 133 622 c 1
- 138 619 142 615 148 612 c 1
- 160 619 173 626 187 630 c 0
- 215 639 249 645 297 652 c 0
- 300 652 302 653 305 653 c 0
- 333 653 355 630 355 603 c 0
- 355 578 336 558 312 554 c 0
- 296 552 282 549 270 547 c 1"#,
+491 640 m 0
+ 632 640 732 554 732 418 c 0
+ 732 340 695 261 653 223 c 0
+ 625 198 592 186 560 186 c 0
+ 513 186 474 207 442 224 c 1
+ 436 204 416 190 394 190 c 0
+ 367 190 344 211 344 239 c 0
+ 344 252 346 264 348 276 c 1
+ 326 289 308 300 294 313 c 0
+ 278 327 261 348 261 378 c 0
+ 261 423 298 445 326 457 c 1
+ 305 463 289 482 289 505 c 0
+ 289 532 311 555 339 555 c 0
+ 342 555 344 554 347 554 c 0
+ 370 550 391 546 412 541 c 1
+ 407 549 400 564 400 578 c 0
+ 400 626 442 640 491 640 c 0
+520 297 m 1
+ 532 292 551 286 560 286 c 0
+ 569 286 575 288 585 297 c 0
+ 593 305 605 319 616 344 c 0
+ 626 367 632 394 632 418 c 0
+ 632 483 598 522 538 535 c 1
+ 540 531 541 527 542 523 c 0
+ 546 523 551 524 555 524 c 0
+ 583 524 605 502 605 474 c 0
+ 605 447 583 425 557 424 c 0
+ 550 424 543 423 536 423 c 0
+ 525 423 514 423 503 424 c 1
+ 480 407 456 396 421 385 c 0
+ 408 381 394 376 383 372 c 1
+ 388 369 392 365 398 362 c 1
+ 410 369 423 376 437 380 c 0
+ 465 389 499 395 547 402 c 0
+ 550 402 552 403 555 403 c 0
+ 583 403 605 380 605 353 c 0
+ 605 328 586 308 562 304 c 0
+ 546 302 532 299 520 297 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-345 844 m 0
- 408 844 457 782 457 727 c 0
- 457 680 428 647 410 622 c 1
- 424 604 437 581 437 550 c 0
- 437 499 396 465 355 449 c 0
- 337 442 319 438 301 438 c 0
- 281 438 263 444 249 453 c 0
- 229 466 221 478 212 488 c 1
- 192 478 174 461 141 461 c 0
- 84 461 44 515 44 562 c 0
- 44 596 62 628 93 648 c 0
- 95 649 97 651 99 652 c 1
- 90 663 75 683 68 710 c 0
- 65 721 64 732 64 743 c 0
- 64 810 118 844 180 844 c 0
- 214 844 245 836 269 823 c 1
- 290 829 314 844 345 844 c 0
-268 722 m 0
- 234 722 216 744 179 744 c 0
- 173 744 168 743 164 742 c 1
- 165 729 167 727 179 712 c 0
- 190 698 206 678 206 649 c 0
- 206 616 185 592 165 577 c 1
- 178 584 193 590 214 590 c 0
- 242 590 265 576 278 564 c 0
- 287 555 295 544 301 538 c 1
- 308 538 332 549 336 552 c 1
- 333 559 329 564 322 570 c 0
- 311 580 302 597 302 617 c 0
- 302 636 309 649 314 658 c 0
- 326 678 344 698 353 716 c 0
- 356 722 357 726 357 727 c 2
- 357 727 355 736 345 744 c 1
- 325 740 297 722 268 722 c 0
-344 744 m 1
- 344 744 l 1
- 344 744 l 1"#,
+595 594 m 0
+ 658 594 707 532 707 477 c 0
+ 707 430 678 397 660 372 c 1
+ 674 354 687 331 687 300 c 0
+ 687 249 646 215 605 199 c 0
+ 587 192 569 188 551 188 c 0
+ 531 188 513 194 499 203 c 0
+ 479 216 471 228 462 238 c 1
+ 442 228 424 211 391 211 c 0
+ 334 211 294 265 294 312 c 0
+ 294 346 312 378 343 398 c 0
+ 345 399 347 401 349 402 c 1
+ 340 413 325 433 318 460 c 0
+ 315 471 314 482 314 493 c 0
+ 314 560 368 594 430 594 c 0
+ 464 594 495 586 519 573 c 1
+ 540 579 564 594 595 594 c 0
+518 472 m 0
+ 484 472 466 494 429 494 c 0
+ 423 494 418 493 414 492 c 1
+ 415 479 417 477 429 462 c 0
+ 440 448 456 428 456 399 c 0
+ 456 366 435 342 415 327 c 1
+ 428 334 443 340 464 340 c 0
+ 492 340 515 326 528 314 c 0
+ 537 305 545 294 551 288 c 1
+ 558 288 582 299 586 302 c 1
+ 583 309 579 314 572 320 c 0
+ 561 330 552 347 552 367 c 0
+ 552 386 559 399 564 408 c 0
+ 576 428 594 448 603 466 c 0
+ 606 472 607 476 607 477 c 2
+ 607 477 605 486 595 494 c 1
+ 575 490 547 472 518 472 c 0
+594 494 m 1
+ 594 494 l 1
+ 594 494 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR02", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR02", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-224 839 m 1
- 241 849 261 871 304 871 c 0
- 372 871 422 839 438 784 c 0
- 440 777 441 770 441 763 c 0
- 441 749 438 737 434 729 c 1
- 446 725 461 715 471 700 c 0
- 483 682 489 661 489 642 c 0
- 489 618 482 600 476 585 c 0
- 458 538 427 492 359 492 c 0
- 351 492 336 495 333 490 c 0
- 316 466 291 454 263 447 c 0
- 228 438 218 439 202 439 c 0
- 163 439 122 444 93 467 c 0
- 66 488 42 521 42 562 c 0
- 42 581 47 600 57 617 c 0
- 68 637 70 645 70 645 c 0
- 70 651 63 669 61 679 c 0
- 57 698 55 715 55 731 c 0
- 55 803 102 846 169 846 c 0
- 190 846 207 841 224 839 c 1
-155 731 m 0
- 155 700 170 680 170 645 c 0
- 170 619 160 595 144 567 c 0
- 142 563 142 562 142 562 c 2
- 142 562 142 556 155 546 c 0
- 163 543 187 539 200 539 c 0
- 202 539 205 539 207 539 c 0
- 212 539 246 546 253 550 c 0
- 263 563 275 575 289 582 c 0
- 307 592 326 593 338 593 c 0
- 350 593 365 588 371 596 c 0
- 374 601 386 628 388 638 c 1
- 376 640 345 646 328 678 c 0
- 323 688 320 700 320 712 c 0
- 320 734 330 752 338 763 c 1
- 331 768 318 771 304 771 c 0
- 302 771 304 773 292 764 c 0
- 282 757 259 738 225 738 c 0
- 205 738 188 746 169 746 c 0
- 157 746 155 747 155 731 c 0"#,
+474 589 m 1
+ 491 599 511 621 554 621 c 0
+ 622 621 672 589 688 534 c 0
+ 690 527 691 520 691 513 c 0
+ 691 499 688 487 684 479 c 1
+ 696 475 711 465 721 450 c 0
+ 733 432 739 411 739 392 c 0
+ 739 368 732 350 726 335 c 0
+ 708 288 677 242 609 242 c 0
+ 601 242 586 245 583 240 c 0
+ 566 216 541 204 513 197 c 0
+ 478 188 468 189 452 189 c 0
+ 413 189 372 194 343 217 c 0
+ 316 238 292 271 292 312 c 0
+ 292 331 297 350 307 367 c 0
+ 318 387 320 395 320 395 c 0
+ 320 401 313 419 311 429 c 0
+ 307 448 305 465 305 481 c 0
+ 305 553 352 596 419 596 c 0
+ 440 596 457 591 474 589 c 1
+405 481 m 0
+ 405 450 420 430 420 395 c 0
+ 420 369 410 345 394 317 c 0
+ 392 313 392 312 392 312 c 2
+ 392 312 392 306 405 296 c 0
+ 413 293 437 289 450 289 c 0
+ 452 289 455 289 457 289 c 0
+ 462 289 496 296 503 300 c 0
+ 513 313 525 325 539 332 c 0
+ 557 342 576 343 588 343 c 0
+ 600 343 615 338 621 346 c 0
+ 624 351 636 378 638 388 c 1
+ 626 390 595 396 578 428 c 0
+ 573 438 570 450 570 462 c 0
+ 570 484 580 502 588 513 c 1
+ 581 518 568 521 554 521 c 0
+ 552 521 554 523 542 514 c 0
+ 532 507 509 488 475 488 c 0
+ 455 488 438 496 419 496 c 0
+ 407 496 405 497 405 481 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR03", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR03", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-288 427 m 0
- 233 427 198 458 185 504 c 1
- 172 497 158 489 136 489 c 0
- 87 489 52 533 36 566 c 0
- 23 592 17 620 17 649 c 0
- 17 721 59 778 131 778 c 0
- 150 778 160 774 171 772 c 1
- 173 780 176 794 186 810 c 0
- 206 842 258 865 304 865 c 0
- 340 865 374 852 401 825 c 0
- 432 793 471 757 471 689 c 0
- 471 667 468 648 459 631 c 0
- 449 611 433 599 426 594 c 0
- 426 592 426 589 426 587 c 0
- 426 578 426 569 426 560 c 0
- 426 528 422 503 405 481 c 0
- 381 450 338 427 288 427 c 0
-131 678 m 0
- 119 678 117 661 117 649 c 0
- 117 627 127 604 138 592 c 1
- 152 600 168 611 193 611 c 0
- 226 611 252 592 265 572 c 0
- 278 553 278 542 282 528 c 0
- 283 528 285 527 288 527 c 0
- 299 527 318 535 325 541 c 0
- 326 546 326 553 326 562 c 0
- 326 571 326 581 326 588 c 0
- 326 611 328 628 339 646 c 0
- 351 665 361 668 369 677 c 0
- 369 677 371 680 371 689 c 0
- 371 720 347 738 330 755 c 0
- 323 762 315 765 304 765 c 0
- 295 765 282 762 271 755 c 1
- 267 741 267 731 254 711 c 0
- 240 689 210 671 176 671 c 0
- 156 671 144 678 131 678 c 0"#,
+538 177 m 0
+ 483 177 448 208 435 254 c 1
+ 422 247 408 239 386 239 c 0
+ 337 239 302 283 286 316 c 0
+ 273 342 267 370 267 399 c 0
+ 267 471 309 528 381 528 c 0
+ 400 528 410 524 421 522 c 1
+ 423 530 426 544 436 560 c 0
+ 456 592 508 615 554 615 c 0
+ 590 615 624 602 651 575 c 0
+ 682 543 721 507 721 439 c 0
+ 721 417 718 398 709 381 c 0
+ 699 361 683 349 676 344 c 0
+ 676 342 676 339 676 337 c 0
+ 676 328 676 319 676 310 c 0
+ 676 278 672 253 655 231 c 0
+ 631 200 588 177 538 177 c 0
+381 428 m 0
+ 369 428 367 411 367 399 c 0
+ 367 377 377 354 388 342 c 1
+ 402 350 418 361 443 361 c 0
+ 476 361 502 342 515 322 c 0
+ 528 303 528 292 532 278 c 0
+ 533 278 535 277 538 277 c 0
+ 549 277 568 285 575 291 c 0
+ 576 296 576 303 576 312 c 0
+ 576 321 576 331 576 338 c 0
+ 576 361 578 378 589 396 c 0
+ 601 415 611 418 619 427 c 0
+ 619 427 621 430 621 439 c 0
+ 621 470 597 488 580 505 c 0
+ 573 512 565 515 554 515 c 0
+ 545 515 532 512 521 505 c 1
+ 517 491 517 481 504 461 c 0
+ 490 439 460 421 426 421 c 0
+ 406 421 394 428 381 428 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR04", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR04", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-178 519 m 1
- 160 514 140 500 114 500 c 0
- 77 500 51 524 38 550 c 0
- 26 573 22 603 22 636 c 0
- 22 692 32 735 56 767 c 0
- 77 794 102 810 120 821 c 0
- 143 836 165 852 190 863 c 0
- 204 869 220 875 239 875 c 0
- 289 875 315 839 329 803 c 0
- 336 785 342 781 342 781 c 0
- 342 781 341 780 348 780 c 0
- 357 780 375 783 386 783 c 0
- 407 783 425 775 439 764 c 0
- 462 745 478 714 478 676 c 0
- 478 652 472 627 456 604 c 0
- 431 568 455 538 424 492 c 0
- 404 462 364 442 324 431 c 0
- 312 428 301 425 287 425 c 0
- 253 425 226 442 210 463 c 0
- 193 485 189 500 178 519 c 1
-348 680 m 0
- 288 680 253 720 235 768 c 0
- 234 770 234 772 233 773 c 0
- 216 766 190 747 173 736 c 0
- 154 724 143 716 136 707 c 0
- 131 700 126 691 124 673 c 0
- 123 660 122 647 122 634 c 0
- 122 623 122 614 124 606 c 1
- 144 615 163 620 183 620 c 0
- 244 620 267 566 276 548 c 0
- 281 538 284 530 288 525 c 1
- 300 526 334 540 341 547 c 1
- 344 567 341 583 349 610 c 0
- 354 626 361 643 373 661 c 0
- 378 668 379 674 377 682 c 1
- 369 681 359 680 348 680 c 0
-341 548 m 1
- 341 548 l 1
- 341 548 l 1"#,
+428 269 m 1
+ 410 264 390 250 364 250 c 0
+ 327 250 301 274 288 300 c 0
+ 276 323 272 353 272 386 c 0
+ 272 442 282 485 306 517 c 0
+ 327 544 352 560 370 571 c 0
+ 393 586 415 602 440 613 c 0
+ 454 619 470 625 489 625 c 0
+ 539 625 565 589 579 553 c 0
+ 586 535 592 531 592 531 c 0
+ 592 531 591 530 598 530 c 0
+ 607 530 625 533 636 533 c 0
+ 657 533 675 525 689 514 c 0
+ 712 495 728 464 728 426 c 0
+ 728 402 722 377 706 354 c 0
+ 681 318 705 288 674 242 c 0
+ 654 212 614 192 574 181 c 0
+ 562 178 551 175 537 175 c 0
+ 503 175 476 192 460 213 c 0
+ 443 235 439 250 428 269 c 1
+598 430 m 0
+ 538 430 503 470 485 518 c 0
+ 484 520 484 522 483 523 c 0
+ 466 516 440 497 423 486 c 0
+ 404 474 393 466 386 457 c 0
+ 381 450 376 441 374 423 c 0
+ 373 410 372 397 372 384 c 0
+ 372 373 372 364 374 356 c 1
+ 394 365 413 370 433 370 c 0
+ 494 370 517 316 526 298 c 0
+ 531 288 534 280 538 275 c 1
+ 550 276 584 290 591 297 c 1
+ 594 317 591 333 599 360 c 0
+ 604 376 611 393 623 411 c 0
+ 628 418 629 424 627 432 c 1
+ 619 431 609 430 598 430 c 0
+591 298 m 1
+ 591 298 l 1
+ 591 298 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR05", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR05", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-265 855 m 0
- 338 855 411 834 446 794 c 0
- 461 777 470 754 470 730 c 0
- 470 693 452 661 427 630 c 0
- 417 617 414 602 413 574 c 0
- 412 545 409 520 395 498 c 0
- 370 458 322 445 266 445 c 0
- 236 445 214 449 193 460 c 0
- 151 483 156 512 113 525 c 0
- 85 533 63 542 45 557 c 0
- 26 573 10 598 10 630 c 0
- 10 657 16 665 20 687 c 0
- 23 706 27 738 50 767 c 0
- 69 791 98 807 134 815 c 0
- 175 824 180 838 219 849 c 0
- 233 853 248 855 265 855 c 0
-370 729 m 0
- 356 744 297 755 265 755 c 0
- 243 755 244 753 227 744 c 0
- 213 736 190 725 156 717 c 0
- 140 713 131 710 126 701 c 0
- 120 690 114 651 111 633 c 1
- 115 630 125 625 142 620 c 0
- 163 614 180 605 194 595 c 0
- 211 582 223 569 230 560 c 0
- 238 550 240 549 241 548 c 0
- 242 548 258 545 266 545 c 0
- 298 545 308 550 310 551 c 0
- 311 553 312 563 313 579 c 0
- 314 606 315 652 349 693 c 0
- 366 713 370 726 370 729 c 0"#,
+515 605 m 0
+ 588 605 661 584 696 544 c 0
+ 711 527 720 504 720 480 c 0
+ 720 443 702 411 677 380 c 0
+ 667 367 664 352 663 324 c 0
+ 662 295 659 270 645 248 c 0
+ 620 208 572 195 516 195 c 0
+ 486 195 464 199 443 210 c 0
+ 401 233 406 262 363 275 c 0
+ 335 283 313 292 295 307 c 0
+ 276 323 260 348 260 380 c 0
+ 260 407 266 415 270 437 c 0
+ 273 456 277 488 300 517 c 0
+ 319 541 348 557 384 565 c 0
+ 425 574 430 588 469 599 c 0
+ 483 603 498 605 515 605 c 0
+620 479 m 0
+ 606 494 547 505 515 505 c 0
+ 493 505 494 503 477 494 c 0
+ 463 486 440 475 406 467 c 0
+ 390 463 381 460 376 451 c 0
+ 370 440 364 401 361 383 c 1
+ 365 380 375 375 392 370 c 0
+ 413 364 430 355 444 345 c 0
+ 461 332 473 319 480 310 c 0
+ 488 300 490 299 491 298 c 0
+ 492 298 508 295 516 295 c 0
+ 548 295 558 300 560 301 c 0
+ 561 303 562 313 563 329 c 0
+ 564 356 565 402 599 443 c 0
+ 616 463 620 476 620 479 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR06", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR06", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-264 850 m 0
- 281 850 296 852 315 852 c 0
- 336 852 361 848 387 836 c 0
- 444 809 465 752 465 702 c 0
- 465 664 455 627 438 604 c 0
- 427 589 415 580 407 573 c 0
- 386 555 383 551 374 518 c 0
- 370 502 365 478 346 455 c 0
- 326 431 294 412 252 412 c 0
- 199 412 175 449 158 484 c 0
- 147 507 150 510 118 515 c 0
- 95 518 79 520 59 534 c 0
- 33 552 15 584 15 625 c 0
- 15 643 20 661 28 674 c 0
- 38 690 49 699 56 706 c 0
- 66 716 70 720 71 723 c 0
- 81 748 76 769 89 799 c 0
- 103 832 137 862 184 862 c 0
- 217 862 237 850 264 850 c 0
-365 702 m 0
- 365 741 345 752 315 752 c 0
- 298 752 280 750 261 750 c 0
- 239 750 218 755 205 758 c 0
- 180 764 181 767 177 741 c 0
- 175 728 173 707 163 684 c 0
- 149 650 130 641 115 624 c 0
- 115 623 116 619 117 617 c 0
- 145 610 170 614 205 587 c 0
- 232 566 240 539 256 512 c 1
- 273 515 271 521 277 543 c 0
- 281 560 288 586 307 612 c 0
- 320 629 333 641 342 649 c 0
- 351 656 355 660 357 663 c 0
- 363 671 365 691 365 702 c 0"#,
+514 600 m 0
+ 531 600 546 602 565 602 c 0
+ 586 602 611 598 637 586 c 0
+ 694 559 715 502 715 452 c 0
+ 715 414 705 377 688 354 c 0
+ 677 339 665 330 657 323 c 0
+ 636 305 633 301 624 268 c 0
+ 620 252 615 228 596 205 c 0
+ 576 181 544 162 502 162 c 0
+ 449 162 425 199 408 234 c 0
+ 397 257 400 260 368 265 c 0
+ 345 268 329 270 309 284 c 0
+ 283 302 265 334 265 375 c 0
+ 265 393 270 411 278 424 c 0
+ 288 440 299 449 306 456 c 0
+ 316 466 320 470 321 473 c 0
+ 331 498 326 519 339 549 c 0
+ 353 582 387 612 434 612 c 0
+ 467 612 487 600 514 600 c 0
+615 452 m 0
+ 615 491 595 502 565 502 c 0
+ 548 502 530 500 511 500 c 0
+ 489 500 468 505 455 508 c 0
+ 430 514 431 517 427 491 c 0
+ 425 478 423 457 413 434 c 0
+ 399 400 380 391 365 374 c 0
+ 365 373 366 369 367 367 c 0
+ 395 360 420 364 455 337 c 0
+ 482 316 490 289 506 262 c 1
+ 523 265 521 271 527 293 c 0
+ 531 310 538 336 557 362 c 0
+ 570 379 583 391 592 399 c 0
+ 601 406 605 410 607 413 c 0
+ 613 421 615 441 615 452 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR07", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR07", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-476 597 m 0
- 476 532 444 476 378 476 c 0
- 353 476 328 484 307 484 c 0
- 304 484 302 484 300 484 c 0
- 261 476 227 452 180 452 c 0
- 159 452 136 459 117 475 c 0
- 95 493 64 502 45 526 c 0
- 31 543 24 566 24 590 c 0
- 24 633 52 658 63 670 c 0
- 71 678 75 683 76 685 c 0
- 78 688 77 693 76 698 c 0
- 74 710 73 722 73 733 c 0
- 73 775 97 805 124 818 c 0
- 164 837 210 828 240 849 c 0
- 261 864 283 878 315 878 c 0
- 360 878 383 842 391 808 c 0
- 397 782 397 752 403 729 c 0
- 405 721 407 716 408 715 c 0
- 425 690 446 681 463 650 c 0
- 471 635 476 616 476 597 c 0
-124 588 m 0
- 140 576 159 569 180 552 c 1
- 193 553 203 558 218 563 c 0
- 240 571 273 584 307 584 c 0
- 333 584 351 579 372 577 c 1
- 375 587 376 594 376 597 c 0
- 376 605 373 606 361 618 c 0
- 352 627 338 641 325 660 c 0
- 305 690 302 727 297 767 c 1
- 249 734 213 738 173 729 c 1
- 174 718 177 703 177 691 c 0
- 177 671 172 653 164 638 c 0
- 151 613 135 603 124 588 c 0
- 124 588 l 0"#,
+726 347 m 0
+ 726 282 694 226 628 226 c 0
+ 603 226 578 234 557 234 c 0
+ 554 234 552 234 550 234 c 0
+ 511 226 477 202 430 202 c 0
+ 409 202 386 209 367 225 c 0
+ 345 243 314 252 295 276 c 0
+ 281 293 274 316 274 340 c 0
+ 274 383 302 408 313 420 c 0
+ 321 428 325 433 326 435 c 0
+ 328 438 327 443 326 448 c 0
+ 324 460 323 472 323 483 c 0
+ 323 525 347 555 374 568 c 0
+ 414 587 460 578 490 599 c 0
+ 511 614 533 628 565 628 c 0
+ 610 628 633 592 641 558 c 0
+ 647 532 647 502 653 479 c 0
+ 655 471 657 466 658 465 c 0
+ 675 440 696 431 713 400 c 0
+ 721 385 726 366 726 347 c 0
+374 338 m 0
+ 390 326 409 319 430 302 c 1
+ 443 303 453 308 468 313 c 0
+ 490 321 523 334 557 334 c 0
+ 583 334 601 329 622 327 c 1
+ 625 337 626 344 626 347 c 0
+ 626 355 623 356 611 368 c 0
+ 602 377 588 391 575 410 c 0
+ 555 440 552 477 547 517 c 1
+ 499 484 463 488 423 479 c 1
+ 424 468 427 453 427 441 c 0
+ 427 421 422 403 414 388 c 0
+ 401 363 385 353 374 338 c 0
+ 374 338 l 0"#,
 ),
-GlyphDescriptor::new_with_anchor("koTok_VAR08", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("koTok_VAR08", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-393 533 m 0
- 393 484 357 454 310 454 c 0
- 270 454 232 472 211 492 c 1
- 194 479 172 463 140 463 c 0
- 120 463 99 471 83 484 c 0
- 57 505 36 534 36 576 c 0
- 36 605 46 629 58 647 c 0
- 64 657 73 668 75 678 c 1
- 66 696 63 713 63 731 c 0
- 63 792 100 846 162 846 c 0
- 205 846 231 822 254 805 c 1
- 286 813 319 832 363 832 c 0
- 419 832 460 790 460 736 c 0
- 460 712 452 695 447 685 c 1
- 456 677 474 658 474 628 c 0
- 474 590 448 567 422 556 c 0
- 410 551 402 550 392 547 c 1
- 393 542 393 537 393 533 c 0
-291 558 m 1
- 292 601 324 627 354 639 c 1
- 348 649 343 663 343 679 c 0
- 343 702 352 717 358 732 c 1
- 320 728 295 704 249 704 c 0
- 207 704 192 733 166 745 c 1
- 165 742 163 736 163 731 c 0
- 163 727 164 724 164 724 c 0
- 172 709 175 694 175 679 c 0
- 175 642 155 613 142 593 c 0
- 137 586 136 579 136 576 c 0
- 136 571 138 569 142 565 c 1
- 164 578 180 602 216 602 c 0
- 245 602 263 584 274 570 c 0
- 283 559 281 561 291 558 c 1"#,
+643 283 m 0
+ 643 234 607 204 560 204 c 0
+ 520 204 482 222 461 242 c 1
+ 444 229 422 213 390 213 c 0
+ 370 213 349 221 333 234 c 0
+ 307 255 286 284 286 326 c 0
+ 286 355 296 379 308 397 c 0
+ 314 407 323 418 325 428 c 1
+ 316 446 313 463 313 481 c 0
+ 313 542 350 596 412 596 c 0
+ 455 596 481 572 504 555 c 1
+ 536 563 569 582 613 582 c 0
+ 669 582 710 540 710 486 c 0
+ 710 462 702 445 697 435 c 1
+ 706 427 724 408 724 378 c 0
+ 724 340 698 317 672 306 c 0
+ 660 301 652 300 642 297 c 1
+ 643 292 643 287 643 283 c 0
+541 308 m 1
+ 542 351 574 377 604 389 c 1
+ 598 399 593 413 593 429 c 0
+ 593 452 602 467 608 482 c 1
+ 570 478 545 454 499 454 c 0
+ 457 454 442 483 416 495 c 1
+ 415 492 413 486 413 481 c 0
+ 413 477 414 474 414 474 c 0
+ 422 459 425 444 425 429 c 0
+ 425 392 405 363 392 343 c 0
+ 387 336 386 329 386 326 c 0
+ 386 321 388 319 392 315 c 1
+ 414 328 430 352 466 352 c 0
+ 495 352 513 334 524 320 c 0
+ 533 309 531 311 541 308 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowW", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowW", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-229 770 m 0
- 229 756 223 744 214 735 c 2
- 180 700 l 1
- 440 700 l 2
- 468 700 490 678 490 650 c 0
- 490 622 468 600 440 600 c 2
- 180 600 l 1
- 214 565 l 2
- 223 556 229 544 229 530 c 0
- 229 502 207 480 179 480 c 0
- 165 480 152 486 143 495 c 2
- 25 615 l 2
- 16 624 10 636 10 650 c 0
- 10 664 16 676 25 685 c 2
- 143 805 l 2
- 152 814 165 820 179 820 c 0
- 207 820 229 798 229 770 c 0"#,
+479 520 m 0
+ 479 506 473 494 464 485 c 2
+ 430 450 l 1
+ 690 450 l 2
+ 718 450 740 428 740 400 c 0
+ 740 372 718 350 690 350 c 2
+ 430 350 l 1
+ 464 315 l 2
+ 473 306 479 294 479 280 c 0
+ 479 252 457 230 429 230 c 0
+ 415 230 402 236 393 245 c 2
+ 275 365 l 2
+ 266 374 260 386 260 400 c 0
+ 260 414 266 426 275 435 c 2
+ 393 555 l 2
+ 402 564 415 570 429 570 c 0
+ 457 570 479 548 479 520 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowN", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowN", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-370 671 m 0
- 356 671 344 677 335 686 c 2
- 300 720 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 720 l 1
- 165 686 l 2
- 156 677 144 671 130 671 c 0
- 102 671 80 693 80 721 c 0
- 80 735 86 748 95 757 c 2
- 215 875 l 2
- 224 884 236 890 250 890 c 0
- 264 890 276 884 285 875 c 2
- 405 757 l 2
- 414 748 420 735 420 721 c 0
- 420 693 398 671 370 671 c 0"#,
+620 421 m 0
+ 606 421 594 427 585 436 c 2
+ 550 470 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 470 l 1
+ 415 436 l 2
+ 406 427 394 421 380 421 c 0
+ 352 421 330 443 330 471 c 0
+ 330 485 336 498 345 507 c 2
+ 465 625 l 2
+ 474 634 486 640 500 640 c 0
+ 514 640 526 634 535 625 c 2
+ 655 507 l 2
+ 664 498 670 485 670 471 c 0
+ 670 443 648 421 620 421 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowE", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowE", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-271 530 m 0
- 271 544 277 556 286 565 c 2
- 320 600 l 1
- 60 600 l 2
- 32 600 10 622 10 650 c 0
- 10 678 32 700 60 700 c 2
- 320 700 l 1
- 286 735 l 2
- 277 744 271 756 271 770 c 0
- 271 798 293 820 321 820 c 0
- 335 820 348 814 357 805 c 2
- 475 685 l 2
- 484 676 490 664 490 650 c 0
- 490 636 484 624 475 615 c 2
- 357 495 l 2
- 348 486 335 480 321 480 c 0
- 293 480 271 502 271 530 c 0"#,
+521 280 m 0
+ 521 294 527 306 536 315 c 2
+ 570 350 l 1
+ 310 350 l 2
+ 282 350 260 372 260 400 c 0
+ 260 428 282 450 310 450 c 2
+ 570 450 l 1
+ 536 485 l 2
+ 527 494 521 506 521 520 c 0
+ 521 548 543 570 571 570 c 0
+ 585 570 598 564 607 555 c 2
+ 725 435 l 2
+ 734 426 740 414 740 400 c 0
+ 740 386 734 374 725 365 c 2
+ 607 245 l 2
+ 598 236 585 230 571 230 c 0
+ 543 230 521 252 521 280 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowS", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowS", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-80 579 m 0
- 80 606 103 629 130 629 c 0
- 143 629 155 624 165 614 c 2
- 200 580 l 1
- 200 840 l 2
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 2
- 300 580 l 1
- 335 614 l 2
- 345 624 357 629 370 629 c 0
- 397 629 420 606 420 579 c 0
- 420 566 415 553 405 543 c 2
- 285 424 l 2
- 277 416 265 410 250 410 c 0
- 235 410 223 416 215 424 c 2
- 95 543 l 2
- 85 553 80 566 80 579 c 0"#,
+330 329 m 0
+ 330 356 353 379 380 379 c 0
+ 393 379 405 374 415 364 c 2
+ 450 330 l 1
+ 450 590 l 2
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 2
+ 550 330 l 1
+ 585 364 l 2
+ 595 374 607 379 620 379 c 0
+ 647 379 670 356 670 329 c 0
+ 670 316 665 303 655 293 c 2
+ 535 174 l 2
+ 527 166 515 160 500 160 c 0
+ 485 160 473 166 465 174 c 2
+ 345 293 l 2
+ 335 303 330 316 330 329 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowNW", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowNW", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-334 785 m 0
- 334 757 312 735 285 735 c 2
- 236 735 l 1
- 420 551 l 2
- 429 542 434 530 434 516 c 0
- 434 488 412 466 384 466 c 0
- 370 466 358 471 349 480 c 2
- 165 664 l 1
- 165 615 l 2
- 165 588 143 566 115 566 c 0
- 87 566 65 588 65 616 c 2
- 66 784 l 2
- 66 813 89 834 115 834 c 2
- 284 835 l 2
- 312 835 334 813 334 785 c 0"#,
+584 535 m 0
+ 584 507 562 485 535 485 c 2
+ 486 485 l 1
+ 670 301 l 2
+ 679 292 684 280 684 266 c 0
+ 684 238 662 216 634 216 c 0
+ 620 216 608 221 599 230 c 2
+ 415 414 l 1
+ 415 365 l 2
+ 415 338 393 316 365 316 c 0
+ 337 316 315 338 315 366 c 2
+ 316 534 l 2
+ 316 563 339 584 365 584 c 2
+ 534 585 l 2
+ 562 585 584 563 584 535 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowNE", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowNE", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-385 566 m 0
- 357 566 335 588 335 615 c 2
- 335 664 l 1
- 151 480 l 2
- 142 471 130 466 116 466 c 0
- 88 466 66 488 66 516 c 0
- 66 530 71 542 80 551 c 2
- 264 735 l 1
- 215 735 l 2
- 188 735 166 757 166 785 c 0
- 166 813 188 835 216 835 c 2
- 384 834 l 2
- 412 834 434 812 434 784 c 2
- 435 616 l 2
- 435 588 413 566 385 566 c 0"#,
+635 316 m 0
+ 607 316 585 338 585 365 c 2
+ 585 414 l 1
+ 401 230 l 2
+ 392 221 380 216 366 216 c 0
+ 338 216 316 238 316 266 c 0
+ 316 280 321 292 330 301 c 2
+ 514 485 l 1
+ 465 485 l 2
+ 438 485 416 507 416 535 c 0
+ 416 563 438 585 466 585 c 2
+ 634 584 l 2
+ 662 584 684 562 684 534 c 2
+ 685 366 l 2
+ 685 338 663 316 635 316 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowSE", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowSE", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-166 515 m 0
- 166 543 188 565 215 565 c 2
- 264 565 l 1
- 80 749 l 2
- 71 758 66 770 66 784 c 0
- 66 812 88 834 116 834 c 0
- 130 834 142 829 151 820 c 2
- 335 636 l 1
- 335 685 l 2
- 335 712 357 734 385 734 c 0
- 413 734 435 712 435 684 c 2
- 434 516 l 2
- 434 487 411 466 385 466 c 2
- 216 465 l 2
- 188 465 166 487 166 515 c 0"#,
+416 265 m 0
+ 416 293 438 315 465 315 c 2
+ 514 315 l 1
+ 330 499 l 2
+ 321 508 316 520 316 534 c 0
+ 316 562 338 584 366 584 c 0
+ 380 584 392 579 401 570 c 2
+ 585 386 l 1
+ 585 435 l 2
+ 585 462 607 484 635 484 c 0
+ 663 484 685 462 685 434 c 2
+ 684 266 l 2
+ 684 237 661 216 635 216 c 2
+ 466 215 l 2
+ 438 215 416 237 416 265 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("niTok_arrowSW", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("niTok_arrowSW", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-115 734 m 0
- 143 734 165 712 165 685 c 2
- 165 636 l 1
- 349 820 l 2
- 358 829 370 834 384 834 c 0
- 412 834 434 812 434 784 c 0
- 434 770 429 758 420 749 c 2
- 236 565 l 1
- 285 565 l 2
- 312 565 334 543 334 515 c 0
- 334 487 312 465 284 465 c 2
- 116 466 l 2
- 88 466 66 488 66 516 c 2
- 65 684 l 2
- 65 712 87 734 115 734 c 0"#,
+365 484 m 0
+ 393 484 415 462 415 435 c 2
+ 415 386 l 1
+ 599 570 l 2
+ 608 579 620 584 634 584 c 0
+ 662 584 684 562 684 534 c 0
+ 684 520 679 508 670 499 c 2
+ 486 315 l 1
+ 535 315 l 2
+ 562 315 584 293 584 265 c 0
+ 584 237 562 215 534 215 c 2
+ 366 216 l 2
+ 338 216 316 238 316 266 c 2
+ 315 434 l 2
+ 315 462 337 484 365 484 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-59 784 m 0
- 59 812 81 834 109 834 c 0
- 137 834 159 812 159 784 c 0
- 159 756 137 734 109 734 c 0
- 81 734 59 756 59 784 c 0
-341 784 m 0
- 341 812 363 834 391 834 c 0
- 419 834 441 812 441 784 c 0
- 441 756 419 734 391 734 c 0
- 363 734 341 756 341 784 c 0
-249 404 m 0
- 207 404 181 434 167 460 c 1
- 149 460 l 2
- 128 460 112 476 112 497 c 0
- 112 516 125 531 143 534 c 1
- 142 538 142 544 141 548 c 1
- 90 548 l 2
- 69 548 52 564 52 585 c 0
- 52 606 69 622 90 622 c 2
- 139 622 l 1
- 139 644 l 1
- 74 644 l 2
- 53 644 36 660 36 681 c 0
- 36 702 53 718 74 718 c 2
- 144 718 l 1
- 150 750 157 776 174 801 c 0
- 188 821 213 844 249 844 c 0
- 285 844 310 821 324 801 c 0
- 341 776 348 750 354 718 c 1
- 424 718 l 2
- 445 718 462 702 462 681 c 0
- 462 660 445 644 424 644 c 2
- 359 644 l 1
- 359 622 l 1
- 408 622 l 2
- 429 622 446 606 446 585 c 0
- 446 564 429 548 408 548 c 2
- 357 548 l 1
- 356 544 356 538 355 534 c 1
- 373 531 386 516 386 497 c 0
- 386 476 370 460 349 460 c 2
- 331 460 l 1
- 317 434 291 404 249 404 c 0
-259 622 m 1
- 259 644 l 1
- 239 644 l 1
- 239 622 l 1
- 259 622 l 1
-256 548 m 1
- 242 548 l 1
- 243 544 244 538 245 534 c 1
- 253 534 l 1
- 254 538 255 544 256 548 c 1
-252 718 m 1
- 251 721 250 724 249 727 c 1
- 248 724 247 721 246 718 c 1
- 252 718 l 1"#,
+309 534 m 0
+ 309 562 331 584 359 584 c 0
+ 387 584 409 562 409 534 c 0
+ 409 506 387 484 359 484 c 0
+ 331 484 309 506 309 534 c 0
+591 534 m 0
+ 591 562 613 584 641 584 c 0
+ 669 584 691 562 691 534 c 0
+ 691 506 669 484 641 484 c 0
+ 613 484 591 506 591 534 c 0
+499 154 m 0
+ 457 154 431 184 417 210 c 1
+ 399 210 l 2
+ 378 210 362 226 362 247 c 0
+ 362 266 375 281 393 284 c 1
+ 392 288 392 294 391 298 c 1
+ 340 298 l 2
+ 319 298 302 314 302 335 c 0
+ 302 356 319 372 340 372 c 2
+ 389 372 l 1
+ 389 394 l 1
+ 324 394 l 2
+ 303 394 286 410 286 431 c 0
+ 286 452 303 468 324 468 c 2
+ 394 468 l 1
+ 400 500 407 526 424 551 c 0
+ 438 571 463 594 499 594 c 0
+ 535 594 560 571 574 551 c 0
+ 591 526 598 500 604 468 c 1
+ 674 468 l 2
+ 695 468 712 452 712 431 c 0
+ 712 410 695 394 674 394 c 2
+ 609 394 l 1
+ 609 372 l 1
+ 658 372 l 2
+ 679 372 696 356 696 335 c 0
+ 696 314 679 298 658 298 c 2
+ 607 298 l 1
+ 606 294 606 288 605 284 c 1
+ 623 281 636 266 636 247 c 0
+ 636 226 620 210 599 210 c 2
+ 581 210 l 1
+ 567 184 541 154 499 154 c 0
+509 372 m 1
+ 509 394 l 1
+ 489 394 l 1
+ 489 372 l 1
+ 509 372 l 1
+506 298 m 1
+ 492 298 l 1
+ 493 294 494 288 495 284 c 1
+ 503 284 l 1
+ 504 288 505 294 506 298 c 1
+502 468 m 1
+ 501 471 500 474 499 477 c 1
+ 498 474 497 471 496 468 c 1
+ 502 468 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("kalaTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("kalaTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-235 650 m 0
- 235 631 250 616 269 616 c 0
- 288 616 303 631 303 650 c 0
- 303 669 288 684 269 684 c 0
- 250 684 235 669 235 650 c 0
-316 650 m 0
- 316 631 331 616 350 616 c 0
- 369 616 385 631 385 650 c 0
- 385 669 369 684 350 684 c 0
- 331 684 316 669 316 650 c 0
-321 475 m 0
- 245 475 194 520 157 562 c 1
- 147 544 140 529 135 519 c 0
- 127 502 110 490 90 490 c 0
- 63 490 40 513 40 540 c 0
- 40 547 42 554 45 561 c 0
- 54 580 69 613 92 650 c 1
- 69 687 54 720 45 739 c 0
- 42 746 40 753 40 760 c 0
- 40 787 63 810 90 810 c 0
- 110 810 127 798 135 781 c 0
- 140 771 147 756 157 738 c 1
- 195 780 245 825 321 825 c 0
- 372 825 421 806 453 766 c 0
- 478 734 490 694 490 650 c 0
- 490 606 478 566 453 534 c 0
- 421 494 372 475 321 475 c 0"#,
+485 400 m 0
+ 485 381 500 366 519 366 c 0
+ 538 366 553 381 553 400 c 0
+ 553 419 538 434 519 434 c 0
+ 500 434 485 419 485 400 c 0
+566 400 m 0
+ 566 381 581 366 600 366 c 0
+ 619 366 635 381 635 400 c 0
+ 635 419 619 434 600 434 c 0
+ 581 434 566 419 566 400 c 0
+571 225 m 0
+ 495 225 444 270 407 312 c 1
+ 397 294 390 279 385 269 c 0
+ 377 252 360 240 340 240 c 0
+ 313 240 290 263 290 290 c 0
+ 290 297 292 304 295 311 c 0
+ 304 330 319 363 342 400 c 1
+ 319 437 304 470 295 489 c 0
+ 292 496 290 503 290 510 c 0
+ 290 537 313 560 340 560 c 0
+ 360 560 377 548 385 531 c 0
+ 390 521 397 506 407 488 c 1
+ 445 530 495 575 571 575 c 0
+ 622 575 671 556 703 516 c 0
+ 728 484 740 444 740 400 c 0
+ 740 356 728 316 703 284 c 0
+ 671 244 622 225 571 225 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-162 579 m 2
- 200 579 l 1
- 200 596 l 1
- 141 617 99 673 99 739 c 0
- 99 823 166 890 250 890 c 0
- 334 890 402 823 402 739 c 0
- 402 673 359 617 300 596 c 1
- 300 579 l 1
- 339 579 l 2
- 367 579 389 557 389 529 c 0
- 389 501 367 479 339 479 c 2
- 300 479 l 1
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 479 l 1
- 162 479 l 2
- 134 479 112 501 112 529 c 0
- 112 557 134 579 162 579 c 2
-199 739 m 0
- 199 711 222 687 250 687 c 0
- 250 687 l 0
- 251 687 l 0
- 279 687 302 711 302 739 c 0
- 302 767 278 790 250 790 c 0
- 222 790 199 767 199 739 c 0"#,
+412 329 m 2
+ 450 329 l 1
+ 450 346 l 1
+ 391 367 349 423 349 489 c 0
+ 349 573 416 640 500 640 c 0
+ 584 640 652 573 652 489 c 0
+ 652 423 609 367 550 346 c 1
+ 550 329 l 1
+ 589 329 l 2
+ 617 329 639 307 639 279 c 0
+ 639 251 617 229 589 229 c 2
+ 550 229 l 1
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 229 l 1
+ 412 229 l 2
+ 384 229 362 251 362 279 c 0
+ 362 307 384 329 412 329 c 2
+449 489 m 0
+ 449 461 472 437 500 437 c 0
+ 500 437 l 0
+ 501 437 l 0
+ 529 437 552 461 552 489 c 0
+ 552 517 528 540 500 540 c 0
+ 472 540 449 517 449 489 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-30 600 m 0
- 30 683 97 749 180 749 c 0
- 203 749 225 744 244 735 c 1
- 257 748 l 1
- 240 756 229 773 229 793 c 0
- 229 821 251 843 279 843 c 2
- 373 843 l 2
- 401 843 423 821 423 793 c 2
- 423 699 l 2
- 423 671 401 649 373 649 c 0
- 353 649 336 660 328 677 c 1
- 315 664 l 1
- 324 645 329 623 329 600 c 0
- 329 517 263 450 180 450 c 0
- 97 450 30 517 30 600 c 0
-229 600 m 0
- 229 627 207 649 180 649 c 0
- 153 649 130 627 130 600 c 0
- 130 573 153 550 180 550 c 0
- 207 550 229 573 229 600 c 0"#,
+280 350 m 0
+ 280 433 347 499 430 499 c 0
+ 453 499 475 494 494 485 c 1
+ 507 498 l 1
+ 490 506 479 523 479 543 c 0
+ 479 571 501 593 529 593 c 2
+ 623 593 l 2
+ 651 593 673 571 673 543 c 2
+ 673 449 l 2
+ 673 421 651 399 623 399 c 0
+ 603 399 586 410 578 427 c 1
+ 565 414 l 1
+ 574 395 579 373 579 350 c 0
+ 579 267 513 200 430 200 c 0
+ 347 200 280 267 280 350 c 0
+479 350 m 0
+ 479 377 457 399 430 399 c 0
+ 403 399 380 377 380 350 c 0
+ 380 323 403 300 430 300 c 0
+ 457 300 479 323 479 350 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("olinTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("olinTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-318 795 m 2
- 329 821 l 2
- 337 839 354 852 375 852 c 0
- 402 852 425 829 425 802 c 0
- 425 796 424 790 421 783 c 2
- 410 757 l 2
- 402 739 385 726 364 726 c 0
- 337 726 314 749 314 776 c 0
- 314 782 315 788 318 795 c 2
-138 726 m 0
- 118 726 100 738 92 755 c 2
- 81 781 l 2
- 78 788 76 795 76 802 c 0
- 76 829 99 852 126 852 c 0
- 146 852 163 840 171 823 c 2
- 183 797 l 2
- 186 790 188 783 188 776 c 0
- 188 749 165 726 138 726 c 0
-201 805 m 2
- 201 840 l 2
- 201 868 223 890 251 890 c 0
- 279 890 301 868 301 840 c 2
- 301 805 l 2
- 301 777 279 755 251 755 c 0
- 223 755 201 777 201 805 c 2
-330 603 m 1
- 330 603 l 1
- 330 603 l 1
-430 603 m 0
- 430 577 420 557 409 540 c 0
- 395 519 378 499 360 483 c 0
- 320 446 278 419 277 418 c 0
- 269 413 260 410 250 410 c 0
- 240 410 231 413 223 418 c 0
- 222 419 180 446 140 483 c 0
- 122 499 105 519 91 540 c 0
- 80 557 70 577 70 603 c 0
- 70 668 127 710 185 710 c 0
- 212 710 234 700 250 689 c 1
- 266 700 288 710 315 710 c 0
- 373 710 430 668 430 603 c 0
-185 610 m 0
- 160 610 173 594 184 581 c 0
- 200 561 229 537 250 521 c 1
- 272 538 306 567 322 590 c 0
- 327 597 329 602 330 604 c 0
- 329 607 321 610 315 610 c 0
- 309 610 301 601 290 587 c 0
- 281 575 266 567 250 567 c 0
- 231 567 217 578 207 591 c 0
- 195 607 190 610 185 610 c 0"#,
+568 545 m 2
+ 579 571 l 2
+ 587 589 604 602 625 602 c 0
+ 652 602 675 579 675 552 c 0
+ 675 546 674 540 671 533 c 2
+ 660 507 l 2
+ 652 489 635 476 614 476 c 0
+ 587 476 564 499 564 526 c 0
+ 564 532 565 538 568 545 c 2
+388 476 m 0
+ 368 476 350 488 342 505 c 2
+ 331 531 l 2
+ 328 538 326 545 326 552 c 0
+ 326 579 349 602 376 602 c 0
+ 396 602 413 590 421 573 c 2
+ 433 547 l 2
+ 436 540 438 533 438 526 c 0
+ 438 499 415 476 388 476 c 0
+451 555 m 2
+ 451 590 l 2
+ 451 618 473 640 501 640 c 0
+ 529 640 551 618 551 590 c 2
+ 551 555 l 2
+ 551 527 529 505 501 505 c 0
+ 473 505 451 527 451 555 c 2
+580 353 m 1
+ 580 353 l 1
+ 580 353 l 1
+680 353 m 0
+ 680 327 670 307 659 290 c 0
+ 645 269 628 249 610 233 c 0
+ 570 196 528 169 527 168 c 0
+ 519 163 510 160 500 160 c 0
+ 490 160 481 163 473 168 c 0
+ 472 169 430 196 390 233 c 0
+ 372 249 355 269 341 290 c 0
+ 330 307 320 327 320 353 c 0
+ 320 418 377 460 435 460 c 0
+ 462 460 484 450 500 439 c 1
+ 516 450 538 460 565 460 c 0
+ 623 460 680 418 680 353 c 0
+435 360 m 0
+ 410 360 423 344 434 331 c 0
+ 450 311 479 287 500 271 c 1
+ 522 288 556 317 572 340 c 0
+ 577 347 579 352 580 354 c 0
+ 579 357 571 360 565 360 c 0
+ 559 360 551 351 540 337 c 0
+ 531 325 516 317 500 317 c 0
+ 481 317 467 328 457 341 c 0
+ 445 357 440 360 435 360 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-200 840 m 0
- 200 868 222 890 250 890 c 0
- 278 890 300 868 300 840 c 0
- 300 812 278 790 250 790 c 0
- 222 790 200 812 200 840 c 0
-30 560 m 2
- 30 710 l 2
- 30 738 52 760 80 760 c 2
- 420 760 l 2
- 448 760 470 738 470 710 c 2
- 470 560 l 2
- 470 532 448 510 420 510 c 0
- 392 510 370 532 370 560 c 2
- 370 660 l 1
- 130 660 l 1
- 130 560 l 2
- 130 532 108 510 80 510 c 0
- 52 510 30 532 30 560 c 2"#,
+450 590 m 0
+ 450 618 472 640 500 640 c 0
+ 528 640 550 618 550 590 c 0
+ 550 562 528 540 500 540 c 0
+ 472 540 450 562 450 590 c 0
+280 310 m 2
+ 280 460 l 2
+ 280 488 302 510 330 510 c 2
+ 670 510 l 2
+ 698 510 720 488 720 460 c 2
+ 720 310 l 2
+ 720 282 698 260 670 260 c 0
+ 642 260 620 282 620 310 c 2
+ 620 410 l 1
+ 380 410 l 1
+ 380 310 l 2
+ 380 282 358 260 330 260 c 0
+ 302 260 280 282 280 310 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("tenpoTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("tenpoTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-411 804 m 0
- 411 793 408 783 402 775 c 2
- 312 650 l 1
- 402 525 l 2
- 408 517 411 507 411 496 c 0
- 411 468 389 446 361 446 c 2
- 139 446 l 2
- 111 446 89 468 89 496 c 0
- 89 507 92 517 98 525 c 2
- 188 650 l 1
- 98 775 l 2
- 92 783 89 793 89 804 c 0
- 89 832 111 854 139 854 c 2
- 361 854 l 2
- 389 854 411 832 411 804 c 0
-263 754 m 1
- 237 754 l 1
- 250 736 l 1
- 263 754 l 1
-237 546 m 1
- 263 546 l 1
- 250 564 l 1
- 237 546 l 1"#,
+661 554 m 0
+ 661 543 658 533 652 525 c 2
+ 562 400 l 1
+ 652 275 l 2
+ 658 267 661 257 661 246 c 0
+ 661 218 639 196 611 196 c 2
+ 389 196 l 2
+ 361 196 339 218 339 246 c 0
+ 339 257 342 267 348 275 c 2
+ 438 400 l 1
+ 348 525 l 2
+ 342 533 339 543 339 554 c 0
+ 339 582 361 604 389 604 c 2
+ 611 604 l 2
+ 639 604 661 582 661 554 c 0
+513 504 m 1
+ 487 504 l 1
+ 500 486 l 1
+ 513 504 l 1
+487 296 m 1
+ 513 296 l 1
+ 500 314 l 1
+ 487 296 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 470 m 0
- 121 470 20 580 20 710 c 0
- 20 738 42 760 70 760 c 2
- 430 760 l 2
- 458 760 480 738 480 710 c 0
- 480 580 379 470 250 470 c 0
-250 570 m 0
- 304 570 353 606 372 660 c 1
- 128 660 l 1
- 147 606 196 570 250 570 c 0"#,
+500 220 m 0
+ 371 220 270 330 270 460 c 0
+ 270 488 292 510 320 510 c 2
+ 680 510 l 2
+ 708 510 730 488 730 460 c 0
+ 730 330 629 220 500 220 c 0
+500 320 m 0
+ 554 320 603 356 622 410 c 1
+ 378 410 l 1
+ 397 356 446 320 500 320 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-250 503 m 1
- 228 485 196 469 158 469 c 0
- 80 469 17 532 17 610 c 0
- 17 641 28 669 42 693 c 0
- 59 724 83 753 107 778 c 0
- 161 835 219 878 220 879 c 0
- 228 885 239 889 250 889 c 0
- 261 889 272 885 280 879 c 0
- 281 878 339 835 393 778 c 0
- 417 753 441 724 458 693 c 0
- 472 669 483 641 483 610 c 0
- 483 532 420 469 342 469 c 0
- 304 469 272 485 250 503 c 1
-158 569 m 0
- 176 569 197 590 201 599 c 0
- 206 621 226 638 250 638 c 0
- 274 638 294 621 299 599 c 0
- 303 590 324 569 342 569 c 0
- 365 569 383 587 383 610 c 0
- 383 615 380 628 371 644 c 0
- 346 688 286 745 250 775 c 1
- 214 745 154 688 129 644 c 0
- 120 628 117 615 117 610 c 0
- 117 587 135 569 158 569 c 0"#,
+500 253 m 1
+ 478 235 446 219 408 219 c 0
+ 330 219 267 282 267 360 c 0
+ 267 391 278 419 292 443 c 0
+ 309 474 333 503 357 528 c 0
+ 411 585 469 628 470 629 c 0
+ 478 635 489 639 500 639 c 0
+ 511 639 522 635 530 629 c 0
+ 531 628 589 585 643 528 c 0
+ 667 503 691 474 708 443 c 0
+ 722 419 733 391 733 360 c 0
+ 733 282 670 219 592 219 c 0
+ 554 219 522 235 500 253 c 1
+408 319 m 0
+ 426 319 447 340 451 349 c 0
+ 456 371 476 388 500 388 c 0
+ 524 388 544 371 549 349 c 0
+ 553 340 574 319 592 319 c 0
+ 615 319 633 337 633 360 c 0
+ 633 365 630 378 621 394 c 0
+ 596 438 536 495 500 525 c 1
+ 464 495 404 438 379 394 c 0
+ 370 378 367 365 367 360 c 0
+ 367 337 385 319 408 319 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-149 601 m 2
- 59 601 l 2
- 31 601 9 623 9 651 c 0
- 9 679 31 701 59 701 c 2
- 149 701 l 2
- 177 701 199 679 199 651 c 0
- 199 623 177 601 149 601 c 2
-300 550 m 2
- 300 460 l 2
- 300 432 278 410 250 410 c 0
- 222 410 200 432 200 460 c 2
- 200 550 l 2
- 200 578 222 600 250 600 c 0
- 278 600 300 578 300 550 c 2
-200 752 m 2
- 200 842 l 2
- 200 870 222 892 250 892 c 0
- 278 892 300 870 300 842 c 2
- 300 752 l 2
- 300 724 278 702 250 702 c 0
- 222 702 200 724 200 752 c 2
-441 601 m 2
- 351 601 l 2
- 323 601 301 623 301 651 c 0
- 301 679 323 701 351 701 c 2
- 441 701 l 2
- 469 701 491 679 491 651 c 0
- 491 623 469 601 441 601 c 2"#,
+399 351 m 2
+ 309 351 l 2
+ 281 351 259 373 259 401 c 0
+ 259 429 281 451 309 451 c 2
+ 399 451 l 2
+ 427 451 449 429 449 401 c 0
+ 449 373 427 351 399 351 c 2
+550 300 m 2
+ 550 210 l 2
+ 550 182 528 160 500 160 c 0
+ 472 160 450 182 450 210 c 2
+ 450 300 l 2
+ 450 328 472 350 500 350 c 0
+ 528 350 550 328 550 300 c 2
+450 502 m 2
+ 450 592 l 2
+ 450 620 472 642 500 642 c 0
+ 528 642 550 620 550 592 c 2
+ 550 502 l 2
+ 550 474 528 452 500 452 c 0
+ 472 452 450 474 450 502 c 2
+691 351 m 2
+ 601 351 l 2
+ 573 351 551 373 551 401 c 0
+ 551 429 573 451 601 451 c 2
+ 691 451 l 2
+ 719 451 741 429 741 401 c 0
+ 741 373 719 351 691 351 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("lanpanTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("lanpanTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-193 547 m 0
- 193 538 191 530 187 523 c 2
- 162 479 l 2
- 153 464 137 453 118 453 c 0
- 90 453 68 475 68 503 c 0
- 68 512 71 521 75 528 c 2
- 99 571 l 2
- 108 586 124 597 143 597 c 0
- 171 597 193 575 193 547 c 0
-356 597 m 0
- 375 597 390 586 399 571 c 2
- 424 528 l 2
- 428 521 430 512 430 503 c 0
- 430 475 408 453 380 453 c 0
- 361 453 345 464 336 479 c 2
- 312 523 l 2
- 308 530 306 538 306 547 c 0
- 306 575 328 597 356 597 c 0
-299 510 m 2
- 299 460 l 2
- 299 432 277 410 249 410 c 0
- 221 410 199 432 199 460 c 2
- 199 510 l 2
- 199 538 221 560 249 560 c 0
- 277 560 299 538 299 510 c 2
-384 678 m 1
- 365 622 320 565 248 565 c 0
- 215 565 186 578 164 597 c 0
- 124 631 98 691 98 760 c 2
- 98 810 l 2
- 98 838 120 860 148 860 c 0
- 176 860 198 838 198 810 c 2
- 198 760 l 2
- 198 724 211 689 229 673 c 0
- 236 667 243 665 248 665 c 0
- 253 665 259 667 266 673 c 0
- 284 689 297 724 297 760 c 2
- 297 810 l 2
- 297 838 319 860 347 860 c 0
- 365 860 381 850 390 836 c 2
- 442 752 l 2
- 447 744 450 736 450 726 c 0
- 450 699 427 676 400 676 c 0
- 395 676 390 676 384 678 c 1"#,
+443 297 m 0
+ 443 288 441 280 437 273 c 2
+ 412 229 l 2
+ 403 214 387 203 368 203 c 0
+ 340 203 318 225 318 253 c 0
+ 318 262 321 271 325 278 c 2
+ 349 321 l 2
+ 358 336 374 347 393 347 c 0
+ 421 347 443 325 443 297 c 0
+606 347 m 0
+ 625 347 640 336 649 321 c 2
+ 674 278 l 2
+ 678 271 680 262 680 253 c 0
+ 680 225 658 203 630 203 c 0
+ 611 203 595 214 586 229 c 2
+ 562 273 l 2
+ 558 280 556 288 556 297 c 0
+ 556 325 578 347 606 347 c 0
+549 260 m 2
+ 549 210 l 2
+ 549 182 527 160 499 160 c 0
+ 471 160 449 182 449 210 c 2
+ 449 260 l 2
+ 449 288 471 310 499 310 c 0
+ 527 310 549 288 549 260 c 2
+634 428 m 1
+ 615 372 570 315 498 315 c 0
+ 465 315 436 328 414 347 c 0
+ 374 381 348 441 348 510 c 2
+ 348 560 l 2
+ 348 588 370 610 398 610 c 0
+ 426 610 448 588 448 560 c 2
+ 448 510 l 2
+ 448 474 461 439 479 423 c 0
+ 486 417 493 415 498 415 c 0
+ 503 415 509 417 516 423 c 0
+ 534 439 547 474 547 510 c 2
+ 547 560 l 2
+ 547 588 569 610 597 610 c 0
+ 615 610 631 600 640 586 c 2
+ 692 502 l 2
+ 697 494 700 486 700 476 c 0
+ 700 449 677 426 650 426 c 0
+ 645 426 640 426 634 428 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-377 461 m 0
- 367 461 358 464 350 469 c 2
- 332 480 l 1
- 306 471 279 466 250 466 c 0
- 221 466 194 471 168 480 c 1
- 150 469 l 2
- 142 464 133 461 123 461 c 0
- 95 461 73 483 73 511 c 0
- 73 520 76 529 80 536 c 1
- 40 577 15 632 15 693 c 0
- 15 721 37 743 65 743 c 2
- 219 743 l 1
- 263 832 l 2
- 271 848 288 860 308 860 c 0
- 336 860 358 838 358 810 c 0
- 358 802 356 795 353 788 c 2
- 331 743 l 1
- 435 743 l 2
- 463 743 485 721 485 693 c 0
- 485 632 460 577 420 536 c 1
- 424 529 427 520 427 511 c 0
- 427 483 405 461 377 461 c 0
-250 566 m 0
- 307 566 354 598 374 643 c 1
- 291 643 209 643 126 643 c 1
- 146 598 193 566 250 566 c 0"#,
+627 211 m 0
+ 617 211 608 214 600 219 c 2
+ 582 230 l 1
+ 556 221 529 216 500 216 c 0
+ 471 216 444 221 418 230 c 1
+ 400 219 l 2
+ 392 214 383 211 373 211 c 0
+ 345 211 323 233 323 261 c 0
+ 323 270 326 279 330 286 c 1
+ 290 327 265 382 265 443 c 0
+ 265 471 287 493 315 493 c 2
+ 469 493 l 1
+ 513 582 l 2
+ 521 598 538 610 558 610 c 0
+ 586 610 608 588 608 560 c 0
+ 608 552 606 545 603 538 c 2
+ 581 493 l 1
+ 685 493 l 2
+ 713 493 735 471 735 443 c 0
+ 735 382 710 327 670 286 c 1
+ 674 279 677 270 677 261 c 0
+ 677 233 655 211 627 211 c 0
+500 316 m 0
+ 557 316 604 348 624 393 c 1
+ 541 393 459 393 376 393 c 1
+ 396 348 443 316 500 316 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("linluwiTok_VAR01", Anchor::new(AnchorType::Mark, (250, 650)),
+GlyphDescriptor::new_with_anchor("linluwiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (500, 400)),
 r#"
-274 701 m 0
- 274 712 283 721 294 721 c 0
- 305 721 314 712 314 701 c 0
- 314 690 305 681 294 681 c 0
- 283 681 274 690 274 701 c 0
-230 701 m 0
- 230 712 239 721 250 721 c 0
- 261 721 270 712 270 701 c 0
- 270 690 261 681 250 681 c 0
- 239 681 230 690 230 701 c 0
-186 701 m 0
- 186 712 195 721 206 721 c 0
- 217 721 226 712 226 701 c 0
- 226 690 217 681 206 681 c 0
- 195 681 186 690 186 701 c 0
-182 747 m 1
- 182 656 l 1
- 187 656 191 656 196 656 c 0
- 231 656 263 647 282 629 c 0
- 285 628 296 626 306 626 c 0
- 310 626 314 627 318 627 c 1
- 318 747 l 1
- 182 747 l 1
-300 526 m 1
- 300 502 l 2
- 300 474 278 452 250 452 c 0
- 222 452 200 474 200 502 c 2
- 200 556 l 1
- 198 556 196 556 194 556 c 0
- 190 556 186 555 182 555 c 1
- 182 502 l 2
- 182 474 160 452 132 452 c 0
- 104 452 82 474 82 502 c 0
- 82 600 82 699 82 797 c 0
- 82 825 104 847 132 847 c 2
- 368 847 l 2
- 396 847 418 825 418 797 c 0
- 418 699 418 600 418 502 c 0
- 418 474 396 452 368 452 c 0
- 340 452 318 474 318 502 c 2
- 318 526 l 1
- 313 526 309 526 304 526 c 0
- 303 526 301 526 300 526 c 1"#,
+524 451 m 0
+ 524 462 533 471 544 471 c 0
+ 555 471 564 462 564 451 c 0
+ 564 440 555 431 544 431 c 0
+ 533 431 524 440 524 451 c 0
+480 451 m 0
+ 480 462 489 471 500 471 c 0
+ 511 471 520 462 520 451 c 0
+ 520 440 511 431 500 431 c 0
+ 489 431 480 440 480 451 c 0
+436 451 m 0
+ 436 462 445 471 456 471 c 0
+ 467 471 476 462 476 451 c 0
+ 476 440 467 431 456 431 c 0
+ 445 431 436 440 436 451 c 0
+432 497 m 1
+ 432 406 l 1
+ 437 406 441 406 446 406 c 0
+ 481 406 513 397 532 379 c 0
+ 535 378 546 376 556 376 c 0
+ 560 376 564 377 568 377 c 1
+ 568 497 l 1
+ 432 497 l 1
+550 276 m 1
+ 550 252 l 2
+ 550 224 528 202 500 202 c 0
+ 472 202 450 224 450 252 c 2
+ 450 306 l 1
+ 448 306 446 306 444 306 c 0
+ 440 306 436 305 432 305 c 1
+ 432 252 l 2
+ 432 224 410 202 382 202 c 0
+ 354 202 332 224 332 252 c 0
+ 332 350 332 449 332 547 c 0
+ 332 575 354 597 382 597 c 2
+ 618 597 l 2
+ 646 597 668 575 668 547 c 0
+ 668 449 668 350 668 252 c 0
+ 668 224 646 202 618 202 c 0
+ 590 202 568 224 568 252 c 2
+ 568 276 l 1
+ 563 276 559 276 554 276 c 0
+ 553 276 551 276 550 276 c 1"#,
 ),
 ];
 
 
 // LOWER
 pub const TOK_LOWER: [GlyphDescriptor; 137] = [
-GlyphDescriptor::new("a",
+GlyphDescriptor::new_with_anchor("a", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
  550 240 l 2
@@ -17594,7 +17593,7 @@ r#"
  481 80 465 64 465 45 c 0
  465 26 481 10 500 10 c 0"#,
 ),
-GlyphDescriptor::new("akesi",
+GlyphDescriptor::new_with_anchor("akesi", Anchor::new_stack(AnchorType::Base),
 r#"
 693 340 m 0
  693 312 670 290 642 290 c 0
@@ -17647,7 +17646,7 @@ r#"
  387 390 410 368 410 340 c 0
  410 312 387 290 359 290 c 0"#,
 ),
-GlyphDescriptor::new("ala",
+GlyphDescriptor::new_with_anchor("ala", Anchor::new_stack(AnchorType::Base),
 r#"
 260 340 m 0
  260 367 283 390 310 390 c 0
@@ -17671,7 +17670,7 @@ r#"
  275 305 l 2
  265 315 260 327 260 340 c 0"#,
 ),
-GlyphDescriptor::new("alasa",
+GlyphDescriptor::new_with_anchor("alasa", Anchor::new_stack(AnchorType::Base),
 r#"
 700 -20 m 0
  673 -20 650 3 650 30 c 0
@@ -17709,7 +17708,7 @@ r#"
  501 71 510 86 516 100 c 1
  400 100 l 1"#,
 ),
-GlyphDescriptor::new("ale",
+GlyphDescriptor::new_with_anchor("ale", Anchor::new_stack(AnchorType::Base),
 r#"
 70 150 m 0
  70 278 141 390 266 390 c 0
@@ -17743,7 +17742,7 @@ r#"
  707 290 682 279 651 251 c 0
  624 227 597 193 563 150 c 1"#,
 ),
-GlyphDescriptor::new("anpa",
+GlyphDescriptor::new_with_anchor("anpa", Anchor::new_stack(AnchorType::Base),
 r#"
 200 390 m 0
  228 390 250 368 250 340 c 2
@@ -17764,7 +17763,7 @@ r#"
  425 26 459 60 500 60 c 0
  541 60 575 26 575 -15 c 0"#,
 ),
-GlyphDescriptor::new("ante",
+GlyphDescriptor::new_with_anchor("ante", Anchor::new_stack(AnchorType::Base),
 r#"
 730 390 m 0
  755 390 780 370 780 340 c 0
@@ -17793,7 +17792,7 @@ r#"
  295 -84 l 2
  287 -88 278 -90 270 -90 c 0"#,
 ),
-GlyphDescriptor::new("anu",
+GlyphDescriptor::new_with_anchor("anu", Anchor::new_stack(AnchorType::Base),
 r#"
 287 340 m 0
  287 367 310 390 337 390 c 0
@@ -17811,7 +17810,7 @@ r#"
  301 305 l 2
  292 315 287 327 287 340 c 0"#,
 ),
-GlyphDescriptor::new("awen",
+GlyphDescriptor::new_with_anchor("awen", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  521 390 540 377 547 357 c 2
@@ -17831,7 +17830,7 @@ r#"
  453 357 l 2
  460 377 479 390 500 390 c 0"#,
 ),
-GlyphDescriptor::new("e",
+GlyphDescriptor::new_with_anchor("e", Anchor::new_stack(AnchorType::Base),
 r#"
 260 340 m 0
  260 367 283 390 310 390 c 0
@@ -17860,7 +17859,7 @@ r#"
  465 305 l 2
  455 315 450 327 450 340 c 0"#,
 ),
-GlyphDescriptor::new("en",
+GlyphDescriptor::new_with_anchor("en", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
  550 200 l 1
@@ -17880,7 +17879,7 @@ r#"
  450 368 472 390 500 390 c 0
  528 390 550 368 550 340 c 2"#,
 ),
-GlyphDescriptor::new("esun",
+GlyphDescriptor::new_with_anchor("esun", Anchor::new_stack(AnchorType::Base),
 r#"
 260 340 m 0
  260 365 280 390 310 390 c 0
@@ -17951,7 +17950,7 @@ r#"
  362 10 l 0
  362 11 l 1"#,
 ),
-GlyphDescriptor::new("ijo",
+GlyphDescriptor::new_with_anchor("ijo", Anchor::new_stack(AnchorType::Base),
 r#"
 500 10 m 0
  577 10 640 73 640 150 c 0
@@ -17964,7 +17963,7 @@ r#"
  633 390 740 283 740 150 c 0
  740 17 633 -90 500 -90 c 0"#,
 ),
-GlyphDescriptor::new("ike",
+GlyphDescriptor::new_with_anchor("ike", Anchor::new_stack(AnchorType::Base),
 r#"
 900 25 m 0
  900 0 880 -25 850 -25 c 0
@@ -17978,7 +17977,7 @@ r#"
  689 325 851 205 898 38 c 0
  899 34 900 29 900 25 c 0"#,
 ),
-GlyphDescriptor::new("ilo",
+GlyphDescriptor::new_with_anchor("ilo", Anchor::new_stack(AnchorType::Base),
 r#"
 273 340 m 2
  273 368 295 390 323 390 c 2
@@ -18005,7 +18004,7 @@ r#"
  450 213 l 1
  450 290 l 1"#,
 ),
-GlyphDescriptor::new("insa",
+GlyphDescriptor::new_with_anchor("insa", Anchor::new_stack(AnchorType::Base),
 r#"
 575 225 m 0
  575 184 541 150 500 150 c 0
@@ -18026,7 +18025,7 @@ r#"
  150 300 l 2
  150 328 172 350 200 350 c 0"#,
 ),
-GlyphDescriptor::new("jaki",
+GlyphDescriptor::new_with_anchor("jaki", Anchor::new_stack(AnchorType::Base),
 r#"
 608 -80 m 0
  569 -80 537 -72 502 -62 c 1
@@ -18076,7 +18075,7 @@ r#"
  567 279 476 267 389 246 c 1
  391 245 393 243 395 242 c 0"#,
 ),
-GlyphDescriptor::new("jan",
+GlyphDescriptor::new_with_anchor("jan", Anchor::new_stack(AnchorType::Base),
 r#"
 310 -90 m 0
  284 -90 260 -68 260 -40 c 0
@@ -18101,7 +18100,7 @@ r#"
  616 238 564 290 500 290 c 0
  436 290 383 238 383 174 c 0"#,
 ),
-GlyphDescriptor::new("jelo",
+GlyphDescriptor::new_with_anchor("jelo", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
  550 307 l 2
@@ -18147,7 +18146,7 @@ r#"
  516 7 l 1
  500 34 l 1"#,
 ),
-GlyphDescriptor::new("jo",
+GlyphDescriptor::new_with_anchor("jo", Anchor::new_stack(AnchorType::Base),
 r#"
 601 289 m 0
  601 233 556 188 500 188 c 0
@@ -18172,7 +18171,7 @@ r#"
  499 288 499 288 499 289 c 0
  499 290 499 290 500 290 c 0"#,
 ),
-GlyphDescriptor::new("kala",
+GlyphDescriptor::new_with_anchor("kala", Anchor::new_stack(AnchorType::Base),
 r#"
 291 227 m 1
  374 312 479 390 615 390 c 0
@@ -18199,7 +18198,7 @@ r#"
  717 277 673 291 615 291 c 0
  515 291 433 231 356 150 c 1"#,
 ),
-GlyphDescriptor::new("kalama",
+GlyphDescriptor::new_with_anchor("kalama", Anchor::new_stack(AnchorType::Base),
 r#"
 286 125 m 0
  286 153 308 175 336 175 c 2
@@ -18237,7 +18236,7 @@ r#"
  450 341 l 2
  450 369 472 391 500 391 c 0"#,
 ),
-GlyphDescriptor::new("kama",
+GlyphDescriptor::new_with_anchor("kama", Anchor::new_stack(AnchorType::Base),
 r#"
 221 8 m 0
  221 36 245 58 271 58 c 0
@@ -18259,7 +18258,7 @@ r#"
  342 -90 288 -72 239 -31 c 0
  227 -21 221 -6 221 8 c 0"#,
 ),
-GlyphDescriptor::new("kasi",
+GlyphDescriptor::new_with_anchor("kasi", Anchor::new_stack(AnchorType::Base),
 r#"
 708 378 m 0
  739 361 743 336 743 298 c 0
@@ -18300,7 +18299,7 @@ r#"
  376 221 417 207 440 207 c 0
  442 207 445 208 447 208 c 1"#,
 ),
-GlyphDescriptor::new("ken",
+GlyphDescriptor::new_with_anchor("ken", Anchor::new_stack(AnchorType::Base),
 r#"
 430 340 m 2
  430 204 l 1
@@ -18327,7 +18326,7 @@ r#"
  330 368 352 390 380 390 c 0
  408 390 430 368 430 340 c 2"#,
 ),
-GlyphDescriptor::new("kepeken",
+GlyphDescriptor::new_with_anchor("kepeken", Anchor::new_stack(AnchorType::Base),
 r#"
 232 23 m 0
  232 50 255 73 280 73 c 0
@@ -18367,7 +18366,7 @@ r#"
  437 252 l 1
  437 290 l 1"#,
 ),
-GlyphDescriptor::new("kili",
+GlyphDescriptor::new_with_anchor("kili", Anchor::new_stack(AnchorType::Base),
 r#"
 422 340 m 0
  422 366 444 390 471 390 c 0
@@ -18390,7 +18389,7 @@ r#"
  560 153 530 139 500 139 c 0
  470 139 440 153 420 179 c 0"#,
 ),
-GlyphDescriptor::new("kiwen",
+GlyphDescriptor::new_with_anchor("kiwen", Anchor::new_stack(AnchorType::Base),
 r#"
 540 -70 m 2
  530 -83 515 -90 500 -90 c 0
@@ -18413,7 +18412,7 @@ r#"
  500 43 l 1
  639 227 l 1"#,
 ),
-GlyphDescriptor::new("ko",
+GlyphDescriptor::new_with_anchor("ko", Anchor::new_stack(AnchorType::Base),
 r#"
 623 309 m 1
  685 303 743 252 743 175 c 0
@@ -18454,7 +18453,7 @@ r#"
  634 147 643 159 643 174 c 0
  643 195 626 209 609 209 c 0"#,
 ),
-GlyphDescriptor::new("kon",
+GlyphDescriptor::new_with_anchor("kon", Anchor::new_stack(AnchorType::Base),
 r#"
 631 390 m 0
  656 390 681 370 681 340 c 0
@@ -18497,7 +18496,7 @@ r#"
  386 377 411 385 429 389 c 0
  433 390 437 390 441 390 c 0"#,
 ),
-GlyphDescriptor::new("kule",
+GlyphDescriptor::new_with_anchor("kule", Anchor::new_stack(AnchorType::Base),
 r#"
 543 365 m 2
  651 179 l 1
@@ -18529,7 +18528,7 @@ r#"
  593 79 l 1
  407 79 l 1"#,
 ),
-GlyphDescriptor::new("kulupu",
+GlyphDescriptor::new_with_anchor("kulupu", Anchor::new_stack(AnchorType::Base),
 r#"
 500 254 m 0
  510 254 518 262 518 272 c 0
@@ -18562,7 +18561,7 @@ r#"
  424 146 478 93 478 28 c 0
  478 -37 424 -90 359 -90 c 0"#,
 ),
-GlyphDescriptor::new("kute",
+GlyphDescriptor::new_with_anchor("kute", Anchor::new_stack(AnchorType::Base),
 r#"
 416 194 m 1
  416 194 l 1
@@ -18592,7 +18591,7 @@ r#"
  430 228 422 213 416 194 c 0
  409 173 389 159 368 159 c 0"#,
 ),
-GlyphDescriptor::new("la",
+GlyphDescriptor::new_with_anchor("la", Anchor::new_stack(AnchorType::Base),
 r#"
 453 -90 m 0
  428 -90 403 -70 403 -40 c 0
@@ -18606,7 +18605,7 @@ r#"
  598 42 552 -54 472 -86 c 0
  466 -88 459 -90 453 -90 c 0"#,
 ),
-GlyphDescriptor::new("lape",
+GlyphDescriptor::new_with_anchor("lape", Anchor::new_stack(AnchorType::Base),
 r#"
 556 100 m 1
  100 100 l 2
@@ -18623,7 +18622,7 @@ r#"
  805 50 850 95 850 150 c 0
  850 205 805 250 750 250 c 0"#,
 ),
-GlyphDescriptor::new("laso",
+GlyphDescriptor::new_with_anchor("laso", Anchor::new_stack(AnchorType::Base),
 r#"
 309 339 m 0
  309 367 330 390 358 390 c 0
@@ -18658,7 +18657,7 @@ r#"
  527 10 l 1
  500 53 l 1"#,
 ),
-GlyphDescriptor::new("lawa",
+GlyphDescriptor::new_with_anchor("lawa", Anchor::new_stack(AnchorType::Base),
 r#"
 658 170 m 1
  658 163 659 157 659 150 c 0
@@ -18681,7 +18680,7 @@ r#"
  559 157 558 164 557 170 c 1
  334 170 l 1"#,
 ),
-GlyphDescriptor::new("len",
+GlyphDescriptor::new_with_anchor("len", Anchor::new_stack(AnchorType::Base),
 r#"
 348 390 m 2
  652 390 l 2
@@ -18711,7 +18710,7 @@ r#"
  500 111 l 2
  500 111 l 2"#,
 ),
-GlyphDescriptor::new("lete",
+GlyphDescriptor::new_with_anchor("lete", Anchor::new_stack(AnchorType::Base),
 r#"
 660 -40 m 0
  660 -65 639 -90 610 -90 c 0
@@ -18743,7 +18742,7 @@ r#"
  653 -15 l 2
  658 -23 660 -32 660 -40 c 0"#,
 ),
-GlyphDescriptor::new("li",
+GlyphDescriptor::new_with_anchor("li", Anchor::new_stack(AnchorType::Base),
 r#"
 325 340 m 0
  325 368 349 390 375 390 c 0
@@ -18759,7 +18758,7 @@ r#"
  343 302 l 2
  331 312 325 326 325 340 c 0"#,
 ),
-GlyphDescriptor::new("lili",
+GlyphDescriptor::new_with_anchor("lili", Anchor::new_stack(AnchorType::Base),
 r#"
 590 260 m 0
  618 260 640 236 640 210 c 0
@@ -18775,7 +18774,7 @@ r#"
  550 240 l 2
  560 253 575 260 590 260 c 0"#,
 ),
-GlyphDescriptor::new("linja",
+GlyphDescriptor::new_with_anchor("linja", Anchor::new_stack(AnchorType::Base),
 r#"
 950 37 m 0
  950 12 930 -12 900 -12 c 0
@@ -18797,7 +18796,7 @@ r#"
  897 284 914 179 948 50 c 0
  949 46 950 41 950 37 c 0"#,
 ),
-GlyphDescriptor::new("lipu",
+GlyphDescriptor::new_with_anchor("lipu", Anchor::new_stack(AnchorType::Base),
 r#"
 287 340 m 2
  287 368 309 390 337 390 c 2
@@ -18814,7 +18813,7 @@ r#"
  613 290 l 1
  387 290 l 1"#,
 ),
-GlyphDescriptor::new("loje",
+GlyphDescriptor::new_with_anchor("loje", Anchor::new_stack(AnchorType::Base),
 r#"
 367 390 m 2
  633 390 l 2
@@ -18838,7 +18837,7 @@ r#"
  525 9 l 1
  500 51 l 1"#,
 ),
-GlyphDescriptor::new("lon",
+GlyphDescriptor::new_with_anchor("lon", Anchor::new_stack(AnchorType::Base),
 r#"
 50 0 m 0
  50 28 72 50 100 50 c 2
@@ -18853,7 +18852,7 @@ r#"
  425 316 459 350 500 350 c 0
  541 350 575 316 575 275 c 0"#,
 ),
-GlyphDescriptor::new("luka",
+GlyphDescriptor::new_with_anchor("luka", Anchor::new_stack(AnchorType::Base),
 r#"
 247 137 m 0
  247 162 267 187 297 187 c 0
@@ -18877,7 +18876,7 @@ r#"
  254 112 l 2
  250 120 247 129 247 137 c 0"#,
 ),
-GlyphDescriptor::new("lukin",
+GlyphDescriptor::new_with_anchor("lukin", Anchor::new_stack(AnchorType::Base),
 r#"
 580 150 m 0
  580 106 544 70 500 70 c 0
@@ -18899,7 +18898,7 @@ r#"
  395 290 284 233 235 150 c 1
  284 67 395 10 500 10 c 0"#,
 ),
-GlyphDescriptor::new("lupa",
+GlyphDescriptor::new_with_anchor("lupa", Anchor::new_stack(AnchorType::Base),
 r#"
 500 10 m 0
  555 10 613 65 613 150 c 2
@@ -18915,7 +18914,7 @@ r#"
  387 150 l 2
  387 65 445 10 500 10 c 0"#,
 ),
-GlyphDescriptor::new("ma",
+GlyphDescriptor::new_with_anchor("ma", Anchor::new_stack(AnchorType::Base),
 r#"
 500 -90 m 0
  367 -90 260 17 260 150 c 0
@@ -18939,7 +18938,7 @@ r#"
  450 200 l 1
  450 281 l 1"#,
 ),
-GlyphDescriptor::new("mama",
+GlyphDescriptor::new_with_anchor("mama", Anchor::new_stack(AnchorType::Base),
 r#"
 605 51 m 1
  608 41 609 30 609 19 c 0
@@ -18961,7 +18960,7 @@ r#"
  505 10 509 14 509 19 c 0
  509 24 505 29 500 29 c 0"#,
 ),
-GlyphDescriptor::new("mani",
+GlyphDescriptor::new_with_anchor("mani", Anchor::new_stack(AnchorType::Base),
 r#"
 260 340 m 0
  260 365 280 390 310 390 c 0
@@ -18988,7 +18987,7 @@ r#"
  384 62 436 10 500 10 c 0
  564 10 616 62 616 126 c 0"#,
 ),
-GlyphDescriptor::new("meli",
+GlyphDescriptor::new_with_anchor("meli", Anchor::new_stack(AnchorType::Base),
 r#"
 500 290 m 0
  423 290 360 227 360 150 c 2
@@ -19014,7 +19013,7 @@ r#"
  630 78 572 20 500 20 c 0
  428 20 370 78 370 150 c 0"#,
 ),
-GlyphDescriptor::new("mi",
+GlyphDescriptor::new_with_anchor("mi", Anchor::new_stack(AnchorType::Base),
 r#"
 521 -40 m 0
  521 -65 501 -90 470 -90 c 0
@@ -19032,7 +19031,7 @@ r#"
  460 228 478 210 500 210 c 0
  522 210 540 228 540 250 c 0"#,
 ),
-GlyphDescriptor::new("mije",
+GlyphDescriptor::new_with_anchor("mije", Anchor::new_stack(AnchorType::Base),
 r#"
 674 86 m 1
  682 86 l 2
@@ -19058,7 +19057,7 @@ r#"
  602 244 556 290 500 290 c 0
  444 290 398 244 398 188 c 0"#,
 ),
-GlyphDescriptor::new("moku",
+GlyphDescriptor::new_with_anchor("moku", Anchor::new_stack(AnchorType::Base),
 r#"
 312 41 m 0
  312 66 333 91 362 91 c 0
@@ -19086,7 +19085,7 @@ r#"
  462 290 l 1
  476 262 500 248 520 248 c 0"#,
 ),
-GlyphDescriptor::new("moli",
+GlyphDescriptor::new_with_anchor("moli", Anchor::new_stack(AnchorType::Base),
 r#"
 380 175 m 0
  380 188 392 200 405 200 c 0
@@ -19141,7 +19140,7 @@ r#"
  360 73 423 10 500 10 c 0
  577 10 640 73 640 150 c 0"#,
 ),
-GlyphDescriptor::new("monsi",
+GlyphDescriptor::new_with_anchor("monsi", Anchor::new_stack(AnchorType::Base),
 r#"
 430 150 m 0
  430 109 396 75 355 75 c 0
@@ -19162,7 +19161,7 @@ r#"
  671 10 l 2
  699 10 721 -12 721 -40 c 0"#,
 ),
-GlyphDescriptor::new("mu",
+GlyphDescriptor::new_with_anchor("mu", Anchor::new_stack(AnchorType::Base),
 r#"
 500 17 m 0
  477 17 459 35 459 58 c 0
@@ -19198,7 +19197,7 @@ r#"
  405 53 448 10 500 10 c 0
  552 10 595 53 595 105 c 0"#,
 ),
-GlyphDescriptor::new("mun",
+GlyphDescriptor::new_with_anchor("mun", Anchor::new_stack(AnchorType::Base),
 r#"
 484 287 m 1
  510 254 527 209 527 150 c 0
@@ -19217,7 +19216,7 @@ r#"
  320 272 309 292 309 313 c 0
  309 329 316 345 332 355 c 0"#,
 ),
-GlyphDescriptor::new("musi",
+GlyphDescriptor::new_with_anchor("musi", Anchor::new_stack(AnchorType::Base),
 r#"
 420 171 m 1
  420 114 l 2
@@ -19250,7 +19249,7 @@ r#"
  622 290 615 283 615 275 c 0
  615 267 622 260 630 260 c 0"#,
 ),
-GlyphDescriptor::new("mute",
+GlyphDescriptor::new_with_anchor("mute", Anchor::new_stack(AnchorType::Base),
 r#"
 500 -85 m 0
  472 -85 450 -63 450 -35 c 2
@@ -19274,7 +19273,7 @@ r#"
  750 -40 l 2
  750 -68 728 -90 700 -90 c 0"#,
 ),
-GlyphDescriptor::new("nanpa",
+GlyphDescriptor::new_with_anchor("nanpa", Anchor::new_stack(AnchorType::Base),
 r#"
 380 -40 m 2
  380 29 l 1
@@ -19319,7 +19318,7 @@ r#"
  522 171 l 1
  480 171 l 1"#,
 ),
-GlyphDescriptor::new("nasa",
+GlyphDescriptor::new_with_anchor("nasa", Anchor::new_stack(AnchorType::Base),
 r#"
 729 -62 m 0
  699 -62 679 -37 679 -12 c 0
@@ -19356,7 +19355,7 @@ r#"
  800 40 790 3 775 -32 c 0
  767 -51 748 -62 729 -62 c 0"#,
 ),
-GlyphDescriptor::new("nasin",
+GlyphDescriptor::new_with_anchor("nasin", Anchor::new_stack(AnchorType::Base),
 r#"
 381 52 m 0
  354 52 331 75 331 102 c 0
@@ -19378,7 +19377,7 @@ r#"
  417 67 l 2
  407 57 394 52 381 52 c 0"#,
 ),
-GlyphDescriptor::new("nena",
+GlyphDescriptor::new_with_anchor("nena", Anchor::new_stack(AnchorType::Base),
 r#"
 500 290 m 0
  445 290 387 235 387 150 c 2
@@ -19394,7 +19393,7 @@ r#"
  613 150 l 2
  613 235 555 290 500 290 c 0"#,
 ),
-GlyphDescriptor::new("ni",
+GlyphDescriptor::new_with_anchor("ni", Anchor::new_stack(AnchorType::Base),
 r#"
 330 79 m 0
  330 106 353 129 380 129 c 0
@@ -19414,7 +19413,7 @@ r#"
  345 43 l 2
  335 53 330 66 330 79 c 0"#,
 ),
-GlyphDescriptor::new("nimi",
+GlyphDescriptor::new_with_anchor("nimi", Anchor::new_stack(AnchorType::Base),
 r#"
 281 -90 m 2
  164 -90 70 4 70 121 c 2
@@ -19435,7 +19434,7 @@ r#"
  220 290 170 240 170 179 c 2
  170 121 l 2"#,
 ),
-GlyphDescriptor::new("noka",
+GlyphDescriptor::new_with_anchor("noka", Anchor::new_stack(AnchorType::Base),
 r#"
 618 46 m 1
  618 46 l 1
@@ -19474,7 +19473,7 @@ r#"
 618 47 m 1
  618 47 l 1"#,
 ),
-GlyphDescriptor::new("o",
+GlyphDescriptor::new_with_anchor("o", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  528 390 550 368 550 340 c 2
@@ -19494,7 +19493,7 @@ r#"
  575 180 635 120 635 45 c 0
  635 -30 575 -90 500 -90 c 0"#,
 ),
-GlyphDescriptor::new("olin",
+GlyphDescriptor::new_with_anchor("olin", Anchor::new_stack(AnchorType::Base),
 r#"
 811 -26 m 0
  795 -40 772 -59 748 -59 c 0
@@ -19541,7 +19540,7 @@ r#"
  233 191 218 199 209 213 c 0
  198 230 182 260 158 260 c 0"#,
 ),
-GlyphDescriptor::new("ona",
+GlyphDescriptor::new_with_anchor("ona", Anchor::new_stack(AnchorType::Base),
 r#"
 74 284 m 0
  74 310 96 335 124 335 c 0
@@ -19562,7 +19561,7 @@ r#"
  779 50 824 95 824 150 c 0
  824 205 779 250 724 250 c 0"#,
 ),
-GlyphDescriptor::new("open",
+GlyphDescriptor::new_with_anchor("open", Anchor::new_stack(AnchorType::Base),
 r#"
 387 340 m 2
  387 145 l 1
@@ -19583,7 +19582,7 @@ r#"
  613 45 l 1
  387 45 l 1"#,
 ),
-GlyphDescriptor::new("pakala",
+GlyphDescriptor::new_with_anchor("pakala", Anchor::new_stack(AnchorType::Base),
 r#"
 337 390 m 2
  663 390 l 2
@@ -19613,7 +19612,7 @@ r#"
  600 143 598 136 595 129 c 2
  541 10 l 1"#,
 ),
-GlyphDescriptor::new("pali",
+GlyphDescriptor::new_with_anchor("pali", Anchor::new_stack(AnchorType::Base),
 r#"
 265 41 m 0
  265 66 286 91 315 91 c 0
@@ -19641,7 +19640,7 @@ r#"
  450 290 430 270 430 245 c 0
  430 220 450 200 475 200 c 0"#,
 ),
-GlyphDescriptor::new("palisa",
+GlyphDescriptor::new_with_anchor("palisa", Anchor::new_stack(AnchorType::Base),
 r#"
 397 311 m 0
  411 346 442 390 501 390 c 0
@@ -19666,7 +19665,7 @@ r#"
  522 234 519 275 503 290 c 0
  503 290 502 290 501 290 c 0"#,
 ),
-GlyphDescriptor::new("pan",
+GlyphDescriptor::new_with_anchor("pan", Anchor::new_stack(AnchorType::Base),
 r#"
 331 340 m 0
  331 369 356 390 381 390 c 0
@@ -19708,7 +19707,7 @@ r#"
  353 -1 l 2
  339 9 331 24 331 40 c 0"#,
 ),
-GlyphDescriptor::new("pana",
+GlyphDescriptor::new_with_anchor("pana", Anchor::new_stack(AnchorType::Base),
 r#"
 297 57 m 0
  297 82 318 107 347 107 c 0
@@ -19753,7 +19752,7 @@ r#"
  610 332 l 2
  619 348 635 357 652 357 c 0"#,
 ),
-GlyphDescriptor::new("pi",
+GlyphDescriptor::new_with_anchor("pi", Anchor::new_stack(AnchorType::Base),
 r#"
 310 390 m 0
  338 390 360 368 360 340 c 2
@@ -19766,7 +19765,7 @@ r#"
  260 340 l 2
  260 368 282 390 310 390 c 0"#,
 ),
-GlyphDescriptor::new("pilin",
+GlyphDescriptor::new_with_anchor("pilin", Anchor::new_stack(AnchorType::Base),
 r#"
 500 346 m 1
  525 369 562 390 608 390 c 0
@@ -19793,7 +19792,7 @@ r#"
  451 248 450 251 447 256 c 0
  436 272 414 290 392 290 c 0"#,
 ),
-GlyphDescriptor::new("pimeja",
+GlyphDescriptor::new_with_anchor("pimeja", Anchor::new_stack(AnchorType::Base),
 r#"
 200 -90 m 2
  174 -90 150 -70 150 -40 c 0
@@ -19825,7 +19824,7 @@ r#"
  500 211 l 1
  519 235 l 1"#,
 ),
-GlyphDescriptor::new("pini",
+GlyphDescriptor::new_with_anchor("pini", Anchor::new_stack(AnchorType::Base),
 r#"
 450 290 m 1
  391 290 l 2
@@ -19845,7 +19844,7 @@ r#"
  450 10 l 1
  450 290 l 1"#,
 ),
-GlyphDescriptor::new("pipi",
+GlyphDescriptor::new_with_anchor("pipi", Anchor::new_stack(AnchorType::Base),
 r#"
 400 300 m 0
  372 300 350 322 350 350 c 0
@@ -19891,7 +19890,7 @@ r#"
  550 378 572 400 600 400 c 0
  628 400 650 378 650 350 c 0"#,
 ),
-GlyphDescriptor::new("poka",
+GlyphDescriptor::new_with_anchor("poka", Anchor::new_stack(AnchorType::Base),
 r#"
 950 150 m 0
  950 109 916 75 875 75 c 0
@@ -19912,7 +19911,7 @@ r#"
  50 300 l 2
  50 328 72 350 100 350 c 0"#,
 ),
-GlyphDescriptor::new("poki",
+GlyphDescriptor::new_with_anchor("poki", Anchor::new_stack(AnchorType::Base),
 r#"
 240 390 m 0
  268 390 290 368 290 340 c 2
@@ -19928,7 +19927,7 @@ r#"
  190 340 l 2
  190 368 212 390 240 390 c 0"#,
 ),
-GlyphDescriptor::new("pona",
+GlyphDescriptor::new_with_anchor("pona", Anchor::new_stack(AnchorType::Base),
 r#"
 100 275 m 0
  100 300 120 325 150 325 c 0
@@ -19942,7 +19941,7 @@ r#"
  311 -25 149 95 102 262 c 0
  101 266 100 271 100 275 c 0"#,
 ),
-GlyphDescriptor::new("pu",
+GlyphDescriptor::new_with_anchor("pu", Anchor::new_stack(AnchorType::Base),
 r#"
 500 103 m 0
  506 103 512 105 512 110 c 0
@@ -20003,7 +20002,7 @@ r#"
  370 290 l 1
  370 10 l 1"#,
 ),
-GlyphDescriptor::new("sama",
+GlyphDescriptor::new_with_anchor("sama", Anchor::new_stack(AnchorType::Base),
 r#"
 850 300 m 0
  850 272 828 250 800 250 c 2
@@ -20020,7 +20019,7 @@ r#"
  800 50 l 2
  828 50 850 28 850 0 c 0"#,
 ),
-GlyphDescriptor::new("seli",
+GlyphDescriptor::new_with_anchor("seli", Anchor::new_stack(AnchorType::Base),
 r#"
 575 -15 m 0
  575 -56 541 -90 500 -90 c 0
@@ -20053,7 +20052,7 @@ r#"
  450 341 l 2
  450 369 472 391 500 391 c 0"#,
 ),
-GlyphDescriptor::new("selo",
+GlyphDescriptor::new_with_anchor("selo", Anchor::new_stack(AnchorType::Base),
 r#"
 218 -40 m 2
  218 -68 196 -90 168 -90 c 0
@@ -20079,7 +20078,7 @@ r#"
  218 290 l 1
  218 -40 l 2"#,
 ),
-GlyphDescriptor::new("seme",
+GlyphDescriptor::new_with_anchor("seme", Anchor::new_stack(AnchorType::Base),
 r#"
 550 -40 m 0
  550 -68 528 -90 500 -90 c 0
@@ -20111,7 +20110,7 @@ r#"
  349 260 349 260 350 261 c 1
  350 260 349 260 349 260 c 0"#,
 ),
-GlyphDescriptor::new("sewi",
+GlyphDescriptor::new_with_anchor("sewi", Anchor::new_stack(AnchorType::Base),
 r#"
 750 -100 m 0
  722 -100 700 -78 700 -50 c 2
@@ -20151,7 +20150,7 @@ r#"
  248 5 l 1
  247 4 l 1"#,
 ),
-GlyphDescriptor::new("sijelo",
+GlyphDescriptor::new_with_anchor("sijelo", Anchor::new_stack(AnchorType::Base),
 r#"
 350 -40 m 2
  350 -68 328 -90 300 -90 c 0
@@ -20172,7 +20171,7 @@ r#"
  350 290 l 1
  350 -40 l 2"#,
 ),
-GlyphDescriptor::new("sike",
+GlyphDescriptor::new_with_anchor("sike", Anchor::new_stack(AnchorType::Base),
 r#"
 615 149 m 0
  615 85 564 34 500 34 c 0
@@ -20195,7 +20194,7 @@ r#"
  360 73 423 10 500 10 c 0
  577 10 640 73 640 150 c 0"#,
 ),
-GlyphDescriptor::new("sin",
+GlyphDescriptor::new_with_anchor("sin", Anchor::new_stack(AnchorType::Base),
 r#"
 592 -40 m 0
  592 -12 614 10 642 10 c 2
@@ -20219,7 +20218,7 @@ r#"
  120 -90 l 2
  92 -90 70 -68 70 -40 c 0"#,
 ),
-GlyphDescriptor::new("sina",
+GlyphDescriptor::new_with_anchor("sina", Anchor::new_stack(AnchorType::Base),
 r#"
 471 390 m 0
  503 390 520 364 520 340 c 0
@@ -20237,7 +20236,7 @@ r#"
  540 72 522 90 500 90 c 0
  478 90 460 72 460 50 c 0"#,
 ),
-GlyphDescriptor::new("sinpin",
+GlyphDescriptor::new_with_anchor("sinpin", Anchor::new_stack(AnchorType::Base),
 r#"
 571 150 m 0
  571 191 605 225 646 225 c 0
@@ -20258,7 +20257,7 @@ r#"
  330 -90 l 2
  302 -90 280 -68 280 -40 c 0"#,
 ),
-GlyphDescriptor::new("sitelen",
+GlyphDescriptor::new_with_anchor("sitelen", Anchor::new_stack(AnchorType::Base),
 r#"
 230 340 m 2
  230 368 252 390 280 390 c 2
@@ -20290,7 +20289,7 @@ r#"
  560 178 582 200 610 200 c 0
  638 200 660 178 660 150 c 0"#,
 ),
-GlyphDescriptor::new("sona",
+GlyphDescriptor::new_with_anchor("sona", Anchor::new_stack(AnchorType::Base),
 r#"
 336 150 m 2
  336 178 358 200 386 200 c 2
@@ -20332,7 +20331,7 @@ r#"
  589 332 l 2
  598 348 614 357 631 357 c 0"#,
 ),
-GlyphDescriptor::new("soweli",
+GlyphDescriptor::new_with_anchor("soweli", Anchor::new_stack(AnchorType::Base),
 r#"
 489 105 m 0
  517 105 539 83 539 55 c 2
@@ -20380,7 +20379,7 @@ r#"
  251 290 229 312 229 340 c 0
  229 368 251 390 279 390 c 2"#,
 ),
-GlyphDescriptor::new("suli",
+GlyphDescriptor::new_with_anchor("suli", Anchor::new_stack(AnchorType::Base),
 r#"
 666 390 m 0
  694 390 716 366 716 340 c 0
@@ -20398,7 +20397,7 @@ r#"
  528 208 570 297 627 371 c 0
  637 384 651 390 666 390 c 0"#,
 ),
-GlyphDescriptor::new("suno",
+GlyphDescriptor::new_with_anchor("suno", Anchor::new_stack(AnchorType::Base),
 r#"
 450 340 m 2
  450 368 472 390 500 390 c 0
@@ -20427,7 +20426,7 @@ r#"
  538 81 569 112 569 150 c 0
  569 188 538 219 500 219 c 0"#,
 ),
-GlyphDescriptor::new("supa",
+GlyphDescriptor::new_with_anchor("supa", Anchor::new_stack(AnchorType::Base),
 r#"
 100 350 m 2
  900 350 l 2
@@ -20447,7 +20446,7 @@ r#"
  72 250 50 272 50 300 c 0
  50 328 72 350 100 350 c 2"#,
 ),
-GlyphDescriptor::new("suwi",
+GlyphDescriptor::new_with_anchor("suwi", Anchor::new_stack(AnchorType::Base),
 r#"
 575 -15 m 0
  575 -56 541 -90 500 -90 c 0
@@ -20481,7 +20480,7 @@ r#"
  613 188 l 2
  603 178 591 173 578 173 c 0"#,
 ),
-GlyphDescriptor::new("tan",
+GlyphDescriptor::new_with_anchor("tan", Anchor::new_stack(AnchorType::Base),
 r#"
 872 -91 m 0
  842 -91 822 -66 822 -41 c 0
@@ -20506,7 +20505,7 @@ r#"
  930 3 927 -25 921 -52 c 0
  916 -75 895 -91 872 -91 c 0"#,
 ),
-GlyphDescriptor::new("taso",
+GlyphDescriptor::new_with_anchor("taso", Anchor::new_stack(AnchorType::Base),
 r#"
 620 340 m 2
  620 -40 l 2
@@ -20521,7 +20520,7 @@ r#"
  520 368 542 390 570 390 c 0
  598 390 620 368 620 340 c 2"#,
 ),
-GlyphDescriptor::new("tawa",
+GlyphDescriptor::new_with_anchor("tawa", Anchor::new_stack(AnchorType::Base),
 r#"
 729 58 m 0
  755 58 779 36 779 8 c 0
@@ -20543,7 +20542,7 @@ r#"
  654 18 676 28 697 46 c 0
  706 54 718 58 729 58 c 0"#,
 ),
-GlyphDescriptor::new("telo",
+GlyphDescriptor::new_with_anchor("telo", Anchor::new_stack(AnchorType::Base),
 r#"
 753 121 m 0
  784 121 803 96 803 71 c 0
@@ -20588,7 +20587,7 @@ r#"
  693 299 697 313 705 339 c 0
  711 361 731 375 753 375 c 0"#,
 ),
-GlyphDescriptor::new("tenpo",
+GlyphDescriptor::new_with_anchor("tenpo", Anchor::new_stack(AnchorType::Base),
 r#"
 500 10 m 0
  577 10 640 73 640 150 c 0
@@ -20610,7 +20609,7 @@ r#"
  450 230 l 2
  450 258 472 280 500 280 c 0"#,
 ),
-GlyphDescriptor::new("toki",
+GlyphDescriptor::new_with_anchor("toki", Anchor::new_stack(AnchorType::Base),
 r#"
 499 134 m 0
  465 134 438 107 438 72 c 0
@@ -20648,7 +20647,7 @@ r#"
  587 332 l 2
  596 348 612 357 629 357 c 0"#,
 ),
-GlyphDescriptor::new("tomo",
+GlyphDescriptor::new_with_anchor("tomo", Anchor::new_stack(AnchorType::Base),
 r#"
 468 379 m 2
  477 386 489 390 500 390 c 0
@@ -20669,7 +20668,7 @@ r#"
  500 276 l 1
  350 153 l 1"#,
 ),
-GlyphDescriptor::new("tu",
+GlyphDescriptor::new_with_anchor("tu", Anchor::new_stack(AnchorType::Base),
 r#"
 600 -90 m 0
  572 -90 550 -68 550 -40 c 2
@@ -20686,7 +20685,7 @@ r#"
  450 -40 l 2
  450 -68 428 -90 400 -90 c 0"#,
 ),
-GlyphDescriptor::new("unpa",
+GlyphDescriptor::new_with_anchor("unpa", Anchor::new_stack(AnchorType::Base),
 r#"
 251 243 m 0
  251 333 323 390 406 390 c 0
@@ -20725,7 +20724,7 @@ r#"
  516 10 525 16 532 24 c 0
  539 32 545 46 546 68 c 1"#,
 ),
-GlyphDescriptor::new("uta",
+GlyphDescriptor::new_with_anchor("uta", Anchor::new_stack(AnchorType::Base),
 r#"
 224 340 m 0
  224 368 246 390 274 390 c 2
@@ -20743,7 +20742,7 @@ r#"
  450 -12 472 10 500 10 c 0
  528 10 550 -12 550 -40 c 0"#,
 ),
-GlyphDescriptor::new("utala",
+GlyphDescriptor::new_with_anchor("utala", Anchor::new_stack(AnchorType::Base),
 r#"
 642 390 m 0
  670 390 692 366 692 340 c 0
@@ -20775,7 +20774,7 @@ r#"
  602 370 l 2
  612 383 627 390 642 390 c 0"#,
 ),
-GlyphDescriptor::new("walo",
+GlyphDescriptor::new_with_anchor("walo", Anchor::new_stack(AnchorType::Base),
 r#"
 225 216 m 0
  225 245 250 266 275 266 c 0
@@ -20808,7 +20807,7 @@ r#"
  569 121 l 2
  567 124 565 126 564 129 c 2"#,
 ),
-GlyphDescriptor::new("wan",
+GlyphDescriptor::new_with_anchor("wan", Anchor::new_stack(AnchorType::Base),
 r#"
 416 171 m 0
  389 171 366 194 366 221 c 0
@@ -20823,7 +20822,7 @@ r#"
  451 186 l 2
  441 176 429 171 416 171 c 0"#,
 ),
-GlyphDescriptor::new("waso",
+GlyphDescriptor::new_with_anchor("waso", Anchor::new_stack(AnchorType::Base),
 r#"
 400 340 m 0
  400 366 422 390 450 390 c 0
@@ -20851,7 +20850,7 @@ r#"
  348 240 370 218 370 190 c 0
  370 162 348 140 320 140 c 0"#,
 ),
-GlyphDescriptor::new("wawa",
+GlyphDescriptor::new_with_anchor("wawa", Anchor::new_stack(AnchorType::Base),
 r#"
 500 172 m 0
  455 172 419 136 419 91 c 0
@@ -20882,7 +20881,7 @@ r#"
  161 332 l 2
  161 335 161 337 161 340 c 0"#,
 ),
-GlyphDescriptor::new("weka",
+GlyphDescriptor::new_with_anchor("weka", Anchor::new_stack(AnchorType::Base),
 r#"
 529 74 m 0
  529 101 553 124 579 124 c 0
@@ -20921,7 +20920,7 @@ r#"
  256 309 l 2
  245 319 240 332 240 346 c 0"#,
 ),
-GlyphDescriptor::new("wile",
+GlyphDescriptor::new_with_anchor("wile", Anchor::new_stack(AnchorType::Base),
 r#"
 624 340 m 0
  624 366 646 390 674 390 c 0
@@ -20948,7 +20947,7 @@ r#"
  690 221 661 274 634 310 c 0
  627 319 624 329 624 340 c 0"#,
 ),
-GlyphDescriptor::new("namako",
+GlyphDescriptor::new_with_anchor("namako", Anchor::new_stack(AnchorType::Base),
 r#"
 455 200 m 0
  483 200 505 178 505 150 c 0
@@ -20990,7 +20989,7 @@ r#"
  624 332 l 2
  633 348 649 357 666 357 c 0"#,
 ),
-GlyphDescriptor::new("kin",
+GlyphDescriptor::new_with_anchor("kin", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
  550 260 l 2
@@ -21021,7 +21020,7 @@ r#"
  628 81 615 66 597 55 c 1
  615 44 628 29 628 7 c 0"#,
 ),
-GlyphDescriptor::new("oko",
+GlyphDescriptor::new_with_anchor("oko", Anchor::new_stack(AnchorType::Base),
 r#"
 655 390 m 0
  680 390 705 369 705 340 c 0
@@ -21049,7 +21048,7 @@ r#"
  675 141 675 146 675 150 c 0
  675 154 675 159 674 163 c 1"#,
 ),
-GlyphDescriptor::new("kipisi",
+GlyphDescriptor::new_with_anchor("kipisi", Anchor::new_stack(AnchorType::Base),
 r#"
 690 390 m 0
  717 390 740 367 740 340 c 0
@@ -21071,7 +21070,7 @@ r#"
  580 36 614 70 655 70 c 0
  696 70 730 36 730 -5 c 0"#,
 ),
-GlyphDescriptor::new("leko",
+GlyphDescriptor::new_with_anchor("leko", Anchor::new_stack(AnchorType::Base),
 r#"
 260 340 m 2
  260 368 282 390 310 390 c 2
@@ -21102,7 +21101,7 @@ r#"
  520 170 l 1
  480 170 l 1"#,
 ),
-GlyphDescriptor::new("monsuta",
+GlyphDescriptor::new_with_anchor("monsuta", Anchor::new_stack(AnchorType::Base),
 r#"
 950 105 m 0
  950 80 930 55 900 55 c 0
@@ -21142,7 +21141,7 @@ r#"
  946 124 l 2
  949 118 950 112 950 105 c 0"#,
 ),
-GlyphDescriptor::new("tonsi",
+GlyphDescriptor::new_with_anchor("tonsi", Anchor::new_stack(AnchorType::Base),
 r#"
 235 330 m 0
  235 359 260 380 285 380 c 0
@@ -21171,7 +21170,7 @@ r#"
  546 122 584 160 584 206 c 0
  584 255 544 290 500 290 c 0"#,
 ),
-GlyphDescriptor::new("jasima",
+GlyphDescriptor::new_with_anchor("jasima", Anchor::new_stack(AnchorType::Base),
 r#"
 310 149 m 0
  280 149 260 174 260 199 c 0
@@ -21221,7 +21220,7 @@ r#"
  366 214 364 205 359 187 c 0
  353 164 332 149 310 149 c 0"#,
 ),
-GlyphDescriptor::new("kijetesantakalu",
+GlyphDescriptor::new_with_anchor("kijetesantakalu", Anchor::new_stack(AnchorType::Base),
 r#"
 663 27 m 2
  663 -40 l 2
@@ -21286,7 +21285,7 @@ r#"
  720 315 l 1
  720 314 l 0"#,
 ),
-GlyphDescriptor::new("soko",
+GlyphDescriptor::new_with_anchor("soko", Anchor::new_stack(AnchorType::Base),
 r#"
 711 111 m 2
  550 111 l 1
@@ -21308,7 +21307,7 @@ r#"
  427 290 385 260 360 211 c 1
  641 211 l 1"#,
 ),
-GlyphDescriptor::new("meso",
+GlyphDescriptor::new_with_anchor("meso", Anchor::new_stack(AnchorType::Base),
 r#"
 358 390 m 0
  386 390 408 368 408 340 c 2
@@ -21330,7 +21329,7 @@ r#"
  450 178 472 200 500 200 c 0
  528 200 550 178 550 150 c 0"#,
 ),
-GlyphDescriptor::new("epiku",
+GlyphDescriptor::new_with_anchor("epiku", Anchor::new_stack(AnchorType::Base),
 r#"
 550 341 m 2
  550 240 l 2
@@ -21367,7 +21366,7 @@ r#"
  296 142 318 164 346 164 c 0
  374 164 396 142 396 114 c 0"#,
 ),
-GlyphDescriptor::new("kokosila",
+GlyphDescriptor::new_with_anchor("kokosila", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  528 390 550 368 550 340 c 2
@@ -21417,7 +21416,7 @@ r#"
  587 332 l 2
  596 348 612 357 629 357 c 0"#,
 ),
-GlyphDescriptor::new("lanpan",
+GlyphDescriptor::new_with_anchor("lanpan", Anchor::new_stack(AnchorType::Base),
 r#"
 651 16 m 0
  651 42 627 61 598 61 c 0
@@ -21453,7 +21452,7 @@ r#"
  617 50 634 33 634 12 c 0
  634 -9 617 -25 596 -25 c 0"#,
 ),
-GlyphDescriptor::new("n",
+GlyphDescriptor::new_with_anchor("n", Anchor::new_stack(AnchorType::Base),
 r#"
 500 80 m 0
  481 80 465 64 465 45 c 2
@@ -21476,7 +21475,7 @@ r#"
  450 340 l 2
  450 368 472 390 500 390 c 0"#,
 ),
-GlyphDescriptor::new("misikeke",
+GlyphDescriptor::new_with_anchor("misikeke", Anchor::new_stack(AnchorType::Base),
 r#"
 500 393 m 0
  580 393 646 327 646 247 c 2
@@ -21498,7 +21497,7 @@ r#"
  546 102 l 1
  454 102 l 1"#,
 ),
-GlyphDescriptor::new("ku",
+GlyphDescriptor::new_with_anchor("ku", Anchor::new_stack(AnchorType::Base),
 r#"
 596 62 m 0
  596 48 585 37 571 37 c 0
@@ -21540,7 +21539,7 @@ r#"
 ];
 
 pub const TOK_EXT_LOWER: [GlyphDescriptor; 9] = [
-GlyphDescriptor::new("pake",
+GlyphDescriptor::new_with_anchor("pake", Anchor::new_stack(AnchorType::Base),
 r#"
 310 390 m 2
  690 390 l 2
@@ -21555,7 +21554,7 @@ r#"
  282 290 260 312 260 340 c 0
  260 368 282 390 310 390 c 2"#,
 ),
-GlyphDescriptor::new("apeja",
+GlyphDescriptor::new_with_anchor("apeja", Anchor::new_stack(AnchorType::Base),
 r#"
 500 30 m 0
  494 30 490 26 490 20 c 0
@@ -21601,7 +21600,7 @@ r#"
  353 57 l 2
  344 51 336 49 326 49 c 0"#,
 ),
-GlyphDescriptor::new("majuna",
+GlyphDescriptor::new_with_anchor("majuna", Anchor::new_stack(AnchorType::Base),
 r#"
 640 -40 m 0
  640 -12 662 10 690 10 c 2
@@ -21643,7 +21642,7 @@ r#"
  678 67 l 2
  668 57 656 52 643 52 c 0"#,
 ),
-GlyphDescriptor::new("powe",
+GlyphDescriptor::new_with_anchor("powe", Anchor::new_stack(AnchorType::Base),
 r#"
 645 150 m 0
  645 123 622 100 595 100 c 0
@@ -21674,7 +21673,7 @@ r#"
  100 -90 l 2
  72 -90 50 -68 50 -40 c 0"#,
 ),
-GlyphDescriptor::new("linluwi",
+GlyphDescriptor::new_with_anchor("linluwi", Anchor::new_stack(AnchorType::Base),
 r#"
 470 -31 m 1
  448 -67 408 -91 363 -91 c 0
@@ -21716,7 +21715,7 @@ r#"
  338 20 349 9 363 9 c 0
  377 9 388 20 388 34 c 0"#,
 ),
-GlyphDescriptor::new("kiki",
+GlyphDescriptor::new_with_anchor("kiki", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  518 390 535 380 544 365 c 2
@@ -21743,7 +21742,7 @@ r#"
  457 141 l 2
  466 156 482 166 500 166 c 0"#,
 ),
-GlyphDescriptor::new("su",
+GlyphDescriptor::new_with_anchor("su", Anchor::new_stack(AnchorType::Base),
 r#"
 337 390 m 2
  697 390 l 2
@@ -21775,7 +21774,7 @@ r#"
  502 30 491 45 477 57 c 0
  458 74 430 87 387 99 c 1"#,
 ),
-GlyphDescriptor::new("wa",
+GlyphDescriptor::new_with_anchor("wa", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
  550 240 l 2
@@ -21807,7 +21806,7 @@ r#"
  600 120 584 150 569 170 c 0
  562 179 559 190 559 200 c 0"#,
 ),
-GlyphDescriptor::new("owe",
+GlyphDescriptor::new_with_anchor("owe", Anchor::new_stack(AnchorType::Base),
 r#"
 540 70 m 0
  540 48 522 30 500 30 c 0
@@ -21857,7 +21856,7 @@ r#"
 ];
 
 pub const TOK_ALT_LOWER: [GlyphDescriptor; 37] = [
-GlyphDescriptor::new("jakiTok_VAR01",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 554 136 m 1
  551 143 549 152 549 161 c 0
@@ -21923,7 +21922,7 @@ r#"
  551 289 545 290 539 290 c 0
  515 290 494 287 467 282 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR02",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 75 73 m 0
  75 116 102 146 132 163 c 1
@@ -21976,7 +21975,7 @@ r#"
  387 31 366 37 342 44 c 0
  295 57 254 74 221 91 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR03",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR03", Anchor::new_stack(AnchorType::Base),
 r#"
 695 -13 m 0
  660 -13 623 -5 593 -2 c 1
@@ -22023,7 +22022,7 @@ r#"
  246 267 257 266 268 266 c 0
  292 266 318 267 346 268 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR04",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR04", Anchor::new_stack(AnchorType::Base),
 r#"
 938 204 m 0
  938 175 915 154 888 154 c 0
@@ -22082,7 +22081,7 @@ r#"
  482 10 496 12 506 17 c 0
  506 20 507 22 508 25 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR05",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR05", Anchor::new_stack(AnchorType::Base),
 r#"
 793 288 m 0
  774 283 743 265 711 212 c 0
@@ -22135,7 +22134,7 @@ r#"
  417 31 393 29 368 26 c 1
  391 24 414 22 438 20 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR06",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR06", Anchor::new_stack(AnchorType::Base),
 r#"
 682 192 m 0
  682 168 665 151 655 145 c 1
@@ -22183,7 +22182,7 @@ r#"
  175 53 174 52 186 44 c 0
  202 33 240 18 327 12 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR07",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR07", Anchor::new_stack(AnchorType::Base),
 r#"
 277 282 m 1
  251 287 232 290 207 290 c 1
@@ -22253,7 +22252,7 @@ r#"
  391 192 393 201 396 210 c 1
  380 206 360 199 344 193 c 1"#,
 ),
-GlyphDescriptor::new("jakiTok_VAR08",
+GlyphDescriptor::new_with_anchor("jakiTok_VAR08", Anchor::new_stack(AnchorType::Base),
 r#"
 100 110 m 0
  100 147 125 172 155 183 c 1
@@ -22301,7 +22300,7 @@ r#"
  784 235 770 232 756 230 c 1
  758 226 759 223 761 219 c 1"#,
 ),
-GlyphDescriptor::new("koTok_VAR01",
+GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 720 290 m 0
  659 290 606 263 540 263 c 0
@@ -22355,7 +22354,7 @@ r#"
  398 390 462 381 506 368 c 0
  517 365 529 363 540 363 c 0"#,
 ),
-GlyphDescriptor::new("koTok_VAR02",
+GlyphDescriptor::new_with_anchor("koTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 699 -29 m 0
  688 -29 676 -29 665 -29 c 0
@@ -22413,7 +22412,7 @@ r#"
  225 119 219 103 209 88 c 0
  200 74 185 59 169 44 c 1"#,
 ),
-GlyphDescriptor::new("koTok_VAR03",
+GlyphDescriptor::new_with_anchor("koTok_VAR03", Anchor::new_stack(AnchorType::Base),
 r#"
 245 292 m 0
  286 292 312 284 351 284 c 0
@@ -22473,7 +22472,7 @@ r#"
 850 195 m 1
  850 195 l 1"#,
 ),
-GlyphDescriptor::new("koTok_VAR04",
+GlyphDescriptor::new_with_anchor("koTok_VAR04", Anchor::new_stack(AnchorType::Base),
 r#"
 800 189 m 0
  776 189 748 187 726 187 c 0
@@ -22515,7 +22514,7 @@ r#"
  328 13 298 9 253 -2 c 0
  238 -6 217 -9 195 -9 c 0"#,
 ),
-GlyphDescriptor::new("koTok_VAR05",
+GlyphDescriptor::new_with_anchor("koTok_VAR05", Anchor::new_stack(AnchorType::Base),
 r#"
 786 264 m 0
  739 277 621 290 558 290 c 0
@@ -22551,7 +22550,7 @@ r#"
  92 210 92 236 117 267 c 0
  149 307 202 331 289 342 c 0"#,
 ),
-GlyphDescriptor::new("koTok_VAR06",
+GlyphDescriptor::new_with_anchor("koTok_VAR06", Anchor::new_stack(AnchorType::Base),
 r#"
 372 390 m 0
  431 390 489 377 557 377 c 0
@@ -22595,7 +22594,7 @@ r#"
  835 188 842 194 844 199 c 0
  849 208 850 214 850 220 c 0"#,
 ),
-GlyphDescriptor::new("koTok_VAR07",
+GlyphDescriptor::new_with_anchor("koTok_VAR07", Anchor::new_stack(AnchorType::Base),
 r#"
 629 47 m 0
  685 47 736 38 790 38 c 0
@@ -22642,7 +22641,7 @@ r#"
 171 180 m 1
  171 180 l 1"#,
 ),
-GlyphDescriptor::new("koTok_VAR08",
+GlyphDescriptor::new_with_anchor("koTok_VAR08", Anchor::new_stack(AnchorType::Base),
 r#"
 226 22 m 0
  298 22 338 73 410 73 c 0
@@ -22689,7 +22688,7 @@ r#"
  323 -59 278 -78 227 -78 c 0
  142 -78 50 -22 50 55 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowW",
+GlyphDescriptor::new_with_anchor("niTok_arrowW", Anchor::new_stack(AnchorType::Base),
 r#"
 429 320 m 0
  456 320 479 297 479 270 c 0
@@ -22709,7 +22708,7 @@ r#"
  393 305 l 2
  403 315 416 320 429 320 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowN",
+GlyphDescriptor::new_with_anchor("niTok_arrowN", Anchor::new_stack(AnchorType::Base),
 r#"
 670 221 m 0
  670 194 647 171 620 171 c 0
@@ -22729,7 +22728,7 @@ r#"
  655 257 l 2
  665 247 670 234 670 221 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowE",
+GlyphDescriptor::new_with_anchor("niTok_arrowE", Anchor::new_stack(AnchorType::Base),
 r#"
 571 -20 m 0
  544 -20 521 3 521 30 c 0
@@ -22749,7 +22748,7 @@ r#"
  607 -5 l 2
  597 -15 584 -20 571 -20 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowS",
+GlyphDescriptor::new_with_anchor("niTok_arrowS", Anchor::new_stack(AnchorType::Base),
 r#"
 330 79 m 0
  330 106 353 129 380 129 c 0
@@ -22769,7 +22768,7 @@ r#"
  345 43 l 2
  335 53 330 66 330 79 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowNW",
+GlyphDescriptor::new_with_anchor("niTok_arrowNW", Anchor::new_stack(AnchorType::Base),
 r#"
 684 16 m 0
  684 -11 661 -34 634 -34 c 0
@@ -22787,7 +22786,7 @@ r#"
  670 51 l 2
  680 41 684 29 684 16 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowNE",
+GlyphDescriptor::new_with_anchor("niTok_arrowNE", Anchor::new_stack(AnchorType::Base),
 r#"
 366 -34 m 0
  339 -34 316 -11 316 16 c 0
@@ -22805,7 +22804,7 @@ r#"
  401 -20 l 2
  391 -30 379 -34 366 -34 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowSE",
+GlyphDescriptor::new_with_anchor("niTok_arrowSE", Anchor::new_stack(AnchorType::Base),
 r#"
 316 284 m 0
  316 311 339 334 366 334 c 0
@@ -22823,7 +22822,7 @@ r#"
  330 249 l 2
  320 259 316 271 316 284 c 0"#,
 ),
-GlyphDescriptor::new("niTok_arrowSW",
+GlyphDescriptor::new_with_anchor("niTok_arrowSW", Anchor::new_stack(AnchorType::Base),
 r#"
 634 334 m 0
  661 334 684 311 684 284 c 0
@@ -22845,7 +22844,7 @@ r#"
 // GlyphDescriptor::new("aTok_VAR02", ""),
 // GlyphDescriptor::new("aTok_VAR03", ""),
 // GlyphDescriptor::new("aTok_VAR04", ""),
-GlyphDescriptor::new("akesiTok_VAR01",
+GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 504 335 m 2
  504 311 l 1
@@ -22913,7 +22912,7 @@ r#"
  770 288 748 266 720 266 c 0
  692 266 670 288 670 316 c 0"#,
 ),
-GlyphDescriptor::new("kalaTok_VAR01",
+GlyphDescriptor::new_with_anchor("kalaTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 291 225 m 1
  374 311 479 390 614 390 c 0
@@ -22950,7 +22949,7 @@ r#"
  500 180 527 207 560 207 c 0
  593 207 620 180 620 147 c 0"#,
 ),
-GlyphDescriptor::new("meliTok_VAR01",
+GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 349 239 m 0
  349 323 416 390 500 390 c 0
@@ -22979,7 +22978,7 @@ r#"
  529 187 552 211 552 239 c 0
  552 267 528 290 500 290 c 0"#,
 ),
-GlyphDescriptor::new("mijeTok_VAR01",
+GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 659 389 m 2
  686 389 709 366 709 339 c 2
@@ -23006,7 +23005,7 @@ r#"
 ),
 // GlyphDescriptor::new("muTok_VAR01, ""),
 // GlyphDescriptor::new("muteTok_VAR01, ""),
-GlyphDescriptor::new("olinTok_VAR01",
+GlyphDescriptor::new_with_anchor("olinTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  528 390 550 368 550 340 c 2
@@ -23057,7 +23056,7 @@ r#"
  533 77 519 67 500 67 c 0"#,
 ),
 // GlyphDescriptor::new("panaTok_VAR01", ""),
-GlyphDescriptor::new("sewiTok_VAR01",
+GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 200 -90 m 0
  172 -90 150 -68 150 -40 c 2
@@ -23078,7 +23077,7 @@ r#"
  425 356 459 390 500 390 c 0
  541 390 575 356 575 315 c 0"#,
 ),
-GlyphDescriptor::new("tenpoTok_VAR01",
+GlyphDescriptor::new_with_anchor("tenpoTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 362 390 m 2
  638 390 l 2
@@ -23104,7 +23103,7 @@ r#"
  540 10 l 1
  500 65 l 1"#,
 ),
-GlyphDescriptor::new("utaTok_VAR01",
+GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 130 319 m 0
  130 347 152 369 180 369 c 2
@@ -23117,7 +23116,7 @@ r#"
  631 31 744 132 766 269 c 1
  234 269 l 1"#,
 ),
-GlyphDescriptor::new("wileTok_VAR01",
+GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 500 -46 m 1
  475 -69 438 -90 392 -90 c 0
@@ -23144,7 +23143,7 @@ r#"
  339 100 333 80 333 68 c 0
  333 36 360 10 392 10 c 0"#,
 ),
-GlyphDescriptor::new("namakoTok_VAR01",
+GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 741 151 m 0
  741 123 719 101 691 101 c 2
@@ -23175,7 +23174,7 @@ r#"
  309 101 l 2
  281 101 259 123 259 151 c 0"#,
 ),
-GlyphDescriptor::new("lanpanTok_VAR01",
+GlyphDescriptor::new_with_anchor("lanpanTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 703 243 m 0
  703 218 682 193 653 193 c 0
@@ -23220,7 +23219,7 @@ r#"
  390 -32 l 2
  381 -48 365 -57 348 -57 c 0"#,
 ),
-GlyphDescriptor::new("misikekeTok_VAR01",
+GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 573 390 m 0
  603 390 623 365 623 340 c 0
@@ -23251,7 +23250,7 @@ r#"
  501 142 l 2
  500 142 500 142 499 142 c 2"#,
 ),
-GlyphDescriptor::new("linluwiTok_VAR01",
+GlyphDescriptor::new_with_anchor("linluwiTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 390 158 m 0
  362 158 340 180 340 208 c 0
@@ -23298,5 +23297,4 @@ r#"
  539 105 550 99 567 95 c 0
  578 93 591 91 604 91 c 0"#,
 ),
-
 ];

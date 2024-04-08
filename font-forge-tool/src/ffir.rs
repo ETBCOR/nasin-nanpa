@@ -9,13 +9,6 @@ pub enum EncPos {
 }
 
 impl EncPos {
-    fn new(pos: Option<usize>) -> Self {
-        match pos {
-            Some(p) => Self::Pos(p),
-            None => Self::None,
-        }
-    }
-
     fn inc(&mut self) {
         *self = match self {
             EncPos::Pos(p) => EncPos::Pos(*p + 1),
@@ -118,11 +111,17 @@ impl Rep {
         let s = if !self.spline_set.is_empty() {
             format!("SplineSet{s}\nEndSplineSet\n", s = self.spline_set)
         } else {
-            "".to_string()
+            String::new()
         };
 
         format!("{f}{r}{nl}{s}")
     }
+}
+
+#[derive(Clone)]
+pub enum AnchorClass {
+    Stack,
+    Scale,
 }
 
 #[derive(Clone)]
@@ -133,23 +132,40 @@ pub enum AnchorType {
 
 #[derive(Clone)]
 pub struct Anchor {
+    class: AnchorClass,
     ty: AnchorType,
     pos: (isize, isize),
 }
 
 impl Anchor {
-    pub const fn new(ty: AnchorType, pos: (isize, isize)) -> Self {
-        Self { ty, pos }
+    pub const fn new_stack(ty: AnchorType) -> Self {
+        Self {
+            class: AnchorClass::Stack,
+            ty,
+            pos: (500, 400),
+        }
+    }
+
+    pub const fn new_scale(ty: AnchorType, pos: (isize, isize)) -> Self {
+        Self {
+            class: AnchorClass::Scale,
+            ty,
+            pos,
+        }
     }
 
     fn gen(&self) -> String {
+        let class = match self.class {
+            AnchorClass::Stack => "stack",
+            AnchorClass::Scale => "scale",
+        };
         let x = self.pos.0;
         let y = self.pos.1;
         let ty = match self.ty {
             AnchorType::Base => "basemark",
             AnchorType::Mark => "mark",
         };
-        format!("AnchorPoint: \"scale\" {x} {y} {ty} 0\n")
+        format!("AnchorPoint: \"{class}\" {x} {y} {ty} 0\n")
     }
 }
 
@@ -177,6 +193,7 @@ pub struct GlyphEnc {
     enc: EncPos,
 }
 
+#[allow(unused)]
 impl GlyphEnc {
     pub fn new_from_basic(glyph: GlyphBasic, enc: EncPos) -> Self {
         Self { glyph, enc }
@@ -194,10 +211,9 @@ pub enum LookupsMode {
     WordLigFromLetters,
     WordLigManual(Vec<String>),
     StartLongGlyph,
-    StartLongGlyphRev,
     Alt,
     ComboFirst,
-    ComboSecond,
+    ComboLast,
     None,
 }
 
@@ -226,10 +242,9 @@ impl Lookups {
                 }
             }
             LookupsMode::StartLongGlyph => Lookups::StartLongGlyph,
-            LookupsMode::StartLongGlyphRev => Lookups::StartLongGlyphRev,
             LookupsMode::Alt => Lookups::Alt,
             LookupsMode::ComboFirst => Lookups::ComboFirst,
-            LookupsMode::ComboSecond => Lookups::ComboLast,
+            LookupsMode::ComboLast => Lookups::ComboLast,
             LookupsMode::None => Lookups::None,
         }
     }
@@ -323,22 +338,36 @@ impl Lookups {
                             }
                         )
                     }
-                    _ => "".to_string(),
+                    _ => String::new(),
                 };
 
-                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}{num}\n")
+                let zwj_lig = if full_name.contains("niTok_arrow") {
+                    format!("Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n")
+                } else {
+                    String::new()
+                };
+
+                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}{num}\n{zwj_lig}")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
                 format!("Ligature2: \"'liga' GLYPH THEN JOINER\" {glyph} {joiner}\nMultipleSubs2: \"'ccmp' RESPAWN JOINER\" {full_name} {joiner}\n")
             }
             Lookups::ComboLast => {
-                let (joiner, glyph) = full_name.splitn(2, "_").collect_tuple().unwrap();
-                format!("Ligature2: \"'liga' JOINER THEN GLYPH\" {joiner} {glyph}\n")
+                let (joiner, glyph) = full_name.split_once("_").unwrap();
+                format!("Ligature2: \"'liga' JOINER THEN GLYPH\" {joiner} {glyph}\nLigature2: \"'liga' CC CLEANUP\" combCartExtHalfTok {full_name}\nLigature2: \"'liga' CC CLEANUP\" combLongGlyphExtHalfTok {full_name}\nLigature2: \"'liga' CC CLEANUP\" combCartExtTok {full_name}\nLigature2: \"'liga' CC CLEANUP\" combLongGlyphExtTok {full_name}\n")
             }
-            Lookups::None => "".to_string(),
+            Lookups::None => String::new(),
         }
     }
+}
+
+#[derive(Clone)]
+pub enum Cc {
+    Full,
+    Half,
+    Participant,
+    None,
 }
 
 #[derive(Clone)]
@@ -346,7 +375,7 @@ pub struct GlyphFull {
     pub glyph: GlyphBasic,
     pub encoding: Encoding,
     pub lookups: Lookups,
-    pub cc_subs: bool,
+    pub cc_subs: Cc,
 }
 
 impl GlyphFull {
@@ -354,7 +383,7 @@ impl GlyphFull {
         glyph: GlyphBasic,
         encoding: Encoding,
         lookups: Lookups,
-        cc_subs: bool,
+        cc_subs: Cc,
     ) -> Self {
         Self {
             glyph,
@@ -364,7 +393,7 @@ impl GlyphFull {
         }
     }
 
-    pub fn new_from_enc(glyph: GlyphEnc, ff_pos: usize, lookups: Lookups, cc_subs: bool) -> Self {
+    pub fn new_from_enc(glyph: GlyphEnc, ff_pos: usize, lookups: Lookups, cc_subs: Cc) -> Self {
         Self {
             glyph: glyph.glyph,
             encoding: Encoding::new(ff_pos, glyph.enc),
@@ -380,7 +409,7 @@ impl GlyphFull {
         anchor: Option<Anchor>,
         encoding: Encoding,
         lookups: Lookups,
-        cc_subs: bool,
+        cc_subs: Cc,
     ) -> Self {
         Self {
             glyph: GlyphBasic::new(name, width, rep, anchor),
@@ -405,14 +434,20 @@ impl GlyphFull {
         let lookups = self
             .lookups
             .gen(name.to_string(), full_name.clone(), variation);
-        let cc_subs = if self.cc_subs {
-            let halfwidth = if width == 500 { "Half" } else { "" };
-            format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExt{halfwidth}Tok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExt{halfwidth}Tok\n")
-        } else {
-            "".to_string()
+        let cc_subs = match self.cc_subs {
+            Cc::Full => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtTok\n"),
+            Cc::Half => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n"),
+            Cc::Participant => format!("MultipleSubs2: \"'cc01' CART\" {full_name}\nMultipleSubs2: \"'cc02' CONT\" {full_name}\n"),
+            Cc::None => String::new(),
         };
         let color = format!("Colour: {color}");
-        let flags = if !name.contains("empty") {
+        let flags = if full_name.eq("ZWJ")
+            || full_name.starts_with("VAR")
+            || full_name.starts_with("arrow")
+            || full_name.eq("joinStackTok")
+            || full_name.eq("joinScaleTok")
+            || full_name.contains("space")
+        {
             "Flags: W\n"
         } else {
             ""
@@ -420,12 +455,8 @@ impl GlyphFull {
         let anchor = if let Some(anchor) = &self.glyph.anchor {
             anchor.gen()
         } else {
-            "".to_string()
+            String::new()
         };
-        let _carets = match self.glyph.anchor {
-            Some(_) => "LCarets2: 1 0\n",
-            None => "",
-        }; // {carets} goes between rep and lookups
         format!("\nStartChar: {full_name}\n{encoding}\nWidth: {width}\n{flags}{anchor}LayerCount: 2\n{representation}{lookups}{cc_subs}{color}\nEndChar\n")
     }
 }
@@ -486,7 +517,7 @@ impl GlyphBlock {
         ff_pos: &mut usize,
         glyphs: Vec<GlyphEnc>,
         lookups: LookupsMode,
-        cc_subs: bool,
+        cc_subs: Cc,
         prefix: impl Into<String>,
         suffix: impl Into<String>,
         color: impl Into<String>,
@@ -499,7 +530,7 @@ impl GlyphBlock {
                     glyph,
                     *ff_pos,
                     Lookups::new_from_mode(&lookups, idx),
-                    cc_subs,
+                    cc_subs.clone(),
                 );
                 *ff_pos += 1;
                 g
@@ -521,7 +552,7 @@ impl GlyphBlock {
         ff_pos: &mut usize,
         glyphs: Vec<GlyphBasic>,
         lookups: LookupsMode,
-        cc_subs: bool,
+        cc_subs: Cc,
         prefix: impl Into<String>,
         suffix: impl Into<String>,
         color: impl Into<String>,
@@ -535,7 +566,7 @@ impl GlyphBlock {
                     glyph,
                     Encoding::new(*ff_pos, enc_pos.clone()),
                     Lookups::new_from_mode(&lookups, idx),
-                    cc_subs,
+                    cc_subs.clone(),
                 );
                 *ff_pos += 1;
                 enc_pos.inc();
@@ -558,7 +589,7 @@ impl GlyphBlock {
         ff_pos: &mut usize,
         glyphs: &'static [GlyphDescriptor],
         lookups: LookupsMode,
-        cc_subs: bool,
+        cc_subs: Cc,
         prefix: impl Into<String>,
         suffix: impl Into<String>,
         color: impl Into<String>,
@@ -595,11 +626,12 @@ impl GlyphBlock {
         rel_pos: String,
         static_glyph_ref: Option<Ref>,
         lookups: LookupsMode,
-        cc_subs: bool,
+        cc_subs: Cc,
         use_full_names: bool,
         prefix: impl Into<String>,
         suffix: impl Into<String>,
         color: impl Into<String>,
+        anchor: Option<Anchor>,
     ) -> Self {
         let glyphs: Vec<GlyphBasic> = self
             .glyphs
@@ -630,7 +662,10 @@ impl GlyphBlock {
                         name,
                         glyph.width,
                         Rep::new(String::default(), refs),
-                        glyph.anchor,
+                        match &anchor {
+                            Some(anchor) => Some(anchor.clone()),
+                            None => glyph.anchor,
+                        },
                     );
                     g
                 },
@@ -661,7 +696,7 @@ impl GlyphBlock {
                 None,
                 Encoding::new(*ff_pos, EncPos::None),
                 Lookups::None,
-                false,
+                Cc::None,
             ));
             *ff_pos += 1;
         }
