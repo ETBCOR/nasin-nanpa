@@ -293,7 +293,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 "space space".to_string(),
                 "i t a n".to_string(),
                 "l i p a m a n k a".to_string(),
-                "l e p e k a ".to_string(),
+                "l e p e k a".to_string(),
             ])
         } else {
             LookupsMode::None

@@ -293,12 +293,16 @@ impl Lookups {
                         format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} space\nLigature2: \"'liga' WORD\" {dir1}\n")
                     }
                 } else {
-                    let join_sub = if name.eq("ZWJ") {
+                    let extra = if name.eq("ZWJ") {
                         "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n"
+                    } else if word.eq("i t a n") {
+                        "Ligature2: \"'liga' VARIATIONS\" ijoTok ZWJ tanTok ZWJ anpaTok ZWJ nanpaTok\n"
+                    } else if word.eq("l e p e k a") {
+                        "Ligature2: \"'liga' VARIATIONS\" meliTok ZWJ kuleTok ZWJ kuleTok\n"
                     } else {
                         ""
                     };
-                    format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n{join_sub}")
+                    format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n{extra}")
                 }
             }
             Lookups::StartLongGlyph => {
