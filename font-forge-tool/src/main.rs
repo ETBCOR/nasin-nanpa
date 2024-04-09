@@ -1,12 +1,7 @@
 use ffir::*;
 use glyph_blocks::*;
 use itertools::Itertools;
-use std::{
-    collections::{BTreeSet, HashSet},
-    fs::File,
-    io::Write,
-    thread::ScopedJoinHandle,
-};
+use std::{collections::HashSet, fs::File, io::Write};
 
 mod ffir;
 mod glyph_blocks;
