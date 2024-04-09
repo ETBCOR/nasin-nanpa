@@ -124,7 +124,7 @@ pub enum AnchorClass {
     Scale,
 }
 
-#[derive(Clone)]
+#[derive(Clone, Copy)]
 pub enum AnchorType {
     Base,
     Mark,
@@ -142,7 +142,13 @@ impl Anchor {
         Self {
             class: AnchorClass::Stack,
             ty,
-            pos: (500, 400),
+            pos: (
+                match ty {
+                    AnchorType::Base => 500,
+                    AnchorType::Mark => -500,
+                },
+                400,
+            ),
         }
     }
 
@@ -162,7 +168,7 @@ impl Anchor {
         let x = self.pos.0;
         let y = self.pos.1;
         let ty = match self.ty {
-            AnchorType::Base => "basemark",
+            AnchorType::Base => "basechar",
             AnchorType::Mark => "mark",
         };
         format!("AnchorPoint: \"{class}\" {x} {y} {ty} 0\n")
@@ -260,7 +266,12 @@ impl Lookups {
                 } else {
                     ""
                 };
-                format!("{rand}Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n")
+                let ali = if full_name.eq("aleTok") {
+                    "Ligature2: \"'liga' WORD PLUS SPACE\" a l i space\nLigature2: \"'liga' WORD\" a l i\n"
+                } else {
+                    ""
+                };
+                format!("{rand}Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{ali}")
             }
             Lookups::WordLigManual(word) => {
                 if word.eq("space space") {
@@ -282,7 +293,12 @@ impl Lookups {
                         format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} space\nLigature2: \"'liga' WORD\" {dir1}\n")
                     }
                 } else {
-                    format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
+                    let join_sub = if name.eq("ZWJ") {
+                        "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n"
+                    } else {
+                        ""
+                    };
+                    format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n{join_sub}")
                 }
             }
             Lookups::StartLongGlyph => {
@@ -308,23 +324,23 @@ impl Lookups {
                     "Ligature2: \"'liga' VARIATIONS\" aTok aTok aTok\n"
                 } else if full_name.eq("aTok_VAR03") {
                     "Ligature2: \"'liga' VARIATIONS\" semeTok aTok\n"
-                } else if full_name.eq("aTok_VAR04") {
+                } else if full_name.eq("aTok_VAR04") && variation == NasinNanpaVariation::Main {
                     "Ligature2: \"'liga' VARIATIONS\" exclam question\nLigature2: \"'liga' VARIATIONS\" question exclam\n"
                 } else {
                     ""
                 };
 
-                let zwj = if full_name.contains("niTok_arrow") {
+                let arrow_lig = if full_name.contains("niTok_arrow") {
                     num = None;
-                    " ZWJ "
+                    format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ {sel}\n")
                 } else {
-                    " "
+                    String::new()
                 };
 
-                let num = match num {
+                let num_lig = match num {
                     Some(num) if variation == NasinNanpaVariation::Main => {
                         format!(
-                            "\nLigature2: \"'liga' VARIATIONS\" {glyph} {num}",
+                            "Ligature2: \"'liga' VARIATIONS\" {glyph} {num}\n",
                             num = match num {
                                 '1' => "one",
                                 '2' => "two",
@@ -341,13 +357,7 @@ impl Lookups {
                     _ => String::new(),
                 };
 
-                let zwj_lig = if full_name.contains("niTok_arrow") {
-                    format!("Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n")
-                } else {
-                    String::new()
-                };
-
-                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph}{zwj}{sel}{num}\n{zwj_lig}")
+                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n{arrow_lig}{num_lig}")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
@@ -427,8 +437,14 @@ impl GlyphFull {
         variation: NasinNanpaVariation,
     ) -> String {
         let name = &self.glyph.name;
-        let full_name = format!("{}{}{}", prefix, name, suffix);
         let encoding = self.encoding.gen();
+        let color = format!("Colour: {color}");
+        if name.contains("empty") {
+            return format!(
+                "\nStartChar: {name}\n{encoding}\nWidth: 0\nLayerCount: 2\n{color}\nEndChar\n"
+            );
+        }
+        let full_name = format!("{}{}{}", prefix, name, suffix);
         let width = self.glyph.width;
         let representation = self.glyph.rep.gen();
         let lookups = self
@@ -440,7 +456,6 @@ impl GlyphFull {
             Cc::Participant => format!("MultipleSubs2: \"'cc01' CART\" {full_name}\nMultipleSubs2: \"'cc02' CONT\" {full_name}\n"),
             Cc::None => String::new(),
         };
-        let color = format!("Colour: {color}");
         let flags = if full_name.eq("ZWJ")
             || full_name.starts_with("VAR")
             || full_name.starts_with("arrow")
@@ -631,6 +646,7 @@ impl GlyphBlock {
         prefix: impl Into<String>,
         suffix: impl Into<String>,
         color: impl Into<String>,
+        width: Option<usize>,
         anchor: Option<Anchor>,
     ) -> Self {
         let glyphs: Vec<GlyphBasic> = self
@@ -660,7 +676,10 @@ impl GlyphBlock {
                     };
                     let g = GlyphBasic::new(
                         name,
-                        glyph.width,
+                        match width {
+                            Some(width) => width,
+                            None => glyph.width,
+                        },
                         Rep::new(String::default(), refs),
                         match &anchor {
                             Some(anchor) => Some(anchor.clone()),

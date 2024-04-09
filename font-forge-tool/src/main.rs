@@ -1,7 +1,12 @@
 use ffir::*;
 use glyph_blocks::*;
 use itertools::Itertools;
-use std::{fs::File, io::Write};
+use std::{
+    collections::{BTreeSet, HashSet},
+    fs::File,
+    io::Write,
+    thread::ScopedJoinHandle,
+};
 
 mod ffir;
 mod glyph_blocks;
@@ -15,7 +20,7 @@ enum NasinNanpaVariation {
 fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut ff_pos: usize = 0;
 
-    let ctrl_block = GlyphBlock::new_from_enc_glyphs(
+    let mut ctrl_block = GlyphBlock::new_from_enc_glyphs(
         &mut ff_pos,
         vec![
             GlyphEnc::new_from_parts(EncPos::Pos(0x0000), "NUL", 0, Rep::default()),
@@ -217,8 +222,11 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "",
         "fa6791",
     );
+    ctrl_block.glyphs[0].cc_subs = Cc::None;
+    ctrl_block.glyphs[10].cc_subs = Cc::None;
+    ctrl_block.glyphs[11].cc_subs = Cc::None;
 
-    let tok_ctrl_block = GlyphBlock::new_from_constants(
+    let mut tok_ctrl_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_CTRL.as_slice(),
         if variation == NasinNanpaVariation::Main {
@@ -239,13 +247,15 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         } else {
             LookupsMode::None
         },
-        Cc::Participant,
+        Cc::None,
         "",
         "Tok",
         "aaafff",
         EncPos::Pos(0xF1990),
         0,
     );
+    tok_ctrl_block.glyphs[5].cc_subs = Cc::Participant;
+    tok_ctrl_block.glyphs[6].cc_subs = Cc::Participant;
 
     let mut start_long_glyph_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
@@ -302,6 +312,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     );
     tok_no_comb_block.glyphs[0].encoding.enc_pos = EncPos::Pos(0xF199C);
     tok_no_comb_block.glyphs[1].encoding.enc_pos = EncPos::Pos(0xF199D);
+    tok_no_comb_block.glyphs[4].encoding.enc_pos = EncPos::Pos(0x3000);
 
     let tok_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
@@ -394,7 +405,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "Tok",
         "80ffff",
         EncPos::None,
-        1000,
+        0,
     );
 
     let tok_ext_inner_block = GlyphBlock::new_from_constants(
@@ -406,7 +417,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "Tok",
         "80ffff",
         EncPos::None,
-        1000,
+        0,
     );
 
     let tok_alt_inner_block = GlyphBlock::new_from_constants(
@@ -418,7 +429,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "",
         "80ffff",
         EncPos::None,
-        1000,
+        0,
     );
 
     let tok_lower_block = GlyphBlock::new_from_constants(
@@ -459,7 +470,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
 
     let tok_upper_block = tok_lower_block.new_from_refs(
         &mut ff_pos,
-        "S 1 0 0 1 0 500 2".to_string(),
+        "S 1 0 0 1 -1000 500 2".to_string(),
         None,
         LookupsMode::ComboLast,
         Cc::Full,
@@ -467,12 +478,13 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "joinStackTok_",
         "Tok",
         "80ff80",
+        Some(0),
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
     let tok_ext_upper_block = tok_ext_lower_block.new_from_refs(
         &mut ff_pos,
-        "S 1 0 0 1 0 500 2".to_string(),
+        "S 1 0 0 1 -1000 500 2".to_string(),
         None,
         LookupsMode::ComboLast,
         Cc::Full,
@@ -480,12 +492,13 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "joinStackTok_",
         "Tok",
         "80ff80",
+        Some(0),
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
     let tok_alt_upper_block = tok_alt_lower_block.new_from_refs(
         &mut ff_pos,
-        "S 1 0 0 1 0 500 2".to_string(),
+        "S 1 0 0 1 -1000 500 2".to_string(),
         None,
         LookupsMode::ComboLast,
         Cc::Full,
@@ -493,49 +506,86 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "joinStackTok_",
         "",
         "80ff80",
+        Some(0),
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
-    let kern = {
-        let combo_first = vec![
-            &tok_outer_block,
-            &tok_ext_outer_block,
-            &tok_alt_outer_block,
-            &tok_lower_block,
-            &tok_ext_lower_block,
-            &tok_alt_lower_block,
-        ]
-        .iter()
-        .map(|block| {
-            block
-                .glyphs
-                .iter()
-                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                .join(" ")
-        })
-        .join(" ");
-        let combo_first = format!("combCartExtHalfTok combLongGlyphExtHalfTok combCartExtTok combLongPiExtTok combLongGlyphExtTok {}", combo_first);
-        let combo_first = format!("{} {}", combo_first.len(), combo_first);
+    let context_subs = {
+        let scale_names = vec![&tok_outer_block, &tok_ext_outer_block, &tok_alt_outer_block]
+            .iter()
+            .enumerate()
+            .map(|(i, &block)| {
+                block
+                    .glyphs
+                    .iter()
+                    .filter_map(|glyph| {
+                        if glyph.glyph.name.contains("empty") {
+                            None
+                        } else {
+                            Some(format!(
+                                "{}{}",
+                                glyph.glyph.name,
+                                if i != 2 { "Tok" } else { "" }
+                            ))
+                        }
+                    })
+                    .join(" ")
+            })
+            .join(" ");
 
-        let combo_second = vec![
-            &tok_inner_block,
-            &tok_ext_inner_block,
-            &tok_alt_inner_block,
-            &tok_upper_block,
-            &tok_ext_upper_block,
-            &tok_alt_upper_block,
-        ]
-        .iter()
-        .map(|block| {
-            block
-                .glyphs
-                .iter()
-                .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                .join(" ")
-        })
-        .join(" ");
-        let combo_second = format!("{} {}", combo_second.len(), combo_second);
-        format!("KernClass2: 2 2 \"'kern' COMBOS KERN\"\n {combo_first}\n {combo_second}\n 0 {{}} 0 {{}} 0 {{}} -1000 {{}}\n")
+        let scale_glyphs = vec![&tok_outer_block, &tok_ext_outer_block, &tok_alt_outer_block]
+            .iter()
+            .map(|block| {
+                block
+                    .glyphs
+                    .iter()
+                    .filter_map(|glyph| {
+                        if glyph.glyph.name.contains("empty") {
+                            None
+                        } else {
+                            Some(glyph.glyph.name.clone())
+                        }
+                    })
+                    .collect_vec()
+            })
+            .flatten()
+            .collect::<HashSet<_>>();
+
+        let stack_names = vec![&tok_lower_block, &tok_ext_lower_block, &tok_alt_lower_block]
+            .iter()
+            .enumerate()
+            .map(|(i, block)| {
+                block
+                    .glyphs
+                    .iter()
+                    .filter_map(|glyph| {
+                        if glyph.glyph.name.contains("empty")
+                            || scale_glyphs.contains(&glyph.glyph.name)
+                        {
+                            None
+                        } else {
+                            Some(format!(
+                                "{}{}",
+                                glyph.glyph.name,
+                                if i != 2 { "Tok" } else { "" }
+                            ))
+                        }
+                    })
+                    .join(" ")
+            })
+            .join(" ");
+
+        let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
+
+        let zwj = put_in_class("ZWJ".to_string());
+        let scale = put_in_class(scale_names);
+        let stack = put_in_class(stack_names);
+
+        let put_in_sub = |c: &str| format!("  {c}{zwj}\n  {c}{scale}\n  {c}{stack}\n");
+
+        let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
+
+        format!("ContextSub2: class \"'calt' SPECIFIC COMBOS\" 4 4 4 2\n{subs}")
     };
 
     let mut main_blocks = vec![
@@ -558,7 +608,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         tok_alt_upper_block,
     ];
 
-    let subs = {
+    let chain_subs = {
         let ctrl_names = ctrl_block
             .glyphs
             .iter()
@@ -610,10 +660,13 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 }
             })
             .join(" ");
+
         let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));
 
         let put_in_sub = |c: &str| format!("  {c}{base}\n  {c}{cart}\n  {c}{cont}\n");
+
         let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
+
         format!("ChainSub2: class \"'calt' CART AND CONT\" 4 4 4 2\n{subs}")
     };
 
@@ -638,7 +691,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
 
     writeln!(
         &mut file,
-        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}DEI: 91125\n{kern}{subs}{AFTER_SUBS}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont"
+        "{HEADER}Version: {VERSION}\n{DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}DEI: 91125\n{context_subs}{AFTER_CONTEXT_SUBS}{chain_subs}{AFTER_CHAIN_SUBS}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}\n{glyphs_string}EndChars\nEndSplineFont"
     )
 }
 
