@@ -228,7 +228,7 @@ pub enum Lookups {
     WordLigFromLetters,
     WordLigManual(String),
     StartLongGlyph,
-    StartLongGlyphRev,
+    EndLongGlyph,
     Alt,
     ComboFirst,
     ComboLast,
@@ -292,6 +292,10 @@ impl Lookups {
                     } else {
                         format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} space\nLigature2: \"'liga' WORD\" {dir1}\n")
                     }
+                } else if word.eq("bar") {
+                    format!("Ligature2: \"'liga' WORD\" bar\n")
+                } else if word.contains("middleDotTok") {
+                    format!("Ligature2: \"'liga' VARIATIONS\" {word}\n")
                 } else {
                     let extra = if name.eq("ZWJ") {
                         "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n"
@@ -306,21 +310,17 @@ impl Lookups {
                 }
             }
             Lookups::StartLongGlyph => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let glyph = parts[0];
-                let joiner = parts[1];
+                let (glyph, joiner) = full_name.rsplit_once("_").unwrap();
                 format!("Ligature2: \"'liga' START CONTAINER\" {glyph} {joiner}\n")
             }
-            Lookups::StartLongGlyphRev => {
-                let parts: Vec<&str> = full_name.split("_").collect();
-                let glyph = parts[0];
+            Lookups::EndLongGlyph => {
+                let (glyph, _) = full_name.split_once("_").unwrap();
                 format!("Ligature2: \"'liga' START CONTAINER\" endRevLongGlyphTok {glyph}\n")
             }
             Lookups::Alt => {
                 let parts: Vec<&str> = full_name.split("_").collect();
                 let glyph = parts[0];
                 let sel = parts[1];
-                let mut num = Some(sel.chars().last().unwrap());
 
                 let a = if full_name.eq("aTok_VAR01") {
                     "Ligature2: \"'liga' VARIATIONS\" aTok aTok\n"
@@ -335,30 +335,28 @@ impl Lookups {
                 };
 
                 let arrow_lig = if full_name.contains("niTok_arrow") {
-                    num = None;
                     format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ {sel}\n")
                 } else {
                     String::new()
                 };
 
-                let num_lig = match num {
-                    Some(num) if variation == NasinNanpaVariation::Main => {
-                        format!(
-                            "Ligature2: \"'liga' VARIATIONS\" {glyph} {num}\n",
-                            num = match num {
-                                '1' => "one",
-                                '2' => "two",
-                                '3' => "three",
-                                '4' => "four",
-                                '5' => "five",
-                                '6' => "six",
-                                '7' => "seven",
-                                '8' => "eight",
-                                _ => panic!(),
-                            }
-                        )
-                    }
-                    _ => String::new(),
+                let num_lig = if variation == NasinNanpaVariation::Main {
+                    format!(
+                        "Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n",
+                        sel = match sel {
+                            "VAR01" | "arrowW" => "one",
+                            "VAR02" | "arrowN" => "two",
+                            "VAR03" | "arrowE" => "three",
+                            "VAR04" | "arrowS" => "four",
+                            "VAR05" | "arrowNW" => "five",
+                            "VAR06" | "arrowNE" => "six",
+                            "VAR07" | "arrowSE" => "seven",
+                            "VAR08" | "arrowSW" => "eight",
+                            _ => panic!(),
+                        }
+                    )
+                } else {
+                    String::new()
                 };
 
                 format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n{arrow_lig}{num_lig}")
@@ -461,6 +459,7 @@ impl GlyphFull {
             Cc::None => String::new(),
         };
         let flags = if full_name.eq("ZWJ")
+            || full_name.eq("ZWNJ")
             || full_name.starts_with("VAR")
             || full_name.starts_with("arrow")
             || full_name.eq("joinStackTok")

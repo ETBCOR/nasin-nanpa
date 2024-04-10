@@ -267,7 +267,7 @@ r#"
 ];
 
 pub const START_LONG_GLYPH: [GlyphDescriptor; 19] = [
-GlyphDescriptor::new("a",
+GlyphDescriptor::new("aTok",
 r#"
 550 750 m 2
  550 300 l 2
@@ -295,7 +295,7 @@ r#"
  445 100 400 55 400 0 c 0
  400 -55 445 -100 500 -100 c 0"#,
 ),
-GlyphDescriptor::new("alasa",
+GlyphDescriptor::new("alasaTok",
 r#"
 642 350 m 1
  621 168 496 22 300 2 c 1
@@ -339,7 +339,7 @@ r#"
  300 450 l 1
  541 450 l 1"#,
 ),
-GlyphDescriptor::new("anu",
+GlyphDescriptor::new("anuTok",
 r#"
 150 750 m 0
  150 777 173 800 200 800 c 0
@@ -363,7 +363,7 @@ r#"
  164 715 l 2
  155 725 150 737 150 750 c 0"#,
 ),
-GlyphDescriptor::new("awen",
+GlyphDescriptor::new("awenTok",
 r#"
 500 800 m 0
  522 800 542 785 548 763 c 2
@@ -383,7 +383,7 @@ r#"
  452 763 l 2
  458 785 478 800 500 800 c 0"#,
 ),
-GlyphDescriptor::new("kama",
+GlyphDescriptor::new("kamaTok",
 r#"
 50 138 m 0
  50 166 74 188 100 188 c 0
@@ -411,7 +411,7 @@ r#"
  239 0 150 31 68 99 c 0
  56 109 50 124 50 138 c 0"#,
 ),
-GlyphDescriptor::new("ken",
+GlyphDescriptor::new("kenTok",
 r#"
 800 -49 m 2
  800 -50 l 2
@@ -449,7 +449,7 @@ r#"
  797 -7 800 -22 800 -48 c 2
  800 -49 l 2"#,
 ),
-GlyphDescriptor::new("kepeken",
+GlyphDescriptor::new("kepekenTok",
 r#"
 107 120 m 0
  107 145 128 170 157 170 c 0
@@ -496,7 +496,7 @@ r#"
  450 510 l 1
  450 700 l 1"#,
 ),
-GlyphDescriptor::new("la",
+GlyphDescriptor::new("laTok",
 r#"
 337 750 m 4
  337 780 362 800 387 800 c 4
@@ -513,7 +513,7 @@ r#"
  563 478 488 657 369 704 c 4
  349 712 337 730 337 750 c 4"#,
 ),
-GlyphDescriptor::new("lon",
+GlyphDescriptor::new("lonTok",
 r#"
 50 -150 m 0
  50 -122 72 -100 100 -100 c 2
@@ -528,7 +528,7 @@ r#"
  425 166 459 200 500 200 c 0
  541 200 575 166 575 125 c 0"#,
 ),
-GlyphDescriptor::new("nanpa",
+GlyphDescriptor::new("nanpaTok",
 r#"
 300 -50 m 2
  300 150 l 1
@@ -579,7 +579,7 @@ r#"
  600 450 l 1
  400 450 l 1"#,
 ),
-GlyphDescriptor::new("open",
+GlyphDescriptor::new("openTok",
 r#"
 200 800 m 0
  228 800 250 778 250 750 c 2
@@ -608,7 +608,7 @@ r#"
  750 250 l 1
  250 250 l 1"#,
 ),
-GlyphDescriptor::new("pi",
+GlyphDescriptor::new("piTok",
 r#"
 550 750 m 2
  550 -50 l 2
@@ -624,7 +624,7 @@ r#"
  450 778 472 800 500 800 c 0
  528 800 550 778 550 750 c 2"#,
 ),
-GlyphDescriptor::new("pini",
+GlyphDescriptor::new("piniTok",
 r#"
 550 700 m 1
  550 -100 l 1
@@ -644,7 +644,7 @@ r#"
  750 722 728 700 700 700 c 2
  550 700 l 1"#,
 ),
-GlyphDescriptor::new("sona",
+GlyphDescriptor::new("sonaTok",
 r#"
 500 850 m 0
  528 850 550 828 550 800 c 2
@@ -694,7 +694,7 @@ r#"
  340 100 l 1
  660 100 l 1"#,
 ),
-GlyphDescriptor::new("tawa",
+GlyphDescriptor::new("tawaTok",
 r#"
 400 800 m 0
  422 800 440 787 447 767 c 2
@@ -717,7 +717,7 @@ r#"
  354 769 l 2
  362 788 380 800 400 800 c 0"#,
 ),
-GlyphDescriptor::new("wile",
+GlyphDescriptor::new("wileTok",
 r#"
 210 775 m 0
  238 775 260 751 260 725 c 0
@@ -753,7 +753,7 @@ r#"
  50 561 113 679 170 755 c 0
  180 768 195 775 210 775 c 0"#,
 ),
-GlyphDescriptor::new("wile",
+GlyphDescriptor::new("wileTok_VAR01",
 r#"
 500 99 m 1
  457 48 388 0 300 0 c 0
@@ -789,7 +789,7 @@ r#"
  850 285 832 331 796 385 c 0
  724 494 596 610 500 687 c 1"#,
 ),
-GlyphDescriptor::new("n",
+GlyphDescriptor::new("nTok",
 r#"
 550 750 m 2
  550 300 l 2
@@ -816,7 +816,7 @@ r#"
  600 0 l 2
  600 55 555 100 500 100 c 0"#,
 ),
-GlyphDescriptor::new("wa",
+GlyphDescriptor::new("waTok",
 r#"
 500 800 m 0
  528 800 550 778 550 750 c 2
