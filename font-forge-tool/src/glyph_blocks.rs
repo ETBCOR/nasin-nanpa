@@ -3019,7 +3019,7 @@ r#"
 ),
 ];
 
-pub const TOK_NO_COMB: [GlyphDescriptor; 8] = [
+pub const TOK_NO_COMB: [GlyphDescriptor; 10] = [
 GlyphDescriptor::new("middleDot",
 r#"
 600 400 m 0
@@ -3073,6 +3073,32 @@ r#"
  555 500 600 455 600 400 c 0"#
 ),
 GlyphDescriptor::new("space", ""),
+GlyphDescriptor::new("te",
+r#"
+500 100 m 0
+ 472 100 450 122 450 150 c 2
+ 450 850 l 2
+ 450 878 472 900 500 900 c 2
+ 1000 900 l 2
+ 1028 900 1050 878 1050 850 c 0
+ 1050 822 1028 800 1000 800 c 2
+ 550 800 l 1
+ 550 150 l 2
+ 550 122 528 100 500 100 c 0"#
+),
+GlyphDescriptor::new("to",
+r#"
+500 700 m 0
+ 528 700 550 678 550 650 c 2
+ 550 -50 l 2
+ 550 -78 528 -100 500 -100 c 2
+ 0 -100 l 2
+ -28 -100 -50 -78 -50 -50 c 0
+ -50 -22 -28 0 0 0 c 2
+ 450 0 l 1
+ 450 650 l 2
+ 450 678 472 700 500 700 c 0"#
+),
 GlyphDescriptor::new("itan",
 r#"
 530 60 m 0
