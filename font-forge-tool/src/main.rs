@@ -652,7 +652,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             .glyphs
             .iter()
             .filter_map(|glyph| {
-                if glyph.glyph.name.eq("la") {
+                if glyph.glyph.name.eq("laTok") {
                     None
                 } else {
                     Some(format!(
