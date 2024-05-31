@@ -240,6 +240,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 "underscore".to_string(),
                 "braceleft".to_string(),
                 "braceright".to_string(),
+                "startCartAlt".to_string(),
+                "endCartAlt".to_string(),
             ])
         } else {
             LookupsMode::None
@@ -253,6 +255,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     );
     tok_ctrl_block.glyphs[5].cc_subs = Cc::Participant;
     tok_ctrl_block.glyphs[6].cc_subs = Cc::Participant;
+    tok_ctrl_block.glyphs[12].encoding.enc_pos = EncPos::None;
+    tok_ctrl_block.glyphs[13].encoding.enc_pos = EncPos::None;
 
     let mut start_long_glyph_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
@@ -640,7 +644,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             ctrl_names, main_names
         ));
 
-        let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok".to_string());
+        let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok startCartAltTok".to_string());
 
         let cont = start_long_glyph_block
             .glyphs

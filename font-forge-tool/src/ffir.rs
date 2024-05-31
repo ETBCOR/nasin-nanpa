@@ -296,6 +296,11 @@ impl Lookups {
                     format!("Ligature2: \"'liga' WORD\" bar\n")
                 } else if word.contains("middleDotTok") {
                     format!("Ligature2: \"'liga' VARIATIONS\" {word}\n")
+                } else if word.contains("CartAlt") {
+                    format!(
+                        "Ligature2: \"'liga' VARIATIONS\" {which}Tok VAR01\nLigature2: \"'liga' VARIATIONS\" {which}Tok one\n",
+                        which = if word.contains("start") { "startCart" } else { "endCart" }
+                    )
                 } else {
                     let extra = if name.eq("ZWJ") {
                         "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n"
