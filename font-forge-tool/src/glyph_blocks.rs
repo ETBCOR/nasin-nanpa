@@ -11,7 +11,7 @@ Weight: Regular
 Copyright: jan Itan li mama. jan mute a li pona e pali ona.
 "#;
 
-pub const VERSION: &str = "4.0.0";
+pub const VERSION: &str = "4.0.1";
 
 pub const DETAILS1: &str = r#"ItalicAngle: 0
 UnderlinePosition: 0
