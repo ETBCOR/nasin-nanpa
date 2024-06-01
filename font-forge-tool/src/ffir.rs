@@ -295,19 +295,19 @@ impl Lookups {
                 } else if word.eq("bar") {
                     format!("Ligature2: \"'liga' WORD\" bar\n")
                 } else if word.contains("middleDotTok") {
-                    format!("Ligature2: \"'liga' VARIATIONS\" {word}\n")
+                    format!("Ligature2: \"'liga' VAR PLUS SPACE\" {word} space\nLigature2: \"'liga' VAR\" {word}\n")
                 } else if word.contains("CartAlt") {
                     format!(
-                        "Ligature2: \"'liga' VARIATIONS\" {which}Tok VAR01\nLigature2: \"'liga' VARIATIONS\" {which}Tok one\n",
+                        "Ligature2: \"'liga' VAR PLUS SPACE\" {which}Tok VAR01 space\nLigature2: \"'liga' VAR PLUS SPACE\" {which}Tok one space\nLigature2: \"'liga' VAR\" {which}Tok VAR01\nLigature2: \"'liga' VAR\" {which}Tok one\n",
                         which = if word.contains("start") { "startCart" } else { "endCart" }
                     )
                 } else {
                     let extra = if name.eq("ZWJ") {
                         "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n"
                     } else if word.eq("i t a n") {
-                        "Ligature2: \"'liga' VARIATIONS\" ijoTok ZWJ tanTok ZWJ anpaTok ZWJ nanpaTok\n"
+                        "Ligature2: \"'liga' VAR\" ijoTok ZWJ tanTok ZWJ anpaTok ZWJ nanpaTok\n"
                     } else if word.eq("l e p e k a") {
-                        "Ligature2: \"'liga' VARIATIONS\" meliTok ZWJ kuleTok ZWJ kuleTok\n"
+                        "Ligature2: \"'liga' VAR\" meliTok ZWJ kuleTok ZWJ kuleTok\n"
                     } else {
                         ""
                     };
@@ -328,26 +328,26 @@ impl Lookups {
                 let sel = parts[1];
 
                 let a = if full_name.eq("aTok_VAR01") {
-                    "Ligature2: \"'liga' VARIATIONS\" aTok aTok\n"
+                    "Ligature2: \"'liga' VAR PLUS SPACE\" aTok aTok space\nLigature2: \"'liga' VAR\" aTok aTok\n"
                 } else if full_name.eq("aTok_VAR02") {
-                    "Ligature2: \"'liga' VARIATIONS\" aTok aTok aTok\n"
+                    "Ligature2: \"'liga' VAR PLUS SPACE\" aTok aTok aTok space\nLigature2: \"'liga' VAR\" aTok aTok aTok\n"
                 } else if full_name.eq("aTok_VAR03") {
-                    "Ligature2: \"'liga' VARIATIONS\" semeTok aTok\n"
+                    "Ligature2: \"'liga' VAR PLUS SPACE\" semeTok aTok space\nLigature2: \"'liga' VAR\" semeTok aTok\n"
                 } else if full_name.eq("aTok_VAR04") && variation == NasinNanpaVariation::Main {
-                    "Ligature2: \"'liga' VARIATIONS\" exclam question\nLigature2: \"'liga' VARIATIONS\" question exclam\n"
+                    "Ligature2: \"'liga' VAR PLUS SPACE\" exclam question space\nLigature2: \"'liga' VAR PLUS SPACE\" question exclam space\nLigature2: \"'liga' VAR\" exclam question\nLigature2: \"'liga' VAR\" question exclam\n"
                 } else {
                     ""
                 };
 
                 let arrow_lig = if full_name.contains("niTok_arrow") {
-                    format!("Ligature2: \"'liga' VARIATIONS\" {glyph} ZWJ {sel}\n")
+                    format!("Ligature2: \"'liga' VAR\" {glyph} ZWJ {sel}\n")
                 } else {
                     String::new()
                 };
 
                 let num_lig = if variation == NasinNanpaVariation::Main {
                     format!(
-                        "Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n",
+                        "Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n",
                         sel = match sel {
                             "VAR01" | "arrowW" => "one",
                             "VAR02" | "arrowN" => "two",
@@ -364,7 +364,7 @@ impl Lookups {
                     String::new()
                 };
 
-                format!("{a}Ligature2: \"'liga' VARIATIONS\" {glyph} {sel}\n{arrow_lig}{num_lig}")
+                format!("{a}Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n{arrow_lig}{num_lig}")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();

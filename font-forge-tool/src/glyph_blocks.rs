@@ -72,7 +72,7 @@ OS2UnicodeRanges: 0000000f.00000000.00000000.00000000
 pub const LOOKUPS: &str = r#"Lookup: 4 0 0 "'liga' SPACE" { "'liga' SPACE"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' WORDS" { "'liga' WORD PLUS SPACE"  "'liga' WORD"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 3 0 0 "'rand' RAND VARIATIONS" { "'rand' RAND VARIATIONS"  } ['rand' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VARIATIONS"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VAR PLUS SPACE"  "'liga' VAR"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' START CONTAINER" { "'liga' START CONTAINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 5 0 0 "'calt' SPECIFIC COMBOS" { "'calt' SPECIFIC COMBOS"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss01' BECOME SCALE" { "'ss01' BECOME SCALE"  } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
@@ -131,7 +131,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 1
-WinInfo: 32 16 16
+WinInfo: 32 16 8
 BeginPrivate: 12
 BlueValues 22 [-2 1 414 417 796 797]
 OtherBlues 11 [-385 -384]
