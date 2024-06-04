@@ -18,6 +18,9 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut ctrl_block = GlyphBlock::new_from_enc_glyphs(
         &mut ff_pos,
         vec![
+            GlyphEnc::new_from_parts(EncPos::Pos(0x0000), "NUL", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x200C), "ZWNJ", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x200D), "ZWJ", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE00), "VAR01", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE01), "VAR02", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE02), "VAR03", 0, Rep::default()),
@@ -26,6 +29,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE05), "VAR06", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE06), "VAR07", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE07), "VAR08", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0xFE08), "VAR09", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2190), "arrowW", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2191), "arrowN", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2192), "arrowE", 0, Rep::default()),
@@ -34,9 +38,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             GlyphEnc::new_from_parts(EncPos::Pos(0x2197), "arrowNE", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2198), "arrowSE", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x2199), "arrowSW", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x0000), "NUL", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x200C), "ZWNJ", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x200D), "ZWJ", 0, Rep::default()),
             GlyphEnc::new_from_parts(
                 EncPos::None,
                 "combCartExtHalfTok",
@@ -186,24 +187,25 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         if variation == NasinNanpaVariation::Main {
             LookupsMode::WordLigManual(vec![
                 String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                String::new(),
                 "bar".to_string(),
                 "ampersand".to_string(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                String::new(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
+                "arrow".to_string(),
                 String::new(),
                 String::new(),
                 "comma".to_string(),
@@ -220,8 +222,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "fa6791",
     );
     ctrl_block.glyphs[0].cc_subs = Cc::None;
-    ctrl_block.glyphs[10].cc_subs = Cc::None;
-    ctrl_block.glyphs[11].cc_subs = Cc::None;
+    ctrl_block.glyphs[1].cc_subs = Cc::None;
+    ctrl_block.glyphs[2].cc_subs = Cc::None;
 
     let mut tok_ctrl_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
