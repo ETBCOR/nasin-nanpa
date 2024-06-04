@@ -260,18 +260,24 @@ impl Lookups {
             Lookups::WordLigFromLetters => {
                 let lig = name.chars().join(" ");
                 let rand = if full_name.eq("jakiTok") {
-                    "AlternateSubs2: \"'rand' RAND VARIATIONS\" jakiTok_VAR01 jakiTok_VAR02 jakiTok_VAR03 jakiTok_VAR04 jakiTok_VAR05 jakiTok_VAR06 jakiTok_VAR07 jakiTok_VAR08\n"
+                    format!(
+                        "{rerand}AlternateSubs2: \"'rand' RAND VARIATIONS\" jakiTok_VAR01 jakiTok_VAR02 jakiTok_VAR03 jakiTok_VAR04 jakiTok_VAR05 jakiTok_VAR06 jakiTok_VAR07 jakiTok_VAR08\n",
+                        rerand = (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} VAR09 space\nLigature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} nine space\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} nine\n")).collect::<String>()
+                    )
                 } else if full_name.eq("koTok") {
-                    "AlternateSubs2: \"'rand' RAND VARIATIONS\" koTok_VAR01 koTok_VAR02 koTok_VAR03 koTok_VAR04 koTok_VAR05 koTok_VAR06 koTok_VAR07 koTok_VAR08\n"
+                    format!(
+                        "{rerand}AlternateSubs2: \"'rand' RAND VARIATIONS\" koTok_VAR01 koTok_VAR02 koTok_VAR03 koTok_VAR04 koTok_VAR05 koTok_VAR06 koTok_VAR07 koTok_VAR08\n",
+                        rerand = (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} VAR09 space\nLigature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} nine space\nLigature2: \"'liga' VAR\" koTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" koTok_VAR0{n} nine\n")).collect::<String>()
+                    )
                 } else {
-                    ""
+                    String::new()
                 };
                 let ali = if full_name.eq("aleTok") {
                     "Ligature2: \"'liga' WORD PLUS SPACE\" a l i space\nLigature2: \"'liga' WORD\" a l i\n"
                 } else {
                     ""
                 };
-                format!("{rand}Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{ali}")
+                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{ali}{rand}")
             }
             Lookups::WordLigManual(word) => {
                 if word.eq("space space") {
@@ -364,7 +370,29 @@ impl Lookups {
                     String::new()
                 };
 
-                format!("{a}Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n{arrow_lig}{num_lig}")
+                let rerand = {
+                    let sel_word = match sel {
+                        "VAR01" | "arrowW" => "one",
+                        "VAR02" | "arrowN" => "two",
+                        "VAR03" | "arrowE" => "three",
+                        "VAR04" | "arrowS" => "four",
+                        "VAR05" | "arrowNW" => "five",
+                        "VAR06" | "arrowNE" => "six",
+                        "VAR07" | "arrowSE" => "seven",
+                        "VAR08" | "arrowSW" => "eight",
+                        _ => panic!(),
+                    };
+                    let sel = sel.chars().last().unwrap().to_string();
+                    if full_name.starts_with("jakiTok") {
+                        (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} VAR0{sel} space\nLigature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} {sel_word} space\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} {sel_word}\n")).collect::<String>()
+                    } else if full_name.starts_with("koTok") {
+                        (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} VAR0{sel} space\nLigature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} {sel_word} space\nLigature2: \"'liga' VAR\" koTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" koTok_VAR0{n} {sel_word}\n")).collect::<String>()
+                    } else {
+                        String::new()
+                    }
+                };
+
+                format!("{a}Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n{arrow_lig}{num_lig}{rerand}")
             }
             Lookups::ComboFirst => {
                 let (glyph, joiner) = full_name.rsplit_once('_').unwrap();
