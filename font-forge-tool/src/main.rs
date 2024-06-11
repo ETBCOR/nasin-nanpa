@@ -465,7 +465,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_upper_block = tok_lower_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
-        None,
         LookupsMode::ComboLast,
         Cc::Full,
         false,
@@ -479,7 +478,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_ext_upper_block = tok_ext_lower_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
-        None,
         LookupsMode::ComboLast,
         Cc::Full,
         false,
@@ -493,7 +491,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let tok_alt_upper_block = tok_alt_lower_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
-        None,
         LookupsMode::ComboLast,
         Cc::Full,
         false,

@@ -2,6 +2,7 @@ use itertools::Itertools;
 
 use crate::NasinNanpaVariation;
 
+/// An encoding position (either a number, or `None` which prints `-1`)
 #[derive(Clone)]
 pub enum EncPos {
     Pos(usize),
@@ -24,6 +25,7 @@ impl EncPos {
     }
 }
 
+/// An encoding, consisting of a fontforge position and an encoding position
 #[derive(Clone)]
 pub struct Encoding {
     pub ff_pos: usize,
@@ -53,7 +55,7 @@ impl Encoding {
     }
 }
 
-// A glyph reference (with positional data)
+/// A glyph reference (with positional data)
 #[derive(Clone)]
 pub struct Ref {
     ref_glyph: Encoding,
@@ -73,7 +75,7 @@ impl Ref {
     }
 }
 
-// A glyph representation
+/// A glyph representation, consisting of a spline set and references
 #[derive(Default, Clone)]
 pub struct Rep {
     spline_set: String,
@@ -118,18 +120,21 @@ impl Rep {
     }
 }
 
+/// An anchor class, either stack or scale
 #[derive(Clone)]
 pub enum AnchorClass {
     Stack,
     Scale,
 }
 
+/// An anchor type, either base (for lower/outer) or mark (for upper/inner)
 #[derive(Clone, Copy)]
 pub enum AnchorType {
     Base,
     Mark,
 }
 
+/// An anchor, consisting of a class, type, and position
 #[derive(Clone)]
 pub struct Anchor {
     class: AnchorClass,
@@ -175,6 +180,8 @@ impl Anchor {
     }
 }
 
+
+/// This is the smallest building block of a glyph, containing the name, width, representation, and optional anchor
 #[derive(Clone)]
 pub struct GlyphBasic {
     pub name: String,
@@ -194,6 +201,7 @@ impl GlyphBasic {
     }
 }
 
+/// This is a `GlyphBasic` that has been assigned an `EncPos`
 pub struct GlyphEnc {
     glyph: GlyphBasic,
     enc: EncPos,
@@ -213,6 +221,7 @@ impl GlyphEnc {
     }
 }
 
+/// 
 pub enum LookupsMode {
     WordLigFromLetters,
     WordLigManual(Vec<String>),
@@ -728,11 +737,11 @@ impl GlyphBlock {
         )
     }
 
+    /// Generates a `GlyphBlock` whose glyphs are all references this block's glyphs, all with the same `rel_pos`
     pub fn new_from_refs(
         &self,
         ff_pos: &mut usize,
         rel_pos: String,
-        static_glyph_ref: Option<Ref>,
         lookups: LookupsMode,
         cc_subs: Cc,
         use_full_names: bool,
@@ -752,7 +761,7 @@ impl GlyphBlock {
                  }| {
                     let refs = vec![
                         Some(Ref::new(encoding.clone(), rel_pos.clone())),
-                        static_glyph_ref.clone(),
+                        None,
                     ]
                     .into_iter()
                     .flatten()
@@ -796,6 +805,7 @@ impl GlyphBlock {
         )
     }
 
+    /// Generates a `GlyphBlock` with a given `count` of empty glyphs
     pub fn new_empty(ff_pos: &mut usize, count: usize, width: usize) -> Self {
         let end = *ff_pos + count;
         let mut glyphs = vec![];
@@ -821,6 +831,7 @@ impl GlyphBlock {
         }
     }
 
+    /// Generates a `GlyphBlock`
     pub fn gen(&self, variation: NasinNanpaVariation) -> String {
         let mut s = String::new();
         for g in &self.glyphs {
