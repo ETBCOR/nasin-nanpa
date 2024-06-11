@@ -279,7 +279,7 @@ impl Lookups {
                     format!("Ligature2: \"'liga' VAR\" {word}\n")
                 } else if word.contains("CartAlt") {
                     format!(
-                        "Ligature2: \"'liga' VAR\" {which}Tok VAR01\nLigature2: \"'liga' VAR\" {which}Tok one\n",
+                        "Ligature2: \"'liga' VAR\" {which}Tok VAR01\n",
                         which = if word.contains("start") { "startCart" } else { "endCart" }
                     )
                 } else if name.eq("ZWJ") {
