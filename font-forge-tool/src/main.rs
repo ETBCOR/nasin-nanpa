@@ -77,6 +77,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                     vec![],
                 ),
             ),
+            GlyphEnc::new_from_parts(EncPos::None, "combCartExtNoneTok", 0, Rep::default()),
             GlyphEnc::new_from_parts(
                 EncPos::None,
                 "combCartExt1TickTok",
@@ -184,70 +185,62 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 ),
             ),
         ],
-        if variation == NasinNanpaVariation::Main {
-            LookupsMode::WordLigManual(vec![
-                String::new(),
-                "bar".to_string(),
-                "ampersand".to_string(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                String::new(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                "arrow".to_string(),
-                String::new(),
-                String::new(),
-                "comma".to_string(),
-                "comma comma".to_string(),
-                "comma comma comma".to_string(),
-                "comma comma comma comma".to_string(),
-            ])
-        } else {
-            LookupsMode::None
-        },
+        LookupsMode::WordLigManual(vec![
+            String::new(),
+            "bar".to_string(),
+            "ampersand".to_string(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            "arrow".to_string(),
+            String::new(),
+            String::new(),
+            String::new(),
+            "comma".to_string(),
+            "comma comma".to_string(),
+            "comma comma comma".to_string(),
+            "comma comma comma comma".to_string(),
+        ]),
         Cc::Participant,
         "",
         "",
         "fa6791",
     );
     ctrl_block.glyphs[0].cc_subs = Cc::None;
-    ctrl_block.glyphs[1].cc_subs = Cc::None;
-    ctrl_block.glyphs[2].cc_subs = Cc::None;
+    ctrl_block.glyphs[22].cc_subs = Cc::None;
 
     let mut tok_ctrl_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_CTRL.as_slice(),
-        if variation == NasinNanpaVariation::Main {
-            LookupsMode::WordLigManual(vec![
-                "bracketleft".to_string(),
-                "bracketright".to_string(),
-                "equal".to_string(),
-                String::new(),
-                String::new(),
-                "hyphen".to_string(),
-                "plus".to_string(),
-                "parenleft".to_string(),
-                "parenright".to_string(),
-                "underscore".to_string(),
-                "braceleft".to_string(),
-                "braceright".to_string(),
-                "startCartAlt".to_string(),
-                "endCartAlt".to_string(),
-            ])
-        } else {
-            LookupsMode::None
-        },
+        LookupsMode::WordLigManual(vec![
+            "bracketleft".to_string(),
+            "bracketright".to_string(),
+            "equal".to_string(),
+            String::new(),
+            String::new(),
+            "hyphen".to_string(),
+            "plus".to_string(),
+            "parenleft".to_string(),
+            "parenright".to_string(),
+            "underscore".to_string(),
+            "braceleft".to_string(),
+            "braceright".to_string(),
+            "startCartAlt".to_string(),
+            "endCartAlt".to_string(),
+        ]),
         Cc::None,
         "",
         "Tok",
@@ -292,22 +285,18 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut tok_no_comb_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_NO_COMB.as_slice(),
-        if variation == NasinNanpaVariation::Main {
-            LookupsMode::WordLigManual(vec![
-                "period".to_string(),
-                "colon".to_string(),
-                "middleDotTok middleDotTok".to_string(),
-                "middleDotTok middleDotTok middleDotTok".to_string(),
-                "space space".to_string(),
-                "t e".to_string(),
-                "t o".to_string(),
-                "i t a n".to_string(),
-                "l i p a m a n k a".to_string(),
-                "l e p e k a".to_string(),
-            ])
-        } else {
-            LookupsMode::None
-        },
+        LookupsMode::WordLigManual(vec![
+            "period".to_string(),
+            "colon".to_string(),
+            "middleDotTok middleDotTok".to_string(),
+            "middleDotTok middleDotTok middleDotTok".to_string(),
+            "space space".to_string(),
+            "t e".to_string(),
+            "t o".to_string(),
+            "i t a n".to_string(),
+            "l i p a m a n k a".to_string(),
+            "l e p e k a".to_string(),
+        ]),
         Cc::Full,
         "",
         "Tok",
@@ -648,7 +637,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             ctrl_names, main_names
         ));
 
-        let cart = put_in_class("combCartExtHalfTok startCartTok combCartExtTok startCartAltTok".to_string());
+        let cart = put_in_class("combCartExtNoneTok combCartExtHalfTok startCartTok combCartExtTok startCartAltTok".to_string());
 
         let cont = start_long_glyph_block
             .glyphs
