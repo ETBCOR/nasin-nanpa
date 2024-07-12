@@ -3,7 +3,7 @@
 nasin nanpa uses [this specification](https://www.kreativekorp.com/ucsur/charts/sitelen.html).
 o lukin a e [lipu Releases](https://github.com/ETBCOR/nasin-nanpa/releases)!
 
-![nasin nanpa 3.1.0](/renders/nasin-nanpa-4.0.0.png)
+![nasin nanpa 4.0.1](/renders/nasin-nanpa-4.0.0.png)
 
 ## Font Versions
 There are currently three parallel versions of nasin nanpa:
