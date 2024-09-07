@@ -44,7 +44,7 @@ There are a few other alternate glyph forms that can be accessed with the other 
 - 8 directional `ni`s: 1 ←, 2 ↑, 3 →, 4 ↓, 5 ↖, 6 ↗, 7 ↘, 8 ↙ (can also be accessed with `ni` + `ZWJ` + [an arrow character / a sequence like `v<`, if ligatures are enabled])
 - `a` with three stems (can also be accessed with `a a a`)
 
-The following glyphs have a "long glyph" variation too (accessed by puting `START OF LONG GLYPH` / `(` after it): `a`, `alasa`, `anu`, `awen`, `kama`, `ken`, `kepeken`, `la` (reversed; needs `END OF REVERSE LONG GLYPH` / `)` *before* it), `lon`, `nanpa`, `open`, `pi`, `pini`, `sona`, `tawa`, `wile`, `wile` alt, `n`, and `wa`.
+The following glyphs have a "long glyph" variation too (accessed by puting `START OF LONG GLYPH` / `(` after it): `a`, `alasa`, `anu`, `awen`, `kama`, `ken`, `kepeken`, `la` (reversed; needs `END OF REVERSE LONG GLYPH` / `}` *before* it), `lon`, `nanpa`, `open`, `pi`, `pini`, `sona`, `tawa`, `wile`, `wile` alt, `n`, and `wa`.
 
 ## Ligatures
 Ligatures are a font feature that allow nasin nanpa (and many other sitelen pona fonts) to display strings of existing Unicode characters as sitelen pona glyphs. However, not every text rendering context (web browser, text editing program, etc.) supports this font feature by default, and some may not at all (so see the **AHK Script Guide Section** at the end of this README)!
