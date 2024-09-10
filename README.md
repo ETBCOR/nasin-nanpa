@@ -52,7 +52,7 @@ Ligatures are a font feature that allow nasin nanpa (and many other sitelen pona
 This table describes both the ligatures in nasin nanpa and the AutoHotKey scripts:
 | Codepoint | Latin Character(s) | Resulting Codepoint / Glyph |
 | --------- | ------------------ | --------------------------- |
-| **U+F1900** -<br>**U+F1988** | `a`, `akesi` ... `wile` \| `namako` ... `ku` | _A_, `AKESI` ... `WILE` \| `NAMAKO` ... `KU` |
+| **U+F1900** -<br>**U+F1988** | `a`, `akesi` ... `wile`, `namako` ... `ku` | _A_, `AKESI` ... `WILE`, `NAMAKO` ... `KU` |
 | **U+3000** | `  ` / `zz`| `IDEOGRAPHIC SPACE` |
 | **U+F1990** | `[` | `START OF CARTOUCHE` |
 | **U+F1991** | `]` | `END OF CARTOUCHE` |
